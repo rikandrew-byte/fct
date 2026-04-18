@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "FCT Vinh Thinh .,JSC | Kiến tạo hạ tầng số tương lai",
-  description: "Cung cấp giải pháp hạ tầng Viễn thông, Công nghệ thông tin, Bảo mật và Thiết bị đo lường chuyên dụng cho doanh nghiệp.",
+  description: "Cung cấp giải pháp hạ tầng Viễn thông, Công nghệ thông tin và Bảo mật chuyên dụng cho doanh nghiệp.",
 };
 
 export default function Home() {
@@ -53,9 +54,9 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">Tin tức và bài viết</h2>
             <p className="text-gray-500 font-light">Những cập nhật mới nhất và chia sẻ kiến thức công nghệ từ chúng tôi.</p>
           </div>
-          <button className="text-blue-600 font-semibold hover:underline flex items-center gap-1 group">
+          <Link href="/news" className="text-blue-600 font-semibold hover:underline flex items-center gap-1 group">
             Xem tất cả bài viết <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </button>
+          </Link>
         </div>
         
         {/* Lưới Bento */}
@@ -91,20 +92,16 @@ export default function Home() {
             <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed">Giải pháp tường lửa, chống thất thoát dữ liệu và giám sát an ninh mạng toàn diện.</p>
           </div>
 
-          {/* Card 3: Thiết bị */}
-          <div className="md:col-span-1 bg-white border border-gray-100 shadow-sm hover:shadow-xl rounded-[2rem] p-8 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-center group">
-            <div className="text-3xl mb-4 group-hover:bounce transition-transform">⚙️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Thiết bị Đo lường</h3>
-            <p className="text-gray-500 text-xs font-light leading-relaxed">Đại diện phân phối máy móc chuyên dụng cho nhà máy, viện nghiên cứu.</p>
-          </div>
-
           {/* Card 4: Dịch vụ */}
-          <div className="md:col-span-1 bg-blue-600 text-white shadow-lg shadow-blue-500/20 rounded-[2rem] p-8 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-center items-center text-center group cursor-pointer">
+          <Link 
+            href="/about" 
+            className="md:col-span-2 bg-blue-600 text-white shadow-lg shadow-blue-500/20 rounded-[2rem] p-8 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-center items-center text-center group cursor-pointer"
+          >
             <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <span className="text-2xl">➔</span>
+              <span className="text-2xl text-white">➔</span>
             </div>
             <h3 className="text-lg font-bold">Xem toàn bộ<br/>Dịch vụ hỗ trợ</h3>
-          </div>
+          </Link>
 
         </div>
       </section>

@@ -121,7 +121,7 @@ export default function AboutPage() {
               </h1>
               <p className="text-gray-400 text-lg font-light leading-relaxed max-w-xl">
                 Hơn 10 năm đồng hành cùng doanh nghiệp Việt trong việc bảo vệ tài sản phần mềm,
-                ứng dụng di động và xây dựng hạ tầng dữ liệu công nghiệp thông qua các giải pháp
+                ứng dụng di động và xây dựng hạ tầng dữ liệu qua các giải pháp
                 công nghệ đẳng cấp quốc tế.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
@@ -178,8 +178,6 @@ export default function AboutPage() {
                   bảo vệ bản quyền phần mềm
                 </strong>
                 ,{" "}
-                <strong className="font-semibold text-gray-900">bảo mật ứng dụng di động</strong>{" "}
-                và{" "}
                 <strong className="font-semibold text-gray-900">
                   thu thập dữ liệu công nghiệp
                 </strong>

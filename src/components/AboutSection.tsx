@@ -20,11 +20,6 @@ const features = [
     title: "Kết Nối Toàn Cầu",
     description: "Đảm bảo sự liên thông không giới hạn và liền mạch qua các nền tảng mạng lõi.",
   },
-  {
-    icon: <Target className="w-6 h-6 text-purple-500" />,
-    title: "Chính Xác & Tin Cậy",
-    description: "Cung cấp các thiết bị đo lường chuẩn xác, đáng tin cậy cho mọi ngành khoa học.",
-  },
 ];
 
 export default function AboutSection() {

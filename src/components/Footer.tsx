@@ -44,7 +44,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm font-light">
               <li><Link href="/news" className="hover:text-blue-500 transition-colors">Hạ tầng Viễn thông</Link></li>
               <li><Link href="/news" className="hover:text-blue-500 transition-colors">Bảo mật Hệ thống</Link></li>
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Thiết bị Đo lường</Link></li>
+
               <li><Link href="/news" className="hover:text-blue-500 transition-colors">Lưu trữ Đám mây</Link></li>
               <li><Link href="/news" className="hover:text-blue-500 transition-colors">Tư vấn Chuyển đổi số</Link></li>
             </ul>
