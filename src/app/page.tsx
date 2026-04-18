@@ -104,10 +104,10 @@ export default function Home() {
           {/* Card 3: Longmai (Bottom-Left) */}
           <div className="md:col-span-2 bg-white border border-red-50 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
             <Image 
-              src="/images/longmai-bg-abstract.png" 
+              src="/images/longmai-bg.png" 
               alt="Longmai Hardware Background" 
               fill 
-              className="object-cover opacity-15 group-hover:opacity-25 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+              className="object-cover opacity-20 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 pointer-events-none"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-red-50/50 to-transparent z-0"></div>
             
