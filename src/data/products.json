@@ -1,0 +1,202 @@
+[
+  {
+    "id": "sentinel-up",
+    "name": "Sentinel UP",
+    "category": "Thales",
+    "image": "/images/products/sentinel-up.png",
+    "summary": "Nền tảng quản lý cập nhật phần mềm và đăng ký (Subscription) tự động, chuyên nghiệp trên môi trường điện toán đám mây.",
+    "description": "Sentinel UP là giải pháp quản lý bản quyền phần mềm trên nền đám mây, cho phép nhà phát triển phần mềm cung cấp, quản lý và cập nhật license từ xa mà không cần phần cứng. Hệ thống hỗ trợ các mô hình kinh doanh linh hoạt như đăng ký theo tháng/năm, dùng thử, và kích hoạt tự động — lý tưởng cho phần mềm hiện đại trên mọi nền tảng.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-up.html"
+  },
+  {
+    "id": "sentinel-hl-basic",
+    "name": "Sentinel HL Basic",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-basic.jpg",
+    "summary": "Giải pháp bảo vệ phần mềm tối giản, hiệu quả cho các ứng dụng cơ bản, không cần lưu trữ dữ liệu trên khóa.",
+    "description": "Sentinel HL Basic là 01 dạng bảo vệ đơn giản, hiệu quả. Không cần bộ nhớ trong, không cần lập trình trước, có thể bảo vệ ngay. Thích hợp cho các bản quyền số lượng lớn và không cần cập nhật và gia hạn sau này. Đây là lựa chọn kinh tế nhất trong dòng Sentinel HL, phù hợp với những phần mềm cần bảo vệ nhanh mà không yêu cầu tính năng nâng cao.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-basic.html"
+  },
+  {
+    "id": "sentinel-hl-pro",
+    "name": "Sentinel HL Pro",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-pro.jpg",
+    "summary": "Giải pháp bảo vệ phần mềm chuẩn với ID 32-bit duy nhất, lý tưởng cho các ứng dụng đơn lẻ với bộ nhớ bảo mật.",
+    "description": "Sentinel HL Pro cung cấp khả năng bảo vệ phần mềm với ID 32-bit duy nhất và bộ nhớ trong để lưu trữ license và dữ liệu cấu hình. Phù hợp cho các nhà phát triển cần cơ chế bảo vệ đáng tin cậy kết hợp với khả năng cập nhật license từ xa thông qua hệ thống Sentinel EMS. Hỗ trợ mã hóa AES và API bảo mật cho ứng dụng Windows, Linux, macOS.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-pro.html"
+  },
+  {
+    "id": "sentinel-hl-max",
+    "name": "Sentinel HL Max",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max.jpg",
+    "summary": "Thích hợp cho sản phẩm có nhiều tùy chọn với ID 32-bit và bộ nhớ mở rộng lên đến 31KB để quản lý nhiều module.",
+    "description": "Sentinel HL Max thích hợp dùng cho bảo vệ các sản phẩm có nhiều tùy chọn hoặc lượng phát hành lớn. Max có một ID 32bit bảo vệ một chương trình độc nhất đồng thời đảm bảo cơ chế nâng cấp được an toàn. Bộ nhớ trong lên đến 31KB cho phép lưu trữ nhiều module license, hỗ trợ tính năng Feature Access Control — quản lý quyền truy cập từng tính năng trong phần mềm một cách chi tiết.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-max.html"
+  },
+  {
+    "id": "sentinel-hl-max-chip",
+    "name": "Sentinel HL Max Chip",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-chip.jpg",
+    "summary": "Phiên bản dạng chip tích hợp (SMT), cho phép gắn trực tiếp lên bo mạch điện tử của thiết bị nhà sản xuất.",
+    "description": "Sentinel HL Max Chip thích hợp dùng cho bảo vệ các sản phẩm có nhiều tùy chọn hoặc lượng phát hành lớn. Max có một ID 32bit bảo vệ một chương trình độc nhất đồng thời đảm bảo cơ chế nâng cấp được an toàn. Sản phẩm tương tự như Sentinel HL Max nhưng được thiết kế ở dạng chip SMT để tiện cho việc trực tiếp tích hợp vào phần cứng, lý tưởng cho OEM và nhà sản xuất thiết bị muốn nhúng bảo mật vào bo mạch.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-hl-max-chip.html"
+  },
+  {
+    "id": "sentinel-hl-max-micro",
+    "name": "Sentinel HL Max Micro",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-micro.jpg",
+    "summary": "Phiên bản Sentinel HL Max với kích thước siêu nhỏ, hạn chế tối đa va chạm vật lý và cực kỳ thẩm mỹ khi sử dụng.",
+    "description": "Sentinel HL Max Micro thích hợp dùng cho bảo vệ các sản phẩm có nhiều tùy chọn hoặc lượng phát hành lớn. Max có một ID 32bit bảo vệ một chương trình độc nhất đồng thời đảm bảo cơ chế nâng cấp được an toàn. Sản phẩm tương tự như Sentinel HL Max nhưng được thiết kế nhỏ gọn hơn, tiện lợi cho việc cắm cố định vào thiết bị và hạn chế bị va vào — lý tưởng cho người dùng thường xuyên di chuyển với laptop.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-hl-max-micro.html"
+  },
+  {
+    "id": "sentinel-hl-max-expresscard",
+    "name": "Sentinel HL Max ExpressCard",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-expresscard.jpg",
+    "summary": "Sử dụng chuẩn kết nối ExpressCard cho các thiết bị công nghiệp và laptop có khe cắm mở rộng chuyên dụng.",
+    "description": "Sentinel HL Max ExpressCard thích hợp dùng cho bảo vệ các sản phẩm có nhiều tùy chọn hoặc lượng phát hành lớn. Max có một ID 32bit bảo vệ một chương trình độc nhất đồng thời đảm bảo cơ chế nâng cấp được an toàn. Sản phẩm được thiết kế ở dạng ExpressCard 34mm để tiện cho việc tích hợp vào phần cứng công nghiệp và laptop chuyên dụng có khe ExpressCard.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-max-expresscard.html"
+  },
+  {
+    "id": "sentinel-hl-max-board",
+    "name": "Sentinel HL Max Board",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-board.jpg",
+    "summary": "Dạng bảng mạch (PCB) dùng để tích hợp nội bộ vào phần cứng thiết bị, cung cấp khả năng bảo vệ tối đa từ bên trong.",
+    "description": "Sentinel HL Max Board thích hợp dùng cho bảo vệ các sản phẩm có nhiều tùy chọn hoặc lượng phát hành lớn. Max có một ID 32bit bảo vệ một chương trình độc nhất đồng thời đảm bảo cơ chế nâng cấp được an toàn. Sản phẩm được thiết kế ở dạng bảng mạch PCB rời để nhà sản xuất tích hợp trực tiếp vào bên trong thiết bị, mang lại giải pháp bảo mật vô hình và bền bỉ nhất cho sản phẩm phần cứng.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-max-board.html"
+  },
+  {
+    "id": "sentinel-hl-net",
+    "name": "Sentinel HL Net",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-net.jpg",
+    "summary": "Quản lý bản quyền tập trung qua mạng, hỗ trợ nhiều người dùng truy cập đồng thời, tối ưu chi phí cho doanh nghiệp.",
+    "description": "Sentinel HL Net cung cấp phương án bảo vệ an toàn và linh hoạt trong môi trường mạng. Bạn có thể dùng HL Net để hạn chế số người, thiết bị sử dụng phần mềm trong một mạng nội bộ cùng với các tùy chọn khác. Một khóa HL Net được cắm vào máy chủ có thể cấp phát license cho hàng chục đến hàng trăm người dùng đồng thời — giúp doanh nghiệp tiết kiệm đáng kể chi phí bản quyền phần mềm.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-net.html"
+  },
+  {
+    "id": "sentinel-hl-time",
+    "name": "Sentinel HL Time",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-time.jpg",
+    "summary": "Tích hợp đồng hồ thời gian thực (RTC) độc lập, quản lý bản quyền cực kỳ chính xác theo ngày giờ thực tế.",
+    "description": "Sentinel HL Time với 01 đồng hồ thời gian thực chính xác cao. HL Time có thể quản lý chính xác thời gian vận hành của phần mềm và phòng tránh bẻ khóa và dịch ngược. Bạn có thể linh hoạt cung cấp license dạng thời gian cho khách hàng — qua đó đáp ứng các hình thức cho thuê, bán sản phẩm theo kỳ hạn (subscription). Đồng hồ RTC hoạt động độc lập, không bị ảnh hưởng bởi việc thay đổi giờ hệ thống.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-time.html"
+  },
+  {
+    "id": "sentinel-hl-net-time",
+    "name": "Sentinel HL NetTime",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-net-time.jpg",
+    "summary": "Quản lý bản quyền qua mạng kết hợp với đồng hồ thời gian thực (RTC) để quản lý thuê bao theo thời gian.",
+    "description": "Sentinel HL NetTime là 01 giải pháp kết hợp Net và Time — là phương án lý tưởng áp dụng bảo vệ phần mềm theo hình thức thời hạn sử dụng dưới môi trường mạng nội bộ. Kết hợp tính năng chia sẻ license đồng thời qua mạng của HL Net với đồng hồ thời gian thực của HL Time, cho phép triển khai subscription model trong môi trường doanh nghiệp lớn một cách chính xác và an toàn.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-hl-nettime.html"
+  },
+  {
+    "id": "sentinel-hl-drive",
+    "name": "Sentinel HL Drive",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-drive.jpg",
+    "summary": "Kết hợp khóa bảo mật và bộ nhớ Flash lên đến 4GB, cho phép phân phối và chạy ứng dụng trực tiếp từ khóa.",
+    "description": "Sentinel HL Drive có phiên bản 2GB và 4GB giúp bạn tạo 01 Rom ảo ngay bên trong khóa USB. Bạn có thể chép ứng dụng, phần mềm hoặc nội dung cần bảo vệ cùng license vào trong khóa cứng giao cho khách hàng — vừa tiện lợi vừa an toàn. Phần mềm có thể chạy trực tiếp từ khóa mà không cần cài đặt lên máy, giúp kiểm soát hoàn toàn việc sao chép trái phép.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-drive.html"
+  },
+  {
+    "id": "sentinel-ldk-developer",
+    "name": "Sentinel LDK Developer",
+    "category": "Thales",
+    "image": "/images/products/sentinel-ldk-developer.jpg",
+    "summary": "Bộ công cụ phát triển toàn diện giúp nhà lập trình tích hợp bảo vệ phần mềm nhanh chóng. Bước đầu tiên cho mọi giải pháp bảo mật.",
+    "description": "Sentinel LDK Developer là 01 key quan trọng trong Sentinel LDK (Bộ công cụ phát triển bản quyền Sentinel) dùng cho nhân viên lập trình. Có Developer Key thì nhân viên lập trình mới có thể thông qua công cụ Envelope để bảo vệ ứng dụng theo các license đã thiết lập sẵn. Developer Key cho phép tạo, thử nghiệm và triển khai cơ chế bảo vệ trong môi trường phát triển trước khi đưa ra thị trường.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-ldk-developer.html"
+  },
+  {
+    "id": "sentinel-ldk-master",
+    "name": "Sentinel LDK Master",
+    "category": "Thales",
+    "image": "/images/products/sentinel-ldk-master.jpg",
+    "summary": "Khóa chủ quyền lực dùng để quản trị hệ thống, tạo và phân phối các khóa bản quyền cho khách hàng.",
+    "description": "Sentinel LDK Master là key chính trong Sentinel LDK (Bộ công cụ phát triển bản quyền Sentinel) được dùng cho nhà phát triển phần mềm. Có Master Key thì nhà phát triển mới có thể thông qua EMS (Entitlement Management System) tạo ra license để chép vào User Key. Master Key nắm giữ toàn bộ quyền quản trị hệ thống bảo vệ, bao gồm việc cấp phát, thu hồi và cập nhật bản quyền cho người dùng cuối.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-ldk-master.html"
+  },
+  {
+    "id": "dexguard",
+    "name": "DexGuard",
+    "category": "Guardsquare",
+    "image": "/images/products/dexguard.png",
+    "summary": "Bảo vệ các ứng dụng Android và Java chống lại việc dịch ngược, sửa đổi và phân tích mã nguồn một cách toàn diện.",
+    "description": "Sự bảo vệ tiên tiến nhất cho các ứng dụng Android. Các tin tặc có thể sử dụng các công cụ sẵn có để giải mã và điều tra các ứng dụng Android của bạn và SDKs để đi sâu vào logic bên trong. DexGuard áp dụng nhiều lớp bảo vệ: mã hóa chuỗi, che mờ tên lớp/phương thức, mã hóa tài sản, phát hiện giả mạo và xâm nhập (RASP) — khiến việc dịch ngược trở nên gần như không thể.",
+    "isNew": true,
+    "link": "https://fct.vn/dexguard.html"
+  },
+  {
+    "id": "ixguard",
+    "name": "iXGuard",
+    "category": "Guardsquare",
+    "image": "/images/products/ixguard.png",
+    "summary": "Giải pháp bảo mật chuyên dụng cho ứng dụng iOS, bảo vệ mã nguồn Swift và Objective-C khỏi mọi nỗ lực xâm nhập.",
+    "description": "iXGuard được thiết kế để bảo vệ các ứng dụng và SDKs nền tảng gốc (Objective-C, Swift) và đa nền tảng (Unity, Cordova, Ionic, React Native, v.v.) cho iOS chống lại kĩ nghệ đảo ngược và chèn mã. iXGuard áp dụng nhiều kỹ thuật mã hóa và che mờ cho mã của các ứng dụng và SDK, đồng thời tích hợp cơ chế tự bảo vệ thời gian chạy (RASP). Các lớp bảo vệ được áp dụng khiến hầu như không thể truy cập vào logic bên trong và sửa đổi hành vi dự kiến của ứng dụng.",
+    "isNew": true,
+    "link": "https://fct.vn/ixguard.html"
+  },
+  {
+    "id": "canary-historian",
+    "name": "Canary Collectors / Historian",
+    "category": "Canary Labs",
+    "image": "/images/products/canary-historian.jpg",
+    "summary": "Hệ thống thu thập dữ liệu công nghiệp đa nguồn và phân tích lịch sử thời gian thực với hiệu suất xử lý dữ liệu cực lớn.",
+    "description": "Canary Collectors/Historian là giải pháp thu thập và lưu trữ dữ liệu công nghiệp (IIoT) hiệu suất cao. Canary Collectors có thể ghi nhận dữ liệu từ nhiều nguồn khác nhau bao gồm OPC UA/DA, MQTT và các giải pháp SCADA đa dạng. Dữ liệu được lưu trữ trong Canary Historian với công nghệ nén tiên tiến và có thể truy vấn, phân tích theo thời gian thực — lý tưởng cho các nhà máy, hệ thống giám sát và tự động hóa công nghiệp.",
+    "isNew": true,
+    "link": "https://fct.vn/canary1.html"
+  },
+  {
+    "id": "longmai-smartx1",
+    "name": "Longmai SmartX1",
+    "category": "Longmai",
+    "image": "/images/products/longmai-smartx1.png",
+    "summary": "Khóa bảo vệ phần mềm USB thế hệ mới với chip thẻ thông minh tích hợp, chống sao chép và bẻ khóa phần cứng.",
+    "description": "SmartX1 là thiết bị khóa bảo vệ bản quyền phần mềm (software dongle) của Longmai, sử dụng chip thẻ thông minh (Smart Card) tích hợp để ngăn chặn việc nhân bản phần cứng và tấn công brute-force. Thiết bị Plug-and-Play, không cần cài driver, với bộ nhớ 20KB và ID phần cứng 32-bit duy nhất. Phù hợp cho các nhà phát triển phần mềm cần giải pháp bảo vệ bản quyền chi phí thấp nhưng hiệu quả cao — ngăn phần mềm chạy nếu không có khóa.",
+    "isNew": true,
+    "link": "https://longmaitech.com/"
+  },
+  {
+    "id": "longmai-smartx3",
+    "name": "Longmai SmartX3",
+    "category": "Longmai",
+    "image": "/images/products/longmai-smartx3.png",
+    "summary": "Token USB PKI cao cấp hỗ trợ ký số, mã hóa và xác thực hai yếu tố theo chuẩn PKCS#11 và Microsoft CAPI.",
+    "description": "SmartX3 là thiết bị USB token PKI của Longmai, được thiết kế cho xác thực danh tính và bảo mật doanh nghiệp. Thiết bị hỗ trợ đầy đủ chuẩn PKCS#11 và Microsoft CAPI, tích hợp chip mật mã tạo cặp khóa RSA ngay trên thiết bị — đảm bảo khóa riêng tư không bao giờ rời khỏi phần cứng. Ứng dụng: đăng nhập VPN, ký số tài liệu, mã hóa email, xác thực hệ thống e-banking và e-government theo tiêu chuẩn quốc tế.",
+    "isNew": true,
+    "link": "https://longmaitech.com/"
+  },
+  {
+    "id": "longmai-timepro",
+    "name": "Longmai TimePro",
+    "category": "Longmai",
+    "image": "/images/products/longmai-timepro.png",
+    "summary": "Thiết bị OTP phần cứng dựa trên thời gian (TOTP), tạo mã xác thực một lần mỗi 30 giây — không cần kết nối mạng.",
+    "description": "TimePro là thiết bị xác thực OTP (One-Time Password) phần cứng của Longmai, hoạt động theo cơ chế TOTP (Time-based OTP) tương thích RFC 6238. Thiết bị tạo mã 6 chữ số thay đổi mỗi 30 giây, hoàn toàn độc lập — không cần pin điện thoại, không cần kết nối internet. Với màn hình LCD, pin tuổi thọ cao và lớp chip bảo mật chống giả mạo, TimePro là lựa chọn lý tưởng cho xác thực hai yếu tố (2FA) tại các hệ thống ngân hàng, tổ chức tài chính, VPN doanh nghiệp và cổng chính phủ điện tử.",
+    "isNew": true,
+    "link": "https://longmaitech.com/"
+  }
+]

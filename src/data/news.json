@@ -1,0 +1,82 @@
+[
+  {
+    "id": "canary-labs",
+    "title": "CANARY LABS là ai, họ cung cấp những giải pháp gì?",
+    "date": "13/12/2024",
+    "summary": "Canary Labs là một công ty công nghệ có bề dày lịch sử, được thành lập vào năm 1985. Mặc dù tên tuổi có thể không quá phổ biến với công chúng, nhưng công...",
+    "category": "Giải pháp",
+    "link": "https://fct.vn/canary-labs.html"
+  },
+  {
+    "id": "android-15-security",
+    "title": "Android 15 bảo vệ chống nhìn trộm màn hình như thế nào?",
+    "date": "03/12/2024",
+    "summary": "Android 15 giới thiệu các tính năng bảo mật mới, như phát hiện ghi màn hình và tự động bảo vệ mật khẩu, giúp nâng cao quyền riêng tư cho người dùng. Ở...",
+    "category": "Bảo mật",
+    "link": "https://fct.vn/android-15-bao-ve-chong-nhin-trom-man-hinh-nhu-the-nao.html"
+  },
+  {
+    "id": "mobile-app-security",
+    "title": "Cách Tiếp Cận Mới Về Bảo Mật Ứng Dụng Di Động",
+    "date": "25/09/2024",
+    "summary": "Trong bối cảnh kỹ thuật số phát triển nhanh chóng ngày nay, việc bảo vệ ứng dụng di động không còn là điều “tuyệt vời khi có” - đó là một điều...",
+    "category": "Bảo mật",
+    "link": "https://fct.vn/cach-tiep-can-moi-ve-bao-mat-ung-dung-di-dong.html"
+  },
+  {
+    "id": "rasp-features",
+    "title": "Các tính năng chính của giải pháp RASP hiệu quả và cách nó bảo vệ ứng dụng",
+    "date": "23/08/2024",
+    "summary": "Tự bảo vệ ứng dụng thời gian chạy (RASP) đã trở thành một yếu tố quan trọng trong việc chống lại các mối đe dọa mà các ứng dụng di động phải đối...",
+    "category": "Bảo mật",
+    "link": "https://fct.vn/cac-tinh-nang-chinh-cua-giai-phap-rasp-hieu-qua-va-cach-no-bao-ve-ung-dung.html"
+  },
+  {
+    "id": "dexguard-android",
+    "title": "Bảo vệ chống lại các kỹ thuật tấn công phần mềm độc hại phổ biến trên Android với DexGuard",
+    "date": "12/06/2024",
+    "summary": "Mặc dù vấn đề về phòng tránh mã độc là trách nhiệm chung nhưng các nhà phát triển đóng vai trò cực kỳ quan trọng trong việc đảm bảo rằng phần mềm...",
+    "category": "Phần mềm",
+    "link": "https://fct.vn/bao-ve-chong-lai-cac-ky-thuat-tan-cong-phan-mem-doc-hai-pho-bien-tren-android-voi-dexguard.html"
+  },
+  {
+    "id": "mobile-security-mgmt",
+    "title": "QUẢN TRỊ BẢO MẬT THIẾT BỊ DI ĐỘNG TRONG THỜI ĐẠI KỶ NGUYÊN SỐ",
+    "date": "15/07/2022",
+    "summary": "Công ty FCT Vĩnh Thịnh sẽ cung cấp một vài phân tích hữu ích cũng như giới thiệu đến bạn 2 giải pháp quản lý bảo mật thiết bị di động đang được thị...",
+    "category": "Giải pháp",
+    "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html"
+  },
+  {
+    "id": "security-awareness",
+    "title": "TẦM QUAN TRỌNG CỦA VIỆC NÂNG CAO NHẬN THỨC VỀ BẢO MẬT DI ĐỘNG",
+    "date": "05/07/2022",
+    "summary": "Trong bài viết này, Công ty FCT Vĩnh Thịnh phân tích chi tiết nguyên nhân doanh nghiệp cần chú trọng nâng cao nhận thức của nhân viên về các vấn đề bảo mật...",
+    "category": "Bảo mật",
+    "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html"
+  },
+  {
+    "id": "mobile-security-challenges",
+    "title": "4 THÁCH THỨC TRONG BẢO MẬT THIẾT BỊ DI ĐỘNG",
+    "date": "28/06/2022",
+    "summary": "Xây dựng hệ thống bảo mật thiết bị di động là điều quan trọng bất cứ đơn vị nào cũng phải thực hiện. Nhưng hiện nay, các tin tặc hoàn toàn có thể...",
+    "category": "Bảo mật",
+    "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html"
+  },
+  {
+    "id": "malware-threats",
+    "title": "TIỀM ẨN NGUY CƠ PHÁ HỦY BẢO MẬT DI ĐỘNG TỪ PHẦN MỀM ĐỘC HẠI",
+    "date": "22/06/2022",
+    "summary": "Bảo mật di động bị đe dọa, nguy cơ thông tin và dữ liệu của người dùng có khả năng bị đánh cắp. Vậy làm cách nào để tránh phần mềm độc hại xâm...",
+    "category": "Bảo mật",
+    "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html"
+  },
+  {
+    "id": "attack-vectors",
+    "title": "3 HÌNH THỨC TẤN CÔNG LỚP BẢO MẬT THIẾT BỊ DI ĐỘNG ĐIỂN HÌNH",
+    "date": "16/06/2022",
+    "summary": "Vấn đề bảo mật thiết bị di động chính là mối quan tâm hàng đầu của doanh nghiệp hiện nay. Hãy cùng Công ty FCT Vĩnh Thịnh tìm hiểu về ba phương thức...",
+    "category": "Bảo mật",
+    "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html"
+  }
+]
