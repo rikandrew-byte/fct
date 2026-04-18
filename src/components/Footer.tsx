@@ -42,11 +42,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Tin tức và bài viết</h4>
             <ul className="space-y-4 text-sm font-light">
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Hạ tầng Viễn thông</Link></li>
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Bảo mật Hệ thống</Link></li>
+              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Bảo vệ bản quyền phần mềm</Link></li>
+              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Bảo mật ứng dụng di động</Link></li>
 
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Lưu trữ Đám mây</Link></li>
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Tư vấn Chuyển đổi số</Link></li>
+              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Xác thực & Bảo mật phần cứng</Link></li>
+              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Giải pháp dữ liệu công nghiệp IIoT</Link></li>
             </ul>
           </div>
 
