@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ShieldAlert, Cpu, ArrowRight, ShieldCheck } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
@@ -62,45 +63,67 @@ export default function Home() {
         {/* Lưới Bento */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[280px]">
           
-          {/* Card Lớn 1: Hạ tầng */}
-          <div className="md:col-span-2 md:row-span-2 bg-gradient-to-br from-blue-50 to-white border border-blue-100/50 shadow-sm rounded-[2rem] p-10 flex flex-col justify-end relative overflow-hidden group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1">
-            {/* Ảnh nền mờ */}
-            <Image 
-              src="/server.jpg.png" 
-              alt="Hạ tầng máy chủ" 
-              fill 
-              className="object-cover opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700 pointer-events-none"
-            />
-            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-400/10 blur-[100px] rounded-full group-hover:bg-blue-400/20 transition-colors z-0"></div>
-            <div className="relative z-10 text-5xl mb-6 transform group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">⚡</div>
-            <h3 className="relative z-10 text-3xl font-bold text-blue-950 mb-3 tracking-tight">Hạ tầng Viễn thông & CNTT</h3>
-            <p className="relative z-10 text-blue-900/70 font-light text-lg leading-relaxed">Tư vấn, thiết kế hệ thống mạng lõi, trung tâm dữ liệu (Data Center), máy chủ và lưu trữ doanh nghiệp.</p>
+          {/* Card 1: Guardsquare (Top-Left) */}
+          <div className="md:col-span-2 bg-white border border-gray-100 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            {/* Ảnh nền mờ - Guardsquare abstract */}
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent z-0"></div>
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/10 blur-3xl rounded-full group-hover:bg-purple-500/20 transition-colors"></div>
+            
+            <div className="relative z-10 w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <ShieldAlert className="w-6 h-6 text-purple-600" />
+            </div>
+            <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2">Bảo mật Ứng dụng Di động</h3>
+            <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed max-w-sm">
+              Giải pháp bảo vệ đa lớp từ Guardsquare, ngăn chặn dịch ngược và bảo vệ mã nguồn tối ưu cho ứng dụng iOS & Android.
+            </p>
           </div>
 
-          {/* Card 2: Bảo mật */}
+          {/* Card 2: Thales (Top-Right) */}
           <div className="md:col-span-2 bg-white border border-gray-100 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-            {/* Ảnh nền mờ */}
             <Image 
               src="/sentinelLDK1.png" 
-              alt="Bảo mật an toàn thông tin" 
+              alt="Bảo mật Thales" 
               fill 
               className="object-cover object-top opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 pointer-events-none"
             />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-400/10 blur-[80px] rounded-full group-hover:bg-emerald-400/20 transition-colors z-0"></div>
-            <div className="relative z-10 text-3xl mb-4 transform group-hover:rotate-12 transition-transform">🛡️</div>
-            <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2">Bảo mật & An toàn thông tin</h3>
-            <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed">Giải pháp tường lửa, chống thất thoát dữ liệu và giám sát an ninh mạng toàn diện.</p>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-400/10 blur-[80px] rounded-full group-hover:bg-blue-400/20 transition-colors z-0"></div>
+            <div className="relative z-10 w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <ShieldCheck className="w-6 h-6 text-blue-600" />
+            </div>
+            <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2">Bản quyền & An toàn thông tin</h3>
+            <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed max-w-sm">
+              Giải pháp Sentinel từ Thales giúp quản lý bản quyền phần mềm và bảo mật dữ liệu doanh nghiệp an toàn tuyệt đối.
+            </p>
           </div>
 
-          {/* Card 4: Dịch vụ */}
+          {/* Card 3: Longmai (Bottom-Left) */}
+          <div className="md:col-span-2 bg-gradient-to-br from-red-50 to-white border border-red-100/50 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl hover:shadow-red-500/10 transition-all duration-500 hover:-translate-y-1">
+            <Image 
+              src="/images/products/longmai-smartx1.png" 
+              alt="Sản phẩm Longmai" 
+              fill 
+              className="object-contain object-right opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700 pointer-events-none p-12"
+            />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-red-400/10 blur-[100px] rounded-full group-hover:bg-red-400/20 transition-colors z-0"></div>
+            <div className="relative z-10 w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Cpu className="w-6 h-6 text-red-600" />
+            </div>
+            <h3 className="relative z-10 text-2xl font-bold text-red-950 mb-2 tracking-tight">Xác thực & Bảo mật phần cứng</h3>
+            <p className="relative z-10 text-red-900/70 font-light text-sm leading-relaxed max-w-sm">
+              Đảm bảo an ninh với dòng sản phẩm SmartX và TimePro từ Longmai — giải pháp xác thực 2 lớp và khóa cứng tiêu chuẩn quốc tế.
+            </p>
+          </div>
+
+          {/* Card 4: Dịch vụ hỗ trợ (Bottom-Right) */}
           <Link 
             href="/about" 
             className="md:col-span-2 bg-blue-600 text-white shadow-lg shadow-blue-500/20 rounded-[2rem] p-8 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-center items-center text-center group cursor-pointer"
           >
-            <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <span className="text-2xl text-white">➔</span>
+            <div className="w-16 h-16 rounded-3xl bg-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <ArrowRight className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-lg font-bold">Xem toàn bộ<br/>Dịch vụ hỗ trợ</h3>
+            <h3 className="text-xl font-bold">Xem toàn bộ Dịch vụ hỗ trợ</h3>
+            <p className="text-blue-100 text-xs mt-2 font-light opacity-80">Khám phá cách chúng tôi đồng hành cùng sự phát triển của bạn</p>
           </Link>
 
         </div>
