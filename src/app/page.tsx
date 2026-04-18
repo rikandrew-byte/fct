@@ -64,12 +64,17 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[280px]">
           
           {/* Card 1: Guardsquare (Top-Left) */}
-          <div className="md:col-span-2 bg-white border border-gray-100 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+          <div className="md:col-span-2 bg-gray-50 border border-gray-100 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
             {/* Ảnh nền mờ - Guardsquare abstract */}
+            <Image 
+              src="/images/guardsquare-bg.png" 
+              alt="Guardsquare Security Background" 
+              fill 
+              className="object-cover opacity-10 group-hover:opacity-20 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+            />
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent z-0"></div>
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/10 blur-3xl rounded-full group-hover:bg-purple-500/20 transition-colors"></div>
             
-            <div className="relative z-10 w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="relative z-10 w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-purple-100">
               <ShieldAlert className="w-6 h-6 text-purple-600" />
             </div>
             <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2">Bảo mật Ứng dụng Di động</h3>
@@ -97,19 +102,20 @@ export default function Home() {
           </div>
 
           {/* Card 3: Longmai (Bottom-Left) */}
-          <div className="md:col-span-2 bg-gradient-to-br from-red-50 to-white border border-red-100/50 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl hover:shadow-red-500/10 transition-all duration-500 hover:-translate-y-1">
+          <div className="md:col-span-2 bg-white border border-red-50 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
             <Image 
-              src="/images/products/longmai-smartx1.png" 
-              alt="Sản phẩm Longmai" 
+              src="/images/longmai-bg-abstract.png" 
+              alt="Longmai Hardware Background" 
               fill 
-              className="object-contain object-right opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700 pointer-events-none p-12"
+              className="object-cover opacity-15 group-hover:opacity-25 group-hover:scale-105 transition-all duration-700 pointer-events-none"
             />
-            <div className="absolute top-0 right-0 w-80 h-80 bg-red-400/10 blur-[100px] rounded-full group-hover:bg-red-400/20 transition-colors z-0"></div>
-            <div className="relative z-10 w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="absolute inset-0 bg-gradient-to-r from-red-50/50 to-transparent z-0"></div>
+            
+            <div className="relative z-10 w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-red-100">
               <Cpu className="w-6 h-6 text-red-600" />
             </div>
-            <h3 className="relative z-10 text-2xl font-bold text-red-950 mb-2 tracking-tight">Xác thực & Bảo mật phần cứng</h3>
-            <p className="relative z-10 text-red-900/70 font-light text-sm leading-relaxed max-w-sm">
+            <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2 tracking-tight">Xác thực & Bảo mật phần cứng</h3>
+            <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed max-w-sm">
               Đảm bảo an ninh với dòng sản phẩm SmartX và TimePro từ Longmai — giải pháp xác thực 2 lớp và khóa cứng tiêu chuẩn quốc tế.
             </p>
           </div>
