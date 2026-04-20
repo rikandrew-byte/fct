@@ -42,7 +42,7 @@ body {
 
 /* Glassmorphism Utilities */
 .glass-panel {
-  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+  @apply backdrop-blur-xl border border-white/20 shadow-xl;
 }
 
 .dark .glass-panel {

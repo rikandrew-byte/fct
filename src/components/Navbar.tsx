@@ -33,11 +33,11 @@ export default function Navbar() {
       <header className="fixed top-8 left-0 right-0 z-40 px-6 flex justify-center pointer-events-none">
         <div className={`
           pointer-events-auto
-          glass-panel backdrop-blur-3xl border border-white/10 rounded-full px-6 py-2.5 
+          backdrop-blur-3xl border rounded-full px-6 py-2.5 
           flex items-center justify-between w-full max-w-5xl shadow-2xl transition-all duration-500 
           ${isScrolled 
-            ? "bg-gray-950/95 border-blue-500/30 shadow-blue-500/20 py-1.5" 
-            : "bg-gray-950/40 border-white/10 shadow-blue-500/5"
+            ? "bg-[#020617]/95 border-blue-500/40 shadow-blue-500/20 py-2 scale-[0.98]" 
+            : "bg-[#020617]/60 border-white/10 shadow-black/20"
           }
           hover:border-white/20
         `}>
