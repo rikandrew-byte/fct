@@ -100,40 +100,43 @@ const expertise = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
-      {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-44 pb-32 px-6 min-h-[70vh] flex flex-col items-center justify-center overflow-hidden">
+      {/* ── Hero ─────────────────────────────────────────────────────── - TECH-HEAVY PLUS MODE */}
+      <section className="relative pt-44 pb-32 px-6 min-h-[75vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
         
+        {/* Glows */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-blue-600/10 rounded-full blur-[180px] -z-10 animate-pulse"></div>
+
         <div className="max-w-6xl mx-auto relative z-10 w-full">
           <div className="flex flex-col lg:flex-row gap-16 items-center justify-between">
             {/* Text */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex-1 space-y-8"
+              className="flex-1 space-y-10"
             >
-              <div className="inline-block bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 text-[10px] font-black text-blue-600 tracking-[0.3em] uppercase shadow-sm">
+              <div className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-300 tracking-[0.4em] uppercase shadow-2xl">
                 Về chúng tôi
               </div>
-              <h1 className="text-5xl md:text-8xl font-black text-gray-950 tracking-tighter leading-[0.95]">
+              <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9]">
                 Sứ mệnh bảo mật <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
                   Vững bước tương lai
                 </span>
               </h1>
-              <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed max-w-xl tracking-tight">
+              <p className="text-gray-300 text-xl font-light leading-relaxed max-w-xl tracking-tight">
                 Hơn 10 năm đồng hành cùng doanh nghiệp Việt trong việc bảo mật tài sản số và xây dựng hạ tầng dữ liệu đẳng cấp quốc tế.
               </p>
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-5 pt-6">
                 <Link
                   href="/products"
-                  className="group inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-black text-sm tracking-tight hover:bg-blue-700 transition-all duration-500 shadow-xl shadow-blue-500/25"
+                  className="group inline-flex items-center gap-4 bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-sm tracking-tight hover:bg-blue-700 transition-all duration-500 shadow-2xl shadow-blue-500/40"
                 >
-                  Xem giải pháp <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Xem giải pháp <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 bg-white border border-gray-200 px-8 py-4 rounded-2xl font-black text-sm tracking-tight hover:bg-gray-50 transition-all duration-500 shadow-xl shadow-gray-200/40"
+                  className="inline-flex items-center gap-4 bg-white/5 border border-white/10 backdrop-blur-md text-white px-10 py-5 rounded-2xl font-black text-sm tracking-tight hover:bg-white/10 transition-all duration-500"
                 >
                   Kết nối chuyên gia
                 </Link>
@@ -141,14 +144,14 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-4 shrink-0 w-full lg:w-auto">
+            <div className="grid grid-cols-2 gap-5 shrink-0 w-full lg:w-auto">
               {stats.map((s) => (
                 <div
                   key={s.label}
-                  className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-3xl p-7 text-center"
+                  className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-[2.5rem] p-10 text-center group hover:border-blue-500/50 transition-colors duration-500 shadow-2xl"
                 >
-                  <p className="text-4xl font-black text-white mb-1">{s.value}</p>
-                  <p className="text-sm text-gray-400 font-light">{s.label}</p>
+                  <p className="text-5xl font-black text-white mb-2 tracking-tighter group-hover:text-blue-400 transition-colors">{s.value}</p>
+                  <p className="text-xs text-gray-400 font-bold uppercase tracking-widest">{s.label}</p>
                 </div>
               ))}
             </div>

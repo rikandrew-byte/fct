@@ -16,22 +16,23 @@ export default function NeuralNetworkBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-40">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-80">
       <svg className="w-full h-full">
         {dots.map((dot, i) => (
-          <g key={dot.id}>
+          <g key={dot.id} className="opacity-70">
             {/* Dots */}
             <motion.circle
               cx={`${dot.x}%`}
               cy={`${dot.y}%`}
-              r="1.5"
-              fill="rgba(59, 130, 246, 0.4)"
+              r="2"
+              fill="rgba(59, 130, 246, 0.8)"
+              className="drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"
               animate={{
-                cx: [`${dot.x}%`, `${(dot.x + (Math.random() * 10 - 5)) % 100}%`, `${dot.x}%`],
-                cy: [`${dot.y}%`, `${(dot.y + (Math.random() * 10 - 5)) % 100}%`, `${dot.y}%`],
+                cx: [`${dot.x}%`, `${(dot.x + (Math.random() * 8 - 4)) % 100}%`, `${dot.x}%`],
+                cy: [`${dot.y}%`, `${(dot.y + (Math.random() * 8 - 4)) % 100}%`, `${dot.y}%`],
               }}
               transition={{
-                duration: 10 + Math.random() * 10,
+                duration: 12 + Math.random() * 10,
                 repeat: Infinity,
                 ease: "linear",
               }}
@@ -44,14 +45,14 @@ export default function NeuralNetworkBackground() {
                 y1={`${dot.y}%`}
                 x2={`${neighbor.x}%`}
                 y2={`${neighbor.y}%`}
-                stroke="rgba(59, 130, 246, 0.15)"
-                strokeWidth="0.5"
+                stroke="rgba(59, 130, 246, 0.3)"
+                strokeWidth="0.8"
                 animate={{
-                  x1: [`${dot.x}%`, `${(dot.x + (Math.random() * 5 - 2.5)) % 100}%`, `${dot.x}%`],
-                  y1: [`${dot.y}%`, `${(dot.y + (Math.random() * 5 - 2.5)) % 100}%`, `${dot.y}%`],
+                  x1: [`${dot.x}%`, `${(dot.x + (Math.random() * 4 - 2)) % 100}%`, `${dot.x}%`],
+                  y1: [`${dot.y}%`, `${(dot.y + (Math.random() * 4 - 2)) % 100}%`, `${dot.y}%`],
                 }}
                 transition={{
-                  duration: 15,
+                  duration: 18,
                   repeat: Infinity,
                   ease: "linear",
                 }}
@@ -60,9 +61,9 @@ export default function NeuralNetworkBackground() {
           </g>
         ))}
       </svg>
-      {/* Blurred background glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] animate-pulse delay-1000"></div>
+      {/* Blurred background glows - STRONGER */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[140px] animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[140px] animate-pulse delay-1000"></div>
     </div>
   );
 }
