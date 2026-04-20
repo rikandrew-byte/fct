@@ -9,7 +9,8 @@ import ContactModal from "./ContactModal";
 
 const navLinks = [
   { href: "/about", label: "Về chúng tôi" },
-  { href: "/news", label: "Tin tức và bài viết" },
+  { href: "/news", label: "Tin tức" },
+  { href: "/projects", label: "Dự án tiêu biểu" },
   { href: "/products", label: "Sản phẩm" },
   { href: "/contact", label: "Liên hệ" },
 ];
