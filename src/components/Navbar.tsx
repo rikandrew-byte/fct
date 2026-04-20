@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/about", label: "Về chúng tôi" },
   { href: "/news", label: "Tin tức và bài viết" },
   { href: "/products", label: "Sản phẩm" },
-  { href: "/partners", label: "Đối tác" },
+  { href: "/contact", label: "Liên hệ" },
 ];
 
 export default function Navbar() {

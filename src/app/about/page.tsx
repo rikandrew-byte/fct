@@ -14,7 +14,9 @@ import {
   Building2,
   PackageCheck,
   HeartHandshake,
+  ExternalLink,
 } from "lucide-react";
+import { partners } from "@/data/partners";
 
 export const metadata: Metadata = {
   title: "Về chúng tôi | FCT Vinh Thinh JSC",
@@ -132,7 +134,7 @@ export default function AboutPage() {
                   Xem sản phẩm <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/partners"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 px-6 py-3 rounded-2xl font-bold hover:bg-white/20 transition-colors backdrop-blur-sm"
                 >
                   Liên hệ tư vấn
@@ -327,6 +329,82 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Đối tác chiến lược ───────────────────────────────────────── */}
+      <section className="bg-white py-24 px-6 overflow-hidden">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div className="space-y-4">
+              <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+                Mạng lưới toàn cầu
+              </span>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
+                Đối tác chiến lược
+              </h2>
+              <p className="text-gray-500 font-light text-lg max-w-2xl">
+                Chúng tôi tự hào là đại diện chính thức của những thương hiệu công nghệ và bảo mật
+                hàng đầu thế giới tại Việt Nam.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {partners.map((p) => {
+              const Icon = p.icon;
+              return (
+                <div
+                  key={p.id}
+                  className="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-gray-200/40 transition-all duration-300 group flex flex-col"
+                >
+                  <div className={`h-1.5 w-full ${p.accentBar}`} />
+                  <div className="p-8 flex flex-col flex-1 gap-5">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${p.iconBg}`}
+                        >
+                          <Icon className={`w-7 h-7 ${p.iconColor}`} />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-black text-gray-900 leading-tight">
+                            {p.name}
+                          </h3>
+                          <p className="text-xs text-gray-400 font-light">{p.fullName}</p>
+                        </div>
+                      </div>
+                      <span
+                        className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg shrink-0 ${p.badgeBg}`}
+                      >
+                        {p.tier}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed font-light flex-1">
+                      {p.description}
+                    </p>
+                    <div className="pt-5 border-t border-gray-50 flex items-center justify-between">
+                      <Link
+                        href={`/products`}
+                        className={`inline-flex items-center gap-2 text-sm font-bold transition-all px-3 py-2 rounded-xl ${p.btnColor}`}
+                      >
+                        Xem sản phẩm
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                      <a
+                        href={p.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors"
+                      >
+                        Website <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

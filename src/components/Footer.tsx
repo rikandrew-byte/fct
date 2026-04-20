@@ -55,7 +55,7 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Công Ty</h4>
             <ul className="space-y-4 text-sm font-light">
               <li><Link href="/about" className="hover:text-blue-500 transition-colors">Về chúng tôi</Link></li>
-              <li><Link href="/partners" className="hover:text-blue-500 transition-colors">Đối tác</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-500 transition-colors">Liên hệ</Link></li>
               <li><Link href="/products" className="hover:text-blue-500 transition-colors">Danh mục sản phẩm</Link></li>
               <li><a href="#" className="hover:text-blue-500 transition-colors">Tuyển dụng</a></li>
               <li><a href="#" className="hover:text-blue-500 transition-colors">Tin tức công nghệ</a></li>
