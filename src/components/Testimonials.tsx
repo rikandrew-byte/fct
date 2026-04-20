@@ -5,19 +5,19 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "GĐ Công nghệ",
-    role: "Đơn vị Tài chính & Ngân hàng",
-    content: "Giải pháp lưu trữ và hạ tầng mạng mà công ty cung cấp đã giúp chúng tôi tối ưu 40% chi phí vận hành hàng tháng. Sự chuyên nghiệp của đội ngũ hỗ trợ thực sự ấn tượng.",
+    name: "Hoàng Nguyễn",
+    role: "CTO Ngân hàng số",
+    content: "Chúng tôi đã tin dùng DexGuard từ Guardsquare do FCT cung cấp để bảo vệ ứng dụng Mobile Banking. Giải pháp này giúp ngăn chặn tuyệt đối các nỗ lực dịch ngược và tấn công giả mạo, đảm bảo an toàn cho hàng triệu giao dịch mỗi ngày.",
   },
   {
-    name: "Quản lý Dự án",
-    role: "Cơ quan Quản lý Nhà nước",
-    content: "Chúng tôi đã tìm kiếm một đối tác triển khai bảo mật dài hạn và rất hài lòng với kết quả đạt được. Hệ thống phân quyền và giám sát an ninh hoạt động cực kỳ mượt mà.",
+    name: "Trần Anh",
+    role: "Trưởng phòng R&D Phần mềm",
+    content: "Từ khi triển khai quản lý license bằng khóa cứng Sentinel của Thales, vấn đề bản quyền không còn là nỗi lo. Hệ thống linh hoạt và bảo mật cực cao đã giúp chúng tôi an tâm mở rộng thị trường ra quốc tế.",
   },
   {
-    name: "Lãnh đạo Kỹ thuật",
-    role: "Tập đoàn Công nghệ Đa quốc gia",
-    content: "Các thiết bị đo lường được phân phối đáp ứng chính xác mọi bài test khắt khe nhất từ phía khách hàng Châu Âu của chúng tôi. Dịch vụ hậu mãi rất tuyệt vời.",
+    name: "Lê Minh",
+    role: "Giám đốc Vận hành Sản xuất",
+    content: "Hệ thống Canary Historian đã giải quyết triệt để bài toán thu thập dữ liệu khổng lồ từ nhà máy. Khả năng nén dữ liệu mạnh mẽ và truy xuất thời gian thực giúp chúng tôi kiểm soát chất lượng chính xác đến từng mili giây.",
   },
 ];
 
