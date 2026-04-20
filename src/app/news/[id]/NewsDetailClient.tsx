@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Calendar, Tag, Share2, Facebook, Linkedin, MessageSquare, ExternalLink } from "lucide-react";
+import { ArrowLeft, Calendar, Tag, Share2, MessageSquare, ExternalLink, Globe } from "lucide-react";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { motion } from "framer-motion";
 
@@ -89,7 +89,7 @@ export default function NewsDetailClient({
 
               <div className="flex items-center gap-3">
                 <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
-                  <Facebook className="w-4 h-4 text-blue-600" />
+                  <MessageSquare className="w-4 h-4 text-blue-600" />
                 </button>
                 <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
                   <Globe className="w-4 h-4 text-[#0077b5]" />
