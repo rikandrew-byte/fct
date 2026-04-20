@@ -22,8 +22,8 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-400/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
         <div className="text-center max-w-4xl mx-auto space-y-8 z-10">
-          <div className="inline-block bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 text-xs font-semibold text-blue-600 tracking-wide mb-4 shadow-sm">
-            🚀 KIẾN TẠO HẠ TẦNG SỐ TƯƠNG LAI
+          <div className="inline-block bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 text-xs font-semibold text-blue-600 tracking-wide mb-8 shadow-sm">
+            🛡️ CHUYÊN GIA BẢO MẬT & BẢN QUYỀN PHẦN MỀM
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] text-gray-900">
             Giải pháp Công nghệ <br />
