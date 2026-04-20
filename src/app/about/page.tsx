@@ -1,4 +1,5 @@
-import { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import {
   Shield,
@@ -20,11 +21,7 @@ import { partners } from "@/data/partners";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { motion } from "framer-motion";
 
-export const metadata: Metadata = {
-  title: "Về chúng tôi | FCT Vinh Thinh JSC",
-  description:
-    "FCT Vinh Thinh JSC — hơn 10 năm kinh nghiệm cung cấp giải pháp bảo mật phần mềm, phần cứng và công nghệ công nghiệp hàng đầu từ Thales, Guardsquare, Canary Labs tại Việt Nam.",
-};
+
 
 const stats = [
   { value: "10+", label: "Năm kinh nghiệm" },

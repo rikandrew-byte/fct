@@ -1,16 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldAlert, Cpu, ArrowRight, ShieldCheck } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
-import { Metadata } from "next";
 import { motion } from "framer-motion";
-
-export const metadata: Metadata = {
-  title: "FCT Vinh Thinh .,JSC | Giải pháp bảo mật",
-  description: "Cung cấp giải pháp hạ tầng Viễn thông, Công nghệ thông tin và Bảo mật chuyên dụng cho doanh nghiệp.",
-};
 
 export default function Home() {
   return (
