@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ProductList from "./ProductList";
 import productsData from "@/data/products.json";
+import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 
 export const metadata: Metadata = {
   title: "Giải pháp Bảo mật & Quản lý Bản quyền Phần mềm | FCT Vĩnh Thịnh",

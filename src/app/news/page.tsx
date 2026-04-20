@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import newsData from "@/data/news.json";
 import NewsList from "./NewsList";
+import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 
 export const metadata: Metadata = {
   title: "Tin tức & Bài viết Bảo mật | FCT Vinh Thinh .,JSC",
