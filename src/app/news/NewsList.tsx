@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Search, ArrowRight, Calendar, Tag } from "lucide-react";
+import Link from "next/link";
 import newsData from "@/data/news.json";
 
 export default function NewsList() {
@@ -76,15 +77,13 @@ export default function NewsList() {
                 </div>
 
                 <div className="pt-6 border-t border-gray-50 flex justify-between items-center">
-                  <a 
-                    href={item.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <Link
+                    href={`/news/${item.id}`}
                     className="text-sm font-bold text-gray-900 group-hover:text-blue-600 transition-colors flex items-center gap-2"
                   >
                     Đọc tiếp
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>

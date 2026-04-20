@@ -5,7 +5,8 @@
     "date": "13/12/2024",
     "summary": "Canary Labs là một công ty công nghệ có bề dày lịch sử, được thành lập vào năm 1985. Mặc dù tên tuổi có thể không quá phổ biến với công chúng, nhưng công...",
     "category": "Giải pháp",
-    "link": "https://fct.vn/canary-labs.html"
+    "link": "https://fct.vn/canary-labs.html",
+    "content": "Canary Labs, được thành lập từ năm 1985 tại Pennsylvania (Mỹ), là một trong những đơn vị tiên phong toàn cầu trong việc cung cấp các giải pháp quản trị dữ liệu công nghiệp (Operational Data). Với hơn 35 năm kinh nghiệm, Canary đã khẳng định vị thế là 'xương sống' cho hạ tầng dữ liệu của các nhà máy hiện đại, giúp giải quyết bài toán thu thập và lưu trữ hàng triệu điểm dữ liệu (tags) từ các hệ thống SCADA, PLC hay cảm biến IoT.\n\nSản phẩm cốt lõi của họ là **Canary System**, bao gồm ba thành phần chính đột phá:\n\n- **Canary Historian:** Công cụ lưu trữ dữ liệu thời gian thực với tốc độ cực cao, có khả năng xử lý hàng triệu thay đổi mỗi giây mà không làm suy giảm hiệu suất hệ thống.\n- **Canary Axiom:** Một công cụ hiển thị và phân tích dữ liệu trực quan dành cho các kỹ sư, cho phép tạo biểu đồ xu hướng (trends) và báo cáo vận hành mà không cần kiến thức lập trình.\n- **Canary Collectors:** Giúp kết nối liền mạch với các hệ thống điều khiển thông qua các giao thức chuẩn như OPC UA, MQTT và SQL.\n\nTại Việt Nam, **FCT Vĩnh Thịnh** là đối tác chiến lược triển khai giải pháp Canary nhằm hỗ trợ các doanh nghiệp sản xuất thực hiện chuyển đổi số (Smart Factory). Việc áp dụng hệ thống Canary giúp các nhà máy không chỉ dừng lại ở việc xem dữ liệu quá khứ mà còn tiến tới bảo trì dự báo (predictive maintenance) và tối ưu hóa chi phí vận hành dựa trên dữ liệu thực tế."
   },
   {
     "id": "android-15-security",
@@ -13,7 +14,8 @@
     "date": "03/12/2024",
     "summary": "Android 15 giới thiệu các tính năng bảo mật mới, như phát hiện ghi màn hình và tự động bảo vệ mật khẩu, giúp nâng cao quyền riêng tư cho người dùng. Ở...",
     "category": "Bảo mật",
-    "link": "https://fct.vn/android-15-bao-ve-chong-nhin-trom-man-hinh-nhu-the-nao.html"
+    "link": "https://fct.vn/android-15-bao-ve-chong-nhin-trom-man-hinh-nhu-the-nao.html",
+    "content": "Google đã đưa tiêu chuẩn bảo mật lên một tầm cao mới trên phiên bản Android 15, tập trung mạnh mẽ vào việc bảo vệ quyền riêng tư và ngăn chặn các hành vi đánh cắp thông tin qua việc nhìn trộm màn hình (screen peeking). Đây là một cải tiến cực kỳ quan trọng đối với người dùng các ứng dụng tài chính, ngân hàng và ví điện tử.\n\nHai tính năng bảo mật nổi bật nhất bao gồm:\n\n- **Screen Share Protection (Bảo vệ khi chia sẻ màn hình):** Hệ thống sẽ tự động nhận diện và ẩn đi các thông báo chứa nội dung nhạy cảm (như mã OTP, mật khẩu, tin nhắn riêng tư) khi người dùng đang thực hiện chia sẻ màn hình trong các cuộc họp trực tuyến hoặc cuộc gọi hỗ trợ kỹ thuật.\n- **Recording Detection (Phát hiện ghi màn hình):** Android 15 cung cấp các API mới cho phép ứng dụng phát hiện nếu màn hình đang bị quay lại bởi một ứng dụng ẩn danh hoặc phần mềm độc hại, từ đó chủ động chặn hiển thị các thông tin quan trọng.\n\nTuy nhiên, bài viết cũng nhấn mạnh rằng mặc dù Android 15 có những cải tiến vượt bậc, nhưng đối với các ứng dụng yêu cầu bảo mật cấp độ cao như Mobile Banking, các doanh nghiệp vẫn cần kết hợp thêm các giải pháp chuyên sâu như **DexGuard** mà FCT Vĩnh Thịnh đang phân phối. Điều này nhằm đảm bảo ứng dụng có khả năng tự bảo vệ ngay cả trên các thiết bị đã bị chiếm quyền điều khiển (rooted) hoặc bị can thiệp bởi mã độc tinh vi."
   },
   {
     "id": "mobile-app-security",
@@ -21,7 +23,8 @@
     "date": "25/09/2024",
     "summary": "Trong bối cảnh kỹ thuật số phát triển nhanh chóng ngày nay, việc bảo vệ ứng dụng di động không còn là điều “tuyệt vời khi có” - đó là một điều...",
     "category": "Bảo mật",
-    "link": "https://fct.vn/cach-tiep-can-moi-ve-bao-mat-ung-dung-di-dong.html"
+    "link": "https://fct.vn/cach-tiep-can-moi-ve-bao-mat-ung-dung-di-dong.html",
+    "content": "Trong bối cảnh tội phạm mạng ngày càng tinh vi, việc bảo vệ các ứng dụng di động khỏi hành vi 'thiết kế ngược' (reverse engineering) và giả mạo mã nguồn là nhiệm vụ sống còn của các doanh nghiệp. **Guardsquare**, đối tác chiến lược của FCT Vĩnh Thịnh, đã giới thiệu một phương pháp luận đột phá: **Bảo vệ dựa trên trình biên dịch (Compiler-based protection)**.\n\nThay vì sử dụng các phương pháp truyền thống như tạo lớp 'vỏ bọc' bên ngoài (app wrapping) — vốn dễ bị hacker bóc tách — giải pháp của Guardsquare (thông qua **DexGuard** và **iXGuard**) tích hợp các cơ chế phòng thủ trực tiếp vào mã nguồn trong quá trình biên dịch (build process).\n\nCác ưu điểm vượt trội bao gồm:\n- **Làm rối mã đa hình (Polymorphic Obfuscation):** Mỗi bản build của ứng dụng sẽ có một cấu trúc mã hóa khác nhau. Hacker dù có bẻ khóa được bản build cũ cũng không thể áp dụng cho bản build mới.\n- **Tính năng RASP (Runtime Application Self-Protection):** Cho phép ứng dụng tự phát hiện và phản ứng khi chạy trên môi trường không an toàn (máy ảo, thiết bị jailbreak/root) hoặc bị can thiệp bởi các công cụ gỡ lỗi (debugger).\n- **Xử lý cục bộ:** Toàn bộ quá trình bảo vệ diễn ra tại môi trường phát triển của doanh nghiệp, đảm bảo mã nguồn không bao giờ bị đưa lên đám mây.\n\nĐây hiện là 'Tiêu chuẩn vàng' cho các ứng dụng ngân hàng số, Fintech và các tổ chức Chính phủ tại Việt Nam để đối phó với rủi ro đánh cắp sở hữu trí tuệ và tấn công gian lận tài chính."
   },
   {
     "id": "rasp-features",
@@ -29,7 +32,8 @@
     "date": "23/08/2024",
     "summary": "Tự bảo vệ ứng dụng thời gian chạy (RASP) đã trở thành một yếu tố quan trọng trong việc chống lại các mối đe dọa mà các ứng dụng di động phải đối...",
     "category": "Bảo mật",
-    "link": "https://fct.vn/cac-tinh-nang-chinh-cua-giai-phap-rasp-hieu-qua-va-cach-no-bao-ve-ung-dung.html"
+    "link": "https://fct.vn/cac-tinh-nang-chinh-cua-giai-phap-rasp-hieu-qua-va-cach-no-bao-ve-ung-dung.html",
+    "content": "Tự bảo vệ ứng dụng khi đang chạy (RASP - Runtime Application Self-Protection) là công nghệ bảo mật được tích hợp trực tiếp vào ứng dụng để kiểm soát việc thực thi và phát hiện các hành vi bất thường trong vòng đời của nó.\n\nCác tính năng chính của một giải pháp RASP hiệu quả bao gồm:\n\n1. **Phát hiện Môi trường Không an toàn:** RASP liên tục kiểm tra xem thiết bị có bị Root hoặc Jailbreak hay không. Đây là rủi ro hàng đầu vì kẻ tấn công có thể can thiệp sâu vào bộ nhớ ứng dụng.\n2. **Chống Gỡ lỗi (Debugger Detection):** Ngăn chặn các hacker sử dụng các công cụ như GDB hoặc LLDB để phân tích mã nguồn khi ứng dụng đang chạy.\n3. **Ngăn chặn Ghi màn hình và Chụp ảnh màn hình:** Đây là tính năng sống còn cho các ứng dụng ngân hàng để tránh đánh cắp mã OTP hoặc thông tin thẻ tín dụng.\n4. **Kiểm tra Tính toàn vẹn của Mã:** RASP đảm bảo mã của ứng dụng không bị sửa đổi hoặc chèn thêm mã độc (repackaging).\n\nFCT Vĩnh Thịnh phân phối các giải pháp RASP hàng đầu giúp doanh nghiệp không chỉ 'che giấu' mã nguồn mà còn có khả năng 'phản kháng' chủ động trước mọi cuộc tấn công."
   },
   {
     "id": "dexguard-android",
@@ -37,7 +41,8 @@
     "date": "12/06/2024",
     "summary": "Mặc dù vấn đề về phòng tránh mã độc là trách nhiệm chung nhưng các nhà phát triển đóng vai trò cực kỳ quan trọng trong việc đảm bảo rằng phần mềm...",
     "category": "Phần mềm",
-    "link": "https://fct.vn/bao-ve-chong-lai-cac-ky-thuat-tan-cong-phan-mem-doc-hai-pho-bien-tren-android-voi-dexguard.html"
+    "link": "https://fct.vn/bao-ve-chong-lai-cac-ky-thuat-tan-cong-phan-mem-doc-hai-pho-bien-tren-android-voi-dexguard.html",
+    "content": "Hệ điều hành Android, với thị phần lớn, là mục tiêu tấn công hàng đầu của tội phạm mạng. Các kỹ thuật như chèn overlays (cửa sổ giả), lạm dụng dịch vụ trợ năng (Accessibility Services) để đọc dữ liệu màn hình đang ngày càng phổ biến.\n\n**DexGuard** cung cấp các lớp phòng thủ chuyên sâu để đối phó với những nguy cơ này:\n\n- **String & Class Encryption:** Mã hóa tất cả các chuỗi và tên lớp trong code, khiến kẻ tấn công không thể hiểu được logic xử lý của ứng dụng khi dùng các công cụ decompile.\n- **Asset & Resource Encryption:** Bảo vệ các tệp tài nguyên, cấu hình quan trọng nằm trong gói APK.\n- **Accessibility Shield:** Đây là tính năng độc đáo giúp phát hiện và chặn đứng việc các ứng dụng độc hại lạm dụng quyền trợ năng để thực hiện các thao tác thay mặt người dùng hoặc ghi lén dữ liệu trên màn hình.\n\nViệc tích hợp DexGuard vào quy trình phát triển phần mềm không chỉ là một lựa chọn bảo mật, mà là một yêu cầu bắt buộc để tuân thủ các quy định phân phối ứng dụng tài chính an toàn tại Việt Nam hiện nay."
   },
   {
     "id": "mobile-security-mgmt",
@@ -45,7 +50,8 @@
     "date": "15/07/2022",
     "summary": "Công ty FCT Vĩnh Thịnh sẽ cung cấp một vài phân tích hữu ích cũng như giới thiệu đến bạn 2 giải pháp quản lý bảo mật thiết bị di động đang được thị...",
     "category": "Giải pháp",
-    "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html"
+    "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
+    "content": "Trong kỷ nguyên số, thiết bị di động không chỉ là công cụ liên lạc mà còn là 'văn phòng di động' chứa đựng vô số dữ liệu nhạy cảm của doanh nghiệp. Việc quản trị bảo mật di động (Mobile Security Management) cần một cái nhìn tổng thể hơn thay vì chỉ cài đặt các phần mềm diệt virus thông thường.\n\nFCT Vĩnh Thịnh đề xuất hướng tiếp cận 3 lớp:\n\n1. **Quản lý Ứng dụng (MAM):** Tập trung vào việc bảo vệ chính ứng dụng nghiệp vụ của công ty, đảm bảo dữ liệu trong ứng dụng không bị rò rỉ ra các ứng dụng cá nhân.\n2. **Xác thực Mạnh:** Sử dụng các giải pháp 2FA (Xác thực 2 yếu tố) hoặc PKI (Public Key Infrastructure) thông qua các Token của Longmai hoặc giải pháp từ Thales để đảm bảo chỉ người dùng hợp pháp mới được truy cập hệ thống.\n3. **Giám sát Liên tục:** Sử dụng các giải pháp phân tích hành vi để phát hiện sớm các dấu hiệu thiết bị bị tấn công hoặc người dùng truy cập từ các mạng không an toàn.\n\nĐội ngũ chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ doanh nghiệp xây dựng chính sách bảo mật di động (BYOD Policy) linh hoạt nhưng vẫn an toàn tuyệt đối."
   },
   {
     "id": "security-awareness",
@@ -53,7 +59,8 @@
     "date": "05/07/2022",
     "summary": "Trong bài viết này, Công ty FCT Vĩnh Thịnh phân tích chi tiết nguyên nhân doanh nghiệp cần chú trọng nâng cao nhận thức của nhân viên về các vấn đề bảo mật...",
     "category": "Bảo mật",
-    "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html"
+    "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html",
+    "content": "Dù hệ thống bảo mật có tinh vi đến đâu, con người vẫn luôn là 'mắt xích yếu nhất'. Thống kê cho thấy hơn 80% các vụ rò rỉ dữ liệu bắt nguồn từ lỗi của người dùng hoặc sự thiếu nhận thức về các mối đe dọa.\n\nNâng cao nhận thức bảo mật di động cho nhân viên bao gồm các bài học quan trọng:\n- Nhận diện các cuộc tấn công Phishing qua tin nhắn (Smishing) và email.\n- Hiểu rõ rủi ro khi kết nối vào các mạng Wi-Fi công cộng không có mật khẩu.\n- Thói quen cập nhật hệ điều hành và ứng dụng thường xuyên để nhận các bản vá bảo mật.\n- Không cài đặt các ứng dụng từ nguồn không xác định (Sideloading).\n\nFCT Vĩnh Thịnh không chỉ cung cấp các công cụ kỹ thuật mà còn hỗ trợ doanh nghiệp trong việc tư vấn và đào tạo nhận thức bảo mật, giúp xây dựng văn hóa làm việc an toàn trên môi trường số."
   },
   {
     "id": "mobile-security-challenges",
@@ -61,7 +68,8 @@
     "date": "28/06/2022",
     "summary": "Xây dựng hệ thống bảo mật thiết bị di động là điều quan trọng bất cứ đơn vị nào cũng phải thực hiện. Nhưng hiện nay, các tin tặc hoàn toàn có thể...",
     "category": "Bảo mật",
-    "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html"
+    "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html",
+    "content": "Bảo mật di động đang đối mặt với những thách thức chưa từng có do sự đa dạng của thiết bị và các phương thức tấn công mới nổi.\n\n4 thách thức lớn nhất hiện nay bao gồm:\n\n1. **Dữ liệu bị rò rỉ (Data Leakage):** Việc người dùng vô tình cấp quyền truy cập danh bạ, vị trí cho các ứng dụng không uy tín khiến thông tin doanh nghiệp bị thất thoát.\n2. **Mạng Wi-Fi không an toàn:** Kẻ tấn công có thể thiết lập các điểm truy cập Wi-Fi giả mạo (Man-in-the-middle attack) để chặn bắt dữ liệu truyền đi từ thiết bị.\n3. **Tấn công Phishing tinh vi:** Các tin nhắn giả mạo ngân hàng hoặc cơ quan chức năng khiến người dùng tự cung cấp thông tin đăng nhập.\n4. **Phần mềm gián điệp (Spyware):** Các mã độc được thiết kế để hoạt động âm thầm, ghi âm cuộc gọi và theo dõi camera mà người dùng không hề hay biết.\n\nHiểu rõ những thách thức này là bước đầu tiên để xây dựng một chiến lược phòng thủ chủ động hiệu quả cùng đối tác FCT Vĩnh Thịnh."
   },
   {
     "id": "malware-threats",
@@ -69,7 +77,8 @@
     "date": "22/06/2022",
     "summary": "Bảo mật di động bị đe dọa, nguy cơ thông tin và dữ liệu của người dùng có khả năng bị đánh cắp. Vậy làm cách nào để tránh phần mềm độc hại xâm...",
     "category": "Bảo mật",
-    "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html"
+    "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html",
+    "content": "Phần mềm độc hại (Malware) trên di động không còn đơn giản là những loại virus phá hoại thông thường. Ngày nay, chúng được phát triển như những 'phần mềm thương mại' với cấu trúc cực kỳ phức tạp.\n\nCác loại mã độc thường gặp:\n- **Bankers:** Chuyên đánh cắp thông tin đăng nhập ngân hàng và thẻ tín dụng.\n- **Ransomware:** Khóa thiết bị và đòi tiền chuộc bằng tiền điện tử.\n- **Adware:** Gây khó chịu và đánh cắp thông tin thói quen người dùng để trục lợi quảng cáo.\n\nLàm thế nào để tránh? Ngoài việc nâng cao cảnh giác, các doanh nghiệp phát triển ứng dụng cần trang bị khả năng 'tự bảo vệ' cho sản phẩm của mình ngay từ bên trong. Các giải pháp như Guardsquare giúp ứng dụng có thể phát hiện và tự hủy session nếu phát hiện có mã độc đang can thiệp, đảm bảo an toàn tuyệt đối cho người dùng cuối."
   },
   {
     "id": "attack-vectors",
@@ -77,6 +86,7 @@
     "date": "16/06/2022",
     "summary": "Vấn đề bảo mật thiết bị di động chính là mối quan tâm hàng đầu của doanh nghiệp hiện nay. Hãy cùng Công ty FCT Vĩnh Thịnh tìm hiểu về ba phương thức...",
     "category": "Bảo mật",
-    "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html"
+    "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html",
+    "content": "Để bảo vệ hệ thống hiệu quả, chúng ta cần hiểu rõ các con đường mà hacker có thể xâm nhập (Attack Vectors). Có 3 hình thức điển hình:\n\n1. **Tấn công lớp ứng dụng (App-based):** Kẻ tấn công tạo ra các ứng dụng giả mạo (Fake apps) chứa mã độc hoặc sửa đổi mã nguồn của các ứng dụng phổ biến để chèn thêm tính năng theo dõi.\n2. **Tấn công lớp thiết bị (Device-based):** Khai thác các lỗ hổng của hệ điều hành Android hoặc iOS chưa được vá lỗi (Zero-day exploits).\n3. **Tấn công lớp mạng (Network-based):** Can thiệp vào quá trình truyền dữ liệu khi thiết bị kết nối với các hạ tầng mạng công cộng, thực hiện các kỹ thuật giả mạo DNS hoặc SSL Stripping.\n\nBằng việc nhận diện đúng các vectơ tấn công này, FCT Vĩnh Thịnh sẽ tư vấn cho bạn các lớp phòng thủ tương ứng, từ việc bảo vệ code ứng dụng đến các giải pháp phần cứng bảo mật cho hạ tầng mạng."
   }
 ]
