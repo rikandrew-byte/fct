@@ -23,11 +23,13 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-gray-50/50">
+    <section className="py-32 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Khách Hàng Nói Gì Về Chúng Tôi</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto font-light">Niềm tin của các đối tác chính là minh chứng rõ ràng nhất cho chất lượng và năng lực của công ty.</p>
+        <div className="text-center mb-20 space-y-4">
+          <h2 className="text-4xl md:text-6xl font-black text-gray-950 tracking-tighter opacity-90">Khách Hàng Nói Gì</h2>
+          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto font-light tracking-tight italic">
+            Niềm tin là giá trị cốt lõi trong mọi giải pháp an ninh của chúng tôi.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -36,29 +38,31 @@ export default function Testimonials() {
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
-              className="bg-white p-8 rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col justify-between"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileHover={{ y: -8 }}
+              className="glass-panel p-10 rounded-[2.5rem] border-white/40 flex flex-col justify-between group transition-all duration-500 relative"
             >
+              <div className="absolute inset-x-10 bottom-0 h-1 bg-blue-600/0 group-hover:bg-blue-600/50 group-hover:blur-md transition-all duration-500"></div>
               <div>
-                <div className="flex gap-1 mb-6 text-amber-400">
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
+                <div className="flex gap-1 mb-8 text-blue-600">
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
                 </div>
-                <p className="text-gray-600 font-light italic leading-relaxed mb-8">
+                <p className="text-gray-600 font-light italic leading-relaxed mb-10 text-lg">
                   "{testi.content}"
                 </p>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center text-blue-700 font-bold text-xl">
+              <div className="flex items-center gap-5 pt-8 border-t border-gray-100/50">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-500">
                   {testi.name.charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900 text-sm">{testi.name}</h4>
-                  <p className="text-xs text-gray-500">{testi.role}</p>
+                  <h4 className="font-black text-gray-950 text-base tracking-tight">{testi.name}</h4>
+                  <p className="text-xs text-blue-600 font-bold uppercase tracking-widest mt-0.5">{testi.role}</p>
                 </div>
               </div>
             </motion.div>

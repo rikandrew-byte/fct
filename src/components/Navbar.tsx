@@ -21,30 +21,33 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-6 left-0 right-0 z-40 px-6 flex justify-center">
-        <div className="bg-white/70 backdrop-blur-lg border border-gray-200/50 rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl shadow-lg shadow-gray-200/20">
-          <Link href="/" className="flex items-center gap-3">
+      <header className="fixed top-8 left-0 right-0 z-40 px-6 flex justify-center">
+        <div className="glass-panel bg-white/70 backdrop-blur-2xl border border-white/40 rounded-full px-6 py-2.5 flex items-center justify-between w-full max-max-5xl max-w-5xl shadow-2xl shadow-blue-500/10 transition-all duration-500">
+          <Link href="/" className="flex items-center gap-3 group relative">
+            <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             {/* Logo hình ảnh */}
             <Image 
               src="/logo.png" 
               alt="Logo FCT" 
-              width={56} 
-              height={56} 
-              className="object-contain"
+              width={52} 
+              height={52} 
+              className="object-contain relative z-10 transition-transform group-hover:scale-110 duration-500"
             />
-            <span className="font-bold text-lg tracking-tight hidden sm:block text-gray-900 font-sans">FCT Vinh Thinh .,JSC</span>
+            <span className="font-black text-lg tracking-tighter hidden sm:block text-gray-950 font-sans relative z-10 transition-colors group-hover:text-blue-600">
+              FCT Vinh Thinh <span className="text-blue-600 group-hover:text-gray-950">.,JSC</span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-6 text-sm font-medium">
+          <nav className="hidden md:flex space-x-1 p-1 bg-gray-100/30 rounded-full border border-gray-100/50">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
-                className={`transition-colors duration-200 ${
+                className={`px-5 py-2 rounded-full text-[13px] font-bold tracking-tight transition-all duration-300 ${
                   pathname === link.href 
-                    ? "text-blue-600 font-bold" 
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "bg-white text-blue-600 shadow-sm" 
+                    : "text-gray-500 hover:text-blue-600 hover:bg-white/50"
                 }`}
               >
                 {link.label}
@@ -55,9 +58,10 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform hover:bg-blue-700 shadow-md shadow-blue-500/20 hidden xs:block"
+              className="relative overflow-hidden group bg-blue-600 text-white px-6 py-2.5 rounded-full text-xs font-black tracking-widest uppercase hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/30 hidden xs:block"
             >
-              Nhận tư vấn
+              <span className="relative z-10">Nhận tư vấn</span>
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
             </button>
             
             {/* Mobile Menu Toggle */}

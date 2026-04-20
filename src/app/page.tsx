@@ -3,7 +3,9 @@ import Link from "next/link";
 import { ShieldAlert, Cpu, ArrowRight, ShieldCheck } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
+import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { Metadata } from "next";
+import { motion } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "FCT Vinh Thinh .,JSC | Kiến tạo hạ tầng số tương lai",
@@ -12,28 +14,57 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50 text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20">
-
+    <div className="min-h-screen bg-slate-50 text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
       {/* Hero Section Immersive */}
-      <section className="relative pt-48 pb-20 px-6 min-h-[85vh] flex flex-col items-center justify-center overflow-hidden">
-        {/* Ánh sáng Gradient mờ ảo phía sau */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-blue-400/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-400/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+      <section className="relative pt-48 pb-20 px-6 min-h-[90vh] flex flex-col items-center justify-center overflow-hidden">
+        <NeuralNetworkBackground />
+        
+        {/* Decorative elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-[160px] -z-10 animate-pulse"></div>
 
-        <div className="text-center max-w-4xl mx-auto space-y-8 z-10">
-          <div className="inline-block bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 text-xs font-semibold text-blue-600 tracking-wide mb-8 shadow-sm">
-            🛡️ CHUYÊN GIA BẢO MẬT & BẢN QUYỀN PHẦN MỀM
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] text-gray-900">
+        <div className="text-center max-w-5xl mx-auto space-y-10 z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="group relative inline-block"
+          >
+            <div className="absolute inset-0 bg-blue-400 blur-xl opacity-20 group-hover:opacity-40 transition-opacity animate-pulse"></div>
+            <div className="relative overflow-hidden bg-white/80 backdrop-blur-md border border-blue-200/50 rounded-full px-6 py-2 text-[11px] font-black text-blue-600 tracking-[0.2em] shadow-sm uppercase">
+              <span className="relative z-10">🛡️ CHUYÊN GIA BẢO MẬT & BẢN QUYỀN PHẦN MỀM</span>
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-blue-100/50 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
+            </div>
+          </motion.div>
+
+          <motion.h1 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.95] text-gray-950"
+          >
             Giải pháp Công nghệ <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-800">
-              Toàn diện & Đột phá
+            <span className="relative inline-block pb-2">
+              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500">
+                Toàn diện & Đột phá
+              </span>
+              <motion.span 
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-blue-600 to-transparent rounded-full"
+              />
             </span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-light">
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed tracking-tight"
+          >
             Hệ sinh thái sản phẩm từ các thương hiệu công nghệ hàng đầu thế giới, thiết kế riêng để đáp ứng những nhu cầu khắt khe nhất của doanh nghiệp.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -71,76 +102,108 @@ export default function Home() {
         </div>
         
         {/* Lưới Bento */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[280px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[300px]">
           
           {/* Card 1: Guardsquare (Top-Left) */}
-          <div className="md:col-span-2 bg-gray-50 border border-gray-100 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5 }}
+            className="md:col-span-2 glass-panel rounded-[2.5rem] p-10 flex flex-col justify-center relative overflow-hidden group transition-all duration-500"
+          >
             {/* Ảnh nền mờ - Guardsquare abstract */}
             <Image 
               src="/images/guardsquare-bg.png" 
               alt="Guardsquare Security Background" 
               fill 
-              className="object-cover opacity-10 group-hover:opacity-20 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+              className="object-cover opacity-[0.03] group-hover:opacity-[0.08] group-hover:scale-105 transition-all duration-700 pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent z-0"></div>
+            <div className="absolute -right-20 -top-20 w-64 h-64 bg-indigo-500/10 blur-[80px] rounded-full group-hover:bg-indigo-500/20 transition-colors pointer-events-none"></div>
             
-            <div className="relative z-10 w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-purple-100">
-              <ShieldAlert className="w-6 h-6 text-purple-600" />
+            <div className="relative z-10 w-14 h-14 rounded-2xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-indigo-100">
+              <ShieldAlert className="w-7 h-7 text-indigo-600" />
             </div>
-            <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2">Bảo mật Ứng dụng Di động</h3>
-            <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed max-w-sm">
+            <h3 className="relative z-10 text-2xl font-black text-gray-900 mb-3 tracking-tight">Bảo mật Ứng dụng Di động</h3>
+            <p className="relative z-10 text-gray-500 text-sm font-light leading-relaxed max-w-sm">
               Giải pháp bảo vệ đa lớp từ Guardsquare, ngăn chặn dịch ngược và bảo vệ mã nguồn tối ưu cho ứng dụng iOS & Android.
             </p>
-          </div>
+          </motion.div>
 
           {/* Card 2: Thales (Top-Right) */}
-          <div className="md:col-span-2 bg-white border border-gray-100 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            whileHover={{ y: -5 }}
+            className="md:col-span-2 glass-panel rounded-[2.5rem] p-10 flex flex-col justify-center relative overflow-hidden group transition-all duration-500"
+          >
             <Image 
               src="/sentinelLDK1.png" 
               alt="Bảo mật Thales" 
               fill 
-              className="object-cover object-top opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+              className="object-cover object-top opacity-[0.1] group-hover:opacity-[0.2] group-hover:scale-105 transition-all duration-700 pointer-events-none"
             />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-400/10 blur-[80px] rounded-full group-hover:bg-blue-400/20 transition-colors z-0"></div>
-            <div className="relative z-10 w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <ShieldCheck className="w-6 h-6 text-blue-600" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent z-0"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-400/10 blur-[80px] rounded-full group-hover:bg-blue-400/20 transition-colors pointer-events-none"></div>
+            <div className="relative z-10 w-14 h-14 rounded-2xl bg-blue-50/50 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-blue-100/50">
+              <ShieldCheck className="w-7 h-7 text-blue-600" />
             </div>
-            <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2">Bản quyền & An toàn thông tin</h3>
-            <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed max-w-sm">
+            <h3 className="relative z-10 text-2xl font-black text-gray-900 mb-3 tracking-tight">Bản quyền & An toàn thông tin</h3>
+            <p className="relative z-10 text-gray-500 text-sm font-light leading-relaxed max-w-sm">
               Giải pháp Sentinel từ Thales giúp quản lý bản quyền phần mềm và bảo mật dữ liệu doanh nghiệp an toàn tuyệt đối.
             </p>
-          </div>
+          </motion.div>
 
           {/* Card 3: Longmai (Bottom-Left) */}
-          <div className="md:col-span-2 bg-white border border-red-50 shadow-sm rounded-[2rem] p-10 flex flex-col justify-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            whileHover={{ y: -5 }}
+            className="md:col-span-2 glass-panel rounded-[2.5rem] p-10 flex flex-col justify-center relative overflow-hidden group transition-all duration-500"
+          >
             <Image 
               src="/images/longmai-bg.png" 
               alt="Longmai Hardware Background" 
               fill 
-              className="object-cover opacity-20 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+              className="object-cover opacity-[0.05] group-hover:opacity-[0.1] group-hover:scale-105 transition-all duration-700 pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-red-50/50 to-transparent z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-500/5 to-transparent z-0"></div>
             
-            <div className="relative z-10 w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-red-100">
-              <Cpu className="w-6 h-6 text-red-600" />
+            <div className="relative z-10 w-14 h-14 rounded-2xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-rose-100">
+              <Cpu className="w-7 h-7 text-rose-600" />
             </div>
-            <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-2 tracking-tight">Xác thực & Bảo mật phần cứng</h3>
-            <p className="relative z-10 text-gray-600 text-sm font-light leading-relaxed max-w-sm">
+            <h3 className="relative z-10 text-2xl font-black text-gray-900 mb-3 tracking-tight">Xác thực & Bảo mật phần cứng</h3>
+            <p className="relative z-10 text-gray-500 text-sm font-light leading-relaxed max-w-sm">
               Đảm bảo an ninh với dòng sản phẩm SmartX và TimePro từ Longmai — giải pháp xác thực 2 lớp và khóa cứng tiêu chuẩn quốc tế.
             </p>
-          </div>
+          </motion.div>
 
           {/* Card 4: Dịch vụ hỗ trợ (Bottom-Right) */}
-          <Link 
-            href="/about" 
-            className="md:col-span-2 bg-blue-600 text-white shadow-lg shadow-blue-500/20 rounded-[2rem] p-8 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-center items-center text-center group cursor-pointer"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            whileHover={{ y: -5 }}
+            className="md:col-span-2 relative group"
           >
-            <div className="w-16 h-16 rounded-3xl bg-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <ArrowRight className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold">Xem toàn bộ Dịch vụ hỗ trợ</h3>
-            <p className="text-blue-100 text-xs mt-2 font-light opacity-80">Khám phá cách chúng tôi đồng hành cùng sự phát triển của bạn</p>
-          </Link>
+            <Link 
+              href="/about" 
+              className="w-full h-full bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-2xl shadow-blue-500/25 rounded-[2.5rem] p-10 flex flex-col justify-center items-center text-center transition-all duration-500 relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.2),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="relative z-10 w-20 h-20 rounded-[2rem] bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-white/20">
+                <ArrowRight className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="relative z-10 text-2xl font-black tracking-tight">Xem toàn bộ hệ sinh thái</h3>
+              <p className="relative z-10 text-blue-100/80 text-sm mt-3 font-light max-w-[240px] leading-relaxed">Khám phá cách chúng tôi bảo vệ tương lai số của bạn</p>
+            </Link>
+          </motion.div>
 
         </div>
       </section>

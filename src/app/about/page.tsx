@@ -17,6 +17,8 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { partners } from "@/data/partners";
+import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import { motion } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Về chúng tôi | FCT Vinh Thinh JSC",
@@ -97,50 +99,46 @@ const expertise = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-950 via-blue-950 to-gray-900 pt-44 pb-32 px-6">
-        {/* blobs */}
-        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-700/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-sky-600/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+      <section className="relative pt-44 pb-32 px-6 min-h-[70vh] flex flex-col items-center justify-center overflow-hidden">
+        <NeuralNetworkBackground />
+        
+        <div className="max-w-6xl mx-auto relative z-10 w-full">
+          <div className="flex flex-col lg:flex-row gap-16 items-center justify-between">
             {/* Text */}
-            <div className="flex-1 space-y-7">
-              <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-400 bg-blue-400/10 px-4 py-2 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex-1 space-y-8"
+            >
+              <div className="inline-block bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 text-[10px] font-black text-blue-600 tracking-[0.3em] uppercase shadow-sm">
                 Về chúng tôi
-              </span>
-              <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">
-                FCT{" "}
-                <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-                  Vĩnh Thịnh
-                </span>
-                <br />
-                <span className="text-3xl md:text-4xl font-semibold text-gray-300">
-                  Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh
+              </div>
+              <h1 className="text-5xl md:text-8xl font-black text-gray-950 tracking-tighter leading-[0.95]">
+                Sứ mệnh bảo mật <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500">
+                  Vững bước tương lai
                 </span>
               </h1>
-              <p className="text-gray-400 text-lg font-light leading-relaxed max-w-xl">
-                Hơn 10 năm đồng hành cùng doanh nghiệp Việt trong việc bảo vệ tài sản phần mềm,
-                ứng dụng di động và xây dựng hạ tầng dữ liệu qua các giải pháp
-                công nghệ đẳng cấp quốc tế.
+              <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed max-w-xl tracking-tight">
+                Hơn 10 năm đồng hành cùng doanh nghiệp Việt trong việc bảo mật tài sản số và xây dựng hạ tầng dữ liệu đẳng cấp quốc tế.
               </p>
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-4 pt-4">
                 <Link
                   href="/products"
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-2xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
+                  className="group inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-black text-sm tracking-tight hover:bg-blue-700 transition-all duration-500 shadow-xl shadow-blue-500/25"
                 >
-                  Xem sản phẩm <ArrowRight className="w-4 h-4" />
+                  Xem giải pháp <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 px-6 py-3 rounded-2xl font-bold hover:bg-white/20 transition-colors backdrop-blur-sm"
+                  className="inline-flex items-center gap-3 bg-white border border-gray-200 px-8 py-4 rounded-2xl font-black text-sm tracking-tight hover:bg-gray-50 transition-all duration-500 shadow-xl shadow-gray-200/40"
                 >
-                  Liên hệ tư vấn
+                  Kết nối chuyên gia
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-4 shrink-0 w-full lg:w-auto">
