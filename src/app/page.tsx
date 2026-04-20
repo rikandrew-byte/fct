@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import { motion } from "framer-motion";
 
 export const metadata: Metadata = {
-  title: "FCT Vinh Thinh .,JSC | Kiến tạo hạ tầng số tương lai",
+  title: "FCT Vinh Thinh .,JSC | Giải pháp bảo mật",
   description: "Cung cấp giải pháp hạ tầng Viễn thông, Công nghệ thông tin và Bảo mật chuyên dụng cho doanh nghiệp.",
 };
 
@@ -19,12 +19,12 @@ export default function Home() {
       {/* Hero Section Immersive - TECH-HEAVY PLUS MODE */}
       <section className="relative pt-48 pb-20 px-6 min-h-[95vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
-        
+
         {/* Decorative elements - ENHANCED GLOWS */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
 
         <div className="text-center max-w-5xl mx-auto space-y-10 z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -48,7 +48,7 @@ export default function Home() {
               <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
                 Toàn diện & Đột phá
               </span>
-              <motion.span 
+              <motion.span
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 1, delay: 0.8 }}
@@ -57,7 +57,7 @@ export default function Home() {
             </span>
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="hover:text-blue-400 transition-colors cursor-default">An ninh mạng</div>
             <div className="hover:text-blue-400 transition-colors cursor-default">Hạ tầng số</div>
           </div>
-          
+
           <div className="flex items-center justify-center gap-4 text-gray-600">
             <div className="h-px w-12 bg-white/10"></div>
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] italic text-blue-400/80">
@@ -105,27 +105,27 @@ export default function Home() {
             Khám phá Tin tức <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-        
+
         {/* Lưới Bento - TECH HEAVY PLUS ENHANCED */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 auto-rows-[340px]">
-          
+
           {/* Card 1: Guardsquare (Top-Left) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -10, scale: 1.01 }}
             className="md:col-span-2 glass-panel rounded-[3rem] p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50"
           >
-            <Image 
-              src="/images/guardsquare-bg.png" 
-              alt="Guardsquare Security" 
-              fill 
+            <Image
+              src="/images/guardsquare-bg.png"
+              alt="Guardsquare Security"
+              fill
               className="object-cover opacity-[0.03] group-hover:opacity-[0.1] transition-all duration-700 pointer-events-none"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent z-0"></div>
             <div className="absolute -right-20 -top-20 w-80 h-80 bg-blue-500/10 blur-[100px] rounded-full group-hover:bg-blue-500/20 transition-colors pointer-events-none"></div>
-            
+
             <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-white shadow-xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors border border-gray-100">
               <ShieldAlert className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
           </motion.div>
 
           {/* Card 2: Thales (Top-Right) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -144,10 +144,10 @@ export default function Home() {
             whileHover={{ y: -10, scale: 1.01 }}
             className="md:col-span-2 glass-panel rounded-[3rem] p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(99,102,241,0.15)] hover:border-indigo-400/50"
           >
-            <Image 
-              src="/sentinelLDK1.png" 
-              alt="Bảo mật Thales" 
-              fill 
+            <Image
+              src="/sentinelLDK1.png"
+              alt="Bảo mật Thales"
+              fill
               className="object-cover object-top opacity-[0.1] group-hover:opacity-[0.3] transition-all duration-700 pointer-events-none"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-transparent z-0"></div>
@@ -162,7 +162,7 @@ export default function Home() {
           </motion.div>
 
           {/* Card 3: Longmai (Bottom-Left) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -189,8 +189,8 @@ export default function Home() {
             whileHover={{ y: -10, scale: 1.01 }}
             className="md:col-span-2 relative group"
           >
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="w-full h-full bg-gradient-to-br from-blue-700 via-blue-900 to-[#020617] text-white shadow-2xl shadow-blue-500/30 rounded-[3rem] p-12 flex flex-col justify-center items-center text-center transition-all duration-500 relative overflow-hidden border border-white/5"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(59,130,246,0.3),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>

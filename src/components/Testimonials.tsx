@@ -19,6 +19,21 @@ const testimonials = [
     role: "Giám đốc Vận hành Sản xuất",
     content: "Hệ thống Canary Historian đã giải quyết triệt để bài toán thu thập dữ liệu khổng lồ từ nhà máy. Khả năng nén dữ liệu mạnh mẽ và truy xuất thời gian thực giúp chúng tôi kiểm soát chất lượng chính xác đến từng mili giây.",
   },
+  {
+    name: "Đặng Tuấn",
+    role: "Tech Lead tại Fintech Startup",
+    content: "Việc tích hợp iXGuard cho ứng dụng iOS đã giúp chúng tôi vượt qua các đợt kiểm duyệt bảo mật khắt khe từ đối tác quốc tế. Giải pháp của Guardsquare thực sự là 'tấm khiên' vững chắc cho mã nguồn của chúng tôi.",
+  },
+  {
+    name: "Phạm Thành",
+    role: "Trưởng phòng CNTT (Khối Nhà nước)",
+    content: "Chúng tôi đánh giá cao dòng sản phẩm Token PKI của Longmai do FCT phân phối. Sự ổn định và khả năng tương thích tuyệt vời với hệ thống chữ ký số hiện tại đã giúp quy trình hành chính công an toàn hơn bao giờ hết.",
+  },
+  {
+    name: "Nguyễn Hương",
+    role: "Giám đốc Công ty Phần mềm",
+    content: "Hơn 5 năm hợp tác, FCT Vinh Thinh không chỉ là nhà cung cấp mà còn là đối tác tin cậy. Đội ngũ kỹ thuật luôn có mặt kịp thời để xử lý các vấn đề phát sinh trong việc quản lý license phức tạp.",
+  },
 ];
 
 export default function Testimonials() {
