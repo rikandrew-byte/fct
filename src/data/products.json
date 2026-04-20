@@ -1,15 +1,5 @@
 [
   {
-    "id": "sentinel-up",
-    "name": "Sentinel UP",
-    "category": "Thales",
-    "image": "/images/products/sentinel-up.png",
-    "summary": "Nền tảng quản lý cập nhật phần mềm và đăng ký (Subscription) tự động, chuyên nghiệp trên môi trường điện toán đám mây.",
-    "description": "Sentinel UP là giải pháp quản lý bản quyền phần mềm trên nền đám mây, cho phép nhà phát triển phần mềm cung cấp, quản lý và cập nhật license từ xa mà không cần phần cứng. Hệ thống hỗ trợ các mô hình kinh doanh linh hoạt như đăng ký theo tháng/năm, dùng thử, và kích hoạt tự động — lý tưởng cho phần mềm hiện đại trên mọi nền tảng.",
-    "isNew": true,
-    "link": "https://fct.vn/sentinel-up.html"
-  },
-  {
     "id": "sentinel-hl-basic",
     "name": "Sentinel HL Basic",
     "category": "Thales",

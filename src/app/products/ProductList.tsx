@@ -96,7 +96,6 @@ const categoryConfig: Record<
 
 // ─── Per-product fallback icon ─────────────────────────────────────────────
 const productIcons: Record<string, LucideIcon> = {
-  "sentinel-up":               RefreshCcw,
   "sentinel-hl-basic":         Shield,
   "sentinel-hl-pro":           ShieldCheck,
   "sentinel-hl-max":           Layers,
