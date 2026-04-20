@@ -1,0 +1,109 @@
+"use client";
+
+import { useState } from "react";
+import { Search, ArrowRight, Calendar, Tag } from "lucide-react";
+import newsData from "@/data/news.json";
+
+export default function NewsList() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("Tất cả");
+
+  const categories = ["Tất cả", ...Array.from(new Set(newsData.map((item) => item.category)))];
+
+  const filteredNews = newsData.filter((item) => {
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                         item.summary.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === "Tất cả" || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  return (
+    <div className="space-y-12">
+      {/* Search and Category Filter Bar */}
+      <div className="flex flex-col md:flex-row gap-6 justify-between items-center bg-white p-4 rounded-3xl border border-gray-100 shadow-sm sticky top-24 z-20">
+        <div className="relative w-full md:max-w-md">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <input 
+            type="text" 
+            placeholder="Tìm kiếm bài viết..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-12 pr-4 py-3 bg-gray-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 transition-all font-light"
+          />
+        </div>
+        
+        <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto scrollbar-hide">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-6 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all ${
+                selectedCategory === cat 
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-500/20" 
+                  : "bg-gray-50 text-gray-500 hover:bg-gray-100"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* News Grid */}
+      {filteredNews.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredNews.map((item, idx) => (
+            <article key={idx} className="bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 group overflow-hidden flex flex-col">
+              <div className="p-8 flex flex-col flex-grow space-y-6">
+                <div className="flex justify-between items-center text-xs font-medium uppercase tracking-wider">
+                  <span className="flex items-center gap-1.5 text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg">
+                    <Tag className="w-3.5 h-3.5" />
+                    {item.category}
+                  </span>
+                  <span className="flex items-center gap-1.5 text-gray-400">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {item.date}
+                  </span>
+                </div>
+                
+                <div className="flex-grow space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-500 font-light text-sm leading-relaxed line-clamp-3">
+                    {item.summary}
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-gray-50 flex justify-between items-center">
+                  <a 
+                    href={item.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-sm font-bold text-gray-900 group-hover:text-blue-600 transition-colors flex items-center gap-2"
+                  >
+                    Đọc tiếp
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="py-20 text-center space-y-4">
+          <div className="w-16 h-16 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Search className="w-8 h-8" />
+          </div>
+          <p className="text-gray-500 font-light text-lg">Không tìm thấy bài viết nào phù hợp.</p>
+          <button 
+            onClick={() => {setSearchQuery(""); setSelectedCategory("Tất cả");}}
+            className="text-blue-600 font-semibold hover:underline"
+          >
+            Xoá bộ lọc
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
