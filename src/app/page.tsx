@@ -37,14 +37,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Phần Liên lạc dạng liên kết nổi bật */}
-      <section className="border-y border-gray-200/60 bg-gray-100/30 py-8 mb-24 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-12 text-gray-400 font-bold text-xl md:text-2xl tracking-widest opacity-80">
-          <div className="hover:text-gray-900 transition-colors cursor-pointer">CISCO</div>
-          <div className="hover:text-gray-900 transition-colors cursor-pointer">MICROSOFT</div>
-          <div className="hover:text-gray-900 transition-colors cursor-pointer">DELL</div>
-          <div className="hover:text-gray-900 transition-colors cursor-pointer">HP</div>
-          <div className="hover:text-gray-900 transition-colors cursor-pointer">FLUKE</div>
+      {/* Trust & Confidentiality Section */}
+      <section className="border-y border-gray-200/60 bg-white py-12 mb-24 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-gray-400 font-black text-xs md:text-sm tracking-[0.3em] uppercase opacity-60">
+            <div className="hover:text-blue-600 transition-colors">Ngân hàng</div>
+            <div className="hover:text-blue-600 transition-colors">Chính phủ</div>
+            <div className="hover:text-blue-600 transition-colors">Tài chính</div>
+            <div className="hover:text-blue-600 transition-colors">An ninh mạng</div>
+            <div className="hover:text-blue-600 transition-colors">Hạ tầng số</div>
+          </div>
+          
+          <div className="flex items-center justify-center gap-3 text-gray-400/80">
+            <div className="h-px w-8 bg-gray-200"></div>
+            <p className="text-[10px] font-medium uppercase tracking-widest italic">
+              "Vì tính chất bảo mật đặc thù, chúng tôi cam kết bảo vệ tuyệt đối danh tính và dự án của khách hàng theo chuẩn NDA."
+            </p>
+            <div className="h-px w-8 bg-gray-200"></div>
+          </div>
         </div>
       </section>
 

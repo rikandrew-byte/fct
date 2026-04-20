@@ -5,18 +5,18 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Nguyễn Văn A",
-    role: "CTO, TechCorp",
+    name: "GĐ Công nghệ",
+    role: "Đơn vị Tài chính & Ngân hàng",
     content: "Giải pháp lưu trữ và hạ tầng mạng mà công ty cung cấp đã giúp chúng tôi tối ưu 40% chi phí vận hành hàng tháng. Sự chuyên nghiệp của đội ngũ hỗ trợ thực sự ấn tượng.",
   },
   {
-    name: "Trần Thị B",
-    role: "Giám đốc Vận hành, GlobalNet",
+    name: "Quản lý Dự án",
+    role: "Cơ quan Quản lý Nhà nước",
     content: "Chúng tôi đã tìm kiếm một đối tác triển khai bảo mật dài hạn và rất hài lòng với kết quả đạt được. Hệ thống phân quyền và giám sát an ninh hoạt động cực kỳ mượt mà.",
   },
   {
-    name: "Lê Minh C",
-    role: "CEO, DataTech",
+    name: "Lãnh đạo Kỹ thuật",
+    role: "Tập đoàn Công nghệ Đa quốc gia",
     content: "Các thiết bị đo lường được phân phối đáp ứng chính xác mọi bài test khắt khe nhất từ phía khách hàng Châu Âu của chúng tôi. Dịch vụ hậu mãi rất tuyệt vời.",
   },
 ];
