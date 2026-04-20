@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import ContactModal from "./ContactModal";
@@ -17,24 +17,42 @@ const navLinks = [
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-8 left-0 right-0 z-40 px-6 flex justify-center">
-        <div className="glass-panel bg-gray-950/20 backdrop-blur-3xl border border-white/10 rounded-full px-6 py-2.5 flex items-center justify-between w-full max-max-5xl max-w-5xl shadow-2xl shadow-blue-500/5 transition-all duration-500 hover:border-white/20">
+      <header className="fixed top-8 left-0 right-0 z-40 px-6 flex justify-center pointer-events-none">
+        <div className={`
+          pointer-events-auto
+          glass-panel backdrop-blur-3xl border border-white/10 rounded-full px-6 py-2.5 
+          flex items-center justify-between w-full max-w-5xl shadow-2xl transition-all duration-500 
+          ${isScrolled 
+            ? "bg-gray-950/95 border-blue-500/30 shadow-blue-500/20 py-1.5" 
+            : "bg-gray-950/40 border-white/10 shadow-blue-500/5"
+          }
+          hover:border-white/20
+        `}>
           <Link href="/" className="flex items-center gap-3 group relative">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             {/* Logo hình ảnh */}
             <Image 
               src="/logo.png" 
               alt="Logo FCT" 
-              width={52} 
-              height={52} 
-              className="object-contain relative z-10 transition-transform group-hover:scale-110 duration-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+              width={isScrolled ? 42 : 52} 
+              height={isScrolled ? 42 : 52} 
+              className="object-contain relative z-10 transition-all group-hover:scale-110 duration-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
             />
-            <span className="font-black text-lg tracking-tighter hidden sm:block text-white font-sans relative z-10 transition-colors group-hover:text-blue-400">
-              FCT Vinh Thinh <span className="text-blue-400 group-hover:text-white">.,JSC</span>
+            <span className="font-black text-lg tracking-tighter hidden sm:block text-white font-sans relative z-10 transition-colors">
+              FCT Vinh Thinh <span className={`${isScrolled ? "text-blue-400" : "text-blue-400"} transition-colors`}>.,JSC</span>
             </span>
           </Link>
 
