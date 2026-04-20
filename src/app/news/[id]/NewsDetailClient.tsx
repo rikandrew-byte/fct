@@ -92,7 +92,7 @@ export default function NewsDetailClient({
                   <Facebook className="w-4 h-4 text-blue-600" />
                 </button>
                 <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
-                  <Linkedin className="w-4 h-4 text-[#0077b5]" />
+                  <Globe className="w-4 h-4 text-[#0077b5]" />
                 </button>
                 <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
                   <Share2 className="w-4 h-4 text-gray-600" />
