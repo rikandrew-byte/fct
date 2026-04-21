@@ -186,7 +186,7 @@ export default function Home() {
             className="md:col-span-2 relative group"
           >
             <Link
-              href="/about"
+              href="/products"
               className="w-full h-full bg-gradient-to-br from-blue-700 via-blue-900 to-[#020617] text-white shadow-2xl shadow-blue-500/30 rounded-[3rem] p-12 flex flex-col justify-center items-center text-center transition-all duration-500 relative overflow-hidden border border-white/5"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(59,130,246,0.3),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>

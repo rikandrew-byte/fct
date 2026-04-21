@@ -12,14 +12,25 @@ interface ContactModalProps {
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Giả lập xử lý gửi form
+    // Giả lập xử lý gửi form. Trong ứng dụng thực tế, bạn sẽ gửi dữ liệu ở đây.
+    // const formData = { name, phone, email, message };
     setTimeout(() => {
       setIsLoading(false);
       setIsSubmitted(true);
+      // Xóa các trường trong form
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+
       setTimeout(() => {
         setIsSubmitted(false);
         onClose();
@@ -97,23 +108,49 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   >
                     <div className="space-y-1.5">
                       <label className="text-sm font-semibold text-gray-700">Họ và Tên</label>
-                      <input required type="text" placeholder="Nguyễn Văn A" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light" />
+                      <input
+                        required
+                        type="text"
+                        placeholder="Nguyễn Văn A"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
+                      />
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
                         <label className="text-sm font-semibold text-gray-700">Số Điện Thoại</label>
-                        <input required type="tel" placeholder="0901234567" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light" />
+                        <input
+                          required
+                          type="tel"
+                          placeholder="0901234567"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
+                        />
                       </div>
                       <div className="space-y-1.5">
                         <label className="text-sm font-semibold text-gray-700">Email</label>
-                        <input required type="email" placeholder="email@company.com" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light" />
+                        <input
+                          required
+                          type="email"
+                          placeholder="email@company.com"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
+                        />
                       </div>
                     </div>
 
                     <div className="space-y-1.5">
                       <label className="text-sm font-semibold text-gray-700">Nhu cầu tư vấn</label>
-                      <textarea rows={3} placeholder="Mô tả dự án hoặc yêu cầu của bạn..." className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light resize-none" />
+                      <textarea
+                        rows={3} placeholder="Mô tả dự án hoặc yêu cầu của bạn..."
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light resize-none"
+                      />
                     </div>
 
                     <button 

@@ -53,8 +53,8 @@ export default function NewsList() {
       {/* News Grid */}
       {filteredNews.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredNews.map((item, idx) => (
-            <article key={idx} className="bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 group overflow-hidden flex flex-col">
+          {filteredNews.map((item) => (
+            <article key={item.id} className="bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500 group overflow-hidden flex flex-col">
               <div className="p-8 flex flex-col flex-grow space-y-6">
                 <div className="flex justify-between items-center text-xs font-medium uppercase tracking-wider">
                   <span className="flex items-center gap-1.5 text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg">
