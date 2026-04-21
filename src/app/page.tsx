@@ -37,7 +37,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.9] text-white"
+            className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.2] md:leading-[1] text-white"
           >
             Giải pháp Công nghệ <br />
             <span className="relative inline-block pb-4">
@@ -57,7 +57,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-xl md:text-3xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed tracking-tight"
+            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight"
           >
             Hệ sinh thái sản phẩm từ các thương hiệu công nghệ hàng đầu thế giới, thiết kế để bảo vệ tài sản doanh nghiệp trong kỷ nguyên số.
           </motion.p>

@@ -50,6 +50,7 @@ export default function Navbar() {
               alt="Logo FCT" 
               width={isScrolled ? 42 : 52} 
               height={isScrolled ? 42 : 52} 
+              style={{ height: 'auto' }}
               className="object-contain relative z-10 transition-all group-hover:scale-110 duration-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
             />
             <span className="font-black text-lg tracking-tighter hidden sm:block text-white font-sans relative z-10 transition-colors">

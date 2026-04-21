@@ -48,7 +48,7 @@ export default function ProjectsPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[
-              { label: "Năm kinh nghiệm", value: "20+", sub: "Expertise since 2006" },
+              { label: "Năm kinh nghiệm", value: "10+", sub: "Developing since 2014" },
               { label: "Thiết bị bảo vệ", value: "1.5M+", sub: "Protected Endpoints" },
               { label: "Khách hàng DN", value: "500+", sub: "Enterprise Clients" },
               { label: "Tỷ lệ thành công", value: "100%", sub: "Zero-Breach Record" },
