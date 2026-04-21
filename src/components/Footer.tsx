@@ -1,8 +1,33 @@
-import { MessageCircle, X, BriefcaseBusiness, Mail, Phone, MapPin, Video } from "lucide-react";
+"use client";
+
+import { MessageCircle, X, BriefcaseBusiness, Mail, Phone, MapPin, Video, Users } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [visitorCount, setVisitorCount] = useState(2103);
+  const [onlineCount, setOnlineCount] = useState(1);
+
+  useEffect(() => {
+    // Logic bộ đếm lượt truy cập (Visitor Counter)
+    const storedCount = localStorage.getItem("fct_visitor_count");
+    const initialBase = 2103;
+    
+    if (!storedCount) {
+      const newCount = initialBase + 1;
+      localStorage.setItem("fct_visitor_count", newCount.toString());
+      setVisitorCount(newCount);
+    } else {
+      const newCount = parseInt(storedCount) + 1;
+      localStorage.setItem("fct_visitor_count", newCount.toString());
+      setVisitorCount(newCount);
+    }
+
+    // Giả lập số người đang trực tuyến (Online)
+    setOnlineCount(Math.floor(Math.random() * (15 - 5 + 1)) + 5);
+  }, []);
+
   return (
     <footer className="bg-gray-950 pt-24 pb-12 border-t border-gray-900 text-gray-500">
       <div className="max-w-6xl mx-auto px-6">
@@ -97,9 +122,30 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium uppercase tracking-widest">
-          <p>© 2026 FCT Vinh Thinh .,JSC. Đã đăng ký bản quyền.</p>
-          <div className="flex gap-10">
+        <div className="pt-10 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="space-y-4 md:space-y-0 md:flex md:items-center md:gap-10">
+            <p className="text-[11px] font-medium uppercase tracking-widest leading-loose">
+              © 2026 FCT Vinh Thinh .,JSC. Đã đăng ký bản quyền.
+            </p>
+            
+            {/* Visitor Counter Badge */}
+            <div className="inline-flex items-center gap-4 bg-gray-900/50 border border-white/5 rounded-full px-5 py-2 backdrop-blur-sm shadow-inner group hover:border-blue-500/30 transition-all duration-500">
+              <div className="relative flex items-center">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+                <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-40"></div>
+              </div>
+              <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-[9px] text-gray-400">
+                <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
+                  <span className="text-white">{onlineCount}</span> trực tuyến
+                </span>
+                <span className="pl-3 flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
+                   Tổng: <span className="text-white">{visitorCount.toLocaleString()}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex gap-10 text-[11px] font-medium uppercase tracking-widest">
             <a href="#" className="hover:text-white transition-colors">Chính sách bảo mật</a>
             <a href="#" className="hover:text-white transition-colors">Điều khoản sử dụng</a>
           </div>
