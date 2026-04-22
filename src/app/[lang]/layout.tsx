@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       template: `%s | FCT Vinh Thinh .,JSC`
     },
     description: dict.common.metaDescription,
-    keywords: ["bảo mật phần mềm", "bản quyền phần mềm", "Sentinel LDK", "Guardsquare", "DexGuard", "iXGuard", "xác thực 2 lớp", "FCT Vĩnh Thịnh", "Canary Labs", "IIoT security"],
+    keywords: dict.common.keywords,
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: `/${lang}`,

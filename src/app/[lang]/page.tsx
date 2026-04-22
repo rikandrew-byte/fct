@@ -8,11 +8,31 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": "FCT Vinh Thinh JSC",
+    "alternateName": "Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh",
     "url": "https://fct.vn",
     "logo": "https://fct.vn/logo.png",
+    "image": "https://fct.vn/og-image.png",
     "description": dict.hero.description,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "80/12/32 đường Ngô Chí Quốc, P. Bình Chiểu (Phú Cường)",
+      "addressLocality": "TP. Thủ Đức",
+      "addressRegion": "TP. Hồ Chí Minh",
+      "addressCountry": "VN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 10.880,
+      "longitude": 106.720
+    },
+    "telephone": "+84-983-027-776",
+    "email": "andrew@fct.vn",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Vietnam"
+    },
     "sameAs": [
       "https://facebook.com/fctvinhthinh",
       "https://linkedin.com/company/fctvinhthinh"
@@ -20,8 +40,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+84-983-027-776",
-      "contactType": "technical support"
-    }
+      "contactType": "technical support",
+      "areaServed": "VN",
+      "availableLanguage": ["Vietnamese", "English"]
+    },
+    "openingHours": "Mo-Fr 08:30-17:30"
   };
 
   return (

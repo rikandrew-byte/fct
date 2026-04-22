@@ -8,7 +8,8 @@
     "getAdvice": "Nhận tư vấn",
     "getAdviceNow": "Nhận tư vấn ngay",
     "metaTitle": "FCT Vinh Thinh .,JSC | Chuyên gia Bảo mật & Giải pháp Công nghệ Lõi",
-    "metaDescription": "FCT Vĩnh Thịnh — Đối tác phân phối chính thức giải pháp bảo mật từ Thales, Guardsquare, Canary Labs tại Việt Nam. Hơn 10 năm kinh nghiệm kiến tạo hạ tầng số an toàn."
+    "metaDescription": "FCT Vĩnh Thịnh — Đối tác phân phối chính thức giải pháp bảo mật từ Thales, Guardsquare, Canary Labs tại Việt Nam. Hơn 10 năm kinh nghiệm kiến tạo hạ tầng số an toàn.",
+    "keywords": ["bảo mật phần mềm", "bản quyền phần mềm", "Sentinel LDK", "Thales Sentinel Việt Nam", "Guardsquare", "DexGuard", "iXGuard", "bảo mật ứng dụng ngân hàng", "xác thực 2 lớp", "mToken Longmai", "Canary Labs", "IIoT security Vietnam", "FCT Vĩnh Thịnh"]
   },
   "virtualAssistant": {
     "title": "FCT Virtual Assistant",
