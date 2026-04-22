@@ -1,0 +1,285 @@
+{
+  "common": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "copyright": "© 2026 FCT Vinh Thinh .,JSC. All rights reserved.",
+    "online": "online",
+    "total": "Total",
+    "getAdvice": "Get Advice",
+    "getAdviceNow": "Get Advice Now"
+  },
+  "navbar": {
+    "about": "About Us",
+    "news": "News",
+    "projects": "Featured Projects",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "🛡️ SECURITY & SOFTWARE LICENSING SPECIALIST",
+    "title": "Comprehensive & Breakthrough",
+    "subtitle": "Technology Solutions",
+    "description": "A product ecosystem from the world's leading technology brands, designed to protect corporate assets in the digital era."
+  },
+  "trust": {
+    "sectors": ["Banking", "Government", "Finance", "Cybersecurity", "Digital Infrastructure"],
+    "commitment": "\"Absolute commitment to protecting customer identity and projects under a strict NDA Policy\""
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Empowering Businesses",
+    "subtitle": "In The Digital Era",
+    "description": "We don’t just provide services; we bring a complete technology ecosystem. With deep expertise and global partnership capabilities, we help organizations push beyond their limits.",
+    "more": "Learn more about FCT",
+    "features": [
+      {
+        "title": "Safety & Security",
+        "description": "Comprehensive cybersecurity solutions providing maximum data protection."
+      },
+      {
+        "title": "Peak Performance",
+        "description": "Optimizing IT infrastructure to keep your platform running at top speed."
+      },
+      {
+        "title": "Global Connectivity",
+        "description": "Ensuring unlimited and seamless interoperability across core network platforms."
+      }
+    ]
+  },
+  "solutions": {
+    "badge": "Solution Ecosystem",
+    "title": "Absolute Peace of Mind with",
+    "subtitle": "Core Technology",
+    "newsLink": "Explore News",
+    "mobileSecurity": {
+      "title": "Mobile Security",
+      "description": "Multi-layered protection from Guardsquare, preventing reverse engineering and optimizing source code protection."
+    },
+    "licenseManagement": {
+      "title": "License Management",
+      "description": "Sentinel solutions from Thales for secure software licensing and enterprise data protection."
+    },
+    "hardwareSecurity": {
+      "title": "Hardware Security",
+      "description": "Peace of mind with Longmai products — international standard 2-factor authentication and hardware key solutions."
+    },
+    "ecosystem": {
+      "title": "Explore FCT Ecosystem",
+      "description": "Pioneering the protection of your digital economic infrastructure"
+    }
+  },
+  "footer": {
+    "brandDescription": "Pioneering modern digital infrastructure solutions. We empower Vietnamese businesses to reach global heights through breakthrough technology.",
+    "newsTitle": "News & Articles",
+    "companyTitle": "Company",
+    "contactTitle": "Contact",
+    "hq": "Headquarters",
+    "hqAddress": "3rd Floor, Ngôi Sao Building, Unit 15, Block B, Nguyen Canh Di St, Dai Kim Ward, Hoang Mai Dist, Hanoi",
+    "hotline": "Hotline",
+    "emailSupport": "Support Email",
+    "links": {
+      "licenseProtection": "Software License Protection",
+      "mobileSecurity": "Mobile App Security",
+      "hardwareAuth": "Authentication & Hardware Security",
+      "industrialData": "IIoT Industrial Data Solutions",
+      "recruitment": "Recruitment",
+      "techNews": "Tech News",
+      "productCatalog": "Product Catalog"
+    }
+  },
+  "products": {
+    "metaTitle": "Software Security & License Management | FCT Vinh Thinh",
+    "metaDescription": "Official distributor of Sentinel (Thales), Guardsquare (DexGuard, iXGuard), Canary Labs, and Longmai solutions in Vietnam. Comprehensive application security consulting.",
+    "ogTitle": "Official Security Solutions Catalog - FCT Vinh Thinh",
+    "ogDescription": "World-leading security hardware and software ecosystem for enterprises in the digital era.",
+    "badge": "Product Solutions",
+    "titlePart1": "Devices &",
+    "titlePart2": "Solutions",
+    "description": "A core technology ecosystem protecting digital assets, selected from world-leading security technology partners."
+  },
+  "aboutPage": {
+    "hero": {
+      "badge": "About Us",
+      "title": "Security Mission",
+      "subtitle": "Steadfast Future",
+      "description": "Over 10 years accompanying Vietnamese businesses in securing digital assets and building world-class data infrastructure.",
+      "ctaProducts": "View Solutions",
+      "ctaExperts": "Connect Experts"
+    },
+    "stats": [
+      { "value": "10+", "label": "Years Experience" },
+      { "value": "200+", "label": "Trusted Clients" },
+      { "value": "18", "label": "Product Lines" },
+      { "value": "4", "label": "Global Partners" }
+    ],
+    "intro": {
+      "badge": "Company Introduction",
+      "title": "Who are we?",
+      "content1": "<strong class=\"font-semibold text-gray-900\">FCT Vinh Thinh JSC</strong> is one of the pioneers in Vietnam in distributing <strong class=\"font-semibold text-gray-900\">software license protection</strong> and <strong class=\"font-semibold text-gray-900\">industrial data collection</strong> solutions.",
+      "content2": "Founded in 2010 and headquartered in Hanoi, we serve customers nationwide—from small and medium software companies to financial institutions, banks, and industrial manufacturing groups.",
+      "content3": "As an official partner of <strong class=\"font-semibold text-gray-900\">Thales</strong> (France), <strong class=\"font-semibold text-gray-900\">Guardsquare</strong> (Belgium), <strong class=\"font-semibold text-gray-900\">Canary Labs</strong> (USA), and <strong class=\"font-semibold text-gray-900\">Longmai</strong> (China), FCT Vinh Thinh is committed to bringing world-class technology solutions with localized technical support.",
+      "content4": "We don’t just sell products—we <strong class=\"font-semibold text-gray-900\">expertly consult</strong>, support solution selection, and provide training to ensure customers maximize value from every investment."
+    },
+    "values": {
+      "badge": "Core Values",
+      "title": "Why Choose FCT Vinh Thinh?",
+      "description": "Committed to providing the best solutions with the most dedicated support service.",
+      "items": [
+        {
+          "title": "100% Genuine",
+          "desc": "Every product is distributed directly from manufacturers with full documentation and official warranty in Vietnam."
+        },
+        {
+          "title": "Dedicated Support",
+          "desc": "Our well-trained technical team is always ready to consult and support customers throughout implementation and after-sales."
+        },
+        {
+          "title": "Comprehensive Solutions",
+          "desc": "We don't just sell products — we provide end-to-end solutions from consulting to deployment and operation."
+        },
+        {
+          "title": "Global Connectivity",
+          "desc": "Official partner of Thales, Guardsquare, Canary Labs — bringing world-class technology to Vietnam."
+        }
+      ]
+    },
+    "expertise": {
+      "badge": "Expertise",
+      "title": "Areas of Deepest Proficiency",
+      "description": "FCT Vinh Thinh's technical team is trained directly by manufacturers, ensuring accurate consultation and professional implementation.",
+      "list": [
+        "Software Licensing & Protection",
+        "Mobile App Security (Android & iOS)",
+        "Industrial IoT / Historian Data Collection",
+        "Two-Factor Authentication & PKI (2FA / Digital Signature)",
+        "Entitlement Management System (EMS) Consulting",
+        "Technical Support & Product Training"
+      ]
+    },
+    "journey": {
+      "badge": "Journey",
+      "title": "Growth Path",
+      "milestones": [
+        { "year": "2010", "title": "Founding", "desc": "FCT Vinh Thinh JSC established in Hanoi, focusing on software security distribution." },
+        { "year": "2013", "title": "Thales Partner", "desc": "Became official Thales (SafeNet) partner in Vietnam, distributing Sentinel LDK." },
+        { "year": "2017", "title": "Expanding Portfolio", "desc": "Added Guardsquare and Canary Labs to the portfolio, serving Mobile and IIoT security." },
+        { "year": "2022", "title": "200+ Clients", "desc": "Surpassed 200 corporate clients nationwide, including top financial and industrial groups." },
+        { "year": "2026", "title": "Digital Transformation", "desc": "Launched next-gen website, enhancing customer experience and online distribution." }
+      ]
+    },
+    "partners": {
+      "badge": "Global Network",
+      "title": "Strategic Partners",
+      "description": "We are proud to be the official representative of the world's leading technology and security brands in Vietnam.",
+      "viewProducts": "View Products"
+    },
+    "cta": {
+      "title": "Ready to Start?",
+      "description": "Contact us for a free consultation on the most suitable solution for your business needs."
+    }
+  },
+  "news": {
+    "metaTitle": "Security News & Articles | FCT Vinh Thinh .,JSC",
+    "metaDescription": "Stay updated with the latest in security technology, software licensing solutions, and IT infrastructure trends from FCT Vinh Thinh experts.",
+    "ogTitle": "Security & Tech News - FCT Vinh Thinh",
+    "ogDescription": "A treasure trove of technology knowledge and world-leading cybersecurity solutions shared by FCT Vinh Thinh.",
+    "badge": "Knowledge Base",
+    "titlePart1": "News &",
+    "titlePart2": "Articles",
+    "description": "Stay updated with the latest information on security technology and infrastructure solutions from world-leading experts.",
+    "list": {
+      "searchPlaceholder": "Search news...",
+      "showing": "Showing ",
+      "articles": " articles",
+      "noResults": "No matching articles found.",
+      "clearFilters": "Clear filters",
+      "readMore": "Read more"
+    }
+  },
+  "projects": {
+    "metaTitle": "Security Projects & Achievements | FCT Vinh Thinh",
+    "metaDescription": "Explore how FCT Vinh Thinh accompanies leading groups in solving core security challenges and optimizing digital infrastructure.",
+    "ogTitle": "Security Projects & Achievements - FCT Vinh Thinh",
+    "ogDescription": "High-impact case studies emphasizing technical challenges, strategic solutions, and measurable results.",
+    "badge": "Performance & Reliability",
+    "titlePart1": "Projects &",
+    "titlePart2": "Achievements",
+    "description": "Explore how FCT Vinh Thinh accompanies leading groups in solving core security challenges and optimizing digital infrastructure.",
+    "stats": [
+      { "label": "Years Experience", "value": "10+", "sub": "Developing since 2014" },
+      { "label": "Protected Devices", "value": "1.5M+", "sub": "Protected Endpoints" },
+      { "label": "Enterprise Clients", "value": "500+", "sub": "Enterprise Clients" },
+      { "label": "Success Rate", "value": "100%", "sub": "Zero-Breach Record" }
+    ],
+    "list": {
+      "field": "Industry",
+      "persona": "Partner Persona",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "result": "Real-world Impact"
+    },
+    "cta": {
+      "title": "Ready to Secure Your Business Future?",
+      "description": "Let FCT Vinh Thinh consult on the most in-depth transformation and security roadmap for you.",
+      "requestConsult": "Request Consultation",
+      "downloadProfile": "Download Profile"
+    }
+  },
+  "newsDetail": {
+    "backToNews": "Back to news",
+    "source": "Source",
+    "relatedArticles": "Related Articles",
+    "cta": {
+      "title": "Need deeper consultation on solutions?",
+      "description": "FCT Vinh Thinh's technical team is always ready to help you select and implement the most optimal security solutions for your business.",
+      "contactNow": "Contact Now",
+      "chatConsult": "Chat Consult"
+    },
+    "promo": {
+      "title": "World-leading Security Solutions",
+      "description": "Explore the ecosystem of products from Thales, Guardsquare, and Canary Labs officially distributed by FCT Vinh Thinh.",
+      "viewCatalog": "View product catalog"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contact | FCT Vinh Thinh JSC",
+    "metaDescription": "Contact FCT Vinh Thinh JSC for advice on software security, mobile application, and industrial data solutions.",
+    "badge": "Connect with us",
+    "titlePart1": "Contact ",
+    "titlePart2": "Us",
+    "description": "FCT Vinh Thinh is always ready to listen and accompany your business in every technology solution.",
+    "info": {
+      "address": "Address",
+      "hotline": "Hotline",
+      "email": "Email"
+    },
+    "form": {
+      "title": "Request Consultation",
+      "description": "Leave your information, and our expert team will contact you back within 24 working hours.",
+      "ctaCall": "Call Now",
+      "ctaZalo": "Chat via Zalo"
+    }
+  },
+  "contactModal": {
+    "title": "Get Free Consultation",
+    "subtitle": "Our experts will contact you within 24h",
+    "success": {
+      "title": "Submitted Successfully!",
+      "message": "Thank you for your trust. We will respond as soon as possible.",
+      "close": "Close window"
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "phone": "Phone Number",
+      "phonePlaceholder": "0901234567",
+      "email": "Email",
+      "emailPlaceholder": "email@company.com",
+      "message": "Consultation Need",
+      "messagePlaceholder": "Describe your project or request...",
+      "submit": "Send Request",
+      "submitting": "Sending...",
+      "commitment": "100% Information Security Commitment"
+    }
+  }
+}

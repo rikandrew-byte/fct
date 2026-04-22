@@ -1,0 +1,46 @@
+[
+  {
+    "id": "banking-security-transformation",
+    "title": "Bảo mật ứng dụng Ngân hàng số trước các cuộc tấn công Fake App & Overlay",
+    "persona": "Ngân hàng Thương mại Cổ phần Quốc doanh lớn nhất Việt Nam",
+    "industry": "Tài chính - Ngân hàng",
+    "challenge": "Kẻ tấn công sử dụng mã độc giả mạo ứng dụng ngân hàng để chiếm quyền Accessibility Service, từ đó tự động đọc mã OTP và thực hiện giao dịch trái phép trên thiết bị người dùng.",
+    "solution": "Triển khai lớp bảo vệ Guardsquare (DexGuard) tích hợp công nghệ RASP (Runtime Application Self-Protection) nhằm phát hiện và chặn đứng mọi hành vi ghi màn hình hoặc chèn lớp phủ Overlay.",
+    "result": "Bảo vệ thành công hơn 15 triệu người dùng banking, giảm 100% tỷ lệ khiếu nại liên quan đến gian lận từ ứng dụng giả mạo.",
+    "impact": "Top Tier Banking Security",
+    "tech": ["Guardsquare", "DexGuard", "RASP"]
+  },
+  {
+    "id": "national-grid-protection",
+    "title": "An toàn hóa Hạ tầng Điều khiển Năng lượng & Lưới điện Quốc gia",
+    "persona": "Tập đoàn Năng lượng Đa quốc gia & Đơn vị Quản lý Lưới điện",
+    "industry": "Năng lượng & Hạ tầng",
+    "challenge": "Các phần mềm điều khiển trạm biến áp và truyền tải điện có nguy cơ bị sao chép logic điều khiển hoặc bị can thiệp trái phép từ các thiết bị ngoại vi không rõ nguồn gốc.",
+    "solution": "Sử dụng khóa cứng Sentinel LDK HL (Thales) tích hợp chip bảo mật đạt chuẩn quân sự, cho phép thực thi một phần mã nguồn của phần mềm trực tiếp bên trong phần cứng khóa.",
+    "result": "Đảm bảo tính toàn vẹn 100% cho hệ thống điều khiển lưới điện, ngăn chặn mọi nỗ lực dịch ngược và sao chép phần mềm trái phép.",
+    "impact": "Critical Infrastructure Safety",
+    "tech": ["Thales Sentinel", "LDK HL", "Hardware Encryption"]
+  },
+  {
+    "id": "industrial-ip-management",
+    "title": "Quản trị Tài sản Trí tuệ (IP) trong Dây chuyền Sản xuất Tự động hóa",
+    "persona": "Nhà máy Sản xuất Linh kiện Điện tử trong Chuỗi cung ứng Toàn cầu",
+    "industry": "Sản xuất Công nghệ cao",
+    "challenge": "Các thuật toán vận hành máy móc tự động bị rò rỉ hoặc bị nhân viên vận hành sao chép trái phép sang các thiết bị khác ngoài phạm vi cấp phép của doanh nghiệp.",
+    "solution": "Triển khai hệ thống quản trị bản quyền Sentinel LDK (Hybrid) giúp kiểm soát việc kích hoạt tính năng phần mềm theo thời gian thực và vị trí địa lý.",
+    "result": "Ngăn chặn hoàn toàn việc sử dụng phần mềm sai mục đích, giúp doanh nghiệp thu hồi 100% doanh thu bản quyền từ các đối tác vận hành.",
+    "impact": "IP Leakage Prevention",
+    "tech": ["Sentinel LDK", "Cloud Licensing", "Hybrid Mode"]
+  },
+  {
+    "id": "vendor-access-control",
+    "title": "Kiểm soát Truy cập Đặc quyền cho Mạng lưới Nhà thầu & Đối tác (Vendors)",
+    "persona": "Hệ thống Vendor quy mô lớn của Tập đoàn Công nghệ hàng đầu thế giới",
+    "industry": "Chuỗi cung ứng & CNTT",
+    "challenge": "Tài khoản quản trị của các đơn vị thầu phụ thường xuyên bị tấn công Phishing, tạo lỗ hổng để hacker xâm nhập sâu vào hạ tầng thông tin của tập đoàn mẹ.",
+    "solution": "Cấp phát khóa Token xác thực 2 lớp vật lý (Longmai Hardware Token) cho toàn bộ nhân sự kỹ thuật của các đơn vị đối tác khi truy cập hệ thống nội bộ.",
+    "result": "Loại bỏ hoàn toàn rủi ro chiếm đoạt tài khoản qua môi trường mạng, thắt chặt quy trình an ninh chuỗi cung ứng đạt chuẩn quốc tế.",
+    "impact": "Supply Chain Integrity",
+    "tech": ["Longmai Token", "2FA Hardware", "MFA Strategy"]
+  }
+]

@@ -5,40 +5,50 @@ import {
   Mail,
   MessageSquare,
 } from "lucide-react";
+import { getDictionary } from "@/lib/get-dictionary";
+import { PageProps } from "next";
 
-export const metadata: Metadata = {
-  title: "Liên hệ | FCT Vinh Thinh JSC",
-  description:
-    "Liên hệ với FCT Vinh Thinh JSC để được tư vấn về các giải pháp bảo mật phần mềm, ứng dụng di động và dữ liệu công nghiệp.",
-};
+export async function generateMetadata({ params }: PageProps < "/[lang]/contact" >): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  
+  return {
+    title: dict.contact.metaTitle,
+    description: dict.contact.metaDescription,
+  };
+}
 
-const contactInfo = [
-  {
-    icon: MapPin,
-    label: "Địa chỉ",
-    value: "Tầng 03 tòa nhà Ngôi Sao, ô 15 lô B đường Nguyễn Cảnh Dị, Phường Đại Kim, Quận Hoàng Mai, Hà Nội",
-    href: "https://maps.google.com/?q=Nguyễn+Cảnh+Dị,+Đại+Kim,+Hoàng+Mai,+Hà+Nội",
-    color: "bg-blue-600/10 text-blue-500",
-  },
-  {
-    icon: Phone,
-    label: "Hotline",
-    value: "0983 027 776",
-    href: "tel:0983027776",
-    color: "bg-emerald-600/10 text-emerald-500",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "andrew@fct.vn",
-    href: "mailto:andrew@fct.vn",
-    color: "bg-violet-600/10 text-violet-500",
-  },
-];
+export default async function ContactPage({ params }: PageProps < "/[lang]/contact" >) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  const d = dict.contact;
 
-export default function ContactPage() {
+  const contactInfo = [
+    {
+      icon: MapPin,
+      label: d.info.address,
+      value: dict.footer.hqAddress,
+      href: "https://maps.google.com/?q=Nguyễn+Cảnh+Dị,+Đại+Kim,+Hoàng+Mai,+Hà+Nội",
+      color: "bg-blue-600/10 text-blue-500",
+    },
+    {
+      icon: Phone,
+      label: d.info.hotline,
+      value: "0983 027 776",
+      href: "tel:0983027776",
+      color: "bg-emerald-600/10 text-emerald-500",
+    },
+    {
+      icon: Mail,
+      label: d.info.email,
+      value: "andrew@fct.vn",
+      href: "mailto:andrew@fct.vn",
+      color: "bg-violet-600/10 text-violet-500",
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <div className="relative overflow-hidden bg-gradient-to-br from-gray-950 via-blue-950 to-gray-950 pt-44 pb-28 px-6 text-center">
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -46,16 +56,16 @@ export default function ContactPage() {
 
         <div className="max-w-4xl mx-auto space-y-6 relative z-10">
           <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-400 bg-blue-400/10 px-4 py-2 rounded-full">
-            Kết nối với chúng tôi
+            {d.badge}
           </span>
           <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">
-            Liên hệ với{" "}
+            {d.titlePart1}
             <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
-              chúng tôi
+              {d.titlePart2}
             </span>
           </h1>
           <p className="text-gray-400 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-            FCT Vinh Thinh luôn sẵn sàng lắng nghe và đồng hành cùng doanh nghiệp bạn trong mọi giải pháp công nghệ.
+            {d.description}
           </p>
         </div>
       </div>
@@ -95,10 +105,10 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
-              Gửi yêu cầu tư vấn
+              {d.form.title}
             </h2>
             <p className="text-gray-500 font-light max-w-xl mx-auto">
-              Để lại thông tin, đội ngũ chuyên gia của chúng tôi sẽ liên hệ lại trong vòng 24 giờ làm việc.
+              {d.form.description}
             </p>
           </div>
 
@@ -108,7 +118,7 @@ export default function ContactPage() {
               className="flex items-center justify-center gap-2 bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
             >
               <Phone className="w-5 h-5" />
-              Gọi ngay: 0983 027 776
+              {d.form.ctaCall}: 0983 027 776
             </a>
             <a
               href="https://zalo.me/0983027776"
@@ -117,7 +127,7 @@ export default function ContactPage() {
               className="flex items-center justify-center gap-2 bg-gray-950 text-white px-10 py-5 rounded-2xl font-bold hover:bg-black transition-all"
             >
               <MessageSquare className="w-5 h-5" />
-              Chat qua Zalo
+              {d.form.ctaZalo}
             </a>
           </div>
 

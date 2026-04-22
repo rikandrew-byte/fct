@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { i18n } from "@/config/i18n-config";
+import type { LayoutProps } from "next";
+import { getDictionary } from "@/lib/get-dictionary";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "vietnamese"],
 });
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 export const metadata: Metadata = {
   title: {
@@ -30,20 +37,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: Readonly<LayoutProps & {
   children: React.ReactNode;
 }>) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
   return (
     <html
-      lang="vi"
+      lang={lang}
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <Navbar />
+        <Navbar lang={lang} dict={dict} />
         {children}
-        <Footer />
+        <Footer lang={lang} dict={dict} />
       </body>
     </html>
   );

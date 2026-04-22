@@ -1,0 +1,46 @@
+[
+  {
+    "id": "banking-security-transformation",
+    "title": "Securing Digital Banking Apps Against Fake App & Overlay Attacks",
+    "persona": "Largest State-Owned Commercial Bank in Vietnam",
+    "industry": "Banking & Finance",
+    "challenge": "Attackers used malware mimicking bank apps to gain Accessibility Service permissions, automatically reading OTPs and performing unauthorized transactions on user devices.",
+    "solution": "Deployed Guardsquare (DexGuard) with RASP (Runtime Application Self-Protection) technology to detect and block all screen recording and overlay insertion attempts.",
+    "result": "Successfully protected over 15 million banking users, reducing fraud claims related to fake apps by 100%.",
+    "impact": "Top Tier Banking Security",
+    "tech": ["Guardsquare", "DexGuard", "RASP"]
+  },
+  {
+    "id": "national-grid-protection",
+    "title": "Securing National Energy Control Infrastructure & Power Grid",
+    "persona": "Multinational Energy Group & Power Grid Management Unit",
+    "industry": "Energy & Infrastructure",
+    "challenge": "Control software for substations and power transmission risked having control logic cloned or unauthorized intervention from unknown peripheral devices.",
+    "solution": "Implemented Sentinel LDK HL (Thales) hardware keys with military-grade security chips, allowing execution of critical source code directly inside the key's hardware.",
+    "result": "Ensured 100% integrity for the grid control system, preventing all reverse engineering and unauthorized software copying attempts.",
+    "impact": "Critical Infrastructure Safety",
+    "tech": ["Thales Sentinel", "LDK HL", "Hardware Encryption"]
+  },
+  {
+    "id": "industrial-ip-management",
+    "title": "Industrial Intellectual Property (IP) Management in Automated Production Lines",
+    "persona": "Electronic Component Manufacturer in Global Supply Chain",
+    "industry": "High-Tech Manufacturing",
+    "challenge": "Automated machine algorithms were leaked or unauthorizedly copied by operators to devices beyond the company's licensed scope.",
+    "solution": "Deployed Sentinel LDK (Hybrid) license management system to control software feature activation in real-time and by geographic location.",
+    "result": "Completely prevented software misuse, helping the company recover 100% of license revenue from operating partners.",
+    "impact": "IP Leakage Prevention",
+    "tech": ["Sentinel LDK", "Cloud Licensing", "Hybrid Mode"]
+  },
+  {
+    "id": "vendor-access-control",
+    "title": "Privileged Access Control for Global Contractor & Partner Networks (Vendors)",
+    "persona": "Large-scale Vendor System of a Leading Global Technology Group",
+    "industry": "Supply Chain & IT",
+    "challenge": "Administrative accounts of subcontractors were frequently targeted by Phishing attacks, creating vulnerabilities for hackers to penetrate the parent group's information infrastructure.",
+    "solution": "Distributed Longmai physical two-factor authentication tokens (Hardware Tokens) to all technical personnel of partner units accessing internal systems.",
+    "result": "Completely eliminated account hijacking risks over the network, strengthening supply chain security to international standards.",
+    "impact": "Supply Chain Integrity",
+    "tech": ["Longmai Token", "2FA Hardware", "MFA Strategy"]
+  }
+]

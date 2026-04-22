@@ -1,0 +1,192 @@
+[
+  {
+    "id": "sentinel-hl-basic",
+    "name": "Sentinel HL Basic",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-basic.jpg",
+    "summary": "Minimalist and effective software protection for basic applications without data storage requirements.",
+    "description": "Sentinel HL Basic offers simple yet effective software protection. It requires no internal memory or pre-programming, allowing for immediate protection. Ideal for high-volume licenses that don't require future updates or renewals, it is the most economical choice in the Sentinel HL line for rapid protection without advanced features.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-basic.html"
+  },
+  {
+    "id": "sentinel-hl-pro",
+    "name": "Sentinel HL Pro",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-pro.jpg",
+    "summary": "Standard software protection with a unique 32-bit ID, ideal for standalone applications with secure memory.",
+    "description": "Sentinel HL Pro provides software protection with a unique 32-bit ID and internal memory for storing licenses and configuration data. Suitable for developers needing reliable protection combined with remote license update capabilities via the Sentinel EMS system. It supports AES encryption and secure APIs for Windows, Linux, and macOS.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-pro.html"
+  },
+  {
+    "id": "sentinel-hl-max",
+    "name": "Sentinel HL Max",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max.jpg",
+    "summary": "Suitable for products with multiple options, featuring a 32-bit ID and expanded memory up to 31KB.",
+    "description": "Sentinel HL Max is designed for protecting products with numerous options or large-scale distribution. It features a 32-bit ID to protect a unique program while ensuring secure upgrade mechanisms. The 31KB internal memory allows for multiple license modules and supports Feature Access Control for granular management of software features.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-max.html"
+  },
+  {
+    "id": "sentinel-hl-max-chip",
+    "name": "Sentinel HL Max Chip",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-chip.jpg",
+    "summary": "Integrated chip version (SMT) for direct mounting onto manufacturer device circuit boards.",
+    "description": "Sentinel HL Max Chip is suitable for high-volume or highly customizable products. Similar to Sentinel HL Max, it provides a 32-bit ID for unique program protection but is designed in an SMT chip format for direct integration into hardware, making it ideal for OEMs and manufacturers wanting to embed security into their boards.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-hl-max-chip.html"
+  },
+  {
+    "id": "sentinel-hl-max-micro",
+    "name": "Sentinel HL Max Micro",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-micro.jpg",
+    "summary": "Ultra-small Sentinel HL Max version, minimizing physical impact and offering a sleek appearance.",
+    "description": "Sentinel HL Max Micro is ideal for products with many options or high distribution volumes. It offers the same protection as the standard Max but in a more compact design, convenient for permanent use on devices while minimizing physical obstruction—perfect for mobile laptop users.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-hl-max-micro.html"
+  },
+  {
+    "id": "sentinel-hl-max-expresscard",
+    "name": "Sentinel HL Max ExpressCard",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-expresscard.jpg",
+    "summary": "Uses ExpressCard standard for industrial devices and laptops with dedicated expansion slots.",
+    "description": "Sentinel HL Max ExpressCard is suitable for protecting complex or large-volume software. It provides a unique 32-bit ID and secure upgrade capabilities in an ExpressCard 34mm format, facilitating integration into industrial hardware and specialized laptops with ExpressCard slots.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-max-expresscard.html"
+  },
+  {
+    "id": "sentinel-hl-max-board",
+    "name": "Sentinel HL Max Board",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-max-board.jpg",
+    "summary": "PCB format for internal hardware integration, providing maximum protection from within the device.",
+    "description": "Sentinel HL Max Board is perfect for high-volume or multi-option products. Designed as a standalone PCB for direct integration by manufacturers into their equipment, it offers the most durable and invisible security solution for hardware products.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-max-board.html"
+  },
+  {
+    "id": "sentinel-hl-net",
+    "name": "Sentinel HL Net",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-net.jpg",
+    "summary": "Centralized network license management, supporting concurrent users and optimizing business costs.",
+    "description": "Sentinel HL Net provides a secure and flexible license protection method in networked environments. It can limit the number of users or devices within a local network. A single HL Net key plugged into a server can distribute licenses to dozens or hundreds of concurrent users, significantly saving software licensing costs for businesses.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-net.html"
+  },
+  {
+    "id": "sentinel-hl-time",
+    "name": "Sentinel HL Time",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-time.jpg",
+    "summary": "Includes an independent real-time clock (RTC) for precise time-based license management.",
+    "description": "Sentinel HL Time features a highly accurate real-time clock to manage software operation time precisely and prevent cracking or reverse engineering. It allows for flexible time-based licensing, supporting rentals and subscription models. The RTC operates independently and is unaffected by system time changes.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-time.html"
+  },
+  {
+    "id": "sentinel-hl-net-time",
+    "name": "Sentinel HL NetTime",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-net-time.jpg",
+    "summary": "Combines network management with a real-time clock (RTC) for time-based subscription management.",
+    "description": "Sentinel HL NetTime combines the features of Net and Time, making it the ideal solution for time-limited software licensing in local network environments. It integrates concurrent use sharing with a real-time clock, enabling precise and secure subscription model deployment in large corporate settings.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-hl-nettime.html"
+  },
+  {
+    "id": "sentinel-hl-drive",
+    "name": "Sentinel HL Drive",
+    "category": "Thales",
+    "image": "/images/products/sentinel-hl-drive.jpg",
+    "summary": "Combines security key and up to 4GB Flash memory, allowing application distribution and execution directly from the key.",
+    "description": "Sentinel HL Drive, available in 2GB and 4GB versions, allows you to create a virtual ROM inside the USB key. You can copy applications, software, or protected content along with the license into the hardware key for the client—convenient and secure. Software can run directly from the key without installation, ensuring total control over unauthorized copying.",
+    "isNew": false,
+    "link": "https://fct.vn/sentinel-hl-drive.html"
+  },
+  {
+    "id": "sentinel-ldk-developer",
+    "name": "Sentinel LDK Developer",
+    "category": "Thales",
+    "image": "/images/products/sentinel-ldk-developer.jpg",
+    "summary": "Comprehensive developer toolkit for rapid software protection integration. The first step for every security solution.",
+    "description": "The Sentinel LDK Developer Key is a crucial tool for programmers. It enables them to use the Envelope utility to protect applications according to pre-set licenses. This key allows for creating, testing, and deploying protection mechanisms in a development environment before market release.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-ldk-developer.html"
+  },
+  {
+    "id": "sentinel-ldk-master",
+    "name": "Sentinel LDK Master",
+    "category": "Thales",
+    "image": "/images/products/sentinel-ldk-master.jpg",
+    "summary": "Powerful master key for system administration, creating and distributing license keys to customers.",
+    "description": "The Sentinel LDK Master Key is the primary key in the Sentinel LDK, used by software developers to create licenses through the EMS (Entitlement Management System). It holds full administrative rights over the protection system, including issuing, revoking, and updating licenses for end-users.",
+    "isNew": true,
+    "link": "https://fct.vn/sentinel-ldk-master.html"
+  },
+  {
+    "id": "dexguard",
+    "name": "DexGuard",
+    "category": "Guardsquare",
+    "image": "/images/products/dexguard.png",
+    "summary": "Protects Android and Java applications against reverse engineering, modification, and comprehensive source code analysis.",
+    "description": "The most advanced protection for Android applications. Using available tools, hackers can decrypt and investigate your Android apps and SDKs to penetrate internal logic. DexGuard applies multiple layers of protection: string encryption, class/method name obfuscation, asset encryption, and RASP (Runtime Application Self-Protection), making reverse engineering virtually impossible.",
+    "isNew": true,
+    "link": "https://fct.vn/dexguard.html"
+  },
+  {
+    "id": "ixguard",
+    "name": "iXGuard",
+    "category": "Guardsquare",
+    "image": "/images/products/ixguard.png",
+    "summary": "Specialized security solution for iOS applications, protecting Swift and Objective-C source code from intrusion.",
+    "description": "iXGuard is designed to protect native (Objective-C, Swift) and cross-platform (Unity, Cordova, Ionic, React Native, etc.) iOS applications and SDKs against reverse engineering and code injection. It applies various encryption and obfuscation techniques while integrating RASP mechanisms, making internal logic access and behavior modification practically impossible.",
+    "isNew": true,
+    "link": "https://fct.vn/ixguard.html"
+  },
+  {
+    "id": "canary-historian",
+    "name": "Canary Collectors / Historian",
+    "category": "Canary Labs",
+    "image": "/images/products/canary-historian.jpg",
+    "summary": "High-performance multi-source industrial data collection and real-time historical analysis system.",
+    "description": "Canary Collectors/Historian is a high-performance industrial data (IIoT) collection and storage solution. It captures data from various sources including OPC UA/DA, MQTT, and diverse SCADA solutions. Data is stored in Canary Historian with advanced compression for real-time querying and analysis—ideal for factories and industrial automation systems.",
+    "isNew": true,
+    "link": "https://fct.vn/canary1.html"
+  },
+  {
+    "id": "longmai-smartx1",
+    "name": "Longmai SmartX1",
+    "category": "Longmai",
+    "image": "/images/products/longmai-smartx1.png",
+    "summary": "Next-generation USB software protection key with integrated smart card chip to prevent copying and hardware cracking.",
+    "description": "SmartX1 is a Longmai software protection dongle using an integrated smart card chip to prevent hardware cloning and brute-force attacks. This Plug-and-Play device requires no drivers and features a 20KB memory with a unique 32-bit hardware ID. It is perfect for developers needing a cost-effective yet highly efficient license protection solution.",
+    "isNew": true,
+    "link": "https://longmaitech.com/"
+  },
+  {
+    "id": "longmai-smartx3",
+    "name": "Longmai SmartX3",
+    "category": "Longmai",
+    "image": "/images/products/longmai-smartx3.png",
+    "summary": "Premium PKI USB token supporting digital signatures, encryption, and two-factor authentication (PKCS#11, Microsoft CAPI).",
+    "description": "SmartX3 is a Longmai PKI USB token designed for identity authentication and corporate security. It fully supports PKCS#11 and Microsoft CAPI standards, with an on-device cryptographic chip that generates RSA key pairs, ensuring private keys never leave the hardware. Applications include VPN login, digital signatures, email encryption, and e-banking/e-government authentication.",
+    "isNew": true,
+    "link": "https://longmaitech.com/"
+  },
+  {
+    "id": "longmai-timepro",
+    "name": "Longmai TimePro",
+    "category": "Longmai",
+    "image": "/images/products/longmai-timepro.png",
+    "summary": "Time-based hardware OTP (TOTP) device generating a one-time code every 30 seconds—no network connection required.",
+    "description": "TimePro is a Longmai hardware TOTP (Time-based OTP) authentication device compatible with RFC 6238. it generates a 6-digit code every 30 seconds completely independently—no phone battery or internet connection needed. With an LCD screen, long battery life, and anti-tamper security chip, it's ideal for 2FA in banking, financial institutions, and corporate VPNs.",
+    "isNew": true,
+    "link": "https://longmaitech.com/"
+  }
+]

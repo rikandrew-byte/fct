@@ -5,9 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function Footer() {
+interface FooterProps {
+  lang: string;
+  dict: any;
+}
+
+export default function Footer({ lang, dict }: FooterProps) {
   const [visitorCount, setVisitorCount] = useState(2103);
   const [onlineCount, setOnlineCount] = useState(1);
+
+  const d = dict.footer;
 
   useEffect(() => {
     // Logic bộ đếm lượt truy cập (Visitor Counter)
@@ -34,7 +41,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           {/* Cột 1: Brand */}
           <div className="space-y-8 md:col-span-1">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href={`/${lang}`} className="flex items-center gap-3">
               <Image 
                 src="/logo.png" 
                 alt="Logo FCT Vinh Thinh .,JSC" 
@@ -45,7 +52,7 @@ export default function Footer() {
               <span className="font-bold text-2xl text-white tracking-tight">FCT Vinh Thinh .,JSC</span>
             </Link>
             <p className="text-sm font-light leading-relaxed">
-              Tiên phong trong việc cung cấp các giải pháp hạ tầng số hiện đại. Chúng tôi đồng hành cùng doanh nghiệp Việt vươn tầm thế giới thông qua sức mạnh công nghệ đột phá.
+              {d.brandDescription}
             </p>
             <div className="flex gap-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300">
@@ -65,39 +72,38 @@ export default function Footer() {
 
           {/* Cột 2: Tin tức và bài viết */}
           <div>
-            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Tin tức và bài viết</h4>
+            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">{d.columns.news}</h4>
             <ul className="space-y-4 text-sm font-light">
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Bảo vệ bản quyền phần mềm</Link></li>
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Bảo mật ứng dụng di động</Link></li>
-
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Xác thực & Bảo mật phần cứng</Link></li>
-              <li><Link href="/news" className="hover:text-blue-500 transition-colors">Giải pháp dữ liệu công nghiệp IIoT</Link></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.newsArticles.softProtection}</Link></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.newsArticles.mobileSecurity}</Link></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.newsArticles.authSecurity}</Link></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.newsArticles.iiotSolutions}</Link></li>
             </ul>
           </div>
 
           {/* Cột 3: Công ty */}
           <div>
-            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Công Ty</h4>
+            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
             <ul className="space-y-4 text-sm font-light">
-              <li><Link href="/about" className="hover:text-blue-500 transition-colors">Về chúng tôi</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-500 transition-colors">Liên hệ</Link></li>
-              <li><Link href="/products" className="hover:text-blue-500 transition-colors">Danh mục sản phẩm</Link></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">Tuyển dụng</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">Tin tức công nghệ</a></li>
+              <li><Link href={`/${lang}/about`} className="hover:text-blue-500 transition-colors">{dict.navbar.about}</Link></li>
+              <li><Link href={`/${lang}/contact`} className="hover:text-blue-500 transition-colors">{dict.navbar.contact}</Link></li>
+              <li><Link href={`/${lang}/products`} className="hover:text-blue-500 transition-colors">{dict.navbar.products}</Link></li>
+              <li><a href="#" className="hover:text-blue-500 transition-colors">{d.companyLines.recruitment}</a></li>
+              <li><a href="#" className="hover:text-blue-500 transition-colors">{d.companyLines.techNews}</a></li>
             </ul>
           </div>
 
           {/* Cột 4: Liên hệ */}
           <div>
-            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">Liên Hệ</h4>
+            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">{d.columns.contact}</h4>
             <ul className="space-y-5 text-sm font-light">
               <li className="flex gap-4">
                 <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-blue-500" />
                 </div>
                 <div>
-                  <p className="text-gray-300 font-medium">Trụ sở chính</p>
-                  <p className="text-[13px] opacity-70">Tầng 03 tòa nhà Ngôi Sao, ô 15 lô B đường Nguyễn Cảnh Dị, Phường Đại Kim, Quận Hoàng Mai, Hà Nội</p>
+                  <p className="text-gray-300 font-medium">{d.contactLines.headquarters}</p>
+                  <p className="text-[13px] opacity-70">{d.hqAddress}</p>
                 </div>
               </li>
               <li className="flex gap-4 items-center">
@@ -105,7 +111,7 @@ export default function Footer() {
                   <Phone className="w-5 h-5 text-blue-500" />
                 </div>
                 <div>
-                  <p className="text-gray-300 font-medium">Hotline</p>
+                  <p className="text-gray-300 font-medium">{d.contactLines.hotline}</p>
                   <p className="text-[13px] opacity-70">0983 027 776</p>
                 </div>
               </li>
@@ -114,7 +120,7 @@ export default function Footer() {
                   <Mail className="w-5 h-5 text-blue-500" />
                 </div>
                 <div>
-                  <p className="text-gray-300 font-medium">Email hỗ trợ</p>
+                  <p className="text-gray-300 font-medium">{d.contactLines.supportEmail}</p>
                   <p className="text-[13px] opacity-70">andrew@fct.vn</p>
                 </div>
               </li>
@@ -125,7 +131,7 @@ export default function Footer() {
         <div className="pt-10 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="space-y-4 md:space-y-0 md:flex md:items-center md:gap-10">
             <p className="text-[11px] font-medium uppercase tracking-widest leading-loose">
-              © 2026 FCT Vinh Thinh .,JSC. Đã đăng ký bản quyền.
+              {d.copyright}
             </p>
             
             {/* Visitor Counter Badge */}
@@ -136,18 +142,18 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-[9px] text-gray-400">
                 <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
-                  <span className="text-white">{onlineCount}</span> trực tuyến
+                  <span className="text-white">{onlineCount}</span> {d.visitorCounter.online}
                 </span>
                 <span className="pl-3 flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
-                   Tổng: <span className="text-white">{visitorCount.toLocaleString()}</span>
+                   {d.visitorCounter.total}: <span className="text-white">{visitorCount.toLocaleString()}</span>
                 </span>
               </div>
             </div>
           </div>
 
           <div className="flex gap-10 text-[11px] font-medium uppercase tracking-widest">
-            <a href="#" className="hover:text-white transition-colors">Chính sách bảo mật</a>
-            <a href="#" className="hover:text-white transition-colors">Điều khoản sử dụng</a>
+            <a href="#" className="hover:text-white transition-colors">{d.legal.privacy}</a>
+            <a href="#" className="hover:text-white transition-colors">{d.legal.terms}</a>
           </div>
         </div>
       </div>

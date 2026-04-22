@@ -1,0 +1,285 @@
+{
+  "common": {
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfUse": "Điều khoản sử dụng",
+    "copyright": "© 2026 FCT Vinh Thinh .,JSC. Đã đăng ký bản quyền.",
+    "online": "trực tuyến",
+    "total": "Tổng",
+    "getAdvice": "Nhận tư vấn",
+    "getAdviceNow": "Nhận tư vấn ngay"
+  },
+  "navbar": {
+    "about": "Về chúng tôi",
+    "news": "Tin tức",
+    "projects": "Dự án tiêu biểu",
+    "products": "Sản phẩm",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "badge": "🛡️ CHUYÊN GIA BẢO MẬT & BẢN QUYỀN PHẦN MỀM",
+    "title": "Giải pháp Công nghệ",
+    "subtitle": "Toàn diện & Đột phá",
+    "description": "Hệ sinh thái sản phẩm từ các thương hiệu công nghệ hàng đầu thế giới, thiết kế để bảo vệ tài sản doanh nghiệp trong kỷ nguyên số."
+  },
+  "trust": {
+    "sectors": ["Ngân hàng", "Chính phủ", "Tài chính", "An ninh mạng", "Hạ tầng số"],
+    "commitment": "\"Cam kết bảo vệ tuyệt đối danh tính và dự án của khách hàng theo chính sách bảo mật (NDA Strict Policy)\""
+  },
+  "about": {
+    "badge": "Về Chúng Tôi",
+    "title": "Đồng Hành Cùng Doanh Nghiệp",
+    "subtitle": "Trong Kỷ Nguyên Số",
+    "description": "Chúng tôi không chỉ cung cấp dịch vụ, mà mang đến hệ sinh thái công nghệ trọn vẹn. Bằng sự am hiểu chuyên sâu và năng lực đối tác toàn cầu, chúng tôi giúp các tổ chức vượt qua giới hạn.",
+    "more": "Tìm hiểu hơn về FCT",
+    "features": [
+      {
+        "title": "An Toàn & Bảo Mật",
+        "description": "Giải pháp an ninh mạng toàn diện bảo vệ tối đa dữ liệu doanh nghiệp."
+      },
+      {
+        "title": "Hiệu Suất Vượt Trội",
+        "description": "Tối ưu hóa sức mạnh hạ tầng IT để nền tảng luôn hoạt động ở tốc độ cao nhất."
+      },
+      {
+        "title": "Kết Nối Toàn Cầu",
+        "description": "Đảm bảo sự liên thông không giới hạn và liền mạch qua các nền tảng mạng lõi."
+      }
+    ]
+  },
+  "solutions": {
+    "badge": "Hệ sinh thái giải pháp",
+    "title": "An tâm tuyệt đối với",
+    "subtitle": "Công nghệ lõi",
+    "newsLink": "Khám phá Tin tức",
+    "mobileSecurity": {
+      "title": "Bảo mật Di động",
+      "description": "Giải pháp bảo vệ đa lớp từ Guardsquare, ngăn chặn dịch ngược và bảo vệ mã nguồn tối ưu cho ứng dụng."
+    },
+    "licenseManagement": {
+      "title": "Quản lý Bản quyền",
+      "description": "Giải pháp Sentinel từ Thales giúp cấp phép và bảo mật dữ liệu doanh nghiệp an toàn tuyệt đối."
+    },
+    "hardwareSecurity": {
+      "title": "Bảo mật Phần cứng",
+      "description": "An tâm với dòng sản phẩm Longmai — giải pháp xác thực 2 lớp và khóa cứng tiêu chuẩn quốc tế."
+    },
+    "ecosystem": {
+      "title": "Xem Hệ sinh thái FCT",
+      "description": "Tiên phong bảo vệ hạ tầng kinh tế số của bạn"
+    }
+  },
+  "footer": {
+    "brandDescription": "Tiên phong trong việc cung cấp các giải pháp hạ tầng số hiện đại. Chúng tôi đồng hành cùng doanh nghiệp Việt vươn tầm thế giới thông qua sức mạnh công nghệ đột phá.",
+    "newsTitle": "Tin tức và bài viết",
+    "companyTitle": "Công Ty",
+    "contactTitle": "Liên Hệ",
+    "hq": "Trụ sở chính",
+    "hqAddress": "Tầng 03 tòa nhà Ngôi Sao, ô 15 lô B đường Nguyễn Cảnh Dị, Phường Đại Kim, Quận Hoàng Mai, Hà Nội",
+    "hotline": "Hotline",
+    "emailSupport": "Email hỗ trợ",
+    "links": {
+      "licenseProtection": "Bảo vệ bản quyền phần mềm",
+      "mobileSecurity": "Bảo mật ứng dụng di động",
+      "hardwareAuth": "Xác thực & Bảo mật phần cứng",
+      "industrialData": "Giải pháp dữ liệu công nghiệp IIoT",
+      "recruitment": "Tuyển dụng",
+      "techNews": "Tin tức công nghệ",
+      "productCatalog": "Danh mục sản phẩm"
+    }
+  },
+  "products": {
+    "metaTitle": "Giải pháp Bảo mật & Quản lý Bản quyền Phần mềm | FCT Vĩnh Thịnh",
+    "metaDescription": "Phân phối chính hãng giải pháp bảo mật Sentinel (Thales), Guardsquare (DexGuard, iXGuard), Canary Labs và Longmai tại Việt Nam. Tư vấn an ninh ứng dụng toàn diện.",
+    "ogTitle": "Danh mục Giải pháp Bảo mật Chính hãng - FCT Vĩnh Thịnh",
+    "ogDescription": "Hệ sinh thái thiết bị và phần mềm bảo mật hàng đầu thế giới dành cho doanh nghiệp trong kỷ nguyên số.",
+    "badge": "Thiết bị & Giải pháp",
+    "titlePart1": "Thiết bị &",
+    "titlePart2": "Giải pháp",
+    "description": "Hệ sinh thái công nghệ lõi bảo vệ tài sản số, được tuyển chọn từ các đối tác công nghệ bảo mật hàng đầu thế giới."
+  },
+  "aboutPage": {
+    "hero": {
+      "badge": "Về chúng tôi",
+      "title": "Sứ mệnh bảo mật",
+      "subtitle": "Vững bước tương lai",
+      "description": "Hơn 10 năm đồng hành cùng doanh nghiệp Việt trong việc bảo mật tài sản số và xây dựng hạ tầng dữ liệu đẳng cấp quốc tế.",
+      "ctaProducts": "Xem giải pháp",
+      "ctaExperts": "Kết nối chuyên gia"
+    },
+    "stats": [
+      { "value": "10+", "label": "Năm kinh nghiệm" },
+      { "value": "200+", "label": "Khách hàng tin dùng" },
+      { "value": "18", "label": "Sản phẩm phân phối" },
+      { "value": "4", "label": "Đối tác toàn cầu" }
+    ],
+    "intro": {
+      "badge": "Giới thiệu công ty",
+      "title": "Chúng tôi là ai?",
+      "content1": "<strong class=\"font-semibold text-gray-900\">FCT Vĩnh Thịnh JSC</strong> là một trong những đơn vị tiên phong tại Việt Nam trong lĩnh vực phân phối giải pháp <strong class=\"font-semibold text-gray-900\">bảo vệ bản quyền phần mềm</strong> và <strong class=\"font-semibold text-gray-900\">thu thập dữ liệu công nghiệp</strong>.",
+      "content2": "Thành lập từ năm 2010. Trụ sở chính đặt tại Hà Nội, chúng tôi phục vụ khách hàng trên toàn quốc — từ các công ty phần mềm vừa và nhỏ, tổ chức tài chính, ngân hàng đến các tập đoàn sản xuất và nhà máy công nghiệp.",
+      "content3": "Là đại lý chính thức của <strong class=\"font-semibold text-gray-900\">Thales</strong> (Pháp), <strong class=\"font-semibold text-gray-900\">Guardsquare</strong> (Bỉ), <strong class=\"font-semibold text-gray-900\">Canary Labs</strong> (Mỹ) và <strong class=\"font-semibold text-gray-900\">Longmai</strong> (Trung Quốc), FCT Vĩnh Thịnh cam kết mang đến những giải pháp công nghệ đẳng cấp quốc tế với dịch vụ hỗ trợ kỹ thuật tại chỗ.",
+      "content4": "Chúng tôi không chỉ đơn thuần bán sản phẩm, mà còn <strong class=\"font-semibold text-gray-900\">đồng hành tư vấn</strong>, hỗ trợ lựa chọn giải pháp phù hợp, triển khai và đào tạo sử dụng — đảm bảo khách hàng khai thác tối đa giá trị."
+    },
+    "values": {
+      "badge": "Giá trị cốt lõi",
+      "title": "Tại sao chọn FCT Vĩnh Thịnh?",
+      "description": "Cam kết cung cấp giải pháp tốt nhất với dịch vụ hỗ trợ tận tâm nhất.",
+      "items": [
+        {
+          "title": "Chính hãng 100%",
+          "desc": "Mọi sản phẩm đều được phân phối trực tiếp từ nhà sản xuất, có đầy đủ chứng từ xuất xứ và bảo hành chính thức tại Việt Nam."
+        },
+        {
+          "title": "Tận tâm hỗ trợ",
+          "desc": "Đội ngũ kỹ thuật được đào tạo bài bản, luôn sẵn sàng tư vấn và hỗ trợ khách hàng trong suốt quá trình triển khai và sau bán hàng."
+        },
+        {
+          "title": "Giải pháp toàn diện",
+          "desc": "Không chỉ bán sản phẩm — chúng tôi cung cấp giải pháp đầu cuối từ tư vấn, lựa chọn sản phẩm phù hợp đến triển khai và vận hành."
+        },
+        {
+          "title": "Kết nối quốc tế",
+          "desc": "Đại lý chính thức của Thales, Guardsquare, Canary Labs — mang công nghệ hàng đầu thế giới đến Việt Nam."
+        }
+      ]
+    },
+    "expertise": {
+      "badge": "Chuyên môn",
+      "title": "Lĩnh vực chúng tôi am hiểu sâu nhất",
+      "description": "Đội ngũ kỹ thuật của FCT Vĩnh Thịnh được đào tạo trực tiếp bởi các nhà sản xuất, đảm bảo tư vấn chính xác và hỗ trợ triển khai chuyên nghiệp.",
+      "list": [
+        "Bảo vệ bản quyền phần mềm (Software Licensing & Protection)",
+        "Bảo mật ứng dụng Android & iOS (Mobile App Security)",
+        "Thu thập & phân tích dữ liệu công nghiệp (Industrial IoT / Historian)",
+        "Xác thực hai yếu tố & PKI (2FA / Digital Signature)",
+        "Tư vấn triển khai hệ thống quản lý bản quyền (EMS / Entitlement)",
+        "Hỗ trợ kỹ thuật & đào tạo sử dụng sản phẩm"
+      ]
+    },
+    "journey": {
+      "badge": "Hành trình",
+      "title": "Chặng đường phát triển",
+      "milestones": [
+        { "year": "2010", "title": "Thành lập", "desc": "FCT Vinh Thinh JSC được thành lập tại Hà Nội, tập trung vào phân phối thiết bị bảo mật phần mềm." },
+        { "year": "2013", "title": "Đối tác Thales", "desc": "Trở thành đại lý chính thức của Thales (SafeNet) tại Việt Nam, phân phối dòng Sentinel LDK." },
+        { "year": "2017", "title": "Mở rộng danh mục", "desc": "Bổ sung Guardsquare và Canary Labs vào danh mục sản phẩm, phục vụ bảo mật ứng dụng di động và IIoT." },
+        { "year": "2022", "title": "200+ khách hàng", "desc": "Vượt mốc 200 khách hàng doanh nghiệp trên toàn quốc, bao gồm các tổ chức tài chính, ngân hàng." },
+        { "year": "2026", "title": "Chuyển đổi số", "desc": "Ra mắt website thế hệ mới, nâng cao trải nghiệm khách hàng và mở rộng kênh phân phối trực tuyến." }
+      ]
+    },
+    "partners": {
+      "badge": "Mạng lưới toàn cầu",
+      "title": "Đối tác chiến lược",
+      "description": "Chúng tôi tự hào là đại diện chính thức của những thương hiệu công nghệ và bảo mật hàng đầu thế giới tại Việt Nam.",
+      "viewProducts": "Xem sản phẩm"
+    },
+    "cta": {
+      "title": "Sẵn sàng bắt đầu?",
+      "description": "Hãy liên hệ với chúng tôi để được tư vấn miễn phí về giải pháp phù hợp nhất với nhu cầu của doanh nghiệp bạn."
+    }
+  },
+  "news": {
+    "metaTitle": "Tin tức & Bài viết Bảo mật | FCT Vĩnh Thịnh .,JSC",
+    "metaDescription": "Cập nhật những thông tin mới nhất về công nghệ bảo mật, giải pháp bản quyền phần mềm và xu hướng hạ tầng IT từ các chuyên gia FCT Vĩnh Thịnh.",
+    "ogTitle": "Tin tức bảo mật & công nghệ - FCT Vĩnh Thịnh",
+    "ogDescription": "Kho tàng kiến thức công nghệ và các giải pháp an ninh mạng hàng đầu thế giới được chia sẻ bởi FCT Vĩnh Thịnh.",
+    "badge": "Kho tàng kiến thức",
+    "titlePart1": "Tin tức &",
+    "titlePart2": "Bài viết",
+    "description": "Cập nhật những thông tin mới nhất về công nghệ bảo mật và giải pháp hạ tầng từ các chuyên gia hàng đầu thế giới.",
+    "list": {
+      "searchPlaceholder": "Tìm kiếm tin tức...",
+      "showing": "Hiển thị ",
+      "articles": " bài viết",
+      "noResults": "Không tìm thấy bài viết phù hợp.",
+      "clearFilters": "Xoá bộ lọc",
+      "readMore": "Đọc tiếp"
+    }
+  },
+  "projects": {
+    "metaTitle": "Dự án & Thành tựu Bảo mật | FCT Vĩnh Thịnh",
+    "metaDescription": "Khám phá cách FCT Vĩnh Thịnh đồng hành cùng các tập đoàn hàng đầu giải quyết những thách thức bảo mật cốt lõi và tối ưu hóa hạ tầng số.",
+    "ogTitle": "Dự án & Thành tựu Bảo mật - FCT Vĩnh Thịnh",
+    "ogDescription": "Các case study thực tế nhấn mạnh thách thức kỹ thuật, giải pháp chiến lược và kết quả đo lường được.",
+    "badge": "Hiệu năng & Tin cậy",
+    "titlePart1": "Dự án &",
+    "titlePart2": "Thành tựu",
+    "description": "Khám phá cách FCT Vĩnh Thịnh đồng hành cùng các tập đoàn hàng đầu giải quyết những thách thức bảo mật cốt lõi và tối ưu hóa hạ tầng số.",
+    "stats": [
+      { "label": "Năm kinh nghiệm", "value": "10+", "sub": "Phát triển từ 2014" },
+      { "label": "Thiết bị bảo vệ", "value": "1.5M+", "sub": "Protected Endpoints" },
+      { "label": "Khách hàng DN", "value": "500+", "sub": "Enterprise Clients" },
+      { "label": "Tỷ lệ thành công", "value": "100%", "sub": "Zero-Breach Record" }
+    ],
+    "list": {
+      "field": "Lĩnh vực",
+      "persona": "Đối tác Persona",
+      "challenge": "Thách thức",
+      "solution": "Giải pháp",
+      "result": "Hiệu quả thực tế"
+    },
+    "cta": {
+      "title": "Sẵn sàng bảo mật tương lai doanh nghiệp?",
+      "description": "Hãy để FCT Vĩnh Thịnh tư vấn lộ trình chuyển đổi và bảo mật chuyên sâu nhất cho bạn.",
+      "requestConsult": "Gửi yêu cầu tư vấn",
+      "downloadProfile": "Tải hồ sơ năng lực"
+    }
+  },
+  "newsDetail": {
+    "backToNews": "Quay lại tin tức",
+    "source": "Nguồn tham khảo",
+    "relatedArticles": "Bài viết liên quan",
+    "cta": {
+      "title": "Cần tư vấn sâu hơn về giải pháp?",
+      "description": "Đội ngũ kỹ thuật của FCT Vĩnh Thịnh luôn sẵn sàng hỗ trợ bạn lựa chọn và triển khai các giải pháp bảo mật tối ưu nhất cho doanh nghiệp.",
+      "contactNow": "Liên hệ ngay",
+      "chatConsult": "Chat tư vấn"
+    },
+    "promo": {
+      "title": "Giải pháp Protections hàng đầu thế giới",
+      "description": "Khám phá hệ sinh thái sản phẩm từ Thales, Guardsquare và Canary Labs được FCT Vĩnh Thịnh phân phối chính hãng.",
+      "viewCatalog": "Xem danh mục sản phẩm"
+    }
+  },
+  "contact": {
+    "metaTitle": "Liên hệ | FCT Vĩnh Thịnh JSC",
+    "metaDescription": "Liên hệ với FCT Vĩnh Thịnh JSC để được tư vấn về các giải pháp bảo mật phần mềm, ứng dụng di động và dữ liệu công nghiệp.",
+    "badge": "Kết nối với chúng tôi",
+    "titlePart1": "Liên hệ với ",
+    "titlePart2": "chúng tôi",
+    "description": "FCT Vĩnh Thịnh luôn sẵn sàng lắng nghe và đồng hành cùng doanh nghiệp bạn trong mọi giải pháp công nghệ.",
+    "info": {
+      "address": "Địa chỉ",
+      "hotline": "Hotline",
+      "email": "Email"
+    },
+    "form": {
+      "title": "Gửi yêu cầu tư vấn",
+      "description": "Để lại thông tin, đội ngũ chuyên gia của chúng tôi sẽ liên hệ lại trong vòng 24 giờ làm việc.",
+      "ctaCall": "Gọi ngay",
+      "ctaZalo": "Chat qua Zalo"
+    }
+  },
+  "contactModal": {
+    "title": "Nhận Tư Vấn Miễn Phí",
+    "subtitle": "Chuyên gia của chúng tôi sẽ liên hệ trong 24h",
+    "success": {
+      "title": "Gửi Thành Công!",
+      "message": "Cảm ơn bạn đã tin tưởng. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.",
+      "close": "Đóng cửa sổ"
+    },
+    "form": {
+      "name": "Họ và Tên",
+      "namePlaceholder": "Nguyễn Văn A",
+      "phone": "Số Điện Thoại",
+      "phonePlaceholder": "0901234567",
+      "email": "Email",
+      "emailPlaceholder": "email@company.com",
+      "message": "Nhu cầu tư vấn",
+      "messagePlaceholder": "Mô tả dự án hoặc yêu cầu của bạn...",
+      "submit": "Gửi Yêu Cầu",
+      "submitting": "Đang gửi...",
+      "commitment": "Cam kết bảo mật thông tin 100%"
+    }
+  }
+}

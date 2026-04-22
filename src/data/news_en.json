@@ -1,0 +1,119 @@
+[
+  {
+    "id": "fido2-passwordless-trend",
+    "title": "The Passwordless Era: Why FIDO2 is the Future of Banking Security?",
+    "date": "2026-04-20",
+    "summary": "The FIDO2 standard is gradually replacing traditional SMS OTP to become the safest 'choke point' against sophisticated phishing attacks...",
+    "category": "Security",
+    "link": "https://fct.vn/news/fido2-passwordless-trend",
+    "content": "2024 marked a major turning point in the security industry as leading financial institutions began to eliminate dependence on passwords and SMS OTPs – which are vulnerable to SIM swapping or phishing attacks. Instead, the **FIDO2 (Fast Identity Online)** standard is becoming the new 'gold standard'.\n\nWhy is FIDO2 superior?\n- **Total Phishing Protection:** Unlike OTP, FIDO2 establishes a unique cryptographic link between the hardware device and the official website. Attackers cannot trick users into providing a 'code' because all communication is handled by public/private key pairs within the security chip.\n- **Passkey Experience:** Users can log in with a single touch to a USB Dongle without needing to remember complex passwords.\n\n**FCT Vinh Thinh** currently provides **FCT Tokens** that fully support FIDO2/L2 standards, helping banks and businesses in Vietnam rapidly deploy passwordless authentication infrastructure in compliance with international security regulations."
+  },
+  {
+    "id": "biometric-usb-security",
+    "title": "Biometric Security Keys: When Fingerprints Become the Last Shield",
+    "date": "2026-04-19",
+    "summary": "The trend of integrating fingerprint sensors directly onto hardware USB keys helps prevent unauthorized use even if the physical device is lost...",
+    "category": "Security",
+    "link": "https://fct.vn/news/biometric-usb-security",
+    "content": "In the category of hardware security devices, **Biometric USB Dongles (Biometric Keys)** are leading the trend in 2025. This solution perfectly combines 'What you have' (physical key) and 'What you are' (user's fingerprint).\n\nThe difference lies in **On-device Processing**:\n- Fingerprint data is never sent to the computer or cloud. All matching processes occur within the Secure Element (SE) of the USB itself.\n- Even if a hacker steals the key, they cannot activate the authentication function without the owner's fingerprint.\n\nThis solution is particularly critical for senior personnel, System Admins, or factory engineers (OT Security) – those who hold access to critical infrastructure. The use of biometric keys is currently recommended by FCT Vinh Thinh as a final 'safety catch' to protect corporate digital identities."
+  },
+  {
+    "id": "hybrid-software-protection",
+    "title": "Hybrid Software Protection: Why High-end Software Still Needs USB Dongles?",
+    "date": "2026-04-18",
+    "summary": "In the SaaS era, using USB Dongles (hardware keys) combined with Cloud management is creating a new standard for high-value industrial software...",
+    "category": "Solution",
+    "link": "https://fct.vn/news/hybrid-software-protection",
+    "content": "Many people mistakenly believe that the development of the Cloud will kill off USB Dongles. However, in reality, the **Specialized Software (Engineering, Medical, Media)** market is witnessing a resurgence of the **Hybrid Licensing** model.\n\nWhy are USB Dongles still irreplaceable?\n- **Offline Security (Cold Storage):** For software running in environments without internet (internal factory LANs), USB Dongles are the only method to authenticate licenses without leaking data externally.\n- **Anti-crack Protection:** Security chips on keys like **Sentinel LDK** can execute part of the software's source code inside the hardware, making software cracking impossible even if a hacker manipulates the computer's memory.\n\nThe Hybrid model deployed by FCT Vinh Thinh allows businesses to both provide flexible licensing via the Cloud for trial features and use USB Dongles to lock the most critical modules. This strategy helps software developers (ISVs) optimize revenue and protect intellectual property most sustainably."
+  },
+  {
+    "id": "canary-labs",
+    "title": "Who is CANARY LABS and What Solutions Do They Provide?",
+    "date": "2024-12-13",
+    "summary": "Canary Labs is a technology company with a long history, founded in 1985. Although their name might not be a household word...",
+    "category": "Solution",
+    "link": "https://fct.vn/canary-labs.html",
+    "content": "Canary Labs, founded in 1985 in Pennsylvania (USA), is one of the global pioneers in providing industrial operational data management solutions. With over 35 years of experience, Canary has established itself as the 'backbone' for modern factory data infrastructure, solving the problem of collecting and storing millions of data points (tags) from SCADA, PLC, or IoT sensor systems.\n\nTheir core product is the **Canary System**, which includes three breakthrough components:\n\n- **Canary Historian:** A real-time data storage tool with extreme speed, capable of handling millions of changes per second without degrading system performance.\n- **Canary Axiom:** A visual data display and analysis tool for engineers, allowing the creation of trends and operational reports without programming knowledge.\n- **Canary Collectors:** Facilitates seamless connection with control systems via standard protocols such as OPC UA, MQTT, and SQL.\n\nIn Vietnam, **FCT Vinh Thinh** is a strategic partner implementing Canary solutions to support manufacturing enterprises in their digital transformation (Smart Factory). Implementing the Canary system helps factories move beyond viewing historical data to predictive maintenance and optimizing operational costs based on actual data."
+  },
+  {
+    "id": "android-15-security",
+    "title": "How Does Android 15 Protect Against Screen Peeking?",
+    "date": "2024-12-03",
+    "summary": "Android 15 introduces new security features such as screen recording detection and automatic password protection, enhancing user privacy. At...",
+    "category": "Security",
+    "link": "https://fct.vn/android-15-bao-ve-chong-nhin-trom-man-hinh-nhu-the-nao.html",
+    "content": "Google has raised security standards to a new level in Android 15, focusing heavily on protecting privacy and preventing information theft through screen peeking. This is a critical improvement for users of financial, banking, and e-wallet applications.\n\nTwo prominent security features include:\n\n- **Screen Share Protection:** The system will automatically recognize and hide notifications containing sensitive content (such as OTP codes, passwords, private messages) when the user is sharing their screen during online meetings or technical support calls.\n- **Recording Detection:** Android 15 provides new APIs that allow apps to detect if the screen is being recorded by an anonymous app or malware, proactively blocking the display of important information.\n\nHowever, the article emphasizes that while Android 15 has major improvements, for high-security applications like Mobile Banking, businesses still need to combine specialized solutions like **DexGuard**, distributed by FCT Vinh Thinh. This ensures the application can protect itself even on devices that have been rooted or compromised by sophisticated malware."
+  },
+  {
+    "id": "mobile-app-security",
+    "title": "A New Approach to Mobile Application Security",
+    "date": "2024-09-25",
+    "summary": "In today's fast-evolving digital landscape, protecting mobile apps is no longer a 'nice to have' - it's a...",
+    "category": "Security",
+    "link": "https://fct.vn/cach-tiep-can-moi-ve-bao-mat-ung-dung-di-dong.html",
+    "content": "In a landscape where cybercriminals are increasingly sophisticated, protecting mobile applications from reverse engineering and source code tampering is a vital mission for businesses. **Guardsquare**, a strategic partner of FCT Vinh Thinh, has introduced a breakthrough methodology: **Compiler-based protection**.\n\nInstead of using traditional methods like 'app wrapping'—which is easily stripped by hackers—Guardsquare's solutions (through **DexGuard** and **iXGuard**) integrate defense mechanisms directly into the source code during the build process.\n\nKey advantages include:\n- **Polymorphic Obfuscation:** Each build of the application will have a different encrypted structure. Even if a hacker cracks an old build, they cannot apply it to the new one.\n- **RASP (Runtime Application Self-Protection):** Allows the app to detect and react when running in unsafe environments (virtual machines, jailbroken/rooted devices) or when interfered with by debuggers.\n- **Local Processing:** The entire protection process takes place in the business's development environment, ensuring source code is never uploaded to the cloud.\n\nThis is currently the 'gold standard' for digital banking apps, Fintech, and Government organizations in Vietnam to deal with IP theft and financial fraud risks."
+  },
+  {
+    "id": "rasp-features",
+    "title": "Key Features of Effective RASP Solutions and How They Protect Apps",
+    "date": "2024-08-23",
+    "summary": "Runtime Application Self-Protection (RASP) has become a critical element in countering threats that mobile applications must face...",
+    "category": "Security",
+    "link": "https://fct.vn/cac-tinh-nang-chinh-cua-giai-phap-rasp-hieu-qua-va-cach-no-bao-ve-ung-dung.html",
+    "content": "Runtime Application Self-Protection (RASP) is a security technology integrated directly into an application to control execution and detect unusual behaviors during its lifecycle.\n\nKey features of an effective RASP solution include:\n\n1. **Unsafe Environment Detection:** RASP continuously checks if the device is rooted or jailbroken. This is a primary risk as attackers can interfere deeply with app memory.\n2. **Debugger Detection:** Prevents hackers from using tools like GDB or LLDB to analyze source code while the app is running.\n3. **Screen Recording and Screenshot Prevention:** This is a vital feature for banking apps to prevent theft of OTP codes or credit card information.\n4. **Code Integrity Check:** RASP ensures the application's code has not been modified or injected with malware (repackaging).\n\nFCT Vinh Thinh distributes leading RASP solutions that help businesses not only 'hide' source code but also have the ability to 'fight back' proactively against any attack."
+  },
+  {
+    "id": "dexguard-android",
+    "title": "Protecting Against Common Malware Attack Techniques on Android with DexGuard",
+    "date": "2024-06-12",
+    "summary": "While malware prevention is a shared responsibility, developers play a critical role in ensuring that software...",
+    "category": "Software",
+    "link": "https://fct.vn/bao-ve-chong-lai-cac-ky-thuat-tan-cong-phan-mem-doc-hai-pho-bien-tren-android-voi-dexguard.html",
+    "content": "The Android operating system, with its large market share, is a primary target for cybercriminals. Techniques such as inserting overlays (fake windows) and abusing Accessibility Services to read screen data are increasingly common.\n\n**DexGuard** provides deep defense layers to counter these threats:\n\n- **String & Class Encryption:** Encrypts all strings and class names in the code, making it impossible for an attacker to understand the app's logic when using decompile tools.\n- **Asset & Resource Encryption:** Protects critical resource and configuration files within the APK package.\n- **Accessibility Shield:** This unique feature helps detect and block malicious apps from abusing accessibility permissions to perform actions on behalf of the user or spy on screen data.\n\nIntegrating DexGuard into the software development process is not just a security choice, but a requirement for compliance with secure financial application distribution regulations in Vietnam today."
+  },
+  {
+    "id": "mobile-security-mgmt",
+    "title": "MOBILE DEVICE SECURITY MANAGEMENT IN THE DIGITAL ERA",
+    "date": "2022-07-15",
+    "summary": "FCT Vinh Thinh provides useful analysis and introduces two mobile security management solutions currently leading the markets...",
+    "category": "Solution",
+    "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
+    "content": "In the digital era, mobile devices are not just communication tools but 'mobile offices' containing vast amounts of sensitive corporate data. Mobile Security Management needs a more holistic view instead of just installing regular antivirus software.\n\nFCT Vinh Thinh proposes a 3-layer approach:\n\n1. **Mobile Application Management (MAM):** Focuses on protecting the company's business apps, ensuring app data does not leak into personal apps.\n2. **Strong Authentication:** Using 2FA (Two-Factor Authentication) or PKI (Public Key Infrastructure) through Longmai tokens or Thales solutions to ensure only legitimate users can access the system.\n3. **Continuous Monitoring:** Utilizing behavioral analysis solutions to early detect signs of device attacks or users accessing from insecure networks.\n\nOur team of experts is always ready to support businesses in building flexible but absolute secure mobile security policies (BYOD Policy)."
+  },
+  {
+    "id": "security-awareness",
+    "title": "THE IMPORTANCE OF ENHANCING MOBILE SECURITY AWARENESS",
+    "date": "2022-07-05",
+    "summary": "In this article, FCT Vinh Thinh analyzes why businesses need to focus on raising employees' awareness of security issues...",
+    "category": "Security",
+    "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html",
+    "content": "No matter how sophisticated the security system is, humans remain the 'weakest link'. Statistics show that over 80% of data breaches originate from user error or lack of awareness of threats.\n\nRaising mobile security awareness for employees includes key lessons:\n- Identifying phishing attacks via SMS (Smishing) and email.\n- Understanding the risks when connecting to open public Wi-Fi networks.\n- Developing a habit of regularly updating operating systems and apps for security patches.\n- Not installing applications from unknown sources (Sideloading).\n\nFCT Vinh Thinh provides not only technical tools but also supports businesses with security awareness consultation and training, helping build a safe digital working culture."
+  },
+  {
+    "id": "mobile-security-challenges",
+    "title": "4 CHALLENGES IN MOBILE DEVICE SECURITY",
+    "date": "2022-06-28",
+    "summary": "Building a mobile security system is essential for any unit. But currently, hackers can completely...",
+    "category": "Security",
+    "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html",
+    "content": "Mobile security faces unprecedented challenges due to device diversity and emerging attack methods.\n\n4 biggest challenges today include:\n\n1. **Data Leakage:** Users inadvertently granting access to contacts and location to unreliable apps, causing corporate information loss.\n2. **Insecure Wi-Fi Networks:** Attackers can set up fake access points (Man-in-the-middle attack) to intercept data transmitted from devices.\n3. **Sophisticated Phishing Attacks:** Fake bank or authority messages tricking users into providing credentials.\n4. **Spyware:** Malicious code designed to work silently, recording calls and spying on cameras without the user's knowledge.\n\nUnderstanding these challenges is the first step in building an effective proactive defense strategy with partner FCT Vinh Thinh."
+  },
+  {
+    "id": "malware-threats",
+    "title": "POTENTIAL MOBILE SECURITY DESTRUCTION RISKS FROM MALWARE",
+    "date": "2022-06-22",
+    "summary": "Mobile security is threatened, risking user information and data theft. So how to avoid malware intrusion...",
+    "category": "Security",
+    "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html",
+    "content": "Mobile malware is no longer just simple destructive viruses. Today, they are developed as 'commercial software' with extremely complex structures.\n\nCommon types of malware:\n- **Bankers:** Specialize in stealing bank credentials and credit card information.\n- **Ransomware:** Locks the device and demands ransom in cryptocurrency.\n- **Adware:** Causes annoyance and steals user habit information for advertising profit.\n\nHow to avoid it? Besides increased vigilance, businesses developing apps need to equip their products with 'self-protection' from the inside. Solutions like Guardsquare allow apps to detect and terminate sessions if interference is detected, ensuring absolute safety for end-users."
+  },
+  {
+    "id": "attack-vectors",
+    "title": "3 TYPICAL MOBILE SECURITY ATTACK VECTORS",
+    "date": "2022-06-16",
+    "summary": "Mobile security is a top concern for businesses today. Let's explore three typical methods with FCT Vinh Thinh...",
+    "category": "Security",
+    "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html",
+    "content": "To effectively protect a system, we need to understand the paths an attacker can take (Attack Vectors). There are 3 typical forms:\n\n1. **App-based Attacks:** Attackers create fake apps containing malware or modify popular apps' source code to insert tracking features.\n2. **Device-based Attacks:** Exploiting unpatched vulnerabilities in Android or iOS (Zero-day exploits).\n3. **Network-based Attacks:** Interfering with data transmission process when connecting to public networks, using DNS spoofing or SSL Stripping techniques.\n\nBy correctly identifying these attack vectors, FCT Vinh Thinh will advise you on the corresponding defense layers, from app code protection to hardware security solutions for network infrastructure."
+  }
+]

@@ -1,31 +1,43 @@
 import { Metadata } from "next";
-import newsData from "@/data/news.json";
+import newsVi from "@/data/news_vi.json";
+import newsEn from "@/data/news_en.json";
 import NewsList from "./NewsList";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import { getDictionary } from "@/lib/get-dictionary";
+import { PageProps } from "next";
 
-export const metadata: Metadata = {
-  title: "Tin tức & Bài viết Bảo mật | FCT Vinh Thinh .,JSC",
-  description: "Cập nhật những thông tin mới nhất về công nghệ bảo mật, giải pháp bản quyền phần mềm và xu hướng hạ tầng IT từ các chuyên gia FCT Vĩnh Thịnh.",
-  openGraph: {
-    title: "Tin tức bảo mật & công nghệ - FCT Vĩnh Thịnh",
-    description: "Kho tàng kiến thức công nghệ và các giải pháp an ninh mạng hàng đầu thế giới được chia sẻ bởi FCT Vĩnh Thịnh.",
-    type: "website",
-  },
-};
+export async function generateMetadata({ params }: PageProps < "/[lang]/news" >): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  
+  return {
+    title: dict.news.metaTitle,
+    description: dict.news.metaDescription,
+    openGraph: {
+      title: dict.news.ogTitle,
+      description: dict.news.ogDescription,
+      type: "website",
+    }
+  };
+}
 
-export default function NewsPage() {
-  // Chuẩn bị dữ liệu Structured Data JSON-LD cho AI Search
+export default async function NewsPage({ params }: PageProps < "/[lang]/news" >) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  const newsData = lang === "en" ? newsEn : newsVi;
+
+  // Chuẩn bị dữ liệu Structured Data JSON-LD
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Tin tức Bảo mật FCT Vĩnh Thịnh",
-    "description": "Cập nhật thông tin về công nghệ bảo mật, giải pháp Sentinel, Guardsquare và Canary Labs.",
+    "name": lang === "en" ? "FCT Vinh Thinh Security News" : "Tin tức Bảo mật FCT Vĩnh Thịnh",
+    "description": dict.news.description,
     "publisher": {
       "@type": "Organization",
       "name": "FCT Vinh Thinh .,JSC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fct.vn/logo.png" // Giả định logo khả dụng tại URL này
+        "url": "https://fct.vn/logo.png"
       }
     },
     "blogPost": newsData.map(item => ({
@@ -43,7 +55,7 @@ export default function NewsPage() {
 
   return (
     <main className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white">
-      {/* ── Header Section - TECH-HEAVY PLUS MODE ───────────────────── */}
+      {/* ── Header Section ───────────────────── */}
       <div className="relative bg-[#020617] pt-48 pb-24 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         {/* Glow */}
@@ -51,13 +63,13 @@ export default function NewsPage() {
 
         <div className="max-w-6xl mx-auto relative z-10 text-center space-y-6">
           <div className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[10px] font-black text-blue-300 tracking-[0.4em] uppercase">
-            Knowledge Base
+            {dict.news.badge}
           </div>
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
-            Tin tức & <span className="text-blue-500">Bài viết</span>
+            {dict.news.titlePart1} <span className="text-blue-500">{dict.news.titlePart2}</span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed tracking-tight">
-            Cập nhật những thông tin mới nhất về công nghệ bảo mật và giải pháp hạ tầng từ các chuyên gia hàng đầu thế giới.
+            {dict.news.description}
           </p>
         </div>
       </div>
@@ -69,7 +81,7 @@ export default function NewsPage() {
       />
 
       <div className="max-w-6xl mx-auto py-16 px-6">
-        <NewsList />
+        <NewsList lang={lang} dict={dict} />
       </div>
     </main>
   );

@@ -7,9 +7,10 @@ import { useState } from "react";
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
+  dict: any;
 }
 
-export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+export default function ContactModal({ isOpen, onClose, dict }: ContactModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState("");
@@ -17,15 +18,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const d = dict.contactModal;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Giả lập xử lý gửi form. Trong ứng dụng thực tế, bạn sẽ gửi dữ liệu ở đây.
-    // const formData = { name, phone, email, message };
     setTimeout(() => {
       setIsLoading(false);
       setIsSubmitted(true);
-      // Xóa các trường trong form
       setName("");
       setPhone("");
       setEmail("");
@@ -42,7 +42,6 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
-          {/* Backdrop blur */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -51,7 +50,6 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             className="absolute inset-0 bg-gray-900/40 backdrop-blur-sm"
           />
 
-          {/* Modal Box */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -61,8 +59,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             {/* Header Modal */}
             <div className="bg-gradient-to-r from-blue-600 to-cyan-500 p-6 flex justify-between items-center text-white">
               <div>
-                <h3 className="text-xl font-bold">Nhận Tư Vấn Miễn Phí</h3>
-                <p className="text-sm font-light text-blue-100 mt-1">Chuyên gia của chúng tôi sẽ liên hệ trong 24h</p>
+                <h3 className="text-xl font-bold">{d.title}</h3>
+                <p className="text-sm font-light text-blue-100 mt-1">{d.subtitle}</p>
               </div>
               <button 
                 onClick={onClose}
@@ -87,14 +85,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <CheckCircle2 className="w-10 h-10" />
                     </div>
                     <div className="space-y-2">
-                      <h4 className="text-2xl font-bold text-gray-900">Gửi Thành Công!</h4>
-                      <p className="text-gray-600 font-light">Cảm ơn bạn đã tin tưởng. <br/>Chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
+                      <h4 className="text-2xl font-bold text-gray-900">{d.success.title}</h4>
+                      <p className="text-gray-600 font-light" dangerouslySetInnerHTML={{ __html: d.success.message }} />
                     </div>
                     <button 
                       onClick={onClose}
                       className="text-blue-600 font-semibold text-sm hover:underline pt-4"
                     >
-                      Đóng cửa sổ
+                      {d.success.close}
                     </button>
                   </motion.div>
                 ) : (
@@ -107,11 +105,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     className="space-y-4"
                   >
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">Họ và Tên</label>
+                      <label className="text-sm font-semibold text-gray-700">{d.form.name}</label>
                       <input
                         required
                         type="text"
-                        placeholder="Nguyễn Văn A"
+                        placeholder={d.form.namePlaceholder}
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
@@ -120,22 +118,22 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-sm font-semibold text-gray-700">Số Điện Thoại</label>
+                        <label className="text-sm font-semibold text-gray-700">{d.form.phone}</label>
                         <input
                           required
                           type="tel"
-                          placeholder="0901234567"
+                          placeholder={d.form.phonePlaceholder}
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
                         />
                       </div>
                       <div className="space-y-1.5">
-                        <label className="text-sm font-semibold text-gray-700">Email</label>
+                        <label className="text-sm font-semibold text-gray-700">{d.form.email}</label>
                         <input
                           required
                           type="email"
-                          placeholder="email@company.com"
+                          placeholder={d.form.emailPlaceholder}
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
@@ -144,9 +142,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">Nhu cầu tư vấn</label>
+                      <label className="text-sm font-semibold text-gray-700">{d.form.message}</label>
                       <textarea
-                        rows={3} placeholder="Mô tả dự án hoặc yêu cầu của bạn..."
+                        rows={3} placeholder={d.form.messagePlaceholder}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light resize-none"
@@ -165,16 +163,16 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       {isLoading ? (
                         <>
                           <Loader2 className="w-5 h-5 animate-spin" />
-                          <span>Đang gửi...</span>
+                          <span>{d.form.submitting}</span>
                         </>
                       ) : (
                         <>
-                          <span>Gửi Yêu Cầu</span>
+                          <span>{d.form.submit}</span>
                           <Send className="w-4 h-4" />
                         </>
                       )}
                     </button>
-                    <p className="text-[10px] text-gray-400 text-center font-light uppercase tracking-widest mt-4">Cam kết bảo mật thông tin 100%</p>
+                    <p className="text-[10px] text-gray-400 text-center font-light uppercase tracking-widest mt-4">{d.form.commitment}</p>
                   </motion.form>
                 )}
               </AnimatePresence>

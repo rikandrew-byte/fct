@@ -1,7 +1,11 @@
 import { Metadata } from "next";
-import newsData from "@/data/news.json";
+import newsVi from "@/data/news_vi.json";
+import newsEn from "@/data/news_en.json";
 import NewsDetailClient from "./NewsDetailClient";
 import { notFound } from "next/navigation";
+import { getDictionary } from "@/lib/get-dictionary";
+import { PageProps } from "next";
+import { i18n } from "@/config/i18n-config";
 
 interface Article {
   id: string;
@@ -13,17 +17,29 @@ interface Article {
   content: string;
 }
 
+export async function generateStaticParams() {
+  const params: { lang: string; id: string }[] = [];
+  
+  i18n.locales.forEach((lang) => {
+    const newsData = lang === "en" ? newsEn : newsVi;
+    newsData.forEach((article) => {
+      params.push({ lang, id: article.id });
+    });
+  });
+
+  return params;
+}
+
 export async function generateMetadata({ 
   params 
-}: { 
-  params: Promise<{ id: string }> 
-}): Promise<Metadata> {
-  const { id } = await params;
+}: PageProps<"/news/[id]">): Promise<Metadata> {
+  const { id, lang } = await params;
+  const newsData = lang === "en" ? newsEn : newsVi;
   const article = newsData.find((a) => a.id === id);
 
   if (!article) {
     return {
-      title: "Bài viết không tồn tại",
+      title: lang === "en" ? "Article not found" : "Bài viết không tồn tại",
     };
   }
 
@@ -42,18 +58,18 @@ export async function generateMetadata({
 
 export default async function NewsDetailPage({ 
   params 
-}: { 
-  params: Promise<{ id: string }> 
-}) {
-  const { id } = await params;
-  const article = (newsData as Article[]).find((a) => a.id === id);
+}: PageProps<"/news/[id]">) {
+  const { id, lang } = await params;
+  const dict = await getDictionary(lang);
+  const newsData = (lang === "en" ? newsEn : newsVi) as Article[];
+  const article = newsData.find((a) => a.id === id);
 
   if (!article) {
     notFound();
   }
 
   // Tìm các bài viết liên quan (cùng category hoặc ngẫu nhiên nếu không đủ)
-  const relatedNews = (newsData as Article[])
+  const relatedNews = newsData
     .filter((a) => a.id !== id)
     .sort((a, b) => {
         // Ưu tiên cùng category
@@ -63,5 +79,5 @@ export default async function NewsDetailPage({
     })
     .slice(0, 3);
 
-  return <NewsDetailClient article={article} relatedNews={relatedNews} />;
+  return <NewsDetailClient lang={lang} dict={dict} article={article} relatedNews={relatedNews} />;
 }

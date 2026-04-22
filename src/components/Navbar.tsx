@@ -3,23 +3,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { Menu, X, Globe } from "lucide-react";
 import ContactModal from "./ContactModal";
 
-const navLinks = [
-  { href: "/about", label: "Về chúng tôi" },
-  { href: "/news", label: "Tin tức" },
-  { href: "/projects", label: "Dự án tiêu biểu" },
-  { href: "/products", label: "Sản phẩm" },
-  { href: "/contact", label: "Liên hệ" },
-];
+interface NavbarProps {
+  lang: string;
+  dict: any;
+}
 
-export default function Navbar() {
+export default function Navbar({ lang, dict }: NavbarProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const isEn = lang === "en";
+
+  const navLinks = [
+    { href: `/${lang}/about`, label: dict.navbar.about },
+    { href: `/${lang}/news`, label: dict.navbar.news },
+    { href: `/${lang}/projects`, label: dict.navbar.projects },
+    { href: `/${lang}/products`, label: dict.navbar.products },
+    { href: `/${lang}/contact`, label: dict.navbar.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +36,12 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleLanguage = () => {
+    const newLang = isEn ? "vi" : "en";
+    const newPath = pathname.replace(`/${lang}`, `/${newLang}`);
+    router.push(newPath);
+  };
 
   return (
     <>
@@ -42,9 +56,8 @@ export default function Navbar() {
           }
           hover:border-white/20
         `}>
-          <Link href="/" className="flex items-center gap-3 group relative">
+          <Link href={`/${lang}`} className="flex items-center gap-3 group relative">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            {/* Logo hình ảnh */}
             <Image 
               src="/logo.png" 
               alt="Logo FCT" 
@@ -59,7 +72,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-1 p-1 bg-white/5 rounded-full border border-white/10">
+          <nav className="hidden md:flex items-center space-x-1 p-1 bg-white/5 rounded-full border border-white/10">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
@@ -73,6 +86,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            
+            {/* Language Switcher */}
+            <button 
+              onClick={toggleLanguage}
+              className="ml-2 flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-black tracking-widest uppercase transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
+            >
+              <Globe className="w-4 h-4 text-blue-400" />
+              <span>{isEn ? "VN" : "EN"}</span>
+            </button>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -80,7 +102,7 @@ export default function Navbar() {
               onClick={() => setIsModalOpen(true)}
               className="relative overflow-hidden group bg-blue-600 text-white px-6 py-2.5 rounded-full text-xs font-black tracking-widest uppercase hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/40 hidden xs:block"
             >
-              <span className="relative z-10">Nhận tư vấn</span>
+              <span className="relative z-10">{dict.common.getAdvice}</span>
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
             </button>
             
@@ -94,7 +116,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer - DARK MODE */}
+        {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
           <div className="absolute top-20 left-6 right-6 md:hidden bg-[#020617]/95 backdrop-blur-2xl border border-white/10 shadow-2xl rounded-[2.5rem] p-8 z-50 animate-in fade-in slide-in-from-top-4 duration-300">
             <nav className="flex flex-col gap-5">
@@ -111,6 +133,15 @@ export default function Navbar() {
                   {pathname === link.href && <div className="w-2.5 h-2.5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]" />}
                 </Link>
               ))}
+              
+              <button 
+                onClick={toggleLanguage}
+                className="flex items-center justify-between py-4 text-xl font-black text-gray-300 border-b border-white/5"
+              >
+                <span>{isEn ? "Chuyển sang Tiếng Việt" : "Switch to English"}</span>
+                <Globe className="w-6 h-6 text-blue-400" />
+              </button>
+
               <button 
                 onClick={() => {
                   setIsMobileMenuOpen(false);
@@ -118,14 +149,14 @@ export default function Navbar() {
                 }}
                 className="mt-6 bg-blue-600 text-white py-5 rounded-[1.5rem] font-black text-sm tracking-widest uppercase shadow-xl shadow-blue-600/30"
               >
-                Nhận tư vấn ngay
+                {dict.common.getAdviceNow}
               </button>
             </nav>
           </div>
         )}
       </header>
 
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} dict={dict} />
     </>
   );
 }

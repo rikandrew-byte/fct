@@ -2,42 +2,67 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Shield, Database, Cpu, Lock, ArrowRight, Zap, Target, TrendingUp } from "lucide-react";
-import projectsData from "@/data/projects.json";
+import { Shield, Database, Cpu, Lock, Zap, Target, TrendingUp } from "lucide-react";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import ContactModal from "@/components/ContactModal";
 
+interface Project {
+  id: string;
+  title: string;
+  persona: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  impact: string;
+  tech: string[];
+}
+
+interface ProjectsPageClientProps {
+  lang: string;
+  dict: any;
+  projectsData: Project[];
+}
+
 const iconMap: Record<string, any> = {
+  // Vietnamese keys
   "Tài chính - Ngân hàng": Shield,
   "Năng lượng & Hạ tầng": Database,
   "Sản xuất Công nghệ cao": Cpu,
   "Chuỗi cung ứng & CNTT": Lock,
+  // English keys
+  "Banking & Finance": Shield,
+  "Energy & Infrastructure": Database,
+  "High-Tech Manufacturing": Cpu,
+  "Supply Chain & IT": Lock,
 };
 
-export default function ProjectsPage() {
+export default function ProjectsPageClient({ lang, dict, projectsData }: ProjectsPageClientProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const d = dict.projects;
+  const isEn = lang === "en";
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white">
+    <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-600 selection:text-white">
       {/* ── Hero Section ───────────────────────────────────────────── */}
       <section className="relative pt-44 pb-24 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[180px] -z-10"></div>
         
-        <div className="max-w-max-5xl max-w-5xl mx-auto relative z-10 text-center space-y-8">
+        <div className="max-w-5xl mx-auto relative z-10 text-center space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <span className="text-blue-500 font-black text-xs uppercase tracking-[0.4em] mb-4 block">
-              Performance & Reliability
+              {d.badge}
             </span>
             <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-6">
-              Dự án & <span className="text-blue-500">Thành tựu</span>
+              {d.titlePart1} <span className="text-blue-500">{d.titlePart2}</span>
             </h1>
             <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-              Khám phá cách FCT Vĩnh Thịnh đồng hành cùng các tập đoàn hàng đầu giải quyết những thách thức bảo mật cốt lõi và tối ưu hóa hạ tầng số.
+              {d.description}
             </p>
           </motion.div>
         </div>
@@ -47,12 +72,7 @@ export default function ProjectsPage() {
       <section className="relative z-10 -mt-12 mb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {[
-              { label: "Năm kinh nghiệm", value: "10+", sub: "Developing since 2014" },
-              { label: "Thiết bị bảo vệ", value: "1.5M+", sub: "Protected Endpoints" },
-              { label: "Khách hàng DN", value: "500+", sub: "Enterprise Clients" },
-              { label: "Tỷ lệ thành công", value: "100%", sub: "Zero-Breach Record" },
-            ].map((stat, i) => (
+            {d.stats.map((stat: any, i: number) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -105,7 +125,7 @@ export default function ProjectsPage() {
                         <Icon className="w-6 h-6 text-blue-500" />
                       </div>
                       <div className="space-y-0.5">
-                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500/60">Lĩnh vực</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500/60">{d.list.field}</p>
                         <p className="text-sm font-bold text-gray-300">{project.industry}</p>
                       </div>
                     </div>
@@ -115,7 +135,7 @@ export default function ProjectsPage() {
                     </h2>
                     
                     <div className="space-y-2">
-                      <p className="text-xs font-black uppercase tracking-widest text-gray-500">Đối tác Persona</p>
+                      <p className="text-xs font-black uppercase tracking-widest text-gray-500">{d.list.persona}</p>
                       <p className="text-lg font-light text-blue-100/70 italic leading-relaxed">
                         &quot;{project.persona}&quot;
                       </p>
@@ -136,7 +156,7 @@ export default function ProjectsPage() {
                       <div className="space-y-3">
                         <div className="flex items-center gap-2 text-red-400">
                           <Zap className="w-4 h-4" />
-                          <span className="text-[11px] font-black uppercase tracking-widest">Thách thức</span>
+                          <span className="text-[11px] font-black uppercase tracking-widest">{d.list.challenge}</span>
                         </div>
                         <p className="text-sm font-light text-gray-400 leading-relaxed">
                           {project.challenge}
@@ -145,7 +165,7 @@ export default function ProjectsPage() {
                       <div className="space-y-3">
                         <div className="flex items-center gap-2 text-blue-400">
                           <Target className="w-4 h-4" />
-                          <span className="text-[11px] font-black uppercase tracking-widest">Giải pháp</span>
+                          <span className="text-[11px] font-black uppercase tracking-widest">{d.list.solution}</span>
                         </div>
                         <p className="text-sm font-light text-gray-400 leading-relaxed">
                           {project.solution}
@@ -156,7 +176,7 @@ export default function ProjectsPage() {
                     <div className="p-8 rounded-3xl bg-blue-600/5 border border-blue-500/20 space-y-4">
                       <div className="flex items-center gap-2 text-emerald-400">
                         <TrendingUp className="w-4 h-4" />
-                        <span className="text-[11px] font-black uppercase tracking-widest font-bold">Hiệu quả thực tế</span>
+                        <span className="text-[11px] font-black uppercase tracking-widest font-bold">{d.list.result}</span>
                       </div>
                       <p className="text-xl font-bold tracking-tight text-white">
                         {project.result}
@@ -176,25 +196,25 @@ export default function ProjectsPage() {
         <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
           
-          <h2 className="text-4xl font-black tracking-tighter">Sẵn sàng bảo mật tương lai doanh nghiệp?</h2>
+          <h2 className="text-4xl font-black tracking-tighter">{d.cta.title}</h2>
           <p className="text-blue-100 opacity-80 font-light text-lg">
-            Hãy để FCT Vĩnh Thịnh tư vấn lộ trình chuyển đổi và bảo mật chuyên sâu nhất cho bạn.
+            {d.cta.description}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setIsModalOpen(true)}
               className="bg-white text-blue-950 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl"
             >
-              Gửi yêu cầu tư vấn
+              {d.cta.requestConsult}
             </button>
             <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white/20 transition-all">
-              Tải hồ sơ năng lực
+              {d.cta.downloadProfile}
             </button>
           </div>
         </div>
       </section>
 
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} dict={dict} />
     </main>
   );
 }

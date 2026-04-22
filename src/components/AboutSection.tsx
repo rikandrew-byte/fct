@@ -2,27 +2,34 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheck, Zap, Globe, Target } from "lucide-react";
+import { ShieldCheck, Zap, Globe } from "lucide-react";
 
-const features = [
-  {
-    icon: <ShieldCheck className="w-6 h-6 text-blue-600" />,
-    title: "An Toàn & Bảo Mật",
-    description: "Giải pháp an ninh mạng toàn diện bảo vệ tối đa dữ liệu doanh nghiệp.",
-  },
-  {
-    icon: <Zap className="w-6 h-6 text-amber-500" />,
-    title: "Hiệu Suất Vượt Trội",
-    description: "Tối ưu hóa sức mạnh hạ tầng IT để nền tảng luôn hoạt động ở tốc độ cao nhất.",
-  },
-  {
-    icon: <Globe className="w-6 h-6 text-emerald-500" />,
-    title: "Kết Nối Toàn Cầu",
-    description: "Đảm bảo sự liên thông không giới hạn và liền mạch qua các nền tảng mạng lõi.",
-  },
-];
+interface AboutSectionProps {
+  lang: string;
+  dict: any;
+}
 
-export default function AboutSection() {
+export default function AboutSection({ lang, dict }: AboutSectionProps) {
+  const features = [
+    {
+      icon: <ShieldCheck className="w-6 h-6 text-blue-600" />,
+      title: dict.about.features[0].title,
+      description: dict.about.features[0].description,
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-amber-500" />,
+      title: dict.about.features[1].title,
+      description: dict.about.features[1].description,
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-emerald-500" />,
+      title: dict.about.features[2].title,
+      description: dict.about.features[2].description,
+    },
+  ];
+
+  const content = dict.about;
+
   return (
     <section className="py-32 bg-slate-50/50 relative overflow-hidden">
       {/* Decorative background glows */}
@@ -40,23 +47,23 @@ export default function AboutSection() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <h2 className="text-[11px] font-black text-blue-600 tracking-[0.3em] uppercase">Về Chúng Tôi</h2>
+              <h2 className="text-[11px] font-black text-blue-600 tracking-[0.3em] uppercase">{content.badge}</h2>
               <h3 className="text-4xl md:text-6xl font-black text-gray-950 leading-[0.95] tracking-tighter">
-                Đồng Hành Cùng Doanh Nghiệp <br />
+                {content.title} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                  Trong Kỷ Nguyên Số
+                  {content.subtitle}
                 </span>
               </h3>
             </div>
             <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl">
-              Chúng tôi không chỉ cung cấp dịch vụ, mà mang đến <strong className="font-bold text-gray-900">hệ sinh thái công nghệ trọn vẹn</strong>. Bằng sự am hiểu chuyên sâu và năng lực đối tác toàn cầu, chúng tôi giúp các tổ chức vượt qua giới hạn.
+              {content.description}
             </p>
             <div className="pt-4">
               <Link
-                href="/about"
+                href={`/${lang}/about`}
                 className="group inline-flex items-center gap-3 bg-white border border-gray-200 px-8 py-4 rounded-2xl font-black text-sm tracking-tight hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-xl shadow-gray-200/40 hover:shadow-blue-500/20"
               >
-                Tìm hiểu thêm về FCT <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
+                {content.more} <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
               </Link>
             </div>
           </motion.div>

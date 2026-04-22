@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import {
   Search,
@@ -22,10 +22,11 @@ import {
   Lock,
   Activity,
   KeyRound,
-  RefreshCcw,
   LucideIcon,
 } from "lucide-react";
-import productsData from "@/data/products.json";
+
+import productsVi from "@/data/products_vi.json";
+import productsEn from "@/data/products_en.json";
 
 interface Product {
   id: string;
@@ -36,6 +37,10 @@ interface Product {
   description: string;
   isNew: boolean;
   link: string;
+}
+
+interface ProductListProps {
+  lang: string;
 }
 
 // ─── Category colour config ───────────────────────────────────────────────
@@ -117,22 +122,28 @@ const productIcons: Record<string, LucideIcon> = {
   "longmai-timepro":          Timer,
 };
 
-const categories = ["Tất cả", "Thales", "Guardsquare", "Canary Labs", "Longmai"];
+export default function ProductList({ lang }: ProductListProps) {
+  const isEn = lang === "en";
+  const productsData = isEn ? productsEn : productsVi;
+  const categories = isEn 
+    ? ["All", "Thales", "Guardsquare", "Canary Labs", "Longmai"]
+    : ["Tất cả", "Thales", "Guardsquare", "Canary Labs", "Longmai"];
 
-export default function ProductList() {
   const [searchQuery, setSearchQuery]           = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("Tất cả");
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [expandedId, setExpandedId]             = useState<string | null>(null);
   const [imgErrors, setImgErrors]               = useState<Set<string>>(new Set());
 
-  const filteredProducts = (productsData as Product[]).filter((p) => {
-    const matchesSearch =
-      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.summary.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory =
-      selectedCategory === "Tất cả" || p.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const filteredProducts = useMemo(() => {
+    return (productsData as Product[]).filter((p) => {
+      const matchesSearch =
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.summary.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory =
+        selectedCategory === categories[0] || p.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [productsData, searchQuery, selectedCategory, categories]);
 
   const toggleExpand = (id: string) =>
     setExpandedId((prev) => (prev === id ? null : id));
@@ -149,7 +160,7 @@ export default function ProductList() {
           <input
             id="product-search"
             type="text"
-            placeholder="Tìm kiếm sản phẩm..."
+            placeholder={isEn ? "Search products..." : "Tìm kiếm sản phẩm..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-12 pr-4 py-3 bg-gray-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 transition-all font-light"
@@ -187,9 +198,9 @@ export default function ProductList() {
 
       {/* Product count */}
       <p className="text-sm text-gray-400 font-light -mt-4">
-        Hiển thị{" "}
+        {isEn ? "Showing " : "Hiển thị "}
         <span className="font-semibold text-gray-700">{filteredProducts.length}</span>{" "}
-        sản phẩm
+        {isEn ? "products" : "sản phẩm"}
       </p>
 
       {/* ── Product Grid ──────────────────────────────────────────────── */}
@@ -242,7 +253,7 @@ export default function ProductList() {
                   {/* NEW badge overlay */}
                   {prod.isNew && (
                     <span className="absolute top-3 right-3 text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-lg animate-pulse">
-                      MỚI
+                      {isEn ? "NEW" : "MỚI"}
                     </span>
                   )}
                 </div>
@@ -289,7 +300,7 @@ export default function ProductList() {
                           : `text-gray-400 hover:${cfg?.iconColor ?? "text-blue-800"}`
                       }`}
                     >
-                      {isExpanded ? "Thu gọn" : "Xem chi tiết"}
+                      {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "View details" : "Xem chi tiết")}
                       <ChevronDown
                         className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                       />
@@ -306,10 +317,10 @@ export default function ProductList() {
             <Search className="w-8 h-8" />
           </div>
           <p className="text-gray-500 font-light text-lg">
-            Không tìm thấy sản phẩm phù hợp.
+            {isEn ? "No products found." : "Không tìm thấy sản phẩm phù hợp."}
           </p>
           <button
-            onClick={() => { setSearchQuery(""); setSelectedCategory("Tất cả"); }}
+            onClick={() => { setSearchQuery(""); setSelectedCategory(categories[0]); }}
             className="text-blue-600 font-semibold hover:underline"
           >
             Xoá bộ lọc

@@ -1,22 +1,48 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Search, ArrowRight, Calendar, Tag } from "lucide-react";
 import Link from "next/link";
-import newsData from "@/data/news.json";
+import newsVi from "@/data/news_vi.json";
+import newsEn from "@/data/news_en.json";
 
-export default function NewsList() {
+interface NewsItem {
+  id: string;
+  title: string;
+  date: string;
+  summary: string;
+  category: string;
+  link: string;
+  content: string;
+}
+
+interface NewsListProps {
+  lang: string;
+  dict: any;
+}
+
+export default function NewsList({ lang, dict }: NewsListProps) {
+  const isEn = lang === "en";
+  const newsData = (isEn ? newsEn : newsVi) as NewsItem[];
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("Tất cả");
+  
+  const allCategoryLabel = isEn ? "All" : "Tất cả";
+  const [selectedCategory, setSelectedCategory] = useState(allCategoryLabel);
 
-  const categories = ["Tất cả", ...Array.from(new Set(newsData.map((item) => item.category)))];
+  const categories = useMemo(() => {
+    return [allCategoryLabel, ...Array.from(new Set(newsData.map((item) => item.category)))];
+  }, [newsData, allCategoryLabel]);
 
-  const filteredNews = newsData.filter((item) => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         item.summary.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === "Tất cả" || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const filteredNews = useMemo(() => {
+    return newsData.filter((item) => {
+      const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                           item.summary.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === allCategoryLabel || item.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [newsData, searchQuery, selectedCategory, allCategoryLabel]);
+
+  const d = dict.news.list;
 
   return (
     <div className="space-y-12">
@@ -26,7 +52,7 @@ export default function NewsList() {
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input 
             type="text" 
-            placeholder="Tìm kiếm bài viết..."
+            placeholder={d.searchPlaceholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-12 pr-4 py-3 bg-gray-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 transition-all font-light"
@@ -78,10 +104,10 @@ export default function NewsList() {
 
                 <div className="pt-6 border-t border-gray-50 flex justify-between items-center">
                   <Link
-                    href={`/news/${item.id}`}
+                    href={`/${lang}/news/${item.id}`}
                     className="text-sm font-bold text-gray-900 group-hover:text-blue-600 transition-colors flex items-center gap-2"
                   >
-                    Đọc tiếp
+                    {d.readMore}
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -94,12 +120,12 @@ export default function NewsList() {
           <div className="w-16 h-16 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
             <Search className="w-8 h-8" />
           </div>
-          <p className="text-gray-500 font-light text-lg">Không tìm thấy bài viết nào phù hợp.</p>
+          <p className="text-gray-500 font-light text-lg">{d.noResults}</p>
           <button 
-            onClick={() => {setSearchQuery(""); setSelectedCategory("Tất cả");}}
+            onClick={() => {setSearchQuery(""); setSelectedCategory(allCategoryLabel);}}
             className="text-blue-600 font-semibold hover:underline"
           >
-            Xoá bộ lọc
+            {d.clearFilters}
           </button>
         </div>
       )}

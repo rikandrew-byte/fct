@@ -15,27 +15,36 @@ interface Article {
   content: string;
 }
 
+interface NewsDetailClientProps {
+  lang: string;
+  dict: any;
+  article: Article;
+  relatedNews: Article[];
+}
+
 export default function NewsDetailClient({ 
+  lang,
+  dict,
   article, 
   relatedNews 
-}: { 
-  article: Article; 
-  relatedNews: Article[] 
-}) {
+}: NewsDetailClientProps) {
+  const d = dict.newsDetail;
+  const commonDict = dict.common;
+
   return (
     <main className="min-h-screen bg-white selection:bg-blue-600 selection:text-white">
-      {/* ── Header Section - TECH-HEAVY PLUS MODE ───────────────────── */}
+      {/* ── Header Section ───────────────────── */}
       <section className="relative pt-48 pb-20 px-6 overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[160px] -z-10 animate-pulse"></div>
 
         <div className="max-w-4xl mx-auto relative z-10">
           <Link 
-            href="/news" 
+            href={`/${lang}/news`} 
             className="inline-flex items-center gap-2 text-blue-400 font-bold text-xs uppercase tracking-widest mb-8 hover:text-blue-300 transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Quay lại tin tức
+            {d.backToNews}
           </Link>
           
           <motion.div 
@@ -76,7 +85,7 @@ export default function NewsDetailClient({
             {/* Source Reference & Tags */}
             <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex items-center gap-4">
-                <span className="text-sm font-bold text-gray-400 italic">Nguồn tham khảo:</span>
+                <span className="text-sm font-bold text-gray-400 italic">{d.source}:</span>
                 <a 
                   href={article.link} 
                   target="_blank" 
@@ -104,16 +113,16 @@ export default function NewsDetailClient({
             <div className="mt-20 p-10 bg-gradient-to-br from-blue-900 to-[#020617] rounded-[3rem] text-white overflow-hidden relative group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10 space-y-6">
-                <h3 className="text-3xl font-black tracking-tighter">Cần tư vấn sâu hơn về giải pháp?</h3>
+                <h3 className="text-3xl font-black tracking-tighter">{d.cta.title}</h3>
                 <p className="text-blue-100/70 font-light max-w-xl">
-                  Đội ngũ kỹ thuật của FCT Vĩnh Thịnh luôn sẵn sàng hỗ trợ bạn lựa chọn và triển khai các giải pháp bảo mật tối ưu nhất cho doanh nghiệp.
+                  {d.cta.description}
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-500 transition-colors shadow-xl shadow-blue-500/20">
-                    Liên hệ ngay
+                  <Link href={`/${lang}/contact`} className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-500 transition-colors shadow-xl shadow-blue-500/20">
+                    {d.cta.contactNow}
                   </Link>
                   <a href="tel:0983027776" className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white/20 transition-colors">
-                    <MessageSquare className="w-5 h-5" /> Chat Tư vấn
+                    <MessageSquare className="w-5 h-5" /> {d.cta.chatConsult}
                   </a>
                 </div>
               </div>
@@ -123,12 +132,12 @@ export default function NewsDetailClient({
           {/* Sidebar - Related News */}
           <aside className="lg:col-span-4 space-y-12">
             <div className="space-y-6">
-              <h3 className="text-xs font-black uppercase tracking-[0.4em] text-blue-600">Bài viết liên quan</h3>
+              <h3 className="text-xs font-black uppercase tracking-[0.4em] text-blue-600">{d.relatedArticles}</h3>
               <div className="space-y-8">
                 {relatedNews.map((news) => (
                   <Link 
                     key={news.id} 
-                    href={`/news/${news.id}`}
+                    href={`/${lang}/news/${news.id}`}
                     className="group block space-y-3"
                   >
                     <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-500 transition-colors">
@@ -148,12 +157,12 @@ export default function NewsDetailClient({
               <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm">
                 <Tag className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">Giải pháp Protections hàng đầu thế giới</h3>
+              <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">{d.promo.title}</h3>
               <p className="text-sm text-gray-500 font-light leading-relaxed">
-                Khám phá hệ sinh thái sản phẩm từ Thales, Guardsquare và Canary Labs được FCT Vĩnh Thịnh phân phối chính hãng.
+                {d.promo.description}
               </p>
-              <Link href="/products" className="inline-flex items-center gap-2 font-bold text-blue-600 hover:gap-3 transition-all">
-                Xem danh mục sản phẩm <ArrowLeft className="w-4 h-4 rotate-180" />
+              <Link href={`/${lang}/products`} className="inline-flex items-center gap-2 font-bold text-blue-600 hover:gap-3 transition-all">
+                {d.promo.viewCatalog} <ArrowLeft className="w-4 h-4 rotate-180" />
               </Link>
             </div>
           </aside>
