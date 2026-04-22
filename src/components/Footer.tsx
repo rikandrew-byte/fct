@@ -13,10 +13,12 @@ interface FooterProps {
 export default function Footer({ lang, dict }: FooterProps) {
   const [visitorCount, setVisitorCount] = useState(2103);
   const [onlineCount, setOnlineCount] = useState(1);
+  const [mounted, setMounted] = useState(false);
 
   const d = dict.footer;
 
   useEffect(() => {
+    setMounted(true);
     // Logic bộ đếm lượt truy cập (Visitor Counter)
     const storedCount = localStorage.getItem("fct_visitor_count");
     const initialBase = 2103;
@@ -142,10 +144,10 @@ export default function Footer({ lang, dict }: FooterProps) {
               </div>
               <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-[9px] text-gray-400">
                 <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
-                  <span className="text-white">{onlineCount}</span> {d.visitorCounter.online}
+                  <span className="text-white">{mounted ? onlineCount : '--'}</span> {d.visitorCounter.online}
                 </span>
                 <span className="pl-3 flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
-                   {d.visitorCounter.total}: <span className="text-white">{visitorCount.toLocaleString()}</span>
+                   {d.visitorCounter.total}: <span className="text-white">{mounted ? visitorCount.toLocaleString(lang === 'vi' ? 'vi-VN' : 'en-US') : '--'}</span>
                 </span>
               </div>
             </div>
