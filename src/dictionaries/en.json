@@ -26,6 +26,7 @@
     "news": "News",
     "projects": "Featured Projects",
     "products": "Products",
+    "knowledge": "Expert Q&A",
     "contact": "Contact"
   },
   "hero": {
@@ -123,6 +124,45 @@
     "titlePart1": "Devices &",
     "titlePart2": "Solutions",
     "description": "A core technology ecosystem protecting digital assets, selected from world-leading security technology partners."
+  },
+  "knowledge": {
+    "hero": {
+      "badge": "Expert Q&A",
+      "title": "Security",
+      "subtitle": "Knowledge Center",
+      "description": "In-depth technical answers regarding software protection, mobile application security, and industrial data infrastructure."
+    },
+    "faqs": [
+      {
+        "question": "What is the difference between Thales Sentinel HL (Hardware) and SL (Software) keys?",
+        "answer": "Sentinel HL is a physical USB device with a military-grade security chip, offering the highest protection level by executing code directly in the hardware. Sentinel SL is a virtual license bound to the computer's hardware fingerprint, offering more flexibility for remote licensing and instant digital distribution."
+      },
+      {
+        "question": "What is RASP and why do Banking applications need it?",
+        "answer": "RASP (Runtime Application Self-Protection) is active security technology embedded directly into the app. It monitors execution to detect and block threats like Overlay (fake screens), Screen Recording, Debugging, or Hooking (e.g., Frida). For Fintech, RASP is the final line of defense, preventing attackers from hijacking the app even on infected devices."
+      },
+      {
+        "question": "How do I protect mobile app source code from Reverse Engineering?",
+        "answer": "Guardsquare's solutions (DexGuard/iXGuard) use multi-layered Obfuscation: renaming variables/functions, encrypting strings, and mangling control flow. Combined with asset/logic encryption, it makes the code unreadable to standard reverse engineering tools."
+      },
+      {
+        "question": "Why is Hardware-based 2FA more secure than SMS OTP?",
+        "answer": "SMS OTP can be stolen via SIM-swap or Man-in-the-middle attacks. Hardware Tokens (like Longmai mToken) use encryption algorithms directly on a physical security chip. An attacker cannot gain access unless they possess the physical key, eliminating remote hacking risks via the network."
+      },
+      {
+        "question": "How is IIoT data integrity maintained during network outages?",
+        "answer": "Canary Labs uses a 'Store-and-forward' mechanism. When the Edge-to-Server connection is lost, data is temporarily stored at local Collectors. Once re-established, the system automatically pushes all stored data to the historian, ensuring continuous and zero-loss data records."
+      },
+      {
+        "question": "What are the benefits of Thales' AppOnChip for software developers?",
+        "answer": "AppOnChip is an advanced hardware-based security solution. It allows developers to select critical logic code segments to be encrypted and executed directly inside the Sentinel HL security processor. This creates an absolute barrier, as the software logic cannot run without the physical presence and processing of the security chip."
+      }
+    ],
+    "cta": {
+      "title": "Still have questions?",
+      "description": "FCT's expert team is ready to help you solve the most complex security challenges.",
+      "button": "Ask an Expert"
+    }
   },
   "aboutPage": {
     "hero": {

@@ -26,6 +26,7 @@
     "news": "Tin tức",
     "projects": "Dự án tiêu biểu",
     "products": "Sản phẩm",
+    "knowledge": "Hỏi đáp chuyên gia",
     "contact": "Liên hệ"
   },
   "hero": {
@@ -129,6 +130,45 @@
     "titlePart1": "Thiết bị &",
     "titlePart2": "Giải pháp",
     "description": "Hệ sinh thái công nghệ lõi bảo vệ tài sản số, được tuyển chọn từ các đối tác công nghệ bảo mật hàng đầu thế giới."
+  },
+  "knowledge": {
+    "hero": {
+      "badge": "Hỏi đáp chuyên gia",
+      "title": "Trung tâm",
+      "subtitle": "Kiến thức Bảo mật",
+      "description": "Giải đáp các thắc mắc kỹ thuật chuyên sâu về bảo vệ bản quyền, an ninh ứng dụng di động và hạ tầng dữ liệu công nghiệp."
+    },
+    "faqs": [
+      {
+        "question": "Sự khác biệt giữa khóa cứng (HL) và khóa mềm (SL) của Thales Sentinel là gì?",
+        "answer": "Khóa cứng (Sentinel HL) là một thiết bị USB vật lý chứa chip bảo mật đạt chuẩn quân sự, cung cấp mức độ bảo vệ cao nhất bằng cách thực thi mã trực tiếp trong phần cứng. Khóa mềm (Sentinel SL) là một giấy phép ảo dựa trên dấu vân tay phần cứng của máy tính, linh hoạt hơn cho việc cấp phép từ xa và phân phối tức thì qua môi trường mạng."
+      },
+      {
+        "question": "Công nghệ RASP là gì và tại sao ứng dụng Ngân hàng cần lớp bảo vệ này?",
+        "answer": "RASP (Runtime Application Self-Protection) là công nghệ bảo mật chủ động được nhúng trực tiếp vào ứng dụng. Nó giám sát môi trường thực thi để phát hiện và ngăn chặn các mối đe dọa như Overlay (màn hình giả mạo), Screen Recording, Debugging hoặc Hooking (như Frida). Đối với Fintech, RASP là chốt chặn cuối cùng ngăn hacker chiếm quyền điều khiển ứng dụng dù thiết bị đã bị nhiễm mã độc."
+      },
+      {
+        "question": "Làm thế nào để bảo vệ mã nguồn ứng dụng di động khỏi bị dịch ngược (Reverse Engineering)?",
+        "answer": "Giải pháp của Guardsquare (DexGuard/iXGuard) sử dụng kỹ thuật Obfuscation (Làm rối mã nguồn đa lớp) bao gồm: làm rối tên biến/hàm, encrypt chuỗi ký tự, và xáo trộn luồng điều khiển. Kết hợp với việc mã hóa các file Resource và logic quan trọng, khiến mã nguồn trở nên không thể đọc được bởi các công cụ dịch ngược thông thường."
+      },
+      {
+        "question": "Tại sao xác thực 2 lớp (2FA) bằng Token phần cứng an toàn hơn SMS OTP?",
+        "answer": "SMS OTP có thể bị đánh cắp qua tấn công SIM-swap hoặc kỹ thuật tấn công trung gian (Man-in-the-middle). Token phần cứng (như Longmai mToken) sử dụng thuật toán mã hóa trực tiếp trong chip bảo mật vật lý. Kẻ tấn công không thể chiếm quyền truy cập trừ khi sở hữu thực thể khóa vật lý đó, loại bỏ hoàn toàn rủi ro bị hacker tấn công từ xa qua môi trường mạng."
+      },
+      {
+        "question": "Làm thế nào để đảm bảo tính toàn vẹn của dữ liệu sản xuất (IIoT) khi mạng gặp sự cố?",
+        "answer": "Hệ thống Canary Labs sử dụng cơ chế 'Store-and-forward'. Khi mất kết nối giữa Edge và Server, dữ liệu sẽ được lưu trữ tạm thời tại các Collector đặt tại trạm. Sau khi kết nối được phục hồi, hệ thống sẽ tự động đẩy toàn bộ dữ liệu đã lưu trữ về Server trung tâm, đảm bảo dữ liệu ghi nhận tại Historian luôn liên tục và không bị mất mát."
+      },
+      {
+        "question": "Công nghệ AppOnChip của Thales mang lại lợi ích gì cho nhà phát triển phần mềm?",
+        "answer": "AppOnChip là giải pháp bảo mật phần cứng tiên tiến nhất hiện nay. Nó cho phép nhà phát triển chọn lọc các đoạn mã logic quan trọng nhất của phần mềm để đóng gói và thực thi trực tiếp bên trong vi xử lý của khóa cứng Sentinel HL. Điều này tạo ra một bức tường bảo mật tuyệt đối, vì logic phần mềm sẽ không thể chạy nếu không có sự hiện diện và xử lý của chip bảo mật vật lý."
+      }
+    ],
+    "cta": {
+      "title": "Vẫn còn thắc mắc?",
+      "description": "Đội ngũ chuyên gia của FCT luôn sẵn sàng hỗ trợ bạn giải quyết các thách thức bảo mật phức tạp nhất.",
+      "button": "Gửi câu hỏi ngay"
+    }
   },
   "aboutPage": {
     "hero": {

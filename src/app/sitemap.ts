@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://fct.vn'
   const locales = ['vi', 'en']
-  const routes = ['', '/about', '/news', '/products', '/projects', '/contact', '/expert-ai']
+  const routes = ['', '/about', '/news', '/products', '/projects', '/contact', '/knowledge', '/expert-ai']
 
   const sitemapEntries: MetadataRoute.Sitemap = []
 
