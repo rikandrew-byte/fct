@@ -39,6 +39,16 @@ Your goal is to provide accurate, deep technical information about FCT's product
 
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+    
+    if (!apiKey) {
+      console.error("AI Configuration Error: GEMINI_API_KEY is missing.");
+      return NextResponse.json(
+        { error: "Cấu hình thiếu: Hệ thống chưa có mã API Key. Vui lòng thêm NEXT_PUBLIC_GEMINI_API_KEY vào biến môi trường." },
+        { status: 500 }
+      );
+    }
+
     const { messages } = await req.json();
     const lastMessage = messages[messages.length - 1].content;
 
@@ -59,11 +69,26 @@ export async function POST(req: Request) {
     const response = await result.response;
     const text = response.text();
 
+    if (!text) {
+      throw new Error("Empty response from Gemini 3.1");
+    }
+
     return NextResponse.json({ content: text });
   } catch (error: any) {
-    console.error("AI Chat Error:", error);
+    console.error("AI Chat Error Detail:", error);
+    
+    // Check for specific API Key or Model errors
+    const errorMessage = error.message?.toLowerCase();
+    let userFriendlyError = "Không thể kết nối tới Chuyên gia AI. Vui lòng kiểm tra lại mã API hoặc kết nối mạng.";
+    
+    if (errorMessage?.includes("api key")) {
+      userFriendlyError = "Mã API Key không hợp lệ hoặc đã hết hạn.";
+    } else if (errorMessage?.includes("model")) {
+      userFriendlyError = "Mô hình Gemini 3.1 hiện chưa khả dụng hoặc tên model không chính xác.";
+    }
+
     return NextResponse.json(
-      { error: "Failed to connect to AI Expert. Please check API Key configuration." },
+      { error: userFriendlyError, detail: error.message },
       { status: 500 }
     );
   }
