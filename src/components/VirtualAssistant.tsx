@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, Bot, User, ShieldCheck, Sparkles, Terminal, RefreshCcw, X, MessageSquareBase } from "lucide-react";
+import { Send, Bot, User, ShieldCheck, Sparkles, Terminal, RefreshCcw, X, MessageSquare } from "lucide-react";
 import NeuralNetworkBackground from "./NeuralNetworkBackground";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";

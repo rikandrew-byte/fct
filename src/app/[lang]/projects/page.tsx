@@ -38,7 +38,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
       "item": {
         "@type": "CreativeWork",
         "name": project.title,
-        "description": project.summary || (typeof project.challenge === 'string' ? project.challenge : project.challenge?.[0]) || ""
+        "description": project.challenge || ""
       }
     }))
   };
