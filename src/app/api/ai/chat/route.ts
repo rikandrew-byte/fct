@@ -55,9 +55,9 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
     const lastMessage = messages[messages.length - 1].content;
 
-    // Use Gemini 3.1 Flash as it's the latest generation
+    // Use Gemini 3 Flash as it's the stable 3.0 generation
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-3.1-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction: SYSTEM_PROMPT 
     });
 
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
     const text = response.text();
 
     if (!text) {
-      throw new Error("Empty response from Gemini 3.1");
+      throw new Error("Empty response from Gemini 3");
     }
 
     return NextResponse.json({ content: text });
@@ -87,7 +87,7 @@ export async function POST(req: Request) {
     if (errorMessage?.includes("api key")) {
       userFriendlyError = "Mã API Key không hợp lệ hoặc đã hết hạn.";
     } else if (errorMessage?.includes("model")) {
-      userFriendlyError = "Mô hình Gemini 3.1 hiện chưa khả dụng hoặc tên model không chính xác.";
+      userFriendlyError = "Mô hình Gemini 3 hiện chưa khả dụng hoặc tên model (gemini-3-flash-preview) không chính xác.";
     }
 
     return NextResponse.json(
