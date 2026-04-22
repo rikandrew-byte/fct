@@ -74,13 +74,12 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-1 p-1 bg-white/5 rounded-full border border-white/10">
+          <nav className="hidden lg:flex items-center space-x-0.5 p-1 bg-white/5 rounded-full border border-white/10">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
-                className={`px-5 py-2 rounded-full text-[13px] font-black tracking-tight transition-all duration-300 ${
+                className={`px-3.5 py-2 rounded-full text-[12px] font-black tracking-tight transition-all duration-300 ${
                   pathname === link.href 
                     ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
                     : "text-gray-300 hover:text-white hover:bg-white/10"
@@ -93,9 +92,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             {/* Language Switcher */}
             <button 
               onClick={toggleLanguage}
-              className="ml-2 flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-black tracking-widest uppercase transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
+              className="ml-1 flex items-center gap-1.5 px-3 py-2 rounded-full text-[11px] font-black tracking-widest uppercase transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
             >
-              <Globe className="w-4 h-4 text-blue-400" />
+              <Globe className="w-3.5 h-3.5 text-blue-400" />
               <span>{isEn ? "VN" : "EN"}</span>
             </button>
           </nav>
@@ -103,7 +102,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="relative overflow-hidden group bg-blue-600 text-white px-6 py-2.5 rounded-full text-xs font-black tracking-widest uppercase hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/40 hidden xs:block"
+              className="relative overflow-hidden group bg-blue-600 text-white px-4.5 py-2.5 rounded-full text-[11px] font-black tracking-widest uppercase hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/40 hidden xs:block"
             >
               <span className="relative z-10">{dict.common.getAdvice}</span>
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>

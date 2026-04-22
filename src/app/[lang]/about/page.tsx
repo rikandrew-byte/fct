@@ -11,6 +11,25 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: `${dict.navbar.about} | FCT Vĩnh Thịnh`,
     description: dict.aboutPage.hero.description,
+    openGraph: {
+      title: `${dict.navbar.about} | FCT Vĩnh Thịnh`,
+      description: dict.aboutPage.hero.description,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: dict.navbar.about,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${dict.navbar.about} | FCT Vĩnh Thịnh`,
+      description: dict.aboutPage.hero.description,
+      images: ["/og-image.png"],
+    },
   };
 }
 

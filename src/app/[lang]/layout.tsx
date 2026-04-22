@@ -19,26 +19,61 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export const metadata: Metadata = {
-  title: {
-    default: "FCT Vinh Thinh .,JSC | Chuyên gia Bảo mật & Giải pháp Công nghệ Lõi",
-    template: "%s | FCT Vinh Thinh .,JSC"
-  },
-  description: "FCT Vĩnh Thịnh — Đối tác phân phối chính thức giải pháp bảo mật từ Thales, Guardsquare, Canary Labs tại Việt Nam. Hơn 10 năm kinh nghiệm kiến tạo hạ tầng số an toàn.",
-  keywords: ["bảo mật phần mềm", "bản quyền phần mềm", "Sentinel LDK", "Guardsquare", "DexGuard", "iXGuard", "xác thực 2 lớp", "FCT Vĩnh Thịnh"],
-  openGraph: {
-    title: "FCT Vinh Thinh .,JSC | Chuyên gia Bảo mật & Giải pháp Công nghệ Lõi",
-    description: "Kiến tạo hạ tầng số an toàn với các giải pháp bảo mật và công nghệ hàng đầu thế giới.",
-    url: "https://fct.vn",
-    siteName: "FCT Vĩnh Thịnh",
-    locale: "vi_VN",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
+  const dict = await getDictionary(lang);
+  const baseUrl = "https://fct.vn";
+  
+  return {
+    title: {
+      default: dict.common.metaTitle,
+      template: `%s | FCT Vinh Thinh .,JSC`
+    },
+    description: dict.common.metaDescription,
+    keywords: ["bảo mật phần mềm", "bản quyền phần mềm", "Sentinel LDK", "Guardsquare", "DexGuard", "iXGuard", "xác thực 2 lớp", "FCT Vĩnh Thịnh", "Canary Labs", "IIoT security"],
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        "vi-VN": "/vi",
+        "en-US": "/en",
+      },
+    },
+    openGraph: {
+      title: dict.common.metaTitle,
+      description: dict.common.metaDescription,
+      url: `${baseUrl}/${lang}`,
+      siteName: "FCT Vĩnh Thịnh",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "FCT Vinh Thinh - Leading Security Solutions",
+        },
+      ],
+      locale: lang === "vi" ? "vi_VN" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.common.metaTitle,
+      description: dict.common.metaDescription,
+      images: ["/og-image.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

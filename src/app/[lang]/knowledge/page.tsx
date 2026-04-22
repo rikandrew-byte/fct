@@ -14,7 +14,21 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title: `${dict.navbar.knowledge} - Chuyên gia bảo vệ bản quyền & an ninh mạng`,
       description: dict.knowledge.hero.description,
       type: "website",
-    }
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: dict.navbar.knowledge,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${dict.navbar.knowledge} | FCT Vĩnh Thịnh`,
+      description: dict.knowledge.hero.description,
+      images: ["/og-image.png"],
+    },
   };
 }
 

@@ -18,7 +18,21 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title: dict.products.ogTitle,
       description: dict.products.ogDescription,
       type: "website",
-    }
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: dict.products.metaTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.products.metaTitle,
+      description: dict.products.metaDescription,
+      images: ["/og-image.png"],
+    },
   };
 }
 
