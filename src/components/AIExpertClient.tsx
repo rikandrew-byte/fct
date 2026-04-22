@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Bot, User, ShieldCheck, Sparkles, Terminal, RefreshCcw } from "lucide-react";
 import NeuralNetworkBackground from "./NeuralNetworkBackground";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Message {
   role: "user" | "ai";
@@ -14,6 +16,18 @@ interface AIExpertClientProps {
   lang: string;
   dict: any;
 }
+
+const MarkdownStyles = {
+  p: ({ children }: any) => <p className="mb-4 last:mb-0">{children}</p>,
+  h1: ({ children }: any) => <h1 className="text-xl font-black mt-6 mb-3 text-blue-400">{children}</h1>,
+  h2: ({ children }: any) => <h2 className="text-lg font-black mt-5 mb-2 text-blue-300">{children}</h2>,
+  h3: ({ children }: any) => <h3 className="text-md font-bold mt-4 mb-2 text-blue-200">{children}</h3>,
+  ul: ({ children }: any) => <ul className="list-disc pl-5 mb-4 space-y-2">{children}</ul>,
+  ol: ({ children }: any) => <ol className="list-decimal pl-5 mb-4 space-y-2">{children}</ol>,
+  li: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
+  code: ({ children }: any) => <code className="bg-blue-900/30 text-blue-200 px-1.5 py-0.5 rounded-md text-xs font-mono">{children}</code>,
+  strong: ({ children }: any) => <strong className="font-black text-white">{children}</strong>,
+};
 
 export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -139,7 +153,16 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
                     ? "bg-white/5 border border-white/10 text-gray-200"
                     : "bg-blue-900/20 border border-blue-800/30 text-blue-50"
                 }`}>
-                  {m.content}
+                  {m.role === "ai" ? (
+                    <ReactMarkdown 
+                      remarkPlugins={[remarkGfm]}
+                      components={MarkdownStyles}
+                    >
+                      {m.content}
+                    </ReactMarkdown>
+                  ) : (
+                    m.content
+                  )}
                 </div>
               </motion.div>
             ))}
