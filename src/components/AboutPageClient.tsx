@@ -72,7 +72,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               <div className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-300 tracking-[0.4em] uppercase shadow-2xl">
                 {d.hero.badge}
               </div>
-              <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9]">
+              <h1 className="text-6xl md:text-8xl font-black text-white tracking-tight leading-[1.1]">
                 {d.hero.title} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
                   {d.hero.subtitle}
