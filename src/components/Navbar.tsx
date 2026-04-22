@@ -102,10 +102,12 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="relative overflow-hidden group bg-blue-600 text-white px-4.5 py-2.5 rounded-full text-[11px] font-black tracking-widest uppercase hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/40 hidden xs:block"
+              className="relative overflow-hidden group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4.5 py-2.5 rounded-full text-[11px] font-black tracking-widest uppercase hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-all duration-500 hidden xs:block"
             >
               <span className="relative z-10">{dict.common.getAdvice}</span>
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.2s_infinite]"></div>
+              {/* Subtle Breathing Glow */}
+              <div className="absolute inset-0 bg-blue-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></div>
             </button>
             
             {/* Mobile Menu Toggle */}

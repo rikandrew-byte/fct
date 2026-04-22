@@ -195,10 +195,13 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
 
           <Link
             href={`/${lang}/contact`}
-            className="group inline-flex items-center gap-4 bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-sm tracking-widest uppercase hover:bg-blue-700 transition-all duration-500 shadow-2xl shadow-blue-500/40"
+            className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-6 rounded-2xl font-black text-sm tracking-[0.2em] uppercase hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] transition-all duration-500"
           >
-            {d.cta.button}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+            <span className="relative z-10 flex items-center gap-3">
+              {d.cta.button}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
+            </span>
           </Link>
         </div>
       </section>
