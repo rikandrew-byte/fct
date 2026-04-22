@@ -7,6 +7,8 @@ import { i18n } from "@/config/i18n-config";
 import { Locale } from "@/config/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 import React from "react";
+import { AssistantProvider } from "@/context/AssistantContext";
+import GlobalAssistantWrapper from "@/components/GlobalAssistantWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -54,9 +56,12 @@ export default async function RootLayout({
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <Navbar lang={lang} dict={dict} />
-        {children}
-        <Footer lang={lang} dict={dict} />
+        <AssistantProvider>
+          <Navbar lang={lang} dict={dict} />
+          {children}
+          <Footer lang={lang} dict={dict} />
+          <GlobalAssistantWrapper lang={lang} dict={dict} />
+        </AssistantProvider>
       </body>
     </html>
   );

@@ -8,6 +8,19 @@
     "getAdvice": "Nhận tư vấn",
     "getAdviceNow": "Nhận tư vấn ngay"
   },
+  "virtualAssistant": {
+    "title": "FCT Virtual Assistant",
+    "navbarTitle": "Tư vấn kỹ thuật",
+    "badge": "AI",
+    "welcome": "Xin chào! Tôi là Trợ lý ảo của FCT. Tôi có thể giúp bạn giải đáp các thắc mắc về Bảo vệ Bản quyền, Bảo mật Di động hoặc các giải pháp Dữ liệu Công nghiệp. Bạn cần hỗ trợ gì hôm nay?",
+    "placeholder": "Nhập câu hỏi chuyên môn của bạn...",
+    "clearChat": "Xóa hội thoại",
+    "disclaimer": "Phiên làm việc bảo mật — Dữ liệu không được lưu lại",
+    "systemError": "Lỗi hệ thống: Không thể kết nối tới Trợ lý ảo.",
+    "groundedNote": "Dữ liệu dựa trên hệ sinh thái FCT",
+    "initializingTitle": "Khởi tạo Phiên làm việc Bảo mật",
+    "initializingSub": "Tra cứu thông tin về Bảo vệ Bản quyền, Bảo mật Di động hoặc Dữ liệu Công nghiệp."
+  },
   "navbar": {
     "about": "Về chúng tôi",
     "news": "Tin tức",
@@ -22,7 +35,13 @@
     "description": "Hệ sinh thái sản phẩm từ các thương hiệu công nghệ hàng đầu thế giới, thiết kế để bảo vệ tài sản doanh nghiệp trong kỷ nguyên số."
   },
   "trust": {
-    "sectors": ["Ngân hàng", "Chính phủ", "Tài chính", "An ninh mạng", "Hạ tầng số"],
+    "sectors": [
+      "Ngân hàng",
+      "Chính phủ",
+      "Tài chính",
+      "An ninh mạng",
+      "Hạ tầng số"
+    ],
     "commitment": "\"Cam kết bảo vệ tuyệt đối danh tính và dự án của khách hàng theo chính sách bảo mật (NDA Strict Policy)\""
   },
   "about": {
@@ -121,10 +140,22 @@
       "ctaExperts": "Kết nối chuyên gia"
     },
     "stats": [
-      { "value": "10+", "label": "Năm kinh nghiệm" },
-      { "value": "200+", "label": "Khách hàng tin dùng" },
-      { "value": "18", "label": "Sản phẩm phân phối" },
-      { "value": "4", "label": "Đối tác toàn cầu" }
+      {
+        "value": "10+",
+        "label": "Năm kinh nghiệm"
+      },
+      {
+        "value": "200+",
+        "label": "Khách hàng tin dùng"
+      },
+      {
+        "value": "18",
+        "label": "Sản phẩm phân phối"
+      },
+      {
+        "value": "4",
+        "label": "Đối tác toàn cầu"
+      }
     ],
     "intro": {
       "badge": "Giới thiệu công ty",
@@ -174,11 +205,31 @@
       "badge": "Hành trình",
       "title": "Chặng đường phát triển",
       "milestones": [
-        { "year": "2010", "title": "Thành lập", "desc": "FCT Vinh Thinh JSC được thành lập tại Hà Nội, tập trung vào phân phối thiết bị bảo mật phần mềm." },
-        { "year": "2013", "title": "Đối tác Thales", "desc": "Trở thành đại lý chính thức của Thales (SafeNet) tại Việt Nam, phân phối dòng Sentinel LDK." },
-        { "year": "2017", "title": "Mở rộng danh mục", "desc": "Bổ sung Guardsquare và Canary Labs vào danh mục sản phẩm, phục vụ bảo mật ứng dụng di động và IIoT." },
-        { "year": "2022", "title": "200+ khách hàng", "desc": "Vượt mốc 200 khách hàng doanh nghiệp trên toàn quốc, bao gồm các tổ chức tài chính, ngân hàng." },
-        { "year": "2026", "title": "Chuyển đổi số", "desc": "Ra mắt website thế hệ mới, nâng cao trải nghiệm khách hàng và mở rộng kênh phân phối trực tuyến." }
+        {
+          "year": "2010",
+          "title": "Thành lập",
+          "desc": "FCT Vinh Thinh JSC được thành lập tại Hà Nội, tập trung vào phân phối thiết bị bảo mật phần mềm."
+        },
+        {
+          "year": "2013",
+          "title": "Đối tác Thales",
+          "desc": "Trở thành đại lý chính thức của Thales (SafeNet) tại Việt Nam, phân phối dòng Sentinel LDK."
+        },
+        {
+          "year": "2017",
+          "title": "Mở rộng danh mục",
+          "desc": "Bổ sung Guardsquare và Canary Labs vào danh mục sản phẩm, phục vụ bảo mật ứng dụng di động và IIoT."
+        },
+        {
+          "year": "2022",
+          "title": "200+ khách hàng",
+          "desc": "Vượt mốc 200 khách hàng doanh nghiệp trên toàn quốc, bao gồm các tổ chức tài chính, ngân hàng."
+        },
+        {
+          "year": "2026",
+          "title": "Chuyển đổi số",
+          "desc": "Ra mắt website thế hệ mới, nâng cao trải nghiệm khách hàng và mở rộng kênh phân phối trực tuyến."
+        }
       ]
     },
     "partners": {
@@ -220,10 +271,26 @@
     "titlePart2": "Thành tựu",
     "description": "Khám phá cách FCT Vĩnh Thịnh đồng hành cùng các tập đoàn hàng đầu giải quyết những thách thức bảo mật cốt lõi và tối ưu hóa hạ tầng số.",
     "stats": [
-      { "label": "Năm kinh nghiệm", "value": "10+", "sub": "Phát triển từ 2014" },
-      { "label": "Thiết bị bảo vệ", "value": "1.5M+", "sub": "Protected Endpoints" },
-      { "label": "Khách hàng DN", "value": "500+", "sub": "Enterprise Clients" },
-      { "label": "Tỷ lệ thành công", "value": "100%", "sub": "Zero-Breach Record" }
+      {
+        "label": "Năm kinh nghiệm",
+        "value": "10+",
+        "sub": "Phát triển từ 2014"
+      },
+      {
+        "label": "Thiết bị bảo vệ",
+        "value": "1.5M+",
+        "sub": "Protected Endpoints"
+      },
+      {
+        "label": "Khách hàng DN",
+        "value": "500+",
+        "sub": "Enterprise Clients"
+      },
+      {
+        "label": "Tỷ lệ thành công",
+        "value": "100%",
+        "sub": "Zero-Breach Record"
+      }
     ],
     "list": {
       "field": "Lĩnh vực",

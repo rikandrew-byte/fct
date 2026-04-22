@@ -18,7 +18,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
       {/* Hero Section */}
-      <section className="relative pt-48 pb-20 px-6 min-h-[95vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
+      <section className="relative pt-32 md:pt-48 pb-20 px-6 min-h-[95vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
@@ -41,7 +41,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.2] md:leading-[1] text-white"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.2] md:leading-[1] text-white"
           >
             {dict.hero.title} <br />
             <span className="relative inline-block pb-4">
@@ -107,20 +107,21 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 auto-rows-[340px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 auto-rows-min md:auto-rows-[340px]">
 
           {/* Card 1: Guardsquare */}
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 glass-panel rounded-[3rem] p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50"
+            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50"
           >
             <Image
               src="/images/guardsquare-bg.png"
               alt="Guardsquare Security"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover opacity-[0.03] group-hover:opacity-[0.1] transition-all duration-700 pointer-events-none"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent z-0"></div>
@@ -133,21 +134,22 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
               {dict.solutions.mobileSecurity.description}
             </p>
-          </motion.div>
+          </motion.article>
 
           {/* Card 2: Thales */}
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 glass-panel rounded-[3rem] p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(99,102,241,0.15)] hover:border-indigo-400/50"
+            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(99,102,241,0.15)] hover:border-indigo-400/50"
           >
             <Image
               src="/sentinelLDK1.png"
               alt="Bảo mật Thales"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-top opacity-[0.1] group-hover:opacity-[0.3] transition-all duration-700 pointer-events-none"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-transparent z-0"></div>
@@ -159,16 +161,16 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
               {dict.solutions.licenseManagement.description}
             </p>
-          </motion.div>
+          </motion.article>
 
           {/* Card 3: Longmai */}
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 glass-panel rounded-[3rem] p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(244,63,94,0.15)] hover:border-rose-400/50"
+            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(244,63,94,0.15)] hover:border-rose-400/50"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-rose-500/5 via-transparent to-transparent z-0"></div>
             <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-rose-50 flex items-center justify-center mb-8 group-hover:bg-rose-600 transition-colors border border-rose-100">
@@ -178,7 +180,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
               {dict.solutions.hardwareSecurity.description}
             </p>
-          </motion.div>
+          </motion.article>
 
           {/* Card 4: FCT Ecosystem Link */}
           <motion.div
@@ -191,7 +193,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
           >
             <Link
               href={`/${lang}/products`}
-              className="w-full h-full bg-gradient-to-br from-blue-700 via-blue-900 to-[#020617] text-white shadow-2xl shadow-blue-500/30 rounded-[3rem] p-12 flex flex-col justify-center items-center text-center transition-all duration-500 relative overflow-hidden border border-white/5"
+              className="w-full h-full bg-gradient-to-br from-blue-700 via-blue-900 to-[#020617] text-white shadow-2xl shadow-blue-500/30 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center items-center text-center transition-all duration-500 relative overflow-hidden border border-white/5"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(59,130,246,0.3),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="relative z-10 w-24 h-24 rounded-[2.5rem] bg-white/10 backdrop-blur-md flex items-center justify-center mb-8 group-hover:scale-110 transition-transform border border-white/20">

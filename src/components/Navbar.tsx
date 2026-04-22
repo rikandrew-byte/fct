@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Sparkles } from "lucide-react";
 import ContactModal from "./ContactModal";
+import { useAssistant } from "@/context/AssistantContext";
 
 interface NavbarProps {
   lang: string;
@@ -18,6 +19,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const { open: openAssistant } = useAssistant();
 
   const isEn = lang === "en";
 
@@ -86,7 +88,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                 {link.label}
               </Link>
             ))}
-            
+
             {/* Language Switcher */}
             <button 
               onClick={toggleLanguage}

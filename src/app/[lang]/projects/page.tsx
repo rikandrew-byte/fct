@@ -26,5 +26,30 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
   const dict = await getDictionary(lang);
   const projectsData = lang === "en" ? projectsEn : projectsVi;
 
-  return <ProjectsPageClient lang={lang} dict={dict} projectsData={projectsData} />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": dict.projects.metaTitle,
+    "description": dict.projects.description,
+    "numberOfItems": projectsData.length,
+    "itemListElement": projectsData.map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": project.title,
+        "description": project.summary || (typeof project.challenge === 'string' ? project.challenge : project.challenge?.[0]) || ""
+      }
+    }))
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ProjectsPageClient lang={lang} dict={dict} projectsData={projectsData} />
+    </>
+  );
 }

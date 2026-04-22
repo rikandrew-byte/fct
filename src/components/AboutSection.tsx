@@ -31,13 +31,13 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
   const content = dict.about;
 
   return (
-    <section className="py-32 bg-slate-50/50 relative overflow-hidden">
+    <section className="py-16 md:py-32 bg-slate-50/50 relative overflow-hidden">
       {/* Decorative background glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] -z-10"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px] -z-10"></div>
 
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center text-center lg:text-left">
           {/* Trái: Nội dung */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -55,7 +55,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
                 </span>
               </h3>
             </div>
-            <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl">
+            <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
               {content.description}
             </p>
             <div className="pt-4">
@@ -69,7 +69,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
           </motion.div>
 
           {/* Phải: Grid tính năng */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 relative">
             {features.map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -78,7 +78,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="glass-panel p-8 rounded-[2rem] border-white/40 hover:bg-white transition-all duration-500 group"
+                className="glass-panel p-6 md:p-8 rounded-[2rem] border-white/40 hover:bg-white transition-all duration-500 group text-left"
               >
                 <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-gray-100 group-hover:bg-blue-600 transition-colors duration-500">
                   <div className="group-hover:text-white transition-colors duration-500">

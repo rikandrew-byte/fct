@@ -8,6 +8,19 @@
     "getAdvice": "Get Advice",
     "getAdviceNow": "Get Advice Now"
   },
+  "virtualAssistant": {
+    "title": "FCT Virtual Assistant",
+    "navbarTitle": "Technical Advisor",
+    "badge": "AI",
+    "welcome": "Hello! I am FCT's Virtual Assistant. I can help you with queries regarding Software Protection, Mobile Security, or Industrial Data solutions. How can I assist you today?",
+    "placeholder": "Type your technical query...",
+    "clearChat": "Clear Chat",
+    "disclaimer": "Secure AI Session — No data is saved",
+    "systemError": "System Error: Unable to reach Virtual Assistant.",
+    "groundedNote": "Grounded in FCT Knowledge Base",
+    "initializingTitle": "Secure Terminal Initialized",
+    "initializingSub": "Ask me anything about Software Protection, Mobile Security, or Industrial Data."
+  },
   "navbar": {
     "about": "About Us",
     "news": "News",

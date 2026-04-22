@@ -36,9 +36,9 @@ export default function Footer({ lang, dict }: FooterProps) {
   }, []);
 
   return (
-    <footer className="bg-gray-950 pt-24 pb-12 border-t border-gray-900 text-gray-500">
+    <footer className="bg-gray-950 pt-16 md:pt-24 pb-12 border-t border-gray-900 text-gray-500">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-20">
           {/* Cột 1: Brand */}
           <div className="space-y-8 md:col-span-1">
             <Link href={`/${lang}`} className="flex items-center gap-3">

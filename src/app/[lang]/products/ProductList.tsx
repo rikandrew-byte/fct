@@ -213,7 +213,7 @@ export default function ProductList({ lang }: ProductListProps) {
             const hasImgError = imgErrors.has(prod.id);
 
             return (
-              <div
+              <article
                 key={prod.id}
                 className={`bg-white rounded-[2rem] border flex flex-col transition-all duration-200 overflow-hidden group ${
                   cfg ? `${cfg.hoverBorder} ${cfg.hoverShadow}` : "hover:border-blue-200 hover:shadow-blue-500/5"
@@ -307,7 +307,7 @@ export default function ProductList({ lang }: ProductListProps) {
                     </button>
                   </div>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>

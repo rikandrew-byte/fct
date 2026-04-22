@@ -18,5 +18,24 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
 
-  return <AboutPageClient lang={lang} dict={dict} />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": `${dict.navbar.about} | FCT Vinh Thinh JSC`,
+    "description": dict.aboutPage.hero.description,
+    "publisher": {
+      "@type": "Organization",
+      "name": "FCT Vinh Thinh JSC"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AboutPageClient lang={lang} dict={dict} />
+    </>
+  );
 }

@@ -114,7 +114,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                 {/* Background Glow */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/0 via-blue-600/5 to-blue-600/0 rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
                 
-                <div className="bg-[#020617]/40 backdrop-blur-3xl border border-white/5 rounded-[2.5rem] p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start hover:border-blue-500/30 transition-all duration-500 shadow-2xl relative overflow-hidden">
+                <article className="bg-[#020617]/40 backdrop-blur-3xl border border-white/5 rounded-[2.5rem] p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start hover:border-blue-500/30 transition-all duration-500 shadow-2xl relative overflow-hidden">
                   {/* Subtle inner glow */}
                   <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-500/10 transition-colors"></div>
                   
@@ -183,8 +183,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                       </p>
                     </div>
                   </div>
-
-                </div>
+                </article>
               </motion.div>
             );
           })}
