@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { getDictionary } from "@/lib/get-dictionary";
 import AboutPageClient from "@/components/AboutPageClient";
-import { PageProps } from "next";
+import { Locale } from "@/config/i18n-config";
 
-export async function generateMetadata({ params }: PageProps < "/[lang]/about" >): Promise<Metadata> {
-  const { lang } = await params;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   
   return {
@@ -13,8 +14,8 @@ export async function generateMetadata({ params }: PageProps < "/[lang]/about" >
   };
 }
 
-export default async function AboutPage({ params }: PageProps < "/[lang]/about" >) {
-  const { lang } = await params;
+export default async function AboutPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
 
   return <AboutPageClient lang={lang} dict={dict} />;

@@ -4,8 +4,9 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { i18n } from "@/config/i18n-config";
-import type { LayoutProps } from "next";
+import { Locale } from "@/config/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
+import React from "react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -40,10 +41,11 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<LayoutProps & {
+}: {
   children: React.ReactNode;
-}>) {
-  const { lang } = await params;
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
 
   return (

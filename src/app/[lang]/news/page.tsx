@@ -3,11 +3,11 @@ import newsVi from "@/data/news_vi.json";
 import newsEn from "@/data/news_en.json";
 import NewsList from "./NewsList";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import { Locale } from "@/config/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
-import { PageProps } from "next";
 
-export async function generateMetadata({ params }: PageProps < "/[lang]/news" >): Promise<Metadata> {
-  const { lang } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   
   return {
@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: PageProps < "/[lang]/news" >)
   };
 }
 
-export default async function NewsPage({ params }: PageProps < "/[lang]/news" >) {
-  const { lang } = await params;
+export default async function NewsPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   const newsData = lang === "en" ? newsEn : newsVi;
 

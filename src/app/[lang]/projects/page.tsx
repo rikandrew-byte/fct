@@ -3,10 +3,11 @@ import { getDictionary } from "@/lib/get-dictionary";
 import ProjectsPageClient from "@/components/ProjectsPageClient";
 import projectsVi from "@/data/projects_vi.json";
 import projectsEn from "@/data/projects_en.json";
-import { PageProps } from "next";
+import { Locale } from "@/config/i18n-config";
 
-export async function generateMetadata({ params }: PageProps < "/[lang]/projects" >): Promise<Metadata> {
-  const { lang } = await params;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   
   return {
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: PageProps < "/[lang]/projects
   };
 }
 
-export default async function ProjectsPage({ params }: PageProps < "/[lang]/projects" >) {
-  const { lang } = await params;
+export default async function ProjectsPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   const projectsData = lang === "en" ? projectsEn : projectsVi;
 

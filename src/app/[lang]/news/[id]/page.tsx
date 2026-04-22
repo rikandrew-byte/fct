@@ -4,8 +4,8 @@ import newsEn from "@/data/news_en.json";
 import NewsDetailClient from "./NewsDetailClient";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/get-dictionary";
-import { PageProps } from "next";
-import { i18n } from "@/config/i18n-config";
+
+import { i18n, Locale } from "@/config/i18n-config";
 
 interface Article {
   id: string;
@@ -32,8 +32,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ 
   params 
-}: PageProps<"/news/[id]">): Promise<Metadata> {
-  const { id, lang } = await params;
+}: { params: Promise<{ id: string, lang: string }> }): Promise<Metadata> {
+  const { id, lang: langRaw } = await params;
+  const lang = langRaw as Locale;
   const newsData = lang === "en" ? newsEn : newsVi;
   const article = newsData.find((a) => a.id === id);
 
@@ -58,8 +59,9 @@ export async function generateMetadata({
 
 export default async function NewsDetailPage({ 
   params 
-}: PageProps<"/news/[id]">) {
-  const { id, lang } = await params;
+}: { params: Promise<{ id: string, lang: string }> }) {
+  const { id, lang: langRaw } = await params;
+  const lang = langRaw as Locale;
   const dict = await getDictionary(lang);
   const newsData = (lang === "en" ? newsEn : newsVi) as Article[];
   const article = newsData.find((a) => a.id === id);

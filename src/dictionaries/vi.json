@@ -70,21 +70,35 @@
   },
   "footer": {
     "brandDescription": "Tiên phong trong việc cung cấp các giải pháp hạ tầng số hiện đại. Chúng tôi đồng hành cùng doanh nghiệp Việt vươn tầm thế giới thông qua sức mạnh công nghệ đột phá.",
-    "newsTitle": "Tin tức và bài viết",
-    "companyTitle": "Công Ty",
-    "contactTitle": "Liên Hệ",
-    "hq": "Trụ sở chính",
-    "hqAddress": "Tầng 03 tòa nhà Ngôi Sao, ô 15 lô B đường Nguyễn Cảnh Dị, Phường Đại Kim, Quận Hoàng Mai, Hà Nội",
-    "hotline": "Hotline",
-    "emailSupport": "Email hỗ trợ",
-    "links": {
-      "licenseProtection": "Bảo vệ bản quyền phần mềm",
+    "columns": {
+      "news": "Tin tức và bài viết",
+      "company": "Công Ty",
+      "contact": "Liên Hệ"
+    },
+    "newsArticles": {
+      "softProtection": "Bảo vệ bản quyền phần mềm",
       "mobileSecurity": "Bảo mật ứng dụng di động",
-      "hardwareAuth": "Xác thực & Bảo mật phần cứng",
-      "industrialData": "Giải pháp dữ liệu công nghiệp IIoT",
+      "authSecurity": "Xác thực & Bảo mật phần cứng",
+      "iiotSolutions": "Giải pháp dữ liệu IIoT"
+    },
+    "companyLines": {
       "recruitment": "Tuyển dụng",
-      "techNews": "Tin tức công nghệ",
-      "productCatalog": "Danh mục sản phẩm"
+      "techNews": "Tin tức công nghệ"
+    },
+    "contactLines": {
+      "headquarters": "Trụ sở chính",
+      "hotline": "Hotline",
+      "supportEmail": "Email hỗ trợ"
+    },
+    "hqAddress": "Tầng 03 tòa nhà Ngôi Sao, ô 15 lô B đường Nguyễn Cảnh Dị, Phường Đại Kim, Quận Hoàng Mai, Hà Nội",
+    "copyright": "© 2026 FCT Vinh Thinh .,JSC. Đã đăng ký bản quyền.",
+    "visitorCounter": {
+      "online": "trực tuyến",
+      "total": "Tổng"
+    },
+    "legal": {
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản sử dụng"
     }
   },
   "products": {

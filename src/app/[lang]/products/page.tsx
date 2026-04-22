@@ -3,11 +3,12 @@ import ProductList from "./ProductList";
 import productsVi from "@/data/products_vi.json";
 import productsEn from "@/data/products_en.json";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import { Locale } from "@/config/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
-import { PageProps } from "next";
 
-export async function generateMetadata({ params }: PageProps < "/[lang]/products" >): Promise<Metadata> {
-  const { lang } = await params;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   
   return {
@@ -21,8 +22,8 @@ export async function generateMetadata({ params }: PageProps < "/[lang]/products
   };
 }
 
-export default async function ProductsPage({ params }: PageProps < "/[lang]/products" >) {
-  const { lang } = await params;
+export default async function ProductsPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   const productsData = lang === "en" ? productsEn : productsVi;
 

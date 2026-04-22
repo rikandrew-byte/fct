@@ -6,10 +6,11 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { getDictionary } from "@/lib/get-dictionary";
-import { PageProps } from "next";
+import { Locale } from "@/config/i18n-config";
 
-export async function generateMetadata({ params }: PageProps < "/[lang]/contact" >): Promise<Metadata> {
-  const { lang } = await params;
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   
   return {
@@ -18,8 +19,8 @@ export async function generateMetadata({ params }: PageProps < "/[lang]/contact"
   };
 }
 
-export default async function ContactPage({ params }: PageProps < "/[lang]/contact" >) {
-  const { lang } = await params;
+export default async function ContactPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   const d = dict.contact;
 

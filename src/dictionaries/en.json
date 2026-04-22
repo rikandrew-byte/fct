@@ -70,21 +70,35 @@
   },
   "footer": {
     "brandDescription": "Pioneering modern digital infrastructure solutions. We empower Vietnamese businesses to reach global heights through breakthrough technology.",
-    "newsTitle": "News & Articles",
-    "companyTitle": "Company",
-    "contactTitle": "Contact",
-    "hq": "Headquarters",
-    "hqAddress": "3rd Floor, Ngôi Sao Building, Unit 15, Block B, Nguyen Canh Di St, Dai Kim Ward, Hoang Mai Dist, Hanoi",
-    "hotline": "Hotline",
-    "emailSupport": "Support Email",
-    "links": {
-      "licenseProtection": "Software License Protection",
+    "columns": {
+      "news": "News & Articles",
+      "company": "Company",
+      "contact": "Contact"
+    },
+    "newsArticles": {
+      "softProtection": "Software License Protection",
       "mobileSecurity": "Mobile App Security",
-      "hardwareAuth": "Authentication & Hardware Security",
-      "industrialData": "IIoT Industrial Data Solutions",
+      "authSecurity": "Authentication & Hardware Security",
+      "iiotSolutions": "Industrial Data IIoT"
+    },
+    "companyLines": {
       "recruitment": "Recruitment",
-      "techNews": "Tech News",
-      "productCatalog": "Product Catalog"
+      "techNews": "Technology News"
+    },
+    "contactLines": {
+      "headquarters": "Headquarters",
+      "hotline": "Hotline",
+      "supportEmail": "Support Email"
+    },
+    "hqAddress": "3rd Floor, Ngôi Sao Building, Unit 15, Block B, Nguyen Canh Di St, Dai Kim Ward, Hoang Mai Dist, Hanoi",
+    "copyright": "© 2026 FCT Vinh Thinh .,JSC. All rights reserved.",
+    "visitorCounter": {
+      "online": "online",
+      "total": "Total"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
     }
   },
   "products": {
