@@ -93,7 +93,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               <Link 
                 key={link.href}
                 href={link.href} 
-                className={`px-4 py-2 rounded-full text-[12px] font-black tracking-tight transition-all duration-300 ${
+                className={`px-5 py-2.5 rounded-full text-[13px] font-black tracking-tight transition-all duration-300 ${
                   pathname === link.href 
                     ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
                     : "text-gray-300 hover:text-white hover:bg-white/10"
