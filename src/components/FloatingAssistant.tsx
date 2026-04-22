@@ -1,9 +1,11 @@
 "use client";
 
-import { MessageSquare, Sparkles } from "lucide-react";
+import { MessageSquare, Sparkles, BookOpen } from "lucide-react";
 import { useAssistant } from "@/context/AssistantContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface FloatingAssistantProps {
   dict: any;
@@ -12,6 +14,8 @@ interface FloatingAssistantProps {
 export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
   const { toggle, isOpen } = useAssistant();
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1] || "vi";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,13 +33,33 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
     <AnimatePresence>
       {isVisible && !isOpen && (
         <div className="fixed bottom-8 right-8 z-[90] flex flex-col items-center gap-4">
-          {/* Label positioned above the button */}
+          {/* Knowledge Hub Link Button */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ delay: 0.1 }}
+          >
+            <Link
+              href={`/${lang}/knowledge`}
+              className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#020617]/80 backdrop-blur-3xl border border-blue-500/30 text-white shadow-2xl hover:border-blue-400 group transition-all duration-300"
+            >
+              <div className="w-8 h-8 rounded-xl bg-blue-600/20 flex items-center justify-center group-hover:bg-blue-600/40 transition-colors">
+                <BookOpen className="w-4 h-4 text-blue-400 group-hover:text-white transition-colors" />
+              </div>
+              <span className="text-[11px] font-black uppercase tracking-widest text-blue-100 whitespace-nowrap">
+                {dict.navbar.knowledge}
+              </span>
+            </Link>
+          </motion.div>
+
+          {/* Label positioned above the assistant button */}
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.9 }}
             transition={{ delay: 0.2 }}
-            className="px-4 py-2 rounded-2xl bg-[#020617]/60 backdrop-blur-3xl border border-blue-500/30 text-white shadow-2xl shadow-blue-500/10 pointer-events-none select-none"
+            className="px-4 py-2 rounded-2xl bg-[#020617]/60 backdrop-blur-3xl border border-blue-500/30 text-white shadow-2xl shadow-blue-500/10 pointer-events-none select-none relative"
           >
              <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></div>

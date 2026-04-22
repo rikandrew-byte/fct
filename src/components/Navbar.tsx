@@ -25,7 +25,6 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
   const navLinks = [
     { href: `/${lang}/about`, label: dict.navbar.about },
-    { href: `/${lang}/knowledge`, label: dict.navbar.knowledge },
     { href: `/${lang}/news`, label: dict.navbar.news },
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
@@ -48,11 +47,26 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
   return (
     <>
+      {/* Floating Language Switcher - Top Right */}
+      <div className="fixed top-8 right-6 z-[60] flex items-center gap-3">
+        <button 
+          onClick={toggleLanguage}
+          className="group relative flex items-center gap-3 bg-[#020617]/40 backdrop-blur-3xl border border-white/10 hover:border-blue-500/50 rounded-2xl px-5 py-3 transition-all duration-500 shadow-2xl pointer-events-auto overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <Globe className="w-5 h-5 text-blue-400 group-hover:rotate-180 transition-transform duration-700" />
+          <span className="text-sm font-black text-white tracking-widest uppercase">
+            {isEn ? "Tiếng Việt" : "English"}
+          </span>
+          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse ml-1"></div>
+        </button>
+      </div>
+
       <header className="fixed top-8 left-0 right-0 z-40 px-6 flex justify-center pointer-events-none">
         <div className={`
           pointer-events-auto
           backdrop-blur-3xl border rounded-full px-6 py-2.5 
-          flex items-center justify-between w-full max-w-5xl shadow-2xl transition-all duration-500 
+          flex items-center justify-between w-full max-w-4xl shadow-2xl transition-all duration-500 
           ${isScrolled 
             ? "bg-[#020617]/95 border-blue-500/40 shadow-blue-500/20 py-2 scale-[0.98]" 
             : "bg-[#020617]/60 border-white/10 shadow-black/20"
@@ -74,12 +88,12 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-0.5 p-1 bg-white/5 rounded-full border border-white/10">
+          <nav className="hidden lg:flex items-center space-x-1 p-1 bg-white/5 rounded-full border border-white/10">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
-                className={`px-3.5 py-2 rounded-full text-[12px] font-black tracking-tight transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-[12px] font-black tracking-tight transition-all duration-300 ${
                   pathname === link.href 
                     ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
                     : "text-gray-300 hover:text-white hover:bg-white/10"
@@ -88,15 +102,6 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                 {link.label}
               </Link>
             ))}
-
-            {/* Language Switcher */}
-            <button 
-              onClick={toggleLanguage}
-              className="ml-1 flex items-center gap-1.5 px-3 py-2 rounded-full text-[11px] font-black tracking-widest uppercase transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/10 border border-white/5"
-            >
-              <Globe className="w-3.5 h-3.5 text-blue-400" />
-              <span>{isEn ? "VN" : "EN"}</span>
-            </button>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -113,7 +118,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             {/* Mobile Menu Toggle */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-white hover:text-blue-400 transition-colors"
+              className="lg:hidden p-2 text-white hover:text-blue-400 transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -122,7 +127,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="absolute top-20 left-6 right-6 md:hidden bg-[#020617]/95 backdrop-blur-2xl border border-white/10 shadow-2xl rounded-[2.5rem] p-8 z-50 animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="absolute top-20 left-6 right-6 lg:hidden bg-[#020617]/95 backdrop-blur-2xl border border-white/10 shadow-2xl rounded-[2.5rem] p-8 z-50 animate-in fade-in slide-in-from-top-4 duration-300">
             <nav className="flex flex-col gap-5">
               {navLinks.map((link) => (
                 <Link 
@@ -138,13 +143,13 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                 </Link>
               ))}
               
-              <button 
-                onClick={toggleLanguage}
-                className="flex items-center justify-between py-4 text-xl font-black text-gray-300 border-b border-white/5"
+              <Link 
+                href={`/${lang}/knowledge`}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-xl font-black py-3 border-b border-white/5 text-blue-400"
               >
-                <span>{isEn ? "Chuyển sang Tiếng Việt" : "Switch to English"}</span>
-                <Globe className="w-6 h-6 text-blue-400" />
-              </button>
+                {dict.navbar.knowledge}
+              </Link>
 
               <button 
                 onClick={() => {
