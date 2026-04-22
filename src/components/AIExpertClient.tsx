@@ -47,13 +47,15 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
       });
 
       const data = await response.json();
-      if (data.error) throw new Error(data.error);
+      if (data.error) {
+        throw new Error(data.error);
+      }
 
       setMessages((prev) => [...prev, { role: "ai", content: data.content }]);
-    } catch (error) {
+    } catch (error: any) {
       setMessages((prev) => [
         ...prev, 
-        { role: "ai", content: lang === "en" ? "System Error: Unable to reach AI Expert. Please check if the GEMINI API KEY is valid." : "Lỗi hệ thống: Không thể kết nối tới Chuyên gia AI. Vui lòng kiểm tra lại mã API." }
+        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "Lỗi hệ thống: Không thể kết nối tới Chuyên gia AI.") }
       ]);
     } finally {
       setIsLoading(false);

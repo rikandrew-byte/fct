@@ -44,10 +44,13 @@ export async function POST(req: Request) {
     if (!apiKey) {
       console.error("AI Configuration Error: GEMINI_API_KEY is missing.");
       return NextResponse.json(
-        { error: "Cấu hình thiếu: Hệ thống chưa có mã API Key. Vui lòng thêm NEXT_PUBLIC_GEMINI_API_KEY vào biến môi trường." },
+        { error: "Cấu hình thiếu: Hệ thống chưa có mã API Key. Vui lòng thêm NEXT_PUBLIC_GEMINI_API_KEY vào biến môi trường Vercel (hoặc .env.local)." },
         { status: 500 }
       );
     }
+
+    // Initialize inside the handler to ensure fresh environment variables
+    const genAI = new GoogleGenerativeAI(apiKey);
 
     const { messages } = await req.json();
     const lastMessage = messages[messages.length - 1].content;
