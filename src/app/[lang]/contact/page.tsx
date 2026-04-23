@@ -31,7 +31,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   return (
     <main className="min-h-screen bg-[#020617] text-slate-200 selection:bg-blue-600">
       {/* ── 1. Hero / Header ─────────────────────────────────────────── */}
-      <section className="relative pt-11 pb-8 px-6 overflow-hidden">
+      <section className="relative pt-8 pb-4 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         
         {/* Glow Effects */}

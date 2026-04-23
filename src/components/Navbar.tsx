@@ -24,6 +24,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
   const isEn = lang === "en";
 
+  const navLinks = [
     { href: `/${lang}/about`, label: dict.navbar.about },
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
@@ -88,14 +89,14 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-x-6 p-1 bg-white/5 rounded-full border border-white/10">
+          <nav className="hidden lg:flex items-center gap-x-4 p-1 bg-white/5 rounded-full border border-white/10 flex-nowrap">
             {navLinks.map((link) => {
               const isProducts = link.href.includes("/products");
               return (
-                <div key={link.href} className="relative group">
+                <div key={link.href} className="relative group flex-shrink-0">
                   <Link 
                     href={link.href} 
-                    className={`px-4 py-2 rounded-full text-[15px] font-medium tracking-tight transition-all duration-300 flex items-center justify-center ${
+                    className={`px-4 py-2 rounded-full text-[14px] font-medium tracking-tight transition-all duration-300 flex items-center justify-center whitespace-nowrap ${
                       pathname === link.href 
                         ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
                         : "text-gray-300 hover:text-blue-400 hover:bg-white/5"
@@ -134,7 +135,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                  <input 
                    type="text" 
                    placeholder={isEn ? "Search..." : "Tìm kiếm..."}
-                   className="absolute right-0 top-1/2 -translate-y-1/2 w-0 group-hover/search:w-36 lg:group-focus-within/search:w-36 transition-all duration-500 bg-[#020617] border border-white/10 rounded-full px-0 group-hover/search:px-4 py-1.5 text-xs text-slate-200 outline-none opacity-0 group-hover/search:opacity-100"
+                   className="absolute right-0 top-1/2 -translate-y-1/2 w-0 group-hover/search:w-32 lg:group-focus-within/search:w-32 transition-all duration-500 bg-[#020617] border border-white/10 rounded-full px-0 group-hover/search:px-4 py-1.5 text-xs text-slate-200 outline-none opacity-0 group-hover/search:opacity-100"
                  />
               </div>
             </div>
@@ -149,7 +150,6 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </button>
             
           </div>
-        </div>
       </header>
 
       <MobileNav lang={lang} dict={dict} onOpenConsult={() => setIsModalOpen(true)} />

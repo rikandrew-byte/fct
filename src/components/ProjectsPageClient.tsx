@@ -46,7 +46,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
   return (
     <main className="min-h-screen bg-[#020617] text-slate-200 selection:bg-blue-600 selection:text-white">
       {/* ── Hero Section ───────────────────────────────────────────── */}
-      <section className="relative pt-22 pb-12 px-6 overflow-hidden">
+      <section className="relative pt-12 pb-6 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[180px] -z-10"></div>
         
