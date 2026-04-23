@@ -1,5 +1,24 @@
 [
   {
+    "id": "thales-bao-mat-du-lieu-dam-may-va-hsm",
+    "title": "Bảo Mật Dữ Liệu Lõi: Tại Sao Thales Là Tiêu Chuẩn Vàng Cho Doanh Nghiệp?",
+    "date": "23/04/2026",
+    "summary": "Thales CipherTrust và giải pháp HSM - Tiêu chuẩn bảo mật dữ liệu Cloud Security hàng đầu thế giới. Bảo vệ khóa mã hóa tuyệt đối trước mọi cuộc tấn công.",
+    "category": "Data Security & HSM",
+    "image": "/images/news/thales-hsm-security.webp",
+    "content": "Trong một thế giới nơi dữ liệu được ví như 'dầu mỏ mới', việc bảo vệ tài sản này không còn là lựa chọn mà là sự sống còn. Thales cung cấp những giải pháp bảo mật dữ liệu toàn diện, từ mã hóa đám mây đến các thiết bị phần cứng chuyên dụng, giúp doanh nghiệp an tâm tuyệt đối trước mọi cuộc tấn công.\n\n**1. Khi mã hóa phần mềm là chưa đủ**\nCác cuộc tấn công hiện đại thường nhắm vào quyền quản trị. Nếu khóa mã hóa chỉ được lưu bằng phần mềm, Hacker có thể dễ dàng đánh cắp. Ngành tài chính, ngân hàng và chính phủ đòi hỏi những tiêu chuẩn bảo mật khắt khe mà các giải pháp thông thường không thể đáp ứng.\n\n> Với Thales, dữ liệu của bạn được bảo vệ bởi 'Pháo đài phần cứng' không thể xuyên phá.\n\n**2. Thales – Hệ sinh thái bảo mật không thể phá vỡ**\nThales mang đến giải pháp bảo mật 3 lớp toàn diện:\n\n- **CipherTrust Data Security Platform:** Nền tảng duy nhất giúp quản lý tập trung toàn bộ vòng đời của khóa mã hóa, dù dữ liệu nằm ở máy chủ vật lý hay trên các nền tảng đám mây (AWS, Azure, Google Cloud).\n- **Hardware Security Module (HSM):** 'Pháo đài phần cứng' dùng để tạo, lưu trữ và quản lý các khóa mật mã. Đây là thiết bị vật lý biệt lập, đảm bảo rằng ngay cả khi hệ thống chính bị xâm nhập, khóa bảo mật vẫn an toàn tuyệt đối.\n- **Xác thực và Truy cập:** Kiểm soát danh tính người dùng bằng các phương thức xác thực mạnh, ngăn chặn triệt để các hành vi giả mạo và truy cập trái phép.\n\n![Giải pháp bảo mật Thales HSM](/images/news/thales-hsm-security.webp)\n\n**3. Tầm nhìn chiến lược cho nhà lãnh đạo**\nĐầu tư vào Thales là đầu tư vào uy tín và sự phát triển bền vững:\n\n- **Xây dựng pháo đài niềm tin:** Khẳng định uy tín thương hiệu với khách hàng bằng công nghệ bảo mật hàng đầu thế giới.\n- **Tối ưu chi phí rủi ro:** Ngăn chặn triệt để các vụ rò rỉ dữ liệu và khoản phạt vi phạm pháp lý.\n- **Sẵn sàng cho tương lai:** Chống lại cả những mối đe dọa từ máy tính lượng tử (Quantum-safe).\n\n**Lời kết**\nTại FCT Vĩnh Thịnh, chúng tôi mang đến cho ngài công nghệ của Thales không chỉ như một sản phẩm, mà như một cam kết về sự an toàn vĩnh cửu cho mọi bit dữ liệu quý giá của doanh nghiệp.",
+    "faqs": [
+      {
+        "question": "Tại sao doanh nghiệp cần sử dụng thiết bị HSM?",
+        "answer": "HSM là thiết bị phần cứng chuyên dụng giúp lưu trữ khóa mã hóa tách biệt hoàn toàn khỏi môi trường phần mềm, ngăn chặn hacker đánh cắp khóa ngay cả khi chiếm được quyền quản trị hệ thống."
+      },
+      {
+        "question": "Thales CipherTrust có hỗ trợ môi trường Multi-Cloud không?",
+        "answer": "Có. CipherTrust được thiết kế để quản lý khóa mã hóa tập trung trên nhiều nền tảng đám mây khác nhau như AWS, Azure và Google Cloud từ một giao diện duy nhất."
+      }
+    ]
+  },
+  {
     "id": "guardsquare-bao-ve-ung-dung-di-dong-doanh-nghiep",
     "title": "Bảo mật Ứng dụng Di động: Lớp Giáp Cuối Cùng Bảo Vệ Tài Sản Doanh Nghiệp",
     "date": "23/04/2026",

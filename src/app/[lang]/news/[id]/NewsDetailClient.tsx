@@ -42,6 +42,26 @@ export default function NewsDetailClient({
 }: NewsDetailClientProps) {
   const d = dict.newsDetail;
   const commonDict = dict.common;
+  const isEn = lang === 'en';
+
+  const handleShare = async () => {
+    const shareData = {
+      title: article.title,
+      text: article.summary,
+      url: window.location.href,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(window.location.href);
+        alert(lang === 'en' ? "Link copied to clipboard!" : "Đã sao chép liên kết vào bộ nhớ tạm!");
+      }
+    } catch (err) {
+      console.log('Error sharing:', err);
+    }
+  };
 
   // Logic render nội dung nâng cao (Hỗ trợ Heading, Image, List)
   const renderContent = (content: string) => {
@@ -209,14 +229,28 @@ export default function NewsDetailClient({
             )}
 
               <div className="flex items-center gap-3">
-                <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
-                  <MessageSquare className="w-4 h-4 text-blue-600" />
-                </button>
-                <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
-                  <Globe className="w-4 h-4 text-[#0077b5]" />
-                </button>
-                <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">
-                  <Share2 className="w-4 h-4 text-gray-600" />
+                <Link 
+                  href={`/${lang}/contact`}
+                  className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-blue-50 transition-colors group"
+                  title={isEn ? "Contact us" : "Liên hệ tư vấn"}
+                >
+                  <MessageSquare className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                </Link>
+                <a 
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://fct.vn/' + lang + '/news/' + article.id)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-blue-50 transition-colors group"
+                  title={isEn ? "Share on LinkedIn" : "Chia sẻ lên LinkedIn"}
+                >
+                  <Globe className="w-4 h-4 text-[#0077b5] group-hover:scale-110 transition-transform" />
+                </a>
+                <button 
+                  onClick={handleShare}
+                  className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-blue-50 transition-colors group"
+                  title={isEn ? "Share article" : "Chia sẻ bài viết"}
+                >
+                  <Share2 className="w-4 h-4 text-gray-600 group-hover:scale-110 transition-transform" />
                 </button>
               </div>
             </div>
