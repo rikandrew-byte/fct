@@ -89,19 +89,38 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1 p-1 bg-white/5 rounded-full border border-white/10">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href}
-                href={link.href} 
-                className={`px-4 py-2 rounded-full text-[13px] font-black tracking-tight transition-all duration-300 flex items-center justify-center ${
-                  pathname === link.href 
-                    ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
-                    : "text-gray-300 hover:text-blue-400 hover:bg-white/5"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isProducts = link.href.includes("/products");
+              return (
+                <div key={link.href} className="relative group">
+                  <Link 
+                    href={link.href} 
+                    className={`px-4 py-2 rounded-full text-[13px] font-black tracking-tight transition-all duration-300 flex items-center justify-center ${
+                      pathname === link.href 
+                        ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
+                        : "text-gray-300 hover:text-blue-400 hover:bg-white/5"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                  {isProducts && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="bg-[#020617]/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-2 w-56 shadow-2xl flex flex-col gap-1">
+                        <Link href={`/${lang}/products/thales-sentinel`} className="px-4 py-2 hover:bg-white/5 rounded-xl text-gray-300 hover:text-blue-400 text-sm font-semibold transition-colors flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Thales Sentinel
+                        </Link>
+                        <Link href={`/${lang}/products/guardsquare`} className="px-4 py-2 hover:bg-white/5 rounded-xl text-gray-300 hover:text-sky-400 text-sm font-semibold transition-colors flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Guardsquare
+                        </Link>
+                        <Link href={`/${lang}/products/longmai`} className="px-4 py-2 hover:bg-white/5 rounded-xl text-gray-300 hover:text-rose-400 text-sm font-semibold transition-colors flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>Longmai
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-2">
@@ -129,19 +148,30 @@ export default function Navbar({ lang, dict }: NavbarProps) {
         {isMobileMenuOpen && (
           <div className="absolute top-20 left-6 right-6 lg:hidden bg-[#020617]/95 backdrop-blur-2xl border border-white/10 shadow-2xl rounded-[2.5rem] p-8 z-50 animate-in fade-in slide-in-from-top-4 duration-300">
             <nav className="flex flex-col gap-5">
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.href}
-                  href={link.href} 
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-xl font-black py-3 border-b border-white/5 flex justify-between items-center tracking-tight ${
-                    pathname === link.href ? "text-blue-400" : "text-gray-300"
-                  }`}
-                >
-                  {link.label}
-                  {pathname === link.href && <div className="w-2.5 h-2.5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]" />}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isProducts = link.href.includes("/products");
+                return (
+                  <div key={link.href} className="flex flex-col border-b border-white/5">
+                    <Link 
+                      href={link.href} 
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`text-xl font-black py-3 flex justify-between items-center tracking-tight ${
+                        pathname === link.href ? "text-blue-400" : "text-gray-300"
+                      }`}
+                    >
+                      {link.label}
+                      {pathname === link.href && <div className="w-2.5 h-2.5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]" />}
+                    </Link>
+                    {isProducts && (
+                      <div className="flex flex-col gap-2 pl-4 pb-3">
+                        <Link href={`/${lang}/products/thales-sentinel`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-blue-400 text-base font-semibold">Thales Sentinel</Link>
+                        <Link href={`/${lang}/products/guardsquare`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-sky-400 text-base font-semibold">Guardsquare</Link>
+                        <Link href={`/${lang}/products/longmai`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-rose-400 text-base font-semibold">Longmai</Link>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
               
               <Link 
                 href={`/${lang}/knowledge`}

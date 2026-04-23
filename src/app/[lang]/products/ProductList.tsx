@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Search,
   ChevronDown,
@@ -289,8 +290,8 @@ export default function ProductList({ lang }: ProductListProps) {
                     </div>
                   )}
 
-                  {/* Toggle button */}
-                  <div className="pt-4 border-t border-gray-50">
+                  {/* Action buttons */}
+                  <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
                     <button
                       id={`expand-${prod.id}`}
                       onClick={() => toggleExpand(prod.id)}
@@ -300,11 +301,23 @@ export default function ProductList({ lang }: ProductListProps) {
                           : `text-gray-400 hover:${cfg?.iconColor ?? "text-blue-800"}`
                       }`}
                     >
-                      {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "View details" : "Xem chi tiết")}
+                      {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "Quick view" : "Xem nhanh")}
                       <ChevronDown
                         className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                       />
                     </button>
+                    
+                    <Link 
+                      href={prod.category === "Thales" ? `/${lang}/products/thales-sentinel` : 
+                            prod.category === "Guardsquare" ? `/${lang}/products/guardsquare` : 
+                            prod.category === "Longmai" ? `/${lang}/products/longmai` : 
+                            `/${lang}/products`}
+                      className={`text-[11px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition-all shadow-md hover:-translate-y-0.5 ${
+                        cfg ? `${cfg.badgeBg} shadow-sm hover:shadow-[0_4px_15px_rgba(0,0,0,0.1)]` : "bg-blue-600 text-white hover:bg-blue-700"
+                      }`}
+                    >
+                      {isEn ? "Detail Page" : "Chi Tiết"}
+                    </Link>
                   </div>
                 </div>
               </article>
