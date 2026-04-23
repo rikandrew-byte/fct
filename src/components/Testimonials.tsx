@@ -47,7 +47,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {testimonials.map((testi, idx) => (
             <motion.div
               key={idx}
@@ -55,24 +55,22 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="glass-panel p-10 rounded-[2.5rem] border-white/40 flex flex-col justify-between group transition-all duration-500 relative"
+              className="space-y-8 group relative"
             >
-              <div className="absolute inset-x-10 bottom-0 h-1 bg-blue-600/0 group-hover:bg-blue-600/50 group-hover:blur-md transition-all duration-500"></div>
               <div>
-                <div className="flex gap-1 mb-8 text-blue-600">
+                <div className="flex gap-1 mb-6 text-blue-600">
                   <Star className="w-4 h-4 fill-current" />
                   <Star className="w-4 h-4 fill-current" />
                   <Star className="w-4 h-4 fill-current" />
                   <Star className="w-4 h-4 fill-current" />
                   <Star className="w-4 h-4 fill-current" />
                 </div>
-                <p className="text-gray-600 font-light italic leading-relaxed mb-10 text-lg">
+                <p className="text-gray-600 font-light italic leading-relaxed text-lg">
                   "{testi.content}"
                 </p>
               </div>
-              <div className="flex items-center gap-5 pt-8 border-t border-gray-100/50">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-500">
+              <div className="flex items-center gap-5 pt-8 border-t border-gray-100">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 font-black text-lg group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
                   {testi.name.charAt(0)}
                 </div>
                 <div>

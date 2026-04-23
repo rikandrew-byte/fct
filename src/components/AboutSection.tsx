@@ -69,23 +69,20 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
           </motion.div>
 
           {/* Phải: Grid tính năng */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative items-start">
             {features.map((feature, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="glass-panel p-6 md:p-8 rounded-[2rem] border-white/40 hover:bg-white transition-all duration-500 group text-left"
+                className="space-y-4 text-left group"
               >
-                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-gray-100 group-hover:bg-blue-600 transition-colors duration-500">
-                  <div className="group-hover:text-white transition-colors duration-500">
-                    {feature.icon}
-                  </div>
+                <div className="group-hover:scale-110 transition-transform duration-500">
+                  {feature.icon}
                 </div>
-                <h4 className="text-xl font-black text-gray-900 mb-3 tracking-tight">{feature.title}</h4>
+                <h4 className="text-xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">{feature.title}</h4>
                 <p className="text-gray-500 text-sm font-light leading-relaxed">
                   {feature.description}
                 </p>
