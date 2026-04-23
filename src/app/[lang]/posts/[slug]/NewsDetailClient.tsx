@@ -19,6 +19,8 @@ interface Article {
   date: string;
   summary: string;
   category: string;
+  image?: string;
+  ogImage?: string;
   link?: string;
   content: string;
   faqs?: FAQ[];
@@ -27,8 +29,8 @@ interface Article {
 interface NewsDetailClientProps {
   lang: string;
   dict: {
-    newsDetail: any;
-    common: any;
+    newsDetail: Record<string, unknown>;
+    common: Record<string, unknown>;
   };
   article: Article;
   relatedNews: Article[];
@@ -40,8 +42,8 @@ export default function NewsDetailClient({
   article, 
   relatedNews 
 }: NewsDetailClientProps) {
-  const d = dict.newsDetail;
-  const commonDict = dict.common;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const d = dict.newsDetail as Record<string, any>;
   const isEn = lang === 'en';
 
   const handleShare = async () => {
@@ -223,10 +225,13 @@ export default function NewsDetailClient({
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10"
         >
-          <img 
-            src={(article as any).image || "/logo.webp"} 
+          <Image 
+            src={article.image || "/logo.webp"} 
             alt={article.title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </motion.div>
