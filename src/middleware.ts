@@ -6,11 +6,19 @@ export default function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   const userAgent = request.headers.get('user-agent') || ''
 
-  // 1. ĐẶC CÁCH TỐI CAO CHO BOT (Bản rút gọn an toàn nhất)
-  // Nếu là bot, cho đi thẳng ngay lập tức, không xử lý bất kỳ logic nào bên dưới
+  // 1. ĐẶC CÁCH TỐI CAO CHO BOT (Vượt 403 và fix 404)
   if (/facebookexternalhit|Facebot|Twitterbot|LinkedInBot|Googlebot|bingbot/i.test(userAgent)) {
+    // Nếu bot vào trang chủ gốc (/) hoặc thiếu locale, rewrite về /vi
+    const pathnameIsMissingLocale = i18n.locales.every(
+      (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    )
+    
+    if (pathnameIsMissingLocale) {
+      return NextResponse.rewrite(new URL(`/vi${pathname}`, request.url))
+    }
     return NextResponse.next()
   }
+
 
   // 2. Loại trừ các tệp tin tĩnh và API
   if (
