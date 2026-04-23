@@ -62,7 +62,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-black text-white tracking-tight leading-none"
+            className="text-5xl md:text-7xl font-black text-slate-200 tracking-tight leading-none"
           >
             {d.hero.title} <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
@@ -175,7 +175,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
       </section>
 
       {/* ── CTA ────────────────────────────────────────────────────── */}
-      <section className="bg-gray-950 py-24 px-6 relative overflow-hidden">
+      <section className="bg-[#020617] py-12 px-6 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
         
@@ -185,7 +185,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
             {d.cta.title}
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-200 tracking-tight">
             {d.cta.title}
           </h2>
           

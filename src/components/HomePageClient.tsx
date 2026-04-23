@@ -112,7 +112,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Item 1: Guardsquare */}
           <Link href={`/${lang}/products/guardsquare`} className="group">
             <motion.article
@@ -165,25 +165,6 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
               <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-rose-600 transition-colors">{dict.solutions.hardwareSecurity.title}</h3>
               <p className="text-gray-500 text-sm font-light leading-relaxed">
                 {dict.solutions.hardwareSecurity.description}
-              </p>
-            </motion.article>
-          </Link>
-
-          {/* Item 4: FCT Ecosystem Link */}
-          <Link href={`/${lang}/products`} className="group">
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="space-y-6"
-            >
-              <div className="text-slate-900 group-hover:scale-110 transition-transform duration-500">
-                <ArrowRight className="w-10 h-10 stroke-[1.5px]" />
-              </div>
-              <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-blue-600 transition-colors">{dict.solutions.ecosystem.title}</h3>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">
-                {dict.solutions.ecosystem.description}
               </p>
             </motion.article>
           </Link>

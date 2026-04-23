@@ -34,7 +34,7 @@ export default function NewsDetailClient({
   return (
     <main className="min-h-screen bg-white selection:bg-blue-600 selection:text-white">
       {/* ── Header Section ───────────────────── */}
-      <section className="relative pt-48 pb-20 px-6 overflow-hidden bg-[#020617]">
+      <section className="relative pt-24 pb-10 px-6 overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[160px] -z-10 animate-pulse"></div>
 
@@ -63,7 +63,7 @@ export default function NewsDetailClient({
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-[1.1]">
+            <h1 className="text-4xl md:text-6xl font-black text-slate-200 tracking-tighter leading-[1.1]">
               {article.title}
             </h1>
           </motion.div>
@@ -110,7 +110,7 @@ export default function NewsDetailClient({
             </div>
 
             {/* CTA Section */}
-            <div className="mt-20 p-10 bg-gradient-to-br from-blue-900 to-[#020617] rounded-[3rem] text-white overflow-hidden relative group">
+            <div className="mt-20 p-10 bg-gradient-to-br from-blue-900 to-[#020617] rounded-[3rem] text-slate-200 overflow-hidden relative group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10 space-y-6">
                 <h3 className="text-3xl font-black tracking-tighter">{d.cta.title}</h3>

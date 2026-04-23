@@ -24,10 +24,10 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
   const isEn = lang === "en";
 
-  const navLinks = [
     { href: `/${lang}/about`, label: dict.navbar.about },
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
+    { href: `/${lang}/news`, label: dict.navbar.news || (isEn ? "Articles" : "Bài viết") },
     { href: `/${lang}/contact`, label: dict.navbar.contact },
   ];
 
@@ -88,7 +88,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-x-8 p-1 bg-white/5 rounded-full border border-white/10">
+          <nav className="hidden lg:flex items-center gap-x-6 p-1 bg-white/5 rounded-full border border-white/10">
             {navLinks.map((link) => {
               const isProducts = link.href.includes("/products");
               return (
@@ -126,7 +126,18 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             })}
           </nav>
 
-          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 pr-2 border-r border-white/10">
+              <div className="relative group/search">
+                 <button className="p-2 text-gray-400 hover:text-white transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                 </button>
+                 <input 
+                   type="text" 
+                   placeholder={isEn ? "Search..." : "Tìm kiếm..."}
+                   className="absolute right-0 top-1/2 -translate-y-1/2 w-0 group-hover/search:w-36 lg:group-focus-within/search:w-36 transition-all duration-500 bg-[#020617] border border-white/10 rounded-full px-0 group-hover/search:px-4 py-1.5 text-xs text-slate-200 outline-none opacity-0 group-hover/search:opacity-100"
+                 />
+              </div>
+            </div>
             <button 
               onClick={() => setIsModalOpen(true)}
               className="relative overflow-hidden group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4.5 py-2.5 rounded-full text-[11px] font-black tracking-widest uppercase hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-all duration-500 hidden xs:block"
