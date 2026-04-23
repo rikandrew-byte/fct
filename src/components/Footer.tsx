@@ -40,20 +40,20 @@ export default function Footer({ lang, dict }: FooterProps) {
   return (
     <footer className="bg-[#020617] pt-4 md:pt-6 pb-4 border-t border-gray-900 text-slate-300">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-10">
           {/* Cột 1: Brand */}
-          <div className="space-y-8 md:col-span-1">
+          <div className="space-y-8 md:col-span-4">
             <Link href={`/${lang}`} className="flex items-center gap-3">
               <Image 
                 src="/logo.png" 
                 alt="Logo FCT Vinh Thinh .,JSC" 
                 width={56} 
                 height={56} 
-                className="brightness-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+                className="brightness-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)] shrink-0"
               />
-              <span className="font-bold text-2xl text-slate-200 tracking-tight">FCT Vinh Thinh .,JSC</span>
+              <span className="font-bold text-2xl text-slate-200 tracking-tight whitespace-nowrap">FCT Vinh Thinh .,JSC</span>
             </Link>
-            <p className="text-sm font-light leading-relaxed">
+            <p className="text-sm font-light leading-relaxed max-w-sm">
               {d.brandDescription}
             </p>
             <div className="flex gap-4">
@@ -73,7 +73,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
 
           {/* Cột 2: Tin tức và bài viết */}
-          <div>
+          <div className="md:col-span-3">
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.news}</h4>
             <ul className="space-y-4 text-sm font-light">
               <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.newsArticles.softProtection}</Link></li>
@@ -84,7 +84,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
 
           {/* Cột 3: Liên kết nhanh */}
-          <div>
+          <div className="md:col-span-2">
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
             <ul className="space-y-6 text-sm font-light">
               <li><Link href={`/${lang}/projects`} className="hover:text-blue-500 transition-colors uppercase tracking-widest">{dict.navbar.projects}</Link></li>
@@ -93,7 +93,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
 
           {/* Cột 4: Liên hệ */}
-          <div>
+          <div className="md:col-span-3">
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.contact}</h4>
             <ul className="space-y-5 text-sm font-light">
               <li className="flex gap-4">
