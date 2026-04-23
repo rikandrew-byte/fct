@@ -2,9 +2,11 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Search,
   ChevronDown,
+  ArrowRight,
   Shield,
   ShieldCheck,
   Layers,
@@ -289,8 +291,8 @@ export default function ProductList({ lang }: ProductListProps) {
                     </div>
                   )}
 
-                  {/* Toggle button */}
-                  <div className="pt-4 border-t border-gray-50">
+                  {/* Toggle button (Nút xổ tóm tắt cũ - GIỮ NGUYÊN) */}
+                  <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
                     <button
                       id={`expand-${prod.id}`}
                       onClick={() => toggleExpand(prod.id)}
@@ -300,11 +302,27 @@ export default function ProductList({ lang }: ProductListProps) {
                           : `text-gray-400 hover:${cfg?.iconColor ?? "text-blue-800"}`
                       }`}
                     >
-                      {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "View details" : "Xem chi tiết")}
+                      {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "View summary" : "Xem tóm tắt")}
                       <ChevronDown
                         className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                       />
                     </button>
+                  </div>
+
+                  {/* 🚀 NÚT LINK ĐIỀU HƯỚNG AN TOÀN */}
+                  <div className="mt-4">
+                    <Link href={prod.category === "Thales" ? `/${lang}/products/thales-sentinel` : 
+                               prod.category === "Guardsquare" ? `/${lang}/products/guardsquare` : 
+                               prod.category === "Longmai" ? `/${lang}/products/longmai` : 
+                               `/${lang}/products/${prod.id}`} 
+                          className="w-full block">
+                      <button className={`w-full py-3.5 rounded-xl font-bold uppercase tracking-widest text-[11px] transition-all flex items-center justify-center gap-2 group shadow-md ${
+                        cfg ? `${cfg.badgeBg} hover:opacity-90` : "bg-blue-600 text-white hover:bg-blue-700"
+                      }`}>
+                        {isEn ? "View Architecture" : "Xem kiến trúc chi tiết"}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </article>
