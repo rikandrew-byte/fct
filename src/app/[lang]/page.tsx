@@ -2,11 +2,18 @@ import { getDictionary } from "@/lib/get-dictionary";
 import HomePageClient from "@/components/HomePageClient";
 import { Locale } from "@/config/i18n-config";
 
+import newsVi from "@/data/news_vi.json";
+import newsEn from "@/data/news_en.json";
+
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
+  
+  const newsData = lang === "en" ? newsEn : newsVi;
+  const latestNews = newsData.slice(0, 3); // Lấy 3 bài mới nhất
 
   const jsonLd = {
+    // ... (keep existing JSON-LD)
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "FCT Vinh Thinh JSC",
@@ -53,7 +60,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HomePageClient lang={lang} dict={dict} />
+      <HomePageClient lang={lang} dict={dict} latestNews={latestNews} />
     </>
   );
 }

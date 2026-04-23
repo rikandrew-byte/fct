@@ -8,13 +8,15 @@ import Testimonials from "@/components/Testimonials";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import IntegritySeal from "@/components/IntegritySeal";
 import { motion } from "framer-motion";
+import NewsSection from "@/components/NewsSection";
 
 interface HomePageClientProps {
   lang: string;
   dict: any;
+  latestNews: any[];
 }
 
-export default function HomePageClient({ lang, dict }: HomePageClientProps) {
+export default function HomePageClient({ lang, dict, latestNews }: HomePageClientProps) {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
@@ -168,6 +170,9 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
           </Link>
         </div>
       </section>
+      
+      {/* ── 3. News Section (Khám phá tin tức) ───────────────────────── */}
+      <NewsSection lang={lang} dict={dict} latestNews={latestNews} />
 
       <Testimonials />
     </div>
