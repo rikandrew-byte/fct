@@ -10,7 +10,7 @@ import {
   AlertTriangle, 
   Cpu, 
   Cloud, 
-  Terminal,
+  Code2,
   MousePointer2,
   Lock,
   ArrowRight
@@ -50,7 +50,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       id: 2,
       title: isEn ? "SDK Integration" : "Tích hợp SDK",
       desc: isEn ? "Using AES encryption & Envelope to wrap binary files." : "Sử dụng mã hóa AES & Envelope để bao bọc các tệp tin thực thi.",
-      icon: <Terminal className="w-6 h-6" />
+      icon: <Code2 className="w-6 h-6" />
     },
     {
       id: 3,
@@ -131,7 +131,12 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             </h2>
          </div>
 
-         <div className="military-panel rounded-[3rem] p-12 md:p-20 relative overflow-hidden group">
+         <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="military-panel rounded-[3rem] p-12 md:p-20 relative overflow-hidden group"
+         >
             {/* SVG Interactive Diagram */}
             <svg 
               viewBox="0 0 1000 400" 
@@ -165,7 +170,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                 onMouseEnter={() => setActiveStep(1)}
               >
                 <rect x="50" y="150" width="200" height="100" rx="20" fill="#0f172a" stroke="#1e293b" strokeWidth="2" />
-                <Terminal className="text-slate-500" x="135" y="170" width="30" height="30" />
+                <Code2 className="text-slate-500" x="135" y="170" width="30" height="30" />
                 <text x="150" y="235" fill="white" fontSize="14" fontWeight="900" textAnchor="middle" className="uppercase tracking-widest">
                   {isEn ? "SOURCE CODE" : "MÃ NGUỒN"}
                 </text>
@@ -248,7 +253,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                   )}
                </motion.div>
             </div>
-         </div>
+         </motion.div>
       </section>
 
       {/* ── 3. TRIPLE LAYER: CONTENT STRUCTURE ────────────────────── */}
