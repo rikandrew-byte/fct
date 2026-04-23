@@ -64,8 +64,8 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           {/* Form Card */}
           <div className="bg-white border border-gray-100 rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-gray-200/50 mb-16">
             <div className="mb-12 text-center space-y-2">
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">{isEn ? "Technical Inquiry Form" : "Phiếu yêu cầu giải pháp"}</h2>
-              <p className="text-gray-500 text-sm">{isEn ? "Please provide details about your organization and security needs." : "Vui lòng cung cấp chi tiết về tổ chức và nhu cầu bảo mật của bạn."}</p>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">{isEn ? "Expert Consultation Request" : "Gửi yêu cầu tư vấn"}</h2>
+              <p className="text-gray-500 text-sm">{isEn ? "Share your needs and our security architects will design a customized plan for you." : "Chia sẻ nhu cầu của bạn để các chuyên gia bảo mật của chúng tôi tư vấn phương án tối ưu."}</p>
             </div>
             <Suspense fallback={<div className="h-[600px] flex items-center justify-center text-gray-400 uppercase text-[10px] font-black tracking-widest animate-pulse">Initializing Secure Portal...</div>}>
               <RFPForm lang={lang} />
@@ -73,8 +73,8 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           </div>
 
           {/* Quick Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            <div className="bg-white border border-gray-100 p-8 rounded-[2.5rem] space-y-4 shadow-xl shadow-gray-200/40 hover:border-blue-500/30 transition-all group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white border border-gray-100 p-8 md:p-10 rounded-[2.5rem] space-y-4 shadow-xl shadow-gray-200/40 hover:border-blue-500/30 transition-all group">
               <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                 <Phone className="w-6 h-6" />
               </div>
@@ -83,7 +83,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                 <p className="font-bold text-xl text-gray-900 underline decoration-blue-500/30">0983 027 776</p>
               </div>
             </div>
-            <div className="bg-white border border-gray-100 p-8 rounded-[2.5rem] space-y-4 shadow-xl shadow-gray-200/40 hover:border-blue-500/30 transition-all group">
+            <div className="bg-white border border-gray-100 p-8 md:p-10 rounded-[2.5rem] space-y-4 shadow-xl shadow-gray-200/40 hover:border-blue-500/30 transition-all group">
               <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                 <Mail className="w-6 h-6" />
               </div>
@@ -95,8 +95,8 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           </div>
 
           {/* HQ Location */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-blue-50/30 border border-blue-100/50 rounded-[3.5rem] p-8 md:p-12">
-            <div className="w-full aspect-video rounded-[2.5rem] overflow-hidden border border-gray-200 shadow-xl bg-white">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white border border-gray-100 rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-gray-200/50">
+            <div className="w-full aspect-video rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-xl bg-slate-50">
                <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.322596489379!2d105.83467477503!3d20.979697980655823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135add13ae6fb33%3A0x6739932145b736b4!2zTmfDtGkgU2FvIEJ1aWxkaW5n!5e0!3m2!1svi!2svn!4v1713500000000!5m2!1svi!2svn"
                 width="100%"
@@ -110,8 +110,8 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
             <div className="space-y-8">
               <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 border border-gray-100 text-blue-600 shadow-sm">
+                <div className="flex gap-5">
+                  <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 border border-blue-100 text-blue-600 shadow-sm">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div className="space-y-1">
@@ -121,8 +121,8 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 border border-gray-100 text-blue-600 shadow-sm">
+                <div className="flex gap-5">
+                  <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 border border-blue-100 text-blue-600 shadow-sm">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div className="space-y-1">
