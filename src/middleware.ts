@@ -5,7 +5,6 @@ import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 
 function getLocale(request: NextRequest): string | undefined {
-  // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {}
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
 
@@ -18,20 +17,24 @@ function getLocale(request: NextRequest): string | undefined {
   return locale
 }
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  // // `/_next/` and `/api/` are already excluded by the matcher, 
-  // but we also check for some public files like images
+  // Exclude public files and images
   if (
     [
       '/manifest.json',
       '/favicon.ico',
       '/logo.png',
+      '/logo.webp',
       '/icon.png',
-      '/sentinelLDK1.png'
+      '/sentinelLDK1.png',
+      '/robots.txt',
+      '/sitemap.xml',
     ].includes(pathname) ||
-    pathname.startsWith('/images')
+    pathname.startsWith('/images') ||
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/_next')
   ) {
     return
   }
@@ -45,8 +48,6 @@ export function proxy(request: NextRequest) {
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request)
 
-    // e.g. incoming request is /products
-    // The new URL is now /en/products
     return NextResponse.redirect(
       new URL(
         `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
@@ -57,6 +58,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|.*\\..*).*)'],
 }
