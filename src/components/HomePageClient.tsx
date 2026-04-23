@@ -115,31 +115,33 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 auto-rows-min md:auto-rows-[340px]">
 
           {/* Card 1: Guardsquare */}
-          <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50"
-          >
-            <Image
-              src="/images/guardsquare-bg.png"
-              alt="Guardsquare Security"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover opacity-[0.03] group-hover:opacity-[0.1] transition-all duration-700 pointer-events-none"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent z-0"></div>
-            <div className="absolute -right-20 -top-20 w-80 h-80 bg-blue-500/10 blur-[100px] rounded-full group-hover:bg-blue-500/20 transition-colors pointer-events-none"></div>
+          <Link href={`/${lang}/products/guardsquare`} className="md:col-span-2 block">
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.01 }}
+              className="h-full glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50"
+            >
+              <Image
+                src="/images/guardsquare-bg.png"
+                alt="Guardsquare Security"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover opacity-[0.03] group-hover:opacity-[0.1] transition-all duration-700 pointer-events-none"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent z-0"></div>
+              <div className="absolute -right-20 -top-20 w-80 h-80 bg-blue-500/10 blur-[100px] rounded-full group-hover:bg-blue-500/20 transition-colors pointer-events-none"></div>
 
-            <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-white shadow-xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors border border-gray-100">
-              <ShieldAlert className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
-            </div>
-            <h3 className="relative z-10 text-3xl font-black text-gray-950 mb-4 tracking-tighter">{dict.solutions.mobileSecurity.title}</h3>
-            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
-              {dict.solutions.mobileSecurity.description}
-            </p>
-          </motion.article>
+              <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-white shadow-xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors border border-gray-100">
+                <ShieldAlert className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="relative z-10 text-3xl font-black text-gray-950 mb-4 tracking-tighter">{dict.solutions.mobileSecurity.title}</h3>
+              <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
+                {dict.solutions.mobileSecurity.description}
+              </p>
+            </motion.article>
+          </Link>
 
           {/* Card 2: Thales */}
           <Link href={`/${lang}/products/thales-sentinel`} className="md:col-span-2 block">
@@ -176,23 +178,25 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
           </Link>
 
           {/* Card 3: Longmai */}
-          <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(244,63,94,0.15)] hover:border-rose-400/50"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-rose-500/5 via-transparent to-transparent z-0"></div>
-            <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-rose-50 flex items-center justify-center mb-8 group-hover:bg-rose-600 transition-colors border border-rose-100">
-              <Cpu className="w-8 h-8 text-rose-600 group-hover:text-white transition-colors" />
-            </div>
-            <h3 className="relative z-10 text-3xl font-black text-gray-950 mb-4 tracking-tighter">{dict.solutions.hardwareSecurity.title}</h3>
-            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
-              {dict.solutions.hardwareSecurity.description}
-            </p>
-          </motion.article>
+          <Link href={`/${lang}/products/longmai`} className="md:col-span-2 block">
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ y: -10, scale: 1.01 }}
+              className="h-full glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(244,63,94,0.15)] hover:border-rose-400/50"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-500/5 via-transparent to-transparent z-0"></div>
+              <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-rose-50 flex items-center justify-center mb-8 group-hover:bg-rose-600 transition-colors border border-rose-100">
+                <Cpu className="w-8 h-8 text-rose-600 group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="relative z-10 text-3xl font-black text-gray-950 mb-4 tracking-tighter">{dict.solutions.hardwareSecurity.title}</h3>
+              <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
+                {dict.solutions.hardwareSecurity.description}
+              </p>
+            </motion.article>
+          </Link>
 
           {/* Card 4: FCT Ecosystem Link */}
           <motion.div
