@@ -81,6 +81,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               alt="Logo FCT" 
               width={isScrolled ? 50 : 64} 
               height={isScrolled ? 50 : 64} 
+              priority={true}
               style={{ height: 'auto' }}
               className="object-contain relative z-10 transition-all group-hover:scale-110 duration-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.6)]"
             />

@@ -5,6 +5,8 @@ import { ArrowLeft, Calendar, Tag, Share2, MessageSquare, ExternalLink, Globe } 
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { motion } from "framer-motion";
 
+import TableOfContents from "@/components/TableOfContents";
+
 interface Article {
   id: string;
   title: string;
@@ -30,6 +32,39 @@ export default function NewsDetailClient({
 }: NewsDetailClientProps) {
   const d = dict.newsDetail;
   const commonDict = dict.common;
+
+  // Logic nhận diện tiêu đề giống như trong TOC component
+  const renderContent = (content: string) => {
+    const lines = content.split('\n');
+    return lines.map((line, index) => {
+      const trimmed = line.trim();
+      if (!trimmed) return <br key={index} />;
+
+      const isHeader = 
+        (trimmed.startsWith('**') && trimmed.endsWith('**') && trimmed.length < 100) || 
+        /^\d+\.\s/.test(trimmed) || 
+        (trimmed.endsWith('?') && trimmed.length < 80) || 
+        (trimmed.endsWith(':') && trimmed.length < 80);
+
+      if (isHeader) {
+        return (
+          <h3 
+            key={index} 
+            id={`heading-${index}`}
+            className="text-2xl font-black text-gray-900 pt-8 pb-4 scroll-mt-32"
+          >
+            {trimmed.replace(/\*\*/g, '')}
+          </h3>
+        );
+      }
+
+      return (
+        <p key={index} className="text-gray-700 font-light leading-relaxed text-lg md:text-xl">
+          {line}
+        </p>
+      );
+    });
+  };
 
   return (
     <main className="min-h-screen bg-white selection:bg-blue-600 selection:text-white">
@@ -77,8 +112,8 @@ export default function NewsDetailClient({
           {/* Main Article Content */}
           <div className="lg:col-span-8">
             <article className="prose prose-lg prose-slate max-w-none">
-              <div className="text-gray-700 font-light leading-relaxed space-y-6 text-lg md:text-xl whitespace-pre-line">
-                {article.content}
+              <div className="space-y-6">
+                {renderContent(article.content)}
               </div>
             </article>
 
@@ -129,41 +164,46 @@ export default function NewsDetailClient({
             </div>
           </div>
 
-          {/* Sidebar - Related News */}
+          {/* Sidebar - Related News & TOC */}
           <aside className="lg:col-span-4 space-y-12">
-            <div className="space-y-6">
-              <h3 className="text-xs font-black uppercase tracking-[0.4em] text-blue-600">{d.relatedArticles}</h3>
-              <div className="space-y-8">
-                {relatedNews.map((news) => (
-                  <Link 
-                    key={news.id} 
-                    href={`/${lang}/news/${news.id}`}
-                    className="group block space-y-3"
-                  >
-                    <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-500 transition-colors">
-                      {news.category} — {news.date}
-                    </span>
-                    <h4 className="text-lg font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
-                      {news.title}
-                    </h4>
-                    <div className="h-px w-full bg-gray-100"></div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            {/* Table of Contents */}
+            <div className="sticky top-32 space-y-12">
+              <TableOfContents content={article.content} />
 
-            {/* Solution Promotion Card */}
-            <div className="bg-slate-50 rounded-[2.5rem] p-8 border border-gray-100 space-y-6">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm">
-                <Tag className="w-6 h-6 text-blue-600" />
+              <div className="space-y-6">
+                <h3 className="text-xs font-black uppercase tracking-[0.4em] text-blue-600">{d.relatedArticles}</h3>
+                <div className="space-y-8">
+                  {relatedNews.map((news) => (
+                    <Link 
+                      key={news.id} 
+                      href={`/${lang}/news/${news.id}`}
+                      className="group block space-y-3"
+                    >
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-500 transition-colors">
+                        {news.category} — {news.date}
+                      </span>
+                      <h4 className="text-lg font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
+                        {news.title}
+                      </h4>
+                      <div className="h-px w-full bg-gray-100"></div>
+                    </Link>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">{d.promo.title}</h3>
-              <p className="text-sm text-gray-500 font-light leading-relaxed">
-                {d.promo.description}
-              </p>
-              <Link href={`/${lang}/products`} className="inline-flex items-center gap-2 font-bold text-blue-600 hover:gap-3 transition-all">
-                {d.promo.viewCatalog} <ArrowLeft className="w-4 h-4 rotate-180" />
-              </Link>
+
+              {/* Solution Promotion Card */}
+              <div className="bg-slate-50 rounded-[2.5rem] p-8 border border-gray-100 space-y-6">
+                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm">
+                  <Tag className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-black text-gray-900 tracking-tight leading-tight">{d.promo.title}</h3>
+                <p className="text-sm text-gray-500 font-light leading-relaxed">
+                  {d.promo.description}
+                </p>
+                <Link href={`/${lang}/products`} className="inline-flex items-center gap-2 font-bold text-blue-600 hover:gap-3 transition-all">
+                  {d.promo.viewCatalog} <ArrowLeft className="w-4 h-4 rotate-180" />
+                </Link>
+              </div>
             </div>
           </aside>
 
