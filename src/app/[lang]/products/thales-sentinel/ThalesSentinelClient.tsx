@@ -71,7 +71,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
     <main ref={containerRef} className="min-h-screen bg-[#020617] text-white overflow-hidden font-sans selection:bg-blue-600">
       
       {/* ── 1. THE DARK FOUNDRY (Hero Section) ───────────────────── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6">
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-24 pb-12 px-6">
         <NeuralNetworkBackground />
         
         {/* Animated Grid Lines */}
@@ -416,7 +416,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       </section>
 
       {/* ── 4. CALL TO ACTION & SEO Schema ───────────────────────── */}
-      <section className="py-32 px-6 flex flex-col items-center justify-center text-center">
+      <section className="py-16 px-6 flex flex-col items-center justify-center text-center">
          <div className="max-w-4xl military-panel rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
             
@@ -432,7 +432,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             <div className="flex flex-wrap justify-center gap-6 pt-4">
                <Link 
                  href={`/${lang}/contact?solution=thales`}
-                 className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all flex items-center gap-3"
+                 className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all flex items-center gap-3 shadow-md"
                >
                  {isEn ? "Request Integration Quote" : "Nhận báo giá tích hợp"}
                  <ArrowRight className="w-5 h-5" />

@@ -115,9 +115,6 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </div>
 
             <div className="space-y-8">
-              <h3 className="text-3xl font-black uppercase tracking-tighter">
-                {isEn ? "Strategic HQ" : "Sở chỉ huy chiến lược"}
-              </h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 text-blue-400">

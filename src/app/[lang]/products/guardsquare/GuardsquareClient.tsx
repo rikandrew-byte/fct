@@ -42,7 +42,7 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
     <main ref={containerRef} className="min-h-screen bg-[#020617] text-white overflow-hidden font-sans selection:bg-sky-600">
       
       {/* ── 1. THE INVISIBLE SHIELD (Hero Section) ───────────────────── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6">
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-24 pb-12 px-6">
         <NeuralNetworkBackground />
         
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-600/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
@@ -280,7 +280,7 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
       </section>
 
       {/* ── 4. CALL TO ACTION & Schema ───────────────────────── */}
-      <section className="py-32 px-6 flex flex-col items-center justify-center text-center">
+      <section className="py-16 px-6 flex flex-col items-center justify-center text-center">
          <div className="max-w-4xl military-panel rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden">
             <h2 className="text-4xl font-black tracking-tighter leading-none relative z-10">
                {isEn ? "Ready to integrate The Invisible Shield?" : "Sẵn sàng phủ Tấm Khiên cho ứng dụng di động?"}
@@ -288,7 +288,7 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
             <div className="flex flex-wrap justify-center gap-6 pt-4 relative z-10">
                <Link 
                  href={`/${lang}/contact?solution=guardsquare`}
-                 className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(14,165,233,0.6)] hover:bg-sky-500 transition-all flex items-center gap-3"
+                 className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 shadow-md hover:bg-sky-500 transition-all flex items-center gap-3"
                >
                  {isEn ? "Request DexGuard Demo" : "Yêu cầu Demo DexGuard"}
                  <ArrowRight className="w-5 h-5" />
