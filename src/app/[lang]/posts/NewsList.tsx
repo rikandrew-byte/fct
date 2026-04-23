@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo } from "react";
 import { Search, ArrowRight, Calendar, Tag } from "lucide-react";
@@ -26,7 +26,7 @@ export default function NewsList({ lang, dict }: NewsListProps) {
   const newsData = (isEn ? newsEn : newsVi) as NewsItem[];
   const [searchQuery, setSearchQuery] = useState("");
   
-  const allCategoryLabel = isEn ? "All" : "Tất cả";
+  const allCategoryLabel = isEn ? "All" : "T廕另 c廕?;
   const [selectedCategory, setSelectedCategory] = useState(allCategoryLabel);
 
   const categories = useMemo(() => {
@@ -104,7 +104,7 @@ export default function NewsList({ lang, dict }: NewsListProps) {
 
                 <div className="pt-6 border-t border-gray-50 flex justify-between items-center">
                   <Link
-                    href={`/${lang}/news/${item.id}`}
+                    href={`/${lang}/posts/${item.id}`}
                     className="text-sm font-bold text-gray-900 group-hover:text-blue-600 transition-colors flex items-center gap-2"
                   >
                     {d.readMore}

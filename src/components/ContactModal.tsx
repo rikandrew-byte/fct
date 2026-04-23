@@ -49,7 +49,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
           onClose();
         }, 4000);
       } else {
-        alert("Đã có lỗi xảy ra. Vui lòng thử lại.");
+        alert("?ã có lỗi xảy ra. Vui lòng th�?lại.");
       }
     } catch (error) {
       console.error(error);

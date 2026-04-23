@@ -69,7 +69,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
     } catch (error: any) {
       setMessages((prev) => [
         ...prev, 
-        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "Lỗi hệ thống: Không thể kết nối tới Chuyên gia AI.") }
+        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "Lỗi h�?thống: Không th�?kết nối tới Chuyên gia AI.") }
       ]);
     } finally {
       setIsLoading(false);
@@ -96,7 +96,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               </h1>
               <p className="text-gray-400 text-xs font-light uppercase tracking-widest flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                {lang === "en" ? "Grounded in FCT Knowledge Base" : "Dữ liệu dựa trên hệ sinh thái FCT"}
+                {lang === "en" ? "Grounded in FCT Knowledge Base" : "D�?liệu dựa trên h�?sinh thái FCT"}
               </p>
             </div>
           </div>
@@ -124,10 +124,10 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               </div>
               <div className="space-y-2">
                 <h2 className="text-xl font-bold tracking-tight">
-                  {lang === "en" ? "Secure Terminal Initialized" : "Khởi tạo Phiên làm việc Bảo mật"}
+                  {lang === "en" ? "Secure Terminal Initialized" : "Khởi tạo Phiên l?m việc Bảo mật"}
                 </h2>
                 <p className="text-sm font-light text-gray-400 max-w-xs">
-                  {lang === "en" ? "Ask me anything about Software Protection, Mobile Security, or Industrial Data." : "Tra cứu thông tin về Bảo vệ Bản quyền, Bảo mật Di động hoặc Dữ liệu Công nghiệp."}
+                  {lang === "en" ? "Ask me anything about Software Protection, Mobile Security, or Industrial Data." : "Tra cứu thông tin v�?Bảo v�?Bản quyền, Bảo mật Di ?ộng hoặc D�?liệu Công nghiệp."}
                 </p>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
             </button>
           </form>
           <p className="text-[10px] text-center mt-4 text-gray-600 font-bold uppercase tracking-widest">
-            {lang === "en" ? "Secure AI Session — No data is saved" : "Phiên làm việc bảo mật — Dữ liệu không được lưu lại"}
+            {lang === "en" ? "Secure AI Session ??No data is saved" : "Phiên l?m việc bảo mật ??D�?liệu không ?ược lưu lại"}
           </p>
         </div>
       </div>

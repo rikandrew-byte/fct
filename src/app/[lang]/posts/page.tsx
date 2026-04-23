@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import newsVi from "@/data/news_vi.json";
 import newsEn from "@/data/news_en.json";
 import NewsList from "./NewsList";
@@ -26,11 +26,11 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
   const dict = await getDictionary(lang);
   const newsData = lang === "en" ? newsEn : newsVi;
 
-  // Chuẩn bị dữ liệu Structured Data JSON-LD
+  // Chu廕姊 b廙?d廙?li廙 Structured Data JSON-LD
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": lang === "en" ? "FCT Vinh Thinh Security News" : "Tin tức Bảo mật FCT Vĩnh Thịnh",
+    "name": lang === "en" ? "FCT Vinh Thinh Security News" : "Tin t廙妾 B廕υ m廕負 FCT V藺nh Th廙h",
     "description": dict.news.description,
     "publisher": {
       "@type": "Organization",
@@ -55,7 +55,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
 
   return (
     <main className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white">
-      {/* ── Header Section ───────────────────── */}
+      {/* ?? Header Section ????????????????????? */}
       <div className="relative bg-[#020617] pt-48 pb-24 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         {/* Glow */}
@@ -74,7 +74,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
         </div>
       </div>
 
-      {/* Nhúng Structured Data */}
+      {/* Nh繳ng Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

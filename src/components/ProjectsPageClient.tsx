@@ -27,9 +27,9 @@ interface ProjectsPageClientProps {
 
 const iconMap: Record<string, any> = {
   // Vietnamese keys
-  "TÃ i chÃ­nh - NgÃ¢n hÃ ng": Shield,
-  "NÄƒng lÆ°á»£ng & Háº¡ táº§ng": Database,
-  "Sáº£n xuáº¥t CÃ´ng nghá»‡ cao": Cpu,
+  "T?i chÃ­nh - NgÃ¢n h?ng": Shield,
+  "N?ng lÆ°á»£ng & Háº?táº§ng": Database,
+  "Sáº£n xuáº¥t CÃ´ng nghá»?cao": Cpu,
   "Chuá»—i cung á»©ng & CNTT": Lock,
   // English keys
   "Banking & Finance": Shield,
@@ -45,7 +45,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
 
   return (
     <main className="min-h-screen bg-slate-50 text-gray-950 selection:bg-blue-600 selection:text-white">
-      {/* â”€â”€ Hero Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ?€?€ Hero Section ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
       <section className="relative bg-[#020617] pt-24 pb-12 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[180px] -z-10"></div>
@@ -69,7 +69,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
         </div>
       </section>
 
-      {/* â”€â”€ Quantifiable Metrics (Achievements) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ?€?€ Quantifiable Metrics (Achievements) ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
       <section className="relative z-10 -mt-12 mb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
@@ -97,7 +97,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
         </div>
       </section>
 
-      {/* â”€â”€ Case Studies Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ?€?€ Case Studies Grid ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
       <section className="max-w-7xl mx-auto py-10 px-6 bg-slate-50">
         <div className="grid grid-cols-1 gap-12">
           {projectsData.map((project, index) => {
@@ -183,7 +183,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
         </div>
       </section>
 
-      {/* â”€â”€ Call to Action â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ?€?€ Call to Action ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
       <section className="py-12 px-6 relative overflow-hidden">
         <NeuralNetworkBackground />
         <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">

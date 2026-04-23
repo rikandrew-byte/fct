@@ -61,7 +61,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
 
           </motion.div>
 
-          {/* Phải: Grid tính năng */}
+          {/* Phải: Grid tính n?ng */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative items-start">
             {features.map((feature, idx) => (
               <motion.div

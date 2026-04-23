@@ -20,12 +20,12 @@ interface Article {
 }
 
 export async function generateStaticParams() {
-  const params: { lang: string; id: string }[] = [];
+  const params: { lang: string; slug: string }[] = [];
   
   i18n.locales.forEach((lang) => {
     const newsData = lang === "en" ? newsEn : newsVi;
     newsData.forEach((article) => {
-      params.push({ lang, id: article.id });
+      params.push({ lang, slug: article.id });
     });
   });
 
@@ -34,11 +34,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ 
   params 
-}: { params: Promise<{ id: string, lang: string }> }): Promise<Metadata> {
-  const { id, lang: langRaw } = await params;
+}: { params: Promise<{ slug: string, lang: string }> }): Promise<Metadata> {
+  const { slug, lang: langRaw } = await params;
   const lang = langRaw as Locale;
   const newsData = lang === "en" ? newsEn : newsVi;
-  const article = newsData.find((a) => a.id === id);
+  const article = newsData.find((a) => a.id === slug);
   const baseUrl = 'https://fct.vn';
 
   if (!article) {
@@ -47,22 +47,28 @@ export async function generateMetadata({
     };
   }
 
-  const ogImageUrl = article.ogImage ? `${baseUrl}${article.ogImage}` : article.image ? `${baseUrl}${article.image}` : `${baseUrl}/og-image.png`;
+  // CƠ CHẾ DYNAMIC METADATA & FALLBACK
+  // Ưu tiên ogImage -> image -> logo mặc định
+  const ogImageUrl = article.ogImage 
+    ? `${baseUrl}${article.ogImage}` 
+    : article.image 
+      ? `${baseUrl}${article.image}` 
+      : `${baseUrl}/logo.webp`;
 
   return {
     title: `${article.title} | FCT Vinh Thinh .,JSC`,
     description: article.summary,
     alternates: {
-      canonical: `${baseUrl}/${lang}/news/${id}`,
+      canonical: `${baseUrl}/${lang}/posts/${slug}`,
       languages: {
-        'vi-VN': `${baseUrl}/vi/news/${id}`,
-        'en-US': `${baseUrl}/en/news/${id}`,
+        'vi-VN': `${baseUrl}/vi/posts/${slug}`,
+        'en-US': `${baseUrl}/en/posts/${slug}`,
       },
     },
     openGraph: {
       title: article.title,
       description: article.summary,
-      url: `${baseUrl}/${lang}/news/${id}`,
+      url: `${baseUrl}/${lang}/posts/${slug}`,
       siteName: 'FCT Vinh Thinh .,JSC',
       locale: lang === 'vi' ? 'vi_VN' : 'en_US',
       type: 'article',
@@ -88,22 +94,21 @@ export async function generateMetadata({
 
 export default async function NewsDetailPage({ 
   params 
-}: { params: Promise<{ id: string, lang: string }> }) {
-  const { id, lang: langRaw } = await params;
+}: { params: Promise<{ slug: string, lang: string }> }) {
+  const { slug, lang: langRaw } = await params;
   const lang = langRaw as Locale;
   const dict = await getDictionary(lang);
   const newsData = (lang === "en" ? newsEn : newsVi) as Article[];
-  const article = newsData.find((a) => a.id === id);
+  const article = newsData.find((a) => a.id === slug);
 
   if (!article) {
     notFound();
   }
 
-  // Tìm các bài viết liên quan (cùng category hoặc ngẫu nhiên nếu không đủ)
+  // Tìm các bài viết liên quan
   const relatedNews = newsData
-    .filter((a) => a.id !== id)
+    .filter((a) => a.id !== slug)
     .sort((a, b) => {
-        // Ưu tiên cùng category
         if (a.category === article.category && b.category !== article.category) return -1;
         if (a.category !== article.category && b.category === article.category) return 1;
         return 0;

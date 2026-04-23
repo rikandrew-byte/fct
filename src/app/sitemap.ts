@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+﻿import { MetadataRoute } from 'next'
 import newsVi from '@/data/news_vi.json'
 import newsEn from '@/data/news_en.json'
 import projectsVi from '@/data/projects_vi.json'
@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '', 
     '/about', 
-    '/news', 
+    '/posts', 
     '/products', 
     '/projects', 
     '/contact', 
@@ -65,14 +65,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
 
       sitemapEntries.push({
-        url: `${baseUrl}/${lang}/news/${article.id}`,
+        url: `${baseUrl}/${lang}/posts/${article.id}`,
         lastModified: lastMod,
         changeFrequency: 'monthly',
         priority: 0.6,
         alternates: {
           languages: {
-            vi: `${baseUrl}/vi/news/${article.id}`,
-            en: `${baseUrl}/en/news/${article.id}`,
+            vi: `${baseUrl}/vi/posts/${article.id}`,
+            en: `${baseUrl}/en/posts/${article.id}`,
           },
         },
       })
