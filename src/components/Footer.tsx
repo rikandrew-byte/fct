@@ -73,9 +73,9 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Cột 3: Liên kết nhanh */}
           <div className="md:col-span-2">
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
-            <ul className="space-y-6 text-sm font-light">
-              <li><Link href={`/${lang}/projects`} className="hover:text-blue-500 transition-colors uppercase tracking-widest">{dict.navbar.projects}</Link></li>
-              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors uppercase tracking-widest">{dict.navbar.news}</Link></li>
+            <ul className="space-y-6 font-light">
+              <li><Link href={`/${lang}/projects`} className="hover:text-blue-500 transition-colors uppercase text-[12px] tracking-normal">{dict.navbar.projects}</Link></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors uppercase text-[12px] tracking-normal">{dict.navbar.news}</Link></li>
             </ul>
           </div>
 
