@@ -158,7 +158,6 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                             icon={<Zap />}
                             title={d.list.challenge}
                             description={project.challenge}
-                            info="Vulnerability Context: Identifies attack vectors and weak points in current unshielded architecture."
                             delay={index * 0.1}
                           />
                         </div>
@@ -169,7 +168,6 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                             icon={<Shield />}
                             title={d.list.solution}
                             description={project.solution}
-                            info={`Implementation: Deploys ${project.tech.join(", ")} directly into the runtime environment.`}
                             delay={index * 0.1 + 0.1}
                           />
                         </div>

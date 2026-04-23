@@ -8,7 +8,7 @@ interface BlueprintNodeProps {
   icon: ReactNode;
   title: string;
   description: string;
-  info: string;
+  info?: string;
   delay?: number;
 }
 
@@ -40,14 +40,16 @@ export default function BlueprintNode({ icon, title, description, info, delay = 
       </div>
 
       {/* Hover Info Tooltip (Architectural Detail) */}
-      <div className="absolute left-1/2 -bottom-4 -translate-x-1/2 translate-y-full w-[110%] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-none">
-        <div className="bg-[#020617]/95 backdrop-blur-xl border border-blue-500/30 p-4 rounded-xl shadow-2xl relative">
-          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#020617] border-l border-t border-blue-500/30 rotate-45"></div>
-          <p className="text-blue-200 text-xs font-mono leading-relaxed relative z-10">
-            &gt; {info}
-          </p>
+      {info && (
+        <div className="absolute left-1/2 -bottom-4 -translate-x-1/2 translate-y-full w-[110%] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-none">
+          <div className="bg-[#020617]/95 backdrop-blur-xl border border-blue-500/30 p-4 rounded-xl shadow-2xl relative">
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#020617] border-l border-t border-blue-500/30 rotate-45"></div>
+            <p className="text-blue-200 text-xs font-mono leading-relaxed relative z-10">
+               {info}
+            </p>
+          </div>
         </div>
-      </div>
+      )}
     </motion.div>
   );
 }
