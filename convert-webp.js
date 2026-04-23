@@ -37,10 +37,11 @@ async function convert() {
     const ext = path.extname(file).toLowerCase();
     if (['.png', '.jpg', '.jpeg'].includes(ext)) {
       const output = file.replace(ext, '.webp');
+      const isLogo = file.toLowerCase().includes('logo');
       
       try {
         await sharp(file)
-          .webp({ quality: 80, effort: 6 })
+          .webp({ quality: isLogo ? 95 : 80, effort: 6 })
           .toFile(output);
         
         const oldSize = fs.statSync(file).size / 1024;

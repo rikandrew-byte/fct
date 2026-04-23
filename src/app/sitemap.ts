@@ -38,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: route === '' ? 'daily' : 'weekly',
         priority: route === '' ? 1.0 : 0.8,
+        alternates: {
+          languages: {
+            vi: `${baseUrl}/vi${route}`,
+            en: `${baseUrl}/en${route}`,
+          },
+        },
       })
     })
 
@@ -49,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(article.date.split('/').reverse().join('-')),
         changeFrequency: 'monthly',
         priority: 0.6,
+        alternates: {
+          languages: {
+            vi: `${baseUrl}/vi/news/${article.id}`,
+            en: `${baseUrl}/en/news/${article.id}`,
+          },
+        },
       })
     })
 
