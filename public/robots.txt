@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
 
+# Đặc cách riêng cho Facebook
 User-agent: facebookexternalhit
 Allow: /
+
+User-agent: Facebot
+Allow: /
+
+Sitemap: https://www.fct.vn/sitemap.xml
