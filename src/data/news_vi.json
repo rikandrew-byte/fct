@@ -1,5 +1,24 @@
 [
   {
+    "id": "canary-historian-loi-the-canh-tranh",
+    "title": "Canary Historian: Biến Dữ Liệu Vận Hành Thành Lợi Thế Cạnh Tranh Cho Doanh Nghiệp Sản Xuất",
+    "date": "23/04/2026",
+    "summary": "Tại sao Canary Historian là giải pháp lưu trữ dữ liệu OT hàng đầu cho nhà quản lý? Tối ưu hóa OEE, giảm chi phí bảo trì và làm chủ dữ liệu thời gian thực.",
+    "category": "Industrial Data & IIoT",
+    "image": "/images/news/canary-management.png",
+    "content": "Trong kỷ nguyên Công nghiệp 4.0, dữ liệu từ nhà máy rất lớn nhưng thường bị 'bỏ rơi' hoặc lưu trữ rời rạc. Điều này khiến các nhà quản lý thiếu đi 'con mắt' để nhìn thấy những cơ hội tối ưu hóa sản xuất.\n\n**1. Thách thức của nhà quản lý trong kỷ nguyên 4.0**\nCác hệ thống SQL Server truyền thống quá chậm và đắt đỏ khi phải xử lý hàng triệu điểm dữ liệu mỗi giây. Nỗi đau lớn nhất chính là thiếu thông tin thời gian thực để ra quyết định nhanh chóng.\n\n> Với Canary Historian, dữ liệu không còn là những con số vô hồn mà trở thành tài sản chiến lược.\n\n**2. Canary Historian – Lời giải cho bài toán hiệu suất**\nCanary không chỉ là một cơ sở dữ liệu, đó là một công cụ giúp quản lý nắm bắt toàn diện bức tranh vận hành:\n\n- **Tốc độ:** Khả năng ghi 1.5 triệu biến/giây giúp không bỏ lỡ bất kỳ biến động nhỏ nào của máy móc.\n- **Lưu trữ bền bỉ:** Công nghệ NoSQL chuyên dụng giúp nén dữ liệu cực tốt, lưu trữ hàng chục năm mà vẫn truy xuất trong tích tắc.\n- **Khả năng quan sát:** Biểu đồ xu hướng (Trends) và báo cáo tự động giúp quản lý nắm bắt OEE (Hiệu suất thiết bị tổng thể) mọi lúc, mọi nơi.\n\n![Dashboard quản trị Canary Historian](/images/news/canary-management.png)\n\n**3. Giá trị kinh tế (ROI)**\nĐầu tư vào Canary Historian mang lại những giá trị hữu hình ngay lập tức:\n\n> Giảm tới 30% chi phí bảo trì nhờ khả năng dự báo hỏng hóc sớm từ dữ liệu lịch sử.\n\n- Tối ưu hóa tiêu thụ năng lượng và nguyên vật liệu.\n- Bảo vệ đầu tư: Hệ thống mở, dễ dàng tích hợp với các nền tảng AI và Cloud sau này.\n\n**Kết luận**\nLựa chọn Canary Historian chính là lựa chọn một nền tảng vững chắc để doanh nghiệp sản xuất bứt phá và làm chủ cuộc chơi trong kỷ nguyên số.",
+    "faqs": [
+      {
+        "question": "Làm thế nào Canary Historian giúp tối ưu hóa OEE?",
+        "answer": "Canary cung cấp dữ liệu thời gian thực chính xác đến từng mili giây, giúp nhà quản lý nhận diện ngay lập tức các khoảng thời gian dừng máy (Downtime) và các nút thắt cổ chai trong dây chuyền."
+      },
+      {
+        "question": "Canary Historian có thể tích hợp với các hệ thống AI hiện có không?",
+        "answer": "Hoàn toàn có thể. Canary cung cấp các API mở (Web API, MQTT) giúp dữ liệu lịch sử được nạp trực tiếp vào các mô hình AI để phân tích dự báo."
+      }
+    ]
+  },
+  {
     "id": "fido2-passwordless-trend",
     "title": "Kỷ nguyên Passwordless: Tại sao FIDO2 là tương lai của bảo mật ngân hàng?",
     "date": "20/04/2026",

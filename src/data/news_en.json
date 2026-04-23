@@ -1,5 +1,24 @@
 [
   {
+    "id": "canary-historian-loi-the-canh-tranh",
+    "title": "Canary Historian: Turning Operational Data Into Competitive Advantage for Manufacturers",
+    "date": "23/04/2026",
+    "summary": "Why is Canary Historian the leading OT data storage solution for managers? Optimize OEE, reduce maintenance costs, and master real-time data.",
+    "category": "Industrial Data & IIoT",
+    "image": "/images/news/canary-management.png",
+    "content": "In the Industry 4.0 era, factory data is massive but often 'abandoned' or stored in fragments. This leaves managers without the 'eyes' to see operational optimization opportunities.\n\n**1. Management Challenges in the 4.0 Era**\nTraditional SQL Server systems are too slow and expensive to handle millions of data points per second. The biggest pain point is the lack of real-time information for quick decision-making.\n\n> With Canary Historian, data is no longer just soulless numbers; it becomes a strategic asset.\n\n**2. Canary Historian – The Solution for Performance**\nCanary is not just a database; it is a tool that helps management capture the full operational picture:\n\n- **Speed:** The ability to log 1.5 million variables/sec ensures no small equipment variation is missed.\n- **Persistent Storage:** Purpose-built NoSQL technology provides excellent data compression, storing decades of data with instant retrieval.\n- **Observability:** Automatic trends and reports help management track OEE (Overall Equipment Effectiveness) anytime, anywhere.\n\n![Canary Historian Management Dashboard](/images/news/canary-management.png)\n\n**3. Economic Value (ROI)**\nInvesting in Canary Historian delivers immediate tangible value:\n\n> Reduce maintenance costs by up to 30% through early failure prediction from historical data.\n\n- Optimize energy and raw material consumption.\n- Protect Investment: An open system, easily integrated with future AI and Cloud platforms.\n\n**Conclusion**\nChoosing Canary Historian is choosing a solid foundation for manufacturing businesses to break through and master the digital game.",
+    "faqs": [
+      {
+        "question": "How does Canary Historian help optimize OEE?",
+        "answer": "Canary provides millisecond-accurate real-time data, allowing managers to instantly identify equipment downtime and bottlenecks in the production line."
+      },
+      {
+        "question": "Can Canary Historian integrate with existing AI systems?",
+        "answer": "Absolutely. Canary provides open APIs (Web API, MQTT) to feed historical data directly into AI models for predictive analysis."
+      }
+    ]
+  },
+  {
     "id": "fido2-passwordless-trend",
     "title": "The Passwordless Era: Why FIDO2 is the Future of Banking Security?",
     "date": "2026-04-20",

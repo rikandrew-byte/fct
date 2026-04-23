@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, Tag, Share2, MessageSquare, ExternalLink, Globe } from "lucide-react";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { motion } from "framer-motion";
