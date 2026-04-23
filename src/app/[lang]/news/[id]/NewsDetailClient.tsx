@@ -7,6 +7,11 @@ import { motion } from "framer-motion";
 
 import TableOfContents from "@/components/TableOfContents";
 
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 interface Article {
   id: string;
   title: string;
@@ -15,6 +20,7 @@ interface Article {
   category: string;
   link: string;
   content: string;
+  faqs?: FAQ[]; // Thêm trường FAQ để AI-Ready
 }
 
 interface NewsDetailClientProps {
@@ -33,13 +39,35 @@ export default function NewsDetailClient({
   const d = dict.newsDetail;
   const commonDict = dict.common;
 
-  // Logic nhận diện tiêu đề giống như trong TOC component
+  // Logic render nội dung nâng cao (Hỗ trợ Heading, Image, List)
   const renderContent = (content: string) => {
     const lines = content.split('\n');
     return lines.map((line, index) => {
       const trimmed = line.trim();
       if (!trimmed) return <br key={index} />;
 
+      // 1. Nhận diện Hình ảnh (Format: ![Alt Text](url))
+      const imgMatch = trimmed.match(/!\[(.*?)\]\((.*?)\)/);
+      if (imgMatch) {
+        return (
+          <div key={index} className="my-12 space-y-3">
+            <div className="relative aspect-video rounded-[2rem] overflow-hidden border border-gray-100 shadow-2xl">
+              <Image 
+                src={imgMatch[2]} 
+                alt={imgMatch[1]} 
+                fill 
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="text-center text-xs font-bold text-gray-400 italic uppercase tracking-widest">
+              {imgMatch[1]}
+            </p>
+          </div>
+        );
+      }
+
+      // 2. Nhận diện Tiêu đề (AI-Ready Headings)
       const isHeader = 
         (trimmed.startsWith('**') && trimmed.endsWith('**') && trimmed.length < 100) || 
         /^\d+\.\s/.test(trimmed) || 
@@ -51,23 +79,55 @@ export default function NewsDetailClient({
           <h3 
             key={index} 
             id={`heading-${index}`}
-            className="text-2xl font-black text-gray-900 pt-8 pb-4 scroll-mt-32"
+            className="text-2xl md:text-3xl font-black text-gray-950 pt-10 pb-4 scroll-mt-32 tracking-tight"
           >
             {trimmed.replace(/\*\*/g, '')}
           </h3>
         );
       }
 
+      // 3. Nhận diện Danh sách
+      if (trimmed.startsWith('- ')) {
+        return (
+          <li key={index} className="ml-6 text-gray-700 font-light text-lg md:text-xl list-disc mb-2">
+            {trimmed.substring(2)}
+          </li>
+        );
+      }
+
+      // 4. Render Paragraph thường
       return (
-        <p key={index} className="text-gray-700 font-light leading-relaxed text-lg md:text-xl">
+        <p key={index} className="text-gray-700 font-light leading-relaxed text-lg md:text-xl mb-6">
           {line}
         </p>
       );
     });
   };
 
+  // Tạo FAQ Schema nếu có dữ liệu
+  const faqSchema = article.faqs ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": article.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+
   return (
     <main className="min-h-screen bg-white selection:bg-blue-600 selection:text-white">
+      {/* Nhúng FAQ Schema cho AI */}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      
       {/* ── Header Section ───────────────────── */}
       <section className="relative pt-24 pb-10 px-6 overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
