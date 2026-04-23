@@ -127,32 +127,32 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
         </div>
 
-        <div className="pt-5 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-200">
-          <div className="space-y-4 md:space-y-0 md:flex md:items-center md:gap-10">
-            <p className="text-sm font-medium uppercase tracking-widest leading-loose">
+        <div className="pt-5 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-200">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <p className="text-[11px] font-medium uppercase tracking-widest whitespace-nowrap">
               {d.copyright}
             </p>
             
             {/* Visitor Counter Badge */}
-            <div className="inline-flex items-center gap-4 bg-gray-900/50 border border-white/5 rounded-full px-5 py-2 backdrop-blur-sm shadow-inner group hover:border-blue-500/30 transition-all duration-500">
-              <div className="relative flex items-center">
+            <div className="inline-flex items-center gap-3 bg-gray-900/50 border border-white/5 rounded-full px-4 py-2 backdrop-blur-sm shadow-inner group hover:border-blue-500/30 transition-all duration-500">
+              <div className="relative flex items-center shrink-0">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
                 <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-40"></div>
               </div>
-              <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-sm text-slate-300">
-                <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
+              <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.1em] font-bold text-[10px] text-slate-300">
+                <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors whitespace-nowrap">
                   <span className="text-slate-200">{mounted ? onlineCount : '--'}</span> {d.visitorCounter.online}
                 </span>
-                <span className="pl-3 flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
+                <span className="pl-3 flex items-center gap-1.5 group-hover:text-blue-400 transition-colors whitespace-nowrap">
                    {d.visitorCounter.total}: <span className="text-slate-200">{mounted ? visitorCount.toLocaleString(lang === 'vi' ? 'vi-VN' : 'en-US') : '--'}</span>
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="flex gap-10 text-sm font-medium uppercase tracking-widest text-slate-400">
-            <Link href={`/${lang}/about`} className="hover:text-white transition-colors">{d.legal.privacy}</Link>
-            <Link href={`/${lang}/about`} className="hover:text-white transition-colors">{d.legal.terms}</Link>
+          <div className="flex gap-8 text-[11px] font-medium uppercase tracking-widest text-slate-400">
+            <Link href={`/${lang}/about`} className="hover:text-white transition-colors whitespace-nowrap">{d.legal.privacy}</Link>
+            <Link href={`/${lang}/about`} className="hover:text-white transition-colors whitespace-nowrap">{d.legal.terms}</Link>
           </div>
         </div>
       </div>
