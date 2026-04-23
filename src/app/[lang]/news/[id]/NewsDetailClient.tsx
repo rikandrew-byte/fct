@@ -19,14 +19,17 @@ interface Article {
   date: string;
   summary: string;
   category: string;
-  link: string;
+  link?: string;
   content: string;
-  faqs?: FAQ[]; // Thêm trường FAQ để AI-Ready
+  faqs?: FAQ[];
 }
 
 interface NewsDetailClientProps {
   lang: string;
-  dict: any;
+  dict: {
+    newsDetail: any;
+    common: any;
+  };
   article: Article;
   relatedNews: Article[];
 }
@@ -191,6 +194,7 @@ export default function NewsDetailClient({
 
             {/* Source Reference & Tags */}
             <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
+             {article.link && (
               <div className="flex items-center gap-4">
                 <span className="text-sm font-bold text-gray-400 italic">{d.source}:</span>
                 <a 
@@ -202,6 +206,7 @@ export default function NewsDetailClient({
                   fct.vn <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
+            )}
 
               <div className="flex items-center gap-3">
                 <button className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition-colors">

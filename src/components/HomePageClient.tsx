@@ -12,8 +12,20 @@ import NewsSection from "@/components/NewsSection";
 
 interface HomePageClientProps {
   lang: string;
-  dict: any;
-  latestNews: any[];
+  dict: {
+    hero: any;
+    trust: any;
+    solutions: any;
+    homeNews?: any;
+  };
+  latestNews: {
+    id: string;
+    title: string;
+    date: string;
+    summary: string;
+    category: string;
+    image?: string;
+  }[];
 }
 
 export default function HomePageClient({ lang, dict, latestNews }: HomePageClientProps) {

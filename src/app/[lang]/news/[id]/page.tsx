@@ -13,7 +13,7 @@ interface Article {
   date: string;
   summary: string;
   category: string;
-  link: string;
+  link?: string; // Tùy chọn để tránh lỗi build
   content: string;
 }
 
