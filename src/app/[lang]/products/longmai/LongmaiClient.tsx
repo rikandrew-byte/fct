@@ -9,8 +9,10 @@ import {
   Lock, 
   FileSignature, 
   CheckCircle2,
-  Server
+  Server,
+  ArrowRight
 } from "lucide-react";
+import Link from "next/link";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
@@ -253,6 +255,17 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
                   )}
                </motion.div>
             </div>
+            
+            {/* 🚀 NEW CTA UNDER BLUEPRINT */}
+            <div className="mt-10 flex justify-center">
+              <Link 
+                href={`/${lang}/contact?solution=longmai`}
+                className="military-panel px-10 py-4 bg-rose-950/50 text-white rounded-2xl font-bold text-xs uppercase tracking-widest hover:border-rose-500/50 transition-all flex items-center gap-3 border border-white/5 group shadow-2xl"
+              >
+                {isEn ? "Request Longmai Token Demo" : "Tư vấn Token Longmai"}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform text-rose-400" />
+              </Link>
+            </div>
          </motion.div>
       </section>
 
@@ -296,12 +309,13 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
                {isEn ? "Lock Down Your Workforce Access" : "Khóa chặt Quyền Truy cập Hệ Thống"}
             </h2>
             <div className="flex flex-wrap justify-center gap-6 pt-4 relative z-10">
-               <button 
-                 onClick={() => setIsModalOpen(true)}
-                 className="px-12 py-5 bg-rose-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(244,63,94,0.6)] hover:bg-rose-500 transition-all"
+               <Link 
+                 href={`/${lang}/contact?solution=longmai`}
+                 className="px-12 py-5 bg-rose-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(244,63,94,0.6)] hover:bg-rose-500 transition-all flex items-center gap-3"
                >
-                 {isEn ? "Deploy Hardware Tokens" : "Triển khai Token Ngay"}
-               </button>
+                 {isEn ? "Request Token Quote" : "Nhận báo giá Token"}
+                 <ArrowRight className="w-5 h-5" />
+               </Link>
             </div>
          </div>
 

@@ -9,8 +9,11 @@ import {
   TerminalSquare, 
   EyeOff, 
   Lock, 
-  ActivitySquare
+  ActivitySquare,
+  ArrowRight
 } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
@@ -260,6 +263,17 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
                   <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest">{isEn ? "OWASP Coverage" : "Chống lại chuẩn OWASP"}</p>
                </div>
             </div>
+
+            {/* 🚀 NEW CTA UNDER BLUEPRINT */}
+            <div className="mt-10 flex justify-center">
+              <Link 
+                href={`/${lang}/contact?solution=guardsquare`}
+                className="military-panel px-10 py-4 bg-sky-950/50 text-white rounded-2xl font-bold text-xs uppercase tracking-widest hover:border-sky-500/50 transition-all flex items-center gap-3 border border-white/5 group shadow-2xl"
+              >
+                {isEn ? "Experience DexGuard Demo" : "Yêu cầu Demo DexGuard"}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform text-sky-400" />
+              </Link>
+            </div>
          </div>
       </section>
 
@@ -270,12 +284,13 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
                {isEn ? "Ready to integrate The Invisible Shield?" : "Sẵn sàng phủ Tấm Khiên cho ứng dụng di động?"}
             </h2>
             <div className="flex flex-wrap justify-center gap-6 pt-4 relative z-10">
-               <button 
-                 onClick={() => setIsModalOpen(true)}
-                 className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(14,165,233,0.6)] hover:bg-sky-500 transition-all"
+               <Link 
+                 href={`/${lang}/contact?solution=guardsquare`}
+                 className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(14,165,233,0.6)] hover:bg-sky-500 transition-all flex items-center gap-3"
                >
-                 {isEn ? "Integrate Now" : "Tích hợp Ngay"}
-               </button>
+                 {isEn ? "Request DexGuard Demo" : "Yêu cầu Demo DexGuard"}
+                 <ArrowRight className="w-5 h-5" />
+               </Link>
             </div>
          </div>
 

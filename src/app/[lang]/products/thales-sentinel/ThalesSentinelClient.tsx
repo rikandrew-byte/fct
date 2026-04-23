@@ -15,6 +15,7 @@ import {
   Lock,
   ArrowRight
 } from "lucide-react";
+import Link from "next/link";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
@@ -253,6 +254,17 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                   )}
                </motion.div>
             </div>
+
+            {/* 🚀 NEW CTA UNDER BLUEPRINT */}
+            <div className="mt-10 flex justify-center">
+              <Link 
+                href={`/${lang}/contact?solution=thales`}
+                className="military-panel px-10 py-4 bg-blue-950/50 text-white rounded-2xl font-bold text-xs uppercase tracking-widest hover:border-blue-500/50 transition-all flex items-center gap-3 border border-white/5 group shadow-2xl"
+              >
+                {isEn ? "Request HSM/Sentinel Quote" : "Nhận báo giá tích hợp HSM"}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform text-blue-400" />
+              </Link>
+            </div>
          </motion.div>
       </section>
 
@@ -415,12 +427,13 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                }
             </p>
             <div className="flex flex-wrap justify-center gap-6 pt-4">
-               <button 
-                 onClick={() => setIsModalOpen(true)}
-                 className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all"
+               <Link 
+                 href={`/${lang}/contact?solution=thales`}
+                 className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all flex items-center gap-3"
                >
-                 {isEn ? "Consult with FCT" : "Tư vấn cùng FCT"}
-               </button>
+                 {isEn ? "Request Integration Quote" : "Nhận báo giá tích hợp"}
+                 <ArrowRight className="w-5 h-5" />
+               </Link>
             </div>
          </div>
 
