@@ -35,67 +35,33 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({ 
-  params 
-}: { params: Promise<{ slug: string, lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string, lang: string }> }): Promise<Metadata> {
   const { slug, lang: langRaw } = await params;
   const lang = langRaw as Locale;
   const newsDataRaw = lang === "en" ? newsEn : newsVi;
   const newsData = (newsDataRaw as any).default || newsDataRaw;
   
-  if (!Array.isArray(newsData)) {
-    return { title: "FCT Vinh Thinh .,JSC" };
-  }
+  if (!Array.isArray(newsData)) return {};
 
   const article = newsData.find((a) => a.id === slug);
-  const baseUrl = 'https://www.fct.vn';
-
-  if (!article) {
-    return {
-      title: lang === "en" ? "Article not found" : "Bài viết không tồn tại",
-    };
-  }
-
-  // CƠ CHẾ DYNAMIC METADATA & FALLBACK
-  const ogImageUrl = article.ogImage 
-    ? `${baseUrl}${article.ogImage}` 
-    : article.image 
-      ? `${baseUrl}${article.image}` 
-      : `${baseUrl}/logo.webp`;
+  if (!article) return {};
 
   return {
-    title: `${article.title} | FCT Vinh Thinh .,JSC`,
+    title: article.title,
     description: article.summary,
-    alternates: {
-      canonical: `${baseUrl}/${lang}/posts/${slug}`,
-      languages: {
-        'vi-VN': `${baseUrl}/vi/posts/${slug}`,
-        'en-US': `${baseUrl}/en/posts/${slug}`,
-      },
-    },
     openGraph: {
       title: article.title,
       description: article.summary,
-      url: `${baseUrl}/${lang}/posts/${slug}`,
-      siteName: 'FCT Vinh Thinh .,JSC',
-      locale: lang === 'vi' ? 'vi_VN' : 'en_US',
+      url: `https://fct.vn/${lang}/posts/${slug}`,
       type: 'article',
-      publishedTime: article.date,
-      authors: ['FCT Vinh Thinh .,JSC'],
       images: [
         {
-          url: ogImageUrl,
+          url: article.image || '/images/default-share.webp', 
           width: 1200,
           height: 630,
           alt: article.title,
         },
       ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: article.title,
-      description: article.summary,
-      images: [ogImageUrl],
     },
   };
 }

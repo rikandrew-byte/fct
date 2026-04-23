@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const baseUrl = "https://www.fct.vn";
   
   return {
+    metadataBase: new URL('https://fct.vn'), // Bắt buộc phải có dòng này
     title: {
-      default: dict.common.metaTitle,
+      default: 'FCT Vĩnh Thịnh - Giải pháp Bảo mật & Dữ liệu',
       template: `%s | FCT Vinh Thinh .,JSC`
     },
-    description: dict.common.metaDescription,
+    description: 'Chuyên gia cung cấp giải pháp Canary Historian, Thales, Guardsquare và Longmai.',
     keywords: dict.common.keywords,
-    metadataBase: new URL(baseUrl),
     alternates: {
       canonical: `/${lang}`,
       languages: {
