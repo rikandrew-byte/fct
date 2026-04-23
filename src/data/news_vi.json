@@ -75,6 +75,8 @@
     "date": "20/04/2026",
     "summary": "Tiêu chuẩn FIDO2 đang dần thay thế SMS OTP truyền thống để trở thành 'chốt chặn' an toàn nhất chống lại các cuộc tấn công Phishing tinh vi...",
     "category": "Bảo mật",
+    "image": "/images/posts/fido2-passwordless.webp",
+    "ogImage": "/images/posts/fido2-passwordless.webp",
     "link": "https://fct.vn/posts/fido2-passwordless-trend",
     "content": "Năm 2024 đánh dấu bước ngoặt lớn trong ngành bảo mật khi các tổ chức tài chính hàng đầu bắt đầu loại bỏ sự phụ thuộc vào mật khẩu và mã OTP qua tin nhắn (SMS OTP) – vốn dễ bị tấn công bằng kỹ thuật SIM swapping hoặc Phishing. Thay vào đó, tiêu chuẩn **FIDO2 (Fast Identity Online)** đang trở thành 'tiêu chuẩn vàng' mới.\n\nTại sao FIDO2 lại vượt trội?\n- **Chống Phishing tuyệt đối:** Khác với OTP, khóa FIDO2 thiết lập một mối liên kết mã hóa duy nhất giữa thiết bị phần cứng và website chính thức. Kẻ tấn công không thể lừa người dùng cung cấp 'mã' vì mọi giao tiếp đều được xử lý bằng cặp khóa công khai/bí mật trong chip bảo mật.\n- **Trải nghiệm Passkey:** Người dùng có thể đăng nhập chỉ bằng một cú chạm vào USB Dongle mà không cần nhớ những dãy mật khẩu phức tạp.\n\n**FCT Vĩnh Thịnh** hiện đang cung cấp các dòng **FCT Token** hỗ trợ đầy đủ chuẩn FIDO2/L2, giúp các ngân hàng và doanh nghiệp tại Việt Nam triển khai hạ tầng xác thực không mật khẩu (Passwordless) một cách nhanh chóng và tuân thủ các quy định bảo mật quốc tế."
   },
@@ -84,6 +86,8 @@
     "date": "19/04/2026",
     "summary": "Xu hướng tích hợp cảm biến vân tay trực tiếp lên khóa cứng USB giúp ngăn chặn việc sử dụng trái phép ngay cả khi thiết bị vật lý bị thất lạc...",
     "category": "Bảo mật",
+    "image": "/images/posts/biometric-usb-security.webp",
+    "ogImage": "/images/posts/biometric-usb-security.webp",
     "link": "https://fct.vn/posts/biometric-usb-security",
     "content": "Trong danh mục các thiết bị bảo mật phần cứng, các dòng **USB Dongle sinh trắc học (Biometric Keys)** đang dẫn đầu xu hướng năm 2025. Đây là giải pháp kết hợp hoàn hảo giữa 'Thứ bạn có' (khóa vật lý) và 'Thứ bạn là' (vân tay người dùng).\n\nSự khác biệt nằm ở cơ chế **On-device Processing**:\n- Dữ liệu vân tay không bao giờ được gửi lên máy tính hay đám mây. Mọi quá trình so khớp đều diễn ra bên trong bộ xử lý an toàn (Secure Element) của chính chiếc USB.\n- Ngay cả khi hacker lấy trộm được khóa, họ cũng không thể kích hoạt chức năng xác thực nếu không có vân tay chính chủ.\n\nGiải pháp này đặc biệt quan trọng cho các vị trí nhân sự cấp cao, quản trị hệ thống (System Admin) hoặc các kỹ sư vận hành nhà máy (OT Security) – những người nắm giữ quyền truy cập vào các hạ tầng trọng yếu. Việc sử dụng khóa sinh trắc học hiện được FCT Vĩnh Thịnh khuyến nghị như một lớp 'chốt chặn' cuối cùng để bảo vệ danh tính số của doanh nghiệp."
   },
@@ -93,6 +97,8 @@
     "date": "18/04/2026",
     "summary": "Trong thời đại SaaS, việc sử dụng USB Dongle (khóa cứng) kết hợp với quản lý Cloud đang tạo ra một tiêu chuẩn mới cho các phần mềm công nghiệp giá trị cao...",
     "category": "Giải pháp",
+    "image": "/images/posts/hybrid-software-protection.webp",
+    "ogImage": "/images/posts/hybrid-software-protection.webp",
     "link": "https://fct.vn/posts/hybrid-software-protection",
     "content": "Nhiều người lầm tưởng rằng sự phát triển của Cloud sẽ khai tử các dòng khóa cứng (USB Dongle). Tuy nhiên, trên thực tế, thị trường **Phần mềm chuyên dụng (Engineering, Medical, Media)** lại đang chứng kiến sự trỗi dậy của mô hình **Hybrid Licensing**.\n\nTại sao USB Dongle vẫn không thể thay thế?\n- **Bảo mật ngoại tuyến (Cold Storage):** Với những phần mềm chạy trong môi trường không có internet (mạng LAN nội bộ nhà máy), USB Dongle là phương thức duy nhất để xác thực bản quyền mà không làm rò rỉ dữ liệu ra ngoài.\n- **Chống bẻ khóa (Anti-crack):** Chip bảo mật trên các dòng khóa như **Sentinel LDK** có khả năng thực thi một phần mã nguồn của phần mềm bên trong khóa, khiến việc crack phần mềm trở nên bất khả thi dù hacker có can thiệp vào bộ nhớ máy tính.\n\nMô hình Hybrid mà FCT Vĩnh Thịnh triển khai cho phép doanh nghiệp vừa cấp phép linh hoạt qua Cloud cho các tính năng dùng thử, vừa sử dụng USB Dongle để khóa các mô-đun quan trọng nhất. Đây là chiến lược giúp các nhà phát triển phần mềm (ISVs) tối ưu hóa doanh thu và bảo vệ tài sản trí tuệ một cách bền vững nhất."
   },
@@ -102,6 +108,8 @@
     "date": "13/12/2024",
     "summary": "Canary Labs là một công ty công nghệ có bề dày lịch sử, được thành lập vào năm 1985. Mặc dù tên tuổi có thể không quá phổ biến với công chúng, nhưng công...",
     "category": "Giải pháp",
+    "image": "/images/posts/canary-labs-company.webp",
+    "ogImage": "/images/posts/canary-labs-company.webp",
     "link": "https://fct.vn/canary-labs.html",
     "content": "Canary Labs, được thành lập từ năm 1985 tại Pennsylvania (Mỹ), là một trong những đơn vị tiên phong toàn cầu trong việc cung cấp các giải pháp quản trị dữ liệu công nghiệp (Operational Data). Với hơn 35 năm kinh nghiệm, Canary đã khẳng định vị thế là 'xương sống' cho hạ tầng dữ liệu của các nhà máy hiện đại, giúp giải quyết bài toán thu thập và lưu trữ hàng triệu điểm dữ liệu (tags) từ các nhà máy SCADA, PLC hay cảm biến IoT.\n\nSản phẩm cốt lõi của họ là **Canary System**, bao gồm ba thành phần chính đột phá:\n\n- **Canary Historian:** Công cụ lưu trữ dữ liệu thời gian thực với tốc độ cực cao, có khả năng xử lý hàng triệu thay đổi mỗi giây mà không làm suy giảm hiệu suất hệ thống.\n- **Canary Axiom:** Một công cụ hiển thị và phân tích dữ liệu trực quan dành cho các kỹ sư, cho phép tạo biểu đồ xu hướng (trends) và báo cáo vận hành mà không cần kiến thức lập trình.\n- **Canary Collectors:** Giúp kết nối liền mạch với các hệ thống điều khiển thông qua các giao thức chuẩn như OPC UA, MQTT và SQL.\n\nTại Việt Nam, **FCT Vĩnh Thịnh** là đối tác chiến lược triển khai giải pháp Canary nhằm hỗ trợ các doanh nghiệp sản xuất thực hiện chuyển đổi số (Smart Factory). Việc áp dụng hệ thống Canary giúp các nhà máy không chỉ dừng lại ở việc xem dữ liệu quá khứ mà còn tiến tới bảo trì dự báo (predictive maintenance) và tối ưu hóa chi phí vận hành dựa trên dữ liệu thực tế."
   },
@@ -111,6 +119,8 @@
     "date": "03/12/2024",
     "summary": "Google đã giới thiệu tính năng bảo vệ chống nhìn trộm màn hình mới trên Android 15, giúp ngăn chặn k? tấn công thu thập thông tin nhạy cảm...",
     "category": "Bảo mật",
+    "image": "/images/posts/android-15-security.webp",
+    "ogImage": "/images/posts/android-15-security.webp",
     "link": "https://fct.vn/posts/android-15-security",
     "content": "Với sự ra mắt của Android 15, Google đã nâng cấp đáng kể khả năng bảo mật quyền riêng tư của người dùng thông qua tính năng **'Screen Leak Protection'**. Đây là giải pháp trực tiếp đối phó với các ứng dụng độc hại sử dụng kỹ thuật ghi màn hình hoặc chụp ảnh màn hình để đánh cắp mã OTP, mật khẩu ngân hàng hoặc thông tin cá nhân.\n\nCơ chế hoạt động:\n- Khi một ứng dụng được xác định là đang xử lý dữ liệu nhạy cảm (như ứng dụng ngân hàng hoặc ví điện tử), Android 15 sẽ tự động làm trống nội dung đối với bất kỳ trình ghi màn hình bên thứ ba nào đang chạy ngầm.\n- Hệ thống cũng cảnh báo người dùng nếu có ứng dụng nào đang cố gắng cast màn hình ra thiết bị bên ngoài mà chưa được phép.\n\nĐây là một bước tiến quan trọng, tuy nhiên các chuyên gia từ FCT Vĩnh Thịnh vẫn khuyến nghị người dùng nên kết hợp với các giải pháp bảo mật phần cứng như Token để đảm bảo an toàn tuyệt đối, vì bảo mật phần mềm luôn có những kẽ hở tiềm ẩn."
   },
@@ -120,6 +130,8 @@
     "date": "28/11/2024",
     "summary": "Khám phá những xu hướng mới nhất trong việc bảo vệ tài sản trí tuệ và quản lý bản quyền phần mềm dành cho các nhà phát triển (ISV)...",
     "category": "Giải pháp",
+    "image": "/images/posts/software-protection-2025.webp",
+    "ogImage": "/images/posts/software-protection-2025.webp",
     "link": "https://fct.vn/posts/software-protection-2025",
     "content": "Bước sang năm 2025, ngành công nghiệp phần mềm đang chứng kiến những thay đổi mạnh mẽ trong cách thức bảo vệ và kinh doanh bản quyền. Không còn chỉ là việc ngăn chặn crack, bảo vệ bản quyền giờ đây là về **Kiếm tiền từ phần mềm (Software Monetization)**.\n\nCác xu hướng chủ đạo:\n1. **Licensing-as-a-Service (LaaS):** Quản lý toàn bộ vòng đời bản quyền thông qua đám mây, cho phép kích hoạt, nâng cấp và gia hạn chỉ trong vài giây.\n2. **Consumption-based Pricing:** Đo lường mức độ sử dụng thực tế của người dùng để tính phí chính xác (Pay-per-use), giúp các ISV dễ dàng tiếp cận khách hàng có ngân sách hạn chế.\n3. **AI-driven Protection:** Sử dụng trí tuệ nhân tạo để phân tích các hành vi sử dụng đáng ngờ, từ đó phát hiện sớm các nỗ lực bẻ khóa hoặc sử dụng chung tài khoản trái phép.\n\nFCT Vĩnh Thịnh luôn đồng hành cùng các nhà phát triển phần mềm Việt Nam để triển khai những công nghệ mới nhất từ Thales Sentinel, giúp biến bảo mật thành lợi thế cạnh tranh và công cụ tăng trưởng doanh thu."
   },
@@ -129,6 +141,8 @@
     "date": "20/11/2024",
     "summary": "Nhìn lại hành trình 15 năm hình thành và phát triển của Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh trong lĩnh vực bảo mật và phần mềm...",
     "category": "Tin tức",
+    "image": "/images/posts/fct-history.webp",
+    "ogImage": "/images/posts/fct-history.webp",
     "link": "https://fct.vn/ve-fct-vinh-thinh.html",
     "content": "Được thành lập từ những năm đầu của thập kỷ trước, **FCT Vĩnh Thịnh** đã trải qua hành trình 15 năm đầy thử thách và tự hào. Từ một đơn vị cung cấp linh kiện phần cứng, chúng tôi đã vươn mình trở thành đối tác chiến lược hàng đầu của các tập đoàn công nghệ lớn trên thế giới như Thales, Guardsquare và Canary Labs.\n\nCác dấu mốc quan trọng:\n- **Giai đoạn khởi đầu:** Tập trung vào các giải pháp khóa cứng bảo vệ bản quyền, đặt nền móng cho khái niệm Software Protection tại thị trường Việt Nam.\n- **Giai đoạn bứt phá:** Mở rộng sang lĩnh vực bảo mật di động và dữ liệu công nghiệp, đồng hành cùng các ngân hàng và nhà máy lớn trong quá trình số hóa.\n- **Giai đoạn vươn tầm:** Tích hợp AI và các giải pháp bảo mật đám mây vào hệ sinh thái sản phẩm, hướng tới mục tiêu trở thành nhà tư vấn bảo mật toàn diện cho doanh nghiệp.\n\nVới tôn chỉ 'Tận tâm - Chuyên nghiệp - Sáng tạo', FCT Vĩnh Thịnh cam kết tiếp tục mang đến những giá trị thực chất nhất cho khách hàng, đóng góp vào sự an toàn và phồn vinh của nền kinh tế số Việt Nam."
   },
@@ -138,6 +152,8 @@
     "date": "30/11/2023",
     "summary": "FCT Vĩnh Thịnh tổ chức chuỗi sự kiện nâng cao nhận thức bảo mật và ưu đãi đặc biệt cho các giải pháp khóa cứng nhân Ngày An ninh mạng...",
     "category": "Sự kiện",
+    "image": "/images/posts/world-security-day.webp",
+    "ogImage": "/images/posts/world-security-day.webp",
     "link": "https://fct.vn/posts/world-security-day",
     "content": "Hàng năm, ngày 30/11 được chọn là **Ngày An ninh mạng Thế giới (Computer Security Day)**. Đây là dịp để các tổ chức và cá nhân nhìn lại và nâng cao ý thức bảo vệ thông tin trong môi trường số ngày càng phức tạp.\n\nNhân dịp này, FCT Vĩnh Thịnh phát động chiến dịch 'Làm sạch không gian số doanh nghiệp' với các hoạt động:\n- Hội thảo trực tuyến về xu hướng bảo mật Zero Trust và Passwordless.\n- Chương trình kiểm tra sức khỏe hệ thống miễn phí cho các đối tác hiện tại.\n- Ưu đãi lên tới 20% cho các đơn hàng khóa bảo mật FIDO2 và Sentinel HL.\n\nChúng tôi tin rằng, một nền kinh tế mạnh phải được xây dựng trên một nền tảng an toàn. Hãy cùng FCT Vĩnh Thịnh xây dựng những viên gạch bảo mật đầu tiên cho doanh nghiệp của bạn ngay hôm nay."
   },
@@ -147,6 +163,8 @@
     "date": "20/07/2022",
     "summary": "Sử dụng thiết b? OTP Token cầm tay là phương pháp hiệu quả nhất ?ể bảo v? tài khoản ngân hàng và các giao dịch giá tr? lớn...",
     "category": "Bảo mật",
+    "image": "/images/posts/otp-token-banking.webp",
+    "ogImage": "/images/posts/otp-token-banking.webp",
     "link": "https://fct.vn/tang-cuong-bao-mat-cho-cac-giao-dich-truc-tuyen-bang-otp-token.html",
     "content": "Mặc dù Smart OTP trên điện thoại đang trở nên phổ biến, nhưng đối với các giao dịch tài chính có giá trị cực lớn hoặc các hệ thống quản trị nội bộ nhạy cảm, **Hardware OTP Token** vẫn là sự lựa chọn ưu tiên hàng đầu của các chuyên gia bảo mật.\n\nƯu điểm vượt trội của Hardware Token:\n- **Cách ly hoàn toàn:** Thiết bị hoạt động độc lập, không kết nối internet, không Bluetooth, do đó không thể bị tấn công từ xa qua mạng.\n- **Độ bền cao:** Thời lượng pin có thể lên tới 3-5 năm, luôn sẵn sàng tạo mã mà không cần lo lắng về việc sạc pin hay mất sóng điện thoại.\n- **Tính tuân thủ:** Đáp ứng các tiêu chuẩn khắt khe nhất của Ngân hàng Nhà nước về an toàn bảo mật trong thanh toán trực tuyến.\n\nFCT Vĩnh Thịnh hiện cung cấp đa dạng các dòng Token với màn hình LCD hiển thị sắc nét, nút bấm bền bỉ, mang lại sự an tâm tuyệt đối cho khách hàng trong từng giao dịch."
   },
