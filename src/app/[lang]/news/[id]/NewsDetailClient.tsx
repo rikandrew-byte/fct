@@ -95,7 +95,18 @@ export default function NewsDetailClient({
         );
       }
 
-      // 4. Render Paragraph thường
+      // 4. Nhận diện Blockquote (Trích dẫn Quản lý)
+      if (trimmed.startsWith('> ')) {
+        return (
+          <blockquote key={index} className="my-10 pl-8 border-l-4 border-blue-600 italic">
+            <p className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+              {trimmed.substring(2)}
+            </p>
+          </blockquote>
+        );
+      }
+
+      // 5. Render Paragraph thường
       return (
         <p key={index} className="text-gray-700 font-light leading-relaxed text-lg md:text-xl mb-6">
           {line}
