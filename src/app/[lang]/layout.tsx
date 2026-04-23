@@ -23,10 +23,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
-  const baseUrl = "https://www.fct.vn";
+  const baseUrl = "https://fct.vn";
   
   return {
-    metadataBase: new URL('https://fct.vn'), // Bắt buộc phải có dòng này
+    metadataBase: new URL(baseUrl),
     title: {
       default: 'FCT Vĩnh Thịnh - Giải pháp Bảo mật & Dữ liệu',
       template: `%s | FCT Vinh Thinh .,JSC`
@@ -34,10 +34,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: 'Chuyên gia cung cấp giải pháp Canary Historian, Thales, Guardsquare và Longmai.',
     keywords: dict.common.keywords,
     alternates: {
-      canonical: `/${lang}`,
+      canonical: `${baseUrl}/${lang}`,
       languages: {
-        "vi-VN": "/vi",
-        "en-US": "/en",
+        "vi-VN": `${baseUrl}/vi`,
+        "en-US": `${baseUrl}/en`,
       },
     },
     openGraph: {
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       card: "summary_large_image",
       title: dict.common.metaTitle,
       description: dict.common.metaDescription,
-      images: ["/og-image.png"],
+      images: ["/og-image.webp"],
     },
     robots: {
       index: true,
