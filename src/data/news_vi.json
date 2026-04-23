@@ -1,5 +1,24 @@
 [
   {
+    "id": "guardsquare-bao-ve-ung-dung-di-dong-doanh-nghiep",
+    "title": "Bảo mật Ứng dụng Di động: Lớp Giáp Cuối Cùng Bảo Vệ Tài Sản Doanh Nghiệp",
+    "date": "23/04/2026",
+    "summary": "Tại sao bảo mật ứng dụng di động là ưu tiên hàng đầu của doanh nghiệp? Tìm hiểu giải pháp Guardsquare chống dịch ngược và bảo vệ dữ liệu App chuyên sâu.",
+    "category": "Mobile App Security",
+    "image": "/images/news/guardsquare-shield.webp",
+    "content": "Trong kỷ nguyên App-First, ứng dụng di động chính là bộ mặt của doanh nghiệp. Tuy nhiên, đây cũng là nơi dễ bị tổn thương nhất trước các cuộc tấn công dịch ngược và đánh cắp dữ liệu. Guardsquare xuất hiện như một lời giải hoàn hảo cho lớp giáp bảo mật này.\n\n**1. Tại sao App doanh nghiệp là 'mồi ngon' cho Hacker?**\nHacker dễ dàng đọc hiểu logic kinh doanh và tìm ra lỗ hổng nếu code không được bảo vệ. Ứng dụng chạy trên thiết bị người dùng (đã root/jailbreak) là môi trường đầy rẫy rủi ro.\n\n> Một vụ rò rỉ dữ liệu từ App có thể phá hủy uy tín tích lũy hàng chục năm của doanh nghiệp.\n\n**2. Guardsquare – Sự kết hợp giữa Đa hình hóa và Tự bảo vệ**\nGuardsquare không chỉ là một công cụ, đó là một chiến lược phòng thủ toàn diện:\n\n- **Làm rối mã nguồn (Obfuscation):** Biến cấu trúc mã nguồn thành một 'mê cung' không thể đọc hiểu, khiến việc dịch ngược trở nên bất khả thi.\n- **Tự bảo vệ ứng dụng (RASP):** Tích hợp khả năng tự phát hiện các mối đe dọa ngay khi đang chạy (Runtime). Nếu App bị tấn công hoặc chạy trên môi trường nguy hiểm, nó sẽ tự động kích hoạt chế độ phòng vệ.\n- **Tuân thủ tiêu chuẩn:** Giúp doanh nghiệp dễ dàng đạt được các chứng chỉ bảo mật khắt khe như PCI DSS hay OWASP.\n\n![Giải pháp bảo mật Guardsquare](/images/news/guardsquare-shield.webp)\n\n**3. Lợi ích chiến lược cho nhà quản lý**\nĐầu tư vào Guardsquare mang lại giá trị bền vững cho lộ trình số hóa:\n\n- **Bảo vệ tài sản trí tuệ:** Giữ kín các thuật toán và logic kinh doanh độc quyền.\n- **Giảm thiểu thiệt hại tài chính:** Ngăn chặn các hành vi gian lận, hack tiền trong ứng dụng.\n- **Xây dựng niềm tin tuyệt đối:** Khẳng định với khách hàng rằng dữ liệu của họ đang được bảo vệ bởi công nghệ hàng đầu thế giới.\n\n**Lời kết**\nĐầu tư vào bảo mật ứng dụng với Guardsquare không phải là chi phí, mà là khoản bảo hiểm thông minh cho sự phát triển bền vững của doanh nghiệp trong kỷ nguyên số.",
+    "faqs": [
+      {
+        "question": "Guardsquare khác gì với các công cụ bảo mật thông thường?",
+        "answer": "Guardsquare tích hợp sâu vào quá trình biên dịch (compiler), tạo ra lớp bảo vệ đa hình không thể bị gỡ bỏ, khác với các giải pháp 'app-wrapping' thông thường."
+      },
+      {
+        "question": "Làm rối mã nguồn (Obfuscation) có làm giảm hiệu năng ứng dụng không?",
+        "answer": "Không. Các kỹ thuật của Guardsquare được tối ưu để bảo vệ code mà không gây ảnh hưởng đáng kể đến tốc độ trải nghiệm của người dùng cuối."
+      }
+    ]
+  },
+  {
     "id": "canary-historian-loi-the-canh-tranh",
     "title": "Canary Historian: Biến Dữ Liệu Vận Hành Thành Lợi Thế Cạnh Tranh Cho Doanh Nghiệp Sản Xuất",
     "date": "23/04/2026",

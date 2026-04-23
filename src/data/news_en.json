@@ -1,5 +1,24 @@
 [
   {
+    "id": "guardsquare-bao-ve-ung-dung-di-dong-doanh-nghiep",
+    "title": "Mobile App Security: The Final Shield Protecting Corporate Assets",
+    "date": "23/04/2026",
+    "summary": "Why is mobile app security a top corporate priority? Explore Guardsquare's deep protection and anti-reverse engineering solutions for critical apps.",
+    "category": "Mobile App Security",
+    "image": "/images/news/guardsquare-shield.webp",
+    "content": "In the App-First era, mobile applications are the face of the business. However, they are also the most vulnerable point for reverse engineering and data theft. Guardsquare emerges as the perfect solution for this security shield.\n\n**1. Why are Enterprise Apps 'Easy Targets' for Hackers?**\nHackers can easily understand business logic and find vulnerabilities if the code is not protected. Apps running on user devices (rooted/jailbroken) represent a high-risk environment.\n\n> A single data leak from an App can destroy a reputation built over decades.\n\n**2. Guardsquare – A Combination of Polymorphism and Self-Protection**\nGuardsquare is not just a tool; it is a comprehensive defense strategy:\n\n- **Code Obfuscation:** Transforms the source code structure into an undecipherable 'maze,' making reverse engineering impossible.\n- **Runtime Application Self-Protection (RASP):** Integrates the ability to detect threats during execution. if an App is attacked or runs in a dangerous environment, it automatically triggers defense modes.\n- **Compliance:** Helps businesses easily achieve strict security certifications such as PCI DSS or OWASP.\n\n![Guardsquare Security Solution](/images/news/guardsquare-shield.webp)\n\n**3. Strategic Benefits for Managers**\nInvesting in Guardsquare delivers sustainable value for the digital roadmap:\n\n- **Protect Intellectual Property:** Keeps proprietary algorithms and business logic secret.\n- **Minimize Financial Loss:** Prevents fraud and in-app currency hacking.\n- **Build Absolute Trust:** Assures customers that their data is protected by world-leading technology.\n\n**Conclusion**\nInvesting in mobile app security with Guardsquare is not a cost, but a smart insurance policy for the sustainable growth of the enterprise in the digital age.",
+    "faqs": [
+      {
+        "question": "How does Guardsquare differ from standard security tools?",
+        "answer": "Guardsquare integrates deeply into the compiler process, creating a polymorphic protection layer that cannot be stripped away, unlike traditional 'app-wrapping' solutions."
+      },
+      {
+        "question": "Does Obfuscation affect app performance?",
+        "answer": "No. Guardsquare's techniques are optimized to protect code without significantly impacting the end-user experience or performance."
+      }
+    ]
+  },
+  {
     "id": "canary-historian-loi-the-canh-tranh",
     "title": "Canary Historian: Turning Operational Data Into Competitive Advantage for Manufacturers",
     "date": "23/04/2026",
