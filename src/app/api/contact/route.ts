@@ -1,7 +1,14 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Khởi tạo lười để tránh lỗi Build khi thiếu API Key
+let resend: Resend | null = null;
+const getResend = () => {
+  if (!resend && process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+};
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'andrew@fct.vn';
@@ -51,8 +58,9 @@ export async function POST(request: Request) {
     }
 
     // 2. Send Email via Resend
-    if (process.env.RESEND_API_KEY) {
-      const emailRes = await resend.emails.send({
+    const resendInstance = getResend();
+    if (resendInstance) {
+      const emailRes = await resendInstance.emails.send({
         from: 'FCT Website <system@fct.vn>',
         to: CONTACT_EMAIL,
         subject: `[FCT Website] Yêu cầu từ ${fullName || 'Khách hàng'}`,
