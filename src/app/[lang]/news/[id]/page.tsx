@@ -15,6 +15,7 @@ interface Article {
   category: string;
   link?: string; // Tùy chọn để tránh lỗi build
   image?: string;
+  ogImage?: string;
   content: string;
 }
 
@@ -46,7 +47,7 @@ export async function generateMetadata({
     };
   }
 
-  const ogImageUrl = article.image ? `${baseUrl}${article.image}` : `${baseUrl}/og-image.png`;
+  const ogImageUrl = article.ogImage ? `${baseUrl}${article.ogImage}` : article.image ? `${baseUrl}${article.image}` : `${baseUrl}/og-image.png`;
 
   return {
     title: `${article.title} | FCT Vinh Thinh .,JSC`,
