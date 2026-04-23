@@ -38,7 +38,7 @@ export default function Footer({ lang, dict }: FooterProps) {
   }, []);
 
   return (
-    <footer className="bg-gray-950 pt-8 md:pt-12 pb-6 border-t border-gray-900 text-gray-500">
+    <footer className="bg-gray-950 pt-6 md:pt-8 pb-4 border-t border-gray-900 text-slate-400">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-10">
           {/* Cột 1: Brand */}
@@ -51,7 +51,7 @@ export default function Footer({ lang, dict }: FooterProps) {
                 height={56} 
                 className="brightness-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
               />
-              <span className="font-bold text-2xl text-white tracking-tight">FCT Vinh Thinh .,JSC</span>
+              <span className="font-bold text-2xl text-slate-200 tracking-tight">FCT Vinh Thinh .,JSC</span>
             </Link>
             <p className="text-sm font-light leading-relaxed">
               {d.brandDescription}
@@ -74,7 +74,7 @@ export default function Footer({ lang, dict }: FooterProps) {
 
           {/* Cột 2: Tin tức và bài viết */}
           <div>
-            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">{d.columns.news}</h4>
+            <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.news}</h4>
             <ul className="space-y-4 text-sm font-light">
               <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.newsArticles.softProtection}</Link></li>
               <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.newsArticles.mobileSecurity}</Link></li>
@@ -85,7 +85,7 @@ export default function Footer({ lang, dict }: FooterProps) {
 
           {/* Cột 3: Công ty */}
           <div>
-            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
+            <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
             <ul className="space-y-6 text-sm font-light">
               <li><Link href={`/${lang}/about`} className="hover:text-blue-500 transition-colors">{dict.navbar.about}</Link></li>
               <li><Link href={`/${lang}/contact`} className="hover:text-blue-500 transition-colors">{dict.navbar.contact}</Link></li>
@@ -95,15 +95,15 @@ export default function Footer({ lang, dict }: FooterProps) {
 
           {/* Cột 4: Liên hệ */}
           <div>
-            <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">{d.columns.contact}</h4>
+            <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.contact}</h4>
             <ul className="space-y-5 text-sm font-light">
               <li className="flex gap-4">
                 <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-blue-500" />
                 </div>
                 <div>
-                  <p className="text-gray-300 font-medium">{d.contactLines.headquarters}</p>
-                  <p className="text-[13px] opacity-70">{d.hqAddress}</p>
+                  <p className="text-slate-200 font-medium">{d.contactLines.headquarters}</p>
+                  <p className="text-sm">{d.hqAddress}</p>
                 </div>
               </li>
               <li className="flex gap-4 items-center">
@@ -111,8 +111,8 @@ export default function Footer({ lang, dict }: FooterProps) {
                   <Phone className="w-5 h-5 text-blue-500" />
                 </div>
                 <div>
-                  <p className="text-gray-300 font-medium">{d.contactLines.hotline}</p>
-                  <p className="text-[13px] opacity-70">0983 027 776</p>
+                  <p className="text-slate-200 font-medium">{d.contactLines.hotline}</p>
+                  <p className="text-sm">0983 027 776</p>
                 </div>
               </li>
               <li className="flex gap-4 items-center">
@@ -120,8 +120,8 @@ export default function Footer({ lang, dict }: FooterProps) {
                   <Mail className="w-5 h-5 text-blue-500" />
                 </div>
                 <div>
-                  <p className="text-gray-300 font-medium">{d.contactLines.supportEmail}</p>
-                  <p className="text-[13px] opacity-70">andrew@fct.vn</p>
+                  <p className="text-slate-200 font-medium">{d.contactLines.supportEmail}</p>
+                  <p className="text-sm">andrew@fct.vn</p>
                 </div>
               </li>
             </ul>
@@ -130,7 +130,7 @@ export default function Footer({ lang, dict }: FooterProps) {
 
         <div className="pt-5 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="space-y-4 md:space-y-0 md:flex md:items-center md:gap-10">
-            <p className="text-[11px] font-medium uppercase tracking-widest leading-loose">
+            <p className="text-sm font-medium uppercase tracking-widest leading-loose text-slate-400">
               {d.copyright}
             </p>
             
@@ -140,7 +140,7 @@ export default function Footer({ lang, dict }: FooterProps) {
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
                 <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-40"></div>
               </div>
-              <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-[9px] text-gray-400">
+              <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-sm text-slate-400">
                 <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
                   <span className="text-white">{mounted ? onlineCount : '--'}</span> {d.visitorCounter.online}
                 </span>
@@ -151,7 +151,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             </div>
           </div>
 
-          <div className="flex gap-10 text-[11px] font-medium uppercase tracking-widest">
+          <div className="flex gap-10 text-sm font-medium uppercase tracking-widest text-slate-400">
             <Link href={`/${lang}/about`} className="hover:text-white transition-colors">{d.legal.privacy}</Link>
             <Link href={`/${lang}/about`} className="hover:text-white transition-colors">{d.legal.terms}</Link>
           </div>
