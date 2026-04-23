@@ -152,10 +152,10 @@
   {
     "id": "canary-historian",
     "name": "Canary Collectors / Historian",
-    "category": "Canary Labs",
+    "category": "Industrial Data & IIoT",
     "image": "/images/products/canary-historian.jpg",
-    "summary": "High-performance multi-source industrial data collection and real-time historical analysis system.",
-    "description": "Canary Collectors/Historian is a high-performance industrial data (IIoT) collection and storage solution. It captures data from various sources including OPC UA/DA, MQTT, and diverse SCADA solutions. Data is stored in Canary Historian with advanced compression for real-time querying and analysis—ideal for factories and industrial automation systems.",
+    "summary": "World-leading Industrial Data Historian with 1.5 million writes/sec and 35 years of expertise.",
+    "description": "Canary Labs provides high-performance Industrial Data Historian and IIoT solutions with over 19,000 deployments worldwide. Capable of handling 1.5 million writes per second, it supports OPC UA, MQTT, and features the Axiom Dashboard for real-time analytics. With 35 years of time-series data optimization, Canary empowers factories to maximize efficiency and achieve comprehensive IIoT digital transformation.",
     "isNew": true,
     "link": "https://fct.vn/canary1.html"
   },

@@ -112,6 +112,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                         <Link href={`/${lang}/products/guardsquare`} className="px-4 py-2 hover:bg-white/5 rounded-xl text-gray-300 hover:text-sky-400 text-sm font-semibold transition-colors flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Guardsquare
                         </Link>
+                        <Link href={`/${lang}/products/canary-labs`} className="px-4 py-2 hover:bg-white/5 rounded-xl text-gray-300 hover:text-amber-400 text-sm font-semibold transition-colors flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Canary Labs
+                        </Link>
                         <Link href={`/${lang}/products/longmai`} className="px-4 py-2 hover:bg-white/5 rounded-xl text-gray-300 hover:text-rose-400 text-sm font-semibold transition-colors flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>Longmai
                         </Link>
@@ -166,6 +169,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                       <div className="flex flex-col gap-2 pl-4 pb-3">
                         <Link href={`/${lang}/products/thales-sentinel`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-blue-400 text-base font-semibold">Thales Sentinel</Link>
                         <Link href={`/${lang}/products/guardsquare`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-sky-400 text-base font-semibold">Guardsquare</Link>
+                        <Link href={`/${lang}/products/canary-labs`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-amber-400 text-base font-semibold">Canary Labs</Link>
                         <Link href={`/${lang}/products/longmai`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-rose-400 text-base font-semibold">Longmai</Link>
                       </div>
                     )}

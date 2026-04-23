@@ -79,7 +79,7 @@ const categoryConfig: Record<
     dot:          "bg-sky-500",
     imgRingColor: "ring-sky-100",
   },
-  "Canary Labs": {
+  "Industrial Data & IIoT": {
     badgeBg:      "bg-amber-500 text-white",
     iconBg:       "bg-amber-50",
     iconColor:    "text-amber-600",
@@ -127,12 +127,23 @@ const productIcons: Record<string, LucideIcon> = {
 export default function ProductList({ lang }: ProductListProps) {
   const isEn = lang === "en";
   const productsData = isEn ? productsEn : productsVi;
-  const categories = isEn 
-    ? ["All", "Thales", "Guardsquare", "Canary Labs", "Longmai"]
-    : ["Tất cả", "Thales", "Guardsquare", "Canary Labs", "Longmai"];
+  const categoryKeys = ["All", "Thales", "Guardsquare", "Industrial Data & IIoT", "Longmai"];
+  const categoryLabels: Record<string, string> = isEn ? {
+    "All": "All",
+    "Thales": "Thales",
+    "Guardsquare": "Guardsquare",
+    "Industrial Data & IIoT": "Industrial Data & IIoT",
+    "Longmai": "Longmai"
+  } : {
+    "All": "Tất cả",
+    "Thales": "Thales",
+    "Guardsquare": "Guardsquare",
+    "Industrial Data & IIoT": "Dữ liệu công nghiệp & IIoT",
+    "Longmai": "Longmai"
+  };
 
   const [searchQuery, setSearchQuery]           = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [selectedCategory, setSelectedCategory] = useState(categoryKeys[0]);
   const [expandedId, setExpandedId]             = useState<string | null>(null);
   const [imgErrors, setImgErrors]               = useState<Set<string>>(new Set());
 
@@ -142,10 +153,10 @@ export default function ProductList({ lang }: ProductListProps) {
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.summary.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory =
-        selectedCategory === categories[0] || p.category === selectedCategory;
+        selectedCategory === categoryKeys[0] || p.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-  }, [productsData, searchQuery, selectedCategory, categories]);
+  }, [productsData, searchQuery, selectedCategory, categoryKeys]);
 
   const toggleExpand = (id: string) =>
     setExpandedId((prev) => (prev === id ? null : id));
@@ -170,18 +181,19 @@ export default function ProductList({ lang }: ProductListProps) {
         </div>
 
         <div className="flex gap-2 overflow-x-auto pb-1 md:pb-0 w-full md:w-auto scrollbar-hide">
-          {categories.map((cat) => {
-            const isActive = selectedCategory === cat;
-            const cfg = categoryConfig[cat];
+          {categoryKeys.map((catKey) => {
+            const isActive = selectedCategory === catKey;
+            const cfg = categoryConfig[catKey];
+            const label = categoryLabels[catKey];
             const activeClass = cfg
               ? cfg.activeBtn
               : "bg-blue-600 text-white shadow-lg shadow-blue-500/20";
 
             return (
               <button
-                key={cat}
-                id={`filter-${cat.toLowerCase().replace(/\s+/g, "-")}`}
-                onClick={() => setSelectedCategory(cat)}
+                key={catKey}
+                id={`filter-${catKey.toLowerCase().replace(/\s+/g, "-")}`}
+                onClick={() => setSelectedCategory(catKey)}
                 className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all ${
                   isActive ? activeClass : "bg-gray-50 text-gray-500 hover:bg-gray-100"
                 }`}
@@ -191,7 +203,7 @@ export default function ProductList({ lang }: ProductListProps) {
                     className={`inline-block w-2 h-2 rounded-full ${cfg.dot} ${isActive ? "opacity-0 w-0 overflow-hidden" : ""}`}
                   />
                 )}
-                {cat}
+                {label}
               </button>
             );
           })}
@@ -311,10 +323,12 @@ export default function ProductList({ lang }: ProductListProps) {
 
                   {/* 🚀 NÚT LINK ĐIỀU HƯỚNG AN TOÀN */}
                   <div className="mt-4">
-                    <Link href={prod.category === "Thales" ? `/${lang}/products/thales-sentinel` : 
-                               prod.category === "Guardsquare" ? `/${lang}/products/guardsquare` : 
-                               prod.category === "Longmai" ? `/${lang}/products/longmai` : 
-                               `/${lang}/products/${prod.id}`} 
+                    <Link 
+                      href={prod.category === "Thales" ? `/${lang}/products/thales-sentinel` : 
+                            prod.category === "Guardsquare" ? `/${lang}/products/guardsquare` : 
+                            prod.category === "Longmai" ? `/${lang}/products/longmai` : 
+                            prod.category === "Industrial Data & IIoT" ? `/${lang}/products/canary-labs` :
+                            `/${lang}/products/${prod.id}`} 
                           className="w-full block">
                       <button className={`w-full py-3.5 rounded-xl font-bold uppercase tracking-widest text-[11px] transition-all flex items-center justify-center gap-2 group shadow-md ${
                         cfg ? `${cfg.badgeBg} hover:opacity-90` : "bg-blue-600 text-white hover:bg-blue-700"
@@ -338,10 +352,10 @@ export default function ProductList({ lang }: ProductListProps) {
             {isEn ? "No products found." : "Không tìm thấy sản phẩm phù hợp."}
           </p>
           <button
-            onClick={() => { setSearchQuery(""); setSelectedCategory(categories[0]); }}
+            onClick={() => { setSearchQuery(""); setSelectedCategory(categoryKeys[0]); }}
             className="text-blue-600 font-semibold hover:underline"
           >
-            Xoá bộ lọc
+            {isEn ? "Clear filters" : "Xoá bộ lọc"}
           </button>
         </div>
       )}
