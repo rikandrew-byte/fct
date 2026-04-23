@@ -24,7 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function NewsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
-  const newsData = lang === "en" ? newsEn : newsVi;
+  const newsDataRaw = lang === "en" ? newsEn : newsVi;
+  const newsData = (newsDataRaw as any).default || newsDataRaw;
 
   // Chuẩn bị dữ liệu Structured Data JSON-LD
   const blogPosts = Array.isArray(newsData) ? newsData.map(item => ({

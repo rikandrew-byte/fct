@@ -23,7 +23,9 @@ interface NewsListProps {
 
 export default function NewsList({ lang, dict }: NewsListProps) {
   const isEn = lang === "en";
-  const rawData = isEn ? newsEn : newsVi;
+  // Xử lý trường hợp JSON được bọc trong object .default (thường gặp ở Turbopack/Next.js mới)
+  const rawDataRaw = isEn ? newsEn : newsVi;
+  const rawData = (rawDataRaw as any).default || rawDataRaw;
   const newsData = (Array.isArray(rawData) ? rawData : []) as NewsItem[];
   
   const [searchQuery, setSearchQuery] = useState("");

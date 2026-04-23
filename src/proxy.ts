@@ -17,10 +17,20 @@ function getLocale(request: NextRequest): string | undefined {
   return locale
 }
 
-export function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  // Exclude public files and images
+  // 1. Handle legacy /news to /posts redirection
+  if (pathname.includes('/news/')) {
+    const newPathname = pathname.replace('/news/', '/posts/')
+    return NextResponse.redirect(new URL(newPathname, request.url))
+  }
+  if (pathname.endsWith('/news')) {
+     const newPathname = pathname.replace('/news', '/posts')
+     return NextResponse.redirect(new URL(newPathname, request.url))
+  }
+
+  // 2. Exclude public files and images
   if (
     [
       '/manifest.json',
@@ -39,12 +49,12 @@ export function middleware(request: NextRequest) {
     return
   }
 
-  // Check if there is any supported locale in the pathname
+  // 3. Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
 
-  // Redirect if there is no locale
+  // 4. Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request)
 

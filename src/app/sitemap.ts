@@ -46,7 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     // 2. Dynamic News Articles
-    const newsData = lang === 'en' ? newsEn : newsVi
+    const newsDataRaw = lang === 'en' ? newsEn : newsVi
+    const newsData = (newsDataRaw as any).default || newsDataRaw
     if (Array.isArray(newsData)) {
       for (const article of newsData) {
         // Safe Date Parsing

@@ -9,7 +9,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
   
-  const newsData = lang === "en" ? newsEn : newsVi;
+  const newsDataRaw = lang === "en" ? newsEn : newsVi;
+  const newsData = (newsDataRaw as any).default || newsDataRaw;
   const latestNews = Array.isArray(newsData) ? newsData.slice(0, 3) : []; // Lấy 3 bài mới nhất
 
   const jsonLd = {

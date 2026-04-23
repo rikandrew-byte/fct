@@ -23,7 +23,8 @@ export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
   
   for (const lang of i18n.locales) {
-    const newsData = lang === "en" ? newsEn : newsVi;
+    const newsDataRaw = lang === "en" ? newsEn : newsVi;
+    const newsData = (newsDataRaw as any).default || newsDataRaw;
     if (Array.isArray(newsData)) {
       for (const article of newsData) {
         params.push({ lang, slug: article.id });
@@ -39,7 +40,8 @@ export async function generateMetadata({
 }: { params: Promise<{ slug: string, lang: string }> }): Promise<Metadata> {
   const { slug, lang: langRaw } = await params;
   const lang = langRaw as Locale;
-  const newsData = lang === "en" ? newsEn : newsVi;
+  const newsDataRaw = lang === "en" ? newsEn : newsVi;
+  const newsData = (newsDataRaw as any).default || newsDataRaw;
   
   if (!Array.isArray(newsData)) {
     return { title: "FCT Vinh Thinh .,JSC" };
@@ -104,7 +106,8 @@ export default async function NewsDetailPage({
   const { slug, lang: langRaw } = await params;
   const lang = langRaw as Locale;
   const dict = await getDictionary(lang);
-  const newsData = (lang === "en" ? newsEn : newsVi) as Article[];
+  const newsDataRaw = lang === "en" ? newsEn : newsVi;
+  const newsData = ((newsDataRaw as any).default || newsDataRaw) as Article[];
 
   if (!Array.isArray(newsData)) {
     notFound();
