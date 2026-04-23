@@ -88,12 +88,12 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-1 p-1 bg-white/5 rounded-full border border-white/10">
+          <nav className="hidden lg:flex items-center gap-1 p-1 bg-white/5 rounded-full border border-white/10">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
-                className={`px-5 py-2.5 rounded-full text-sm font-black tracking-tight transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-[13px] font-black tracking-tight transition-all duration-300 flex items-center justify-center ${
                   pathname === link.href 
                     ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
                     : "text-gray-300 hover:text-blue-400 hover:bg-white/5"

@@ -202,7 +202,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-white text-blue-950 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl"
+              className="bg-white text-blue-950 px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] hover:bg-blue-50 transition-all shadow-xl"
             >
               {d.cta.requestConsult}
             </button>

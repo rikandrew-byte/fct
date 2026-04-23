@@ -86,12 +86,10 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Cột 3: Công ty */}
           <div>
             <h4 className="text-white font-bold mb-8 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
-            <ul className="space-y-4 text-sm font-light">
+            <ul className="space-y-6 text-sm font-light">
               <li><Link href={`/${lang}/about`} className="hover:text-blue-500 transition-colors">{dict.navbar.about}</Link></li>
               <li><Link href={`/${lang}/contact`} className="hover:text-blue-500 transition-colors">{dict.navbar.contact}</Link></li>
               <li><Link href={`/${lang}/products`} className="hover:text-blue-500 transition-colors">{dict.navbar.products}</Link></li>
-              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.companyLines.recruitment}</Link></li>
-              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.companyLines.techNews}</Link></li>
             </ul>
           </div>
 
