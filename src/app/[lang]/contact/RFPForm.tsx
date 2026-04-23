@@ -25,6 +25,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
   const solutionParam = searchParams.get("solution");
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -36,10 +37,13 @@ export default function RFPForm({ lang }: RFPFormProps) {
   });
 
   useEffect(() => {
+    setMounted(true);
     if (solutionParam) {
       setFormData(prev => ({ ...prev, solution: solutionParam }));
     }
   }, [solutionParam]);
+
+  if (!mounted) return <div className="h-[600px] flex items-center justify-center text-slate-500 uppercase text-[10px] font-black tracking-widest animate-pulse">Initializing Secure Portal...</div>;
 
   const industries = isEn 
     ? ["Finance & Banking", "Government", "Telecommunications", "Manufacturing", "Energy", "Other"]
