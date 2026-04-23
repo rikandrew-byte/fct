@@ -29,9 +29,9 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   const isEn = lang === "en";
 
   return (
-    <main className="min-h-screen bg-[#020617] text-slate-200 selection:bg-blue-600">
+    <main className="min-h-screen bg-slate-50 text-gray-950 selection:bg-blue-600">
       {/* ── 1. Hero / Header ─────────────────────────────────────────── */}
-      <section className="relative pt-8 pb-4 px-6 overflow-hidden">
+      <section className="relative bg-[#020617] pt-24 pb-12 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         
         {/* Glow Effects */}
@@ -48,7 +48,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                 </span>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase">
+              <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase text-white">
                 {isEn ? "Request for" : "Yêu cầu"} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300">
                   {isEn ? "Proposal" : "Giải pháp"}
@@ -64,19 +64,19 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
               {/* Quick Info Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="military-panel p-6 rounded-3xl space-y-3">
+                <div className="bg-slate-900/50 border border-white/10 p-6 rounded-3xl space-y-3">
                   <div className="w-10 h-10 bg-blue-600/20 rounded-xl flex items-center justify-center text-blue-400">
                     <Phone className="w-5 h-5" />
                   </div>
                   <p className="text-[10px] uppercase font-black text-slate-500">{isEn ? "Expert Hotline" : "Đường dây chuyên gia"}</p>
-                  <p className="font-bold text-lg">0983 027 776</p>
+                  <p className="font-bold text-lg text-white">0983 027 776</p>
                 </div>
-                <div className="military-panel p-6 rounded-3xl space-y-3">
+                <div className="bg-slate-900/50 border border-white/10 p-6 rounded-3xl space-y-3">
                   <div className="w-10 h-10 bg-indigo-600/20 rounded-xl flex items-center justify-center text-indigo-400">
                     <Mail className="w-5 h-5" />
                   </div>
                   <p className="text-[10px] uppercase font-black text-slate-500">{isEn ? "Technical Inquiry" : "Email kỹ thuật"}</p>
-                  <p className="font-bold text-lg">andrew@fct.vn</p>
+                  <p className="font-bold text-lg text-white">andrew@fct.vn</p>
                 </div>
               </div>
             </div>
@@ -97,12 +97,10 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* ── 2. HQ Location ───────────────────────────────────────────── */}
-      <section className="py-8 bg-[#020617]/80 border-y border-white/5 relative overflow-hidden">
-        <NeuralNetworkBackground />
-        <div className="absolute inset-0 bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="w-full aspect-video rounded-[3rem] overflow-hidden border border-white/10 shadow-3xl bg-slate-900 group relative">
+            <div className="w-full aspect-video rounded-[3rem] overflow-hidden border border-gray-200 shadow-3xl bg-slate-100 group relative">
                <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.322596489379!2d105.83467477503!3d20.979697980655823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135add13ae6fb33%3A0x6739932145b736b4!2zTmfDtGkgU2FvIEJ1aWxkaW5n!5e0!3m2!1svi!2svn!4v1713500000000!5m2!1svi!2svn"
                 width="100%"
@@ -111,32 +109,31 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale-[0.8] invert-[0.9] hue-rotate-[190deg] brightness-[0.7] group-hover:grayscale-0 group-hover:invert-0 group-hover:hue-rotate-0 group-hover:brightness-100 transition-all duration-1000 contrast-[1.2]"
+                className="group-hover:contrast-[1.1] transition-all duration-1000"
               ></iframe>
-              <div className="absolute inset-0 pointer-events-none border-[12px] border-[#020617] rounded-[3rem]"></div>
             </div>
 
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 text-blue-400">
+                  <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 border border-blue-100 text-blue-600">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-[10px] uppercase font-black text-slate-500 tracking-widest">{isEn ? "Address" : "Địa chỉ văn phòng"}</p>
-                    <p className="text-lg font-bold text-slate-200">
+                    <p className="text-[10px] uppercase font-black text-gray-500 tracking-widest">{isEn ? "Address" : "Địa chỉ văn phòng"}</p>
+                    <p className="text-lg font-bold text-gray-900">
                       Tầng 4, Tòa nhà Ngôi Sao, 15 Nguyễn Cảnh Dị, <br />
                       Đại Kim, Hoàng Mai, Hà Nội.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 border border-white/10 text-blue-400">
+                  <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 border border-blue-100 text-blue-600">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-[10px] uppercase font-black text-slate-500 tracking-widest">{isEn ? "Business Hours" : "Thời gian làm việc"}</p>
-                    <p className="text-lg font-bold text-slate-200">
+                    <p className="text-[10px] uppercase font-black text-gray-500 tracking-widest">{isEn ? "Business Hours" : "Thời gian làm việc"}</p>
+                    <p className="text-lg font-bold text-gray-900">
                       {isEn ? "Monday - Friday | 08:30 - 17:30" : "Thứ 2 - Thứ 6 | 08:30 - 17:30"}
                     </p>
                   </div>
@@ -146,9 +143,9 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
               <Link 
                 href="https://maps.google.com/?q=Nguyễn+Cảnh+Dị,+Đại+Kim,+Hoàng+Mai,+Hà+Nội"
                 target="_blank"
-                className="inline-flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors uppercase text-xs tracking-widest group"
+                className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all uppercase text-xs tracking-widest group shadow-lg shadow-blue-500/20"
               >
-                {isEn ? "Open in Global Maps" : "Mở bản đồ thế giới"} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                {isEn ? "View on Google Maps" : "Xem trên Bản đồ"} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
