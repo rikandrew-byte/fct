@@ -14,7 +14,9 @@ export default function middleware(request: NextRequest) {
     )
     
     if (pathnameIsMissingLocale) {
-      return NextResponse.rewrite(new URL(`/vi${pathname}`, request.url))
+      const rewriteUrl = request.nextUrl.clone()
+      rewriteUrl.pathname = `/vi${pathname}`
+      return NextResponse.rewrite(rewriteUrl)
     }
     return NextResponse.next()
   }
