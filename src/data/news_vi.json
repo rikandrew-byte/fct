@@ -1,5 +1,15 @@
 [
   {
+    "id": "longmai-xac-thuc-pki-va-bao-mat-danh-tinh-so",
+    "title": "Bảo Mật Danh Tính Số: Tại Sao Doanh Nghiệp Cần Xác Thực Phần Cứng Longmai?",
+    "date": "23/04/2026",
+    "summary": "Trong kỷ nguyên số, mật khẩu không còn là lớp bảo vệ đủ an toàn. Việc bị đánh cắp tài khoản quản trị hay giả mạo chữ ký số có thể dẫn đến những thảm họa về tài chính và pháp lý. Longmai cung cấp các thiết bị xác thực phần cứng (mPKI) giúp thiết lập một 'chốt chặn' không thể xuyên phá cho danh tính số của bạn.",
+    "category": "Bảo mật",
+    "image": "/images/posts/longmai-auth-security.webp",
+    "ogImage": "/images/posts/longmai-auth-security.webp",
+    "content": "Trong kỷ nguyên số, mật khẩu không còn là lớp bảo vệ đủ an toàn. Việc bị đánh cắp tài khoản quản trị hay giả mạo chữ ký số có thể dẫn đến những thảm họa về tài chính và pháp lý. Longmai cung cấp các thiết bị xác thực phần cứng (mPKI) giúp thiết lập một \"chốt chặn\" không thể xuyên phá cho danh tính số của bạn.\n\n**Lỗ hổng chết người từ mật khẩu và mã OTP**\n\n**Tấn công Phishing:** Hacker dễ dàng lừa người dùng cung cấp mật khẩu hoặc mã OTP thông qua các trang web giả mạo.\n\n**Môi trường di động lỏng lẻo:** Việc lưu trữ khóa bí mật trên phần mềm điện thoại tiềm ẩn nguy cơ bị mã độc đánh cắp.\n\n**Trách nhiệm pháp lý:** Khi xảy ra sự cố giả mạo chữ ký số, doanh nghiệp sẽ gặp khó khăn lớn trong việc chứng minh tính xác thực nếu không có thiết bị bảo mật chuyên dụng.\n\n**Longmai – \"Chìa khóa\" phần cứng cho an toàn danh tính**\n\n**Xác thực đa yếu tố (MFA) dựa trên phần cứng:** Người dùng phải sở hữu thiết bị vật lý (USB Token) mới có thể truy cập hệ thống. Điều này triệt tiêu hoàn toàn nguy cơ tấn công từ xa qua mạng.\n\n**Tiêu chuẩn PKI quốc tế:** Sử dụng công nghệ hạ tầng khóa công khai (PKI) mạnh nhất hiện nay, đảm bảo tính chống chối bỏ trong các giao dịch điện tử và ký số.\n\n**Thiết kế tinh gọn, độ bền cao:** Các dòng sản phẩm của Longmai được tối ưu cho cả môi trường văn phòng lẫn các hệ thống công nghiệp khắt khe, hỗ trợ đa nền tảng từ Windows đến Mobile.\n\n**Tầm quan trọng chiến lược đối với doanh nghiệp**\n\n**An tâm giao dịch:** Đảm bảo mọi giao dịch tài chính và ký kết hợp đồng điện tử đều có giá trị pháp lý tuyệt đối và không thể bị giả mạo.\n\n**Tối ưu hóa quản lý:** Giúp bộ phận IT dễ dàng kiểm soát quyền truy cập của nhân viên vào các tài nguyên quan trọng của công ty.\n\n**Tuân thủ quy định pháp luật:** Đáp ứng các tiêu chuẩn về chữ ký số và bảo mật thông tin theo quy định của nhà nước Việt Nam.\n\n**Lời kết**\nDanh tính số là tài sản không thể thay thế. Với các giải pháp từ Longmai do FCT Vĩnh Thịnh cung cấp, ngài đang cầm trong tay chiếc chìa khóa an toàn nhất để mở cánh cửa bước vào thế giới số hóa đầy tiềm năng nhưng cũng đầy cạm bẫy.\n\n[Khám phá giải pháp xác thực Longmai](https://fct.vn/vi/products/longmai)"
+  },
+  {
     "id": "thales-bao-mat-du-lieu-dam-may-va-hsm",
     "title": "Bảo Mật Dữ Liệu Lõi: Tại Sao Thales Là Tiêu Chuẩn Vàng Cho Doanh Nghiệp?",
     "date": "23/04/2026",

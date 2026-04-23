@@ -1,5 +1,15 @@
 [
   {
+    "id": "longmai-xac-thuc-pki-va-bao-mat-danh-tinh-so",
+    "title": "Digital Identity Security: Why Businesses Need Longmai Hardware Authentication?",
+    "date": "23/04/2026",
+    "summary": "In the digital age, passwords are no longer enough. Stolen admin accounts or forged digital signatures can lead to financial and legal disasters. Longmai provides hardware authentication devices (mPKI) to establish an impenetrable firewall for your digital identity.",
+    "category": "Security",
+    "image": "/images/posts/longmai-auth-security.webp",
+    "ogImage": "/images/posts/longmai-auth-security.webp",
+    "content": "In the digital age, passwords are no longer enough. Stolen admin accounts or forged digital signatures can lead to financial and legal disasters. Longmai provides hardware authentication devices (mPKI) to establish an impenetrable firewall for your digital identity.\n\nLethal vulnerabilities from passwords and OTPs\n\n**Phishing attacks:** Hackers easily trick users into providing passwords or OTP codes through fake websites.\n\n**Weak mobile environments:** Storing secret keys in mobile software poses a high risk of theft by malware.\n\n**Legal liability:** When digital signature forgery occurs, businesses face great difficulty in proving authenticity without dedicated security hardware.\n\nLongmai – The hardware \"key\" for identity safety\n\n**Hardware-based Multi-Factor Authentication (MFA):** Users must possess a physical device (USB Token) to access the system. This completely eliminates the risk of remote network attacks.\n\n**International PKI standards:** Using the strongest Public Key Infrastructure (PKI) technology available today, ensuring non-repudiation in electronic transactions and digital signing.\n\n**Compact design, high durability:** Longmai products are optimized for both office environments and harsh industrial systems, supporting multi-platforms from Windows to Mobile.\n\nStrategic importance for businesses\n\n**Transaction peace of mind:** Ensure all financial transactions and electronic contract signings have absolute legal value and cannot be forged.\n\n**Optimized management:** Help IT departments easily control employee access to critical company resources.\n\n**Compliance with laws:** Meet digital signature and information security standards according to Vietnamese state regulations.\n\nConclusion\nDigital identity is an irreplaceable asset. With Longmai solutions provided by FCT Vinh Thinh, you hold the safest key to enter a digital world full of potential but also full of pitfalls.\n\n[Discover Longmai Authentication Solutions](https://fct.vn/en/products/longmai)"
+  },
+  {
     "id": "thales-bao-mat-du-lieu-dam-may-va-hsm",
     "title": "Core Data Security: Why Thales is the Gold Standard for Enterprise?",
     "date": "23/04/2026",
