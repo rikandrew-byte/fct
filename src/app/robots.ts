@@ -4,6 +4,10 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
+        userAgent: 'facebookexternalhit',
+        allow: '/',
+      },
+      {
         userAgent: '*',
         allow: '/',
         disallow: '/api/',
@@ -13,6 +17,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       }
     ],
-    sitemap: 'https://fct.vn/sitemap.xml',
+    sitemap: 'https://www.fct.vn/sitemap.xml',
   }
 }
