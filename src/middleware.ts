@@ -17,7 +17,7 @@ function getLocale(request: NextRequest): string | undefined {
   return locale
 }
 
-export default function proxy(request: NextRequest) {
+export default function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
   // 1. Handle legacy /news to /posts redirection
