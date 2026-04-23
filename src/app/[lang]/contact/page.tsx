@@ -83,11 +83,11 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
             {/* Form Container */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-              <div className="relative bg-[#020617]/80 backdrop-blur-3xl border border-white/10 rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+              <div className="relative bg-white border border-gray-100 rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
                 
-                <Suspense fallback={<div className="h-[600px] flex items-center justify-center text-slate-500 uppercase text-[10px] font-black tracking-widest animate-pulse">Initializing Secure Portal...</div>}>
+                <Suspense fallback={<div className="h-[600px] flex items-center justify-center text-gray-400 uppercase text-[10px] font-black tracking-widest animate-pulse">Initializing Secure Portal...</div>}>
                   <RFPForm lang={lang} />
                 </Suspense>
               </div>
