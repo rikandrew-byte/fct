@@ -19,6 +19,16 @@ function getLocale(request: NextRequest): string | undefined {
 
 export default function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  const userAgent = request.headers.get('user-agent') || ''
+
+  // 0. Bypassing Social Media Crawlers to avoid 403 errors
+  if (
+    userAgent.includes('facebookexternalhit') || 
+    userAgent.includes('LinkedInBot') || 
+    userAgent.includes('Twitterbot')
+  ) {
+    return NextResponse.next()
+  }
 
   // 1. Handle legacy /news to /posts redirection
   if (pathname.includes('/news/')) {
