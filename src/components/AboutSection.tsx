@@ -58,14 +58,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
             <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
               {content.description}
             </p>
-            <div className="pt-4">
-              <Link
-                href={`/${lang}/about`}
-                className="group inline-flex items-center gap-3 bg-white border border-gray-200 px-8 py-4 rounded-2xl font-black text-sm tracking-tight hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-xl shadow-gray-200/40 hover:shadow-blue-500/20"
-              >
-                {content.more} <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
-              </Link>
-            </div>
+
           </motion.div>
 
           {/* Phải: Grid tính năng */}

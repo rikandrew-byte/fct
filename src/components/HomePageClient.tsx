@@ -107,9 +107,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
               <span className="text-blue-600">{dict.solutions.subtitle}</span>
             </h3>
           </div>
-          <Link href={`/${lang}/news`} className="text-blue-600 font-semibold hover:underline flex items-center gap-2 group text-lg">
-            {dict.solutions.newsLink} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
