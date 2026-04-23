@@ -68,10 +68,10 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
   ];
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-[#020617] text-white overflow-hidden font-sans selection:bg-blue-600">
+    <main ref={containerRef} className="min-h-screen bg-slate-50 text-gray-950 overflow-hidden font-sans selection:bg-blue-600">
       
-      {/* ── 1. THE DARK FOUNDRY (Hero Section) ───────────────────── */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-12 pb-6 px-6">
+      {/* ── 1. HERO SECTION (Dark) ───────────────────── */}
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-32 pb-24 px-6 bg-[#020617]">
         <NeuralNetworkBackground />
         
         {/* Animated Grid Lines */}
@@ -88,10 +88,10 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white">
               THALES SENTINEL <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]">
-                THE DARK FOUNDRY
+                INTELLECTUAL ARMORY
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight">
@@ -105,29 +105,19 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
           <div className="flex justify-center gap-6 pt-10">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="px-10 py-5 brushed-aluminum text-slate-900 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
+              className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-blue-600/30"
             >
               {isEn ? "Get Technical Advice" : "Nhận Tư vấn Kỹ thuật"}
             </button>
           </div>
         </motion.div>
-        
-        {/* Scroll Indicator */}
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30"
-        >
-          <span className="text-[10px] font-black uppercase tracking-[0.3em]">SECURE FLOW</span>
-          <div className="w-px h-12 bg-gradient-to-b from-blue-500 to-transparent"></div>
-        </motion.div>
       </section>
 
-      {/* ── 2. BLUEPRINT: SVG INTERACTIVE DIAGRAM ────────────────── */}
-      <section className="py-16 px-6 max-w-7xl mx-auto relative text-[15px]">
+      {/* ── 2. BLUEPRINT (White) ────────────────── */}
+      <section className="py-24 px-6 max-w-7xl mx-auto relative text-[15px] bg-white rounded-t-[4rem] -mt-12 z-20">
          <div className="text-center mb-20 space-y-4">
-            <span className="text-blue-500 font-black text-xs uppercase tracking-[0.4em]">Military Grade Logic</span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none">
+            <span className="text-blue-600 font-black text-xs uppercase tracking-[0.4em]">Military Grade Logic</span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
               Sentinel Security Pipeline
             </h2>
          </div>
@@ -136,7 +126,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="military-panel rounded-[3rem] p-12 md:p-20 relative overflow-hidden group"
+            className="bg-[#020617] rounded-[3.5rem] p-12 md:p-20 relative overflow-hidden group shadow-3xl"
          >
             {/* SVG Interactive Diagram */}
             <svg 
@@ -145,7 +135,6 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Lines - Animated Pulse */}
               <defs>
                  <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#1e293b" />
@@ -221,7 +210,6 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
               </motion.g>
             </svg>
 
-            {/* Diagram Tooltip Info */}
             <div className="mt-12 min-h-[100px] flex items-center justify-center text-center">
                <motion.div 
                  key={activeStep}
@@ -258,32 +246,29 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                </motion.div>
             </div>
 
-            {/* 🚀 NEW CTA UNDER BLUEPRINT */}
             <div className="mt-10 flex justify-center">
               <Link 
                 href={`/${lang}/contact?solution=thales`}
-                className="military-panel px-10 py-4 bg-blue-950/50 text-white rounded-2xl font-bold text-xs uppercase tracking-widest hover:border-blue-500/50 transition-all flex items-center gap-3 border border-white/5 group shadow-2xl"
+                className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-blue-700 transition-all flex items-center gap-3 shadow-xl shadow-blue-600/20 group"
               >
                 {isEn ? "Request HSM/Sentinel Quote" : "Nhận báo giá tích hợp HSM"}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform text-blue-400" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
               </Link>
             </div>
          </motion.div>
       </section>
 
-      {/* ── 3. TRIPLE LAYER: CONTENT STRUCTURE ────────────────────── */}
-      
-      {/* Zone 1: The Pain (Piracy) */}
-      <section className="py-12 px-6 bg-gradient-to-b from-[#020617] to-[#0f172a]">
-         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      {/* ── 3. ZONE 1: PIRACY (Slate-50) ────────────────────── */}
+      <section className="py-24 px-6 bg-slate-50">
+         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
-               <div className="w-12 h-12 bg-red-500/10 rounded-2xl flex items-center justify-center text-red-500">
+               <div className="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 border border-red-100">
                   <AlertTriangle className="w-6 h-6" />
                </div>
-               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-gray-900">
                   {isEn ? "The Reality of Software Piracy" : "Nỗi đau từ Vi phạm Bản quyền"}
                </h2>
-               <p className="text-slate-400 text-lg font-light leading-relaxed">
+               <p className="text-gray-500 text-lg font-light leading-relaxed">
                   {isEn 
                     ? "In Asia, piracy rates can exceed 50%. Every unshielded program is a leak in your corporate revenue."
                     : "Tại châu Á, tỷ lệ vi phạm bản quyền có thể vượt quá 50%. Mỗi phần mềm không được bảo vệ là một lỗ hổng thất thoát doanh thu nghiêm trọng."
@@ -295,90 +280,90 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                     isEn ? "IP Theft and Reverse Engineering" : "Mất cắp trí tuệ và dịch ngược mã",
                     isEn ? "Brand damage from hacked versions" : "Tổn hại uy tín do các bản hack"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-slate-300 text-sm font-bold uppercase tracking-wider">
-                       <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                    <li key={i} className="flex items-center gap-3 text-gray-700 text-sm font-bold uppercase tracking-wider">
+                       <div className="w-1.5 h-1.5 bg-red-600 rounded-full" />
                        {item}
                     </li>
                   ))}
                </ul>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
-               <div className="military-panel rounded-3xl p-8 space-y-2 border-red-500/10">
-                  <span className="text-3xl font-black text-white">$46B+</span>
-                  <p className="text-[10px] text-slate-500 uppercase font-black">{isEn ? "Global Piracy Cost" : "Thiệt hại toàn cầu"}</p>
+            <div className="grid grid-cols-2 gap-6">
+               <div className="bg-white rounded-3xl p-10 space-y-2 border border-red-50 shadow-xl shadow-red-900/5">
+                  <span className="text-4xl font-black text-gray-900">$46B+</span>
+                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{isEn ? "Global Piracy Cost" : "Thiệt hại toàn cầu"}</p>
                </div>
-               <div className="military-panel rounded-3xl p-8 space-y-2 translate-y-8">
-                  <span className="text-3xl font-black text-white">57%</span>
-                  <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest">{isEn ? "Hacked Apps Rate" : "Tỷ lệ app bị hack"}</p>
+               <div className="bg-white rounded-3xl p-10 space-y-2 lg:translate-y-12 border border-gray-100 shadow-xl shadow-gray-200/40">
+                  <span className="text-4xl font-black text-gray-900">57%</span>
+                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{isEn ? "Hacked Apps Rate" : "Tỷ lệ app bị hack"}</p>
                </div>
             </div>
          </div>
       </section>
 
-      {/* Zone 2: Core Solutions (Spec Sheets) */}
-      <section className="py-12 px-6 max-w-7xl mx-auto">
+      {/* ── ZONE 2: TECHNOLOGY (White) ────────────────────── */}
+      <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl font-black tracking-tight">{isEn ? "Core Technology Pillars" : "Trụ cột Công nghệ lõi"}</h2>
-            <p className="text-slate-500">{isEn ? "Tailored protection for every environment" : "Bảo vệ tối ưu cho mọi môi trường vận hành"}</p>
+            <h2 className="text-4xl font-black tracking-tight text-gray-900">{isEn ? "Core Technology Pillars" : "Trụ cột Công nghệ lõi"}</h2>
+            <p className="text-gray-500">{isEn ? "Tailored protection for every environment" : "Bảo vệ tối ưu cho mọi môi trường vận hành"}</p>
          </div>
 
          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* HL - Hardware */}
-            <motion.div whileHover={{ y: -10 }} className="military-panel rounded-[2.5rem] p-8 space-y-8 border-blue-500/20">
+            <motion.div whileHover={{ y: -10 }} className="bg-white border border-gray-100 rounded-[2.5rem] p-10 space-y-8 shadow-xl shadow-gray-200/40 hover:border-blue-200 transition-all">
                <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-500">
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600">
                      <Cpu className="w-8 h-8" />
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-widest bg-blue-600/10 px-3 py-1 rounded-full text-blue-400">Sentinel HL</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest bg-blue-50 px-3 py-1.5 rounded-lg text-blue-600">Sentinel HL</span>
                </div>
-               <div className="space-y-4">
-                  <h3 className="text-2xl font-black uppercase">{isEn ? "Hardware-Based" : "Khóa Cứng Vật lý"}</h3>
-                  <table className="w-full text-xs text-slate-400 font-mono">
-                     <tbody className="divide-y divide-slate-800">
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Security Chip" : "Chip Bảo Mật"}:</td> <td className="text-white text-right">EAL5+ Standard</td></tr>
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Memory" : "Bộ nhớ"}:</td> <td className="text-white text-right">Up to 31KB</td></tr>
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Connection" : "Kết nối"}:</td> <td className="text-white text-right">USB / ExpressCard / SMT</td></tr>
+               <div className="space-y-6">
+                  <h3 className="text-2xl font-black uppercase text-gray-900">{isEn ? "Hardware-Based" : "Khóa Cứng Vật lý"}</h3>
+                  <table className="w-full text-xs text-gray-500 font-mono">
+                     <tbody className="divide-y divide-gray-100">
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Security Chip" : "Chip Bảo Mật"}:</td> <td className="text-gray-900 font-bold">EAL5+ Standard</td></tr>
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Memory" : "Bộ nhớ"}:</td> <td className="text-gray-900 font-bold">Up to 31KB</td></tr>
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Connection" : "Kết nối"}:</td> <td className="text-gray-900 font-bold">USB / SMT / SD</td></tr>
                      </tbody>
                   </table>
                </div>
             </motion.div>
 
             {/* SL - Software */}
-            <motion.div whileHover={{ y: -10 }} className="military-panel rounded-[2.5rem] p-8 space-y-8 border-indigo-500/20">
+            <motion.div whileHover={{ y: -10 }} className="bg-white border border-gray-100 rounded-[2.5rem] p-10 space-y-8 shadow-xl shadow-gray-200/40 hover:border-indigo-200 transition-all">
                <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 bg-indigo-600/10 rounded-2xl flex items-center justify-center text-indigo-500">
+                  <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600">
                      <ShieldCheck className="w-8 h-8" />
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-widest bg-indigo-600/10 px-3 py-1 rounded-full text-indigo-400">Sentinel SL</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest bg-indigo-50 px-3 py-1.5 rounded-lg text-indigo-600">Sentinel SL</span>
                </div>
-               <div className="space-y-4">
-                  <h3 className="text-2xl font-black uppercase">{isEn ? "Software-Based" : "Khóa Mềm Phi vật lý"}</h3>
-                  <table className="w-full text-xs text-slate-400 font-mono">
-                     <tbody className="divide-y divide-slate-800">
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Fingerprint" : "Dấu vân tay máy"}:</td> <td className="text-white text-right">HDD/MAC/CPU Binding</td></tr>
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Distribution" : "Phát hành"}:</td> <td className="text-white text-right">Instant Activation</td></tr>
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Trial Support" : "Hỗ trợ dùng thử"}:</td> <td className="text-white text-right">Full Feature</td></tr>
+               <div className="space-y-6">
+                  <h3 className="text-2xl font-black uppercase text-gray-900">{isEn ? "Software-Based" : "Khóa Mềm Phi vật lý"}</h3>
+                  <table className="w-full text-xs text-gray-500 font-mono">
+                     <tbody className="divide-y divide-gray-100">
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Fingerprint" : "Dấu vân tay"}:</td> <td className="text-gray-900 font-bold">Binding-ID</td></tr>
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Distribution" : "Phát hành"}:</td> <td className="text-gray-900 font-bold">Instant Activation</td></tr>
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Trial Support" : "Dùng thử"}:</td> <td className="text-gray-900 font-bold">Full Feature</td></tr>
                      </tbody>
                   </table>
                </div>
             </motion.div>
 
             {/* Cloud */}
-            <motion.div whileHover={{ y: -10 }} className="military-panel rounded-[2.5rem] p-8 space-y-8 border-sky-500/20">
+            <motion.div whileHover={{ y: -10 }} className="bg-white border border-gray-100 rounded-[2.5rem] p-10 space-y-8 shadow-xl shadow-gray-200/40 hover:border-sky-200 transition-all">
                <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 bg-sky-600/10 rounded-2xl flex items-center justify-center text-sky-500">
+                  <div className="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center text-sky-600">
                      <Cloud className="w-8 h-8" />
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-widest bg-sky-600/10 px-3 py-1 rounded-full text-sky-400">Sentinel Cloud</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest bg-sky-50 px-3 py-1.5 rounded-lg text-sky-600">Sentinel Cloud</span>
                </div>
-               <div className="space-y-4">
-                  <h3 className="text-2xl font-black uppercase">{isEn ? "Cloud-Licensing" : "Cấp phép Đám mây"}</h3>
-                  <table className="w-full text-xs text-slate-400 font-mono">
-                     <tbody className="divide-y divide-slate-800">
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Real-time" : "Thời gian thực"}:</td> <td className="text-white text-right">Live Entitlements</td></tr>
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Subscription" : "Đăng ký thuê bao"}:</td> <td className="text-white text-right">Monthly/Annual</td></tr>
-                        <tr className="py-2 block"><td className="py-2">{isEn ? "Reporting" : "Báo cáo"}:</td> <td className="text-white text-right">Usage Tracking</td></tr>
+               <div className="space-y-6">
+                  <h3 className="text-2xl font-black uppercase text-gray-900">{isEn ? "Cloud-Licensing" : "Cấp phép Đám mây"}</h3>
+                  <table className="w-full text-xs text-gray-500 font-mono">
+                     <tbody className="divide-y divide-gray-100">
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Real-time" : "Thời gian thực"}:</td> <td className="text-gray-900 font-bold">Live Entitlement</td></tr>
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Subscription" : "Thuê bao"}:</td> <td className="text-gray-900 font-bold">Monthly/Annual</td></tr>
+                        <tr className="flex justify-between py-3"><td>{isEn ? "Reporting" : "Báo cáo"}:</td> <td className="text-gray-900 font-bold">Usage Tracking</td></tr>
                      </tbody>
                   </table>
                </div>
@@ -386,26 +371,27 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
          </div>
       </section>
 
-      {/* Zone 3: FCT Process (4 Steps) */}
-      <section className="py-12 px-6 bg-[#010409]">
+      {/* Zone 3: FCT Process (Slate-50) */}
+      <section className="py-24 px-6 bg-slate-50">
          <div className="max-w-6xl mx-auto">
-            <div className="mb-20">
-               <h2 className="text-4xl md:text-5xl font-black tracking-tight text-center">{isEn ? "FCT Implementation Process" : "Quy trình Triển khai FCT"}</h2>
+            <div className="mb-20 text-center space-y-4">
+               <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900">{isEn ? "FCT Implementation Process" : "Quy trình Triển khai FCT"}</h2>
+               <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                {steps.map((step, idx) => (
                  <div key={idx} className="relative group">
-                    <div className="military-panel rounded-[2rem] p-8 h-full space-y-6 transition-all duration-300 group-hover:border-blue-500/50 group-hover:-translate-y-2">
-                       <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.3em]">Phase 0{step.id}</span>
-                       <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <div className="bg-white border border-gray-100 rounded-[2rem] p-8 h-full space-y-6 shadow-xl shadow-gray-200/40 transition-all duration-300 group-hover:border-blue-500/50 group-hover:-translate-y-2">
+                       <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Phase 0{step.id}</span>
+                       <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
                           {step.icon}
                        </div>
-                       <h4 className="text-lg font-black uppercase tracking-tight">{step.title}</h4>
-                       <p className="text-slate-500 text-sm font-light leading-relaxed">{step.desc}</p>
+                       <h4 className="text-lg font-black uppercase tracking-tight text-gray-900">{step.title}</h4>
+                       <p className="text-gray-500 text-sm font-light leading-relaxed">{step.desc}</p>
                     </div>
                     {idx < steps.length - 1 && (
-                      <div className="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 z-20 text-slate-800">
+                      <div className="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 z-20 text-gray-300">
                          <ArrowRight className="w-8 h-8" />
                       </div>
                     )}
@@ -415,12 +401,12 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
          </div>
       </section>
 
-      {/* ── 4. CALL TO ACTION & SEO Schema ───────────────────────── */}
-      <section className="py-8 px-6 flex flex-col items-center justify-center text-center">
-         <div className="max-w-4xl military-panel rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden">
+      {/* ── 4. CTA FOOTER ───────────────────────── */}
+      <section className="py-24 px-6 flex flex-col items-center justify-center text-center bg-white border-t border-gray-100">
+         <div className="max-w-4xl w-full bg-gray-950 rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
             
-            <h2 className="text-4xl font-black tracking-tighter leading-none">
+            <h2 className="text-4xl font-black tracking-tighter leading-none text-white uppercase italic">
                {isEn ? "Ready to Seal Your Software Security?" : "Sẵn sàng niêm phong Bản quyền của bạn?"}
             </h2>
             <p className="text-slate-400 text-lg font-light max-w-2xl mx-auto">
@@ -432,7 +418,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             <div className="flex flex-wrap justify-center gap-6 pt-4">
                <Link 
                  href={`/${lang}/contact?solution=thales`}
-                 className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all flex items-center gap-3 shadow-md"
+                 className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all flex items-center gap-3 shadow-xl shadow-blue-600/30"
                >
                  {isEn ? "Request Integration Quote" : "Nhận báo giá tích hợp"}
                  <ArrowRight className="w-5 h-5" />

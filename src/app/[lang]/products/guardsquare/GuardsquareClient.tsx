@@ -39,10 +39,10 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
   const scale = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-[#020617] text-white overflow-hidden font-sans selection:bg-sky-600">
+    <main ref={containerRef} className="min-h-screen bg-slate-50 text-gray-950 overflow-hidden font-sans selection:bg-sky-600">
       
-      {/* ── 1. THE INVISIBLE SHIELD (Hero Section) ───────────────────── */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-12 pb-6 px-6">
+      {/* ── 1. HERO SECTION (Dark) ───────────────────── */}
+      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-32 pb-24 px-6 bg-[#020617]">
         <NeuralNetworkBackground />
         
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-600/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
@@ -58,10 +58,10 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white">
               GUARDSQUARE <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 drop-shadow-[0_0_30px_rgba(56,189,248,0.5)]">
-                THE INVISIBLE SHIELD
+                PROTECTION NEXUS
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight">
@@ -75,7 +75,7 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
           <div className="flex justify-center gap-6 pt-10">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="px-10 py-5 brushed-aluminum text-slate-900 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
+              className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-sky-600/30"
             >
               {isEn ? "Get Technical Advice" : "Nhận Tư vấn Kỹ thuật"}
             </button>
@@ -83,12 +83,12 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
         </motion.div>
       </section>
 
-      {/* ── 2. BLUEPRINT: SVG INTERACTIVE DIAGRAM ────────────────── */}
-      <section className="py-16 px-6 max-w-7xl mx-auto relative content-visibility-auto">
+      {/* ── 2. BLUEPRINT (White) ────────────────── */}
+      <section className="py-24 px-6 max-w-7xl mx-auto relative bg-white rounded-t-[4rem] -mt-12 z-20">
          <div className="text-center mb-20 space-y-4">
-            <span className="text-sky-500 font-black text-xs uppercase tracking-[0.4em]">Multi-Layer Protection</span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none">
-              {isEn ? "Defense Architecture" : "Kiến trúc Phòng thủ"}
+            <span className="text-sky-600 font-black text-xs uppercase tracking-[0.4em]">Multi-Layer Protection</span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
+               {isEn ? "Defense Architecture" : "Kiến trúc Phòng thủ"}
             </h2>
          </div>
 
@@ -96,7 +96,7 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="military-panel rounded-[3rem] p-12 md:p-20 relative overflow-hidden group"
+            className="bg-[#0f172a] rounded-[3.5rem] p-12 md:p-20 relative overflow-hidden group shadow-3xl"
          >
             {/* SVG Interactive Diagram */}
             <svg 
@@ -121,10 +121,10 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
               <g transform="translate(500, 250)">
                  {/* Center - Source Code */}
                  <motion.circle 
-                   cx="0" cy="0" r="40" 
-                   fill="#0f172a" stroke="#1e293b" strokeWidth="2" 
-                   onMouseEnter={() => setActiveStep(0)}
-                   className="cursor-pointer"
+                    cx="0" cy="0" r="40" 
+                    fill="#020617" stroke="#1e293b" strokeWidth="2" 
+                    onMouseEnter={() => setActiveStep(0)}
+                    className="cursor-pointer"
                  />
                  <FileCode2 className="text-slate-400" x="-15" y="-15" width="30" height="30" />
                  
@@ -191,7 +191,6 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
               </g>
             </svg>
 
-            {/* Diagram Tooltip Info */}
             <div className="mt-12 min-h-[120px] flex items-center justify-center text-center">
                <motion.div 
                  key={activeStep}
@@ -234,20 +233,30 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
                   )}
                </motion.div>
             </div>
+
+            <div className="mt-10 flex justify-center">
+              <Link 
+                href={`/${lang}/contact?solution=guardsquare`}
+                className="bg-sky-600 text-white px-10 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-sky-700 transition-all flex items-center gap-3 shadow-xl shadow-sky-600/20 group"
+              >
+                {isEn ? "Experience DexGuard Demo" : "Yêu cầu Demo DexGuard"}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+              </Link>
+            </div>
          </motion.div>
       </section>
 
-      {/* ── 3. THE PAIN (Data Theft) ───────────────────────── */}
-      <section className="py-12 px-6 bg-gradient-to-b from-[#020617] to-[#082f49]">
-         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      {/* ── 3. ZONE 1: PAIN (Slate-50) ───────────────────────── */}
+      <section className="py-24 px-6 bg-slate-50">
+         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
-               <div className="w-12 h-12 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-400">
+               <div className="w-12 h-12 bg-sky-50 rounded-2xl flex items-center justify-center text-sky-600 border border-sky-100 shadow-sm">
                   <ShieldAlert className="w-6 h-6" />
                </div>
-               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-gray-900">
                   {isEn ? "The Reality of App Tampering" : "Hiểm Họa Từ Việc Hack Ứng Dụng"}
                </h2>
-               <p className="text-slate-400 text-lg font-light leading-relaxed">
+               <p className="text-gray-500 text-lg font-light leading-relaxed">
                   {isEn 
                     ? "Financial institutions and mobile-first businesses face critical risks from cloned apps, transaction interception, and bot automation."
                     : "Các tổ chức tài chính đang đối mặt nguy cơ nghiêm trọng từ ứng dụng nhái (Clone Apps), đánh chặn giao dịch và lạm dụng API bằng Bot."
@@ -255,40 +264,29 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
                </p>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
-               <div className="military-panel rounded-3xl p-8 space-y-2 border-sky-500/10">
-                  <span className="text-3xl font-black text-white">Top 3</span>
-                  <p className="text-[10px] text-slate-500 uppercase font-black">{isEn ? "Cyber Threats" : "Mối đe dọa hàng đầu"}</p>
+            <div className="grid grid-cols-2 gap-6">
+               <div className="bg-white rounded-3xl p-10 space-y-2 border border-gray-100 shadow-xl shadow-gray-200/40">
+                  <span className="text-4xl font-black text-gray-900">Top 3</span>
+                  <p className="text-[10px] text-gray-400 uppercase font-black">{isEn ? "Cyber Threats" : "Mối đe dọa hàng đầu"}</p>
                </div>
-               <div className="military-panel rounded-3xl p-8 space-y-2 translate-y-8">
-                  <span className="text-3xl font-black text-white">100%</span>
-                  <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest">{isEn ? "OWASP Coverage" : "Chống lại chuẩn OWASP"}</p>
+               <div className="bg-white rounded-3xl p-10 space-y-2 lg:translate-y-12 border border-gray-100 shadow-xl shadow-gray-200/40">
+                  <span className="text-4xl font-black text-gray-900">100%</span>
+                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{isEn ? "OWASP Coverage" : "Chống lại chuẩn OWASP"}</p>
                </div>
-            </div>
-
-            {/* 🚀 NEW CTA UNDER BLUEPRINT */}
-            <div className="mt-10 flex justify-center">
-              <Link 
-                href={`/${lang}/contact?solution=guardsquare`}
-                className="military-panel px-10 py-4 bg-sky-950/50 text-white rounded-2xl font-bold text-xs uppercase tracking-widest hover:border-sky-500/50 transition-all flex items-center gap-3 border border-white/5 group shadow-2xl"
-              >
-                {isEn ? "Experience DexGuard Demo" : "Yêu cầu Demo DexGuard"}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform text-sky-400" />
-              </Link>
             </div>
          </div>
       </section>
 
-      {/* ── 4. CALL TO ACTION & Schema ───────────────────────── */}
-      <section className="py-8 px-6 flex flex-col items-center justify-center text-center">
-         <div className="max-w-4xl military-panel rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden">
-            <h2 className="text-4xl font-black tracking-tighter leading-none relative z-10">
-               {isEn ? "Ready to integrate The Invisible Shield?" : "Sẵn sàng phủ Tấm Khiên cho ứng dụng di động?"}
+      {/* ── 4. CTA FOOTER (White) ───────────────────────── */}
+      <section className="py-24 px-6 flex flex-col items-center justify-center text-center bg-white border-t border-gray-100">
+         <div className="max-w-4xl w-full bg-gray-950 rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden shadow-2xl">
+            <h2 className="text-5xl font-black tracking-tighter leading-none text-white uppercase italic">
+               {isEn ? "Ready to integrate Protection Nexus?" : "Sẵn sàng phủ Tấm Khiên cho di động?"}
             </h2>
-            <div className="flex flex-wrap justify-center gap-6 pt-4 relative z-10">
+            <div className="flex flex-wrap justify-center gap-6 pt-4">
                <Link 
                  href={`/${lang}/contact?solution=guardsquare`}
-                 className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 shadow-md hover:bg-sky-500 transition-all flex items-center gap-3"
+                 className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 shadow-xl shadow-sky-600/30 transition-all flex items-center gap-3"
                >
                  {isEn ? "Request DexGuard Demo" : "Yêu cầu Demo DexGuard"}
                  <ArrowRight className="w-5 h-5" />

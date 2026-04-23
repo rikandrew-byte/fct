@@ -51,11 +51,12 @@ const valueColors = [
 
 export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
   const d = dict.aboutPage;
+  const isEn = lang === "en";
 
   return (
     <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-22 pb-16 px-6 min-h-[60vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
+      <section className="relative pt-32 pb-20 px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
         
         {/* Glows */}
@@ -81,20 +82,6 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               <p className="text-gray-300 text-xl font-light leading-relaxed max-w-xl tracking-tight">
                 {d.hero.description}
               </p>
-              <div className="flex flex-wrap gap-5 pt-6">
-                <Link
-                  href={`/${lang}/products`}
-                  className="group inline-flex items-center gap-4 bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-sm tracking-tight hover:bg-blue-700 transition-all duration-500 shadow-2xl shadow-blue-500/40"
-                >
-                  {d.hero.ctaProducts} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href={`/${lang}/contact`}
-                  className="inline-flex items-center gap-4 bg-white/5 border border-white/10 backdrop-blur-md text-white px-10 py-5 rounded-2xl font-black text-sm tracking-tight hover:bg-white/10 transition-all duration-500"
-                >
-                  {d.hero.ctaExperts}
-                </Link>
-              </div>
             </motion.div>
 
             {/* Stats grid */}
@@ -305,14 +292,13 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
                         {p.tier}
                       </span>
                     </div>
-                    {/* Note: Partner descriptions are usually fixed brand names or already in a multi-lang structure if needed */}
                     <p className="text-gray-600 text-sm leading-relaxed font-light flex-1">
                       {p.description}
                     </p>
                     <div className="pt-5 border-t border-gray-50 flex items-center justify-between">
                       <Link
                         href={`/${lang}/products`}
-                        className={`inline-flex items-center gap-2 text-sm font-bold transition-all px-3 py-2 rounded-xl ${p.btnColor}`}
+                        className={`group inline-flex items-center gap-2 text-sm font-bold transition-all px-3 py-2 rounded-xl ${p.btnColor}`}
                       >
                         {d.partners.viewProducts}
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -335,20 +321,24 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── CTA Liên hệ ─────────────────────────────────────────────── */}
-      <section className="bg-gray-950 py-12 px-6">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">
-            {d.cta.title}
-          </h2>
-          <p className="text-gray-400 font-light text-lg max-w-xl mx-auto">
-            {d.cta.description}
-          </p>
+      <section className="bg-white py-24 px-6 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto w-full bg-gray-900 rounded-[3.5rem] p-12 md:p-16 text-center space-y-10 relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+          
+          <div className="space-y-6 relative z-10">
+            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+              {d.cta.title}
+            </h2>
+            <p className="text-gray-400 font-light text-lg max-w-xl mx-auto">
+              {d.cta.description}
+            </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <a
               href="tel:0983027776"
               id="about-contact-call"
-              className="flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
+              className="flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-5 rounded-2xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
             >
               <Phone className="w-5 h-5" />
               0983 027 776
@@ -356,23 +346,22 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
             <a
               href="mailto:andrew@fct.vn"
               id="about-contact-email"
-              className="flex items-center justify-center gap-2 bg-gray-800 text-gray-200 border border-gray-700 px-8 py-4 rounded-2xl font-bold hover:bg-gray-700 hover:text-white transition-all"
+              className="flex items-center justify-center gap-2 bg-gray-800 text-gray-200 border border-gray-700 px-8 py-5 rounded-2xl font-bold hover:bg-gray-700 hover:text-white transition-all transition-all"
             >
               <Mail className="w-5 h-5" />
               andrew@fct.vn
             </a>
             <Link
-              href={`/${lang}/products`}
+              href={`/${lang}/contact`}
               id="about-view-products"
-              className="flex items-center justify-center gap-2 bg-gray-800 text-gray-200 border border-gray-700 px-8 py-4 rounded-2xl font-bold hover:bg-gray-700 hover:text-white transition-all"
+              className="flex items-center justify-center gap-2 bg-gray-800 text-gray-200 border border-gray-700 px-8 py-5 rounded-2xl font-bold hover:bg-gray-700 hover:text-white transition-all"
             >
-              <Award className="w-5 h-5" />
-              {d.partners.viewProducts}
+              <ArrowRight className="w-5 h-5" />
+              {isEn ? "Contact Us" : "Liên hệ ngay"}
             </Link>
           </div>
 
-          {/* Contact info */}
-          <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-500">
+          <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-500 relative z-10">
             <span className="flex items-center gap-2 justify-center">
               <MapPin className="w-4 h-4" />
               {dict.footer.hqAddress}

@@ -16,7 +16,7 @@ import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
-  
+
   return {
     title: `RFP | ${dict.contact.metaTitle}`,
     description: "Submit a Request for Proposal for enterprise-grade security solutions.",
@@ -33,7 +33,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       {/* ── 1. Hero Section (Centered) ─────────────────────────────────── */}
       <section className="relative bg-[#020617] pt-32 pb-24 px-6 overflow-hidden">
         <NeuralNetworkBackground />
-        
+
         {/* Glow Effects */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-[200px] -z-10"></div>
 
@@ -44,13 +44,13 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
               {isEn ? "Enterprise RFP Gateway" : "Cổng tiếp nhận hồ sơ giải pháp"}
             </span>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase text-white">
             {isEn ? "Request for" : "Yêu cầu"} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300">{isEn ? "Proposal" : "Giải pháp"}</span>
           </h1>
 
           <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
-            {isEn 
+            {isEn
               ? "Transform your infrastructure with world-class security. Submit your technical requirements below for a customized architectural blueprint and quote."
               : "Chuyển đổi hạ tầng bảo mật của bạn với tiêu chuẩn quốc tế. Gửi yêu cầu kỹ thuật để nhận thiết kế kiến trúc và báo giá tối ưu."
             }
@@ -97,7 +97,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           {/* HQ Location */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white border border-gray-100 rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-gray-200/50">
             <div className="w-full aspect-video rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-xl bg-slate-50">
-               <iframe
+              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.322596489379!2d105.83467477503!3d20.979697980655823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135add13ae6fb33%3A0x6739932145b736b4!2zTmfDtGkgU2FvIEJ1aWxkaW5n!5e0!3m2!1svi!2svn!4v1713500000000!5m2!1svi!2svn"
                 width="100%"
                 height="100%"
@@ -117,7 +117,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                   <div className="space-y-1">
                     <p className="text-[10px] uppercase font-black text-gray-400 tracking-widest">{isEn ? "Address" : "Địa chỉ văn phòng"}</p>
                     <p className="text-lg font-bold text-gray-900 leading-tight">
-                      Tầng 4, Tòa nhà Ngôi Sao, <br />15 Nguyễn Cảnh Dị, Hoàng Mai, Hà Nội.
+                      Tầng 3, Tòa nhà Ngôi Sao, <br />15 Nguyễn Cảnh Dị, Hoàng Mai, Hà Nội.
                     </p>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                 </div>
               </div>
 
-              <Link 
+              <Link
                 href="https://maps.google.com/?q=Nguyễn+Cảnh+Dị,+Đại+Kim,+Hoàng+Mai,+Hà+Nội"
                 target="_blank"
                 className="inline-flex items-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-black transition-all uppercase text-xs tracking-widest group shadow-xl"
