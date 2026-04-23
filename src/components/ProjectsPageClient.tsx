@@ -44,7 +44,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
   const isEn = lang === "en";
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-600 selection:text-white">
+    <main className="min-h-screen bg-[#020617] text-slate-200 selection:bg-blue-600 selection:text-white">
       {/* ── Hero Section ───────────────────────────────────────────── */}
       <section className="relative pt-22 pb-12 px-6 overflow-hidden">
         <NeuralNetworkBackground />
@@ -82,7 +82,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-[#020617]/80 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 md:p-8 text-center group hover:border-blue-500/50 transition-all duration-500"
               >
-                <p className="text-3xl md:text-5xl font-black text-white mb-2 group-hover:text-blue-400 transition-colors">
+                <p className="text-3xl md:text-5xl font-black text-slate-200 mb-2 group-hover:text-blue-400 transition-colors">
                   {stat.value}
                 </p>
                 <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-blue-500 mb-1">
@@ -177,7 +177,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                         <TrendingUp className="w-10 h-10 text-emerald-400 shrink-0" />
                         <div>
                           <p className="text-[10px] font-black uppercase tracking-widest text-emerald-400/70 mb-1">{d.list.result}</p>
-                          <p className="text-lg font-bold text-white tracking-tight">{project.result}</p>
+                          <p className="text-lg font-bold text-slate-200 tracking-tight">{project.result}</p>
                         </div>
                      </div>
                   </div>
@@ -193,7 +193,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
         <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
           
-          <h2 className="text-4xl font-black tracking-tighter">{d.cta.title}</h2>
+          <h2 className="text-4xl font-black tracking-tighter text-slate-200">{d.cta.title}</h2>
           <p className="text-blue-100 opacity-80 font-light text-lg">
             {d.cta.description}
           </p>

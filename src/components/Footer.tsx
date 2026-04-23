@@ -38,7 +38,7 @@ export default function Footer({ lang, dict }: FooterProps) {
   }, []);
 
   return (
-    <footer className="bg-gray-950 pt-6 md:pt-8 pb-4 border-t border-gray-900 text-slate-400">
+    <footer className="bg-[#020617] pt-6 md:pt-8 pb-4 border-t border-gray-900 text-slate-400">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-10">
           {/* Cột 1: Brand */}
