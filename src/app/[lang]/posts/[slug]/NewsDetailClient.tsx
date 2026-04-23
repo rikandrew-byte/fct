@@ -130,6 +130,21 @@ export default function NewsDetailClient({
         );
       }
 
+      // 5. Nhận diện CTA Button (Format: [Text](url))
+      const btnMatch = trimmed.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (btnMatch) {
+        return (
+          <div key={index} className="my-8">
+            <a 
+              href={btnMatch[2]} 
+              className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-500 transition-colors shadow-xl shadow-blue-500/20"
+            >
+              {btnMatch[1]}
+            </a>
+          </div>
+        );
+      }
+
       // 5. Render Paragraph thường
       return (
         <p key={index} className="text-gray-700 font-light leading-relaxed text-lg md:text-xl mb-6">
