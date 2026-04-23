@@ -15,6 +15,7 @@ interface HomePageClientProps {
 }
 
 export default function HomePageClient({ lang, dict }: HomePageClientProps) {
+  const isEn = lang === "en";
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
