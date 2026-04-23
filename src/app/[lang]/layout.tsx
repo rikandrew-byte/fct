@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
-  const baseUrl = "https://fct.vn";
+  const baseUrl = "https://www.fct.vn";
   
   return {
     title: {

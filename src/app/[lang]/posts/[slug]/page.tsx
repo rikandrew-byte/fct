@@ -48,7 +48,7 @@ export async function generateMetadata({
   }
 
   const article = newsData.find((a) => a.id === slug);
-  const baseUrl = 'https://fct.vn';
+  const baseUrl = 'https://www.fct.vn';
 
   if (!article) {
     return {
@@ -61,7 +61,7 @@ export async function generateMetadata({
     ? `${baseUrl}${article.ogImage}` 
     : article.image 
       ? `${baseUrl}${article.image}` 
-      : `${baseUrl}/logo.webp`;
+      : `${baseUrl}/logo.png`;
 
   return {
     title: `${article.title} | FCT Vinh Thinh .,JSC`,
