@@ -6,7 +6,6 @@ import { ShieldAlert, Cpu, ArrowRight, ShieldCheck } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
-import IntegritySeal from "@/components/IntegritySeal";
 import { motion } from "framer-motion";
 
 interface HomePageClientProps {
@@ -15,7 +14,6 @@ interface HomePageClientProps {
 }
 
 export default function HomePageClient({ lang, dict }: HomePageClientProps) {
-  const isEn = lang === "en";
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
@@ -63,14 +61,10 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight mb-8"
+            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight"
           >
             {dict.hero.description}
           </motion.p>
-          
-          <div className="pt-8">
-            <IntegritySeal />
-          </div>
         </div>
       </section>
 
@@ -121,7 +115,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 h-full glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50"
+            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:border-blue-400/50"
           >
             <Image
               src="/images/guardsquare-bg.png"
@@ -137,14 +131,9 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
               <ShieldAlert className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
             </div>
             <h3 className="relative z-10 text-3xl font-black text-gray-950 mb-4 tracking-tighter">{dict.solutions.mobileSecurity.title}</h3>
-            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm mb-8">
+            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
               {dict.solutions.mobileSecurity.description}
             </p>
-            <div className="relative z-10 mt-auto">
-               <Link href={`/${lang}/products/guardsquare`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-bold rounded-xl shadow-lg shadow-blue-500/10 hover:bg-blue-600 hover:text-white transition-all text-sm uppercase tracking-widest border border-blue-100 group-hover:border-blue-500/30">
-                  {isEn ? "View details" : "Xem chi tiết giải pháp"} <ArrowRight className="w-4 h-4" />
-               </Link>
-            </div>
           </motion.article>
 
           {/* Card 2: Thales */}
@@ -154,34 +143,24 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 h-full glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(99,102,241,0.15)] hover:border-indigo-400/50"
+            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(99,102,241,0.15)] hover:border-indigo-400/50"
           >
-            <div className="absolute inset-0 opacity-[0.4] group-hover:opacity-[0.7] transition-all duration-700 pointer-events-none flex items-center justify-end p-8 overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-[80%] h-auto text-indigo-500/40" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="50" y="100" width="80" height="100" rx="4" />
-                <path strokeDasharray="4 4" d="M130 150h140" />
-                <rect x="270" y="100" width="80" height="100" rx="4" />
-                <circle cx="200" cy="150" r="20" className="fill-indigo-500/20" />
-                <path d="M200 135v-20m-15 10h30" className="stroke-indigo-400" />
-                <text x="90" y="225" fontSize="12" fill="currentColor" opacity="0.6" stroke="none" textAnchor="middle">Code</text>
-                <text x="310" y="225" fontSize="12" fill="currentColor" opacity="0.6" stroke="none" textAnchor="middle">Hardware</text>
-                <text x="200" y="195" fontSize="10" fill="currentColor" opacity="0.6" stroke="none" textAnchor="middle">Encrypted Execution</text>
-              </svg>
-            </div>
+            <Image
+              src="/sentinelLDK1.png"
+              alt="Bảo mật Thales"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-top opacity-[0.1] group-hover:opacity-[0.3] transition-all duration-700 pointer-events-none"
+            />
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-transparent z-0"></div>
             <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-indigo-500/10 blur-[100px] rounded-full group-hover:bg-indigo-500/20 transition-colors pointer-events-none"></div>
             <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-indigo-50/50 backdrop-blur-md flex items-center justify-center mb-8 group-hover:bg-indigo-600 transition-colors border border-indigo-100/50">
               <ShieldCheck className="w-8 h-8 text-indigo-600 group-hover:text-white transition-colors" />
             </div>
             <h3 className="relative z-10 text-3xl font-black text-gray-950 mb-4 tracking-tighter">{dict.solutions.licenseManagement.title}</h3>
-            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm mb-8">
+            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
               {dict.solutions.licenseManagement.description}
             </p>
-            <div className="relative z-10 mt-auto">
-               <Link href={`/${lang}/products/thales-sentinel`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-600 font-bold rounded-xl shadow-lg shadow-indigo-500/10 hover:bg-indigo-600 hover:text-white transition-all text-sm uppercase tracking-widest border border-indigo-100 group-hover:border-indigo-500/30">
-                  {isEn ? "View details" : "Xem chi tiết giải pháp"} <ArrowRight className="w-4 h-4" />
-               </Link>
-            </div>
           </motion.article>
 
           {/* Card 3: Longmai */}
@@ -191,21 +170,16 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             whileHover={{ y: -10, scale: 1.01 }}
-            className="md:col-span-2 h-full glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(244,63,94,0.15)] hover:border-rose-400/50"
+            className="md:col-span-2 glass-panel rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(244,63,94,0.15)] hover:border-rose-400/50"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-rose-500/5 via-transparent to-transparent z-0"></div>
             <div className="relative z-10 w-16 h-16 rounded-[2rem] bg-rose-50 flex items-center justify-center mb-8 group-hover:bg-rose-600 transition-colors border border-rose-100">
               <Cpu className="w-8 h-8 text-rose-600 group-hover:text-white transition-colors" />
             </div>
             <h3 className="relative z-10 text-3xl font-black text-gray-950 mb-4 tracking-tighter">{dict.solutions.hardwareSecurity.title}</h3>
-            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm mb-8">
+            <p className="relative z-10 text-gray-500 text-base font-light leading-relaxed max-w-sm">
               {dict.solutions.hardwareSecurity.description}
             </p>
-            <div className="relative z-10 mt-auto">
-               <Link href={`/${lang}/products/longmai`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-rose-600 font-bold rounded-xl shadow-lg shadow-rose-500/10 hover:bg-rose-600 hover:text-white transition-all text-sm uppercase tracking-widest border border-rose-100 group-hover:border-rose-500/30">
-                  {isEn ? "View details" : "Xem chi tiết giải pháp"} <ArrowRight className="w-4 h-4" />
-               </Link>
-            </div>
           </motion.article>
 
           {/* Card 4: FCT Ecosystem Link */}
