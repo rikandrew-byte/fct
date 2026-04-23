@@ -20,8 +20,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     "name": "FCT Vinh Thinh JSC",
     "alternateName": "Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh",
     "url": "https://fct.vn",
-    "logo": "https://fct.vn/logo.png",
-    "image": "https://fct.vn/og-image.png",
+    "logo": "https://fct.vn/logo.webp",
+    "image": "https://fct.vn/og-image.webp",
     "description": dict.hero.description,
     "address": {
       "@type": "PostalAddress",

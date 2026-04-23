@@ -35,10 +35,10 @@ export default function middleware(request: NextRequest) {
     [
       '/manifest.json',
       '/favicon.ico',
-      '/logo.png',
       '/logo.webp',
+      '/og-image.webp',
       '/icon.png',
-      '/sentinelLDK1.png',
+      '/sentinelLDK1.webp',
       '/robots.txt',
       '/sitemap.xml',
     ].includes(pathname) ||

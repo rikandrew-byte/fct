@@ -201,6 +201,22 @@ export default function NewsDetailClient({
       </section>
 
       {/* ── Content Section ────────────────────────────────────────── */}
+      <section className="max-w-4xl mx-auto -mt-20 px-6 relative z-20">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10"
+        >
+          <img 
+            src={(article as any).image || "/logo.webp"} 
+            alt={article.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        </motion.div>
+      </section>
+
       <section className="max-w-7xl mx-auto py-20 px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           

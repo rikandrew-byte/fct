@@ -45,7 +45,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           <div className="space-y-8 md:col-span-4">
             <Link href={`/${lang}`} className="flex items-center gap-3">
               <Image 
-                src="/logo.png" 
+                src="/logo.webp" 
                 alt="Logo FCT Vinh Thinh .,JSC" 
                 width={56} 
                 height={56} 

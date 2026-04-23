@@ -86,7 +86,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
               {/* Image Area */}
               <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
                 <Image 
-                  src={article.image || "/logo.png"} 
+                  src={article.image || "/logo.webp"} 
                   alt={article.title}
                   fill
                   className={`object-cover transition-transform duration-700 group-hover:scale-110 ${!article.image ? 'p-12 opacity-20' : ''}`}
