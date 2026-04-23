@@ -14,6 +14,7 @@ interface Article {
   summary: string;
   category: string;
   link?: string; // Tùy chọn để tránh lỗi build
+  image?: string;
   content: string;
 }
 
@@ -37,6 +38,7 @@ export async function generateMetadata({
   const lang = langRaw as Locale;
   const newsData = lang === "en" ? newsEn : newsVi;
   const article = newsData.find((a) => a.id === id);
+  const baseUrl = 'https://fct.vn';
 
   if (!article) {
     return {
@@ -44,18 +46,30 @@ export async function generateMetadata({
     };
   }
 
+  const ogImageUrl = article.image ? `${baseUrl}${article.image}` : `${baseUrl}/og-image.png`;
+
   return {
     title: `${article.title} | FCT Vinh Thinh .,JSC`,
     description: article.summary,
+    alternates: {
+      canonical: `${baseUrl}/${lang}/news/${id}`,
+      languages: {
+        'vi-VN': `${baseUrl}/vi/news/${id}`,
+        'en-US': `${baseUrl}/en/news/${id}`,
+      },
+    },
     openGraph: {
       title: article.title,
       description: article.summary,
-      type: "article",
+      url: `${baseUrl}/${lang}/news/${id}`,
+      siteName: 'FCT Vinh Thinh .,JSC',
+      locale: lang === 'vi' ? 'vi_VN' : 'en_US',
+      type: 'article',
       publishedTime: article.date,
-      authors: ["FCT Vinh Thinh .,JSC"],
+      authors: ['FCT Vinh Thinh .,JSC'],
       images: [
         {
-          url: "/og-image.png",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -66,7 +80,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: article.title,
       description: article.summary,
-      images: ["/og-image.png"],
+      images: [ogImageUrl],
     },
   };
 }
