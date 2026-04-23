@@ -38,7 +38,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function ProjectsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
-  const projectsData = lang === "en" ? projectsEn : projectsVi;
+  const projectsDataRaw = lang === "en" ? projectsEn : projectsVi;
+  const projectsData = (Array.isArray((projectsDataRaw as any).default) ? (projectsDataRaw as any).default : (Array.isArray(projectsDataRaw) ? projectsDataRaw : []));
 
   const jsonLd = {
     "@context": "https://schema.org",

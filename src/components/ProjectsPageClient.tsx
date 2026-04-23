@@ -133,7 +133,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
       {/* Case Studies Grid */}
       <section className="max-w-7xl mx-auto py-10 px-6 bg-slate-50">
         <div className="grid grid-cols-1 gap-12">
-          {projectsData.map((project, index) => {
+          {(Array.isArray(projectsData) ? projectsData : []).map((project, index) => {
             const Icon = iconMap[project.industry] || Shield;
             
             return (
