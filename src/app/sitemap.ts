@@ -50,9 +50,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 2. Dynamic News Articles
     const newsData = lang === 'en' ? newsEn : newsVi
     newsData.forEach((article) => {
+      // Safe Date Parsing
+      let lastMod = new Date();
+      if (article.date) {
+        const parts = article.date.split('/');
+        if (parts.length === 3) {
+          const dateStr = `${parts[2]}-${parts[1]}-${parts[0]}`;
+          const d = new Date(dateStr);
+          if (!isNaN(d.getTime())) lastMod = d;
+        } else {
+          const d = new Date(article.date);
+          if (!isNaN(d.getTime())) lastMod = d;
+        }
+      }
+
       sitemapEntries.push({
         url: `${baseUrl}/${lang}/news/${article.id}`,
-        lastModified: new Date(article.date.split('/').reverse().join('-')),
+        lastModified: lastMod,
         changeFrequency: 'monthly',
         priority: 0.6,
         alternates: {
