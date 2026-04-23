@@ -46,7 +46,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
   return (
     <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-600 selection:text-white">
       {/* ── Hero Section ───────────────────────────────────────────── */}
-      <section className="relative pt-44 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-22 pb-12 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[180px] -z-10"></div>
         
@@ -98,7 +98,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
       </section>
 
       {/* ── Case Studies Grid ──────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto py-20 px-6">
+      <section className="max-w-7xl mx-auto py-10 px-6">
         <div className="grid grid-cols-1 gap-12">
           {projectsData.map((project, index) => {
             const Icon = iconMap[project.industry] || Shield;
@@ -189,7 +189,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
       </section>
 
       {/* ── Call to Action ────────────────────────────────────────── */}
-      <section className="py-32 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
           

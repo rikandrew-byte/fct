@@ -71,7 +71,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
     <main ref={containerRef} className="min-h-screen bg-[#020617] text-white overflow-hidden font-sans selection:bg-blue-600">
       
       {/* ── 1. THE DARK FOUNDRY (Hero Section) ───────────────────── */}
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-24 pb-12 px-6">
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-12 pb-6 px-6">
         <NeuralNetworkBackground />
         
         {/* Animated Grid Lines */}
@@ -124,7 +124,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       </section>
 
       {/* ── 2. BLUEPRINT: SVG INTERACTIVE DIAGRAM ────────────────── */}
-      <section className="py-32 px-6 max-w-7xl mx-auto relative">
+      <section className="py-16 px-6 max-w-7xl mx-auto relative text-[15px]">
          <div className="text-center mb-20 space-y-4">
             <span className="text-blue-500 font-black text-xs uppercase tracking-[0.4em]">Military Grade Logic</span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none">
@@ -274,7 +274,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       {/* ── 3. TRIPLE LAYER: CONTENT STRUCTURE ────────────────────── */}
       
       {/* Zone 1: The Pain (Piracy) */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#020617] to-[#0f172a]">
+      <section className="py-12 px-6 bg-gradient-to-b from-[#020617] to-[#0f172a]">
          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
                <div className="w-12 h-12 bg-red-500/10 rounded-2xl flex items-center justify-center text-red-500">
@@ -317,7 +317,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       </section>
 
       {/* Zone 2: Core Solutions (Spec Sheets) */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
+      <section className="py-12 px-6 max-w-7xl mx-auto">
          <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl font-black tracking-tight">{isEn ? "Core Technology Pillars" : "Trụ cột Công nghệ lõi"}</h2>
             <p className="text-slate-500">{isEn ? "Tailored protection for every environment" : "Bảo vệ tối ưu cho mọi môi trường vận hành"}</p>
@@ -387,7 +387,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       </section>
 
       {/* Zone 3: FCT Process (4 Steps) */}
-      <section className="py-24 px-6 bg-[#010409]">
+      <section className="py-12 px-6 bg-[#010409]">
          <div className="max-w-6xl mx-auto">
             <div className="mb-20">
                <h2 className="text-4xl md:text-5xl font-black tracking-tight text-center">{isEn ? "FCT Implementation Process" : "Quy trình Triển khai FCT"}</h2>
@@ -416,7 +416,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       </section>
 
       {/* ── 4. CALL TO ACTION & SEO Schema ───────────────────────── */}
-      <section className="py-16 px-6 flex flex-col items-center justify-center text-center">
+      <section className="py-8 px-6 flex flex-col items-center justify-center text-center">
          <div className="max-w-4xl military-panel rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
             

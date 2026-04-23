@@ -39,7 +39,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
   return (
     <main ref={containerRef} className="min-h-screen bg-[#020617] text-white selection:bg-amber-500 selection:text-black pt-20">
       {/* ── 1. HERO SECTION ───────────────────────── */}
-      <section className="relative min-h-[70vh] py-16 flex items-center justify-center overflow-hidden px-6">
+      <section className="relative min-h-[60vh] py-8 flex items-center justify-center overflow-hidden px-6">
         <NeuralNetworkBackground />
         
         <motion.div 
@@ -82,7 +82,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
       </section>
 
       {/* ── 2. ARCHITECTURAL BLUEPRINT ───────────────────────── */}
-      <section className="py-32 px-6 bg-[#01040a]">
+      <section className="py-16 px-6 bg-[#01040a]">
          <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-4 mb-20">
                <h2 className="text-4xl font-black uppercase tracking-tighter">{isEn ? "The IIoT Architecture" : "Kiến trúc luồng dữ liệu IIoT"}</h2>
@@ -212,7 +212,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
       </section>
 
       {/* ── 3. VALUES SECTION ───────────────────────── */}
-      <section className="py-24 px-6 relative">
+      <section className="py-12 px-6 relative">
          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
                <div className="w-16 h-16 bg-amber-600/10 rounded-[2rem] flex items-center justify-center text-amber-500 border border-amber-500/20">
@@ -274,7 +274,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
       </section>
 
       {/* ── 4. CTA FOOTER ───────────────────────── */}
-      <section className="py-16 px-6 flex flex-col items-center justify-center text-center">
+      <section className="py-8 px-6 flex flex-col items-center justify-center text-center">
          <div className="max-w-4xl military-panel rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden bg-gradient-to-br from-[#020617] to-amber-950/20">
             <div className="absolute top-0 right-0 w-64 h-64 bg-amber-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
             

@@ -41,7 +41,7 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
     <main ref={containerRef} className="min-h-screen bg-[#020617] text-white overflow-hidden font-sans selection:bg-rose-600">
       
       {/* ── 1. THE HARDWARE FORTRESS (Hero Section) ───────────────────── */}
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-24 pb-12 px-6">
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-12 pb-6 px-6">
         <NeuralNetworkBackground />
         
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-rose-600/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
@@ -83,7 +83,7 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
       </section>
 
       {/* ── 2. BLUEPRINT: 2FA & PKI INTERACTIVE DIAGRAM ────────────────── */}
-      <section className="py-32 px-6 max-w-7xl mx-auto relative content-visibility-auto">
+      <section className="py-16 px-6 max-w-7xl mx-auto relative content-visibility-auto">
          <div className="text-center mb-20 space-y-4">
             <span className="text-rose-500 font-black text-xs uppercase tracking-[0.4em]">Zero-Trust Engine</span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none">
@@ -270,7 +270,7 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
       </section>
 
       {/* ── 3. CORE VALUES ───────────────────────── */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#020617] to-[#2e1026]">
+      <section className="py-12 px-6 bg-gradient-to-b from-[#020617] to-[#2e1026]">
          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
                <div className="w-12 h-12 bg-rose-500/10 rounded-2xl flex items-center justify-center text-rose-500">
@@ -303,7 +303,7 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
       </section>
 
       {/* ── 4. CALL TO ACTION & Schema ───────────────────────── */}
-      <section className="py-16 px-6 flex flex-col items-center justify-center text-center">
+      <section className="py-8 px-6 flex flex-col items-center justify-center text-center">
          <div className="max-w-4xl military-panel rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden">
             <h2 className="text-4xl font-black tracking-tighter leading-none relative z-10">
                {isEn ? "Lock Down Your Workforce Access" : "Khóa chặt Quyền Truy cập Hệ Thống"}

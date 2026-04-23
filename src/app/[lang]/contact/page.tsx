@@ -31,7 +31,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   return (
     <main className="min-h-screen bg-[#020617] text-white selection:bg-blue-600">
       {/* ── 1. Hero / Header ─────────────────────────────────────────── */}
-      <section className="relative pt-44 pb-32 px-6 overflow-hidden">
+      <section className="relative pt-22 pb-16 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         
         {/* Glow Effects */}
@@ -97,7 +97,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* ── 2. HQ Location ───────────────────────────────────────────── */}
-      <section className="py-32 bg-[#01040a]/80 border-y border-white/5 relative">
+      <section className="py-16 bg-[#01040a]/80 border-y border-white/5 relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="w-full aspect-video rounded-[3rem] overflow-hidden border border-white/10 shadow-3xl bg-slate-900 group relative">

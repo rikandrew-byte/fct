@@ -19,7 +19,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-48 pb-20 px-6 min-h-[95vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
+      <section className="relative pt-16 md:pt-24 pb-10 px-6 min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
@@ -74,7 +74,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
       </section>
 
       {/* Trust & Confidentiality Section */}
-      <section className="border-b border-white/5 bg-[#020617] py-16 relative overflow-hidden">
+      <section className="border-b border-white/5 bg-[#020617] py-8 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 text-center space-y-8">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-gray-500 font-black text-xs md:text-sm tracking-[0.4em] uppercase opacity-80">
             {dict.trust.sectors.map((sector: string) => (
@@ -93,12 +93,12 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
       </section>
 
       {/* Main Content Sections */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <AboutSection lang={lang} dict={dict} />
       </section>
 
       {/* Bento Box Grid */}
-      <section className="max-w-6xl mx-auto px-6 mb-32 pt-20">
+      <section className="max-w-6xl mx-auto px-6 mb-16 pt-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div className="space-y-4 text-center md:text-left">
             <h2 className="text-sm font-black text-blue-600 tracking-[0.4em] uppercase">{dict.solutions.badge}</h2>

@@ -55,7 +55,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
   return (
     <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-44 pb-32 px-6 min-h-[75vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
+      <section className="relative pt-22 pb-16 px-6 min-h-[60vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
         
         {/* Glows */}
@@ -114,7 +114,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── Giới thiệu ──────────────────────────────────────────────── */}
-      <section className="bg-white py-24 px-6">
+      <section className="bg-white py-12 px-6">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="flex items-center gap-3 mb-2">
             <Building2 className="w-6 h-6 text-blue-600" />
@@ -139,7 +139,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── Giá trị cốt lõi ─────────────────────────────────────────── */}
-      <section className="bg-slate-50 py-24 px-6">
+      <section className="bg-slate-50 py-12 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-4 mb-16">
             <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
@@ -178,7 +178,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── Lĩnh vực chuyên môn ──────────────────────────────────────── */}
-      <section className="bg-white py-24 px-6">
+      <section className="bg-white py-12 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
@@ -205,7 +205,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── Timeline ────────────────────────────────────────────────── */}
-      <section className="bg-slate-50 py-24 px-6">
+      <section className="bg-slate-50 py-12 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-4 mb-16">
             <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
@@ -259,7 +259,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── Đối tác chiến lược ───────────────────────────────────────── */}
-      <section className="bg-white py-24 px-6 overflow-hidden">
+      <section className="bg-white py-12 px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div className="space-y-4">
@@ -335,7 +335,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── CTA Liên hệ ─────────────────────────────────────────────── */}
-      <section className="bg-gray-950 py-24 px-6">
+      <section className="bg-gray-950 py-12 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">
             {d.cta.title}

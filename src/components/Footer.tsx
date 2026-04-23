@@ -38,9 +38,9 @@ export default function Footer({ lang, dict }: FooterProps) {
   }, []);
 
   return (
-    <footer className="bg-gray-950 pt-16 md:pt-24 pb-12 border-t border-gray-900 text-gray-500">
+    <footer className="bg-gray-950 pt-8 md:pt-12 pb-6 border-t border-gray-900 text-gray-500">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-10">
           {/* Cột 1: Brand */}
           <div className="space-y-8 md:col-span-1">
             <Link href={`/${lang}`} className="flex items-center gap-3">
@@ -128,7 +128,7 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="pt-5 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="space-y-4 md:space-y-0 md:flex md:items-center md:gap-10">
             <p className="text-[11px] font-medium uppercase tracking-widest leading-loose">
               {d.copyright}

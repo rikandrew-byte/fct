@@ -88,14 +88,14 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-x-12 p-1 bg-white/5 rounded-full border border-white/10">
+          <nav className="hidden lg:flex items-center gap-x-8 p-1 bg-white/5 rounded-full border border-white/10">
             {navLinks.map((link) => {
               const isProducts = link.href.includes("/products");
               return (
                 <div key={link.href} className="relative group">
                   <Link 
                     href={link.href} 
-                    className={`px-4 py-2 rounded-full text-[1.1rem] font-black tracking-tight transition-all duration-300 flex items-center justify-center ${
+                    className={`px-4 py-2 rounded-full text-[15px] font-medium tracking-tight transition-all duration-300 flex items-center justify-center ${
                       pathname === link.href 
                         ? "bg-blue-600 text-white shadow-xl shadow-blue-600/20" 
                         : "text-gray-300 hover:text-blue-400 hover:bg-white/5"
