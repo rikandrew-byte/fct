@@ -42,8 +42,16 @@ export default function NewsDetailClient({
   article, 
   relatedNews 
 }: NewsDetailClientProps) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const d = dict.newsDetail as Record<string, any>;
+  type NewsDict = {
+    backToNews: string;
+    source: string;
+    relatedArticles: string;
+    cta: Record<string, string>;
+    promo: Record<string, string>;
+    [key: string]: string | Record<string, string>;
+  };
+  const d = dict.newsDetail as NewsDict;
+  const commonDict = dict.common as Record<string, string>;
   const isEn = lang === 'en';
 
   const handleShare = async () => {
