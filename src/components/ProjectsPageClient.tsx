@@ -1,22 +1,32 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Shield, Database, Cpu, Lock, Zap, Target, TrendingUp } from "lucide-react";
+import { 
+  Shield, 
+  Zap, 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Database,
+  Building2,
+  Factory,
+  CreditCard,
+  Cloud
+} from "lucide-react";
+import { useState } from "react";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import ContactModal from "@/components/ContactModal";
-import BlueprintNode from "@/components/BlueprintNode";
 
 interface Project {
   id: string;
   title: string;
-  persona: string;
   industry: string;
+  tech: string[];
   challenge: string;
   solution: string;
   result: string;
-  impact: string;
-  tech: string[];
 }
 
 interface ProjectsPageClientProps {
@@ -26,56 +36,79 @@ interface ProjectsPageClientProps {
 }
 
 const iconMap: Record<string, any> = {
-  // Vietnamese keys
-  "T?i ch√≠nh - Ng√¢n h?ng": Shield,
-  "N?ng l∆∞·ª£ng & H·∫?t·∫ßng": Database,
-  "S·∫£n xu·∫•t C√¥ng ngh·ª?cao": Cpu,
-  "Chu·ªói cung ·ª©ng & CNTT": Lock,
-  // English keys
-  "Banking & Finance": Shield,
-  "Energy & Infrastructure": Database,
-  "High-Tech Manufacturing": Cpu,
-  "Supply Chain & IT": Lock,
+  "T√†i ch√≠nh - Ng√¢n h√†ng": CreditCard,
+  "Finance & Banking": CreditCard,
+  "Vi·ªÖn th√¥ng": Globe,
+  "Telecommunications": Globe,
+  "C√¥ng nghi·ªáp - S·∫£n xu·∫•t": Factory,
+  "Manufacturing & Industry": Factory,
+  "Ch√≠nh ph·ªß": Building2,
+  "Government": Building2,
+  "D·ªØ li·ªáu": Database,
+  "Data Centers": Database,
+  "C√¥ng ngh·ªá": Cpu,
+  "Technology": Cpu,
+  "Cloud": Cloud,
+  "B·∫£o m·∫≠t": Lock,
+  "Security": Lock
 };
 
 export default function ProjectsPageClient({ lang, dict, projectsData }: ProjectsPageClientProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const d = dict.projects;
-  const isEn = lang === "en";
+
+  const stats = [
+    { label: d.stats.projects, value: "150+", sub: "Total Deployed" },
+    { label: d.stats.partners, value: "40+", sub: "Tier-1 Partners" },
+    { label: d.stats.roi, value: "30%", sub: "Efficiency Increase" },
+  ];
 
   return (
-    <main className="min-h-screen bg-slate-50 text-gray-950 selection:bg-blue-600 selection:text-white">
-      {/* ?Ä?Ä Hero Section ?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä */}
-      <section className="relative bg-[#020617] pt-24 pb-12 px-6 overflow-hidden">
+    <main className="bg-slate-50 min-h-screen">
+      {/* Header Area */}
+      <div className="relative bg-[#020617] pt-48 pb-32 px-6 overflow-hidden">
         <NeuralNetworkBackground />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[180px] -z-10"></div>
-        
-        <div className="max-w-5xl mx-auto relative z-10 text-center space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="text-blue-500 font-black text-xs uppercase tracking-[0.4em] mb-4 block">
-              {d.badge}
-            </span>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-6 text-white">
-              {d.titlePart1} <span className="text-blue-500">{d.titlePart2}</span>
-            </h1>
-            <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-              {d.description}
-            </p>
-          </motion.div>
-        </div>
-      </section>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[150px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[150px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
 
-      {/* ?Ä?Ä Quantifiable Metrics (Achievements) ?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä */}
-      <section className="relative z-10 -mt-12 mb-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {d.stats.map((stat: any, i: number) => (
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
+            <div className="space-y-8 max-w-3xl">
               <motion.div
-                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[10px] font-black text-blue-300 tracking-[0.4em] uppercase"
+              >
+                {d.badge}
+              </motion.div>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9]"
+              >
+                {d.titlePart1} <br />
+                <span className="text-blue-500">{d.titlePart2}</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="text-gray-400 text-lg md:text-2xl font-light leading-relaxed max-w-xl tracking-tight"
+              >
+                {d.description}
+              </motion.p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Metrics Banner */}
+      <section className="relative z-20 -mt-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -97,7 +130,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
         </div>
       </section>
 
-      {/* ?Ä?Ä Case Studies Grid ?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä */}
+      {/* Case Studies Grid */}
       <section className="max-w-7xl mx-auto py-10 px-6 bg-slate-50">
         <div className="grid grid-cols-1 gap-12">
           {projectsData.map((project, index) => {
@@ -139,12 +172,11 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                     </div>
                   </div>
 
-                  {/* Right Column: Content Sections - Architectural Blueprint */}
+                  {/* Right Column: Content Sections */}
                   <div className="lg:col-span-12">
                      <p className="text-center text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-8">Architectural Blueprint</p>
                      
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-                        {/* Connecting Line */}
                         <div className="hidden md:block absolute top-1/2 left-1/2 w-8 h-px bg-gray-200 -translate-x-1/2 -translate-y-1/2"></div>
                         
                         <div className="flex flex-col gap-4 relative">
@@ -183,7 +215,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
         </div>
       </section>
 
-      {/* ?Ä?Ä Call to Action ?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä?Ä */}
+      {/* Call to Action */}
       <section className="py-12 px-6 relative overflow-hidden">
         <NeuralNetworkBackground />
         <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">

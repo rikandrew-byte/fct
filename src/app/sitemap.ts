@@ -1,8 +1,6 @@
-﻿import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next'
 import newsVi from '@/data/news_vi.json'
 import newsEn from '@/data/news_en.json'
-import projectsVi from '@/data/projects_vi.json'
-import projectsEn from '@/data/projects_en.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://fct.vn'
@@ -30,9 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const sitemapEntries: MetadataRoute.Sitemap = []
 
-  locales.forEach((lang) => {
+  for (const lang of locales) {
     // 1. Static & Product Main Routes
-    [...staticRoutes, ...productRoutes].forEach((route) => {
+    for (const route of [...staticRoutes, ...productRoutes]) {
       sitemapEntries.push({
         url: `${baseUrl}/${lang}${route}`,
         lastModified: new Date(),
@@ -45,43 +43,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
           },
         },
       })
-    })
+    }
 
     // 2. Dynamic News Articles
     const newsData = lang === 'en' ? newsEn : newsVi
-    newsData.forEach((article) => {
-      // Safe Date Parsing
-      let lastMod = new Date();
-      if (article.date) {
-        const parts = article.date.split('/');
-        if (parts.length === 3) {
-          const dateStr = `${parts[2]}-${parts[1]}-${parts[0]}`;
-          const d = new Date(dateStr);
-          if (!isNaN(d.getTime())) lastMod = d;
-        } else {
-          const d = new Date(article.date);
-          if (!isNaN(d.getTime())) lastMod = d;
+    if (Array.isArray(newsData)) {
+      for (const article of newsData) {
+        // Safe Date Parsing
+        let lastMod = new Date();
+        if (article.date) {
+          const parts = article.date.split('/');
+          if (parts.length === 3) {
+            const dateStr = `${parts[2]}-${parts[1]}-${parts[0]}`;
+            const d = new Date(dateStr);
+            if (!isNaN(d.getTime())) lastMod = d;
+          } else {
+            const d = new Date(article.date);
+            if (!isNaN(d.getTime())) lastMod = d;
+          }
         }
-      }
 
-      sitemapEntries.push({
-        url: `${baseUrl}/${lang}/posts/${article.id}`,
-        lastModified: lastMod,
-        changeFrequency: 'monthly',
-        priority: 0.6,
-        alternates: {
-          languages: {
-            vi: `${baseUrl}/vi/posts/${article.id}`,
-            en: `${baseUrl}/en/posts/${article.id}`,
+        sitemapEntries.push({
+          url: `${baseUrl}/${lang}/posts/${article.id}`,
+          lastModified: lastMod,
+          changeFrequency: 'monthly',
+          priority: 0.6,
+          alternates: {
+            languages: {
+              vi: `${baseUrl}/vi/posts/${article.id}`,
+              en: `${baseUrl}/en/posts/${article.id}`,
+            },
           },
-        },
-      })
-    })
-
-    // 3. Dynamic Projects (if any specific detail pages exist, currently mapped to main solutions)
-    // Note: Projects currently render on a single page with filter, 
-    // but if we add detail pages later, we should add them here.
-  })
+        })
+      }
+    }
+  }
 
   return sitemapEntries
 }

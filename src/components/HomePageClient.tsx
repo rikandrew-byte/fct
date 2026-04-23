@@ -183,7 +183,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
         </div>
       </section>
       
-      {/* ?€?€ 3. News Section (KhÃ¡m phÃ¡ tin tá»©c) ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
+      {/* â”€â”€ 3. News Section (KhÃ¡m phÃ¡ tin tá»©c) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <NewsSection lang={lang} dict={dict} latestNews={latestNews} />
 
       <Testimonials />

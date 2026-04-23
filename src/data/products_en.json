@@ -45,7 +45,7 @@
     "category": "Thales",
     "image": "/images/products/sentinel-hl-max-micro.jpg",
     "summary": "Ultra-small Sentinel HL Max version, minimizing physical impact and offering a sleek appearance.",
-    "description": "Sentinel HL Max Micro is ideal for products with many options or high distribution volumes. It offers the same protection as the standard Max but in a more compact design, convenient for permanent use on devices while minimizing physical obstruction?”perfect for mobile laptop users.",
+    "description": "Sentinel HL Max Micro is ideal for products with many options or high distribution volumes. It offers the same protection as the standard Max but in a more compact design, convenient for permanent use on devices while minimizing physical obstructionâ€”perfect for mobile laptop users.",
     "isNew": true,
     "link": "https://fct.vn/sentinel-hl-max-micro.html"
   },
@@ -105,7 +105,7 @@
     "category": "Thales",
     "image": "/images/products/sentinel-hl-drive.jpg",
     "summary": "Combines security key and up to 4GB Flash memory, allowing application distribution and execution directly from the key.",
-    "description": "Sentinel HL Drive, available in 2GB and 4GB versions, allows you to create a virtual ROM inside the USB key. You can copy applications, software, or protected content along with the license into the hardware key for the client?”convenient and secure. Software can run directly from the key without installation, ensuring total control over unauthorized copying.",
+    "description": "Sentinel HL Drive, available in 2GB and 4GB versions, allows you to create a virtual ROM inside the USB key. You can copy applications, software, or protected content along with the license into the hardware key for the clientâ€”convenient and secure. Software can run directly from the key without installation, ensuring total control over unauthorized copying.",
     "isNew": false,
     "link": "https://fct.vn/sentinel-hl-drive.html"
   },
@@ -184,8 +184,8 @@
     "name": "Longmai TimePro",
     "category": "Longmai",
     "image": "/images/products/longmai-timepro.png",
-    "summary": "Time-based hardware OTP (TOTP) device generating a one-time code every 30 seconds?”no network connection required.",
-    "description": "TimePro is a Longmai hardware TOTP (Time-based OTP) authentication device compatible with RFC 6238. it generates a 6-digit code every 30 seconds completely independently?”no phone battery or internet connection needed. With an LCD screen, long battery life, and anti-tamper security chip, it's ideal for 2FA in banking, financial institutions, and corporate VPNs.",
+    "summary": "Time-based hardware OTP (TOTP) device generating a one-time code every 30 secondsâ€”no network connection required.",
+    "description": "TimePro is a Longmai hardware TOTP (Time-based OTP) authentication device compatible with RFC 6238. it generates a 6-digit code every 30 seconds completely independentlyâ€”no phone battery or internet connection needed. With an LCD screen, long battery life, and anti-tamper security chip, it's ideal for 2FA in banking, financial institutions, and corporate VPNs.",
     "isNew": true,
     "link": "https://longmaitech.com/"
   }

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -56,21 +56,21 @@ export default function NewsDetailClient({
         await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(window.location.href);
-        alert(lang === 'en' ? "Link copied to clipboard!" : "?瓊 sao ch矇p li礙n k廕篙 v?o b廙?nh廙?t廕《!");
+        alert(lang === 'en' ? "Link copied to clipboard!" : "Đã sao chép liên kết vào bộ nhớ tạm!");
       }
     } catch (err) {
       console.log('Error sharing:', err);
     }
   };
 
-  // Logic render n廙 dung n璽ng cao (H廙?tr廙?Heading, Image, List)
+  // Logic render nội dung nâng cao (Hỗ trợ Heading, Image, List)
   const renderContent = (content: string) => {
     const lines = content.split('\n');
     return lines.map((line, index) => {
       const trimmed = line.trim();
       if (!trimmed) return <br key={index} />;
 
-      // 1. Nh廕要 di廙 H穫nh 廕τh (Format: ![Alt Text](url))
+      // 1. Nhận diện Hình ảnh (Format: ![Alt Text](url))
       const imgMatch = trimmed.match(/!\[(.*?)\]\((.*?)\)/);
       if (imgMatch) {
         return (
@@ -91,7 +91,7 @@ export default function NewsDetailClient({
         );
       }
 
-      // 2. Nh廕要 di廙 Ti礙u ?廙?(AI-Ready Headings)
+      // 2. Nhận diện Tiêu đề (AI-Ready Headings)
       const isHeader = 
         (trimmed.startsWith('**') && trimmed.endsWith('**') && trimmed.length < 100) || 
         /^\d+\.\s/.test(trimmed) || 
@@ -110,7 +110,7 @@ export default function NewsDetailClient({
         );
       }
 
-      // 3. Nh廕要 di廙 Danh s獺ch
+      // 3. Nhận diện Danh sách
       if (trimmed.startsWith('- ')) {
         return (
           <li key={index} className="ml-6 text-gray-700 font-light text-lg md:text-xl list-disc mb-2">
@@ -119,7 +119,7 @@ export default function NewsDetailClient({
         );
       }
 
-      // 4. Nh廕要 di廙 Blockquote (Tr穩ch d廕南 Qu廕τ l羸)
+      // 4. Nhận diện Blockquote (Trích dẫn Quản lý)
       if (trimmed.startsWith('> ')) {
         return (
           <blockquote key={index} className="my-10 pl-8 border-l-4 border-blue-600 italic">
@@ -130,7 +130,7 @@ export default function NewsDetailClient({
         );
       }
 
-      // 5. Render Paragraph th廙g
+      // 5. Render Paragraph thường
       return (
         <p key={index} className="text-gray-700 font-light leading-relaxed text-lg md:text-xl mb-6">
           {line}
@@ -139,7 +139,7 @@ export default function NewsDetailClient({
     });
   };
 
-  // T廕︽ FAQ Schema n廕簑 c籀 d廙?li廙
+  // Tạo FAQ Schema nếu có dữ liệu
   const faqSchema = article.faqs ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -155,7 +155,7 @@ export default function NewsDetailClient({
 
   return (
     <main className="min-h-screen bg-white selection:bg-blue-600 selection:text-white">
-      {/* Nh繳ng FAQ Schema cho AI */}
+      {/* Nhúng FAQ Schema cho AI */}
       {faqSchema && (
         <script
           type="application/ld+json"
@@ -163,14 +163,14 @@ export default function NewsDetailClient({
         />
       )}
       
-      {/* ?? Header Section ????????????????????? */}
+      {/* ── Header Section ───────────────────── */}
       <section className="relative pt-24 pb-10 px-6 overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[160px] -z-10 animate-pulse"></div>
 
         <div className="max-w-4xl mx-auto relative z-10">
           <Link 
-            href={`/${lang}/news`} 
+            href={`/${lang}/posts`} 
             className="inline-flex items-center gap-2 text-blue-400 font-bold text-xs uppercase tracking-widest mb-8 hover:text-blue-300 transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
@@ -200,7 +200,7 @@ export default function NewsDetailClient({
         </div>
       </section>
 
-      {/* ?? Content Section ?????????????????????????????????????????? */}
+      {/* ── Content Section ────────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto py-20 px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
@@ -232,7 +232,7 @@ export default function NewsDetailClient({
                 <Link 
                   href={`/${lang}/contact`}
                   className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-blue-50 transition-colors group"
-                  title={isEn ? "Contact us" : "Li礙n h廙?t v廕叩"}
+                  title={isEn ? "Contact us" : "Liên hệ tư vấn"}
                 >
                   <MessageSquare className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
                 </Link>
@@ -241,14 +241,14 @@ export default function NewsDetailClient({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-blue-50 transition-colors group"
-                  title={isEn ? "Share on LinkedIn" : "Chia s廕?l礙n LinkedIn"}
+                  title={isEn ? "Share on LinkedIn" : "Chia sẻ lên LinkedIn"}
                 >
                   <Globe className="w-4 h-4 text-[#0077b5] group-hover:scale-110 transition-transform" />
                 </a>
                 <button 
                   onClick={handleShare}
                   className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center hover:bg-blue-50 transition-colors group"
-                  title={isEn ? "Share article" : "Chia s廕?b?i vi廕篙"}
+                  title={isEn ? "Share article" : "Chia sẻ bài viết"}
                 >
                   <Share2 className="w-4 h-4 text-gray-600 group-hover:scale-110 transition-transform" />
                 </button>
@@ -291,7 +291,7 @@ export default function NewsDetailClient({
                       className="group block space-y-3"
                     >
                       <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-blue-500 transition-colors">
-                        {news.category} ??{news.date}
+                        {news.category} — {news.date}
                       </span>
                       <h4 className="text-lg font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
                         {news.title}

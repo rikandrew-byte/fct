@@ -22,12 +22,14 @@ interface Article {
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
   
-  i18n.locales.forEach((lang) => {
+  for (const lang of i18n.locales) {
     const newsData = lang === "en" ? newsEn : newsVi;
-    newsData.forEach((article) => {
-      params.push({ lang, slug: article.id });
-    });
-  });
+    if (Array.isArray(newsData)) {
+      for (const article of newsData) {
+        params.push({ lang, slug: article.id });
+      }
+    }
+  }
 
   return params;
 }
@@ -38,6 +40,11 @@ export async function generateMetadata({
   const { slug, lang: langRaw } = await params;
   const lang = langRaw as Locale;
   const newsData = lang === "en" ? newsEn : newsVi;
+  
+  if (!Array.isArray(newsData)) {
+    return { title: "FCT Vinh Thinh .,JSC" };
+  }
+
   const article = newsData.find((a) => a.id === slug);
   const baseUrl = 'https://fct.vn';
 
@@ -48,7 +55,6 @@ export async function generateMetadata({
   }
 
   // CƠ CHẾ DYNAMIC METADATA & FALLBACK
-  // Ưu tiên ogImage -> image -> logo mặc định
   const ogImageUrl = article.ogImage 
     ? `${baseUrl}${article.ogImage}` 
     : article.image 
@@ -99,6 +105,11 @@ export default async function NewsDetailPage({
   const lang = langRaw as Locale;
   const dict = await getDictionary(lang);
   const newsData = (lang === "en" ? newsEn : newsVi) as Article[];
+
+  if (!Array.isArray(newsData)) {
+    notFound();
+  }
+
   const article = newsData.find((a) => a.id === slug);
 
   if (!article) {

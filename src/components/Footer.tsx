@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { MessageCircle, X, BriefcaseBusiness, Mail, Phone, MapPin, Video, Users } from "lucide-react";
 import Link from "next/link";
@@ -19,7 +19,7 @@ export default function Footer({ lang, dict }: FooterProps) {
 
   useEffect(() => {
     setMounted(true);
-    // Logic b廙??廕禦 l廙ㄅ truy c廕計 (Visitor Counter)
+    // Logic bộ đếm lượt truy cập (Visitor Counter)
     const storedCount = localStorage.getItem("fct_visitor_count");
     const initialBase = 2103;
     
@@ -33,7 +33,7 @@ export default function Footer({ lang, dict }: FooterProps) {
       setVisitorCount(newCount);
     }
 
-    // Gi廕?l廕計 s廙?ng廙 ?ang tr廙帷 tuy廕積 (Online)
+    // Giả lập số người đang trực tuyến (Online)
     setOnlineCount(Math.floor(Math.random() * (15 - 5 + 1)) + 5);
   }, []);
 
@@ -41,7 +41,7 @@ export default function Footer({ lang, dict }: FooterProps) {
     <footer className="bg-[#020617] pt-4 md:pt-6 pb-4 border-t border-gray-900 text-slate-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-10">
-          {/* C廙 1: Brand */}
+          {/* Cột 1: Brand */}
           <div className="space-y-8 md:col-span-4">
             <Link href={`/${lang}`} className="flex items-center gap-3">
               <Image 
@@ -59,7 +59,7 @@ export default function Footer({ lang, dict }: FooterProps) {
 
           </div>
 
-          {/* C廙 2: Tin t廙妾 v? b?i vi廕篙 */}
+          {/* Cột 2: Tin tức và bài viết */}
           <div className="md:col-span-3">
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.news}</h4>
             <ul className="space-y-4 text-sm font-light">
@@ -70,7 +70,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             </ul>
           </div>
 
-          {/* C廙 3: Li礙n k廕篙 nhanh */}
+          {/* Cột 3: Liên kết nhanh */}
           <div className="md:col-span-2">
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
             <ul className="space-y-6 font-light">
@@ -79,7 +79,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             </ul>
           </div>
 
-          {/* C廙 4: Li礙n h廙?*/}
+          {/* Cột 4: Liên hệ */}
           <div className="md:col-span-3">
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.contact}</h4>
             <ul className="space-y-5 text-sm font-light">

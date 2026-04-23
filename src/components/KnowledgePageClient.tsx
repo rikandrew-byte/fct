@@ -41,7 +41,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
 
   return (
     <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
-      {/* ?€?€ Hero ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
+      {/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative pt-44 pb-20 px-6 overflow-hidden bg-[#020617]">
         <NeuralNetworkBackground />
         
@@ -100,7 +100,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
         </div>
       </section>
 
-      {/* ?€?€ FAQ Section ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
+      {/* â”€â”€ FAQ Section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="bg-white py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
@@ -166,7 +166,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
                   <HelpCircle className="w-8 h-8" />
                 </div>
                 <p className="text-gray-500 font-light italic">
-                  {lang === 'vi' ? 'KhÃ´ng tÃ¬m tháº¥y káº¿t quáº?phÃ¹ há»£p...' : 'No matching results found...'}
+                  {lang === 'vi' ? 'KhÃ´ng tÃ¬m tháº¥y káº¿t quáº£ phÃ¹ há»£p...' : 'No matching results found...'}
                 </p>
               </div>
             )}
@@ -174,7 +174,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
         </div>
       </section>
 
-      {/* ?€?€ CTA ?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€ */}
+      {/* â”€â”€ CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="bg-[#020617] py-12 px-6 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />

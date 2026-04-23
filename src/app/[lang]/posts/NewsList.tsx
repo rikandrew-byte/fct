@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useMemo } from "react";
 import { Search, ArrowRight, Calendar, Tag } from "lucide-react";
@@ -23,10 +23,12 @@ interface NewsListProps {
 
 export default function NewsList({ lang, dict }: NewsListProps) {
   const isEn = lang === "en";
-  const newsData = (isEn ? newsEn : newsVi) as NewsItem[];
+  const rawData = isEn ? newsEn : newsVi;
+  const newsData = (Array.isArray(rawData) ? rawData : []) as NewsItem[];
+  
   const [searchQuery, setSearchQuery] = useState("");
   
-  const allCategoryLabel = isEn ? "All" : "T廕另 c廕?;
+  const allCategoryLabel = isEn ? "All" : "Tất cả";
   const [selectedCategory, setSelectedCategory] = useState(allCategoryLabel);
 
   const categories = useMemo(() => {

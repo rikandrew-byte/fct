@@ -10,7 +10,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   const dict = await getDictionary(lang);
   
   const newsData = lang === "en" ? newsEn : newsVi;
-  const latestNews = newsData.slice(0, 3); // Lấy 3 bài mới nhất
+  const latestNews = Array.isArray(newsData) ? newsData.slice(0, 3) : []; // Lấy 3 bài mới nhất
 
   const jsonLd = {
     // ... (keep existing JSON-LD)
