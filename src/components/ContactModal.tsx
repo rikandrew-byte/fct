@@ -20,22 +20,43 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
 
   const d = dict.contactModal;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
-      setName("");
-      setPhone("");
-      setEmail("");
-      setMessage("");
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: name,
+          email,
+          phone,
+          message,
+          source: 'Contact Modal'
+        }),
+      });
 
-      setTimeout(() => {
-        setIsSubmitted(false);
-        onClose();
-      }, 4000);
-    }, 1500);
+      if (response.ok) {
+        setIsSubmitted(true);
+        setName("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
+
+        setTimeout(() => {
+          setIsSubmitted(false);
+          onClose();
+        }, 4000);
+      } else {
+        alert("Đã có lỗi xảy ra. Vui lòng thử lại.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Lỗi kết nối.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

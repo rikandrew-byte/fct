@@ -56,20 +56,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <p className="text-sm font-light leading-relaxed max-w-sm">
               {d.brandDescription}
             </p>
-            <div className="flex gap-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300">
-                <MessageCircle className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300">
-                <X className="w-5 h-5" />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300">
-                <Video className="w-5 h-5" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-all duration-300">
-                <BriefcaseBusiness className="w-5 h-5" />
-              </a>
-            </div>
+
           </div>
 
           {/* Cột 2: Tin tức và bài viết */}
@@ -151,8 +138,8 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
 
           <div className="flex gap-8 text-[11px] font-medium uppercase tracking-widest text-slate-400">
-            <Link href={`/${lang}/about`} className="hover:text-white transition-colors whitespace-nowrap">{d.legal.privacy}</Link>
-            <Link href={`/${lang}/about`} className="hover:text-white transition-colors whitespace-nowrap">{d.legal.terms}</Link>
+            <Link href={`/${lang}/privacy`} className="hover:text-white transition-colors whitespace-nowrap">{d.legal.privacy}</Link>
+            <Link href={`/${lang}/terms`} className="hover:text-white transition-colors whitespace-nowrap">{d.legal.terms}</Link>
           </div>
         </div>
       </div>

@@ -102,7 +102,7 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div className="space-y-4 text-center md:text-left">
             <h2 className="text-sm font-black text-blue-600 tracking-[0.4em] uppercase">{dict.solutions.badge}</h2>
-            <h3 className="text-4xl md:text-7xl font-black text-gray-950 tracking-tighter leading-none">
+            <h3 className="text-4xl md:text-7xl font-black text-gray-950 tracking-tighter leading-tight">
               {dict.solutions.title} <br />
               <span className="text-blue-600">{dict.solutions.subtitle}</span>
             </h3>

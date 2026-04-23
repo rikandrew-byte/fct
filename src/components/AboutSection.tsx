@@ -48,7 +48,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
           >
             <div className="space-y-4">
               <h2 className="text-[11px] font-black text-blue-600 tracking-[0.3em] uppercase">{content.badge}</h2>
-              <h3 className="text-4xl md:text-6xl font-black text-gray-950 leading-[0.95] tracking-tighter">
+              <h3 className="text-4xl md:text-6xl font-black text-gray-950 leading-tight tracking-tighter">
                 {content.title} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                   {content.subtitle}

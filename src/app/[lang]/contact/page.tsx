@@ -72,27 +72,6 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </Suspense>
           </div>
 
-          {/* Quick Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white border border-gray-100 p-8 md:p-10 rounded-[2.5rem] space-y-4 shadow-xl shadow-gray-200/40 hover:border-blue-500/30 transition-all group">
-              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                <Phone className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-1">{isEn ? "Expert Hotline" : "Đường dây chuyên gia"}</p>
-                <p className="font-bold text-xl text-gray-900 underline decoration-blue-500/30">0983 027 776</p>
-              </div>
-            </div>
-            <div className="bg-white border border-gray-100 p-8 md:p-10 rounded-[2.5rem] space-y-4 shadow-xl shadow-gray-200/40 hover:border-blue-500/30 transition-all group">
-              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                <Mail className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-1">{isEn ? "Technical Inquiry" : "Email kỹ thuật"}</p>
-                <p className="font-bold text-xl text-gray-900 underline decoration-blue-500/30">andrew@fct.vn</p>
-              </div>
-            </div>
-          </div>
 
           {/* HQ Location */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white border border-gray-100 rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-gray-200/50">

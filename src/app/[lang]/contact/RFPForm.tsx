@@ -12,7 +12,8 @@ import {
   ChevronDown,
   CheckCircle2,
   Lock,
-  ArrowRight
+  ArrowRight,
+  Loader2
 } from "lucide-react";
 
 interface RFPFormProps {
@@ -35,6 +36,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
     projectScale: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -61,10 +63,32 @@ export default function RFPForm({ lang }: RFPFormProps) {
     ? ["Small (Startup/Niche)", "Medium (Enterprise Level)", "Large (Government/National Scale)", "Ongoing Security Audit"]
     : ["Quy mô nhỏ (Startup/Dự án riêng)", "Quy mô vừa (Doanh nghiệp)", "Quy mô lớn (Tập đoàn/Quốc gia)", "Tư vấn bảo mật định kỳ"];
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    // In a real app, send to API here
+    setIsLoading(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          source: 'RFP Form Page'
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert(isEn ? 'Something went wrong. Please try again.' : 'Đã có lỗi xảy ra. Vui lòng thử lại.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert(isEn ? 'Network error.' : 'Lỗi kết nối.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
@@ -225,10 +249,12 @@ export default function RFPForm({ lang }: RFPFormProps) {
       <div className="pt-2">
         <button
           type="submit"
-          className="w-full md:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-xl shadow-blue-500/20 group hover:scale-[1.02] active:scale-[0.98]"
+          disabled={isLoading}
+          className={`w-full md:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-xl shadow-blue-500/20 group hover:scale-[1.02] active:scale-[0.98] ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
-          {isEn ? "Submit Solution RFP" : "Gửi yêu cầu RFP"}
-          <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          {isLoading ? (isEn ? "Sending..." : "Đang gửi...") : (isEn ? "Submit Solution RFP" : "Gửi yêu cầu RFP")}
+          {!isLoading && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+          {isLoading && <Loader2 className="w-4 h-4 animate-spin" />}
         </button>
         <p className="mt-6 text-gray-400 text-[10px] uppercase tracking-widest font-bold flex items-center gap-2">
           <ShieldCheck className="w-3 h-3 text-emerald-500" /> {isEn ? "Secure encrypted data transmission" : "Truyền dữ liệu mã hóa an toàn"}
