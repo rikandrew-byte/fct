@@ -135,12 +135,13 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
                  >
                     <motion.circle 
                       initial={{ strokeDasharray: "4 4", rotate: 0 }}
-                      animate={{ rotate: 360 }}
+                      animate={{ rotate: activeStep === 1 ? 360 : 0 }}
                       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                       cx="0" cy="0" r="100" 
                       fill="none" 
-                      stroke={activeStep === 1 || activeStep === null ? "url(#glowPulse)" : "#1e293b"} 
-                      strokeWidth={activeStep === 1 ? "4" : "2"}
+                      stroke={activeStep === 1 ? "url(#glowPulse)" : "#1e293b"} 
+                      strokeWidth={activeStep === 1 ? "3" : "1"}
+                      opacity={activeStep === 1 ? 1 : 0.3}
                       filter={activeStep === 1 ? "url(#glow)" : ""}
                     />
                     <text x="0" y="-115" fill="currentColor" fontSize="12" fontWeight="700" textAnchor="middle" className="text-sky-400 uppercase tracking-widest">
@@ -156,9 +157,9 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
                     <motion.circle 
                       cx="0" cy="0" r="160" 
                       fill="none" 
-                      stroke={activeStep === 2 || activeStep === null ? "#14b8a6" : "#1e293b"} 
-                      strokeWidth={activeStep === 2 ? "4" : "2"}
-                      opacity="0.6"
+                      stroke={activeStep === 2 ? "#14b8a6" : "#1e293b"} 
+                      strokeWidth={activeStep === 2 ? "3" : "1"}
+                      opacity={activeStep === 2 ? 0.8 : 0.3}
                       filter={activeStep === 2 ? "url(#glow)" : ""}
                     />
                     <text x="0" y="-175" fill="currentColor" fontSize="12" fontWeight="700" textAnchor="middle" className="text-teal-400 uppercase tracking-widest">
@@ -177,8 +178,9 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
                       transition={{ duration: 2, repeat: Infinity }}
                       cx="0" cy="0" r="220" 
                       fill="none" 
-                      stroke={activeStep === 3 || activeStep === null ? "#0369a1" : "#0f172a"} 
-                      strokeWidth={activeStep === 3 ? "6" : "3"}
+                      stroke={activeStep === 3 ? "#0369a1" : "#0f172a"} 
+                      strokeWidth={activeStep === 3 ? "3" : "1"}
+                      opacity={activeStep === 3 ? 1 : 0.3}
                       strokeDasharray="10 20"
                       filter={activeStep === 3 ? "url(#glow)" : ""}
                     />

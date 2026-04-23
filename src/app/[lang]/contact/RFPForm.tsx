@@ -221,7 +221,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
       <div className="pt-4">
         <button
           type="submit"
-          className="w-full md:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-[0_0_30px_rgba(59,130,246,0.2)] group"
+          className="w-full md:w-auto px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-md group"
         >
           {isEn ? "Submit Solution RFP" : "Gửi yêu cầu RFP"}
           <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

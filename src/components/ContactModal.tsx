@@ -157,7 +157,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                       className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg mt-4 ${
                         isLoading 
                           ? "bg-gray-100 text-gray-400 cursor-not-allowed" 
-                          : "bg-gray-900 hover:bg-black text-white shadow-gray-900/20 active:scale-[0.98]"
+                          : "bg-gray-900 hover:bg-[#020617] text-white shadow-gray-900/20 active:scale-[0.98]"
                       }`}
                     >
                       {isLoading ? (

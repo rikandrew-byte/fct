@@ -125,11 +125,11 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
               />
               <motion.path 
                 initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
+                animate={{ pathLength: 1, opacity: activeStep !== null ? 1 : 0 }}
                 transition={{ duration: 1.5, repeat: Infinity }}
                 d="M 250 200 L 450 200" 
                 stroke="url(#zapFlash)" strokeWidth="4" 
-                filter="url(#roseGlow)"
+                filter={activeStep !== null ? "url(#roseGlow)" : ""}
               />
 
               {/* Data Path: Token -> Bank Server */}
@@ -139,11 +139,11 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
               />
               <motion.path 
                 initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
+                animate={{ pathLength: 1, opacity: activeStep !== null ? 1 : 0 }}
                 transition={{ duration: 1.5, repeat: Infinity, delay: 0.75 }}
                 d="M 550 200 L 750 200" 
                 stroke="#10b981" strokeWidth="4" 
-                filter="url(#roseGlow)"
+                filter={activeStep !== null ? "url(#roseGlow)" : ""}
               />
 
               {/* Node 1: Transaction Request */}

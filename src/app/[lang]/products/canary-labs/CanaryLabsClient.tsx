@@ -107,7 +107,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
                   d="M200 200 H800" 
                   stroke="url(#flowGrad)" 
                   strokeWidth="2" 
-                  opacity="0.3"
+                  opacity={activeStep !== null ? 0.4 : 0.05}
                 />
 
                 {/* 1. Collectors */}
@@ -250,7 +250,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
 
             <div className="grid grid-cols-1 gap-6">
                <div className="military-panel p-10 rounded-[3rem] space-y-6 group hover:border-amber-500/30 transition-all">
-                  <Network className="w-10 h-10 text-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.3)]" />
+                  <Network className="w-10 h-10 text-amber-500" />
                   <h4 className="text-2xl font-black uppercase italic">{isEn ? "Interoperability" : "Khả năng tương thích"}</h4>
                   <p className="text-slate-500 text-sm font-light leading-relaxed">
                     {isEn 
@@ -260,7 +260,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
                   </p>
                </div>
                <div className="military-panel p-10 rounded-[3rem] space-y-6 translate-x-4 border-teal-500/10">
-                  <Gauge className="w-10 h-10 text-teal-400 shadow-[0_0_20px_rgba(20,184,166,0.3)]" />
+                  <Gauge className="w-10 h-10 text-teal-400" />
                   <h4 className="text-2xl font-black uppercase italic">{isEn ? "Axiom Dashboards" : "Dashboard Axiom"}</h4>
                   <p className="text-slate-500 text-sm font-light leading-relaxed">
                     {isEn 
@@ -284,7 +284,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
             <div className="flex flex-wrap justify-center gap-6 pt-4">
                 <Link 
                   href={`/${lang}/contact?solution=hsm`}
-                  className="px-12 py-5 bg-amber-600 text-black rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_40px_rgba(245,158,11,0.6)] transition-all flex items-center gap-3"
+                  className="px-12 py-5 bg-amber-600 text-black rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all flex items-center gap-3 drop-shadow-md hover:drop-shadow-xl"
                 >
                   {isEn ? "Get Custom Quote" : "Nhận báo giá giải pháp"}
                   <ArrowRight className="w-5 h-5" />

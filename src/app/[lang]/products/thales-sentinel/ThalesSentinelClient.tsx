@@ -161,7 +161,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                 d="M150 200 H850" 
                 stroke="url(#lineGrad)" 
                 strokeWidth="2" 
-                opacity="0.3" 
+                opacity={activeStep !== null ? 0.4 : 0.05} 
               />
 
               {/* Stage 1: Input Code */}
@@ -188,9 +188,12 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
               >
                 <rect x="400" y="125" width="200" height="150" rx="30" fill="#1e1b4b" stroke="#312e81" strokeWidth="2" />
                 <motion.circle 
-                  animate={{ scale: [1, 1.1, 1] }} 
+                  animate={{ scale: activeStep === 2 ? [1, 1.1, 1] : 1 }} 
                   transition={{ duration: 3, repeat: Infinity }}
-                  cx="500" cy="180" r="40" fill="#1e293b" stroke="#3b82f6" strokeWidth="2" 
+                  cx="500" cy="180" r="40" 
+                  fill="#1e293b" 
+                  stroke={activeStep === 2 ? "#3b82f6" : "#1e293b"} 
+                  strokeWidth="2" 
                 />
                 <ShieldCheck className="text-blue-400" x="480" y="160" width="40" height="40" />
                 <text x="500" y="245" fill="white" fontSize="14" fontWeight="900" textAnchor="middle" className="uppercase tracking-widest">

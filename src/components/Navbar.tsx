@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, Globe, Sparkles } from "lucide-react";
+import { Globe, Sparkles } from "lucide-react";
 import ContactModal from "./ContactModal";
+import MobileNav from "./MobileNav";
 import { useAssistant } from "@/context/AssistantContext";
 
 interface NavbarProps {
@@ -62,7 +63,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
         </button>
       </div>
 
-      <header className="fixed top-8 left-0 right-0 z-40 px-6 flex justify-center pointer-events-none">
+      <header className="fixed top-8 left-0 right-0 z-40 px-6 hidden lg:flex justify-center pointer-events-none">
         <div className={`
           pointer-events-auto
           backdrop-blur-3xl border rounded-full px-6 py-2.5 
@@ -137,67 +138,11 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               <div className="absolute inset-0 bg-blue-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></div>
             </button>
             
-            {/* Mobile Menu Toggle */}
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-blue-400 transition-colors"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
           </div>
         </div>
-
-        {/* Mobile Navigation Drawer */}
-        {isMobileMenuOpen && (
-          <div className="absolute top-20 left-6 right-6 lg:hidden bg-[#020617]/95 backdrop-blur-2xl border border-white/10 shadow-2xl rounded-[2.5rem] p-8 z-50 animate-in fade-in slide-in-from-top-4 duration-300">
-            <nav className="flex flex-col gap-5">
-              {navLinks.map((link) => {
-                const isProducts = link.href.includes("/products");
-                return (
-                  <div key={link.href} className="flex flex-col border-b border-white/5">
-                    <Link 
-                      href={link.href} 
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-xl font-black py-3 flex justify-between items-center tracking-tight ${
-                        pathname === link.href ? "text-blue-400" : "text-gray-300"
-                      }`}
-                    >
-                      {link.label}
-                      {pathname === link.href && <div className="w-2.5 h-2.5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]" />}
-                    </Link>
-                    {isProducts && (
-                      <div className="flex flex-col gap-2 pl-4 pb-3">
-                        <Link href={`/${lang}/products/thales-sentinel`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-blue-400 text-base font-semibold">Thales Sentinel</Link>
-                        <Link href={`/${lang}/products/guardsquare`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-sky-400 text-base font-semibold">Guardsquare</Link>
-                        <Link href={`/${lang}/products/canary-labs`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-amber-400 text-base font-semibold">Canary Labs</Link>
-                        <Link href={`/${lang}/products/longmai`} onClick={() => setIsMobileMenuOpen(false)} className="text-gray-400 hover:text-rose-400 text-base font-semibold">Longmai</Link>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-              
-              <Link 
-                href={`/${lang}/knowledge`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-xl font-black py-3 border-b border-white/5 text-blue-400"
-              >
-                {dict.navbar.knowledge}
-              </Link>
-
-              <button 
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  setIsModalOpen(true);
-                }}
-                className="mt-6 bg-blue-600 text-white py-5 rounded-[1.5rem] font-black text-sm tracking-widest uppercase shadow-xl shadow-blue-600/30"
-              >
-                {dict.common.getAdviceNow}
-              </button>
-            </nav>
-          </div>
-        )}
       </header>
+
+      <MobileNav lang={lang} dict={dict} onOpenConsult={() => setIsModalOpen(true)} />
 
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} dict={dict} />
     </>
