@@ -170,47 +170,57 @@
   },
   {
     "id": "mobile-security-management",
-    "title": "QUẢN TRỊ BẢO MẬT THIẾT B?DI ?ỘNG TRONG THỜI ĐẠI KỶ NGUYÊN SỐ",
+    "title": "QUẢN TRỊ BẢO MẬT THIẾT BỊ DI ĐỘNG TRONG THỜI ĐẠI KỶ NGUYÊN SỐ",
     "date": "15/07/2022",
-    "summary": "Công ty FCT Vĩnh Thịnh s?cung cấp một v?i phân tích hữu ích cũng như giới thiệu ?ến bạn 2 giải pháp quản lý bảo mật thiết b?di ?ộng ?ang ?ược th?..",
+    "summary": "Công ty FCT Vĩnh Thịnh sẽ cung cấp một vài phân tích hữu ích cũng như giới thiệu đến bạn 2 giải pháp quản lý bảo mật thiết bị di động đang được thử nghiệm...",
     "category": "Giải pháp",
     "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
-    "content": "Trong k?nguyên s? thiết b?di ?ộng không ch?l? công c?liên lạc m? còn l? 'v?n phòng di ?ộng' chứa ?ựng vô s?d?liệu nhạy cảm của doanh nghiệp. Việc quản tr?bảo mật di ?ộng (Mobile Security Management) cần một cái nhìn tổng th?hơn thay vì ch?c?i ?ặt các phần mềm diệt virus thông thường.\n\nFCT Vĩnh Thịnh ??xuất hướng tiếp cận 3 lớp:\n\n1. **Quản lý Ứng dụng (MAM):** Tập trung v?o việc bảo v?chính ứng dụng nghiệp v?của công ty, ?ảm bảo d?liệu trong ứng dụng không b?rò r?ra các ứng dụng cá nhân.\n2. **Xác thực Mạnh:** S?dụng các giải pháp 2FA (Xác thực 2 yếu t? hoặc PKI (Public Key Infrastructure) thông qua các Token của Longmai hoặc giải pháp t?Thales ???ảm bảo ch?người dùng hợp pháp mới ?ược truy cập h?thống.\n3. **Giám sát Liên tục:** S?dụng các giải pháp phân tích h?nh vi ??phát hiện sớm các dấu hiệu thiết b?b?tấn công hoặc người dùng truy cập t?các mạng không an to?n.\n\n?ội ngũ chuyên gia của chúng tôi luôn sẵn s?ng h?tr?doanh nghiệp xây dựng chính sách bảo mật di ?ộng (BYOD Policy) linh hoạt nhưng vẫn an to?n tuyệt ?ối."
+    "content": "Trong kỷ nguyên số, thiết bị di động không chỉ là công cụ liên lạc mà còn là 'văn phòng di động' chứa đựng vô số dữ liệu nhạy cảm của doanh nghiệp. Việc quản trị bảo mật di động (Mobile Security Management) cần một cái nhìn tổng thể hơn thay vì chỉ cài đặt các phần mềm diệt virus thông thường.\n\nFCT Vĩnh Thịnh đề xuất hướng tiếp cận 3 lớp:\n\n1. **Quản lý Ứng dụng (MAM):** Tập trung vào việc bảo vệ chính ứng dụng nghiệp vụ của công ty, đảm bảo dữ liệu trong ứng dụng không bị rò rỉ ra các ứng dụng cá nhân.\n2. **Xác thực Mạnh:** Sử dụng các giải pháp 2FA (Xác thực 2 yếu tố) hoặc PKI (Public Key Infrastructure) thông qua các Token của Longmai hoặc giải pháp từ Thales để đảm bảo chỉ người dùng hợp pháp mới được truy cập hệ thống.\n3. **Giám sát Liên tục:** Sử dụng các giải pháp phân tích hành vi để phát hiện sớm các dấu hiệu thiết bị bị tấn công hoặc người dùng truy cập từ các mạng không an toàn.\n\nĐội ngũ chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ doanh nghiệp xây dựng chính sách bảo mật di động (BYOD Policy) linh hoạt nhưng vẫn an toàn tuyệt đối.",
+    "image": "/images/posts/mobile-security-management.webp",
+    "ogImage": "/images/posts/mobile-security-management.webp"
   },
   {
     "id": "security-awareness",
-    "title": "TẦM QUAN TRỌNG CỦA VIỆC N?NG CAO NHẬN THỨC VỀ BẢO MẬT DI ?ỘNG",
+    "title": "TẦM QUAN TRỌNG CỦA VIỆC NÂNG CAO NHẬN THỨC VỀ BẢO MẬT DI ĐỘNG",
     "date": "05/07/2022",
-    "summary": "Trong b?i viết n?y, Công ty FCT Vĩnh Thịnh phân tích chi tiết nguyên nhân doanh nghiệp cần chú trọng nâng cao nhận thức của nhân viên v?các vấn ??bảo mật...",
+    "summary": "Trong bài viết này, Công ty FCT Vĩnh Thịnh phân tích chi tiết nguyên nhân doanh nghiệp cần chú trọng nâng cao nhận thức của nhân viên về các vấn đề bảo mật...",
     "category": "Bảo mật",
     "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html",
-    "content": "Dù h?thống bảo mật có tinh vi ?ến ?âu, con người vẫn luôn l? 'mắt xích yếu nhất'. Thống kê cho thấy hơn 80% các v?rò r?d?liệu bắt nguồn t?lỗi của người dùng hoặc s?thiếu nhận thức v?các mối ?e dọa.\n\nNâng cao nhận thức bảo mật di ?ộng cho nhân viên bao gồm các b?i học quan trọng:\n- Nhận diện các cuộc tấn công Phishing qua tin nhắn (Smishing) v? email.\n- Hiểu rõ rủi ro khi kết nối v?o các mạng Wi-Fi công cộng không có mật khẩu.\n- Thói quen cập nhật h??iều h?nh v? ứng dụng thường xuyên ??nhận các bản vá bảo mật.\n- Không c?i ?ặt các ứng dụng t?nguồn không xác ?ịnh (Sideloading).\n\nFCT Vĩnh Thịnh không ch?cung cấp các công c?k?thuật m? còn h?tr?doanh nghiệp trong việc tư vấn v? ??o tạo nhận thức bảo mật, giúp xây dựng v?n hóa l?m việc an to?n trên môi trường s?"
+    "content": "Dù hệ thống bảo mật có tinh vi đến đâu, con người vẫn luôn là 'mắt xích yếu nhất'. Thống kê cho thấy hơn 80% các vụ rò rỉ dữ liệu bắt nguồn từ lỗi của người dùng hoặc sự thiếu nhận thức về các mối đe dọa.\n\nNâng cao nhận thức bảo mật di động cho nhân viên bao gồm các bài học quan trọng:\n- Nhận diện các cuộc tấn công Phishing qua tin nhắn (Smishing) và email.\n- Hiểu rõ rủi ro khi kết nối vào các mạng Wi-Fi công cộng không có mật khẩu.\n- Thói quen cập nhật hệ điều hành và ứng dụng thường xuyên để nhận các bản vá bảo mật.\n- Không cài đặt các ứng dụng từ nguồn không xác định (Sideloading).\n\nFCT Vĩnh Thịnh không chỉ cung cấp các công cụ kỹ thuật mà còn hỗ trợ doanh nghiệp trong việc tư vấn và đào tạo nhận thức bảo mật, giúp xây dựng văn hóa làm việc an toàn trên môi trường số.",
+    "image": "/images/posts/security-awareness.webp",
+    "ogImage": "/images/posts/security-awareness.webp"
   },
   {
     "id": "mobile-security-challenges",
-    "title": "4 TH?CH THỨC TRONG BẢO MẬT THIẾT B?DI ?ỘNG",
+    "title": "4 THÁCH THỨC TRONG BẢO MẬT THIẾT BỊ DI ĐỘNG",
     "date": "28/06/2022",
-    "summary": "Xây dựng h?thống bảo mật thiết b?di ?ộng l? ?iều quan trọng bất c??ơn v?n?o cũng phải thực hiện. Nhưng hiện nay, các tin tặc ho?n to?n có th?..",
+    "summary": "Xây dựng hệ thống bảo mật thiết bị di động là điều quan trọng bất cứ đơn vị nào cũng phải thực hiện. Nhưng hiện nay, các tin tặc hoàn toàn có thể...",
     "category": "Bảo mật",
     "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html",
-    "content": "Bảo mật di ?ộng ?ang ?ối mặt với những thách thức chưa từng có do s??a dạng của thiết b?v? các phương thức tấn công mới nổi.\n\n4 thách thức lớn nhất hiện nay bao gồm:\n\n1. **D?liệu b?rò r?(Data Leakage):** Việc người dùng vô tình cấp quyền truy cập danh b? v?trí cho các ứng dụng không uy tín khiến thông tin doanh nghiệp b?thất thoát.\n2. **Mạng Wi-Fi không an to?n:** K?tấn công có th?thiết lập các ?iểm truy cập Wi-Fi gi?mạo (Man-in-the-middle attack) ??chặn bắt d?liệu truyền ?i t?thiết b?\n3. **Tấn công Phishing tinh vi:** Các tin nhắn gi?mạo ngân h?ng hoặc cơ quan chức n?ng khiến người dùng t?cung cấp thông tin ??ng nhập.\n4. **Phần mềm gián ?iệp (Spyware):** Các mã ?ộc ?ược thiết k???hoạt ?ộng âm thầm, ghi âm cuộc gọi v? theo dõi camera m? người dùng không h?hay biết.\n\nHiểu rõ những thách thức n?y l? bước ?ầu tiên ??xây dựng một chiến lược phòng th?ch??ộng hiệu qu?cùng ?ối tác FCT Vĩnh Thịnh."
+    "content": "Bảo mật di động đang đối mặt với những thách thức chưa từng có do sự đa dạng của thiết bị và các phương thức tấn công mới nổi.\n\n4 thách thức lớn nhất hiện nay bao gồm:\n\n1. **Dữ liệu bị rò rỉ (Data Leakage):** Việc người dùng vô tình cấp quyền truy cập danh bạ, vị trí cho các ứng dụng không uy tín khiến thông tin doanh nghiệp bị thất thoát.\n2. **Mạng Wi-Fi không an toàn:** Kẻ tấn công có thể thiết lập các điểm truy cập Wi-Fi giả mạo (Man-in-the-middle attack) để chặn bắt dữ liệu truyền đi từ thiết bị.\n3. **Tấn công Phishing tinh vi:** Các tin nhắn giả mạo ngân hàng hoặc cơ quan chức năng khiến người dùng tự cung cấp thông tin đăng nhập.\n4. **Phần mềm gián điệp (Spyware):** Các mã độc được thiết kế để hoạt động âm thầm, ghi âm cuộc gọi và theo dõi camera mà người dùng không hề hay biết.\n\nHiểu rõ những thách thức này là bước đầu tiên để xây dựng một chiến lược phòng thủ chủ động hiệu quả cùng đối tác FCT Vĩnh Thịnh.",
+    "image": "/images/posts/mobile-security-challenges.webp",
+    "ogImage": "/images/posts/mobile-security-challenges.webp"
   },
   {
     "id": "malware-threats",
-    "title": "TIỀM ẨN NGUY C? PH? HỦY BẢO MẬT DI ?ỘNG T?PHẦN MỀM ?ỘC HẠI",
+    "title": "TIỀM ẨN NGUY CƠ PHÁ HỦY BẢO MẬT DI ĐỘNG TỪ PHẦN MỀM ĐỘC HẠI",
     "date": "22/06/2022",
-    "summary": "Bảo mật di ?ộng b??e dọa, nguy cơ thông tin v? d?liệu của người dùng có kh?n?ng b??ánh cắp. Vậy l?m cách n?o ??tránh phần mềm ?ộc hại xâm...",
+    "summary": "Bảo mật di động bị đe dọa, nguy cơ thông tin và dữ liệu của người dùng có khả năng bị đánh cắp. Vậy làm cách nào để tránh phần mềm độc hại xâm...",
     "category": "Bảo mật",
     "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html",
-    "content": "Phần mềm ?ộc hại (Malware) trên di ?ộng không còn ?ơn giản l? những loại virus phá hoại thông thường. Ng?y nay, chúng ?ược phát triển như những 'phần mềm thương mại' với cấu trúc cực k?phức tạp.\n\nCác loại mã ?ộc thường gặp:\n- **Bankers:** Chuyên ?ánh cắp thông tin ??ng nhập ngân h?ng v? th?tín dụng.\n- **Ransomware:** Khóa thiết b?v? ?òi tiền chuộc bằng tiền ?iện t?\n- **Adware:** Gây khó chịu v? ?ánh cắp thông tin thói quen người dùng ??trục lợi quảng cáo.\n\nL?m th?n?o ??tránh? Ngo?i việc nâng cao cảnh giác, các doanh nghiệp phát triển ứng dụng cần trang b?kh?n?ng 't?bảo v? cho sản phẩm của mình ngay t?bên trong. Các giải pháp như Guardsquare giúp ứng dụng có th?phát hiện v? t?hủy session nếu phát hiện có mã ?ộc ?ang can thiệp, ?ảm bảo an to?n tuyệt ?ối cho người dùng cuối."
+    "content": "Phần mềm độc hại (Malware) trên di động không còn đơn giản là những loại virus phá hoại thông thường. Ngày nay, chúng được phát triển như những 'phần mềm thương mại' với cấu trúc cực kỳ phức tạp.\n\nCác loại mã độc thường gặp:\n- **Bankers:** Chuyên đánh cắp thông tin đăng nhập ngân hàng và thẻ tín dụng.\n- **Ransomware:** Khóa thiết bị và đòi tiền chuộc bằng tiền điện tử.\n- **Adware:** Gây khó chịu và đánh cắp thông tin thói quen người dùng để trục lợi quảng cáo.\n\nLàm thế nào để tránh? Ngoài việc nâng cao cảnh giác, các doanh nghiệp phát triển ứng dụng cần trang bị khả năng 'tự bảo vệ' cho sản phẩm của mình ngay từ bên trong. Các giải pháp như Guardsquare giúp ứng dụng có thể phát hiện và tự hủy session nếu phát hiện có mã độc đang can thiệp, đảm bảo an toàn tuyệt đối cho người dùng cuối.",
+    "image": "/images/posts/malware-threats.webp",
+    "ogImage": "/images/posts/malware-threats.webp"
   },
   {
     "id": "attack-vectors",
-    "title": "3 H?NH THỨC TẤN C?NG LỚP BẢO MẬT THIẾT B?DI ?ỘNG ?IỂN H?NH",
+    "title": "3 HÌNH THỨC TẤN CÔNG LỚP BẢO MẬT THIẾT BỊ DI ĐỘNG ĐIỂN HÌNH",
     "date": "16/06/2022",
-    "summary": "Vấn ??bảo mật thiết b?di ?ộng chính l? mối quan tâm h?ng ?ầu của doanh nghiệp hiện nay. Hãy cùng Công ty FCT Vĩnh Thịnh tìm hiểu v?ba phương thức...",
+    "summary": "Vấn đề bảo mật thiết bị di động chính là mối quan tâm hàng đầu của doanh nghiệp hiện nay. Hãy cùng Công ty FCT Vĩnh Thịnh tìm hiểu về ba phương thức...",
     "category": "Bảo mật",
     "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html",
-    "content": "??bảo v?h?thống hiệu qu? chúng ta cần hiểu rõ các con ?ường m? hacker có th?xâm nhập (Attack Vectors). Có 3 hình thức ?iển hình:\n\n1. **Tấn công lớp ứng dụng (App-based):** K?tấn công tạo ra các ứng dụng gi?mạo (Fake apps) chứa mã ?ộc hoặc sửa ?ổi mã nguồn của các ứng dụng ph?biến ??chèn thêm tính n?ng theo dõi.\n2. **Tấn công lớp thiết b?(Device-based):** Khai thác các l?hổng của h??iều h?nh Android hoặc iOS chưa ?ược vá lỗi (Zero-day exploits).\n3. **Tấn công lớp mạng (Network-based):** Can thiệp v?o quá trình truyền d?liệu khi thiết b?kết nối với các h?tầng mạng công cộng, thực hiện các k?thuật gi?mạo DNS hoặc SSL Stripping.\n\nBằng việc nhận diện ?úng các vectơ tấn công n?y, FCT Vĩnh Thịnh s?tư vấn cho bạn các lớp phòng th?tương ứng, t?việc bảo v?code ứng dụng ?ến các giải pháp phần cứng bảo mật cho h?tầng mạng."
+    "content": "Để bảo vệ hệ thống hiệu quả, chúng ta cần hiểu rõ các con đường mà hacker có thể xâm nhập (Attack Vectors). Có 3 hình thức điển hình:\n\n1. **Tấn công lớp ứng dụng (App-based):** Kẻ tấn công tạo ra các ứng dụng giả mạo (Fake apps) chứa mã độc hoặc sửa đổi mã nguồn của các ứng dụng phổ biến để chèn thêm tính năng theo dõi.\n2. **Tấn công lớp thiết bị (Device-based):** Khai thác các lỗ hổng của hệ điều hành Android hoặc iOS chưa được vá lỗi (Zero-day exploits).\n3. **Tấn công lớp mạng (Network-based):** Can thiệp vào quá trình truyền dữ liệu khi thiết bị kết nối với các hạ tầng mạng công cộng, thực hiện các kỹ thuật giả mạo DNS hoặc SSL Stripping.\n\nBằng việc nhận diện đúng các vectơ tấn công này, FCT Vĩnh Thịnh sẽ tư vấn cho bạn các lớp phòng thủ tương ứng, từ việc bảo vệ code ứng dụng đến các giải pháp phần cứng bảo mật cho hạ tầng mạng.",
+    "image": "/images/posts/attack-vectors.webp",
+    "ogImage": "/images/posts/attack-vectors.webp"
   }
 ]
