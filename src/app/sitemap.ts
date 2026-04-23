@@ -3,7 +3,7 @@ import newsVi from '@/data/news_vi.json'
 import newsEn from '@/data/news_en.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://fct.vn'
+  const baseUrl = 'https://www.fct.vn'
   const locales = ['vi', 'en']
   
   const staticRoutes = [
