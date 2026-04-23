@@ -8,7 +8,11 @@
     "solution": "Triển khai lớp bảo vệ Guardsquare (DexGuard) tích hợp công nghệ RASP (Runtime Application Self-Protection) nhằm phát hiện và chặn đứng mọi hành vi ghi màn hình hoặc chèn lớp phủ Overlay.",
     "result": "Bảo vệ thành công hơn 15 triệu người dùng banking, giảm 100% tỷ lệ khiếu nại liên quan đến gian lận từ ứng dụng giả mạo.",
     "impact": "Top Tier Banking Security",
-    "tech": ["Guardsquare", "DexGuard", "RASP"]
+    "tech": [
+      "Guardsquare",
+      "DexGuard",
+      "RASP"
+    ]
   },
   {
     "id": "national-grid-protection",
@@ -19,7 +23,11 @@
     "solution": "Sử dụng khóa cứng Sentinel LDK HL (Thales) tích hợp chip bảo mật đạt chuẩn quân sự, cho phép thực thi một phần mã nguồn của phần mềm trực tiếp bên trong phần cứng khóa.",
     "result": "Đảm bảo tính toàn vẹn 100% cho hệ thống điều khiển lưới điện, ngăn chặn mọi nỗ lực dịch ngược và sao chép phần mềm trái phép.",
     "impact": "Critical Infrastructure Safety",
-    "tech": ["Thales Sentinel", "LDK HL", "Hardware Encryption"]
+    "tech": [
+      "Thales Sentinel",
+      "LDK HL",
+      "Hardware Encryption"
+    ]
   },
   {
     "id": "industrial-ip-management",
@@ -30,7 +38,11 @@
     "solution": "Triển khai hệ thống quản trị bản quyền Sentinel LDK (Hybrid) giúp kiểm soát việc kích hoạt tính năng phần mềm theo thời gian thực và vị trí địa lý.",
     "result": "Ngăn chặn hoàn toàn việc sử dụng phần mềm sai mục đích, giúp doanh nghiệp thu hồi 100% doanh thu bản quyền từ các đối tác vận hành.",
     "impact": "IP Leakage Prevention",
-    "tech": ["Sentinel LDK", "Cloud Licensing", "Hybrid Mode"]
+    "tech": [
+      "Sentinel LDK",
+      "Cloud Licensing",
+      "Hybrid Mode"
+    ]
   },
   {
     "id": "vendor-access-control",
@@ -41,6 +53,10 @@
     "solution": "Cấp phát khóa Token xác thực 2 lớp vật lý (Longmai Hardware Token) cho toàn bộ nhân sự kỹ thuật của các đơn vị đối tác khi truy cập hệ thống nội bộ.",
     "result": "Loại bỏ hoàn toàn rủi ro chiếm đoạt tài khoản qua môi trường mạng, thắt chặt quy trình an ninh chuỗi cung ứng đạt chuẩn quốc tế.",
     "impact": "Supply Chain Integrity",
-    "tech": ["Longmai Token", "2FA Hardware", "MFA Strategy"]
+    "tech": [
+      "Longmai Token",
+      "2FA Hardware",
+      "MFA Strategy"
+    ]
   }
 ]

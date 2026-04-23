@@ -8,7 +8,11 @@
     "solution": "Deployed Guardsquare (DexGuard) with RASP (Runtime Application Self-Protection) technology to detect and block all screen recording and overlay insertion attempts.",
     "result": "Successfully protected over 15 million banking users, reducing fraud claims related to fake apps by 100%.",
     "impact": "Top Tier Banking Security",
-    "tech": ["Guardsquare", "DexGuard", "RASP"]
+    "tech": [
+      "Guardsquare",
+      "DexGuard",
+      "RASP"
+    ]
   },
   {
     "id": "national-grid-protection",
@@ -19,7 +23,11 @@
     "solution": "Implemented Sentinel LDK HL (Thales) hardware keys with military-grade security chips, allowing execution of critical source code directly inside the key's hardware.",
     "result": "Ensured 100% integrity for the grid control system, preventing all reverse engineering and unauthorized software copying attempts.",
     "impact": "Critical Infrastructure Safety",
-    "tech": ["Thales Sentinel", "LDK HL", "Hardware Encryption"]
+    "tech": [
+      "Thales Sentinel",
+      "LDK HL",
+      "Hardware Encryption"
+    ]
   },
   {
     "id": "industrial-ip-management",
@@ -30,7 +38,11 @@
     "solution": "Deployed Sentinel LDK (Hybrid) license management system to control software feature activation in real-time and by geographic location.",
     "result": "Completely prevented software misuse, helping the company recover 100% of license revenue from operating partners.",
     "impact": "IP Leakage Prevention",
-    "tech": ["Sentinel LDK", "Cloud Licensing", "Hybrid Mode"]
+    "tech": [
+      "Sentinel LDK",
+      "Cloud Licensing",
+      "Hybrid Mode"
+    ]
   },
   {
     "id": "vendor-access-control",
@@ -41,6 +53,10 @@
     "solution": "Distributed Longmai physical two-factor authentication tokens (Hardware Tokens) to all technical personnel of partner units accessing internal systems.",
     "result": "Completely eliminated account hijacking risks over the network, strengthening supply chain security to international standards.",
     "impact": "Supply Chain Integrity",
-    "tech": ["Longmai Token", "2FA Hardware", "MFA Strategy"]
+    "tech": [
+      "Longmai Token",
+      "2FA Hardware",
+      "MFA Strategy"
+    ]
   }
 ]
