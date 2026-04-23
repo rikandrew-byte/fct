@@ -189,7 +189,8 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
       </section>
 
       {/* ── Call to Action ────────────────────────────────────────── */}
-      <section className="py-16 px-6">
+      <section className="py-12 px-6 relative overflow-hidden">
+        <NeuralNetworkBackground />
         <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
           

@@ -97,8 +97,10 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* ── 2. HQ Location ───────────────────────────────────────────── */}
-      <section className="py-8 bg-[#020617]/80 border-y border-white/5 relative">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-8 bg-[#020617]/80 border-y border-white/5 relative overflow-hidden">
+        <NeuralNetworkBackground />
+        <div className="absolute inset-0 bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="w-full aspect-video rounded-[3rem] overflow-hidden border border-white/10 shadow-3xl bg-slate-900 group relative">
                <iframe

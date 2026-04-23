@@ -38,7 +38,7 @@ export default function Footer({ lang, dict }: FooterProps) {
   }, []);
 
   return (
-    <footer className="bg-[#020617] pt-6 md:pt-8 pb-4 border-t border-gray-900 text-slate-400">
+    <footer className="bg-[#020617] pt-4 md:pt-6 pb-4 border-t border-gray-900 text-slate-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-10">
           {/* Cột 1: Brand */}
@@ -83,13 +83,12 @@ export default function Footer({ lang, dict }: FooterProps) {
             </ul>
           </div>
 
-          {/* Cột 3: Công ty */}
+          {/* Cột 3: Liên kết nhanh */}
           <div>
             <h4 className="text-slate-200 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
             <ul className="space-y-6 text-sm font-light">
-              <li><Link href={`/${lang}/about`} className="hover:text-blue-500 transition-colors">{dict.navbar.about}</Link></li>
-              <li><Link href={`/${lang}/contact`} className="hover:text-blue-500 transition-colors">{dict.navbar.contact}</Link></li>
-              <li><Link href={`/${lang}/products`} className="hover:text-blue-500 transition-colors">{dict.navbar.products}</Link></li>
+              <li><Link href={`/${lang}/projects`} className="hover:text-blue-500 transition-colors uppercase tracking-widest">{dict.navbar.projects}</Link></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors uppercase tracking-widest">{dict.navbar.news}</Link></li>
             </ul>
           </div>
 
@@ -128,9 +127,9 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
         </div>
 
-        <div className="pt-5 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="pt-5 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-200">
           <div className="space-y-4 md:space-y-0 md:flex md:items-center md:gap-10">
-            <p className="text-sm font-medium uppercase tracking-widest leading-loose text-slate-400">
+            <p className="text-sm font-medium uppercase tracking-widest leading-loose">
               {d.copyright}
             </p>
             
@@ -140,12 +139,12 @@ export default function Footer({ lang, dict }: FooterProps) {
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
                 <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-40"></div>
               </div>
-              <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-sm text-slate-400">
+              <div className="flex items-center gap-3 divide-x divide-white/10 uppercase tracking-[0.15em] font-bold text-sm text-slate-300">
                 <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
-                  <span className="text-white">{mounted ? onlineCount : '--'}</span> {d.visitorCounter.online}
+                  <span className="text-slate-200">{mounted ? onlineCount : '--'}</span> {d.visitorCounter.online}
                 </span>
                 <span className="pl-3 flex items-center gap-1.5 group-hover:text-blue-400 transition-colors">
-                   {d.visitorCounter.total}: <span className="text-white">{mounted ? visitorCount.toLocaleString(lang === 'vi' ? 'vi-VN' : 'en-US') : '--'}</span>
+                   {d.visitorCounter.total}: <span className="text-slate-200">{mounted ? visitorCount.toLocaleString(lang === 'vi' ? 'vi-VN' : 'en-US') : '--'}</span>
                 </span>
               </div>
             </div>
