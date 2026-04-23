@@ -61,7 +61,7 @@ export async function generateMetadata({
     ? `${baseUrl}${article.ogImage}` 
     : article.image 
       ? `${baseUrl}${article.image}` 
-      : `${baseUrl}/logo.png`;
+      : `${baseUrl}/logo.webp`;
 
   return {
     title: `${article.title} | FCT Vinh Thinh .,JSC`,
