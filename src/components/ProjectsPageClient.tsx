@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Shield, Database, Cpu, Lock, Zap, Target, TrendingUp } from "lucide-react";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import ContactModal from "@/components/ContactModal";
+import BlueprintNode from "@/components/BlueprintNode";
 
 interface Project {
   id: string;
@@ -119,12 +120,12 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                   <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-500/10 transition-colors"></div>
                   
                   {/* Left Column: Industry & Title */}
-                  <div className="lg:col-span-5 space-y-6">
-                    <div className="flex items-center gap-3">
+                  <div className="lg:col-span-12 space-y-6 text-center border-b border-white/10 pb-8">
+                    <div className="flex items-center justify-center gap-3">
                       <div className="w-12 h-12 rounded-2xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
                         <Icon className="w-6 h-6 text-blue-500" />
                       </div>
-                      <div className="space-y-0.5">
+                      <div className="space-y-0.5 text-left">
                         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-500/60">{d.list.field}</p>
                         <p className="text-sm font-bold text-gray-300">{project.industry}</p>
                       </div>
@@ -134,54 +135,53 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                       {project.title}
                     </h2>
                     
-                    <div className="space-y-2">
-                      <p className="text-xs font-black uppercase tracking-widest text-gray-500">{d.list.persona}</p>
-                      <p className="text-lg font-light text-blue-100/70 italic leading-relaxed">
-                        &quot;{project.persona}&quot;
-                      </p>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 pt-4">
+                    <div className="flex flex-wrap justify-center gap-2 pt-4">
                       {project.tech.map((t) => (
-                        <span key={t} className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-wider text-gray-400">
+                        <span key={t} className="px-4 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-[10px] font-black uppercase tracking-wider text-slate-300 shadow-inner">
                           {t}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  {/* Right Column: Content Sections */}
-                  <div className="lg:col-span-7 space-y-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2 text-red-400">
-                          <Zap className="w-4 h-4" />
-                          <span className="text-[11px] font-black uppercase tracking-widest">{d.list.challenge}</span>
+                  {/* Right Column: Content Sections - Architectural Blueprint */}
+                  <div className="lg:col-span-12">
+                     <p className="text-center text-xs font-black uppercase tracking-[0.2em] text-gray-500 mb-8">Architectural Blueprint</p>
+                     
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+                        {/* Connecting Line */}
+                        <div className="hidden md:block absolute top-1/2 left-1/2 w-8 h-px bg-slate-700 -translate-x-1/2 -translate-y-1/2"></div>
+                        
+                        <div className="flex flex-col gap-4 relative">
+                          <div className="hidden md:block absolute -right-4 top-1/2 w-4 h-px bg-slate-700 -translate-y-1/2"></div>
+                          <BlueprintNode 
+                            icon={<Zap />}
+                            title={d.list.challenge}
+                            description={project.challenge}
+                            info="Vulnerability Context: Identifies attack vectors and weak points in current unshielded architecture."
+                            delay={index * 0.1}
+                          />
                         </div>
-                        <p className="text-sm font-light text-gray-400 leading-relaxed">
-                          {project.challenge}
-                        </p>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2 text-blue-400">
-                          <Target className="w-4 h-4" />
-                          <span className="text-[11px] font-black uppercase tracking-widest">{d.list.solution}</span>
+                        
+                        <div className="flex flex-col gap-4 relative">
+                          <div className="hidden md:block absolute -left-4 top-1/2 w-4 h-px bg-slate-700 -translate-y-1/2"></div>
+                          <BlueprintNode 
+                            icon={<Shield />}
+                            title={d.list.solution}
+                            description={project.solution}
+                            info={`Implementation: Deploys ${project.tech.join(", ")} directly into the runtime environment.`}
+                            delay={index * 0.1 + 0.1}
+                          />
                         </div>
-                        <p className="text-sm font-light text-gray-400 leading-relaxed">
-                          {project.solution}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="p-8 rounded-3xl bg-blue-600/5 border border-blue-500/20 space-y-4">
-                      <div className="flex items-center gap-2 text-emerald-400">
-                        <TrendingUp className="w-4 h-4" />
-                        <span className="text-[11px] font-black uppercase tracking-widest font-bold">{d.list.result}</span>
-                      </div>
-                      <p className="text-xl font-bold tracking-tight text-white">
-                        {project.result}
-                      </p>
-                    </div>
+                     </div>
+                     
+                     <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-blue-900/20 to-slate-900 border border-blue-500/20 flex items-center gap-6 justify-center">
+                        <TrendingUp className="w-10 h-10 text-emerald-400 shrink-0" />
+                        <div>
+                          <p className="text-[10px] font-black uppercase tracking-widest text-emerald-400/70 mb-1">{d.list.result}</p>
+                          <p className="text-lg font-bold text-white tracking-tight">{project.result}</p>
+                        </div>
+                     </div>
                   </div>
                 </article>
               </motion.div>

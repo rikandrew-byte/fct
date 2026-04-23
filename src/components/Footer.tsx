@@ -47,9 +47,9 @@ export default function Footer({ lang, dict }: FooterProps) {
               <Image 
                 src="/logo.png" 
                 alt="Logo FCT Vinh Thinh .,JSC" 
-                width={48} 
-                height={48} 
-                className="brightness-110"
+                width={56} 
+                height={56} 
+                className="brightness-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
               />
               <span className="font-bold text-2xl text-white tracking-tight">FCT Vinh Thinh .,JSC</span>
             </Link>
@@ -90,8 +90,8 @@ export default function Footer({ lang, dict }: FooterProps) {
               <li><Link href={`/${lang}/about`} className="hover:text-blue-500 transition-colors">{dict.navbar.about}</Link></li>
               <li><Link href={`/${lang}/contact`} className="hover:text-blue-500 transition-colors">{dict.navbar.contact}</Link></li>
               <li><Link href={`/${lang}/products`} className="hover:text-blue-500 transition-colors">{dict.navbar.products}</Link></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">{d.companyLines.recruitment}</a></li>
-              <li><a href="#" className="hover:text-blue-500 transition-colors">{d.companyLines.techNews}</a></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.companyLines.recruitment}</Link></li>
+              <li><Link href={`/${lang}/news`} className="hover:text-blue-500 transition-colors">{d.companyLines.techNews}</Link></li>
             </ul>
           </div>
 
@@ -154,8 +154,8 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
 
           <div className="flex gap-10 text-[11px] font-medium uppercase tracking-widest">
-            <a href="#" className="hover:text-white transition-colors">{d.legal.privacy}</a>
-            <a href="#" className="hover:text-white transition-colors">{d.legal.terms}</a>
+            <Link href={`/${lang}/about`} className="hover:text-white transition-colors">{d.legal.privacy}</Link>
+            <Link href={`/${lang}/about`} className="hover:text-white transition-colors">{d.legal.terms}</Link>
           </div>
         </div>
       </div>

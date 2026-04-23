@@ -25,9 +25,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
   const navLinks = [
     { href: `/${lang}/about`, label: dict.navbar.about },
-    { href: `/${lang}/news`, label: dict.navbar.news },
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
+    { href: `/${lang}/knowledge`, label: dict.navbar.knowledge },
     { href: `/${lang}/contact`, label: dict.navbar.contact },
   ];
 
@@ -78,10 +78,10 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             <Image 
               src="/logo.png" 
               alt="Logo FCT" 
-              width={isScrolled ? 42 : 52} 
-              height={isScrolled ? 42 : 52} 
+              width={isScrolled ? 50 : 64} 
+              height={isScrolled ? 50 : 64} 
               style={{ height: 'auto' }}
-              className="object-contain relative z-10 transition-all group-hover:scale-110 duration-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+              className="object-contain relative z-10 transition-all group-hover:scale-110 duration-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.6)]"
             />
             <span className="font-black text-lg tracking-tighter hidden sm:block text-white font-sans relative z-10 transition-colors">
               FCT Vinh Thinh <span className={`${isScrolled ? "text-blue-400" : "text-blue-400"} transition-colors`}>.,JSC</span>

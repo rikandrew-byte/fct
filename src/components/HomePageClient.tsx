@@ -6,6 +6,7 @@ import { ShieldAlert, Cpu, ArrowRight, ShieldCheck } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import IntegritySeal from "@/components/IntegritySeal";
 import { motion } from "framer-motion";
 
 interface HomePageClientProps {
@@ -61,10 +62,14 @@ export default function HomePageClient({ lang, dict }: HomePageClientProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight"
+            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight mb-8"
           >
             {dict.hero.description}
           </motion.p>
+          
+          <div className="pt-8">
+            <IntegritySeal />
+          </div>
         </div>
       </section>
 
