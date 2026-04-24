@@ -95,6 +95,7 @@ export async function POST(request: Request) {
 
     // 1. Send to Telegram
     if (TELEGRAM_BOT_TOKEN && TELEGRAM_CHAT_ID) {
+      console.log('[TELEGRAM] Sending to Chat ID:', TELEGRAM_CHAT_ID);
       const tgRes = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -105,9 +106,13 @@ export async function POST(request: Request) {
         }),
       });
       const tgData = await tgRes.json();
-      console.log('Telegram response:', tgData.ok);
+      if (!tgData.ok) {
+        console.error('[TELEGRAM] Failed to send message:', tgData.description);
+      } else {
+        console.log('[TELEGRAM] Message sent successfully!');
+      }
     } else {
-      console.log('Skipping Telegram: Missing token or chat ID');
+      console.warn('[TELEGRAM] Skipping: Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID on Server');
     }
 
     // 2. Send Email via Resend
