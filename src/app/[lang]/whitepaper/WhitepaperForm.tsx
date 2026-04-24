@@ -14,9 +14,10 @@ import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface WhitepaperFormProps {
   lang: string;
+  sourceIdentifier?: string;
 }
 
-export default function WhitepaperForm({ lang }: WhitepaperFormProps) {
+export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }: WhitepaperFormProps) {
   const isEn = lang === "en";
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -59,7 +60,7 @@ export default function WhitepaperForm({ lang }: WhitepaperFormProps) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          source: 'whitepaper',
+          source: sourceIdentifier,
           turnstileToken
         }),
       });

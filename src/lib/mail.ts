@@ -37,8 +37,11 @@ export async function sendTelegramNotification(payload: NotificationPayload) {
     throw new Error('Telegram configuration missing on server');
   }
 
-  const isWhitepaper = payload.source === 'whitepaper';
-  const title = isWhitepaper ? '🎯 <b>[CÓ LEAD MỚI TẢI SÁCH TRẮNG]</b>' : '🚀 <b>Yêu cầu liên hệ mới từ website FCT</b>';
+  const title = payload.source === 'whitepaper' 
+    ? '🎯 <b>[CÓ LEAD MỚI TẢI SÁCH TRẮNG]</b>' 
+    : payload.source === 'whitepaper-guardsquare'
+      ? '🏦 <b>[CÓ LEAD MỚI TẢI SÁCH TRẮNG GUARDSQUARE]</b>'
+      : '🚀 <b>Yêu cầu liên hệ mới từ website FCT</b>';
 
   // Chuyển sang định dạng HTML để ổn định hơn, tránh lỗi ký tự đặc biệt của Markdown
   const message = `
@@ -133,8 +136,21 @@ export async function sendEmailNotification(payload: NotificationPayload) {
 /**
  * Gửi Email tự động gửi link tải Sách trắng cho Khách hàng
  */
-export async function sendWhitepaperAutoReply(email: string, fullName: string) {
+export async function sendWhitepaperAutoReply(email: string, fullName: string, source: string = 'whitepaper') {
   if (!resend) return;
+
+  const isGuardsquare = source === 'whitepaper-guardsquare';
+  const docTitle = isGuardsquare 
+    ? '"Bảo mật Ứng dụng Di động & Chống Mã độc"' 
+    : '"Bảo vệ chất xám & Tối đa hóa doanh thu phần mềm"';
+  
+  const docDescription = isGuardsquare
+    ? 'Đây là tài liệu chuyên sâu dành cho các nhà phát triển ứng dụng di động (Mobile App) và khối Tài chính - Ngân hàng nhằm ngăn chặn kỹ thuật dịch ngược và mã độc chiếm quyền (Overlay).'
+    : 'Đây là tài liệu chuyên sâu dành cho các nhà lãnh đạo và phát triển phần mềm nhằm tối ưu hóa mô hình kinh doanh và bảo vệ tài sản trí tuệ.';
+    
+  const docLink = isGuardsquare
+    ? 'https://drive.google.com/file/d/1xiDPxWdLEwfNOoGC_xLWqG3fBknH3U-x/view?usp=sharing'
+    : 'https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing';
 
   await resend.emails.send({
     from: 'FCT Vĩnh Thịnh <system@fct.vn>',
@@ -143,8 +159,8 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string) {
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px;">
         <h2 style="color: #2563eb;">Chào ${fullName},</h2>
-        <p>Cảm ơn bạn đã quan tâm đến tài liệu <strong>"Bảo vệ chất xám & Tối đa hóa doanh thu phần mềm"</strong> của FCT Vĩnh Thịnh.</p>
-        <p>Đây là tài liệu chuyên sâu dành cho các nhà lãnh đạo và phát triển phần mềm nhằm tối ưu hóa mô hình kinh doanh và bảo vệ tài sản trí tuệ.</p>
+        <p>Cảm ơn bạn đã quan tâm đến tài liệu <strong>${docTitle}</strong> của FCT Vĩnh Thịnh.</p>
+        <p>${docDescription}</p>
         <div style="margin: 30px 0;">
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
@@ -152,7 +168,7 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string) {
                 <table border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td align="center" style="border-radius: 8px;" bgcolor="#2563eb">
-                      <a href="https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing" 
+                      <a href="${docLink}" 
                          target="_blank" 
                          style="font-size: 16px; font-family: sans-serif; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 8px; border: 1px solid #2563eb; display: inline-block; font-weight: bold;">
                         TẢI SÁCH TRẮNG (PDF)
@@ -166,8 +182,8 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string) {
         </div>
         <p style="font-size: 14px; color: #64748b; margin-top: 20px;">
           Hoặc truy cập trực tiếp tại đường dẫn sau để tải tài liệu: <br/>
-          <a href="https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing" style="color: #2563eb; word-break: break-all;">
-            https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing
+          <a href="${docLink}" style="color: #2563eb; word-break: break-all;">
+            ${docLink}
           </a>
         </p>
         <p>Nếu bạn cần tư vấn sâu hơn về giải pháp bảo mật và cấp phép bản quyền, đừng ngần ngại phản hồi email này hoặc liên hệ hotline: <strong>0904.59.83.46</strong>.</p>

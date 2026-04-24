@@ -18,6 +18,7 @@ import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
 import ContactModal from "@/components/ContactModal";
+import GuardsquareArchitecture from "@/components/GuardsquareArchitecture";
 
 interface GuardsquareClientProps {
   lang: string;
@@ -83,8 +84,13 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
         </motion.div>
       </section>
 
+      {/* ── 1.5. GUARDSQUARE ARCHITECTURE ────────────────── */}
+      <section className="bg-white relative pt-12 pb-12 rounded-t-[4rem] -mt-12 z-20">
+        <GuardsquareArchitecture isEn={isEn} />
+      </section>
+
       {/* ── 2. BLUEPRINT (White) ────────────────── */}
-      <section className="py-24 px-6 max-w-7xl mx-auto relative bg-white rounded-t-[4rem] -mt-12 z-20">
+      <section className="py-24 px-6 max-w-7xl mx-auto relative bg-white z-20">
          <div className="text-center mb-20 space-y-4">
             <span className="text-sky-600 font-black text-xs uppercase tracking-[0.4em]">Multi-Layer Protection</span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
