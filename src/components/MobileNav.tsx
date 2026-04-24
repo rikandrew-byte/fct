@@ -39,7 +39,7 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
         }`}
       >
         <Link href={`/${lang}`} className="flex items-center gap-2">
-          <Image src="/logo.jpg" alt="Logo FCT" width={40} height={40} className="object-contain" />
+          <Image src="/logo.png" alt="Logo FCT" width={40} height={40} className="object-contain" />
           <span className="font-black text-white text-sm tracking-tighter">FCT Vinh Thinh</span>
         </Link>
         <button 
