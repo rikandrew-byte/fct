@@ -137,7 +137,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
                 <ShieldAlert className="w-10 h-10 stroke-[1.5px]" />
               </div>
               <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-blue-600 transition-colors">{dict.solutions.mobileSecurity.title}</h3>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">
+              <p className="text-gray-600 text-sm font-light leading-relaxed">
                 {dict.solutions.mobileSecurity.description}
               </p>
             </motion.article>
@@ -156,7 +156,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
                 <ShieldCheck className="w-10 h-10 stroke-[1.5px]" />
               </div>
               <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-indigo-600 transition-colors">{dict.solutions.licenseManagement.title}</h3>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">
+              <p className="text-gray-600 text-sm font-light leading-relaxed">
                 {dict.solutions.licenseManagement.description}
               </p>
             </motion.article>
@@ -175,7 +175,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
                 <Cpu className="w-10 h-10 stroke-[1.5px]" />
               </div>
               <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-rose-600 transition-colors">{dict.solutions.hardwareSecurity.title}</h3>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">
+              <p className="text-gray-600 text-sm font-light leading-relaxed">
                 {dict.solutions.hardwareSecurity.description}
               </p>
             </motion.article>

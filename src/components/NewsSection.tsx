@@ -100,7 +100,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
 
               {/* Content Area */}
               <div className="p-8 flex flex-col flex-1 space-y-4">
-                <div className="flex items-center gap-4 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
                   <span className="flex items-center gap-1.5">
                     <Calendar className="w-3 h-3" />
                     {article.date}
@@ -113,7 +113,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
                   </Link>
                 </h3>
                 
-                <p className="text-gray-500 text-sm font-light leading-relaxed line-clamp-3 flex-1">
+                <p className="text-gray-600 text-sm font-light leading-relaxed line-clamp-3 flex-1">
                   {article.summary}
                 </p>
                 

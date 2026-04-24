@@ -316,28 +316,33 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
             </div>
          </div>
 
-         {/* Schema.org for SEO */}
+         {/* Schema.org Service for B2B SEO */}
          <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "Product",
-                "name": "Longmai Hardware Token & 2FA Solutions",
+                "@type": "Service",
+                "name": "Longmai Hardware Token & PKI 2FA Solutions",
+                "description": "Enterprise deployment of Longmai hardware security tokens (mToken) for PKI digital signatures, 2FA authentication and FIPS 140-2 certified access control for Banking and Government.",
+                "url": "https://fct.vn/vi/products/longmai",
+                "serviceType": "Hardware Security & PKI Identity Management",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "Vietnam"
+                },
                 "brand": {
                   "@type": "Brand",
                   "name": "Longmai"
                 },
-                "category": "Hardware Security",
-                "description": "Hardware-based PKI tokens and 2FA keys for enterprise identity and access management.",
-                "offers": {
-                  "@type": "Offer",
-                  "priceCurrency": "VND",
-                  "availability": "https://schema.org/InStock",
-                  "seller": {
-                    "@type": "Organization",
-                    "name": "FCT Vinh Thinh .,JSC"
-                  }
+                "provider": {
+                  "@type": "Organization",
+                  "name": "FCT Vinh Thinh .,JSC",
+                  "url": "https://fct.vn"
+                },
+                "audience": {
+                  "@type": "BusinessAudience",
+                  "audienceType": "Banks, Government Agencies, Financial Institutions"
                 }
               })
             }}

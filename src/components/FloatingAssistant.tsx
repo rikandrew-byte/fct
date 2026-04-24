@@ -42,6 +42,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
           >
             <Link
               href={`/${lang}/knowledge`}
+              aria-label="Truy cập Trung tâm Kiến thức"
               className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#020617]/80 backdrop-blur-3xl border border-blue-500/30 text-white shadow-2xl hover:border-blue-400 group transition-all duration-300"
             >
               <div className="w-8 h-8 rounded-xl bg-blue-600/20 flex items-center justify-center group-hover:bg-blue-600/40 transition-colors">
@@ -78,6 +79,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.9 }}
             onClick={toggle}
+            aria-label="Mở trợ lý tư vấn ảo"
             className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-blue-600 text-white shadow-[0_0_30px_rgba(35,131,246,0.4)] flex items-center justify-center group overflow-hidden border border-blue-400/30 backdrop-blur-xl relative"
           >
             {/* Animated Background */}

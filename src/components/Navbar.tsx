@@ -136,6 +136,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                  </button>
                  <input 
                    type="text" 
+                   aria-label={isEn ? "Search" : "Tìm kiếm"}
                    placeholder={isEn ? "Search..." : "Tìm kiếm..."}
                    className="absolute right-0 top-1/2 -translate-y-1/2 w-0 group-hover/search:w-28 lg:group-focus-within/search:w-28 transition-all duration-500 bg-[#020617] border border-white/10 rounded-full px-0 group-hover/search:px-4 py-1.5 text-xs text-slate-200 outline-none opacity-0 group-hover/search:opacity-100"
                  />

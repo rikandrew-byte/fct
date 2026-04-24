@@ -42,7 +42,7 @@ export default function Testimonials() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20 space-y-4">
           <h2 className="text-4xl md:text-6xl font-black text-gray-950 tracking-tighter opacity-90">Khách Hàng Nói Gì</h2>
-          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto font-light tracking-tight italic">
+          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto font-light tracking-tight italic">
             Niềm tin là giá trị cốt lõi trong mọi giải pháp an ninh của chúng tôi.
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function Testimonials() {
                   <Star className="w-4 h-4 fill-current" />
                   <Star className="w-4 h-4 fill-current" />
                 </div>
-                <p className="text-gray-600 font-light italic leading-relaxed text-lg">
+                <p className="text-gray-700 font-light italic leading-relaxed text-lg">
                   "{testi.content}"
                 </p>
               </div>

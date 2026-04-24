@@ -55,7 +55,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
                 </span>
               </h3>
             </div>
-            <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
+            <p className="text-gray-600 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
               {content.description}
             </p>
 
@@ -76,7 +76,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
                   {feature.icon}
                 </div>
                 <h4 className="text-xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">{feature.title}</h4>
-                <p className="text-gray-500 text-sm font-light leading-relaxed">
+                <p className="text-gray-600 text-sm font-light leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>

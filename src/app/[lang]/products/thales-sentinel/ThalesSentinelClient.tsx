@@ -426,28 +426,33 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             </div>
          </div>
 
-         {/* Schema.org for SEO */}
+         {/* Schema.org Service for B2B SEO */}
          <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "Product",
-                "name": "Thales Sentinel Software Protection",
-                "image": "https://fct.vn/images/products/sentinel-hl.jpg",
-                "description": "Enterprise-grade software licensing and security solutions by Thales Sentinel.",
+                "@type": "Service",
+                "name": "Thales Sentinel Software Protection & Licensing",
+                "description": "Enterprise consulting, integration and deployment of Thales Sentinel hardware/software license protection (Sentinel HL/SL) for ISVs and software publishers in Vietnam.",
+                "url": "https://fct.vn/vi/products/thales-sentinel",
+                "serviceType": "Software Licensing & Intellectual Property Protection",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "Vietnam"
+                },
                 "brand": {
                   "@type": "Brand",
                   "name": "Thales"
                 },
-                "offers": {
-                  "@type": "Offer",
-                  "priceCurrency": "VND",
-                  "availability": "https://schema.org/InStock",
-                  "seller": {
-                    "@type": "Organization",
-                    "name": "FCT Vinh Thinh .,JSC"
-                  }
+                "provider": {
+                  "@type": "Organization",
+                  "name": "FCT Vinh Thinh .,JSC",
+                  "url": "https://fct.vn"
+                },
+                "audience": {
+                  "@type": "BusinessAudience",
+                  "audienceType": "Software Publishers, ISVs, Enterprise IT"
                 }
               })
             }}
