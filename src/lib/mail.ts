@@ -37,9 +37,12 @@ export async function sendTelegramNotification(payload: NotificationPayload) {
     throw new Error('Telegram configuration missing on server');
   }
 
+  const isWhitepaper = payload.source === 'whitepaper';
+  const title = isWhitepaper ? '🎯 <b>[CÓ LEAD MỚI TẢI SÁCH TRẮNG]</b>' : '🚀 <b>Yêu cầu liên hệ mới từ website FCT</b>';
+
   // Chuyển sang định dạng HTML để ổn định hơn, tránh lỗi ký tự đặc biệt của Markdown
   const message = `
-🚀 <b>Yêu cầu liên hệ mới từ website FCT</b>
+${title}
 ---------------------------------------
 👤 <b>Khách hàng:</b> ${payload.fullName || 'N/A'}
 📧 <b>Email:</b> ${payload.email || 'N/A'}
@@ -125,4 +128,32 @@ export async function sendEmailNotification(payload: NotificationPayload) {
     throw new Error(`Resend Error: ${error.message}`);
   }
   return data;
+}
+
+/**
+ * Gửi Email tự động gửi link tải Sách trắng cho Khách hàng
+ */
+export async function sendWhitepaperAutoReply(email: string, fullName: string) {
+  if (!resend) return;
+
+  await resend.emails.send({
+    from: 'FCT Vĩnh Thịnh <system@fct.vn>',
+    to: email,
+    subject: 'Cảm ơn bạn đã đăng ký nhận Sách trắng từ FCT Vĩnh Thịnh',
+    html: `
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px;">
+        <h2 style="color: #2563eb;">Chào ${fullName},</h2>
+        <p>Cảm ơn bạn đã quan tâm đến tài liệu <strong>"Bảo vệ chất xám & Tối đa hóa doanh thu phần mềm"</strong> của FCT Vĩnh Thịnh.</p>
+        <p>Đây là tài liệu chuyên sâu dành cho các nhà lãnh đạo và phát triển phần mềm nhằm tối ưu hóa mô hình kinh doanh và bảo vệ tài sản trí tuệ.</p>
+        <div style="margin: 30px 0; text-align: center;">
+          <a href="https://drive.google.com/file/d/example-whitepaper-link/view" 
+             style="background-color: #2563eb; color: white; padding: 15px 25px; text-decoration: none; rounded: 8px; font-weight: bold; display: inline-block;">
+             TẢI SÁCH TRẮNG (PDF)
+          </a>
+        </div>
+        <p>Nếu bạn cần tư vấn sâu hơn về giải pháp bảo mật và cấp phép bản quyền, đừng ngần ngại phản hồi email này hoặc liên hệ hotline: <strong>0904.59.83.46</strong>.</p>
+        <p>Trân trọng,<br/>Đội ngũ FCT Vĩnh Thịnh</p>
+      </div>
+    `,
+  });
 }

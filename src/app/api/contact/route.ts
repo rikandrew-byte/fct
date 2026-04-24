@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/rate-limit';
-import { sendTelegramNotification, sendEmailNotification } from '@/lib/mail';
+import { sendTelegramNotification, sendEmailNotification, sendWhitepaperAutoReply } from '@/lib/mail';
 
 const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY;
 
@@ -96,7 +96,8 @@ export async function POST(request: Request) {
     // Chạy song song cả 2 tác vụ thông báo
     const results = await Promise.allSettled([
       sendTelegramNotification(payload),
-      sendEmailNotification(payload)
+      sendEmailNotification(payload),
+      ...(source === 'whitepaper' ? [sendWhitepaperAutoReply(email, fullName)] : [])
     ]);
 
     const errors: string[] = [];
