@@ -234,7 +234,7 @@ export default function NewsDetailClient({
           className="relative aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10"
         >
           <Image 
-            src={article.image || "/logo.webp"} 
+            src={article.image || "/logo.jpg"} 
             alt={article.title}
             fill
             className="object-cover"

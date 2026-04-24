@@ -77,7 +77,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           <Link href={`/${lang}`} className="flex items-center gap-3 group relative flex-shrink-0">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <Image 
-              src="/logo.webp" 
+              src="/logo.jpg" 
               alt="Logo FCT" 
               width={isScrolled ? 50 : 64} 
               height={isScrolled ? 50 : 64} 

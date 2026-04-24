@@ -50,7 +50,7 @@ export default async function NewsPage({ params }: { params: Promise<{ lang: str
       "name": "FCT Vinh Thinh .,JSC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fct.vn/logo.webp"
+        "url": "https://fct.vn/logo.jpg"
       }
     },
     "blogPost": blogPosts

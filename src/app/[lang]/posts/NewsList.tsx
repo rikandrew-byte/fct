@@ -89,7 +89,7 @@ export default function NewsList({ lang, dict }: NewsListProps) {
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Link href={`/${lang}/posts/${item.id}`}>
                   <img 
-                    src={(item as any).image || "/logo.webp"} 
+                    src={(item as any).image || "/logo.jpg"} 
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
