@@ -56,7 +56,7 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
           onError?.();
         },
         theme: "light",
-        size: "invisible",
+        size: "flexible",
         appearance: "always",
       });
       widgetIdRef.current = id;
