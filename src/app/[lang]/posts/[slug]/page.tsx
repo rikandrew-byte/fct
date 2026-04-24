@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       images: [
         {
-          url: article.image || '/images/default-share.webp', 
+          url: article.image?.replace('.webp', '.png') || '/og-image.png', 
           width: 1200,
           height: 630,
           alt: article.title,
