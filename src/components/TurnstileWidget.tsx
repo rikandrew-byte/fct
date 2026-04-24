@@ -28,19 +28,30 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
   const isRenderingRef = useRef(false);
 
   // Ép kiểu String tuyệt đối để tránh lỗi "got object"
-  const siteKey = String(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "");
+  // Ép kiểu String tuyệt đối và log để MASTER kiểm tra
+  const rawKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const siteKey = typeof rawKey === 'string' ? rawKey : "";
 
   const renderWidget = useCallback(() => {
     if (!containerRef.current || !window.turnstile || widgetIdRef.current || isRenderingRef.current) return;
 
+    if (!siteKey) {
+      console.error("🛡️ [Turnstile] CRITICAL: Site Key is empty or invalid type:", typeof rawKey);
+      return;
+    }
+
     try {
       isRenderingRef.current = true;
+      console.log("🛡️ [Turnstile] Attempting render with key:", siteKey.substring(0, 10) + "...");
+      
       const id = window.turnstile.render(containerRef.current, {
         sitekey: siteKey,
         callback: (token: string) => {
+          console.log("🛡️ [Turnstile] Token generated successfully!");
           onVerify(token);
         },
         "error-callback": () => {
+          console.error("🛡️ [Turnstile] Verification Error.");
           onError?.();
         },
         theme: "light",
@@ -53,7 +64,7 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
     } finally {
       isRenderingRef.current = false;
     }
-  }, [siteKey, onVerify, onError]);
+  }, [siteKey, rawKey, onVerify, onError]);
 
   useEffect(() => {
     if (!siteKey) {
