@@ -4,14 +4,14 @@ const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    img-src 'self' blob: data: https://www.google.com;
+    img-src 'self' blob: data: https://www.google.com https://*.googleapis.com https://*.gstatic.com;
     font-src 'self' https://fonts.gstatic.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
-    frame-src 'self' https://www.google.com/maps/embed/ https://challenges.cloudflare.com;
-    connect-src 'self' https://challenges.cloudflare.com;
+    frame-src 'self' https://www.google.com https://challenges.cloudflare.com;
+    connect-src 'self' https://challenges.cloudflare.com https://www.google.com;
     upgrade-insecure-requests;
 `.replace(/\n/g, '');
 

@@ -45,8 +45,8 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
         onError?.();
       },
       theme: "light",
-      size: "invisible",        // Tàng hình — không hiển thị gì
-      appearance: "interaction-only", // Chỉ hiện khi cần xác minh thêm
+      size: "invisible",        
+      appearance: "always", // Hiện cái badge nhỏ ở góc để MASTER kiểm tra
     });
   }, [siteKey, onVerify, onError]);
 
