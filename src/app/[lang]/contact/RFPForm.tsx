@@ -15,6 +15,7 @@ import {
   ArrowRight,
   Loader2
 } from "lucide-react";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface RFPFormProps {
   lang: string;
@@ -27,6 +28,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -74,14 +76,17 @@ export default function RFPForm({ lang }: RFPFormProps) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          source: 'RFP Form Page'
+          source: 'RFP Form Page',
+          turnstileToken
         }),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
+        setTurnstileToken(null);
       } else {
-        alert(isEn ? 'Something went wrong. Please try again.' : 'Đã có lỗi xảy ra. Vui lòng thử lại.');
+        const errorData = await response.json();
+        alert(errorData.error || (isEn ? 'Something went wrong. Please try again.' : 'Đã có lỗi xảy ra. Vui lòng thử lại.'));
       }
     } catch (error) {
       console.error(error);
@@ -256,6 +261,10 @@ export default function RFPForm({ lang }: RFPFormProps) {
           {!isLoading && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
           {isLoading && <Loader2 className="w-4 h-4 animate-spin" />}
         </button>
+
+        {/* Chặn Bot tàng hình */}
+        <TurnstileWidget onVerify={setTurnstileToken} />
+
         <p className="mt-6 text-gray-400 text-[10px] uppercase tracking-widest font-bold flex items-center gap-2">
           <ShieldCheck className="w-3 h-3 text-emerald-500" /> {isEn ? "Secure encrypted data transmission" : "Truyền dữ liệu mã hóa an toàn"}
         </p>

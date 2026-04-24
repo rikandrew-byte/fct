@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { checkRateLimit } from '@/lib/rate-limit';
 
 // Khởi tạo lười để tránh lỗi Build khi thiếu API Key
 let resend: Resend | null = null;
@@ -12,19 +13,69 @@ const getResend = () => {
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'andrew@fct.vn';
+const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY;
 
 export async function POST(request: Request) {
-  console.log('--- CONTACT API CALLED ---');
-  console.log('TELEGRAM_BOT_TOKEN exists:', !!TELEGRAM_BOT_TOKEN);
-  console.log('TELEGRAM_CHAT_ID exists:', !!TELEGRAM_CHAT_ID);
-  console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
+  // ── Tầng 3: Rate Limiting (3 requests / 10 phút / IP) ──────────
+  const forwarded = request.headers.get('x-forwarded-for');
+  const ip = forwarded?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown';
+
+  const rateLimit = checkRateLimit(ip, { maxRequests: 3, windowMs: 10 * 60 * 1000 });
+
+  if (!rateLimit.allowed) {
+    console.log(`[RATE_LIMIT] Blocked IP: ${ip}, reset in ${rateLimit.resetIn}s`);
+    return NextResponse.json(
+      { 
+        success: false, 
+        error: 'Quá nhiều yêu cầu. Vui lòng thử lại sau.',
+        retryAfter: rateLimit.resetIn 
+      },
+      { 
+        status: 429,
+        headers: { 'Retry-After': String(rateLimit.resetIn) }
+      }
+    );
+  }
 
   try {
     const body = await request.json();
-    console.log('Request body:', body);
-    const { fullName, email, phone, company, industry, solution, projectScale, message, source } = body;
+    const { fullName, email, phone, company, industry, solution, projectScale, message, source, turnstileToken } = body;
 
-    // 1. Send to Telegram
+    // ── Tầng 2: Cloudflare Turnstile Verification ─────────────────
+    if (TURNSTILE_SECRET_KEY) {
+      if (!turnstileToken) {
+        console.log('[TURNSTILE] Missing token from client');
+        return NextResponse.json(
+          { success: false, error: 'Xác thực bảo mật thất bại. Vui lòng tải lại trang.' },
+          { status: 403 }
+        );
+      }
+
+      const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          secret: TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+          remoteip: ip,
+        }),
+      });
+
+      const verifyData = await verifyRes.json();
+      console.log('[TURNSTILE] Verification result:', verifyData.success);
+
+      if (!verifyData.success) {
+        console.log('[TURNSTILE] Failed verification:', verifyData['error-codes']);
+        return NextResponse.json(
+          { success: false, error: 'Xác thực Bot thất bại. Bạn có phải là người thật không?' },
+          { status: 403 }
+        );
+      }
+    } else {
+      console.log('[TURNSTILE] Secret key not configured — skipping verification');
+    }
+
+    // ── Business Logic: Gửi Telegram + Email ──────────────────────
     const telegramMessage = `
 🚀 *Yêu cầu liên hệ mới từ website FCT*
 ---------------------------------------
@@ -38,6 +89,8 @@ export async function POST(request: Request) {
 💬 *Lời nhắn:* ${message || 'N/A'}
 ---------------------------------------
 📍 *Nguồn:* ${source || 'Liên hệ trực tiếp'}
+🌐 *IP:* ${ip}
+✅ *Turnstile:* Verified
 `;
 
     // 1. Send to Telegram
@@ -52,7 +105,7 @@ export async function POST(request: Request) {
         }),
       });
       const tgData = await tgRes.json();
-      console.log('Telegram response:', tgData);
+      console.log('Telegram response:', tgData.ok);
     } else {
       console.log('Skipping Telegram: Missing token or chat ID');
     }
@@ -74,11 +127,11 @@ export async function POST(request: Request) {
             <p><strong>Ngành:</strong> ${industry || 'N/A'}</p>
             <p><strong>Giải pháp quan tâm:</strong> ${solution || 'N/A'}</p>
             <p><strong>Quy mô dự án:</strong> ${projectScale || 'N/A'}</p>
-            <div style="margin-top: 20px; padding: 15px; bg-color: #f8fafc; border-radius: 8px;">
+            <div style="margin-top: 20px; padding: 15px; background-color: #f8fafc; border-radius: 8px;">
               <strong>Yêu cầu chi tiết:</strong><br/>
               ${message || 'Không có yêu cầu chi tiết'}
             </div>
-            <p style="margin-top: 20px; font-size: 12px; color: #64748b;">Nguồn: ${source || 'Liên hệ từ website'}</p>
+            <p style="margin-top: 20px; font-size: 12px; color: #64748b;">Nguồn: ${source || 'Liên hệ từ website'} | IP: ${ip} | Turnstile: ✅</p>
           </div>
         `,
       });
@@ -87,7 +140,10 @@ export async function POST(request: Request) {
       console.log('Skipping Email: Missing Resend API Key');
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ 
+      success: true,
+      rateLimit: { remaining: rateLimit.remaining, resetIn: rateLimit.resetIn }
+    });
   } catch (error: any) {
     console.error('Contact API Error:', error);
     return NextResponse.json({ success: false, error: error.message || 'Internal Server Error' }, { status: 500 });

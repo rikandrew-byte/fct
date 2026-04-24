@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     img-src 'self' blob: data: https://www.google.com;
     font-src 'self' https://fonts.gstatic.com;
@@ -10,7 +10,8 @@ const cspHeader = `
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
-    frame-src 'self' https://www.google.com/maps/embed/;
+    frame-src 'self' https://www.google.com/maps/embed/ https://challenges.cloudflare.com;
+    connect-src 'self' https://challenges.cloudflare.com;
     upgrade-insecure-requests;
 `.replace(/\n/g, '');
 

@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { useState } from "react";
+import TurnstileWidget from "./TurnstileWidget";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -17,6 +18,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const d = dict.contactModal;
 
@@ -33,7 +35,8 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
           email,
           phone,
           message,
-          source: 'Contact Modal'
+          source: 'Contact Modal',
+          turnstileToken // Send the bot protection token
         }),
       });
 
@@ -43,13 +46,15 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
         setPhone("");
         setEmail("");
         setMessage("");
+        setTurnstileToken(null);
 
         setTimeout(() => {
           setIsSubmitted(false);
           onClose();
         }, 4000);
       } else {
-        alert("Đã có lỗi xảy ra. Vui lòng thử lại.");
+        const errorData = await response.json();
+        alert(errorData.error || "Đã có lỗi xảy ra. Vui lòng thử lại.");
       }
     } catch (error) {
       console.error(error);
@@ -193,6 +198,10 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                         </>
                       )}
                     </button>
+
+                    {/* Tàng hình — Chặn Bot */}
+                    <TurnstileWidget onVerify={setTurnstileToken} />
+
                     <p className="text-[10px] text-gray-400 text-center font-light uppercase tracking-widest mt-4">{d.form.commitment}</p>
                   </motion.form>
                 )}
