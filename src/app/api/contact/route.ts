@@ -118,6 +118,7 @@ export async function POST(request: Request) {
     // 2. Send Email via Resend
     const resendInstance = getResend();
     if (resendInstance) {
+      console.log('[RESEND] Attempting to send email to:', CONTACT_EMAIL);
       const emailRes = await resendInstance.emails.send({
         from: 'FCT Website <system@fct.vn>',
         to: CONTACT_EMAIL,
@@ -140,9 +141,14 @@ export async function POST(request: Request) {
           </div>
         `,
       });
-      console.log('Resend response:', emailRes);
+      
+      if (emailRes.error) {
+        console.error('[RESEND] Error sending email:', emailRes.error);
+      } else {
+        console.log('[RESEND] Email sent successfully! ID:', emailRes.data?.id);
+      }
     } else {
-      console.log('Skipping Email: Missing Resend API Key');
+      console.warn('[RESEND] Skipping: Missing RESEND_API_KEY on Server');
     }
 
     return NextResponse.json({ 
