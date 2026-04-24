@@ -52,11 +52,13 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
         },
         "error-callback": () => {
           console.error("🛡️ [Turnstile] Verification Error.");
+          if (widgetIdRef.current) window.turnstile?.reset(widgetIdRef.current);
           onError?.();
         },
         theme: "light",
-        size: "invisible", // Quay lại invisible đúng chuẩn kỹ thuật
-        appearance: "always", // Giữ luôn hiện badge để MASTER nghiệm thu
+        size: "invisible",
+        appearance: "always",
+        "retry-interval": 1500,
       });
       widgetIdRef.current = id;
     } catch (err) {
