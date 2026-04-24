@@ -32,6 +32,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    phone: "",
     company: "",
     industry: "",
     solution: solutionParam || "",
@@ -72,6 +73,13 @@ export default function RFPForm({ lang }: RFPFormProps) {
     if (!turnstileToken) {
       console.error("🛡️ [Turnstile] No token found. Bot protection active.");
       alert(isEn ? "Security check pending. Please wait 2 seconds and try again." : "Đang kiểm tra bảo mật. Vui lòng đợi 2 giây và thử lại.");
+      return;
+    }
+
+    // Phone validation
+    const phoneRegex = /^[0-9+]{10,15}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      alert(isEn ? "Invalid phone number. Please check again." : "Số điện thoại không hợp lệ. Vui lòng kiểm tra lại.");
       return;
     }
 
@@ -164,6 +172,21 @@ export default function RFPForm({ lang }: RFPFormProps) {
             className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/10 outline-none transition-all font-medium"
             value={formData.email}
             onChange={e => setFormData({...formData, email: e.target.value})}
+          />
+        </div>
+
+        {/* Phone */}
+        <div className="space-y-3">
+          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
+            <ArrowRight className="w-3 h-3" /> {isEn ? "Phone Number" : "Số điện thoại"}
+          </label>
+          <input
+            required
+            type="tel"
+            placeholder="090 123 4567"
+            className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/10 outline-none transition-all font-medium"
+            value={formData.phone}
+            onChange={e => setFormData({...formData, phone: e.target.value})}
           />
         </div>
 

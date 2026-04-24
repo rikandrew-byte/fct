@@ -24,6 +24,14 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Phone validation
+    const phoneRegex = /^[0-9+]{10,15}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Số điện thoại không hợp lệ. Vui lòng kiểm tra lại.");
+      return;
+    }
+
     setIsLoading(true);
     
     try {

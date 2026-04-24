@@ -36,6 +36,16 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { fullName, email, phone, company, industry, solution, projectScale, message, source, turnstileToken } = body;
 
+    // ── Lớp kiểm duyệt (Server-side validation) ───────────────────
+    if (!fullName || !email || !phone) {
+      return NextResponse.json({ success: false, error: 'Vui lòng điền đầy đủ thông tin bắt buộc.' }, { status: 400 });
+    }
+
+    const phoneRegex = /^[0-9+]{10,15}$/;
+    if (!phoneRegex.test(phone)) {
+      return NextResponse.json({ success: false, error: 'Số điện thoại không hợp lệ. Vui lòng kiểm tra lại.' }, { status: 400 });
+    }
+
     // ── Tầng 2: Cloudflare Turnstile Verification ─────────────────
     if (TURNSTILE_SECRET_KEY) {
       if (!turnstileToken) {

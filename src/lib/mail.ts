@@ -43,6 +43,7 @@ export async function sendTelegramNotification(payload: NotificationPayload) {
 ---------------------------------------
 👤 <b>Khách hàng:</b> ${payload.fullName || 'N/A'}
 📧 <b>Email:</b> ${payload.email || 'N/A'}
+📱 <b>Số điện thoại:</b> ${payload.phone || 'N/A'}
 🏢 <b>Công ty:</b> ${payload.company || 'N/A'}
 🏗️ <b>Ngành:</b> ${payload.industry || 'N/A'}
 💡 <b>Giải pháp:</b> ${payload.solution || 'N/A'}
@@ -105,6 +106,7 @@ export async function sendEmailNotification(payload: NotificationPayload) {
         <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">Yêu cầu liên hệ mới</h2>
         <p><strong>Khách hàng:</strong> ${payload.fullName || 'N/A'}</p>
         <p><strong>Email:</strong> ${payload.email || 'N/A'}</p>
+        <p><strong>Số điện thoại:</strong> ${payload.phone || 'N/A'}</p>
         <p><strong>Công ty:</strong> ${payload.company || 'N/A'}</p>
         <p><strong>Ngành:</strong> ${payload.industry || 'N/A'}</p>
         <p><strong>Giải pháp quan tâm:</strong> ${payload.solution || 'N/A'}</p>
