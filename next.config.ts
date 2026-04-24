@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+// Version: 1.0.2 - Security & Anti-Bot Infrastructure
 
 const cspHeader = `
     default-src 'self';
