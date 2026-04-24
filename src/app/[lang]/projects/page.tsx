@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       type: "website",
       images: [
         {
-          url: "/og-image.png",
+          url: "/og-image.jpg",
           width: 1200,
           height: 630,
           alt: dict.projects.metaTitle,
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       card: "summary_large_image",
       title: dict.projects.metaTitle,
       description: dict.projects.metaDescription,
-      images: ["/og-image.png"],
+      images: ["/og-image.jpg"],
     },
   };
 }

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       : "Bảo mật ứng dụng di động đa tầng với DexGuard và iXGuard. Ngăn chặn dịch ngược mã, can thiệp và tấn công.",
     openGraph: {
       title: isEn ? "Guardsquare Security - FCT Vinh Thinh" : "Giải pháp bảo mật Guardsquare - FCT Vĩnh Thịnh",
-      images: ["/images/products/dexguard.png"],
+      images: ["/images/products/dexguard.jpg"],
     },
   };
 }

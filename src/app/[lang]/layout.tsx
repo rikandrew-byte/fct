@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       siteName: "FCT Vĩnh Thịnh",
       images: [
         {
-          url: "https://fct.vn/og-image.png",
+          url: "https://fct.vn/og-image.jpg",
           width: 1200,
           height: 630,
           alt: "FCT Vinh Thinh - Leading Security Solutions",
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       card: "summary_large_image",
       title: dict.common.metaTitle,
       description: dict.common.metaDescription,
-      images: ["https://fct.vn/og-image.png"],
+      images: ["https://fct.vn/og-image.jpg"],
     },
     robots: {
       index: true,

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       : "Xác thực 2 lớp (2FA), chữ ký số và mã hóa cấp độ phần cứng an toàn tuyệt đối với token Longmai SmartX.",
     openGraph: {
       title: isEn ? "Longmai Hardware Security - FCT Vinh Thinh" : "Bảo mật phần cứng Longmai - FCT Vĩnh Thịnh",
-      images: ["/images/products/longmai-smartx3.png"],
+      images: ["/images/products/longmai-smartx3.jpg"],
     },
   };
 }

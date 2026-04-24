@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       type: "website",
       images: [
         {
-          url: "/og-image.png",
+          url: "/og-image.jpg",
           width: 1200,
           height: 630,
           alt: dict.navbar.about,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       card: "summary_large_image",
       title: `${dict.navbar.about} | FCT Vĩnh Thịnh`,
       description: dict.aboutPage.hero.description,
-      images: ["/og-image.png"],
+      images: ["/og-image.jpg"],
     },
   };
 }
