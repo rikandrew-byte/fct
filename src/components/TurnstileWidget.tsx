@@ -55,8 +55,8 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
           onError?.();
         },
         theme: "light",
-        size: "managed", // Chuyển sang Managed để Cloudflare tự điều tiết (Ổn định hơn)
-        appearance: "always",
+        size: "invisible", // Quay lại invisible đúng chuẩn kỹ thuật
+        appearance: "always", // Giữ luôn hiện badge để MASTER nghiệm thu
       });
       widgetIdRef.current = id;
     } catch (err) {
