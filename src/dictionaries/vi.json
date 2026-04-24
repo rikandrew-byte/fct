@@ -75,16 +75,16 @@
     "subtitle": "Công nghệ lõi",
     "newsLink": "Khám phá Tin tức",
     "mobileSecurity": {
-      "title": "Bảo mật Di động",
-      "description": "Giải pháp bảo vệ đa lớp từ Guardsquare, ngăn chặn dịch ngược và bảo vệ mã nguồn tối ưu cho ứng dụng."
+      "title": "Chống Dịch Ngược Ứng Dụng",
+      "description": "Bảo vệ mã nguồn iOS/Android, ngăn chặn Hooking, trích xuất dữ liệu và làm giả ứng dụng giao dịch tài chính."
     },
     "licenseManagement": {
-      "title": "Quản lý Bản quyền",
-      "description": "Giải pháp Sentinel từ Thales giúp cấp phép và bảo mật dữ liệu doanh nghiệp an toàn tuyệt đối."
+      "title": "Bảo Vệ Tài Sản Trí Tuệ",
+      "description": "Số hóa, mã hóa và quản lý cấp phép bản quyền phần mềm (Licensing) cho nhà phát triển, chống thất thoát doanh thu."
     },
     "hardwareSecurity": {
-      "title": "Bảo mật Phần cứng",
-      "description": "An tâm với dòng sản phẩm Longmai — giải pháp xác thực 2 lớp và khóa cứng tiêu chuẩn quốc tế."
+      "title": "Xác Thực Ký Số FIPS",
+      "description": "Khóa cứng (Hardware Token) và giải pháp PKI đạt chuẩn FIPS 140-2 Level 3, bảo vệ định danh cho Ngân hàng và Chính phủ."
     },
     "ecosystem": {
       "title": "Xem Hệ sinh thái FCT",

@@ -77,6 +77,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white border border-gray-100 rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-gray-200/50">
             <div className="w-full aspect-video rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-xl bg-slate-50">
               <iframe
+                title="Google Maps FCT Vinh Thinh Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.322596489379!2d105.83467477503!3d20.979697980655823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135add13ae6fb33%3A0x6739932145b736b4!2zTmfDtGkgU2FvIEJ1aWxkaW5n!5e0!3m2!1svi!2svn!4v1713500000000!5m2!1svi!2svn"
                 width="100%"
                 height="100%"

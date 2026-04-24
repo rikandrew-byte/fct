@@ -342,6 +342,34 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
               })
             }}
           />
+          {/* FAQ Schema for Enterprise B2B */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Token chữ ký số Longmai bảo vệ doanh nghiệp như thế nào?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Khóa cứng Longmai sử dụng chip bảo mật (Secure Element) chuyên dụng. Private Key được sinh ra và lưu trữ hoàn toàn cách ly trong chip, không thể trích xuất hay đánh cắp bằng mã độc, đảm bảo tính chống chối bỏ cho giao dịch tài chính."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Thiết bị Longmai có đạt chuẩn FIPS 140-2 không?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Có, các thiết bị Token cao cấp của Longmai đều đạt các chứng chỉ khắt khe nhất thế giới như FIPS 140-2 Level 3 và Common Criteria EAL5+ dành riêng cho khối Ngân hàng và Chính phủ."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
       </section>
 
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} dict={dict} />

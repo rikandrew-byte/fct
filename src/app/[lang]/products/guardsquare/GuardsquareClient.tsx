@@ -317,6 +317,34 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
               })
             }}
           />
+          {/* FAQ Schema for Enterprise B2B */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Guardsquare là gì và tại sao ứng dụng ngân hàng cần nó?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Guardsquare cung cấp giải pháp DexGuard (Android) và iXGuard (iOS) để làm rối mã nguồn và chống dịch ngược. Các ứng dụng ngân hàng, tài chính cần nó để ngăn chặn tin tặc trích xuất API Key, can thiệp luồng thanh toán và lừa đảo người dùng."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Công nghệ RASP của Guardsquare hoạt động thế nào?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "RASP (Runtime Application Self-Protection) là công nghệ tự bảo vệ trực tiếp khi ứng dụng đang chạy. Nó phát hiện và tự động chặn đứng các hành vi thiết bị đã root/jailbreak, sử dụng phần mềm giả lập, hoặc các công cụ Hooking (như Frida)."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
       </section>
 
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} dict={dict} />

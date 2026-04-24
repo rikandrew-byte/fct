@@ -51,6 +51,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
       {/* Floating Language Switcher - Top Right */}
       <div className="fixed top-8 right-6 z-[60] flex items-center gap-3">
         <button 
+          aria-label="Toggle language"
           onClick={toggleLanguage}
           className="group relative flex items-center gap-3 bg-[#020617]/40 backdrop-blur-3xl border border-white/10 hover:border-blue-500/50 rounded-2xl px-5 py-3 transition-all duration-500 shadow-2xl pointer-events-auto overflow-hidden"
         >
@@ -78,7 +79,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <Image 
               src="/logo.png" 
-              alt="Logo FCT" 
+              alt="FCT Vinh Thinh Logo - Enterprise Security Solutions" 
               width={isScrolled ? 50 : 64} 
               height={isScrolled ? 50 : 64} 
               priority={true}
@@ -130,8 +131,8 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
             <div className="flex items-center gap-2 pr-2 border-r border-white/10">
               <div className="relative group/search">
-                 <button className="p-2 text-gray-400 hover:text-white transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                 <button aria-label="Search" className="p-2 text-gray-400 hover:text-white transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                  </button>
                  <input 
                    type="text" 

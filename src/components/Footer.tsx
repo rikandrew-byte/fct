@@ -46,7 +46,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             <Link href={`/${lang}`} className="flex items-center gap-3">
               <Image 
                 src="/logo.jpg" 
-                alt="Logo FCT Vinh Thinh .,JSC" 
+                alt="FCT Vinh Thinh Logo - Enterprise Security Solutions" 
                 width={56} 
                 height={56} 
                 className="brightness-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)] shrink-0"

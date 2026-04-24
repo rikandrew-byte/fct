@@ -19,11 +19,11 @@ export default function IntegritySeal() {
       
       <div className="flex flex-col">
         <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest leading-none mb-1">
-          Seal of Integrity
+          Certified Security
         </span>
         <span className="text-xs font-bold text-slate-800 tracking-tight flex items-center gap-1.5">
           <Lock className="w-3 h-3 text-emerald-600" />
-          100% NDA PROTECTED
+          FIPS 140-2 L3 & CC EAL4+
         </span>
       </div>
     </motion.div>

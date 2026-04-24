@@ -39,11 +39,12 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
         }`}
       >
         <Link href={`/${lang}`} className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Logo FCT" width={40} height={40} className="object-contain" />
+          <Image src="/logo.png" alt="FCT Vinh Thinh Logo - Enterprise Security Solutions" width={40} height={40} className="object-contain" />
           <span className="font-black text-white text-sm tracking-tighter">FCT Vinh Thinh</span>
         </Link>
         <button 
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle mobile menu"
           className="p-2 text-slate-300 hover:text-white transition-colors"
         >
           {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}

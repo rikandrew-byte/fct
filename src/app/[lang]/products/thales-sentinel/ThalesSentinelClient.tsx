@@ -452,6 +452,34 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
               })
             }}
           />
+          {/* FAQ Schema for Enterprise B2B */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Giải pháp bảo vệ bản quyền Thales Sentinel là gì?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Thales Sentinel là giải pháp bảo mật phần mềm và quản lý cấp phép bản quyền (Licensing) hàng đầu thế giới, giúp doanh nghiệp ngăn chặn vi phạm bản quyền và bảo vệ mã nguồn."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "FCT Vinh Thinh cung cấp thiết bị Sentinel HL nào?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Chúng tôi cung cấp đầy đủ các dòng khóa cứng Sentinel HL (Hardware Token), Sentinel SL (Software License) và Cloud Licensing cho doanh nghiệp B2B tại Việt Nam."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
       </section>
 
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} dict={dict} />

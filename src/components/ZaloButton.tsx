@@ -13,6 +13,7 @@ export default function ZaloButton() {
         href={zaloLink}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Chat Zalo"
         initial={{ opacity: 0, scale: 0.8, x: -20 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         whileHover={{ scale: 1.1 }}

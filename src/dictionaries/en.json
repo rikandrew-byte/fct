@@ -69,16 +69,16 @@
     "subtitle": "Core Technology",
     "newsLink": "Explore News",
     "mobileSecurity": {
-      "title": "Mobile Security",
-      "description": "Multi-layered protection from Guardsquare, preventing reverse engineering and optimizing source code protection."
+      "title": "Anti-Reverse Engineering",
+      "description": "Protect iOS/Android source code, block Hooking, data extraction and fake banking app attacks."
     },
     "licenseManagement": {
-      "title": "License Management",
-      "description": "Sentinel solutions from Thales for secure software licensing and enterprise data protection."
+      "title": "Intellectual Property Shield",
+      "description": "Encrypt, digitize and manage software licensing (DRM) for publishers — stopping revenue leakage cold."
     },
     "hardwareSecurity": {
-      "title": "Hardware Security",
-      "description": "Peace of mind with Longmai products — international standard 2-factor authentication and hardware key solutions."
+      "title": "FIPS-Certified Digital Signing",
+      "description": "Hardware Tokens & PKI solutions certified to FIPS 140-2 Level 3, securing identity for Banking & Government."
     },
     "ecosystem": {
       "title": "Explore FCT Ecosystem",

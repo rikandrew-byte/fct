@@ -86,12 +86,38 @@ export default async function RootLayout({
   const { lang } = (await params) as { lang: Locale };
   const dict = await getDictionary(lang);
 
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FCT Vinh Thinh .,JSC",
+    "url": "https://fct.vn",
+    "logo": "https://fct.vn/logo.png",
+    "description": "Chuyên gia cung cấp giải pháp Canary Historian, Thales, Guardsquare và Longmai.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tầng 3, Tòa nhà Ngôi Sao, 15 Nguyễn Cảnh Dị, Đại Kim",
+      "addressLocality": "Hoàng Mai",
+      "addressRegion": "Hà Nội",
+      "postalCode": "100000",
+      "addressCountry": "VN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+84-983-027-776",
+      "contactType": "customer service"
+    }
+  };
+
   return (
     <html
       lang={lang}
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         <AssistantProvider>
           <Navbar lang={lang} dict={dict} />
           {children}
