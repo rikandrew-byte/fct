@@ -7,7 +7,14 @@ export default function middleware(request: NextRequest) {
   const userAgent = request.headers.get('user-agent') || ''
 
   // 1. ĐẶC CÁCH TỐI CAO CHO BOT (Vượt 403 và fix 404)
+  // Chỉ rewrite nếu là trang web, KHÔNG rewrite nếu là file ảnh/tĩnh
+  const isStaticFile = pathname.startsWith('/images') || pathname.startsWith('/_next') || pathname.includes('.');
+
   if (/facebookexternalhit|Facebot|Twitterbot|LinkedInBot|Googlebot|bingbot/i.test(userAgent)) {
+    if (isStaticFile) {
+      return NextResponse.next();
+    }
+
     // Nếu bot vào trang chủ gốc (/) hoặc thiếu locale, rewrite về /vi
     const pathnameIsMissingLocale = i18n.locales.every(
       (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
