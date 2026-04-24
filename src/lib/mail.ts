@@ -37,39 +37,55 @@ export async function sendTelegramNotification(payload: NotificationPayload) {
     throw new Error('Telegram configuration missing on server');
   }
 
+  // Chuyển sang định dạng HTML để ổn định hơn, tránh lỗi ký tự đặc biệt của Markdown
   const message = `
-🚀 *Yêu cầu liên hệ mới từ website FCT*
-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-
-👤 *Khách hàng:* ${payload.fullName || 'N/A'}
-📧 *Email:* ${payload.email || 'N/A'}
-🏢 *Công ty:* ${payload.company || 'N/A'}
-🏗️ *Ngành:* ${payload.industry || 'N/A'}
-💡 *Giải pháp:* ${payload.solution || 'N/A'}
-📊 *Quy mô:* ${payload.projectScale || 'N/A'}
-💬 *Lời nhắn:* ${payload.message || 'N/A'}
-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-
-📍 *Nguồn:* ${payload.source || 'Liên hệ trực tiếp'}
-🌐 *IP:* ${payload.ip || 'Unknown'}
-✅ *Turnstile:* Verified
+🚀 <b>Yêu cầu liên hệ mới từ website FCT</b>
+---------------------------------------
+👤 <b>Khách hàng:</b> ${payload.fullName || 'N/A'}
+📧 <b>Email:</b> ${payload.email || 'N/A'}
+🏢 <b>Công ty:</b> ${payload.company || 'N/A'}
+🏗️ <b>Ngành:</b> ${payload.industry || 'N/A'}
+💡 <b>Giải pháp:</b> ${payload.solution || 'N/A'}
+📊 <b>Quy mô:</b> ${payload.projectScale || 'N/A'}
+💬 <b>Lời nhắn:</b> ${payload.message || 'N/A'}
+---------------------------------------
+📍 <b>Nguồn:</b> ${payload.source || 'Liên hệ trực tiếp'}
+🌐 <b>IP:</b> ${payload.ip || 'Unknown'}
+✅ <b>Turnstile:</b> Verified
   `.trim();
 
-  const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: TELEGRAM_CHAT_ID,
-      text: message,
-      parse_mode: 'MarkdownV2',
-    }),
-  });
+  try {
+    const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+        parse_mode: 'HTML',
+      }),
+    });
 
-  const data = await response.json();
-  if (!data.ok) {
-    console.error('[TELEGRAM] API Error:', data.description);
-    throw new Error(`Telegram Error: ${data.description}`);
+    const data = await response.json();
+    
+    // Log toàn bộ phản hồi để debug trên Vercel
+    if (!data.ok) {
+      console.error('[TELEGRAM_FULL_ERROR_LOG]', {
+        status: response.status,
+        description: data.description,
+        error_code: data.error_code,
+        parameters: data.parameters
+      });
+      throw new Error(`Telegram API Error: [${data.error_code}] ${data.description}`);
+    }
+
+    console.log('[TELEGRAM] Notification sent successfully');
+    return data;
+  } catch (err: any) {
+    console.error('[TELEGRAM_FETCH_ERROR]', err);
+    throw err;
   }
-  return data;
 }
+
 
 /**
  * Gửi Email qua Resend
