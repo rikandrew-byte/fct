@@ -51,14 +51,13 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
           onVerify(token);
         },
         "error-callback": () => {
-          console.error("🛡️ [Turnstile] Verification Error.");
-          if (widgetIdRef.current) window.turnstile?.reset(widgetIdRef.current);
+          console.error("🛡️ [Turnstile] Verification Error. Please check Site Key and Domain settings.");
+          // Ngắt reset tự động để tránh vòng lặp vô tận khi Site Key sai
           onError?.();
         },
         theme: "light",
         size: "invisible",
         appearance: "always",
-        "retry-interval": 1500,
       });
       widgetIdRef.current = id;
     } catch (err) {
