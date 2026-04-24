@@ -11,6 +11,7 @@ const cspHeader = `
     form-action 'self';
     frame-ancestors 'none';
     frame-src 'self' https://www.google.com https://challenges.cloudflare.com;
+    child-src 'self' https://www.google.com https://challenges.cloudflare.com;
     connect-src 'self' https://challenges.cloudflare.com https://www.google.com;
     upgrade-insecure-requests;
 `.replace(/\n/g, '');
