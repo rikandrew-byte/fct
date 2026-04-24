@@ -145,12 +145,31 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string) {
         <h2 style="color: #2563eb;">Chào ${fullName},</h2>
         <p>Cảm ơn bạn đã quan tâm đến tài liệu <strong>"Bảo vệ chất xám & Tối đa hóa doanh thu phần mềm"</strong> của FCT Vĩnh Thịnh.</p>
         <p>Đây là tài liệu chuyên sâu dành cho các nhà lãnh đạo và phát triển phần mềm nhằm tối ưu hóa mô hình kinh doanh và bảo vệ tài sản trí tuệ.</p>
-        <div style="margin: 30px 0; text-align: center;">
-          <a href="https://drive.google.com/file/d/example-whitepaper-link/view" 
-             style="background-color: #2563eb; color: white; padding: 15px 25px; text-decoration: none; rounded: 8px; font-weight: bold; display: inline-block;">
-             TẢI SÁCH TRẮNG (PDF)
-          </a>
+        <div style="margin: 30px 0;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" style="border-radius: 8px;" bgcolor="#2563eb">
+                      <a href="https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing" 
+                         target="_blank" 
+                         style="font-size: 16px; font-family: sans-serif; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 8px; border: 1px solid #2563eb; display: inline-block; font-weight: bold;">
+                        TẢI SÁCH TRẮNG (PDF)
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
         </div>
+        <p style="font-size: 14px; color: #64748b; margin-top: 20px;">
+          Hoặc truy cập trực tiếp tại đường dẫn sau để tải tài liệu: <br/>
+          <a href="https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing" style="color: #2563eb; word-break: break-all;">
+            https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing
+          </a>
+        </p>
         <p>Nếu bạn cần tư vấn sâu hơn về giải pháp bảo mật và cấp phép bản quyền, đừng ngần ngại phản hồi email này hoặc liên hệ hotline: <strong>0904.59.83.46</strong>.</p>
         <p>Trân trọng,<br/>Đội ngũ FCT Vĩnh Thịnh</p>
       </div>

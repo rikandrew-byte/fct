@@ -17,6 +17,7 @@ import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
 import ContactModal from "@/components/ContactModal";
+import ProductArchitecture from "@/components/ProductArchitecture";
 
 interface LongmaiClientProps {
   lang: string;
@@ -264,6 +265,11 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
               </Link>
             </div>
          </motion.div>
+      </section>
+
+      {/* ── 2.5. LICENSING ARCHITECTURE ────────────────── */}
+      <section className="bg-white relative pb-12">
+        <ProductArchitecture isEn={isEn} />
       </section>
 
       {/* ── 3. ZONE 1: PAIN (Slate-50) ───────────────────────── */}

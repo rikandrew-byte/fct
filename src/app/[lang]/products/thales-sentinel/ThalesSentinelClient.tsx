@@ -20,6 +20,7 @@ import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
 import ContactModal from "@/components/ContactModal";
+import ProductArchitecture from "@/components/ProductArchitecture";
 
 interface ThalesSentinelClientProps {
   lang: string;
@@ -113,8 +114,13 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
         </motion.div>
       </section>
 
+      {/* ── 1.5. ARCHITECTURE SECTION ────────────────── */}
+      <section className="bg-white rounded-t-[4rem] -mt-12 z-20 relative pt-12">
+        <ProductArchitecture isEn={isEn} />
+      </section>
+
       {/* ── 2. BLUEPRINT (White) ────────────────── */}
-      <section className="py-24 px-6 max-w-7xl mx-auto relative text-[15px] bg-white rounded-t-[4rem] -mt-12 z-20">
+      <section className="py-24 px-6 max-w-7xl mx-auto relative text-[15px] bg-white">
          <div className="text-center mb-20 space-y-4">
             <span className="text-blue-600 font-black text-xs uppercase tracking-[0.4em]">Military Grade Logic</span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
