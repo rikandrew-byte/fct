@@ -30,7 +30,7 @@ interface HomePageClientProps {
 
 export default function HomePageClient({ lang, dict, latestNews }: HomePageClientProps) {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
+    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="relative pt-16 md:pt-24 pb-10 px-6 min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
@@ -76,7 +76,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight mb-8"
+            className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed tracking-tight mb-8"
           >
             {dict.hero.description}
           </motion.p>
@@ -90,7 +90,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       {/* Trust & Confidentiality Section */}
       <section className="border-b border-white/5 bg-[#020617] py-8 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 text-center space-y-8">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-gray-500 font-black text-xs md:text-sm tracking-[0.4em] uppercase opacity-80">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-slate-300 font-black text-xs md:text-sm tracking-[0.4em] uppercase">
             {dict.trust.sectors.map((sector: string) => (
               <div key={sector} className="hover:text-blue-400 transition-colors cursor-default">{sector}</div>
             ))}
@@ -98,7 +98,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
 
           <div className="flex items-center justify-center gap-4 text-gray-600">
             <div className="h-px w-12 bg-white/10"></div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] italic text-blue-400/80">
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] italic text-blue-300">
               {dict.trust.commitment}
             </p>
             <div className="h-px w-12 bg-white/10"></div>
@@ -115,11 +115,11 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       <section className="max-w-6xl mx-auto px-6 mb-16 pt-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div className="space-y-4 text-center md:text-left">
-            <h2 className="text-sm font-black text-blue-600 tracking-[0.4em] uppercase">{dict.solutions.badge}</h2>
-            <h3 className="text-4xl md:text-7xl font-black text-gray-950 tracking-tighter leading-tight">
+            <span className="text-sm font-black text-blue-600 tracking-[0.4em] uppercase block mb-2">{dict.solutions.badge}</span>
+            <h2 className="text-4xl md:text-7xl font-black text-gray-950 tracking-tighter leading-tight">
               {dict.solutions.title} <br />
               <span className="text-blue-600">{dict.solutions.subtitle}</span>
-            </h3>
+            </h2>
           </div>
 
         </div>
@@ -187,6 +187,6 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       <NewsSection lang={lang} dict={dict} latestNews={latestNews} />
 
       <Testimonials />
-    </div>
+    </main>
   );
 }

@@ -53,10 +53,10 @@ export default function Navbar({ lang, dict }: NavbarProps) {
         <button 
           aria-label="Toggle language"
           onClick={toggleLanguage}
-          className="group relative flex items-center gap-3 bg-[#020617]/40 backdrop-blur-3xl border border-white/10 hover:border-blue-500/50 rounded-2xl px-5 py-3 transition-all duration-500 shadow-2xl pointer-events-auto overflow-hidden"
+          className="group relative flex items-center gap-3 bg-[#020617]/40 backdrop-blur-3xl border border-white/10 hover:border-blue-500/50 rounded-2xl px-6 py-4 transition-all duration-500 shadow-2xl pointer-events-auto overflow-hidden min-h-[48px]"
         >
           <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <Globe className="w-5 h-5 text-blue-400 group-hover:rotate-180 transition-transform duration-700" />
+          <Globe className="w-5 h-5 text-blue-400 group-hover:rotate-180 transition-transform duration-700" aria-hidden="true" />
           <span className="text-sm font-black text-white tracking-widest uppercase">
             {isEn ? "Tiếng Việt" : "English"}
           </span>
@@ -131,7 +131,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
             <div className="flex items-center gap-2 pr-2 border-r border-white/10">
               <div className="relative group/search">
-                 <button aria-label="Search" className="p-2 text-gray-400 hover:text-white transition-colors">
+                 <button aria-label="Search" className="p-3 text-gray-400 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                  </button>
                  <input 

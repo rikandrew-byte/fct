@@ -47,13 +47,13 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <h2 className="text-[11px] font-black text-blue-600 tracking-[0.3em] uppercase">{content.badge}</h2>
-              <h3 className="text-4xl md:text-6xl font-black text-gray-950 leading-tight tracking-tighter">
+              <span className="text-[11px] font-black text-blue-600 tracking-[0.3em] uppercase block mb-2">{content.badge}</span>
+              <h2 className="text-4xl md:text-6xl font-black text-gray-950 leading-tight tracking-tighter">
                 {content.title} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                   {content.subtitle}
                 </span>
-              </h3>
+              </h2>
             </div>
             <p className="text-gray-600 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
               {content.description}
@@ -75,7 +75,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
                 <div className="group-hover:scale-110 transition-transform duration-500">
                   {feature.icon}
                 </div>
-                <h4 className="text-xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">{feature.title}</h4>
+                <h3 className="text-xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">{feature.title}</h3>
                 <p className="text-gray-600 text-sm font-light leading-relaxed">
                   {feature.description}
                 </p>

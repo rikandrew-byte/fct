@@ -74,8 +74,8 @@ export default function Testimonials() {
                   {testi.name.charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-black text-gray-950 text-base tracking-tight">{testi.name}</h4>
-                  <p className="text-xs text-blue-600 font-bold uppercase tracking-widest mt-0.5">{testi.role}</p>
+                  <h3 className="font-black text-gray-950 text-base tracking-tight">{testi.name}</h3>
+                  <p className="text-xs text-blue-700 font-bold uppercase tracking-widest mt-0.5">{testi.role}</p>
                 </div>
               </div>
             </motion.div>

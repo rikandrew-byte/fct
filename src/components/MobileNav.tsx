@@ -45,9 +45,9 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
         <button 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle mobile menu"
-          className="p-2 text-slate-300 hover:text-white transition-colors"
+          className="p-3 text-slate-300 hover:text-white transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center"
         >
-          {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+          {isOpen ? <X className="w-7 h-7" aria-hidden="true" /> : <Menu className="w-7 h-7" aria-hidden="true" />}
         </button>
       </div>
 
