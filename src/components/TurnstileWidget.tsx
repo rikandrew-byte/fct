@@ -3,11 +3,8 @@
 import { useEffect, useRef, useCallback } from "react";
 
 /**
- * Cloudflare Turnstile — Invisible Widget
- * Renders an invisible CAPTCHA that automatically verifies the user.
- * The token is passed to the parent via onVerify callback.
- * 
- * Requires NEXT_PUBLIC_TURNSTILE_SITE_KEY env variable.
+ * Cloudflare Turnstile — Robust Invisible Widget
+ * Optimized for multiple widgets on the same page.
  */
 
 interface TurnstileWidgetProps {
@@ -18,61 +15,77 @@ interface TurnstileWidgetProps {
 declare global {
   interface Window {
     turnstile?: {
-      render: (container: HTMLElement, options: Record<string, unknown>) => string;
+      render: (container: string | HTMLElement, options: Record<string, unknown>) => string;
       reset: (widgetId: string) => void;
       remove: (widgetId: string) => void;
     };
-    onTurnstileLoad?: () => void;
   }
 }
 
 export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
-  const scriptLoadedRef = useRef(false);
+  const isRenderingRef = useRef(false);
 
-  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
+  // Ép kiểu String tuyệt đối để tránh lỗi "got object"
+  const siteKey = String(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "");
 
   const renderWidget = useCallback(() => {
-    if (!containerRef.current || !window.turnstile || widgetIdRef.current) return;
+    if (!containerRef.current || !window.turnstile || widgetIdRef.current || isRenderingRef.current) return;
 
-    widgetIdRef.current = window.turnstile.render(containerRef.current, {
-      sitekey: siteKey,
-      callback: (token: string) => {
-        onVerify(token);
-      },
-      "error-callback": () => {
-        onError?.();
-      },
-      theme: "light",
-      size: "invisible",        
-      appearance: "always", // Hiện cái badge nhỏ ở góc để MASTER kiểm tra
-    });
+    try {
+      isRenderingRef.current = true;
+      const id = window.turnstile.render(containerRef.current, {
+        sitekey: siteKey,
+        callback: (token: string) => {
+          onVerify(token);
+        },
+        "error-callback": () => {
+          onError?.();
+        },
+        theme: "light",
+        size: "invisible",
+        appearance: "always",
+      });
+      widgetIdRef.current = id;
+    } catch (err) {
+      console.error("🛡️ [Turnstile Render Error]", err);
+    } finally {
+      isRenderingRef.current = false;
+    }
   }, [siteKey, onVerify, onError]);
 
   useEffect(() => {
-    if (!siteKey) return; // Skip if no site key configured
+    if (!siteKey) {
+      console.warn("🛡️ [Turnstile] Missing NEXT_PUBLIC_TURNSTILE_SITE_KEY.");
+      return;
+    }
 
-    // Load Turnstile script once
-    if (!document.querySelector('script[src*="turnstile"]')) {
-      const script = document.createElement("script");
-      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad";
+    const scriptId = "cloudflare-turnstile-script";
+    let script = document.getElementById(scriptId) as HTMLScriptElement;
+
+    const onScriptLoad = () => {
+      // Small delay to ensure turnstile is fully ready in the window
+      setTimeout(renderWidget, 100);
+    };
+
+    if (!script) {
+      script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
       script.async = true;
       script.defer = true;
-
-      window.onTurnstileLoad = () => {
-        scriptLoadedRef.current = true;
-        renderWidget();
-      };
-
+      script.onload = onScriptLoad;
       document.head.appendChild(script);
-    } else if (window.turnstile) {
-      // Script already loaded
-      renderWidget();
+    } else {
+      if (window.turnstile) {
+        renderWidget();
+      } else {
+        script.addEventListener("load", onScriptLoad);
+      }
     }
 
     return () => {
-      // Cleanup widget on unmount
       if (widgetIdRef.current && window.turnstile) {
         try {
           window.turnstile.remove(widgetIdRef.current);
@@ -82,10 +95,11 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
     };
   }, [siteKey, renderWidget]);
 
-  if (!siteKey) {
-    console.warn("🛡️ [Turnstile] Missing NEXT_PUBLIC_TURNSTILE_SITE_KEY. Security verification will fail.");
-    return null; 
-  }
-
-  return <div ref={containerRef} className="cf-turnstile" />;
+  return (
+    <div 
+      ref={containerRef} 
+      className="cf-turnstile-container" 
+      style={{ minHeight: "1px", minWidth: "1px" }} 
+    />
+  );
 }
