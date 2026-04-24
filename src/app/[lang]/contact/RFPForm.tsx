@@ -68,6 +68,13 @@ export default function RFPForm({ lang }: RFPFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!turnstileToken) {
+      console.error("🛡️ [Turnstile] No token found. Bot protection active.");
+      alert(isEn ? "Security check pending. Please wait 2 seconds and try again." : "Đang kiểm tra bảo mật. Vui lòng đợi 2 giây và thử lại.");
+      return;
+    }
+
     setIsLoading(true);
     
     try {
@@ -86,10 +93,11 @@ export default function RFPForm({ lang }: RFPFormProps) {
         setTurnstileToken(null);
       } else {
         const errorData = await response.json();
+        console.error("❌ [API Error]", errorData);
         alert(errorData.error || (isEn ? 'Something went wrong. Please try again.' : 'Đã có lỗi xảy ra. Vui lòng thử lại.'));
       }
     } catch (error) {
-      console.error(error);
+      console.error("🚨 [Network Error]", error);
       alert(isEn ? 'Network error.' : 'Lỗi kết nối.');
     } finally {
       setIsLoading(false);

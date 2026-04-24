@@ -12,7 +12,7 @@ const cspHeader = `
     frame-ancestors 'none';
     frame-src 'self' https://www.google.com https://challenges.cloudflare.com;
     child-src 'self' https://www.google.com https://challenges.cloudflare.com;
-    connect-src 'self' https://challenges.cloudflare.com https://www.google.com;
+    connect-src 'self' https://challenges.cloudflare.com https://*.cloudflare.com https://www.google.com https://*.googleapis.com;
     upgrade-insecure-requests;
 `.replace(/\n/g, '');
 

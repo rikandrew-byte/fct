@@ -82,7 +82,10 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
     };
   }, [siteKey, renderWidget]);
 
-  if (!siteKey) return null; // Graceful fallback — no widget if no key
+  if (!siteKey) {
+    console.warn("🛡️ [Turnstile] Missing NEXT_PUBLIC_TURNSTILE_SITE_KEY. Security verification will fail.");
+    return null; 
+  }
 
   return <div ref={containerRef} className="cf-turnstile" />;
 }
