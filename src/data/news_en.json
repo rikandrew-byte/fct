@@ -1,5 +1,16 @@
 [
   {
+    "id": "doanh-thu-boc-hoi-vi-crack-bao-ve-phan-mem",
+    "title": "Revenue Evaporating Due to Cracks: A Comprehensive Guide to Software Protection",
+    "date": "2026-04-25",
+    "summary": "Obfuscation isn't enough to stop cracking. Discover copyright protection and flexible licensing solutions with Thales Sentinel.",
+    "category": "Software Licensing",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-hsm-security.jpg",
+    "ogImage": "/images/posts/thales-hsm-security.jpg",
+    "content": "You spend thousands of hours through sleepless nights to write a breakthrough C#/.NET software. You launch it into the market with great pride. But just days later, a \"Full Crack\" or \"Keygen\" version is already sitting on piracy forums. All your hard work goes down the drain, and revenue evaporates without a trace.\n\nIf you are an Independent Software Vendor (ISV), this is undoubtedly your worst nightmare.\n\n### 1. The Illusion of \"Obfuscators\"\nMany developers believe that simply running source code through an Obfuscator—renaming variables, encrypting strings—is enough for safety. The truth is: Obfuscation only slows down hackers; it doesn't stop them.\n\nWith today's powerful decompilers like dnSpy or ILSpy, professional crackers can easily trace back the logic, find the License Check function, and disable it by directly modifying .dll or .exe files.\n\n### 2. Double Pain: Lost Revenue and Sinking in Key Management\nNot only do software companies lose money due to piracy, but they are also tying their own hands with loose, DIY licensing systems.\n\n- Manually creating and sending keys via email is unprofessional.\n- Customers share keys with each other, and you have no way to control it.\n- You want to sell software as a Subscription or Pay-per-use, but your DIY system can't support it.\n\n### 3. Thales Sentinel: Protection Shield and Revenue Engine\nTo completely end this problem, the world's leading software corporations have equipped themselves with Thales Sentinel (formerly SafeNet) technology. This isn't just a lock; it's a complete revenue engine:\n\n- **Envelope Encryption:** Sentinel automatically wraps your software's source code with military-grade encryption algorithms. Hackers cannot decrypt, decompile, or modify the executable file.\n- **Hardware Dongle & Cloud License:** Allows you to tightly bind software to a physical USB Token (like Sentinel HL) or manage it entirely via the Cloud. It is impossible to copy.\n- **Flexible Licensing:** Turn a one-time purchase software into SaaS, a 30-day trial, or limit the number of application opens with just a few clicks without rewriting code.\n\n### Don't Let Your Intellectual Property Be Stolen for Another Second\nSoftware protection must be implemented before the product is launched. Once the source code is exposed, you will lose that customer forever."
+  },
+  {
     "id": "csdl-sql-bop-nghet-he-thong-scada",
     "title": "Why Traditional SQL Databases are Suffocating Your SCADA System?",
     "date": "2026-04-25",
