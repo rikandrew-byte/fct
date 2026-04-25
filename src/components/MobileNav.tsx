@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { Menu, X, Globe } from "lucide-react";
 import Image from "next/image";
 
 interface MobileNavProps {
@@ -16,6 +16,14 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const isEn = lang === "en";
+
+  const toggleLanguage = () => {
+    const newLang = isEn ? "vi" : "en";
+    const newPath = pathname.replace(`/${lang}`, `/${newLang}`);
+    router.push(newPath);
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -35,21 +43,33 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
     <div className="lg:hidden">
       {/* Mobile Header Bar */}
       <div 
-        className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between transition-all duration-300 ${
-          isScrolled ? "bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50" : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 px-5 py-3 flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? "bg-[#020617]/90 backdrop-blur-xl border-b border-white/10 shadow-lg" : "bg-[#020617]/30 backdrop-blur-md"
         }`}
       >
-        <Link href={`/${lang}`} className="flex items-center gap-2">
-          <Image src="/logo.png" alt="FCT Vinh Thinh Logo - Enterprise Security Solutions" width={40} height={40} className="object-contain" />
-          <span className="font-black text-white text-sm tracking-tighter">FCT Vinh Thinh</span>
+        <Link href={`/${lang}`} className="flex items-center gap-2.5 z-50">
+          <Image src="/logo.png" alt="FCT Vinh Thinh Logo" width={36} height={36} className="object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]" />
+          <span className="font-black text-white text-[13px] tracking-tighter drop-shadow-md">FCT Vinh Thinh</span>
         </Link>
-        <button 
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle mobile menu"
-          className="p-3 text-slate-300 hover:text-white transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center"
-        >
-          {isOpen ? <X className="w-7 h-7" aria-hidden="true" /> : <Menu className="w-7 h-7" aria-hidden="true" />}
-        </button>
+        
+        <div className="flex items-center gap-2 z-50">
+          <button 
+            onClick={toggleLanguage}
+            aria-label="Toggle language"
+            className="p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 text-slate-200 transition-colors flex items-center gap-1.5 shadow-sm"
+          >
+            <Globe className="w-4 h-4" />
+            <span className="text-[10px] font-bold uppercase tracking-widest">{isEn ? "EN" : "VI"}</span>
+          </button>
+          
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle mobile menu"
+            className="p-2 text-slate-100 hover:text-white transition-colors flex items-center justify-center bg-white/5 hover:bg-white/10 rounded-full border border-white/10 shadow-sm"
+          >
+            {isOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
+          </button>
+        </div>
       </div>
 
       {/* Fullscreen Overlay Drawer */}

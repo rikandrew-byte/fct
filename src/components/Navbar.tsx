@@ -48,8 +48,8 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
   return (
     <>
-      {/* Floating Language Switcher - Top Right */}
-      <div className="fixed top-8 right-6 z-[60] flex items-center gap-3">
+      {/* Floating Language Switcher - Top Right (Desktop Only) */}
+      <div className="fixed top-8 right-6 z-[60] hidden lg:flex items-center gap-3">
         <button 
           aria-label="Toggle language"
           onClick={toggleLanguage}
