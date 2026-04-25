@@ -204,7 +204,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                          : "Khám phá các tài liệu kỹ thuật chuyên sâu độc quyền dành cho doanh nghiệp."}
                     </p>
 
-                    <div className="flex flex-row lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 snap-x hide-scrollbar">
+                    <div className="flex flex-row lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 snap-x scrollbar-hide">
                        {/* Link 1: Thales */}
                        <Link href={`/${lang}/whitepaper`} className="flex-shrink-0 w-[260px] lg:w-auto flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition-colors group/item snap-start">
                           <span className="text-xs font-black uppercase text-blue-600 mb-1 flex items-center gap-1.5">

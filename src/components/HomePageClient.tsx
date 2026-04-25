@@ -107,12 +107,12 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       </section>
 
       {/* Main Content Sections */}
-      <section className="py-12 bg-white">
+      <section className="section-padding bg-white">
         <AboutSection lang={lang} dict={dict} />
       </section>
 
       {/* Bento Box Grid */}
-      <section className="max-w-6xl mx-auto px-6 mb-16 pt-10">
+      <section className="max-w-6xl mx-auto px-6 mb-16 section-padding">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div className="space-y-4 text-center md:text-left">
             <span className="text-sm font-black text-blue-600 tracking-[0.4em] uppercase block mb-2">{dict.solutions.badge}</span>

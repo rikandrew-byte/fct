@@ -60,7 +60,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none uppercase italic text-white">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none uppercase italic text-white drop-shadow-2xl">
             Canary <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">Labs</span>
           </h1>
           

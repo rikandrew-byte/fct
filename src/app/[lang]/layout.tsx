@@ -9,7 +9,6 @@ import { getDictionary } from "@/lib/get-dictionary";
 import React from "react";
 import { AssistantProvider } from "@/context/AssistantContext";
 import GlobalAssistantWrapper from "@/components/GlobalAssistantWrapper";
-import ZaloButton from "@/components/ZaloButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -123,7 +122,6 @@ export default async function RootLayout({
           {children}
           <Footer lang={lang} dict={dict} />
           <GlobalAssistantWrapper lang={lang} dict={dict} />
-          <ZaloButton />
         </AssistantProvider>
       </body>
     </html>

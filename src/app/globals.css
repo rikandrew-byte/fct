@@ -89,3 +89,23 @@ body {
   opacity: 0.3;
   mix-blend-mode: overlay;
 }
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-[1.15] md:leading-tight tracking-tight;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.section-padding {
+  @apply py-20 md:py-32;
+}
