@@ -59,7 +59,7 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95] mb-8 text-white">
               GUARDSQUARE <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 drop-shadow-[0_0_30px_rgba(56,189,248,0.5)]">
                 PROTECTION NEXUS

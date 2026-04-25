@@ -58,7 +58,7 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95] mb-8 text-white">
               LONGMAI <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-red-400 to-orange-300 drop-shadow-[0_0_30px_rgba(244,63,94,0.5)]">
                 HARDWARE FORTRESS

@@ -61,16 +61,16 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.9 }}
             transition={{ delay: 0.2 }}
-            className="px-4 py-2 rounded-2xl bg-[#020617]/60 backdrop-blur-3xl border border-blue-500/30 text-white shadow-2xl shadow-blue-500/10 pointer-events-none select-none relative"
+            className="px-3 py-1.5 rounded-xl bg-[#020617]/60 backdrop-blur-3xl border border-blue-500/30 text-white shadow-2xl shadow-blue-500/10 pointer-events-none select-none relative"
           >
-             <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></div>
-                <span className="text-[11px] font-black uppercase tracking-widest text-blue-100 whitespace-nowrap">
+             <div className="flex items-center gap-1.5">
+                <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse"></div>
+                <span className="text-[9px] font-black uppercase tracking-widest text-blue-100 whitespace-nowrap">
                    {dict.virtualAssistant.navbarTitle}
                 </span>
              </div>
              {/* Tail/Arrow pointing down */}
-             <div className="absolute left-1/2 -bottom-1 -translate-x-1/2 w-2 h-2 bg-[#020617]/60 border-r border-b border-blue-500/30 rotate-45 backdrop-blur-3xl"></div>
+             <div className="absolute left-1/2 -bottom-1 -translate-x-1/2 w-1.5 h-1.5 bg-[#020617]/60 border-r border-b border-blue-500/30 rotate-45 backdrop-blur-3xl"></div>
           </motion.div>
 
           <motion.button
@@ -81,7 +81,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             whileTap={{ scale: 0.9 }}
             onClick={toggle}
             aria-label="Mở trợ lý tư vấn ảo"
-            className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-blue-600 text-white shadow-[0_0_30px_rgba(35,131,246,0.4)] flex items-center justify-center group overflow-hidden border border-blue-400/30 backdrop-blur-xl relative"
+            className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-blue-600 text-white shadow-[0_0_20px_rgba(35,131,246,0.4)] flex items-center justify-center group overflow-hidden border border-blue-400/30 backdrop-blur-xl relative"
           >
             {/* Animated Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-700"></div>
@@ -89,8 +89,8 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
             
             <div className="relative z-10">
-              <MessageSquare className="w-6 h-6 md:w-7 md:h-7 group-hover:scale-110 transition-transform" />
-              <Sparkles className="absolute -top-3 -right-3 w-4 h-4 text-blue-200 animate-pulse" />
+              <MessageSquare className="w-5 h-5 md:w-7 md:h-7 group-hover:scale-110 transition-transform" />
+              <Sparkles className="absolute -top-2 -right-2 w-3 h-3 text-blue-200 animate-pulse" />
             </div>
 
             {/* Indicator Ping */}

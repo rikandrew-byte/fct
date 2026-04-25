@@ -32,12 +32,12 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
   }, []);
 
   const navLinks = [
-    { href: `/${lang}/about`, label: dict.navbar.about },
-    { href: `/${lang}/projects`, label: dict.navbar.projects },
-    { href: `/${lang}/products`, label: dict.navbar.products },
-    { href: `/${lang}/resources`, label: dict.navbar.resources || (lang === "en" ? "Resources" : "Tài liệu") },
-    { href: `/${lang}/blog`, label: dict.navbar.news || (lang === "en" ? "Articles" : "Bài viết") },
-    { href: `/${lang}/contact`, label: dict.navbar.contact },
+    { href: `/${lang}/about`, label: dict.navbar.about || (isEn ? "About Us" : "Về chúng tôi") },
+    { href: `/${lang}/projects`, label: dict.navbar.projects || (isEn ? "Projects" : "Dự án tiêu biểu") },
+    { href: `/${lang}/products`, label: dict.navbar.products || (isEn ? "Products" : "Sản phẩm") },
+    { href: `/${lang}/resources`, label: isEn ? "Resources" : "Tài liệu" },
+    { href: `/${lang}/blog`, label: dict.navbar.news || (isEn ? "Articles" : "Bài viết") },
+    { href: `/${lang}/contact`, label: dict.navbar.contact || (isEn ? "Contact" : "Liên hệ") },
   ];
 
   return (
@@ -75,7 +75,7 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
 
       {/* Fullscreen Overlay Drawer */}
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-[#020617]/90 backdrop-blur-2xl flex flex-col justify-center px-8 animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-[100] bg-[#020617]/98 backdrop-blur-2xl flex flex-col justify-start pt-28 px-8 animate-in fade-in slide-in-from-top-4 duration-300 overflow-y-auto">
           <nav className="flex flex-col gap-8">
             {navLinks.map((link) => {
               const isProducts = link.href.includes("/products");
@@ -105,7 +105,7 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
             })}
             <button 
               onClick={() => { setIsOpen(false); onOpenConsult(); }}
-              className="mt-8 text-center px-8 py-5 bg-blue-600 rounded-2xl text-white font-black text-sm uppercase tracking-widest"
+              className="mt-6 text-center px-6 py-4 bg-blue-600 rounded-xl text-white font-black text-xs uppercase tracking-widest shadow-lg shadow-blue-600/20 active:scale-95 transition-transform w-max mx-auto"
             >
               {dict.common.getAdviceNow}
             </button>
