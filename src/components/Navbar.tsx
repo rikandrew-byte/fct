@@ -29,6 +29,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
     { href: `/${lang}/posts`, label: dict.navbar.news || (isEn ? "Articles" : "Bài viết") },
+    { href: `/${lang}/resources`, label: dict.navbar.resources || (isEn ? "Resources & FAQ" : "Tài liệu & Hỏi đáp") },
     { href: `/${lang}/contact`, label: dict.navbar.contact },
   ];
 
@@ -91,7 +92,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-x-3 p-1 bg-white/5 rounded-full border border-white/10 flex-nowrap flex-shrink">
+          <nav className="hidden lg:flex items-center gap-x-1 xl:gap-x-3 p-1 bg-white/5 rounded-full border border-white/10 flex-nowrap flex-shrink">
             {navLinks.map((link) => {
               const isProducts = link.href.includes("/products");
               return (
