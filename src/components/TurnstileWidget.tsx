@@ -42,12 +42,12 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
 
     try {
       isRenderingRef.current = true;
-      console.log("🛡️ [Turnstile] Attempting render with key:", siteKey.substring(0, 10) + "...");
+      // console.log("🛡️ [Turnstile] Attempting render with key:", siteKey.substring(0, 10) + "...");
       
       const id = window.turnstile.render(containerRef.current, {
         sitekey: siteKey,
         callback: (token: string) => {
-          console.log("🛡️ [Turnstile] Token generated successfully!");
+          // console.log("🛡️ [Turnstile] Token generated successfully!");
           onVerify(token);
         },
         "error-callback": () => {

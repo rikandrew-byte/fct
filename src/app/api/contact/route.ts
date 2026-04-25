@@ -12,7 +12,7 @@ export async function POST(request: Request) {
   const rateLimit = checkRateLimit(ip, { maxRequests: 3, windowMs: 10 * 60 * 1000 });
 
   if (!rateLimit.allowed) {
-    console.log(`[RATE_LIMIT] Blocked IP: ${ip}, reset in ${rateLimit.resetIn}s`);
+    // console.log(`[RATE_LIMIT] Blocked IP: ${ip}, reset in ${rateLimit.resetIn}s`);
     return NextResponse.json(
       { 
         success: false, 
@@ -27,10 +27,12 @@ export async function POST(request: Request) {
   }
 
   // ── Diagnostic Logging (Vercel Logs) ──
+  /*
   console.log('[CONFIG_CHECK] Checking environment variables...');
   console.log(`- RESEND_API_KEY: ${process.env.RESEND_API_KEY ? 'Present (OK)' : 'MISSING ❌'}`);
   console.log(`- TELEGRAM_BOT_TOKEN: ${process.env.TELEGRAM_BOT_TOKEN ? 'Present (OK)' : 'MISSING ❌'}`);
   console.log(`- TURNSTILE_SECRET_KEY: ${process.env.TURNSTILE_SECRET_KEY ? 'Present (OK)' : 'MISSING ❌'}`);
+  */
 
   try {
     const body = await request.json();
@@ -49,7 +51,7 @@ export async function POST(request: Request) {
     // ── Tầng 2: Cloudflare Turnstile Verification ─────────────────
     if (TURNSTILE_SECRET_KEY) {
       if (!turnstileToken) {
-        console.log('[TURNSTILE] Missing token from client');
+        // console.log('[TURNSTILE] Missing token from client');
         return NextResponse.json(
           { success: false, error: 'Xác thực bảo mật thất bại. Vui lòng tải lại trang.' },
           { status: 403 }
@@ -68,13 +70,13 @@ export async function POST(request: Request) {
 
       const verifyData = await verifyRes.json();
       if (!verifyData.success) {
-        console.log('[TURNSTILE] Failed verification:', verifyData['error-codes']);
+        // console.log('[TURNSTILE] Failed verification:', verifyData['error-codes']);
         return NextResponse.json(
           { success: false, error: 'Xác thực Bot thất bại. Bạn có phải là người thật không?' },
           { status: 403 }
         );
       }
-      console.log('[TURNSTILE] Verified successfully');
+      // console.log('[TURNSTILE] Verified successfully');
     } else {
       console.warn('[TURNSTILE] Secret key not configured — skipping verification');
     }

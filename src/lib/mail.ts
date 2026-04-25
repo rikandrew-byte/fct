@@ -87,7 +87,7 @@ ${title}
       throw new Error(`Telegram API Error: [${data.error_code}] ${data.description}`);
     }
 
-    console.log('[TELEGRAM] Notification sent successfully');
+    // console.log('[TELEGRAM] Notification sent successfully');
     return data;
   } catch (err: any) {
     console.error('[TELEGRAM_FETCH_ERROR]', err);

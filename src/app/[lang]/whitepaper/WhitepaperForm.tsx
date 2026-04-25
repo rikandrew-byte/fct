@@ -27,6 +27,7 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
     email: "",
     phone: "",
     company: "",
+    industry: "",
     message: "Đăng ký nhận Sách trắng: Bảo vệ chất xám & Tối đa hóa doanh thu phần mềm"
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -163,6 +164,21 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
             className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-medium"
             value={formData.company}
             onChange={e => setFormData({...formData, company: e.target.value})}
+          />
+        </div>
+
+        {/* Industry */}
+        <div className="space-y-2">
+          <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2 px-1">
+            <ArrowRight className="w-3 h-3" /> {isEn ? "Industry" : "Lĩnh vực / Ngành"}
+          </label>
+          <input
+            required
+            type="text"
+            placeholder={isEn ? "e.g. Banking, Software" : "VD: Ngân hàng, Phần mềm"}
+            className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-medium"
+            value={formData.industry}
+            onChange={e => setFormData({...formData, industry: e.target.value})}
           />
         </div>
       </div>

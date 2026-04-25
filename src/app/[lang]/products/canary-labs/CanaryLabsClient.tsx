@@ -17,7 +17,11 @@ import {
   Mail
 } from "lucide-react";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
-import CanaryArchitecture from "@/components/CanaryArchitecture";
+import dynamic from "next/dynamic";
+const CanaryArchitecture = dynamic(() => import("@/components/CanaryArchitecture"), {
+  ssr: false,
+  loading: () => <div className="h-[600px] bg-slate-900/50 animate-pulse rounded-[3rem]" />
+});
 import { useRef, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
