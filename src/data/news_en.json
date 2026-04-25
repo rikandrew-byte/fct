@@ -1,5 +1,16 @@
 [
   {
+    "id": "hiem-hoa-ma-doc-overlay-app-ngan-hang-2026",
+    "title": "Overlay Malware Threats: 2026 Banking Apps Need RASP Shield to Survive",
+    "date": "2026-04-25",
+    "summary": "Overlay malware and reverse engineering are directly threatening Mobile Banking apps. Discover how Guardsquare's RASP protects transactions.",
+    "category": "Mobile Security",
+    "target_funnel": "guardsquare",
+    "image": "/images/posts/mobile-security-management.jpg",
+    "ogImage": "/images/posts/mobile-security-management.jpg",
+    "content": "In recent years, the arms race between banks (Fintech) and cybercriminals has taken a new, more brutal turn. If previously hackers primarily targeted server systems (Backend), the main battlefield has now shifted to the user's handheld device: the Mobile Banking App.\n\nThe most prominent threats today are Overlay Malware and Reverse Engineering.\n\n### 1. Overlay Malware: The Invisible Thief\nOverlay is a type of malware that hides under the guise of common utility apps. When a user opens a Banking App, this malware immediately creates a fake screen layer (overlay) on top of the real interface.\n\nThe consequence? Every input for login, password, and even OTP codes is recorded and sent directly to the Hacker's server. Customers lose money unexpectedly, while banks face a communications crisis and a serious decline in reputation.\n\n### 2. Reverse Engineering: Opening the Backdoor\nWhile overlay malware targets the end-user, Reverse Engineering targets the developer's vulnerabilities. Hackers use decryption tools to dissect installation files (APK/IPA), search for hardcoded API keys, encryption algorithms, or inject malicious code into the app (Repackaging) and redistribute it through unofficial app stores.\n\n### 3. RASP: Active Real-time Shield\nObfuscation is necessary but no longer sufficient. To counter attacks targeting memory and real-time tampering (such as Hooking, Root/Jailbreak), banking apps need an internal protection system: RASP (Runtime Application Self-Protection).\n\nRASP acts like an independent immune system. As soon as it detects a tampered device environment (screen recording malware, running debug software, rooted device), RASP immediately reacts: blocking transactions, closing the app, and sending an alert to the operations center.\n\n### What is the Solution for Chief Technology Officers (CIOs)?\nFaced with the evolution of mobile malware, upgrading defense architecture is a survival requirement. If your app only relies on a network firewall layer, you are leaving the door completely open on the customer's device."
+  },
+  {
     "id": "longmai-xac-thuc-pki-va-bao-mat-danh-tinh-so",
     "title": "Digital Identity Security: Why Businesses Need Longmai Hardware Authentication?",
     "date": "23/04/2026",

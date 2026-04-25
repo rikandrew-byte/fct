@@ -28,7 +28,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     { href: `/${lang}/about`, label: dict.navbar.about },
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
-    { href: `/${lang}/posts`, label: dict.navbar.news || (isEn ? "Articles" : "Bài viết") },
+    { href: `/${lang}/blog`, label: dict.navbar.news || (isEn ? "Articles" : "Bài viết") },
     { href: `/${lang}/contact`, label: dict.navbar.contact },
   ];
 

@@ -64,7 +64,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
             viewport={{ once: true }}
           >
             <Link 
-              href={`/${lang}/posts`}
+              href={`/${lang}/blog`}
               className="inline-flex items-center gap-2 px-8 py-4 bg-gray-50 hover:bg-blue-600 hover:text-white text-gray-900 rounded-2xl font-bold text-sm transition-all duration-300 group shadow-sm"
             >
               {d.viewAll}
@@ -108,7 +108,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
                 </div>
                 
                 <h3 className="text-xl font-black text-gray-950 leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
-                  <Link href={`/${lang}/posts/${article.id}`}>
+                  <Link href={`/${lang}/blog/${article.id}`}>
                     {article.title}
                   </Link>
                 </h3>
@@ -119,7 +119,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
                 
                 <div className="pt-4 flex items-center">
                   <Link 
-                    href={`/${lang}/posts/${article.id}`}
+                    href={`/${lang}/blog/${article.id}`}
                     className="text-xs font-black uppercase tracking-widest text-gray-900 group-hover:text-blue-600 flex items-center gap-2 transition-colors"
                   >
                     {isEn ? "Read Article" : "Đọc bài viết"}

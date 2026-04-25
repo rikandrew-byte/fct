@@ -27,6 +27,7 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
     { href: `/${lang}/about`, label: dict.navbar.about },
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
+    { href: `/${lang}/blog`, label: dict.navbar.news || (lang === "en" ? "Articles" : "Bài viết") },
     { href: `/${lang}/contact`, label: dict.navbar.contact },
   ];
 
