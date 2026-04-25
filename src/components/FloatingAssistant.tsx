@@ -41,7 +41,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             transition={{ delay: 0.1 }}
           >
             <Link
-              href={`/${lang}/knowledge`}
+              href={`/${lang}/resources`}
               aria-label="Truy cập Trung tâm Kiến thức"
               className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#020617]/80 backdrop-blur-3xl border border-blue-500/30 text-white shadow-2xl hover:border-blue-400 group transition-all duration-300"
             >
@@ -49,7 +49,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
                 <BookOpen className="w-4 h-4 text-blue-400 group-hover:text-white transition-colors" />
               </div>
               <span className="text-[11px] font-black uppercase tracking-widest text-blue-100 whitespace-nowrap">
-                {dict.navbar.knowledge}
+                {dict.navbar.resources}
               </span>
             </Link>
           </motion.div>
