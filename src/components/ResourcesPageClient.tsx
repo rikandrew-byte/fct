@@ -179,8 +179,8 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
             </div>
           </div>
 
-          {/* Right Column: Sticky Whitepaper Ribbon */}
-          <div className="hidden lg:block w-80 shrink-0">
+          {/* Right/Bottom Column: Sticky Whitepaper Ribbon */}
+          <div className="w-full lg:w-80 shrink-0">
             <div className="sticky top-32 group">
                {/* Ribbon Container */}
                <div className="relative bg-white border border-slate-200 rounded-3xl p-6 shadow-2xl shadow-blue-900/5 transition-all duration-500 hover:shadow-blue-500/10 hover:border-blue-200 overflow-hidden">
