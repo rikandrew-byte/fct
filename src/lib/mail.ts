@@ -41,7 +41,9 @@ export async function sendTelegramNotification(payload: NotificationPayload) {
     ? '🎯 <b>[CÓ LEAD MỚI TẢI SÁCH TRẮNG]</b>' 
     : payload.source === 'whitepaper-guardsquare'
       ? '🏦 <b>[CÓ LEAD MỚI TẢI SÁCH TRẮNG GUARDSQUARE]</b>'
-      : '🚀 <b>Yêu cầu liên hệ mới từ website FCT</b>';
+      : payload.source === 'whitepaper-canary'
+        ? '🏭 <b>[CÓ LEAD MỚI TẢI SÁCH TRẮNG CANARY HISTORIAN]</b>'
+        : '🚀 <b>Yêu cầu liên hệ mới từ website FCT</b>';
 
   // Chuyển sang định dạng HTML để ổn định hơn, tránh lỗi ký tự đặc biệt của Markdown
   const message = `
@@ -140,17 +142,25 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string, s
   if (!resend) return;
 
   const isGuardsquare = source === 'whitepaper-guardsquare';
+  const isCanary = source === 'whitepaper-canary';
+
   const docTitle = isGuardsquare 
     ? '"Bảo mật Ứng dụng Di động & Chống Mã độc"' 
-    : '"Bảo vệ chất xám & Tối đa hóa doanh thu phần mềm"';
+    : isCanary
+      ? '"Tối ưu hóa dữ liệu vận hành với Canary Historian"'
+      : '"Bảo vệ chất xám & Tối đa hóa doanh thu phần mềm"';
   
   const docDescription = isGuardsquare
     ? 'Đây là tài liệu chuyên sâu dành cho các nhà phát triển ứng dụng di động (Mobile App) và khối Tài chính - Ngân hàng nhằm ngăn chặn kỹ thuật dịch ngược và mã độc chiếm quyền (Overlay).'
-    : 'Đây là tài liệu chuyên sâu dành cho các nhà lãnh đạo và phát triển phần mềm nhằm tối ưu hóa mô hình kinh doanh và bảo vệ tài sản trí tuệ.';
+    : isCanary
+      ? 'Đây là tài liệu chuyên sâu dành cho khối Nhà máy và Hạ tầng OT nhằm giải quyết bài toán lưu trữ dữ liệu tốc độ cao, bứt phá giới hạn SQL truyền thống và trực quan hóa hàng triệu điểm dữ liệu.'
+      : 'Đây là tài liệu chuyên sâu dành cho các nhà lãnh đạo và phát triển phần mềm nhằm tối ưu hóa mô hình kinh doanh và bảo vệ tài sản trí tuệ.';
     
   const docLink = isGuardsquare
     ? 'https://drive.google.com/file/d/1xiDPxWdLEwfNOoGC_xLWqG3fBknH3U-x/view?usp=sharing'
-    : 'https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing';
+    : isCanary
+      ? 'https://drive.google.com/file/d/18KHNW_gqb8Os2zYrPJuxxUkjkQkD8VB7/view?usp=sharing'
+      : 'https://drive.google.com/file/d/1HZqOX7w-DKJGbjqv2kyjqrZ12Y64R-zv/view?usp=sharing';
 
   await resend.emails.send({
     from: 'FCT Vĩnh Thịnh <system@fct.vn>',

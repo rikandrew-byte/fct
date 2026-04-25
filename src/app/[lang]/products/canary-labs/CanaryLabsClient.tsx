@@ -17,7 +17,8 @@ import {
   Mail
 } from "lucide-react";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
-import { useState, useRef, Suspense } from "react";
+import CanaryArchitecture from "@/components/CanaryArchitecture";
+import { useRef, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,7 +29,6 @@ interface CanaryLabsClientProps {
 
 export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) {
   const isEn = lang === "en";
-  const [activeStep, setActiveStep] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   
   const { scrollYProgress } = useScroll({
@@ -92,114 +92,7 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
                <div className="h-1.5 w-24 bg-amber-500 mx-auto rounded-full"></div>
             </div>
 
-            <div className="relative aspect-[21/9] bg-[#020617] rounded-[3.5rem] p-12 overflow-hidden shadow-3xl">
-              <svg viewBox="0 0 1000 400" className="w-full h-full">
-                <defs>
-                   <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#1e293b" />
-                      <stop offset="50%" stopColor="#f59e0b" />
-                      <stop offset="100%" stopColor="#1e293b" />
-                   </linearGradient>
-                </defs>
-
-                {/* Animated Paths */}
-                <motion.path 
-                  initial={{ strokeDasharray: "10 10", strokeDashoffset: 0 }}
-                  animate={{ strokeDashoffset: -100 }}
-                  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                  d="M200 200 H800" 
-                  stroke="url(#flowGrad)" 
-                  strokeWidth="2" 
-                  opacity={activeStep !== null ? 0.4 : 0.05}
-                />
-
-                {/* 1. Collectors */}
-                <motion.g 
-                  whileHover={{ scale: 1.05 }}
-                  className="cursor-pointer"
-                  onMouseEnter={() => setActiveStep(1)}
-                >
-                  <rect x="50" y="140" width="220" height="120" rx="24" fill="#0f172a" stroke="#1e293b" strokeWidth="2" />
-                  <Cpu className="text-amber-500" x="145" y="165" width="30" height="30" />
-                  <text x="160" y="235" fill="white" fontSize="14" fontWeight="900" textAnchor="middle" className="uppercase tracking-widest">
-                    {isEn ? "COLLECTORS" : "BỘ THU THẬP"}
-                  </text>
-                  {activeStep === 1 && (
-                    <rect x="50" y="140" width="220" height="120" rx="24" fill="none" stroke="#f59e0b" strokeWidth="3" className="filter blur-sm" />
-                  )}
-                </motion.g>
-
-                {/* 2. Historian */}
-                <motion.g 
-                  whileHover={{ scale: 1.05 }}
-                  className="cursor-pointer"
-                  onMouseEnter={() => setActiveStep(2)}
-                >
-                  <rect x="390" y="110" width="220" height="180" rx="30" fill="#1e1b4b" stroke="#312e81" strokeWidth="2" />
-                  <Database className="text-amber-400" x="485" y="150" width="30" height="30" />
-                  <text x="500" y="240" fill="white" fontSize="16" fontWeight="900" textAnchor="middle" className="uppercase tracking-widest">
-                    {isEn ? "HISTORIAN" : "LƯU TRỮ LỊCH SỬ"}
-                  </text>
-                  <text x="500" y="260" fill="#94a3b8" fontSize="10" textAnchor="middle" className="uppercase tracking-widest">
-                    {isEn ? "1.5M WRITES/SEC" : "1.5 TRIỆU WRITES/GIÂY"}
-                  </text>
-                  {activeStep === 2 && (
-                    <rect x="390" y="110" width="220" height="180" rx="30" fill="none" stroke="#f59e0b" strokeWidth="3" className="filter blur-sm" />
-                  )}
-                </motion.g>
-
-                {/* 3. Axiom Dashboard */}
-                <motion.g 
-                  whileHover={{ scale: 1.05 }}
-                  className="cursor-pointer"
-                  onMouseEnter={() => setActiveStep(3)}
-                >
-                  <rect x="730" y="140" width="220" height="120" rx="24" fill="#064e3b" stroke="#065f46" strokeWidth="2" />
-                  <LayoutDashboard className="text-teal-400" x="825" y="165" width="30" height="30" />
-                  <text x="840" y="235" fill="white" fontSize="14" fontWeight="900" textAnchor="middle" className="uppercase tracking-widest">
-                    {isEn ? "AXIOM DASHBOARD" : "BẢNG ĐIỀU KHIỂN"}
-                  </text>
-                  {activeStep === 3 && (
-                    <rect x="730" y="140" width="220" height="120" rx="24" fill="none" stroke="#10b981" strokeWidth="3" className="filter blur-sm" />
-                  )}
-                </motion.g>
-              </svg>
-
-              {/* Tooltip Info */}
-              <div className="mt-8 min-h-[80px] flex items-center justify-center text-center">
-                 <motion.div 
-                   key={activeStep}
-                   initial={{ opacity: 0, y: 10 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   className="max-w-xl"
-                 >
-                    {!activeStep ? (
-                      <p className="text-slate-500 italic text-sm">{isEn ? "Hover component to inspect IIoT data flow" : "Di chuột vào thành phần để xem luồng dữ liệu IIoT"}</p>
-                    ) : activeStep === 1 ? (
-                      <p className="text-amber-200 text-sm font-light leading-relaxed">
-                        {isEn 
-                          ? "Collect data from OPC UA, MQTT, SQL, and CSV. No external database required - low bandwidth impact."
-                          : "Thu thập dữ liệu từ OPC UA, MQTT, SQL và tệp CSV. Không yêu cầu cơ sở dữ liệu ngoài - tiết kiệm băng thông."
-                        }
-                      </p>
-                    ) : activeStep === 2 ? (
-                      <p className="text-amber-200 text-sm font-light leading-relaxed">
-                        {isEn 
-                          ? "High-performance time-series storage. Handle 1.5M writes/sec with no data loss and efficient compression."
-                          : "Lưu trữ dữ liệu chuỗi thời gian hiệu suất cao. Xử lý 1.5 triệu tham số mỗi giây mà không mất dữ liệu."
-                        }
-                      </p>
-                    ) : (
-                      <p className="text-teal-200 text-sm font-light leading-relaxed">
-                        {isEn 
-                          ? "Visualize data instantly. Mobile-friendly dashboards with no licensing fees for client connections."
-                          : "Trực quan hóa dữ liệu tức thì. Dashboard thân thiện với di động và không giới hạn số lượng người dùng."
-                        }
-                      </p>
-                    )}
-                 </motion.div>
-              </div>
-            </div>
+            <CanaryArchitecture isEn={isEn} />
 
             {/* CTA BELOW BLUEPRINT */}
             <div className="mt-16 flex justify-center">

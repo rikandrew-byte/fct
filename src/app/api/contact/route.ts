@@ -97,7 +97,7 @@ export async function POST(request: Request) {
     const results = await Promise.allSettled([
       sendTelegramNotification(payload),
       sendEmailNotification(payload),
-      ...((source === 'whitepaper' || source === 'whitepaper-guardsquare') ? [sendWhitepaperAutoReply(email, fullName, source)] : [])
+      ...((source === 'whitepaper' || source === 'whitepaper-guardsquare' || source === 'whitepaper-canary') ? [sendWhitepaperAutoReply(email, fullName, source)] : [])
     ]);
 
     const errors: string[] = [];
