@@ -39,6 +39,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
             transition={{ delay: 0.1 }}
+            className="hidden md:block"
           >
             <Link
               href={`/${lang}/resources`}

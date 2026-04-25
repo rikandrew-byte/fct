@@ -180,8 +180,8 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
           </div>
 
           {/* Right/Bottom Column: Sticky Whitepaper Ribbon */}
-          <div className="w-full lg:w-80 shrink-0">
-            <div className="sticky top-32 group">
+          <div className="w-full lg:w-80 shrink-0 order-first lg:order-last mb-8 lg:mb-0">
+            <div className="lg:sticky lg:top-32 group">
                {/* Ribbon Container */}
                <div className="relative bg-white border border-slate-200 rounded-3xl p-6 shadow-2xl shadow-blue-900/5 transition-all duration-500 hover:shadow-blue-500/10 hover:border-blue-200 overflow-hidden">
                   
@@ -204,9 +204,9 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                          : "Khám phá các tài liệu kỹ thuật chuyên sâu độc quyền dành cho doanh nghiệp."}
                     </p>
 
-                    <div className="space-y-3">
+                    <div className="flex flex-row lg:flex-col gap-3 overflow-x-auto pb-4 lg:pb-0 snap-x hide-scrollbar">
                        {/* Link 1: Thales */}
-                       <Link href={`/${lang}/whitepaper`} className="flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition-colors group/item">
+                       <Link href={`/${lang}/whitepaper`} className="flex-shrink-0 w-[260px] lg:w-auto flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition-colors group/item snap-start">
                           <span className="text-xs font-black uppercase text-blue-600 mb-1 flex items-center gap-1.5">
                             <FileText className="w-3.5 h-3.5" /> Thales Sentinel
                           </span>
@@ -216,7 +216,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                        </Link>
 
                        {/* Link 2: Guardsquare */}
-                       <Link href={`/${lang}/whitepaper-guardsquare`} className="flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-rose-50 hover:border-rose-200 transition-colors group/item">
+                       <Link href={`/${lang}/whitepaper-guardsquare`} className="flex-shrink-0 w-[260px] lg:w-auto flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-rose-50 hover:border-rose-200 transition-colors group/item snap-start">
                           <span className="text-xs font-black uppercase text-rose-600 mb-1 flex items-center gap-1.5">
                             <FileText className="w-3.5 h-3.5" /> Guardsquare
                           </span>
@@ -226,7 +226,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                        </Link>
 
                        {/* Link 3: Canary */}
-                       <Link href={`/${lang}/whitepaper-canary`} className="flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-amber-50 hover:border-amber-200 transition-colors group/item">
+                       <Link href={`/${lang}/whitepaper-canary`} className="flex-shrink-0 w-[260px] lg:w-auto flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 hover:bg-amber-50 hover:border-amber-200 transition-colors group/item snap-start">
                           <span className="text-xs font-black uppercase text-amber-600 mb-1 flex items-center gap-1.5">
                             <FileText className="w-3.5 h-3.5" /> Canary Historian
                           </span>

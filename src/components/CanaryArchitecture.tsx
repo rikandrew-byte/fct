@@ -28,8 +28,8 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto py-12">
-      <div className="bg-slate-900 rounded-[3rem] p-8 md:p-12 lg:p-16 border border-slate-800 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center gap-8 lg:gap-4 justify-between">
+    <div className="w-full max-w-6xl mx-auto py-12 px-4">
+      <div className="bg-slate-900 rounded-[3rem] p-8 md:p-12 lg:p-16 border border-slate-800 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center gap-8 lg:gap-4 justify-between scale-100 sm:scale-100 origin-center">
         
         {/* Background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-2xl bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -51,7 +51,7 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
         </div>
 
         {/* --- CONNECTOR 1 --- */}
-        <div className="relative flex-1 min-h-[40px] min-w-[40px] flex items-center justify-center lg:flex-row flex-col">
+        <div className="relative flex-1 min-h-[60px] lg:min-h-[40px] w-full lg:w-auto flex items-center justify-center lg:flex-row flex-col">
           {/* Horizontal line (Desktop) */}
           <div className="hidden lg:block absolute w-full h-0.5 bg-slate-800 overflow-hidden">
             <motion.div variants={particlesRight} initial="initial" animate="animate" className="h-full w-24 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></motion.div>
@@ -62,7 +62,7 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
           </div>
 
           {/* Dots indicating fast data flow */}
-          <div className="absolute flex gap-8 lg:flex-row flex-col">
+          <div className="absolute flex gap-4 lg:gap-8 flex-col lg:flex-row">
             {[0, 1, 2].map((i) => (
                <motion.div 
                  key={`dot1-${i}`}
@@ -116,7 +116,7 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
         </div>
 
         {/* --- CONNECTOR 2 --- */}
-        <div className="relative flex-1 min-h-[40px] min-w-[40px] flex items-center justify-center lg:flex-row flex-col">
+        <div className="relative flex-1 min-h-[60px] lg:min-h-[40px] w-full lg:w-auto flex items-center justify-center lg:flex-row flex-col">
           {/* Horizontal line (Desktop) */}
           <div className="hidden lg:block absolute w-full h-0.5 bg-slate-800 overflow-hidden">
             <motion.div variants={particlesRight} initial="initial" animate="animate" className="h-full w-24 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></motion.div>
@@ -126,7 +126,7 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
              <motion.div variants={particlesDown} initial="initial" animate="animate" className="w-full h-24 bg-gradient-to-b from-transparent via-amber-500 to-transparent"></motion.div>
           </div>
           
-          <div className="absolute flex gap-8 lg:flex-row flex-col">
+          <div className="absolute flex gap-4 lg:gap-8 flex-col lg:flex-row">
             {[0, 1, 2].map((i) => (
                <motion.div 
                  key={`dot2-${i}`}
