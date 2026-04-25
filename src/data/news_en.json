@@ -1,5 +1,16 @@
 [
   {
+    "id": "csdl-sql-bop-nghet-he-thong-scada",
+    "title": "Why Traditional SQL Databases are Suffocating Your SCADA System?",
+    "date": "2026-04-25",
+    "summary": "SQL wasn't designed for high-speed time-series data. Discover how Canary Historian processes millions of tags per second for OT networks without data loss.",
+    "category": "Industrial Data",
+    "target_funnel": "canary",
+    "image": "/images/posts/canary-management.jpg",
+    "ogImage": "/images/posts/canary-management.jpg",
+    "content": "In the Industry 4.0 era, a medium-sized factory can generate tens of thousands of data points (tags) every second from temperature sensors, pressure sensors, PLCs, and SCADA systems.\n\nThe first reflex of many businesses is to pour this mountain of data into a familiar Relational Database like SQL Server or MySQL. However, this is the beginning of an operational nightmare.\n\n### 1. Performance Bottleneck\nSQL was designed for financial transactions or HR management systems—where data changes slowly and requires high integrity. When forced to record tens of thousands of data points per second (sub-second writes) from an OT system, SQL immediately becomes overloaded.\n\nThe result is network bandwidth congestion, server lockups, and most critically, Data Loss. Important clock cycles signaling machinery failure can be dropped, leading to incorrect judgments in production.\n\n### 2. Ballooning Costs and Resolution Trade-offs\nTo keep SQL from crashing, Database Administrators (DBAs) often resort to \"Purging\" or \"Aggregating\" old data. For example: Data recorded every second today is merged into a minute average for next week, and an hourly average for next month.\n\nThis completely destroys the core value of time-series data. When you need to investigate a machine failure from 6 months ago, you will no longer have the detailed raw data for Root Cause Analysis.\n\n### 3. The Solution: Time-Series Historian Database\nTo liberate SCADA systems, leading OT engineers worldwide have switched to specialized Historian Databases, such as Canary Historian.\n\n- **Ultra-fast Write Speed:** Canary can process over 1.5 million tags per second without degrading system performance.\n- **Loss-less Compression:** Canary never aggregates or deletes old data. Data from 10 years ago remains as sharp as data recorded 1 second ago, but with a storage footprint that is a fraction of SQL's.\n- **Bridging IT and OT:** Requires no complex SQL query skills. Factory engineers can drag and drop to visualize data in minutes.\n\n### It's Time to Lift the Burden Off Your System\nTrying to use SQL for SCADA data storage is like using a bus to race Formula 1: both expensive and ineffective."
+  },
+  {
     "id": "hiem-hoa-ma-doc-overlay-app-ngan-hang-2026",
     "title": "Overlay Malware Threats: 2026 Banking Apps Need RASP Shield to Survive",
     "date": "2026-04-25",
