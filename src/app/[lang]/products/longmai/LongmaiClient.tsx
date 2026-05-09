@@ -17,7 +17,7 @@ import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
 import ContactModal from "@/components/ContactModal";
-import ProductArchitecture from "@/components/ProductArchitecture";
+import LongmaiAuthenticationFlow from "@/components/LongmaiAuthenticationFlow";
 
 interface LongmaiClientProps {
   lang: string;
@@ -267,9 +267,15 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
          </motion.div>
       </section>
 
-      {/* ── 2.5. LICENSING ARCHITECTURE ────────────────── */}
-      <section className="bg-white relative pb-12">
-        <ProductArchitecture isEn={isEn} />
+      {/* ── 2.5. ENDPOINT AUTHENTICATION FLOW ────────────────── */}
+      <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
+         <div className="text-center mb-20 space-y-4">
+            <span className="text-rose-600 font-black text-xs uppercase tracking-[0.4em]">Zero-Trust Authentication</span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
+              {isEn ? "Endpoint Authentication Architecture" : "Kiến trúc Xác thực Endpoint"}
+            </h2>
+         </div>
+         <LongmaiAuthenticationFlow isEn={isEn} />
       </section>
 
       {/* ── 3. ZONE 1: PAIN (Slate-50) ───────────────────────── */}

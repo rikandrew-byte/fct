@@ -147,9 +147,6 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       {/* Trust Metrics Section */}
       <TrustMetrics dict={dict} />
 
-      {/* Longmai Solution Block */}
-      <LongmaiSolutionBlock isEn={lang === "en"} lang={lang} />
-
       {/* Main Content Sections */}
       <section className="section-padding bg-white">
         <AboutSection lang={lang} dict={dict} />
@@ -226,6 +223,9 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
           </Link>
         </div>
       </section>
+
+      {/* Longmai Solution Block - Alternative Solution */}
+      <LongmaiSolutionBlock isEn={lang === "en"} lang={lang} />
       
       {/* ── 3. News Section (Khám phá tin tức) ───────────────────────── */}
       <NewsSection lang={lang} dict={dict} latestNews={latestNews} />
