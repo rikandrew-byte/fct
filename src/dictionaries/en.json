@@ -382,6 +382,37 @@
       }
     ]
   },
+  "securityComparison": {
+    "title": "Security Index: Before vs. After FCT",
+    "subtitle": "Clear comparison between current risk state and comprehensive protection from FCT",
+    "rows": [
+      {
+        "metric": "Source Code Protection",
+        "before": "Source code sits in executable file, can be reverse-engineered in 30 seconds using free tools",
+        "after": "Code wrapped in Sentinel Envelope layer (AES-256), cannot be decrypted without FIPS 140-2 HSM key"
+      },
+      {
+        "metric": "License Management",
+        "before": "No control mechanism, software cracked and distributed on sharing sites",
+        "after": "Sentinel HL/SL binding + Cloud Licensing, track every activation, revoke instantly"
+      },
+      {
+        "metric": "OT Data Protection",
+        "before": "Traditional SQL Server, overloaded at 1.5M tags/second, data loss unrecoverable",
+        "after": "Canary Historian + Time-Series DB, writes 1.5M tags/second, Zero Data Loss, automatic Root Cause Analysis"
+      },
+      {
+        "metric": "Overlay & Malware Defense",
+        "before": "App has no protection layer, hackers use Overlay to steal OTPs and bank credentials",
+        "after": "Guardsquare RASP + DexGuard, detects Overlay in 10ms, blocks Malware before execution"
+      },
+      {
+        "metric": "Compliance Standards",
+        "before": "No certification, fails to meet Bank, Government, Enterprise requirements",
+        "after": "FIPS 140-2 Level 3, EAL5+, PCI-DSS, ISO 27001 — highest international standards"
+      }
+    ]
+  },
   "contactModal": {
     "title": "Get Free Consultation",
     "subtitle": "Our experts will contact you within 24h",

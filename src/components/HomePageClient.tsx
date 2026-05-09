@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import NewsSection from "@/components/NewsSection";
 import PainPointsSection from "@/components/PainPointsSection";
 import TrustMetrics from "@/components/TrustMetrics";
+import SecurityComparisonTable from "@/components/SecurityComparisonTable";
 
 interface HomePageClientProps {
   lang: string;
@@ -133,6 +134,14 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
 
       {/* Pain Points Section */}
       <PainPointsSection dict={dict} />
+
+      {/* Security Comparison Table */}
+      <SecurityComparisonTable 
+        lang={lang}
+        title={dict.securityComparison.title}
+        subtitle={dict.securityComparison.subtitle}
+        rows={dict.securityComparison.rows}
+      />
 
       {/* Trust Metrics Section */}
       <TrustMetrics dict={dict} />

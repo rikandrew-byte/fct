@@ -450,6 +450,37 @@
       }
     ]
   },
+  "securityComparison": {
+    "title": "Chỉ số An Toàn: Trước vs. Sau FCT",
+    "subtitle": "So sánh rõ ràng giữa trạng thái rủi ro hiện tại và giải pháp bảo vệ toàn diện từ FCT",
+    "rows": [
+      {
+        "metric": "Bảo vệ Mã nguồn",
+        "before": "Mã nguồn nằm trong file thực thi, dễ bị dịch ngược trong 30 giây bằng công cụ miễn phí",
+        "after": "Mã được bọc lớp giáp Sentinel Envelope (AES-256), không thể giải mã mà không có khóa HSM FIPS 140-2"
+      },
+      {
+        "metric": "Quản lý Bản quyền",
+        "before": "Không có cơ chế kiểm soát, phần mềm bị crack tràn lan trên các trang chia sẻ",
+        "after": "Sentinel HL/SL binding + Cloud Licensing, theo dõi từng lần kích hoạt, thu hồi ngay lập tức"
+      },
+      {
+        "metric": "Bảo vệ Dữ liệu OT",
+        "before": "SQL Server truyền thống, quá tải khi xử lý 1.5M tags/giây, mất mát dữ liệu không thể khôi phục",
+        "after": "Canary Historian + Time-Series DB, ghi 1.5M tags/giây, Zero Data Loss, phân tích Root Cause tự động"
+      },
+      {
+        "metric": "Phòng chống Overlay & Malware",
+        "before": "Ứng dụng không có lớp bảo vệ, hacker dùng Overlay để đánh cắp OTP, tài khoản ngân hàng",
+        "after": "Guardsquare RASP + DexGuard, phát hiện Overlay trong 10ms, chặn Malware trước khi chạy"
+      },
+      {
+        "metric": "Tuân thủ Tiêu chuẩn",
+        "before": "Không có chứng chỉ, không đáp ứng yêu cầu của Ngân hàng, Chính phủ, Doanh nghiệp lớn",
+        "after": "FIPS 140-2 Level 3, EAL5+, PCI-DSS, ISO 27001 — đạt chuẩn quốc tế cao nhất"
+      }
+    ]
+  },
   "contactModal": {
     "title": "Nhận Tư Vấn Miễn Phí",
     "subtitle": "Chuyên gia của chúng tôi sẽ liên hệ trong 24h",
