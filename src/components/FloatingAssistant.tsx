@@ -86,7 +86,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
                     transition={{ delay: idx * 0.05 }}
                     className="flex items-center gap-3 group"
                   >
-                    <span className="px-3 py-1.5 rounded-lg bg-[#020617]/80 backdrop-blur-xl border border-white/10 text-[10px] font-black uppercase tracking-widest text-white opacity-0 group-hover:opacity-100 transition-opacity shadow-2xl">
+                    <span className="px-3 py-1.5 rounded-lg bg-white/80 backdrop-blur-xl border border-gray-300 text-[10px] font-black uppercase tracking-widest text-gray-900 opacity-0 group-hover:opacity-100 transition-opacity shadow-2xl">
                       {item.label}
                     </span>
                     {item.href ? (
@@ -118,11 +118,11 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="hidden md:flex absolute right-20 top-1/2 -translate-y-1/2 items-center gap-3 px-4 py-2.5 rounded-xl bg-[#020617]/80 backdrop-blur-xl border border-blue-500/30 text-white shadow-2xl hover:border-blue-400 group transition-all duration-300 whitespace-nowrap"
+              className="hidden md:flex absolute right-20 top-1/2 -translate-y-1/2 items-center gap-3 px-4 py-2.5 rounded-xl bg-white/80 backdrop-blur-xl border border-blue-300 text-gray-900 shadow-2xl hover:border-blue-400 group transition-all duration-300 whitespace-nowrap"
             >
               <Link href={`/${lang}/resources`} className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-blue-400" />
-                <span className="text-[10px] font-black uppercase tracking-widest text-blue-100">
+                <BookOpen className="w-4 h-4 text-blue-600" />
+                <span className="text-[10px] font-black uppercase tracking-widest text-blue-700">
                   {dict.navbar.resources}
                 </span>
               </Link>
@@ -135,9 +135,9 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-14 h-14 rounded-2xl bg-blue-600 text-white shadow-[0_0_30px_rgba(35,131,246,0.4)] flex items-center justify-center border border-blue-400/30 backdrop-blur-xl relative overflow-hidden group"
+              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-purple-700 text-white shadow-[0_0_40px_rgba(59,130,246,0.5)] flex items-center justify-center border border-blue-400/50 backdrop-blur-xl relative overflow-hidden group"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity"></div>
               <AnimatePresence mode="wait">
                 {isMenuOpen ? (
                   <motion.div
@@ -165,9 +165,9 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
               {/* Active Pulse */}
               {!isMenuOpen && (
                 <div className="absolute top-0 right-0 p-2">
-                  <span className="relative flex h-2 w-2">
+                  <span className="relative flex h-2.5 w-2.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-200"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-100 shadow-lg shadow-blue-400/50"></span>
                   </span>
                 </div>
               )}

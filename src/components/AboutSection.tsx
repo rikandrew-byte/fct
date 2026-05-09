@@ -55,7 +55,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
                 </span>
               </h2>
             </div>
-            <p className="text-gray-600 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
+            <p className="text-gray-800 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
               {content.description}
             </p>
 

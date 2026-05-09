@@ -19,14 +19,14 @@ interface AIExpertClientProps {
 
 const MarkdownStyles = {
   p: ({ children }: any) => <p className="mb-4 last:mb-0">{children}</p>,
-  h1: ({ children }: any) => <h1 className="text-xl font-black mt-6 mb-3 text-blue-400">{children}</h1>,
-  h2: ({ children }: any) => <h2 className="text-lg font-black mt-5 mb-2 text-blue-300">{children}</h2>,
-  h3: ({ children }: any) => <h3 className="text-md font-bold mt-4 mb-2 text-blue-200">{children}</h3>,
+  h1: ({ children }: any) => <h1 className="text-xl font-black mt-6 mb-3 text-blue-600">{children}</h1>,
+  h2: ({ children }: any) => <h2 className="text-lg font-black mt-5 mb-2 text-blue-500">{children}</h2>,
+  h3: ({ children }: any) => <h3 className="text-md font-bold mt-4 mb-2 text-blue-600">{children}</h3>,
   ul: ({ children }: any) => <ul className="list-disc pl-5 mb-4 space-y-2">{children}</ul>,
   ol: ({ children }: any) => <ol className="list-decimal pl-5 mb-4 space-y-2">{children}</ol>,
-  li: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
-  code: ({ children }: any) => <code className="bg-blue-900/30 text-blue-200 px-1.5 py-0.5 rounded-md text-xs font-mono">{children}</code>,
-  strong: ({ children }: any) => <strong className="font-black text-white">{children}</strong>,
+  li: ({ children }: any) => <li className="leading-relaxed text-gray-800">{children}</li>,
+  code: ({ children }: any) => <code className="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-md text-xs font-mono">{children}</code>,
+  strong: ({ children }: any) => <strong className="font-black text-gray-900">{children}</strong>,
 };
 
 export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
@@ -77,24 +77,24 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#020617] text-white overflow-hidden flex flex-col">
+    <main className="relative min-h-screen bg-white text-gray-900 overflow-hidden flex flex-col">
       <NeuralNetworkBackground />
       
       {/* Background Decor */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[160px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-200/10 rounded-full blur-[160px] pointer-events-none"></div>
 
       {/* Header */}
-      <header className="relative z-20 pt-32 pb-10 px-6 border-b border-white/5 bg-[#020617]/50 backdrop-blur-md">
+      <header className="relative z-20 pt-32 pb-10 px-6 border-b border-gray-200 bg-white/50 backdrop-blur-md">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-5">
-            <div className="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center shadow-lg shadow-blue-500/10">
-              <ShieldCheck className="w-8 h-8 text-blue-400" />
+            <div className="w-14 h-14 rounded-2xl bg-blue-100 border border-blue-300 flex items-center justify-center shadow-lg shadow-blue-200/50">
+              <ShieldCheck className="w-8 h-8 text-blue-600" />
             </div>
             <div>
-              <h1 className="text-2xl font-black tracking-tight flex items-center gap-2">
-                FCT Expert AI <span className="text-[10px] bg-blue-500 text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-widest">Demo</span>
+              <h1 className="text-2xl font-black tracking-tight flex items-center gap-2 text-gray-900">
+                FCT Expert AI <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-widest">Demo</span>
               </h1>
-              <p className="text-gray-400 text-xs font-light uppercase tracking-widest flex items-center gap-2">
+              <p className="text-gray-600 text-xs font-light uppercase tracking-widest flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                 {lang === "en" ? "Grounded in FCT Knowledge Base" : "Dữ liệu dựa trên hệ sinh thái FCT"}
               </p>
@@ -103,10 +103,10 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
           
           <button 
             onClick={() => setMessages([])}
-            className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+            className="p-3 rounded-xl bg-gray-100 border border-gray-300 hover:bg-gray-200 transition-colors group"
             title="Clear Chat"
           >
-            <RefreshCcw className="w-5 h-5 text-gray-400 group-hover:rotate-180 transition-transform duration-500" />
+            <RefreshCcw className="w-5 h-5 text-gray-600 group-hover:rotate-180 transition-transform duration-500" />
           </button>
         </div>
       </header>
@@ -119,14 +119,14 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
         >
           {messages.length === 0 && (
             <div className="h-full flex flex-col items-center justify-center text-center space-y-6 opacity-60">
-              <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center border border-white/10">
-                <Terminal className="w-10 h-10 text-blue-400" />
+              <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center border border-gray-300">
+                <Terminal className="w-10 h-10 text-blue-600" />
               </div>
               <div className="space-y-2">
-                <h2 className="text-xl font-bold tracking-tight">
+                <h2 className="text-xl font-bold tracking-tight text-gray-900">
                   {lang === "en" ? "Secure Terminal Initialized" : "Khởi tạo Phiên làm việc Bảo mật"}
                 </h2>
-                <p className="text-sm font-light text-gray-400 max-w-xs">
+                <p className="text-sm font-light text-gray-600 max-w-xs">
                   {lang === "en" ? "Ask me anything about Software Protection, Mobile Security, or Industrial Data." : "Tra cứu thông tin về Bảo vệ Bản quyền, Bảo mật Di động hoặc Dữ liệu Công nghiệp."}
                 </p>
               </div>
@@ -143,15 +143,15 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               >
                 <div className={`w-10 h-10 shrink-0 rounded-xl flex items-center justify-center border ${
                   m.role === "user" 
-                    ? "bg-white/10 border-white/10" 
-                    : "bg-blue-600/20 border-blue-500/30"
+                    ? "bg-gray-100 border-gray-300" 
+                    : "bg-blue-100 border-blue-300"
                 }`}>
-                  {m.role === "user" ? <User className="w-5 h-5" /> : <Bot className="w-5 h-5 text-blue-400" />}
+                  {m.role === "user" ? <User className="w-5 h-5 text-gray-700" /> : <Bot className="w-5 h-5 text-blue-600" />}
                 </div>
                 <div className={`max-w-[80%] rounded-2xl p-5 text-sm leading-relaxed ${
                   m.role === "user"
-                    ? "bg-white/5 border border-white/10 text-gray-200"
-                    : "bg-blue-900/20 border border-blue-800/30 text-blue-50"
+                    ? "bg-gray-100 border border-gray-300 text-gray-900"
+                    : "bg-blue-50 border border-blue-200 text-gray-900"
                 }`}>
                   {m.role === "ai" ? (
                     <ReactMarkdown 
@@ -174,13 +174,13 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               animate={{ opacity: 1 }}
               className="flex gap-4"
             >
-              <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
+              <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-100 border border-blue-300 flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-blue-600 animate-pulse" />
               </div>
-              <div className="bg-blue-900/10 border border-blue-800/20 rounded-2xl px-6 py-4 flex gap-1 items-center">
-                <span className="w-1 h-1 bg-blue-400 rounded-full animate-bounce"></span>
-                <span className="w-1 h-1 bg-blue-400 rounded-full animate-bounce delay-75"></span>
-                <span className="w-1 h-1 bg-blue-400 rounded-full animate-bounce delay-150"></span>
+              <div className="bg-blue-50 border border-blue-200 rounded-2xl px-6 py-4 flex gap-1 items-center">
+                <span className="w-1 h-1 bg-blue-600 rounded-full animate-bounce"></span>
+                <span className="w-1 h-1 bg-blue-600 rounded-full animate-bounce delay-75"></span>
+                <span className="w-1 h-1 bg-blue-600 rounded-full animate-bounce delay-150"></span>
               </div>
             </motion.div>
           )}
@@ -190,18 +190,18 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
         <div className="py-10">
           <form 
             onSubmit={handleSubmit}
-            className="flex gap-4 p-2 bg-white/5 border border-white/10 rounded-2xl focus-within:border-blue-500/50 transition-all backdrop-blur-xl"
+            className="flex gap-4 p-2 bg-gray-100 border border-gray-300 rounded-2xl focus-within:border-blue-400 transition-all backdrop-blur-xl"
           >
             <input 
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={lang === "en" ? "Type your technical query..." : "Nhập câu hỏi chuyên môn..."}
-              className="flex-1 bg-transparent border-none outline-none px-4 py-2 font-light placeholder:text-gray-600"
+              className="flex-1 bg-transparent border-none outline-none px-4 py-2 font-light placeholder:text-gray-500 text-gray-900"
             />
             <button 
               disabled={isLoading}
-              className="bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-600/20"
+              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-600/20"
             >
               <Send className="w-4 h-4" />
             </button>

@@ -54,9 +54,9 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
   const isEn = lang === "en";
 
   return (
-    <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
+    <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden bg-white">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
+      <section className="relative pt-32 pb-20 px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
         <NeuralNetworkBackground />
         
         {/* Glows */}
@@ -70,16 +70,16 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               animate={{ opacity: 1, x: 0 }}
               className="flex-1 space-y-10"
             >
-              <div className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-300 tracking-[0.4em] uppercase shadow-2xl">
+              <div className="inline-block bg-blue-100 border border-blue-300 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-700 tracking-[0.4em] uppercase shadow-2xl">
                 {d.hero.badge}
               </div>
-              <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1]">
+              <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight leading-[1.1]">
                 {d.hero.title} <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                   {d.hero.subtitle}
                 </span>
               </h1>
-              <p className="text-gray-300 text-xl font-light leading-relaxed max-w-xl tracking-tight">
+              <p className="text-gray-700 text-xl font-light leading-relaxed max-w-xl tracking-tight">
                 {d.hero.description}
               </p>
             </motion.div>
@@ -89,10 +89,10 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               {d.stats.map((s: Stat) => (
                 <div
                   key={s.label}
-                  className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-[2.5rem] p-10 text-center group hover:border-blue-500/50 transition-colors duration-500 shadow-2xl"
+                  className="bg-white border border-gray-200 backdrop-blur-xl rounded-[2.5rem] p-10 text-center group hover:border-blue-400 transition-colors duration-500 shadow-2xl"
                 >
-                  <p className="text-5xl font-black text-white mb-2 tracking-tighter group-hover:text-blue-400 transition-colors">{s.value}</p>
-                  <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{s.label}</p>
+                  <p className="text-5xl font-black text-gray-900 mb-2 tracking-tighter group-hover:text-blue-600 transition-colors">{s.value}</p>
+                  <p className="text-[10px] text-gray-600 font-bold uppercase tracking-widest">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -283,7 +283,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
                           <h3 className="text-2xl font-black text-gray-900 leading-tight">
                             {p.name}
                           </h3>
-                          <p className="text-xs text-gray-400 font-light">{p.fullName}</p>
+                          <p className="text-xs text-gray-600 font-light">{p.fullName}</p>
                         </div>
                       </div>
                       <span
@@ -307,7 +307,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
                         href={p.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors"
+                        className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-gray-700 transition-colors"
                       >
                         Website <ExternalLink className="w-3 h-3" />
                       </a>
@@ -322,14 +322,14 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
 
       {/* ── CTA Liên hệ ─────────────────────────────────────────────── */}
       <section className="bg-white py-24 px-6 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto w-full bg-gray-900 rounded-[3.5rem] p-12 md:p-16 text-center space-y-10 relative overflow-hidden shadow-2xl">
+        <div className="max-w-4xl mx-auto w-full bg-gradient-to-br from-blue-600 to-indigo-600 rounded-[3.5rem] p-12 md:p-16 text-center space-y-10 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
           
           <div className="space-y-6 relative z-10">
             <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
               {d.cta.title}
             </h2>
-            <p className="text-gray-400 font-light text-lg max-w-xl mx-auto">
+            <p className="text-blue-100 font-light text-lg max-w-xl mx-auto">
               {d.cta.description}
             </p>
           </div>
@@ -361,7 +361,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
             </Link>
           </div>
 
-          <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-500 relative z-10">
+          <div className="pt-8 border-t border-blue-500/20 flex flex-col sm:flex-row gap-6 justify-center text-sm text-blue-100 relative z-10">
             <span className="flex items-center gap-2 justify-center">
               <MapPin className="w-4 h-4" />
               {dict.footer.hqAddress}

@@ -33,7 +33,7 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
           
           <div className="flex flex-col gap-4">
             <div className="bg-white p-5 rounded-2xl shadow-md border border-blue-100 flex items-center gap-4 hover:border-blue-300 transition-colors">
-              <div className="bg-blue-900 text-white p-3 rounded-xl shadow-inner">
+              <div className="bg-blue-600 text-white p-3 rounded-xl shadow-inner">
                 <Server className="w-6 h-6" />
               </div>
               <div>
@@ -43,7 +43,7 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
             </div>
 
             <div className="bg-white p-5 rounded-2xl shadow-md border border-blue-100 flex items-center gap-4 hover:border-blue-300 transition-colors">
-              <div className="bg-blue-700 text-white p-3 rounded-xl shadow-inner">
+              <div className="bg-blue-600 text-white p-3 rounded-xl shadow-inner">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>

@@ -40,9 +40,9 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
   );
 
   return (
-    <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
+    <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden bg-white">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-44 pb-20 px-6 overflow-hidden bg-[#020617]">
+      <section className="relative pt-44 pb-20 px-6 overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
         <NeuralNetworkBackground />
         
         {/* Glows */}
@@ -53,7 +53,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-300 tracking-[0.4em] uppercase shadow-2xl"
+            className="inline-block bg-blue-100 border border-blue-300 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-700 tracking-[0.4em] uppercase shadow-2xl"
           >
             {d.hero.badge}
           </motion.div>
@@ -62,10 +62,10 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-black text-slate-200 tracking-tight leading-none"
+            className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight leading-none"
           >
             {d.hero.title} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
               {d.hero.subtitle}
             </span>
           </motion.h1>
@@ -74,7 +74,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto"
+            className="text-gray-700 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto"
           >
             {d.hero.description}
           </motion.p>
@@ -94,7 +94,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
               placeholder={lang === 'vi' ? 'Tìm kiếm câu hỏi...' : 'Search questions...'}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 backdrop-blur-xl rounded-full py-5 pl-16 pr-8 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-light"
+              className="w-full bg-white border border-gray-300 backdrop-blur-xl rounded-full py-5 pl-16 pr-8 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-light"
             />
           </motion.div>
         </div>
@@ -175,21 +175,21 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
       </section>
 
       {/* ── CTA ────────────────────────────────────────────────────── */}
-      <section className="bg-[#020617] py-12 px-6 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-600 to-indigo-600 py-12 px-6 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
         
         <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
-          <div className="inline-flex items-center gap-2 text-blue-400 bg-blue-400/10 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 text-white bg-blue-500/30 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">
             <MessageSquare className="w-4 h-4" />
             {d.cta.title}
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-black text-slate-200 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
             {d.cta.title}
           </h2>
           
-          <p className="text-gray-400 font-light text-lg md:text-xl max-w-xl mx-auto">
+          <p className="text-white font-light text-lg md:text-xl max-w-xl mx-auto">
             {d.cta.description}
           </p>
 

@@ -228,14 +228,14 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                        <MousePointer2 className="w-4 h-4" /> {isEn ? "Hover stage to inspect technical logic" : "Di chuột vào quy trình để xem chi tiết kỹ thuật"}
                     </p>
                   ) : activeStep === 1 ? (
-                    <p className="text-blue-200 font-light leading-relaxed">
+                    <p className="text-blue-600 font-light leading-relaxed">
                        {isEn 
                          ? "Plain executable files (Win/Linux/Android) contain raw logic. Vulnerable to reverse engineering and illicit modification."
                          : "Tệp tin thực thi (Win/Linux/Android) chưa được bảo vệ, dễ bị dịch ngược mã nguồn và thay đổi logic trái phép."
                        }
                     </p>
                   ) : activeStep === 2 ? (
-                    <p className="text-blue-200 font-light leading-relaxed">
+                    <p className="text-blue-600 font-light leading-relaxed">
                        {isEn 
                          ? "Multi-layered encryption wrapper. Prevents debugging, patching, and data dumping using proprietary Thales obfuscation algorithms."
                          : "Lớp bao bọc đa tầng mã hóa. Tự động ngăn chặn Debugger, Patching và trích xuất dữ liệu bằng thuật toán của Thales."
@@ -297,11 +297,11 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             <div className="grid grid-cols-2 gap-6">
                <div className="bg-white rounded-3xl p-10 space-y-2 border border-red-50 shadow-xl shadow-red-900/5">
                   <span className="text-4xl font-black text-gray-900">$46B+</span>
-                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{isEn ? "Global Piracy Cost" : "Thiệt hại toàn cầu"}</p>
+                  <p className="text-[10px] text-gray-600 uppercase font-black tracking-widest">{isEn ? "Global Piracy Cost" : "Thiệt hại toàn cầu"}</p>
                </div>
                <div className="bg-white rounded-3xl p-10 space-y-2 lg:translate-y-12 border border-gray-100 shadow-xl shadow-gray-200/40">
                   <span className="text-4xl font-black text-gray-900">57%</span>
-                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{isEn ? "Hacked Apps Rate" : "Tỷ lệ app bị hack"}</p>
+                  <p className="text-[10px] text-gray-600 uppercase font-black tracking-widest">{isEn ? "Hacked Apps Rate" : "Tỷ lệ app bị hack"}</p>
                </div>
             </div>
          </div>

@@ -9,6 +9,8 @@ import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import IntegritySeal from "@/components/IntegritySeal";
 import { motion } from "framer-motion";
 import NewsSection from "@/components/NewsSection";
+import PainPointsSection from "@/components/PainPointsSection";
+import TrustMetrics from "@/components/TrustMetrics";
 
 interface HomePageClientProps {
   lang: string;
@@ -17,6 +19,8 @@ interface HomePageClientProps {
     trust: any;
     solutions: any;
     homeNews?: any;
+    painPoints: any;
+    trustMetrics: any;
   };
   latestNews: {
     id: string;
@@ -33,7 +37,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
     <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
       {/* Hero Section */}
-      <section className="relative pt-16 md:pt-24 pb-10 px-6 min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-[#020617]">
+      <section className="relative pt-16 md:pt-24 pb-10 px-6 min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
         <NeuralNetworkBackground />
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
@@ -46,7 +50,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
             className="group relative inline-block"
           >
             <div className="absolute inset-0 bg-blue-400 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity animate-pulse"></div>
-            <div className="relative overflow-hidden bg-blue-900/30 backdrop-blur-xl border border-blue-400/40 rounded-full px-8 py-2.5 text-[11px] font-black text-blue-200 tracking-[0.3em] shadow-2xl uppercase">
+            <div className="relative overflow-hidden bg-blue-100 backdrop-blur-xl border border-blue-300 rounded-full px-8 py-2.5 text-[11px] font-black text-blue-700 tracking-[0.3em] shadow-2xl uppercase">
               <span className="relative z-10 font-black">{dict.hero.badge}</span>
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-blue-400/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
             </div>
@@ -56,11 +60,11 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.2] md:leading-[1] text-white"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.2] md:leading-[1] text-gray-900"
           >
             {dict.hero.title} <br />
             <span className="relative inline-block pb-4">
-              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300 drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
+              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
                 {dict.hero.subtitle}
               </span>
               <motion.span
@@ -76,10 +80,31 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed tracking-tight mb-8"
+            className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed tracking-tight mb-8"
           >
             {dict.hero.description}
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <Link
+              href={`/${lang}/contact`}
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black text-sm tracking-widest uppercase px-8 py-4 rounded-full shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105"
+            >
+              {dict.hero.cta1}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href={`/${lang}/whitepaper`}
+              className="inline-flex items-center gap-2 border border-blue-400/40 hover:border-blue-400/80 text-blue-600 hover:text-blue-700 font-black text-sm tracking-widest uppercase px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105"
+            >
+              {dict.hero.cta2}
+            </Link>
+          </motion.div>
           
           <div className="pt-8">
             <IntegritySeal />
@@ -88,23 +113,29 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       </section>
 
       {/* Trust & Confidentiality Section */}
-      <section className="border-b border-white/5 bg-[#020617] py-8 relative overflow-hidden">
+      <section className="border-b border-gray-200 bg-white py-8 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 text-center space-y-8">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-slate-300 font-black text-xs md:text-sm tracking-[0.4em] uppercase">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-gray-700 font-black text-xs md:text-sm tracking-[0.4em] uppercase">
             {dict.trust.sectors.map((sector: string) => (
               <div key={sector} className="hover:text-blue-400 transition-colors cursor-default">{sector}</div>
             ))}
           </div>
 
           <div className="flex items-center justify-center gap-4 text-gray-600">
-            <div className="h-px w-12 bg-white/10"></div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] italic text-blue-300">
+            <div className="h-px w-12 bg-gray-300"></div>
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] italic text-blue-600">
               {dict.trust.commitment}
             </p>
-            <div className="h-px w-12 bg-white/10"></div>
+            <div className="h-px w-12 bg-gray-300"></div>
           </div>
         </div>
       </section>
+
+      {/* Pain Points Section */}
+      <PainPointsSection dict={dict} />
+
+      {/* Trust Metrics Section */}
+      <TrustMetrics dict={dict} />
 
       {/* Main Content Sections */}
       <section className="section-padding bg-white">

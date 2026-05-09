@@ -64,9 +64,9 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
   ];
 
   return (
-    <main className="bg-slate-50 min-h-screen">
+    <main className="bg-white min-h-screen">
       {/* Header Area */}
-      <div className="relative bg-[#020617] pt-48 pb-32 px-6 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 pt-48 pb-32 px-6 overflow-hidden">
         <NeuralNetworkBackground />
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[150px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[150px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
@@ -77,23 +77,23 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[10px] font-black text-blue-300 tracking-[0.4em] uppercase"
+                className="inline-block bg-blue-100 border border-blue-300 backdrop-blur-md rounded-full px-5 py-2 text-[10px] font-black text-blue-700 tracking-[0.4em] uppercase"
               >
                 {d.badge}
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9]"
+                className="text-5xl md:text-8xl font-black text-gray-900 tracking-tighter leading-[0.9]"
               >
                 {d.titlePart1} <br />
-                <span className="text-blue-500">{d.titlePart2}</span>
+                <span className="text-blue-600">{d.titlePart2}</span>
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-gray-400 text-lg md:text-2xl font-light leading-relaxed max-w-xl tracking-tight"
+                className="text-gray-700 text-lg md:text-2xl font-light leading-relaxed max-w-xl tracking-tight"
               >
                 {d.description}
               </motion.p>
@@ -131,7 +131,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
       </section>
 
       {/* Case Studies Grid */}
-      <section className="max-w-7xl mx-auto py-10 px-6 bg-slate-50">
+      <section className="max-w-7xl mx-auto py-10 px-6 bg-white">
         <div className="grid grid-cols-1 gap-12">
           {(Array.isArray(projectsData) ? projectsData : []).map((project, index) => {
             const Icon = iconMap[project.industry] || Shield;
@@ -174,7 +174,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
 
                   {/* Right Column: Content Sections */}
                   <div className="lg:col-span-12">
-                     <p className="text-center text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-8">Architectural Blueprint</p>
+                     <p className="text-center text-xs font-black uppercase tracking-[0.2em] text-gray-600 mb-8">Architectural Blueprint</p>
                      
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
                         <div className="hidden md:block absolute top-1/2 left-1/2 w-8 h-px bg-gray-200 -translate-x-1/2 -translate-y-1/2"></div>
@@ -216,13 +216,13 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 px-6 relative overflow-hidden">
+      <section className="py-12 px-6 relative overflow-hidden bg-white">
         <NeuralNetworkBackground />
-        <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">
+        <div className="max-w-4xl mx-auto p-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-[3.5rem] text-center space-y-8 relative overflow-hidden group shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
           
-          <h2 className="text-4xl font-black tracking-tighter text-slate-200">{d.cta.title}</h2>
-          <p className="text-blue-100 opacity-80 font-light text-lg">
+          <h2 className="text-4xl font-black tracking-tighter text-white">{d.cta.title}</h2>
+          <p className="text-white font-light text-lg">
             {d.cta.description}
           </p>
           <div className="flex flex-wrap justify-center gap-4">

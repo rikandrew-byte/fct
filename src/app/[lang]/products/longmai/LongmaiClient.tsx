@@ -294,12 +294,12 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
                <div className="bg-white rounded-3xl p-10 space-y-2 border border-gray-100 shadow-xl shadow-gray-200/40">
                   <KeyRound className="w-8 h-8 text-rose-600 mb-4" />
                   <span className="text-2xl font-black text-gray-900">PKCS#11</span>
-                  <p className="text-[10px] text-gray-400 uppercase font-black">{isEn ? "Enterprise Standard" : "Tiêu chuẩn Doanh nghiệp"}</p>
+                  <p className="text-[10px] text-gray-600 uppercase font-black">{isEn ? "Enterprise Standard" : "Tiêu chuẩn Doanh nghiệp"}</p>
                </div>
                <div className="bg-white rounded-3xl p-10 space-y-2 lg:translate-y-12 border border-gray-100 shadow-xl shadow-gray-200/40">
                   <CheckCircle2 className="w-8 h-8 text-emerald-600 mb-4" />
                   <span className="text-2xl font-black text-gray-900">FIPS 140-2</span>
-                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{isEn ? "Gov Certification" : "Chứng nhận Chính phủ"}</p>
+                  <p className="text-[10px] text-gray-600 uppercase font-black tracking-widest">{isEn ? "Gov Certification" : "Chứng nhận Chính phủ"}</p>
                </div>
             </div>
          </div>

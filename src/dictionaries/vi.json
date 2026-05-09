@@ -47,10 +47,12 @@
     "contact": "Liên hệ"
   },
   "hero": {
-    "badge": "🛡️ CHUYÊN GIA BẢO MẬT & BẢN QUYỀN PHẦN MỀM",
-    "title": "Giải pháp Công nghệ",
-    "subtitle": "Toàn diện & Đột phá",
-    "description": "Hệ sinh thái sản phẩm từ các thương hiệu công nghệ hàng đầu thế giới, thiết kế để bảo vệ tài sản doanh nghiệp trong kỷ nguyên số."
+    "badge": "ĐỐI TÁC BẢO MẬT CHIẾN LƯỢC",
+    "title": "Lá Chắn Bảo Mật Lõi",
+    "subtitle": "Cho Hạ Tầng Số Trọng Yếu",
+    "description": "Cung cấp giải pháp HSM, mã hóa dữ liệu OT và chống dịch ngược ứng dụng. Chúng tôi bảo vệ tài sản số cho Ngân hàng, Nhà máy và Doanh nghiệp với công nghệ từ Thales, Guardsquare và Canary Labs.",
+    "cta1": "Yêu cầu Tư vấn Giải pháp",
+    "cta2": "Tải Sách trắng Chuyên sâu"
   },
   "trust": {
     "sectors": [
@@ -397,6 +399,56 @@
       "ctaCall": "Gọi ngay",
       "ctaZalo": "Chat qua Zalo"
     }
+  },
+  "trustMetrics": {
+    "title": "Năng Lực Triển Khai Cấp Độ Doanh Nghiệp",
+    "subtitle": "Không thỏa hiệp với rủi ro. Các giải pháp của FCT đáp ứng những tiêu chuẩn khắt khe nhất của ngành tài chính và công nghiệp nặng.",
+    "metrics": [
+      {
+        "value": "FIPS 140-2",
+        "label": "Level 3",
+        "description": "Tiêu chuẩn bảo mật phần cứng quân sự. 100% hệ thống HSM Thales do FCT cung cấp đều đạt chuẩn quốc tế cao nhất."
+      },
+      {
+        "value": "Top Tier",
+        "label": "Financial Institutions",
+        "description": "Đối tác bảo vệ ứng dụng Mobile Banking (RASP) và hệ thống Ký số CA cho các tổ chức tài chính hàng đầu khu vực."
+      },
+      {
+        "value": "1.5 Triệu",
+        "label": "Tags/Giây",
+        "description": "Tốc độ ghi dữ liệu OT thời gian thực với giải pháp Canary Historian. Cam kết Zero Data Loss (Không mất mát dữ liệu)."
+      },
+      {
+        "value": "Zero-Day",
+        "label": "Protection",
+        "description": "Mã hóa vỏ bọc (Envelope) và cấp phép thông minh (Sentinel), ngăn chặn triệt để kỹ thuật dịch ngược và Crack phần mềm."
+      }
+    ]
+  },
+  "painPoints": {
+    "title": "Những Lỗ Hổng Chết Người Đang Bóp Nghẹt Doanh Nghiệp Của Bạn",
+    "subtitle": "Thiệt hại hàng tỷ đồng, khủng hoảng truyền thông và đình trệ sản xuất chỉ bắt đầu từ một điểm yếu bảo mật duy nhất. Bạn đang đối mặt với rủi ro nào?",
+    "cards": [
+      {
+        "tag": "Ngân Hàng & Fintech",
+        "title": "App bị Dịch ngược & Mã độc Overlay",
+        "pain": "Mã nguồn bị bung, API Key bị lộ. Hacker dùng màn hình phủ (Overlay) để đánh cắp tài khoản và OTP của người dùng ngay trên điện thoại.",
+        "consequence": "Ngân hàng mất tiền, khách hàng kiện cáo, thiệt hại không thể đo đếm về uy tín."
+      },
+      {
+        "tag": "Nhà máy & SCADA",
+        "title": "Quá tải Cơ sở dữ liệu SQL",
+        "pain": "Sử dụng SQL Server truyền thống để gánh hàng trăm ngàn điểm dữ liệu mỗi giây từ cảm biến công nghiệp, dẫn đến treo máy chủ và rớt nhịp dữ liệu.",
+        "consequence": "Mù thông tin vận hành, không thể phân tích nguyên nhân gốc rễ khi dây chuyền gặp sự cố."
+      },
+      {
+        "tag": "Phát triển Phần mềm - ISV",
+        "title": "Bị Crack & Thất thoát Bản quyền",
+        "pain": "Chỉ sử dụng công cụ làm rối mã (Obfuscator) yếu ớt. Phần mềm vừa tung ra thị trường đã xuất hiện bản bẻ khóa tràn lan.",
+        "consequence": "Chất xám bị đánh cắp trắng trợn, doanh thu phần mềm bốc hơi không kiểm soát."
+      }
+    ]
   },
   "contactModal": {
     "title": "Nhận Tư Vấn Miễn Phí",

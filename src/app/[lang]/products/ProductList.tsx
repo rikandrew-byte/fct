@@ -169,7 +169,7 @@ export default function ProductList({ lang }: ProductListProps) {
       {/* ── Search + Filter Bar ───────────────────────────────────────── */}
       <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-white p-4 rounded-3xl border border-gray-100 shadow-sm sticky top-24 z-20">
         <div className="relative w-full md:max-w-md">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
           <input
             id="product-search"
             type="text"
@@ -211,7 +211,7 @@ export default function ProductList({ lang }: ProductListProps) {
       </div>
 
       {/* Product count */}
-      <p className="text-sm text-gray-400 font-light -mt-4">
+      <p className="text-sm text-gray-600 font-light -mt-4">
         {isEn ? "Showing " : "Hiển thị "}
         <span className="font-semibold text-gray-700">{filteredProducts.length}</span>{" "}
         {isEn ? "products" : "sản phẩm"}
@@ -311,7 +311,7 @@ export default function ProductList({ lang }: ProductListProps) {
                       className={`flex items-center gap-1.5 text-sm font-bold transition-colors ${
                         isExpanded
                           ? cfg?.iconColor ?? "text-blue-800"
-                          : `text-gray-400 hover:${cfg?.iconColor ?? "text-blue-800"}`
+                          : `text-gray-600 hover:${cfg?.iconColor ?? "text-blue-800"}`
                       }`}
                     >
                       {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "View summary" : "Xem tóm tắt")}
@@ -345,7 +345,7 @@ export default function ProductList({ lang }: ProductListProps) {
         </div>
       ) : (
         <div className="py-20 text-center space-y-4">
-          <div className="w-16 h-16 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <Search className="w-8 h-8" />
           </div>
           <p className="text-gray-500 font-light text-lg">

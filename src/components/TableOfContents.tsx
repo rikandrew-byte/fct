@@ -87,7 +87,7 @@ export default function TableOfContents({ content }: { content: string }) {
                   className={`text-[11px] transition-all duration-300 block pl-4 tracking-tight leading-snug ${
                     isActive 
                       ? "text-blue-600 font-bold translate-x-1" 
-                      : "text-gray-400 hover:text-gray-600 font-medium"
+                      : "text-gray-600 hover:text-gray-700 font-medium"
                   }`}
                   onClick={(e) => {
                     e.preventDefault();

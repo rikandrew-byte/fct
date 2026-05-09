@@ -273,11 +273,11 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
             <div className="grid grid-cols-2 gap-6">
                <div className="bg-white rounded-3xl p-10 space-y-2 border border-gray-100 shadow-xl shadow-gray-200/40">
                   <span className="text-4xl font-black text-gray-900">Top 3</span>
-                  <p className="text-[10px] text-gray-400 uppercase font-black">{isEn ? "Cyber Threats" : "Mối đe dọa hàng đầu"}</p>
+                  <p className="text-[10px] text-gray-600 uppercase font-black">{isEn ? "Cyber Threats" : "Mối đe dọa hàng đầu"}</p>
                </div>
                <div className="bg-white rounded-3xl p-10 space-y-2 lg:translate-y-12 border border-gray-100 shadow-xl shadow-gray-200/40">
                   <span className="text-4xl font-black text-gray-900">100%</span>
-                  <p className="text-[10px] text-gray-400 uppercase font-black tracking-widest">{isEn ? "OWASP Coverage" : "Chống lại chuẩn OWASP"}</p>
+                  <p className="text-[10px] text-gray-600 uppercase font-black tracking-widest">{isEn ? "OWASP Coverage" : "Chống lại chuẩn OWASP"}</p>
                </div>
             </div>
          </div>

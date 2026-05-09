@@ -33,10 +33,12 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "🛡️ SECURITY & SOFTWARE LICENSING SPECIALIST",
-    "title": "Comprehensive & Breakthrough",
-    "subtitle": "Technology Solutions",
-    "description": "A product ecosystem from the world's leading technology brands, designed to protect corporate assets in the digital era."
+    "badge": "🛡️ STRATEGIC SECURITY PARTNER",
+    "title": "Core Security Shield",
+    "subtitle": "For Critical Digital Infrastructure",
+    "description": "Providing HSM solutions, OT data encryption, and application anti-reverse engineering. We protect digital assets for Banks, Factories, and Enterprises with technology from Thales, Guardsquare, and Canary Labs.",
+    "cta1": "Request a Solution Consultation",
+    "cta2": "Download In-Depth Whitepaper"
   },
   "trust": {
     "sectors": ["Banking", "Government", "Finance", "Cybersecurity", "Digital Infrastructure"],
@@ -329,6 +331,56 @@
       "ctaCall": "Call Now",
       "ctaZalo": "Chat via Zalo"
     }
+  },
+  "trustMetrics": {
+    "title": "Enterprise-Grade Security Deployment Capabilities",
+    "subtitle": "No compromise on risk. FCT's solutions meet the most stringent standards of the financial and heavy industry sectors.",
+    "metrics": [
+      {
+        "value": "FIPS 140-2",
+        "label": "Level 3",
+        "description": "Military-grade hardware security standard. 100% of Thales HSM systems supplied by FCT meet the highest international certification."
+      },
+      {
+        "value": "Top Tier",
+        "label": "Financial Institutions",
+        "description": "Partner protecting Mobile Banking applications (RASP) and CA Digital Signature systems for leading regional financial organizations."
+      },
+      {
+        "value": "1.5 Million",
+        "label": "Tags/Second",
+        "description": "Real-time OT data write speed with Canary Historian solution. Committed to Zero Data Loss guarantee."
+      },
+      {
+        "value": "Zero-Day",
+        "label": "Protection",
+        "description": "Envelope encryption and intelligent licensing (Sentinel), completely blocking reverse engineering and software cracking techniques."
+      }
+    ]
+  },
+  "painPoints": {
+    "title": "Critical Vulnerabilities Strangling Your Business",
+    "subtitle": "Billions in losses, PR crises, and production shutdowns all start from a single security weakness. Which risk are you facing?",
+    "cards": [
+      {
+        "tag": "Banking & Fintech",
+        "title": "App Reverse Engineering & Overlay Malware",
+        "pain": "Source code exposed, API Keys leaked. Hackers use Overlay screens to steal account credentials and OTPs directly on users' phones.",
+        "consequence": "Banks lose money, customers file lawsuits, and reputational damage becomes immeasurable."
+      },
+      {
+        "tag": "Factory & SCADA",
+        "title": "SQL Database Overload",
+        "pain": "Using traditional SQL Server to handle hundreds of thousands of data points per second from industrial sensors, causing server crashes and data loss.",
+        "consequence": "Blind operational visibility, unable to perform Root Cause Analysis when the production line fails."
+      },
+      {
+        "tag": "Software Development - ISV",
+        "title": "Cracked & Revenue Leakage",
+        "pain": "Relying only on weak obfuscation tools. Software hits the market and cracked versions (Keygen) spread immediately.",
+        "consequence": "Intellectual property stolen outright, software revenue evaporates without control."
+      }
+    ]
   },
   "contactModal": {
     "title": "Get Free Consultation",
