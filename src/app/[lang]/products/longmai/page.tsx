@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: isEn ? "Longmai - The Hardware Fortress" : "Longmai - Pháo đài Phần cứng",
     description: isEn 
       ? "Secure 2FA authentication, digital signatures, and hardware-level encryption with Longmai SmartX tokens." 
-      : "Xác thực 2 lớp (2FA), chữ ký số và mã hóa cấp độ phần cứng an toàn tuyệt đối với token Longmai SmartX.",
+      : "Xác thực 2 lớp (2FA), chữ ký số và mã hóa cấp độ phần cứng với token Longmai SmartX đạt chuẩn FIPS 140-2 Level 3.",
     openGraph: {
       title: isEn ? "Longmai Hardware Security - FCT Vinh Thinh" : "Bảo mật phần cứng Longmai - FCT Vĩnh Thịnh",
       images: ["/images/products/longmai-smartx3.jpg"],

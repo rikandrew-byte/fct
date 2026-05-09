@@ -5,8 +5,8 @@
     "copyright": "© 2026 FCT Vinh Thinh .,JSC. All rights reserved.",
     "online": "online",
     "total": "Total",
-    "getAdvice": "Get Advice",
-    "getAdviceNow": "Get Advice Now",
+    "getAdvice": "Discuss System Requirements",
+    "getAdviceNow": "Discuss System Requirements",
     "metaTitle": "FCT Vinh Thinh .,JSC | Cybersecurity Experts & Core Tech Solutions",
     "metaDescription": "FCT Vinh Thinh — Official distribution partner for Thales, Guardsquare, and Canary Labs in Vietnam. Over 10 years of experience in securing digital infrastructure.",
     "keywords": ["software protection", "licensing solutions", "Sentinel LDK", "Thales Sentinel Vietnam", "Guardsquare", "DexGuard", "iXGuard", "mobile app security", "2FA authentication", "Longmai mToken", "Canary Labs", "IIoT security", "FCT Vinh Thinh"]
@@ -37,7 +37,7 @@
     "title": "Core Security Shield",
     "subtitle": "For Critical Digital Infrastructure",
     "description": "Providing HSM solutions, OT data encryption, and application anti-reverse engineering. We protect digital assets for Banks, Factories, and Enterprises with technology from Thales, Guardsquare, and Canary Labs.",
-    "cta1": "Request a Solution Consultation",
+    "cta1": "Discuss System Requirements",
     "cta2": "Download In-Depth Whitepaper"
   },
   "trust": {
@@ -293,7 +293,7 @@
     "cta": {
       "title": "Ready to Secure Your Business Future?",
       "description": "Let FCT Vinh Thinh consult on the most in-depth transformation and security roadmap for you.",
-      "requestConsult": "Request Consultation",
+      "requestConsult": "Discuss System Requirements",
       "downloadProfile": "Download Profile"
     }
   },
@@ -304,7 +304,7 @@
     "cta": {
       "title": "Need deeper consultation on solutions?",
       "description": "FCT Vinh Thinh's technical team is always ready to help you select and implement the most optimal security solutions for your business.",
-      "contactNow": "Contact Now",
+      "contactNow": "Technical Discussion",
       "chatConsult": "Chat Consult"
     },
     "promo": {
@@ -326,8 +326,8 @@
       "email": "Email"
     },
     "form": {
-      "title": "Request Consultation",
-      "description": "Leave your information, and our expert team will contact you back within 24 working hours.",
+      "title": "Discuss System Requirements",
+      "description": "Leave your information, and our technical team will contact you within 24 working hours.",
       "ctaCall": "Call Now",
       "ctaZalo": "Chat via Zalo"
     }
@@ -414,8 +414,8 @@
     ]
   },
   "contactModal": {
-    "title": "Get Free Consultation",
-    "subtitle": "Our experts will contact you within 24h",
+    "title": "Discuss System Requirements",
+    "subtitle": "Our technical team will contact you within 24h",
     "success": {
       "title": "Submitted Successfully!",
       "message": "Thank you for your trust. We will respond as soon as possible.",

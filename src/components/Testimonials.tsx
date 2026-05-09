@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Hoàng Nguyễn",
     role: "CTO Ngân hàng số",
-    content: "Chúng tôi đã tin dùng DexGuard từ Guardsquare do FCT cung cấp để bảo vệ ứng dụng Mobile Banking. Giải pháp này giúp ngăn chặn tuyệt đối các nỗ lực dịch ngược và tấn công giả mạo, đảm bảo an toàn cho hàng triệu giao dịch mỗi ngày.",
+    content: "Chúng tôi đã tin dùng DexGuard từ Guardsquare do FCT cung cấp để bảo vệ ứng dụng Mobile Banking. Giải pháp này ngăn chặn các nỗ lực dịch ngược và tấn công giả mạo bằng cách mã hóa mã nguồn và phát hiện Overlay trong thời gian thực, bảo vệ hàng triệu giao dịch mỗi ngày.",
   },
   {
     name: "Trần Anh",
@@ -27,7 +27,7 @@ const testimonials = [
   {
     name: "Phạm Thành",
     role: "Trưởng phòng CNTT (Khối Nhà nước)",
-    content: "Chúng tôi đánh giá cao dòng sản phẩm Token PKI của Longmai do FCT phân phối. Sự ổn định và khả năng tương thích tuyệt vời với hệ thống chữ ký số hiện tại đã giúp quy trình hành chính công an toàn hơn bao giờ hết.",
+    content: "Chúng tôi đánh giá cao dòng sản phẩm Token PKI của Longmai do FCT phân phối. Sự ổn định và khả năng tương thích với hệ thống chữ ký số hiện tại đã giúp quy trình hành chính công được bảo vệ bằng tiêu chuẩn FIPS 140-2 Level 3.",
   },
   {
     name: "Nguyễn Hương",

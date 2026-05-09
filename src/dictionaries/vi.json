@@ -5,8 +5,8 @@
     "copyright": "© 2026 FCT Vinh Thinh .,JSC. Đã đăng ký bản quyền.",
     "online": "trực tuyến",
     "total": "Tổng",
-    "getAdvice": "Nhận tư vấn",
-    "getAdviceNow": "Nhận tư vấn ngay",
+    "getAdvice": "Thảo luận Bài toán",
+    "getAdviceNow": "Thảo luận Bài toán Hệ thống",
     "metaTitle": "FCT Vinh Thinh .,JSC | Chuyên gia Bảo mật & Giải pháp Công nghệ Lõi",
     "metaDescription": "FCT Vĩnh Thịnh — Đối tác phân phối chính thức giải pháp bảo mật từ Thales, Guardsquare, Canary Labs tại Việt Nam. Hơn 10 năm kinh nghiệm kiến tạo hạ tầng số an toàn.",
     "keywords": [
@@ -51,7 +51,7 @@
     "title": "Lá Chắn Bảo Mật Lõi",
     "subtitle": "Cho Hạ Tầng Số Trọng Yếu",
     "description": "Cung cấp giải pháp HSM, mã hóa dữ liệu OT và chống dịch ngược ứng dụng. Chúng tôi bảo vệ tài sản số cho Ngân hàng, Nhà máy và Doanh nghiệp với công nghệ từ Thales, Guardsquare và Canary Labs.",
-    "cta1": "Yêu cầu Tư vấn Giải pháp",
+    "cta1": "Thảo luận Bài toán Hệ thống",
     "cta2": "Tải Sách trắng Chuyên sâu"
   },
   "trust": {
@@ -62,7 +62,7 @@
       "An ninh mạng",
       "Hạ tầng số"
     ],
-    "commitment": "\"Cam kết bảo vệ tuyệt đối danh tính và dự án của khách hàng theo chính sách bảo mật (NDA Strict Policy)\""
+    "commitment": "\"Cam kết bảo vệ danh tính và dự án của khách hàng theo chính sách bảo mật (NDA Strict Policy) với tiêu chuẩn FIPS 140-2 Level 3\""
   },
   "about": {
     "badge": "Về Chúng Tôi",
@@ -87,7 +87,7 @@
   },
   "solutions": {
     "badge": "Hệ sinh thái giải pháp",
-    "title": "An tâm tuyệt đối với",
+    "title": "Bảo vệ Toàn diện với",
     "subtitle": "Công nghệ lõi",
     "newsLink": "Khám phá Tin tức",
     "mobileSecurity": {
@@ -180,7 +180,7 @@
       },
       {
         "question": "Công nghệ AppOnChip của Thales mang lại lợi ích gì cho nhà phát triển phần mềm?",
-        "answer": "AppOnChip là giải pháp bảo mật phần cứng tiên tiến nhất hiện nay. Nó cho phép nhà phát triển chọn lọc các đoạn mã logic quan trọng nhất của phần mềm để đóng gói và thực thi trực tiếp bên trong vi xử lý của khóa cứng Sentinel HL. Điều này tạo ra một bức tường bảo mật tuyệt đối, vì logic phần mềm sẽ không thể chạy nếu không có sự hiện diện và xử lý của chip bảo mật vật lý."
+        "answer": "AppOnChip là giải pháp bảo mật phần cứng tiên tiến. Nó cho phép nhà phát triển chọn lọc các đoạn mã logic quan trọng nhất của phần mềm để đóng gói và thực thi trực tiếp bên trong vi xử lý của khóa cứng Sentinel HL. Điều này tạo ra một bức tường bảo mật vật lý, vì logic phần mềm sẽ không thể chạy nếu không có sự hiện diện và xử lý của chip bảo mật phần cứng."
       }
     ],
     "cta": {
@@ -227,7 +227,7 @@
     "values": {
       "badge": "Giá trị cốt lõi",
       "title": "Tại sao chọn FCT Vĩnh Thịnh?",
-      "description": "Cam kết cung cấp giải pháp tốt nhất với dịch vụ hỗ trợ tận tâm nhất.",
+      "description": "Cam kết cung cấp giải pháp chuyên sâu với dịch vụ hỗ trợ kỹ thuật tận tâm.",
       "items": [
         {
           "title": "Chính hãng 100%",
@@ -361,7 +361,7 @@
     "cta": {
       "title": "Sẵn sàng bảo mật tương lai doanh nghiệp?",
       "description": "Hãy để FCT Vĩnh Thịnh tư vấn lộ trình chuyển đổi và bảo mật chuyên sâu nhất cho bạn.",
-      "requestConsult": "Gửi yêu cầu tư vấn",
+      "requestConsult": "Thảo luận Bài toán Hệ thống",
       "downloadProfile": "Tải hồ sơ năng lực"
     }
   },
@@ -372,7 +372,7 @@
     "cta": {
       "title": "Cần tư vấn sâu hơn về giải pháp?",
       "description": "Đội ngũ kỹ thuật của FCT Vĩnh Thịnh luôn sẵn sàng hỗ trợ bạn lựa chọn và triển khai các giải pháp bảo mật tối ưu nhất cho doanh nghiệp.",
-      "contactNow": "Liên hệ ngay",
+      "contactNow": "Trao đổi Kỹ thuật",
       "chatConsult": "Chat tư vấn"
     },
     "promo": {
@@ -394,8 +394,8 @@
       "email": "Email"
     },
     "form": {
-      "title": "Gửi yêu cầu tư vấn",
-      "description": "Để lại thông tin, đội ngũ chuyên gia của chúng tôi sẽ liên hệ lại trong vòng 24 giờ làm việc.",
+      "title": "Thảo luận Bài toán Hệ thống",
+      "description": "Để lại thông tin, đội ngũ kỹ thuật của chúng tôi sẽ liên hệ trong 24h làm việc.",
       "ctaCall": "Gọi ngay",
       "ctaZalo": "Chat qua Zalo"
     }
@@ -482,8 +482,8 @@
     ]
   },
   "contactModal": {
-    "title": "Nhận Tư Vấn Miễn Phí",
-    "subtitle": "Chuyên gia của chúng tôi sẽ liên hệ trong 24h",
+    "title": "Thảo luận Bài toán Hệ thống",
+    "subtitle": "Đội ngũ kỹ thuật sẽ liên hệ trong 24h",
     "success": {
       "title": "Gửi Thành Công!",
       "message": "Cảm ơn bạn đã tin tưởng. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.",

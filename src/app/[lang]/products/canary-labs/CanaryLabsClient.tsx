@@ -66,8 +66,8 @@ export default function CanaryLabsClient({ lang, dict }: CanaryLabsClientProps) 
           
           <p className="text-slate-400 text-xl font-light max-w-3xl mx-auto leading-relaxed">
             {isEn 
-              ? "The world's highest performing Industrial Data Historian. Optimized for over 35 years to handle millions of data points per second with total reliability."
-              : "Giải pháp Industrial Data Historian hiệu suất cao nhất thế giới. Được tối ưu hóa trong hơn 35 năm để xử lý hàng triệu điểm dữ liệu mỗi giây với độ tin cậy tuyệt đối."
+              ? "The world's leading Industrial Data Historian platform. Optimized over 35 years to handle 1.5 million data points per second with zero data loss guarantee."
+              : "Nền tảng Industrial Data Historian hàng đầu thế giới. Được tối ưu hóa trong hơn 35 năm để xử lý 1.5 triệu điểm dữ liệu mỗi giây với cam kết Zero Data Loss."
             }
           </p>
 
