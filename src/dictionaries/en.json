@@ -82,6 +82,10 @@
       "title": "FIPS-Certified Digital Signing",
       "description": "Hardware Tokens & PKI solutions certified to FIPS 140-2 Level 3, securing identity for Banking & Government."
     },
+    "longmaiSolution": {
+      "title": "Budget-Optimized Security Infrastructure",
+      "description": "Cost-effective PKI/HSM solution for mid-market enterprises. Fast deployment, simplified operations, no expert required."
+    },
     "ecosystem": {
       "title": "Explore FCT Ecosystem",
       "description": "Pioneering the protection of your digital economic infrastructure"

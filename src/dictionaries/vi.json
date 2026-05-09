@@ -102,6 +102,10 @@
       "title": "Xác Thực Ký Số FIPS",
       "description": "Khóa cứng (Hardware Token) và giải pháp PKI đạt chuẩn FIPS 140-2 Level 3, bảo vệ định danh cho Ngân hàng và Chính phủ."
     },
+    "longmaiSolution": {
+      "title": "Hạ tầng Bảo mật Tối ưu Ngân sách",
+      "description": "Giải pháp PKI/HSM chi phí hợp lý cho doanh nghiệp tầm trung. Triển khai nhanh, vận hành đơn giản, không cần chuyên gia."
+    },
     "ecosystem": {
       "title": "Xem Hệ sinh thái FCT",
       "description": "Tiên phong bảo vệ hạ tầng kinh tế số của bạn"

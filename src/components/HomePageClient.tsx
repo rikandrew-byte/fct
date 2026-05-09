@@ -12,6 +12,7 @@ import NewsSection from "@/components/NewsSection";
 import PainPointsSection from "@/components/PainPointsSection";
 import TrustMetrics from "@/components/TrustMetrics";
 import SecurityComparisonTable from "@/components/SecurityComparisonTable";
+import LongmaiSolutionBlock from "@/components/LongmaiSolutionBlock";
 
 interface HomePageClientProps {
   lang: string;
@@ -145,6 +146,9 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
 
       {/* Trust Metrics Section */}
       <TrustMetrics dict={dict} />
+
+      {/* Longmai Solution Block */}
+      <LongmaiSolutionBlock isEn={lang === "en"} lang={lang} />
 
       {/* Main Content Sections */}
       <section className="section-padding bg-white">
