@@ -19,6 +19,7 @@ import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
 import ContactModal from "@/components/ContactModal";
 import GuardsquareArchitecture from "@/components/GuardsquareArchitecture";
+import AppShieldingFlow from "@/components/AppShieldingFlow";
 
 interface GuardsquareClientProps {
   lang: string;
@@ -250,6 +251,17 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
               </Link>
             </div>
          </motion.div>
+      </section>
+
+      {/* ── 2.5. APP SHIELDING FLOW SECTION ────────────────── */}
+      <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
+         <div className="text-center mb-20 space-y-4">
+            <span className="text-sky-600 font-black text-xs uppercase tracking-[0.4em]">Application Hardening</span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
+              {isEn ? "App Shielding Pipeline" : "Quy trình Bảo vệ Ứng dụng"}
+            </h2>
+         </div>
+         <AppShieldingFlow isEn={isEn} />
       </section>
 
       {/* ── 3. ZONE 1: PAIN (Slate-50) ───────────────────────── */}

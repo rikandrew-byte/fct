@@ -21,6 +21,7 @@ import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
 import ContactModal from "@/components/ContactModal";
 import ProductArchitecture from "@/components/ProductArchitecture";
+import HsmArchitecture from "@/components/HsmArchitecture";
 
 interface ThalesSentinelClientProps {
   lang: string;
@@ -262,6 +263,17 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
               </Link>
             </div>
          </motion.div>
+      </section>
+
+      {/* ── 2.5. HSM ARCHITECTURE SECTION ────────────────── */}
+      <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
+         <div className="text-center mb-20 space-y-4">
+            <span className="text-blue-600 font-black text-xs uppercase tracking-[0.4em]">Cryptographic Infrastructure</span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
+              {isEn ? "HSM Security Architecture" : "Kiến trúc Bảo mật HSM"}
+            </h2>
+         </div>
+         <HsmArchitecture isEn={isEn} />
       </section>
 
       {/* ── 3. ZONE 1: PIRACY (Slate-50) ────────────────────── */}
