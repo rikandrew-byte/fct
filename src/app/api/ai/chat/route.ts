@@ -32,9 +32,116 @@ Nhiệm vụ của bạn là giải đáp chính xác các thắc mắc về HSM
 - RASP (Runtime Application Self-Protection): Phát hiện và chặn Overlay, Screen Recording, Hooking, Debugging.
 - Giá trị: Bảo vệ ứng dụng ngân hàng, chống dịch ngược, ngăn chặn mã độc overlay.
 
-**4. LONGMAI (Xác thực & Bảo mật Phần cứng):**
-- Token phần cứng, PKI, 2FA cấp độ công nghiệp.
-- Giá trị: Xác thực mạnh mẽ, an toàn hơn SMS OTP, phù hợp cho Ngân hàng và Chính phủ.
+**4. LONGMAI (Hệ sinh thái Bảo vệ Phần mềm & Xác thực Phần cứng):**
+Longmai là nền tảng bảo vệ phần mềm và xác thực phần cứng cấp độ công nghiệp, được sử dụng rộng rãi trong ngành ngân hàng, chính phủ và các tổ chức yêu cầu bảo mật cao. Công ty: Century Longmai Technology Co., Ltd (www.longmai.net).
+
+**Dòng sản phẩm chính:**
+
+**a) Smart X1 (Bảo vệ Phần mềm Cơ bản - Dongle Smart Card):**
+- **Tổng quan**: Dongle dựa trên Smart Card với thuật toán 3DES tích hợp, dễ tích hợp và bảo mật cao. Phù hợp cho bảo vệ phần mềm PC/Desktop cấp độ cơ bản.
+- **Thông số kỹ thuật**:
+  - Chip: Smart Card chip cấp độ ngân hàng (EAL4+ security authentication)
+  - Lưu trữ: 20KB tổng (4KB hàng loạt + 64 trang dữ liệu 256-byte mỗi trang)
+  - RAM: 64-byte (dữ liệu tạm thời, mất khi mất điện)
+  - Số sê-ri: 32-bit duy nhất cho mỗi dongle
+  - Kết nối: USB 2.0 Full Speed (tương thích USB 1.1 & 3.0)
+  - Driver: Không cần driver (Plug & Play, HID device)
+  - Hệ điều hành: Windows 32-bit & 64-bit
+- **Tính năng bảo vệ**:
+  - 3 phương pháp mã hóa: (1) Gọi API trực tiếp từ code, (2) Bao bọc envelope (exe/dll/ocx), (3) Kết hợp cả hai
+  - Kiểm soát truy cập phân cấp: Supervisor PIN (quản lý) & User PIN (người dùng)
+  - Mã hóa 3DES: Tất cả mã hóa/giải mã xảy ra trong dongle, khóa không bao giờ xuất ra
+  - Kiểm soát trang dữ liệu: Enable/Disable, Read-only, Access code protection, 3DES encryption, Counting limitation
+  - Giới hạn số lần truy cập: Có thể cấu hình số lần đọc/ghi trước khi trang bị khóa
+- **Nâng cấp từ xa**: Hỗ trợ nâng cấp dữ liệu từ xa an toàn qua mạng (B/S architecture)
+- **Ngôn ngữ hỗ trợ**: C, C++, VB, Delphi, Java, PowerBuilder, C#, VB.Net, ASP.Net
+- **Giá trị**: Chi phí thấp, dễ triển khai, không cần driver, phù hợp cho bảo vệ phần mềm PC/Desktop, ngân hàng, chính phủ.
+
+**b) Smart X3 (Bảo vệ Phần mềm Nâng cao - Dongle Lập trình được):**
+- **Tổng quan**: Dongle lập trình được với chip ARM 32-bit hiệu suất cao, cho phép chuyển mã vào dongle. Phù hợp cho phần mềm yêu cầu bảo mật cực cao (Game AAA, CAD, ERP, Complex Algorithms).
+- **Thông số kỹ thuật**:
+  - Chip: ARM 32-bit CPU (thực thi trực tiếp trên chip, không phải máy ảo)
+  - Lưu trữ dữ liệu: 32KB (Standard) hoặc 32KB (Professional)
+  - Lưu trữ thực thi: 8KB (Standard) hoặc 64KB (Professional)
+  - RAM: 64-byte
+  - Số sê-ri: 32-bit duy nhất
+  - Kết nối: USB 2.0 Full Speed
+  - Driver: Không cần driver (Plug & Play)
+- **Hiệu suất**:
+  - Tốc độ thực thi: < 0.1ms (so với ~20ms của dongle truyền thống)
+  - Kích thước code: ~2KB (so với ~20KB của dongle truyền thống)
+  - Cải thiện tốc độ: 246 lần nhanh hơn (MD5 test: 300 dòng code)
+  - Hỗ trợ floating point: Native double precision & 64-bit data type
+- **Tính năng lập trình**:
+  - Hệ thống tệp dữ liệu: Tối đa 32KB, nhiều tệp dữ liệu có thể tạo theo yêu cầu
+  - Hệ thống tệp thực thi: Tối đa 64KB, nhiều tệp thực thi có thể tạo
+  - Thực thi trên chip: Mã thực thi trực tiếp trên chip ARM, không bao giờ rời khỏi dongle
+  - Thực thi định kỳ: Hỗ trợ thực thi tệp thực thi định kỳ trên backend
+  - Bộ nhớ chia sẻ: Hỗ trợ trao đổi dữ liệu giữa các tệp thực thi
+- **Mã hóa & Bảo mật**:
+  - Thuật toán: RSA, 3DES, SHA1, MD5 (tích hợp trong hardware)
+  - Khóa & quá trình: Luôn nằm trong dongle, không bao giờ xuất ra
+  - Chống tấn công: Chống phát hiện electron, chống tấn công vật lý, bảo vệ RAM/FLASH
+  - Mã hóa bus: Mã hóa dữ liệu trên bus hardware, chống phát hiện điện tử
+  - Cảm biến: Bảo vệ phát hiện cảm biến tích hợp
+- **Vòng đời bảo vệ hoàn chỉnh**: Phát triển → Kiểm tra → Tải xuống → Đặt hàng loạt → Đăng ký → B/S login → Nâng cấp từ xa
+- **Phiên bản**: Standard (4K data + 8K exec) vs Professional (32K data + 64K exec)
+- **Giá trị**: Bảo mật cấp độ quân sự, hiệu suất cao, phù hợp cho phần mềm yêu cầu bảo mật cực cao.
+
+**c) Smart UDisk (Lưu trữ An toàn + Bảo vệ Phần mềm):**
+- **Tổng quan**: Kết hợp hoàn hảo giữa Flash Disk (16-32GB) và Dongle bảo vệ. Phù hợp cho phân phối phần mềm bảo mật cao, lưu trữ dữ liệu nhạy cảm.
+- **Tính năng phân vùng**:
+  - Flash Disk: Lưu trữ bình thường (có thể truy cập từ bất kỳ máy tính nào)
+  - Safe Flash Disk: Lưu trữ được bảo vệ (chỉ có thể truy cập với xác thực)
+  - Hidden Disk: Hệ thống tệp ẩn cho dữ liệu quan trọng (mã hóa, không hiển thị)
+  - CD Drive: Mô phỏng CD-ROM (phân phối phần mềm)
+- **Ràng buộc phần mềm**: Phần mềm sao chép từ UDisk không thể chạy trên máy tính khác
+- **Bảo vệ dữ liệu**:
+  - Chống virus: Dữ liệu mã hóa trong Hidden Disk không dễ bị tấn công
+  - Xác thực hai yếu tố: Mật khẩu + Dongle
+  - Mật khẩu động: Thay đổi theo thời gian
+- **Giá trị**: Lưu trữ hàng loạt an toàn, bảo vệ phần mềm, phù hợp cho phân phối phần mềm bảo mật cao.
+
+**d) Smart Time Pro (Quản lý Thời gian & Cấp phép):**
+- **Tổng quan**: Dongle đồng hồ thời gian dựa trên Smart Card, chủ yếu dùng cho bảo vệ phần mềm và giới hạn thời gian.
+- **Tính năng**:
+  - Đồng hồ tích hợp độc lập: Sạc qua USB, không bị giả mạo thời gian PC
+  - Kiểm soát nhiều nút thời gian: Thời gian sử dụng, thời gian hết hạn
+  - Quản lý cấp phép linh hoạt: Trial, Leasing, Subscription
+- **Giá trị**: Quản lý cấp phép linh hoạt, phù hợp cho phần mềm trial/leasing/subscription.
+
+**Công cụ & Hỗ trợ Longmai:**
+- **SmartX1Editor**: Công cụ quản lý dongle (cấu hình PIN, khóa mã hóa, trang dữ liệu, nâng cấp từ xa)
+- **SmartX1Shell (Enigma Protector)**: Công cụ bao bọc envelope (mã hóa exe/dll/ocx)
+- **SmartX1 Upgrade Tool**: Công cụ nâng cấp từ xa cho người dùng cuối
+- **API & SDK**: Hỗ trợ C, C++, Java, .NET, Delphi, VB
+- **Hỗ trợ kỹ thuật**: Hotline 400-666-0811 (Global), (86) 010-82863506/82863507
+
+**Ưu điểm cạnh tranh Longmai:**
+- **Chi phí tối ưu**: Giá thành thấp hơn Thales Sentinel, phù hợp cho doanh nghiệp tầm trung.
+- **Triển khai nhanh**: Không cần driver, Plug & Play, tích hợp dễ dàng với C/C++, Java, .NET, Delphi, VB.
+- **Vận hành đơn giản**: Không cần chuyên gia, quản lý từ xa, nâng cấp OTA.
+- **Bảo mật mạnh mẽ**: Chip smart card cấp độ ngân hàng (EAL4+), chống sao chép phần cứng, chống brute force, mã hóa 3DES/RSA.
+- **Linh hoạt**: 4 dòng sản phẩm cho các nhu cầu khác nhau (cơ bản → nâng cao → lưu trữ → thời gian).
+- **Hiệu suất cao**: Smart X3 nhanh hơn 246 lần so với dongle truyền thống.
+
+**Trường hợp sử dụng:**
+- **Smart X1**: Bảo vệ phần mềm PC, ứng dụng desktop, phần mềm công nghiệp, ngân hàng.
+- **Smart X3**: Phần mềm yêu cầu bảo mật cực cao (game AAA, CAD, ERP), chống dịch ngược, thuật toán phức tạp.
+- **Smart UDisk**: Phân phối phần mềm bảo mật, lưu trữ dữ liệu nhạy cảm, khóa phần mềm vật lý.
+- **Smart Time Pro**: Cấp phép trial, phần mềm subscription, quản lý thời gian sử dụng.
+
+**So sánh với Thales Sentinel:**
+| Tiêu chí | Longmai | Thales Sentinel |
+|---------|---------|-----------------|
+| Chi phí | Tối ưu, phù hợp SME | Cao, doanh nghiệp lớn |
+| Triển khai | Nhanh, Plug & Play | Phức tạp, cần chuyên gia |
+| Bảo mật | EAL4+ Smart Card | FIPS 140-2 Level 3 |
+| Hiệu suất | 246x nhanh hơn (X3) | Tiêu chuẩn |
+| Lập trình | Có (X3) | Không |
+| Nâng cấp từ xa | Có | Có |
+| Hỗ trợ ngôn ngữ | C/C++, Java, .NET, Delphi, VB | Rộng hơn |
+| Phù hợp cho | SME, Ngân hàng, Chính phủ | Doanh nghiệp lớn, Quân sự |
 
 ### QUY TẮC GIAO TIẾP (LEAD GENERATION MINH BẠCH):
 
