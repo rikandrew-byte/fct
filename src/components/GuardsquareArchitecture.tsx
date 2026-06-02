@@ -37,7 +37,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
             {/* Notch */}
             <div className="absolute top-1.5 w-8 h-1.5 bg-slate-800 rounded-full"></div>
           </div>
-          <div className="absolute -bottom-10 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full border border-slate-700 shadow-xl whitespace-nowrap">
+          <div className="absolute -bottom-10 bg-slate-800 text-white text-[10px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-slate-700 shadow-xl whitespace-nowrap">
             {isEn ? "Banking App" : "App Ngân Hàng"}
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         </motion.div>
         
         {/* Label for Inner Circle */}
-        <div className="absolute z-30 bottom-[20%] md:bottom-[25%] bg-rose-50 border border-rose-200 text-rose-700 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
+        <div className="absolute z-30 bottom-[20%] md:bottom-[25%] bg-rose-50 border border-rose-300 text-rose-700 text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
           {isEn ? "Static Shield (Obfuscation)" : "Lớp giáp Tĩnh (Làm rối mã)"}
         </div>
 
@@ -66,7 +66,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         <motion.div 
           animate={{ rotate: -360 }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] border-4 border-rose-600/20 rounded-full flex items-center justify-center z-10 shadow-[inset_0_0_50px_rgba(225,29,72,0.05)]"
+          className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] border-4 border-rose-500/20 rounded-full flex items-center justify-center z-10 shadow-[inset_0_0_50px_rgba(225,29,72,0.03)]"
         >
           {/* Shield Orbiters */}
           <div className="absolute -left-5 w-10 h-10 bg-rose-600 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(225,29,72,0.4)] text-white">
@@ -78,7 +78,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         </motion.div>
         
         {/* Label for Outer Circle */}
-        <div className="absolute z-30 top-[15%] md:top-[15%] bg-rose-600 border border-rose-700 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg shadow-rose-600/20 whitespace-nowrap">
+        <div className="absolute z-30 top-[15%] md:top-[15%] bg-rose-500 border border-rose-600 text-white text-[10px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md shadow-rose-500/20 whitespace-nowrap">
           {isEn ? "Dynamic RASP (Runtime)" : "Lớp giáp Động RASP"}
         </div>
 
@@ -87,11 +87,11 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
           initial={{ x: -150, y: -150, opacity: 0 }}
           animate={{ x: [-150, -60, -100], y: [-150, -60, -150], opacity: [0, 1, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeOut", repeatDelay: 1 }}
-          className="absolute top-1/2 left-1/2 -translate-x-[250px] -translate-y-[250px] z-40 text-slate-800"
+          className="absolute top-1/2 left-1/2 -translate-x-[250px] -translate-y-[250px] z-40 text-slate-700"
         >
           <div className="flex flex-col items-center">
             <Zap className="w-8 h-8 fill-amber-400 text-amber-500" />
-            <span className="text-[9px] font-black uppercase bg-slate-800 text-white px-2 py-0.5 rounded shadow mt-1">Hooking</span>
+            <span className="text-[9px] font-semibold uppercase bg-slate-800 text-white px-2 py-0.5 rounded shadow mt-1">Hooking</span>
           </div>
         </motion.div>
 
@@ -110,11 +110,11 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
           initial={{ x: 150, y: 150, opacity: 0 }}
           animate={{ x: [150, 60, 100], y: [150, 60, 150], opacity: [0, 1, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut", repeatDelay: 0.5 }}
-          className="absolute top-1/2 left-1/2 z-40 text-slate-800"
+          className="absolute top-1/2 left-1/2 z-40 text-slate-700"
         >
           <div className="flex flex-col items-center">
             <Zap className="w-8 h-8 fill-amber-400 text-amber-500 -rotate-180" />
-            <span className="text-[9px] font-black uppercase bg-slate-800 text-white px-2 py-0.5 rounded shadow mt-1">Overlay</span>
+            <span className="text-[9px] font-semibold uppercase bg-slate-800 text-white px-2 py-0.5 rounded shadow mt-1">Overlay</span>
           </div>
         </motion.div>
 

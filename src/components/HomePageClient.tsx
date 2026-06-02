@@ -95,14 +95,14 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
           >
             <Link
               href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black text-sm tracking-widest uppercase px-8 py-4 rounded-full shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm tracking-widest uppercase px-8 py-4 rounded-full shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105"
             >
               {dict.hero.cta1}
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href={`/${lang}/whitepaper`}
-              className="inline-flex items-center gap-2 border border-blue-400/40 hover:border-blue-400/80 text-blue-600 hover:text-blue-700 font-black text-sm tracking-widest uppercase px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 border border-blue-400/40 hover:border-blue-400/80 text-blue-600 hover:text-blue-700 font-semibold text-sm tracking-widest uppercase px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105"
             >
               {dict.hero.cta2}
             </Link>
@@ -117,7 +117,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       {/* Trust & Confidentiality Section */}
       <section className="border-b border-gray-200 bg-white py-8 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 text-center space-y-8">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-gray-700 font-black text-xs md:text-sm tracking-[0.4em] uppercase">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-gray-600 font-medium text-xs md:text-sm tracking-[0.3em] uppercase">
             {dict.trust.sectors.map((sector: string) => (
               <div key={sector} className="hover:text-blue-400 transition-colors cursor-default">{sector}</div>
             ))}
@@ -165,60 +165,86 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
 
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Item 1: Guardsquare */}
-          <Link href={`/${lang}/products/guardsquare`} className="group">
+        {/* Bento Grid: Thales (col-span-2) + Guardsquare (col-span-2) lớn, Longmai nhỏ */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Item 1: Guardsquare — Enterprise Priority, chiếm 2 cột */}
+          <Link href={`/${lang}/products/guardsquare`} className="group md:col-span-2">
             <motion.article
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="bg-blue-50 border border-blue-100 rounded-3xl p-10 h-full space-y-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="text-blue-600 group-hover:scale-110 transition-transform duration-500">
-                <ShieldAlert className="w-10 h-10 stroke-[1.5px]" />
+                <ShieldAlert className="w-12 h-12 stroke-[1.5px]" />
               </div>
-              <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-blue-600 transition-colors">{dict.solutions.mobileSecurity.title}</h3>
-              <p className="text-gray-600 text-sm font-light leading-relaxed">
+              <div className="space-y-1">
+                <span className="text-xs font-medium text-blue-500 uppercase tracking-widest">Enterprise Mobile Security</span>
+                <h3 className="text-3xl font-black text-gray-950 tracking-tighter group-hover:text-blue-600 transition-colors">{dict.solutions.mobileSecurity.title}</h3>
+              </div>
+              <p className="text-gray-600 text-base font-light leading-relaxed max-w-lg">
                 {dict.solutions.mobileSecurity.description}
               </p>
-            </motion.article>
-          </Link>
-
-          {/* Item 2: Thales */}
-          <Link href={`/${lang}/products/thales-sentinel`} className="group">
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="space-y-6"
-            >
-              <div className="text-indigo-600 group-hover:scale-110 transition-transform duration-500">
-                <ShieldCheck className="w-10 h-10 stroke-[1.5px]" />
+              <div className="flex items-center gap-2 text-blue-600 font-medium text-sm group-hover:gap-3 transition-all">
+                <span>{lang === "en" ? "Explore solution" : "Khám phá giải pháp"}</span>
+                <ArrowRight className="w-4 h-4" />
               </div>
-              <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-indigo-600 transition-colors">{dict.solutions.licenseManagement.title}</h3>
-              <p className="text-gray-600 text-sm font-light leading-relaxed">
-                {dict.solutions.licenseManagement.description}
-              </p>
             </motion.article>
           </Link>
 
-          {/* Item 3: Longmai */}
-          <Link href={`/${lang}/products/longmai`} className="group">
+          {/* Item 3: Longmai — Compact, chiếm 1 cột */}
+          <Link href={`/${lang}/products/longmai`} className="group md:col-span-1">
             <motion.article
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="space-y-6"
+              className="bg-rose-50 border border-rose-100 rounded-3xl p-8 h-full space-y-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="text-rose-600 group-hover:scale-110 transition-transform duration-500">
                 <Cpu className="w-10 h-10 stroke-[1.5px]" />
               </div>
-              <h3 className="text-2xl font-black text-gray-950 tracking-tighter group-hover:text-rose-600 transition-colors">{dict.solutions.hardwareSecurity.title}</h3>
+              <div className="space-y-1">
+                <span className="text-xs font-medium text-rose-500 uppercase tracking-widest">{lang === "en" ? "Flexible Alternative" : "Giải pháp Linh hoạt"}</span>
+                <h3 className="text-xl font-black text-gray-950 tracking-tighter group-hover:text-rose-600 transition-colors">{dict.solutions.hardwareSecurity.title}</h3>
+              </div>
               <p className="text-gray-600 text-sm font-light leading-relaxed">
                 {dict.solutions.hardwareSecurity.description}
               </p>
+              <div className="flex items-center gap-2 text-rose-600 font-medium text-sm group-hover:gap-3 transition-all">
+                <span>{lang === "en" ? "Learn more" : "Tìm hiểu thêm"}</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </motion.article>
+          </Link>
+
+          {/* Item 2: Thales — Enterprise Priority, chiếm full width */}
+          <Link href={`/${lang}/products/thales-sentinel`} className="group md:col-span-3">
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-indigo-50 border border-indigo-100 rounded-3xl p-10 space-y-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div className="flex items-start gap-6">
+                  <div className="text-indigo-600 group-hover:scale-110 transition-transform duration-500 mt-1">
+                    <ShieldCheck className="w-12 h-12 stroke-[1.5px]" />
+                  </div>
+                  <div className="space-y-2">
+                    <span className="text-xs font-medium text-indigo-500 uppercase tracking-widest">Enterprise License Management</span>
+                    <h3 className="text-3xl font-black text-gray-950 tracking-tighter group-hover:text-indigo-600 transition-colors">{dict.solutions.licenseManagement.title}</h3>
+                    <p className="text-gray-600 text-base font-light leading-relaxed max-w-2xl">
+                      {dict.solutions.licenseManagement.description}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-indigo-600 font-medium text-sm group-hover:gap-3 transition-all shrink-0">
+                  <span>{lang === "en" ? "Explore solution" : "Khám phá giải pháp"}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
             </motion.article>
           </Link>
         </div>

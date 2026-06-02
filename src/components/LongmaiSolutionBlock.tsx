@@ -78,7 +78,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
           viewport={{ once: true }}
           className="text-center mb-20 space-y-4"
         >
-          <span className="inline-block text-emerald-600 font-black text-xs uppercase tracking-[0.4em] bg-emerald-50 px-4 py-2 rounded-full">
+          <span className="inline-block text-emerald-600 font-semibold text-xs uppercase tracking-[0.4em] bg-emerald-50 px-4 py-2 rounded-full">
             {content.badge}
           </span>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-gray-900">
@@ -110,7 +110,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tight">
+                <h3 className="text-2xl font-semibold text-gray-900 tracking-tight">
                   {feature.title}
                 </h3>
 
@@ -147,7 +147,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
         >
           <Link
             href={`/${lang}/products/longmai`}
-            className="px-12 py-5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-emerald-600/30 flex items-center gap-3 group"
+            className="px-12 py-5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-2xl font-semibold text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-emerald-600/30 flex items-center gap-3 group"
           >
             {content.cta}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />

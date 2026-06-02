@@ -37,14 +37,14 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             transition={{ duration: 0.6 }}
             className="flex-1"
           >
-            <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8 space-y-4">
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 space-y-4 shadow-sm">
               <div className="flex items-center gap-3">
                 <Code className="w-6 h-6 text-blue-500" />
-                <h3 className="font-black text-white text-sm uppercase tracking-widest">
+                <h3 className="font-semibold text-slate-900 text-sm uppercase tracking-widest">
                   {labels.app}
                 </h3>
               </div>
-              <p className="text-slate-400 text-xs font-light">
+              <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "Transaction request from business logic"
                   : "Yêu cầu giao dịch từ logic nghiệp vụ"}
@@ -58,7 +58,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             transition={{ duration: 2, repeat: Infinity }}
             className="flex-shrink-0"
           >
-            <ArrowRight className="w-6 h-6 text-slate-500" />
+            <ArrowRight className="w-6 h-6 text-slate-400" />
           </motion.div>
 
           {/* Block 2: TLS Layer */}
@@ -69,14 +69,14 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex-1"
           >
-            <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8 space-y-4">
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 space-y-4 shadow-sm">
               <div className="flex items-center gap-3">
                 <Shield className="w-6 h-6 text-amber-500" />
-                <h3 className="font-black text-white text-sm uppercase tracking-widest">
+                <h3 className="font-semibold text-slate-900 text-sm uppercase tracking-widest">
                   {labels.tls}
                 </h3>
               </div>
-              <p className="text-slate-400 text-xs font-light">
+              <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "Encrypted tunnel (TLS 1.3)"
                   : "Đường hầm mã hóa (TLS 1.3)"}
@@ -90,7 +90,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
             className="flex-shrink-0"
           >
-            <ArrowRight className="w-6 h-6 text-slate-500" />
+            <ArrowRight className="w-6 h-6 text-slate-400" />
           </motion.div>
 
           {/* Block 3: HSM Firewall */}
@@ -101,15 +101,15 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex-1"
           >
-            <div className="bg-slate-900 border-2 border-rose-600 rounded-2xl p-8 space-y-4 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-600/5 to-transparent pointer-events-none" />
+            <div className="bg-white border-2 border-rose-400 rounded-2xl p-8 space-y-4 relative overflow-hidden shadow-sm">
+              <div className="absolute inset-0 bg-gradient-to-r from-rose-50 to-transparent pointer-events-none" />
               <div className="relative z-10 flex items-center gap-3">
                 <Lock className="w-6 h-6 text-rose-500" />
-                <h3 className="font-black text-white text-sm uppercase tracking-widest">
+                <h3 className="font-semibold text-slate-900 text-sm uppercase tracking-widest">
                   {labels.hsm}
                 </h3>
               </div>
-              <p className="text-slate-400 text-xs font-light">
+              <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "FIPS 140-2 Level 3 Barrier"
                   : "Rào cản FIPS 140-2 Level 3"}
@@ -123,7 +123,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
             className="flex-shrink-0"
           >
-            <ArrowRight className="w-6 h-6 text-slate-500" />
+            <ArrowRight className="w-6 h-6 text-slate-400" />
           </motion.div>
 
           {/* Block 4: Secure Core */}
@@ -134,15 +134,15 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex-1"
           >
-            <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-600 rounded-2xl p-8 space-y-4 relative">
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 space-y-4 relative shadow-sm">
               <div className="absolute top-2 right-2 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               <div className="flex items-center gap-3">
-                <Database className="w-6 h-6 text-green-500" />
-                <h3 className="font-black text-white text-sm uppercase tracking-widest">
+                <Database className="w-6 h-6 text-green-600" />
+                <h3 className="font-semibold text-slate-900 text-sm uppercase tracking-widest">
                   {labels.core}
                 </h3>
               </div>
-              <p className="text-slate-400 text-xs font-light">
+              <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "Never leaves the chip"
                   : "Không bao giờ rời khỏi chip"}
@@ -152,7 +152,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
         </div>
 
         {/* Animated Flow Line */}
-        <motion.div className="mt-8 h-1 bg-gradient-to-r from-blue-500 via-rose-500 to-green-500 rounded-full overflow-hidden">
+        <motion.div className="mt-8 h-0.5 bg-gradient-to-r from-blue-400 via-rose-400 to-green-400 rounded-full overflow-hidden">
           <motion.div
             className="h-full w-1/4 bg-white blur-sm"
             animate={{ x: ["0%", "400%"] }}
@@ -162,10 +162,10 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
 
         {/* Flow Description */}
         <div className="text-center space-y-2">
-          <p className="text-slate-400 text-sm font-light">
+          <p className="text-slate-500 text-sm font-light">
             {labels.flow}
           </p>
-          <p className="text-slate-500 text-xs">
+          <p className="text-slate-400 text-xs">
             {isEn
               ? "Request → Encryption → Signing → Response"
               : "Yêu cầu → Mã hóa → Ký số → Phản hồi"}
@@ -180,15 +180,15 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-slate-900 border border-slate-700 rounded-2xl p-6 space-y-3"
+          className="bg-white border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm"
         >
           <div className="flex items-center gap-2">
             <Code className="w-5 h-5 text-blue-500" />
-            <h3 className="font-black text-white text-xs uppercase tracking-widest">
+            <h3 className="font-semibold text-slate-900 text-xs uppercase tracking-widest">
               {labels.app}
             </h3>
           </div>
-          <p className="text-slate-400 text-xs font-light">
+          <p className="text-slate-500 text-xs font-light">
             {isEn
               ? "Transaction request from business logic"
               : "Yêu cầu giao dịch từ logic nghiệp vụ"}
@@ -200,7 +200,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <ArrowRight className="w-5 h-5 text-slate-500 rotate-90" />
+            <ArrowRight className="w-5 h-5 text-slate-400 rotate-90" />
           </motion.div>
         </div>
 
@@ -210,15 +210,15 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="bg-slate-900 border border-slate-700 rounded-2xl p-6 space-y-3"
+          className="bg-white border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm"
         >
           <div className="flex items-center gap-2">
             <Shield className="w-5 h-5 text-amber-500" />
-            <h3 className="font-black text-white text-xs uppercase tracking-widest">
+            <h3 className="font-semibold text-slate-900 text-xs uppercase tracking-widest">
               {labels.tls}
             </h3>
           </div>
-          <p className="text-slate-400 text-xs font-light">
+          <p className="text-slate-500 text-xs font-light">
             {isEn ? "Encrypted tunnel (TLS 1.3)" : "Đường hầm mã hóa (TLS 1.3)"}
           </p>
         </motion.div>
@@ -228,7 +228,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
           >
-            <ArrowRight className="w-5 h-5 text-slate-500 rotate-90" />
+            <ArrowRight className="w-5 h-5 text-slate-400 rotate-90" />
           </motion.div>
         </div>
 
@@ -238,16 +238,16 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="bg-slate-900 border-2 border-rose-600 rounded-2xl p-6 space-y-3 relative overflow-hidden"
+          className="bg-white border-2 border-rose-400 rounded-2xl p-6 space-y-3 relative overflow-hidden shadow-sm"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-rose-600/5 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-rose-50 to-transparent pointer-events-none" />
           <div className="relative z-10 flex items-center gap-2">
             <Lock className="w-5 h-5 text-rose-500" />
-            <h3 className="font-black text-white text-xs uppercase tracking-widest">
+            <h3 className="font-semibold text-slate-900 text-xs uppercase tracking-widest">
               {labels.hsm}
             </h3>
           </div>
-          <p className="text-slate-400 text-xs font-light">
+          <p className="text-slate-500 text-xs font-light">
             {isEn
               ? "FIPS 140-2 Level 3 Barrier"
               : "Rào cản FIPS 140-2 Level 3"}
@@ -259,7 +259,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
           >
-            <ArrowRight className="w-5 h-5 text-slate-500 rotate-90" />
+            <ArrowRight className="w-5 h-5 text-slate-400 rotate-90" />
           </motion.div>
         </div>
 
@@ -269,16 +269,16 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-600 rounded-2xl p-6 space-y-3 relative"
+          className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3 relative shadow-sm"
         >
           <div className="absolute top-2 right-2 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
           <div className="flex items-center gap-2">
-            <Database className="w-5 h-5 text-green-500" />
-            <h3 className="font-black text-white text-xs uppercase tracking-widest">
+            <Database className="w-5 h-5 text-green-600" />
+            <h3 className="font-semibold text-slate-900 text-xs uppercase tracking-widest">
               {labels.core}
             </h3>
           </div>
-          <p className="text-slate-400 text-xs font-light">
+          <p className="text-slate-500 text-xs font-light">
             {isEn ? "Never leaves the chip" : "Không bao giờ rời khỏi chip"}
           </p>
         </motion.div>
