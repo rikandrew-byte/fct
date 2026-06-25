@@ -1,6 +1,6 @@
 ---
 title: "Giám Sát Deep Web (Deep Web Monitoring) - Phòng Tuyến Chủ Động Cho An Ninh Số Doanh Nghiệp"
-description: "Ransomware, lộ lọt thông tin tài khoản (leaked credentials) thường bắt nguồn từ Deep Web. Tìm hiểu giải pháp giám sát chủ động để nâng cao Cyber Resilience."
+description: "Tầm quan trọng của Threat Intelligence và cơ chế định vị sớm mã độc ransomware, tài khoản lộ lọt từ các không gian ngầm của internet."
 date: "2026-06-25"
 tags: ["Deep Web Monitoring", "Threat Intelligence", "Leaked Credentials", "Ransomware Early Warning", "Cyber Resilience"]
 target_funnel: "thales"

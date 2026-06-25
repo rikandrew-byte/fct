@@ -1,6 +1,6 @@
 ---
 title: "Canary Tích Hợp Trí Tuệ Nhân Tạo Công Nghiệp (Industrial AI): Biến Dữ Liệu Quá Khứ (Historian Data) Thành Mô Hình Dự Báo Real-time"
-description: "Sự kết hợp giữa Canary Labs và SORBA.ai mang đến giải pháp tối ưu hóa dữ liệu vận hành nhà máy khép kín mà không cần chuyên gia dữ liệu."
+description: "Giới thiệu bước tiến đột phá từ Canary Labs v26.2 giúp tối ưu hóa dữ liệu vận hành OT, tích hợp Power BI và thắt chặt kiểm soát Tile Level Security."
 date: "2026-06-25"
 tags: ["Canary Labs", "SORBA.ai", "Industrial AI", "Historian Data", "Power BI Connector", "Tile Level Security"]
 target_funnel: "canary"
