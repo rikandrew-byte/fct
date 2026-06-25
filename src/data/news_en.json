@@ -1,5 +1,60 @@
 [
   {
+    "id": "esim-buoc-chuyen-minh-mang-di-dong-noi-bo",
+    "title": "eSIM and the Evolution of Private Mobile Networks for Enterprises",
+    "date": "2026-06-25",
+    "summary": "According to the latest Gartner® Hype Cycle™ 2026 report, eSIM technology is becoming the core driver of transformation in private connectivity (Private 4G/5G) for major organizations.",
+    "category": "Mobile Security",
+    "target_funnel": "thales",
+    "image": "/images/posts/mobile-security-management.jpg",
+    "ogImage": "/images/posts/mobile-security-management.jpg",
+    "content": "According to the latest Gartner® Hype Cycle™ 2026 report on Private Mobile Network Services, eSIM technology is becoming a core driver pushing a powerful transformation in the internal connectivity infrastructure of organizations and major corporations.\n\nIn the past, deploying private mobile networks (Private 4G/5G) often faced a major hurdle in managing and distributing physical SIM cards to thousands of IoT devices, smartphones, and employee wearables. The rise of eSIM completely solves this problem by enabling remote, automated over-the-air (OTA) deployment of network profiles.\n\nAs a pioneer collaborating with strategic partner Thales, FCT Vinh Thinh offers optimized private mobile network solutions. This helps simplify device onboarding, optimize connectivity management, while tightening access control and protecting data integrity on the enterprise digital transformation journey."
+  },
+  {
+    "id": "ky-nguyen-mang-di-dong-thong-minh-6g-va-thach-thuc-an-ninh",
+    "title": "The Era of 6G Intelligent Mobile Networks and System Security Challenges",
+    "date": "2026-06-25",
+    "summary": "6G mobile networks are redefining global connectivity. Discover the security risks of AI-native 6G and how high-speed fraud detection preserves telecom integrity.",
+    "category": "Cybersecurity",
+    "target_funnel": "guardsquare",
+    "image": "/images/posts/guardsquare-shield.jpg",
+    "ogImage": "/images/posts/guardsquare-shield.jpg",
+    "content": "The sixth-generation (6G) mobile network is redefining the global connectivity infrastructure. Moving far beyond mere speed, the AI-native 6G architecture will create networks capable of thinking, adapting, and sensing their surroundings in real-time.\n\nHowever, higher intelligence brings exposure to greater risks. As AI is embedded deep into the system core for smart connection management and automated operation, hackers can also exploit AI itself to attack systems at millisecond speeds. Therefore, building a solid security foundation for telecom infrastructure right from the design phase is crucial.\n\nTo counter these threats, operators are shifting heavily toward automated security monitoring, leveraging AI in high-speed fraud detection and endpoint infrastructure protection, ensuring resilient defense against next-generation attacks."
+  },
+  {
+    "id": "quan-ly-ban-quyen-phan-mem-lich-lam-trong-ky-nguyen-ai",
+    "title": "Elegant Software Licensing in the AI Era: Protecting Core IP Against Vulnerability Exposures",
+    "date": "2026-06-25",
+    "summary": "As AI tools can quickly reverse-engineer code and find software exploits, protecting your Core IP is urgent. Discover Thales Sentinel and ERP decoupling.",
+    "category": "Software Licensing",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-hsm-security.jpg",
+    "ogImage": "/images/posts/thales-hsm-security.jpg",
+    "content": "In an era where advanced AI tools (such as Claude or open-source models) can reverse-engineer code structures and detect software vulnerabilities within minutes, protecting Core IP (Intellectual Property) has become more urgent than ever.\n\nThe Thales Software Monetization 2026 bulletin highlights that if B2B software developers only rely on passive protection measures or loose licensing tied directly to ERP systems, the risk of cracking and revenue leakage is extremely high.\n\nThe advanced solution from the Thales Sentinel platform helps businesses decouple Entitlement Management from the core ERP system. This decoupling not only accelerates time-to-market and reduces the IT workload during system upgrades but also establishes a solid shield protecting source code against automated AI vulnerability scanning techniques used by hackers."
+  },
+  {
+    "id": "canary-tich-hop-tri-tue-nhan-tao-cong-nghiep-industrial-ai",
+    "title": "Industrial AI-Integrated Canary: Transforming Historian Data into Real-Time Predictive Models",
+    "date": "2026-06-25",
+    "summary": "The partnership between Canary Labs and SORBA.ai enables engineering teams to turn raw historian data into closed-loop AI predictive models without data scientists.",
+    "category": "Industrial Data",
+    "target_funnel": "canary",
+    "image": "/images/posts/canary-management.jpg",
+    "ogImage": "/images/posts/canary-management.jpg",
+    "content": "The strategic partnership between Canary Labs and SORBA.ai has opened a new chapter for industrial automation and factory operations. Now, industrial engineering teams can fully transform massive historical operational data (historian data) into artificial intelligence models capable of closed-loop intelligence and real-time operational optimization—completely without the intervention of Data Scientists.\n\nFurthermore, in the technology update version 26.2, Canary Labs officially launched the new Power BI Connector, allowing direct ingestion of visual operational data onto monitoring dashboards with high speed and absolute accuracy.\n\nSpecifically, to meet the strict security standards of operational technology (OT Security), a Tile Level Security feature has been added, granting the ability to set Access Control Lists (ACLs) down to each individual display cell in the Admin dashboard, tightening security at the most critical data touchpoints."
+  },
+  {
+    "id": "giam-sat-deep-web-phong-tuyen-chu-dong-cho-an-ninh-so",
+    "title": "Deep Web Monitoring - A Proactive Defense for Enterprise Cybersecurity",
+    "date": "2026-06-25",
+    "summary": "Most dangerous cyber threats lurk on the Deep and Dark Web. Learn why proactive Deep Web Monitoring and threat intelligence are vital for cyber resilience.",
+    "category": "Cybersecurity",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-thumbnail.jpg",
+    "ogImage": "/images/posts/thales-thumbnail.jpg",
+    "content": "The vast majority of the most dangerous cyber threats do not appear on the surface of the public internet. Early signs of data-encrypting ransomware attacks, leaked credentials, or internal data being put up for sale often appear very early in the hidden corners of the internet (Deep Web/Dark Web)—places where traditional monitoring tools are completely blind.\n\nUnderstanding the nature of what is happening behind the curtain of the internet is an inseparable part of modern Cyber Resilience and Threat Intelligence strategies.\n\nThrough active deep monitoring and early positioning of threat warnings from underground spaces, businesses can execute defense measures, change credentials, and patch system vulnerabilities before an actual attack is launched in reality."
+  },
+  {
     "id": "doanh-thu-boc-hoi-vi-crack-bao-ve-phan-mem",
     "title": "Revenue Evaporating Due to Cracks: A Comprehensive Guide to Software Protection",
     "date": "2026-04-25",

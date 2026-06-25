@@ -37,7 +37,7 @@ export default function TrustMetrics({ dict }: TrustMetricsProps) {
   const { title, subtitle, metrics } = dict.trustMetrics;
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-6 relative overflow-hidden border-y border-gray-200">
+    <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-12 sm:py-16 px-4 sm:px-6 relative overflow-hidden border-y border-gray-200">
       {/* Subtle background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-[120px]" />
@@ -51,7 +51,7 @@ export default function TrustMetrics({ dict }: TrustMetricsProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 space-y-3"
+          className="text-center mb-8 sm:mb-12 space-y-3"
         >
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tighter leading-tight">
             {title}
@@ -62,7 +62,7 @@ export default function TrustMetrics({ dict }: TrustMetricsProps) {
         </motion.div>
 
         {/* 4 Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {metrics.map((metric, index) => (
             <motion.div
               key={index}

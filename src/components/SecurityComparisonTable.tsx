@@ -23,7 +23,7 @@ export default function SecurityComparisonTable({
   rows,
 }: SecurityComparisonTableProps) {
   return (
-    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 px-6 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-14 sm:py-20 px-4 sm:px-6 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-[120px]" />
@@ -53,24 +53,24 @@ export default function SecurityComparisonTable({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="overflow-x-auto rounded-2xl border border-gray-200 shadow-2xl shadow-gray-200/40"
+          className="overflow-x-auto rounded-xl sm:rounded-2xl border border-gray-200 shadow-2xl shadow-gray-200/40 -mx-1"
         >
           <table className="w-full">
             {/* Header */}
             <thead>
               <tr className="bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-                <th className="px-6 py-5 text-left text-sm font-black uppercase tracking-widest">
+                <th className="px-4 sm:px-6 py-4 sm:py-5 text-left text-xs sm:text-sm font-black uppercase tracking-widest whitespace-nowrap">
                   Chỉ số an toàn
                 </th>
-                <th className="px-6 py-5 text-left text-sm font-black uppercase tracking-widest">
+                <th className="px-4 sm:px-6 py-4 sm:py-5 text-left text-xs sm:text-sm font-black uppercase tracking-widest whitespace-nowrap">
                   <div className="flex items-center gap-2">
-                    <X className="w-4 h-4 text-red-400" />
+                    <X className="w-4 h-4 text-red-400 shrink-0" />
                     Trước (Rủi ro)
                   </div>
                 </th>
-                <th className="px-6 py-5 text-left text-sm font-black uppercase tracking-widest">
+                <th className="px-4 sm:px-6 py-4 sm:py-5 text-left text-xs sm:text-sm font-black uppercase tracking-widest whitespace-nowrap">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                     Sau (FCT)
                   </div>
                 </th>
@@ -89,21 +89,21 @@ export default function SecurityComparisonTable({
                   className="hover:bg-blue-50/50 transition-colors"
                 >
                   {/* Metric */}
-                  <td className="px-6 py-5 text-sm font-bold text-gray-900 bg-gray-50">
+                  <td className="px-4 sm:px-6 py-4 sm:py-5 text-xs sm:text-sm font-bold text-gray-900 bg-gray-50 min-w-[120px]">
                     {row.metric}
                   </td>
 
                   {/* Before */}
-                  <td className="px-6 py-5 text-sm text-gray-700 font-light">
-                    <div className="flex items-start gap-3">
+                  <td className="px-4 sm:px-6 py-4 sm:py-5 text-xs sm:text-sm text-gray-700 font-light min-w-[150px]">
+                    <div className="flex items-start gap-2 sm:gap-3">
                       <X className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />
                       <span>{row.before}</span>
                     </div>
                   </td>
 
                   {/* After */}
-                  <td className="px-6 py-5 text-sm text-emerald-700 font-light bg-emerald-50/30">
-                    <div className="flex items-start gap-3">
+                  <td className="px-4 sm:px-6 py-4 sm:py-5 text-xs sm:text-sm text-emerald-700 font-light bg-emerald-50/30 min-w-[150px]">
+                    <div className="flex items-start gap-2 sm:gap-3">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
                       <span>{row.after}</span>
                     </div>

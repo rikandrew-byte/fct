@@ -21,7 +21,8 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         </p>
       </div>
 
-      <div className="relative w-full max-w-3xl mx-auto aspect-square md:aspect-video flex items-center justify-center bg-white rounded-3xl border border-slate-100 shadow-2xl shadow-rose-900/5 overflow-hidden">
+      <div className="w-full max-w-3xl mx-auto px-4 sm:px-6">
+      <div className="relative w-full aspect-square md:aspect-video flex items-center justify-center bg-white rounded-3xl border border-slate-100 shadow-2xl shadow-rose-900/5 overflow-hidden">
         {/* Background Grid */}
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#e2e8f0 1px, transparent 1px)', backgroundSize: '24px 24px', opacity: 0.5 }}></div>
 
@@ -66,7 +67,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         <motion.div 
           animate={{ rotate: -360 }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] border-4 border-rose-500/20 rounded-full flex items-center justify-center z-10 shadow-[inset_0_0_50px_rgba(225,29,72,0.03)]"
+          className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[480px] md:h-[480px] border-4 border-rose-500/20 rounded-full flex items-center justify-center z-10 shadow-[inset_0_0_50px_rgba(225,29,72,0.03)]"
         >
           {/* Shield Orbiters */}
           <div className="absolute -left-5 w-10 h-10 bg-rose-600 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(225,29,72,0.4)] text-white">
@@ -129,6 +130,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         </motion.div>
 
       </div>
+    </div>
     </div>
   );
 }

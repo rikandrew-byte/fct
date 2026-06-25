@@ -51,7 +51,7 @@ export default function Footer({ lang, dict }: FooterProps) {
                 height={56} 
                 className="brightness-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)] shrink-0"
               />
-              <span className="font-bold text-2xl text-gray-100 tracking-tight whitespace-nowrap">FCT Vinh Thinh .,JSC</span>
+              <span className="font-bold text-xl sm:text-2xl text-gray-100 tracking-tight leading-tight">FCT Vinh Thinh .,JSC</span>
             </Link>
             <p className="text-sm font-light leading-relaxed max-w-sm">
               {d.brandDescription}
@@ -114,9 +114,9 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
         </div>
 
-        <div className="pt-5 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-100">
+        <div className="pt-5 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-gray-100">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-            <p className="text-[11px] font-medium uppercase tracking-widest whitespace-nowrap">
+            <p className="text-[11px] font-medium uppercase tracking-widest text-center md:text-left">
               {d.copyright}
             </p>
             

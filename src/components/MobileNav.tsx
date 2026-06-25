@@ -75,7 +75,7 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
 
       {/* Fullscreen Overlay Drawer */}
       {isOpen && (
-        <div className="fixed inset-0 z-[100] bg-white/98 backdrop-blur-2xl flex flex-col justify-start pt-28 px-8 animate-in fade-in slide-in-from-top-4 duration-300 overflow-y-auto">
+        <div className="fixed inset-0 z-[100] bg-white/98 backdrop-blur-2xl flex flex-col justify-start pt-20 landscape:pt-16 px-6 sm:px-8 animate-in fade-in slide-in-from-top-4 duration-300 overflow-y-auto">
           <nav className="flex flex-col gap-8">
             {navLinks.map((link) => {
               const isProducts = link.href.includes("/products");

@@ -69,19 +69,19 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
       };
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20 space-y-4"
+          className="text-center mb-10 sm:mb-20 space-y-4"
         >
           <span className="inline-block text-emerald-600 font-semibold text-xs uppercase tracking-[0.4em] bg-emerald-50 px-4 py-2 rounded-full">
             {content.badge}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight text-gray-900">
             {content.title}
           </h2>
           <p className="text-xl text-emerald-700 font-bold tracking-wide">
@@ -93,7 +93,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
         </motion.div>
 
         {/* 3 Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {content.features.map((feature, idx) => (
             <motion.div
               key={idx}
@@ -103,7 +103,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
               transition={{ delay: idx * 0.1 }}
               className="group"
             >
-              <div className="bg-white border border-gray-200 rounded-[2.5rem] p-10 h-full space-y-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="bg-white border border-gray-200 rounded-[2rem] sm:rounded-[2.5rem] p-7 sm:p-10 h-full space-y-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                 {/* Icon with gradient background */}
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} p-3 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform`}>
                   {feature.icon}
@@ -155,7 +155,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
         </motion.div>
 
         {/* Bottom accent */}
-        <div className="mt-20 pt-12 border-t border-gray-200 text-center">
+        <div className="mt-12 sm:mt-20 pt-8 sm:pt-12 border-t border-gray-200 text-center">
           <p className="text-gray-500 text-xs font-light">
             {isEn
               ? "Longmai is a flexible alternative to enterprise HSM solutions, designed for mid-market organizations seeking cost-effective security without complexity."

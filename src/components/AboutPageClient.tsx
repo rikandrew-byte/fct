@@ -56,14 +56,14 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
   return (
     <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden bg-white">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
         <NeuralNetworkBackground />
         
         {/* Glows */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-blue-600/10 rounded-full blur-[180px] -z-10 animate-pulse"></div>
 
         <div className="max-w-6xl mx-auto relative z-10 w-full">
-          <div className="flex flex-col lg:flex-row gap-16 items-center justify-between">
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 items-center justify-between">
             {/* Text */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -73,7 +73,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               <div className="inline-block bg-blue-100 border border-blue-300 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-700 tracking-[0.4em] uppercase shadow-2xl">
                 {d.hero.badge}
               </div>
-              <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tight leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight leading-[1.1]">
                 {d.hero.title} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                   {d.hero.subtitle}
@@ -85,13 +85,13 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
             </motion.div>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-5 shrink-0 w-full lg:w-auto">
+            <div className="grid grid-cols-2 gap-4 sm:gap-5 shrink-0 w-full lg:w-auto">
               {d.stats.map((s: Stat) => (
                 <div
                   key={s.label}
-                  className="bg-white border border-gray-200 backdrop-blur-xl rounded-[2.5rem] p-10 text-center group hover:border-blue-400 transition-colors duration-500 shadow-2xl"
+                  className="bg-white border border-gray-200 backdrop-blur-xl rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-10 text-center group hover:border-blue-400 transition-colors duration-500 shadow-2xl"
                 >
-                  <p className="text-5xl font-black text-gray-900 mb-2 tracking-tighter group-hover:text-blue-600 transition-colors">{s.value}</p>
+                  <p className="text-3xl sm:text-5xl font-black text-gray-900 mb-2 tracking-tighter group-hover:text-blue-600 transition-colors">{s.value}</p>
                   <p className="text-[10px] text-gray-600 font-bold uppercase tracking-widest">{s.label}</p>
                 </div>
               ))}
@@ -322,11 +322,11 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
 
       {/* ── CTA Liên hệ ─────────────────────────────────────────────── */}
       <section className="bg-white py-24 px-6 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto w-full bg-gradient-to-br from-blue-600 to-indigo-600 rounded-[3.5rem] p-12 md:p-16 text-center space-y-10 relative overflow-hidden shadow-2xl">
+        <div className="max-w-4xl mx-auto w-full bg-gradient-to-br from-blue-600 to-indigo-600 rounded-[2.5rem] sm:rounded-[3.5rem] p-8 sm:p-12 md:p-16 text-center space-y-8 sm:space-y-10 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
           
           <div className="space-y-6 relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
               {d.cta.title}
             </h2>
             <p className="text-blue-100 font-light text-lg max-w-xl mx-auto">
@@ -334,7 +334,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center relative z-10">
             <a
               href="tel:0983027776"
               id="about-contact-call"

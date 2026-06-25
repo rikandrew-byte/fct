@@ -31,7 +31,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   return (
     <main className="min-h-screen bg-slate-50 text-gray-950 selection:bg-blue-600">
       {/* ── 1. Hero Section (Centered) ─────────────────────────────────── */}
-      <section className="relative bg-[#020617] pt-32 pb-24 px-6 overflow-hidden">
+      <section className="relative bg-[#020617] pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
         <NeuralNetworkBackground />
 
         {/* Glow Effects */}
@@ -45,7 +45,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase text-white">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-tight sm:leading-none uppercase text-white">
             {isEn ? "Request for" : "Yêu cầu"} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300">{isEn ? "Proposal" : "Giải pháp"}</span>
           </h1>
 
@@ -59,10 +59,10 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* ── 2. Content Section (RFP Form) ─────────────────────────────── */}
-      <section className="relative z-20 -mt-16 px-6 pb-24">
+      <section className="relative z-20 -mt-8 sm:-mt-16 px-4 sm:px-6 pb-16 sm:pb-24">
         <div className="max-w-4xl mx-auto">
           {/* Form Card */}
-          <div className="bg-white border border-gray-100 rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-gray-200/50 mb-16">
+          <div className="bg-white border border-gray-100 rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-8 md:p-16 shadow-2xl shadow-gray-200/50 mb-8 sm:mb-16">
             <div className="mb-12 text-center space-y-2">
               <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">{isEn ? "Expert Consultation Request" : "Gửi yêu cầu tư vấn"}</h2>
               <p className="text-gray-500 text-sm">{isEn ? "Share your needs and our security architects will design a customized plan for you." : "Chia sẻ nhu cầu của bạn để các chuyên gia bảo mật của chúng tôi tư vấn phương án tối ưu."}</p>
@@ -74,7 +74,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
 
           {/* HQ Location */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white border border-gray-100 rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-gray-200/50">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center bg-white border border-gray-100 rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-8 md:p-16 shadow-2xl shadow-gray-200/50">
             <div className="w-full aspect-video rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-xl bg-slate-50">
               <iframe
                 title="Google Maps FCT Vinh Thinh Location"

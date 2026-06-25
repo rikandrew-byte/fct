@@ -1,5 +1,60 @@
 [
   {
+    "id": "esim-buoc-chuyen-minh-mang-di-dong-noi-bo",
+    "title": "eSIM và Bước Chuyển Mình của Mạng Di Động Nội Bộ (Private Networks) cho Doanh Nghiệp",
+    "date": "2026-06-25",
+    "summary": "Theo báo cáo Gartner Hype Cycle 2026, eSIM đang giải quyết triệt để bài toán cấp phát, onboarding thiết bị cho mạng Private 5G nội bộ.",
+    "category": "Bảo mật di động",
+    "target_funnel": "thales",
+    "image": "/images/posts/mobile-security-management.jpg",
+    "ogImage": "/images/posts/mobile-security-management.jpg",
+    "content": "Theo báo cáo mới nhất từ Gartner® Hype Cycle™ 2026 về Dịch vụ Mạng Di động Nội bộ (Private Mobile Network Services), công nghệ eSIM đang trở thành động lực cốt lõi thúc đẩy sự chuyển mình mạnh mẽ trong hạ tầng kết nối nội bộ của các tổ chức và tập đoàn lớn.\n\nViệc triển khai mạng di động nội bộ (Private 4G/5G) trước đây thường gặp rào cản lớn trong khâu quản lý và phân phối SIM vật lý cho hàng ngàn thiết bị IoT, smartphone và thiết bị đeo (wearables) của nhân viên. Sự trỗi dậy của eSIM giải quyết triệt để bài toán này nhờ khả năng cấp phát cấu hình cấu trúc mạng từ xa một cách tự động (Over-The-Air deployment).\n\nLà đơn vị tiên phong phối hợp cùng đối tác chiến lược Thales, FCT Vĩnh Thịnh mang đến giải pháp mạng di động nội bộ tối ưu, giúp đơn giản hóa quy trình đăng ký thiết bị (device onboarding), tối ưu hóa quản lý kết nối, đồng thời thắt chặt kiểm soát truy cập và bảo vệ dữ liệu toàn vẹn trên lộ trình chuyển đổi số của doanh nghiệp."
+  },
+  {
+    "id": "ky-nguyen-mang-di-dong-thong-minh-6g-va-thach-thuc-an-ninh",
+    "title": "Kỷ Nguyên Mạng Di Động Thông Minh 6G và Thách Thức An Ninh Hệ Thống",
+    "date": "2026-06-25",
+    "summary": "Mạng AI-native 6G nguyên bản tích hợp AI mang đến khả năng tự thích ứng vượt trội nhưng cũng mở rộng vùng phơi nhiễm rủi ro an ninh mạng.",
+    "category": "An ninh mạng",
+    "target_funnel": "guardsquare",
+    "image": "/images/posts/guardsquare-shield.jpg",
+    "ogImage": "/images/posts/guardsquare-shield.jpg",
+    "content": "Mạng di động thế hệ thứ sáu (6G) đang tái định nghĩa lại hạ tầng kết nối toàn cầu. Không chỉ dừng lại ở tốc độ vượt trội, kiến trúc 6G nguyên bản tích hợp AI (AI-native 6G) sẽ tạo ra các mạng lưới có khả năng tự tư duy, tự thích ứng và cảm nhận môi trường xung quanh một cách real-time.\n\nTuy nhiên, \"trí tuệ\" càng cao thì \"vùng phơi nhiễm rủi ro\" (exposure to risk) càng lớn. Khi AI được cấy sâu vào lõi hệ thống để quản lý kết nối thông minh và vận hành tự động, hacker cũng có thể lợi dụng chính AI để tấn công hệ thống với tốc độ tính bằng mili-giây. Do đó, việc xây dựng một nền móng bảo mật an ninh vững chắc cho hạ tầng viễn thông ngay từ giai đoạn phác thảo là yêu cầu sống còn.\n\nĐể đối phó, các nhà vận hành đang dịch chuyển mạnh mẽ sang cơ chế giám sát an ninh tự động, ứng dụng AI trong phát hiện gian lận tốc độ cao (fraud detection) và bảo vệ hạ tầng thiết bị đầu cuối, đảm bảo tính chống chịu mãnh liệt trước các cuộc tấn công thế hệ mới."
+  },
+  {
+    "id": "quan-ly-ban-quyen-phan-mem-lich-lam-trong-ky-nguyen-ai",
+    "title": "Quản Lý Bản Quyền Phần Mềm Lịch Lãm Trong Kỷ Nguyên Trí Tuệ Nhân Tạo: Bảo Vệ Lõi IP Trước Rủi Ro Lộ Lọt Lỗ Hổng",
+    "date": "2026-06-25",
+    "summary": "Claude và các mô hình AI có thể dịch ngược và tìm ra lỗi bẻ khóa phần mềm B2B. Thales Sentinel giúp bóc tách ERP Entitlement bảo vệ IP cốt lõi.",
+    "category": "Bản quyền phần mềm",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-hsm-security.jpg",
+    "ogImage": "/images/posts/thales-hsm-security.jpg",
+    "content": "Trong bối cảnh các công cụ AI tiên tiến (như Claude hoặc các mô hình mã nguồn mở) có khả năng phân tích ngược cấu trúc mã và phát hiện các lỗ hổng bảo mật của phần mềm chỉ trong vài phút, việc bảo vệ tài sản trí tuệ cốt lõi (Core IP) trở nên cấp bách hơn bao giờ hết.\n\nBản tin Thales Software Monetization 2026 nhấn mạnh, nếu các nhà phát triển phần mềm B2B chỉ dựa vào các biện pháp bảo vệ thụ động hoặc quản lý bản quyền lỏng lẻo dính liền vào hệ thống ERP, nguy cơ bị bẻ khóa và thất thoát doanh thu là cực kỳ nghiêm trọng.\n\nGiải pháp tiên tiến từ nền tảng Thales Sentinel hỗ trợ doanh nghiệp bóc tách quản lý quyền sở hữu (Entitlement Management) ra khỏi hệ thống ERP cốt lõi. Thao tác dịch chuyển này không chỉ giúp đẩy nhanh tốc độ ra mắt sản phẩm (Time-to-Market), giảm tải cho đội ngũ IT khi nâng cấp hệ thống mà còn thiết lập một tấm khiên vững chắc bảo vệ mã nguồn, chống chịu lại các kỹ thuật dò tìm lỗ hổng tự động bằng AI của hacker."
+  },
+  {
+    "id": "canary-tich-hop-tri-tue-nhan-tao-cong-nghiep-industrial-ai",
+    "title": "Canary Tích Hợp Trí Tuệ Nhân Tạo Công Nghiệp (Industrial AI): Biến Dữ Liệu Quá Khứ (Historian Data) Thành Mô Hình Dự Báo Real-time",
+    "date": "2026-06-25",
+    "summary": "Sự kết hợp giữa Canary Labs và SORBA.ai mang đến giải pháp tối ưu hóa dữ liệu vận hành nhà máy khép kín mà không cần chuyên gia dữ liệu.",
+    "category": "Dữ liệu công nghiệp",
+    "target_funnel": "canary",
+    "image": "/images/posts/canary-management.jpg",
+    "ogImage": "/images/posts/canary-management.jpg",
+    "content": "Sự hợp tác chiến lược giữa Canary Labs và SORBA.ai đã mở ra một chương mới cho ngành tự động hóa và tối ưu hóa vận hành nhà máy. Giờ đây, các đội ngũ kỹ thuật công nghiệp hoàn toàn có thể chuyển hóa kho dữ liệu vận hành quá khứ (historian data) khổng lồ thành các mô hình trí tuệ nhân tạo có khả năng kiểm soát vòng lặp khép kín (closed-loop intelligence) và tối ưu hóa vận hành theo thời gian thực — hoàn toàn không cần đến sự can thiệp của các chuyên gia dữ liệu (Data Scientists).\n\nBên cạnh đó, trong bản cập nhật công nghệ phiên bản 26.2, Canary Labs chính thức ra mắt bộ kết nối Power BI Connector mới, cho phép kéo trực tiếp dữ liệu vận hành trực quan lên các dashboard giám sát với tốc độ cao và độ chính xác tuyệt đối.\n\nĐặc biệt, để đáp ứng tiêu chuẩn an ninh nghiêm ngặt của hạ tầng vận hành (OT Security), tính năng Tile Level Security được bổ sung, cấp quyền thiết lập danh sách kiểm soát truy cập (Access Control List - ACL) đến từng ô hiển thị cấu trúc trong Admin, thắt chặt an ninh tại những điểm chạm dữ liệu trọng yếu nhất."
+  },
+  {
+    "id": "giam-sat-deep-web-phong-tuyen-chu-dong-cho-an-ninh-so",
+    "title": "Giám Sát Deep Web (Deep Web Monitoring) - Phòng Tuyến Chủ Động Cho An Ninh Số Doanh Nghiệp",
+    "date": "2026-06-25",
+    "summary": "Ransomware, lộ lọt thông tin tài khoản (leaked credentials) thường bắt nguồn từ Deep Web. Tìm hiểu giải pháp giám sát chủ động để nâng cao Cyber Resilience.",
+    "category": "An ninh mạng",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-thumbnail.jpg",
+    "ogImage": "/images/posts/thales-thumbnail.jpg",
+    "content": "Phần lớn các mối đe dọa an ninh mạng nguy hiểm nhất không xuất hiện trên bề mặt internet công cộng. Các dấu hiệu ban đầu của một cuộc tấn công ransomware mã hóa dữ liệu, danh tính tài khoản bị rò rỉ (leaked credentials), hay dữ liệu nội bộ bị rao bán thường xuất hiện rất sớm tại các vùng tối ẩn khuất của internet (Deep Web/Dark Web) – nơi các công cụ giám sát truyền thống hoàn toàn không thể chạm tới.\n\nHiểu rõ bản chất của những gì đang diễn ra phía sau bức màn internet là một phần không thể tách rời của chiến lược xây dựng tính chịu chấn an ninh mạng (Cyber Resilience) và tình báo mối đe dọa (Threat Intelligence) hiện đại.\n\nThông qua việc chủ động giám sát sâu, định vị sớm các cảnh báo nguy cơ từ không gian ngầm, doanh nghiệp có thể thực thi các biện pháp phòng vệ, đổi khóa, vá lỗ hổng hệ thống trước khi cuộc tấn công thực sự kích hoạt trên thực tế."
+  },
+  {
     "id": "doanh-thu-boc-hoi-vi-crack-bao-ve-phan-mem",
     "title": "Doanh thu bốc hơi vì Crack: Hướng dẫn bảo vệ mã nguồn phần mềm toàn diện",
     "date": "2026-04-25",

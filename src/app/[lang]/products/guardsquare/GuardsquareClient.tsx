@@ -44,14 +44,14 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
     <main ref={containerRef} className="min-h-screen bg-slate-50 text-gray-950 overflow-hidden font-sans selection:bg-sky-600">
       
       {/* ── 1. HERO SECTION (Dark) ───────────────────── */}
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-32 pb-24 px-6 bg-[#020617]">
+      <section className="relative min-h-[70vh] landscape:min-h-screen flex flex-col items-center justify-center pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 bg-[#020617]">
         <NeuralNetworkBackground />
         
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-600/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
 
         <motion.div 
           style={{ opacity, scale }}
-          className="relative z-10 text-center space-y-10 max-w-5xl mx-auto"
+          className="relative z-10 text-center space-y-6 sm:space-y-10 max-w-5xl mx-auto"
         >
           <IntegritySeal />
 
@@ -60,13 +60,13 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95] mb-8 text-white drop-shadow-2xl">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.1] sm:leading-[0.95] mb-6 sm:mb-8 text-white drop-shadow-2xl">
               GUARDSQUARE <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 drop-shadow-[0_0_30px_rgba(56,189,248,0.5)]">
                 PROTECTION NEXUS
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight">
+            <p className="text-base sm:text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight">
                {isEn 
                  ? "Advanced multi-layered protection for iOS and Android. Defend against reverse engineering, tampering, and intellectual property theft."
                  : "Bảo vệ đa tầng cấp độ cao cho iOS và Android. Chống lại các công cụ dịch ngược (Reverse Engineering), giả mạo và đánh cắp dữ liệu."
@@ -74,10 +74,10 @@ export default function GuardsquareClient({ lang, dict }: GuardsquareClientProps
             </p>
           </motion.div>
 
-          <div className="flex justify-center gap-6 pt-10">
+          <div className="flex justify-center gap-6 pt-4 sm:pt-10">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="px-12 py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-sky-600/30"
+              className="px-8 sm:px-12 py-4 sm:py-5 bg-sky-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-sky-600/30"
             >
               {isEn ? "Get Technical Advice" : "Nhận Tư vấn Kỹ thuật"}
             </button>

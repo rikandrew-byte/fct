@@ -42,7 +42,7 @@ export default function PainPointsSection({ dict }: PainPointsSectionProps) {
   const { title, subtitle, cards } = dict.painPoints;
 
   return (
-    <section className="bg-white py-20 px-6 relative overflow-hidden">
+    <section className="bg-white py-14 sm:py-20 px-4 sm:px-6 relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/30 rounded-full blur-[120px]" />
@@ -56,7 +56,7 @@ export default function PainPointsSection({ dict }: PainPointsSectionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14 space-y-4"
+          className="text-center mb-10 sm:mb-14 space-y-4"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tighter leading-tight">
             {title}
