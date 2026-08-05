@@ -121,6 +121,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                         <Link href={`/${lang}/products/longmai`} className="px-4 py-2 hover:bg-gray-100 rounded-xl text-gray-700 hover:text-rose-600 text-sm font-semibold transition-colors flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>Longmai
                         </Link>
+                        <Link href={`/${lang}/products/guardant`} className="px-4 py-2 hover:bg-gray-100 rounded-xl text-gray-700 hover:text-emerald-600 text-sm font-semibold transition-colors flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Guardant
+                        </Link>
                       </div>
                     </div>
                   )}

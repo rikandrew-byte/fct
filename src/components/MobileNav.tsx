@@ -98,6 +98,7 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
                       <Link href={`/${lang}/products/guardsquare`} onClick={() => setIsOpen(false)} className="text-gray-600 hover:text-gray-900 text-lg">Guardsquare</Link>
                       <Link href={`/${lang}/products/canary-labs`} onClick={() => setIsOpen(false)} className="text-gray-600 hover:text-gray-900 text-lg">Canary Labs</Link>
                       <Link href={`/${lang}/products/longmai`} onClick={() => setIsOpen(false)} className="text-gray-600 hover:text-gray-900 text-lg">Longmai</Link>
+                      <Link href={`/${lang}/products/guardant`} onClick={() => setIsOpen(false)} className="text-gray-600 hover:text-gray-900 text-lg">Guardant</Link>
                     </div>
                   )}
                 </div>
