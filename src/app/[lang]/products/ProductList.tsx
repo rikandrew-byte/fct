@@ -99,6 +99,16 @@ const categoryConfig: Record<
     dot:          "bg-red-500",
     imgRingColor: "ring-red-100",
   },
+  Guardant: {
+    badgeBg:      "bg-emerald-600 text-white",
+    iconBg:       "bg-emerald-50",
+    iconColor:    "text-emerald-600",
+    hoverBorder:  "hover:border-emerald-200",
+    hoverShadow:  "hover:shadow-emerald-500/10",
+    activeBtn:    "bg-emerald-600 text-white shadow-lg shadow-emerald-500/20",
+    dot:          "bg-emerald-600",
+    imgRingColor: "ring-emerald-100",
+  },
 };
 
 // ─── Per-product fallback icon ─────────────────────────────────────────────
@@ -122,24 +132,27 @@ const productIcons: Record<string, LucideIcon> = {
   "longmai-smartx1":          Shield,
   "longmai-smartx3":          KeyRound,
   "longmai-timepro":          Timer,
+  "guardant-ecosystem":        ShieldCheck,
 };
 
 export default function ProductList({ lang }: ProductListProps) {
   const isEn = lang === "en";
   const productsData = isEn ? productsEn : productsVi;
-  const categoryKeys = ["All", "Thales", "Guardsquare", "Industrial Data & IIoT", "Longmai"];
+  const categoryKeys = ["All", "Thales", "Guardsquare", "Industrial Data & IIoT", "Longmai", "Guardant"];
   const categoryLabels: Record<string, string> = isEn ? {
     "All": "All",
     "Thales": "Thales",
     "Guardsquare": "Guardsquare",
     "Industrial Data & IIoT": "Industrial Data & IIoT",
-    "Longmai": "Longmai"
+    "Longmai": "Longmai",
+    "Guardant": "Guardant"
   } : {
     "All": "Tất cả",
     "Thales": "Thales",
     "Guardsquare": "Guardsquare",
     "Industrial Data & IIoT": "Dữ liệu công nghiệp & IIoT",
-    "Longmai": "Longmai"
+    "Longmai": "Longmai",
+    "Guardant": "Guardant"
   };
 
   const [searchQuery, setSearchQuery]           = useState("");
@@ -249,6 +262,15 @@ export default function ProductList({ lang }: ProductListProps) {
                       onError={() => handleImgError(prod.id)}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
+                  ) : prod.category === "Guardant" ? (
+                    /* High-end custom Placeholder Card for Guardant with gradients and icons */
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-teal-500/10 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+                      <div className="absolute -top-10 -left-10 w-24 h-24 bg-emerald-400/10 rounded-full blur-xl" />
+                      <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-teal-400/10 rounded-full blur-xl" />
+                      <div className="relative w-20 h-20 bg-white rounded-3xl flex items-center justify-center shadow-lg shadow-emerald-500/10 border border-emerald-100 group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-10 h-10 text-emerald-600" />
+                      </div>
+                    </div>
                   ) : (
                     /* Fallback icon when no image or error */
                     <div className="absolute inset-0 flex items-center justify-center">

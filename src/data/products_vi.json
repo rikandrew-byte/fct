@@ -188,5 +188,15 @@
     "description": "TimePro là thiết bị xác thực OTP (One-Time Password) phần cứng của Longmai, hoạt động theo cơ chế TOTP (Time-based OTP) tương thích RFC 6238. Thiết bị tạo mã 6 chữ số thay đổi mỗi 30 giây, hoàn toàn độc lập — không cần pin điện thoại, không cần kết nối internet. Với màn hình LCD, pin tuổi thọ cao và lớp chip bảo mật chống giả mạo, TimePro là lựa chọn lý tưởng cho xác thực hai yếu tố (2FA) tại các hệ thống ngân hàng, tổ chức tài chính, VPN doanh nghiệp và cổng chính phủ điện tử.",
     "isNew": true,
     "link": "https://longmaitech.com/"
+  },
+  {
+    "id": "guardant-ecosystem",
+    "name": "Guardant - Hệ sinh thái Bảo vệ Bản quyền & Thương mại hóa Phần mềm",
+    "category": "Guardant",
+    "image": "",
+    "summary": "Giải pháp toàn diện bảo vệ tài sản trí tuệ (Core IP), chống bẻ khóa mã nguồn và tự động hóa quản lý bản quyền dành cho các nhà phát triển phần mềm (Software Vendors).",
+    "description": "Hệ sinh thái Guardant cung cấp các dòng khóa bảo mật cao cấp (Guardant Sign, Guardant Chip) không cần driver, giải pháp khóa mềm linh hoạt Guardant DL tương thích môi trường ảo hóa, cùng bộ công cụ mã hóa Guardant Protection Studio giúp bảo vệ tài sản trí tuệ cốt lõi trước các nguy cơ bẻ khóa, phân tích mã ngược. Tất cả được quản lý tập trung thông qua nền tảng Guardant Station.",
+    "isNew": true,
+    "link": "/products/guardant"
   }
 ]

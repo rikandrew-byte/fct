@@ -188,5 +188,15 @@
     "description": "TimePro is a Longmai hardware TOTP (Time-based OTP) authentication device compatible with RFC 6238. it generates a 6-digit code every 30 seconds completely independently—no phone battery or internet connection needed. With an LCD screen, long battery life, and anti-tamper security chip, it's ideal for 2FA in banking, financial institutions, and corporate VPNs.",
     "isNew": true,
     "link": "https://longmaitech.com/"
+  },
+  {
+    "id": "guardant-ecosystem",
+    "name": "Guardant - Software Protection & Licensing Ecosystem",
+    "category": "Guardant",
+    "image": "",
+    "summary": "Comprehensive solution for protecting intellectual property (Core IP), preventing source code cracking, and automating license management for Software Vendors.",
+    "description": "The Guardant ecosystem offers premium hardware keys (Guardant Sign, Guardant Chip) requiring no drivers, flexible software licensing (Guardant DL) compatible with virtualized environments, and the Guardant Protection Studio encryption suite to safeguard core IP against reverse engineering and cracking. All managed centrally via Guardant Station.",
+    "isNew": true,
+    "link": "/en/products/guardant"
   }
 ]

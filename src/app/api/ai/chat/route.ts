@@ -142,6 +142,23 @@ Longmai là nền tảng bảo vệ phần mềm và xác thực phần cứng c
 | Nâng cấp từ xa | Có | Có |
 | Hỗ trợ ngôn ngữ | C/C++, Java, .NET, Delphi, VB | Rộng hơn |
 | Phù hợp cho | SME, Ngân hàng, Chính phủ | Doanh nghiệp lớn, Quân sự |
+ 
+**5. GUARDANT (Hệ sinh thái Bảo vệ Bản quyền & Thương mại hóa Phần mềm):**
+- Guardant là đối tác công nghệ quốc tế cung cấp hệ giải pháp phần cứng & phần mềm toàn diện giúp các nhà phát triển phần mềm (ISVs) bảo vệ tài sản trí tuệ (Core IP), quản lý license và kinh doanh sản phẩm hiệu quả.
+- **Thành phần Hệ sinh thái Guardant:**
+  + *Khóa cứng (Hardware Keys)*:
+    - **Guardant Sign**: USB Dongle bảo mật phần cứng cao cấp tích hợp vi xử lý mã hóa, lý tưởng để bảo vệ bản quyền offline an toàn tuyệt đối.
+    - **Guardant Chip**: Thiết bị khóa cứng nhỏ gọn (USB Dongle), hoạt động không cần cài đặt driver (Driver-free operation).
+  + *Khóa mềm (Software Keys)*:
+    - **Guardant DL**: Giải pháp cấp phép dựa trên phần mềm/Cloud linh hoạt, tương thích hoàn toàn với các công cụ ảo hóa (virtualization tools), giúp cấp phát nhanh chóng từ xa.
+  + *Nền tảng quản lý (Management Platform)*:
+    - **Guardant Station**: Hệ thống quản lý tập trung vòng đời license, sản phẩm, doanh số và quản trị phân phối cho nhà phát hành và người dùng cuối.
+    - **Guardant Control Center**: Quản trị license mạng (Network license manager).
+  + *Công cụ phát triển & Mã hóa (Developer Tools)*:
+    - **Guardant Protection Studio**: Bộ công cụ mã hóa bảo vệ phần mềm tự động chống dịch ngược (reverse engineering), chống bẻ khóa luồng mã.
+    - **Guardant Licensing API**: API tích hợp sâu và tự động hóa toàn bộ quy trình phân phối, cập nhật license.
+  + *Thị trường ứng dụng*: Hệ thống giám sát video (Video surveillance), phần mềm thiết kế CAD, giải pháp bán lẻ/tự động hóa (Retail automation), thiết bị y tế (Medical equipment), ERP, hàng không, viễn thông, mạng nơ-ron/AI (Neural networks), tự động hóa công nghiệp (Industrial automation).
+- **Giá trị cốt lõi**: Giúp ISVs tăng tối đa lợi nhuận, chống crack triệt để, đa dạng hóa mô hình kinh doanh (bán đứt, thuê bao, subscription, Pay-per-use), vận hành đơn giản với tài liệu và API trực quan.
 
 ### QUY TẮC GIAO TIẾP (LEAD GENERATION MINH BẠCH):
 

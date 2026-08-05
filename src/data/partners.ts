@@ -73,4 +73,22 @@ export const partners = [
     website: "https://longmaitech.com",
     filterCategory: "Longmai",
   },
+  {
+    id: "guardant",
+    name: "Guardant",
+    fullName: "Guardant Global",
+    tier: "Đại diện & Nhà phân phối",
+    category: "Bảo vệ bản quyền & Thương mại hóa phần mềm",
+    productCount: 1,
+    icon: ShieldCheck,
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-600",
+    accentBar: "bg-emerald-600",
+    badgeBg: "bg-emerald-100 text-emerald-800",
+    btnColor: "text-emerald-800 hover:bg-emerald-50",
+    description:
+      "Guardant là thương hiệu bảo mật quốc tế chuyên nghiệp cung cấp hệ sinh thái quản lý bản quyền và bảo vệ mã nguồn phần mềm toàn diện (Hardware Keys, Software Keys, Guardant Station) cho các nhà phát triển phần mềm (ISVs) tại Việt Nam.",
+    website: "https://www.guardant.com",
+    filterCategory: "Guardant",
+  },
 ];
