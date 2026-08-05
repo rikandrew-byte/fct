@@ -20,6 +20,11 @@ import Link from "next/link";
 import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
+import dynamic from "next/dynamic";
+const GuardantArchitecture = dynamic(() => import("@/components/GuardantArchitecture"), {
+  ssr: false,
+  loading: () => <div className="h-[400px] bg-slate-900/5 animate-pulse rounded-[3rem] max-w-5xl mx-auto" />
+});
 
 interface GuardantClientProps {
   lang: string;
@@ -167,6 +172,19 @@ export default function GuardantClient({ lang, dict }: GuardantClientProps) {
             </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* ── 2.5 ARCHITECTURAL BLUEPRINT ──────────── */}
+      <section className="py-24 px-6 bg-white border-t border-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center space-y-4 mb-16 text-gray-900">
+            <span className="text-emerald-600 font-black text-xs uppercase tracking-[0.4em]">{isEn ? "Ecosystem Flow" : "Luồng Kiến Trúc Bảo Vệ"}</span>
+            <h2 className="text-4xl font-black uppercase tracking-tighter">
+              {isEn ? "The Guardant Security Architecture" : "Kiến trúc Bảo mật Guardant"}
+            </h2>
+          </div>
+          <GuardantArchitecture isEn={isEn} />
         </div>
       </section>
 
