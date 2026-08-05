@@ -1,5 +1,27 @@
 [
   {
+    "id": "giai-phap-bao-mat-quan-ly-du-lieu-ot-scada-cho-automation-si",
+    "title": "OT/SCADA Security & Data Management Solutions for Automation Systems Integrators (Automation SIs)",
+    "date": "2026-08-05",
+    "summary": "Historian data collection, real-time Power BI monitoring, and industrial control infrastructure security for electrical construction & automation companies.",
+    "category": "Industrial Data",
+    "target_funnel": "canary",
+    "image": "/images/posts/canary-management.jpg",
+    "ogImage": "/images/posts/canary-management.jpg",
+    "content": "In the era of Industrial Digital Transformation (Smart Factory & Industry 4.0), Systems Integrators (SIs) and Electrical & Automation contractors face a major challenge: How to collect SCADA/OT operational data from diverse devices with absolute reliability, while meeting strict cybersecurity standards?\n\nThe combination of Canary Historian v26.2 real-time data storage and the SORBA.ai Industrial AI platform provides a comprehensive answer for system integrators in Vietnam:\n\n1. **High-Speed Historian Data Collection**: The ability to record millions of variables (tags) per second from PLCs, RTUs, and DCSs without disrupting OT network infrastructure.\n2. **Data Visualization with Power BI Connector**: Allows direct ingestion of industrial data onto management dashboards while ensuring secure permissioning via the Tile Level Security feature.\n3. **Hardware Security & Transmission Encryption**: Combined with hardware security devices (Longmai/Thales HSM) to prevent tampering and block unauthorized command spoofing in smart substations and factories.\n\nFCT Vinh Thinh is proud to be a companion to leading automation enterprises in Vietnam, providing genuine software infrastructure and security hardware along with 24/7 technical support for all deployments."
+  },
+  {
+    "id": "bao-ve-ma-nguon-toi-uu-doanh-thu-cho-isv-software-house",
+    "title": "Source Code Protection & Revenue Optimization for Software Developers (Software Houses / ISVs)",
+    "date": "2026-08-05",
+    "summary": "Anti-Piracy strategies, core IP protection, and seamless software licensing management for B2B software vendors.",
+    "category": "Software Licensing",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-hsm-security.jpg",
+    "ogImage": "/images/posts/thales-hsm-security.jpg",
+    "content": "For software developers and service providers (ISVs / Software Houses), leaks of core source code (Core IP) or cracked commercial software result in direct revenue losses and damage business reputation. In the AI era, automated reverse-engineering tools can detect software exploits in just a few minutes.\n\nTo protect creative work and commercialize software effectively, Vietnamese software companies need a multi-layered protection strategy:\n\n1. **Application Encryption & Anti-Decompilation**: Utilizing Guardsquare solutions (DexGuard/iXGuard) to obfuscate control flow, encrypt API keys, and defend against dynamic instrumentation tools (RASP - Frida, Debuggers).\n2. **Smart Licensing Management with Thales Sentinel**: Decoupling licensing logic (Entitlement Management) from ERP systems or application code. This allows software companies to flexibly switch between business models: upfront licensing, recurring subscription, or feature-based licensing.\n3. **Anti-Tampering of Binary Digital Signatures**: Ensuring that installer packages delivered to enterprise clients are not injected with malware or modified without authorization.\n\nFCT Vinh Thinh provides comprehensive software licensing consultation and infrastructure integration, helping Software Houses optimize revenue, reduce Time-to-Market, and absolutely protect their digital assets."
+  },
+  {
     "id": "esim-buoc-chuyen-minh-mang-di-dong-noi-bo",
     "title": "eSIM and the Evolution of Private Mobile Networks for Enterprises",
     "date": "2026-06-25",

@@ -1,5 +1,27 @@
 [
   {
+    "id": "giai-phap-bao-mat-quan-ly-du-lieu-ot-scada-cho-automation-si",
+    "title": "Giải Pháp Bảo Mật & Quản Lý Dữ Liệu OT/SCADA Cho Các Đơn Vị Tích Hợp Hệ Thống Tự Động Hóa (Automation SI)",
+    "date": "2026-08-05",
+    "summary": "Phương án thu thập dữ liệu Historian, giám sát Power BI real-time và bảo mật hạ tầng điều khiển công nghiệp dành cho các doanh nghiệp xây lắp điện & tự động hóa.",
+    "category": "Dữ liệu công nghiệp",
+    "target_funnel": "canary",
+    "image": "/images/posts/canary-management.jpg",
+    "ogImage": "/images/posts/canary-management.jpg",
+    "content": "Trong kỷ nguyên Chuyển đổi số công nghiệp (Smart Factory & Industry 4.0), các đơn vị Tích hợp Hệ thống (SI) và Xây lắp Điện - Tự động hóa đang đối mặt với bài toán lớn: Làm thế nào để thu thập dữ liệu vận hành SCADA/OT đa dạng thiết bị với độ tin cậy tuyệt đối, đồng thời đáp ứng tiêu chuẩn an ninh mạng công nghiệp khắt khe?\n\nSự kết hợp giữa hệ thống lưu trữ dữ liệu thời gian thực Canary Historian v26.2 và nền tảng Trí tuệ nhân tạo SORBA.ai mang đến lời giải toàn diện cho các nhà tích hợp hệ thống tại Việt Nam:\n\n1. **Thu thập và lưu trữ dữ liệu Historian tốc độ cao**: Khả năng ghi nhận hàng triệu biến số (tags) mỗi giây từ các PLC, RTU, DCS mà không làm gián đoạn hạ tầng mạng OT.\n2. **Trực quan hóa dữ liệu với Power BI Connector**: Cho phép kéo trực tiếp dữ liệu công nghiệp lên hệ thống Dashboard giám sát của ban giám đốc mà vẫn đảm bảo phân quyền an toàn qua tính năng Tile Level Security.\n3. **Bảo mật phần cứng & Mã hóa kênh truyền**: Kết hợp với các thiết bị phần cứng an ninh (Longmai/Thales HSM) giúp chống can thiệp, chống giả mạo lệnh điều khiển trong các trạm điện và nhà máy thông minh.\n\nFCT Vĩnh Thịnh tự hào là đối tác đồng hành cùng các doanh nghiệp tự động hóa hàng đầu Việt Nam, cung cấp hạ tầng phần mềm và thiết bị bảo mật chính hãng, hỗ trợ kỹ thuật 24/7 cho mọi dự án triển khai."
+  },
+  {
+    "id": "bao-ve-ma-nguon-toi-uu-doanh-thu-cho-isv-software-house",
+    "title": "Bảo Vệ Mã Nguồn & Tối Ưu Doanh Thu Dành Cho Các Công Ty Phát Triển Phần Mềm (Software Houses / ISVs)",
+    "date": "2026-08-05",
+    "summary": "Chiến lược chống bẻ khóa (Anti-Piracy), bảo vệ tài sản trí tuệ (Core IP) và quản lý bản quyền phần mềm mượt mà dành cho các Vendor phần mềm B2B.",
+    "category": "Bản quyền phần mềm",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-hsm-security.jpg",
+    "ogImage": "/images/posts/thales-hsm-security.jpg",
+    "content": "Đối với các công ty sản xuất và dịch vụ phần mềm (ISV / Software House), việc lộ lọt mã nguồn cốt lõi (Core IP) hoặc bị bẻ khóa (crack) phần mềm thương mại gây ra thiệt hại doanh thu trực tiếp và làm suy giảm uy tín doanh nghiệp. Trong kỷ nguyên AI, các công cụ phân tích mã ngược tự động có thể tìm ra lỗ hổng của phần mềm chỉ trong vài phút.\n\nĐể bảo vệ thành quả sáng tạo và thương mại hóa phần mềm hiệu quả, các công ty phần mềm Việt Nam cần một chiến lược bảo vệ đa lớp:\n\n1. **Mã hóa & Chống dịch ngược ứng dụng**: Ứng dụng giải pháp Guardsquare (DexGuard/iXGuard) giúp làm rối luồng mã nguồn (Control Flow Obfuscation), mã hóa chuỗi API Key và tự vệ trước các công cụ can thiệp động (RASP - Frida, Debugger).\n2. **Quản lý bản quyền thông minh với Thales Sentinel**: Bóc tách logic cấp phép (Entitlement Management) ra khỏi hệ thống ERP hoặc mã nguồn phần mềm. Cho phép doanh nghiệp linh hoạt chuyển đổi giữa các mô hình kinh doanh: Bán bản quyền trả trước, Đăng ký định kỳ (Subscription) hoặc Cấp phép theo tính năng (Feature-based).\n3. **Chống giả mạo chữ ký số binary**: Đảm bảo bộ cài đặt phần mềm khi giao cho khách hàng Enterprise không bị chèn mã độc hay chỉnh sửa trái phép.\n\nFCT Vĩnh Thịnh cung cấp giải pháp tư vấn và tích hợp hạ tầng bản quyền phần mềm toàn diện, giúp các Software House tối ưu hóa doanh thu, rút ngắn thời gian đưa sản phẩm ra thị trường (Time-to-Market) và bảo vệ an toàn tuyệt đối cho tài sản số."
+  },
+  {
     "id": "esim-buoc-chuyen-minh-mang-di-dong-noi-bo",
     "title": "eSIM và Bước Chuyển Mình của Mạng Di Động Nội Bộ (Private Networks) cho Doanh Nghiệp",
     "date": "2026-06-25",
