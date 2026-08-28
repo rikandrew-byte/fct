@@ -1,5 +1,16 @@
 [
   {
+    "id": "bao-cao-idc-thales-2026-toi-uu-cap-phep-bao-ve-core-ip",
+    "title": "IDC & Thales 2026 Report: Optimizing Software Licensing & Protecting Core IP Against AI Challenges",
+    "date": "2026-08-28",
+    "summary": "Analysis of the IDC survey on B2B software buyer expectations, decoupling entitlements from ERP, and securing Core IP against AI-powered vulnerability scanning.",
+    "category": "Cybersecurity",
+    "target_funnel": "thales",
+    "image": "/images/posts/thales-hsm-security.jpg",
+    "ogImage": "/images/posts/thales-hsm-security.jpg",
+    "content": "In the latest report co-published with IDC surveying 300 global B2B enterprise customers, Thales highlights that the Licensing Model is becoming a key factor determining customer retention. Businesses today demand maximum flexibility in software consumption, and failure to innovate licensing models could cause Independent Software Vendors (ISVs) to lose customers to competitors.\n\nAdditionally, the software development market in 2026 is experiencing two strategic shifts:\n\n1. **Protecting Core IP in the AI Era**:\nThe rise of advanced AI models has made reverse engineering and scanning for source code vulnerabilities a matter of minutes. Without active protection, on-premise software or proprietary applications face high risks of cracking and intellectual property theft. Specialized encryption and license packaging establish a robust barrier to prevent automated AI tools from tampering with binary code.\n\n2. **Decoupling Entitlements from ERP**:\nMany software companies still manage licensing directly within their ERP systems. This structure creates significant friction during ERP upgrades or migrations, forcing IT teams to re-authenticate the customer's entire entitlements portfolio and delaying Time-to-Market for new features. By shifting entitlement management to a dedicated platform like Thales Sentinel, businesses can accelerate deployments, reduce IT workloads, and flexibly support modern licensing models (Subscription, Usage-based, Feature-based).\n\n3. **Preparing for International Security Standards**:\nBeyond safeguarding revenue, commercial software developers must prepare to meet the EU Cyber Resilience Act and stringent algorithmic security standards globally.\n\nFCT Vinh Thinh provides comprehensive consulting and deployment of the Thales Sentinel platform in Vietnam, helping software vendors protect core intellectual property and optimize software monetization models according to international standards."
+  },
+  {
     "id": "giai-phap-bao-mat-quan-ly-du-lieu-ot-scada-cho-automation-si",
     "title": "OT/SCADA Security & Data Management Solutions for Automation Systems Integrators (Automation SIs)",
     "date": "2026-08-05",
