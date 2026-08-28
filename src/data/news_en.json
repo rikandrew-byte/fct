@@ -156,8 +156,8 @@
     "date": "23/04/2026",
     "summary": "Why is mobile app security a top corporate priority? Explore Guardsquare's deep protection and anti-reverse engineering solutions for critical apps.",
     "category": "Mobile App Security",
-    "image": "/images/posts/guardsquare-thumbnail.jpg",
-    "ogImage": "/images/posts/guardsquare-thumbnail.jpg",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
+    "ogImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
     "content": "In the App-First era, mobile applications are the face of the business. However, they are also the most vulnerable point for reverse engineering and data theft. Guardsquare emerges as the perfect solution for this security shield.\n\n**1. Why are Enterprise Apps 'Easy Targets' for Hackers?**\nHackers can easily understand business logic and find vulnerabilities if the code is not protected. Apps running on user devices (rooted/jailbroken) represent a high-risk environment.\n\n> A single data leak from an App can destroy a reputation built over decades.\n\n**2. Guardsquare – A Combination of Polymorphism and Self-Protection**\nGuardsquare is not just a tool; it is a comprehensive defense strategy:\n\n- **Code Obfuscation:** Transforms the source code structure into an undecipherable 'maze,' making reverse engineering impossible.\n- **Runtime Application Self-Protection (RASP):** Integrates the ability to detect threats during execution. if an App is attacked or runs in a dangerous environment, it automatically triggers defense modes.\n- **Compliance:** Helps businesses easily achieve strict security certifications such as PCI DSS or OWASP.\n\n![Guardsquare Security Solution](/images/posts/guardsquare-shield.jpg)\n\n**3. Strategic Benefits for Managers**\nInvesting in Guardsquare delivers sustainable value for the digital roadmap:\n\n- **Protect Intellectual Property:** Keeps proprietary algorithms and business logic secret.\n- **Minimize Financial Loss:** Prevents fraud and in-app currency hacking.\n- **Build Absolute Trust:** Assures customers that their data is protected by world-leading technology.\n\n**Conclusion**\nInvesting in mobile app security with Guardsquare is not a cost, but a smart insurance policy for the sustainable growth of the enterprise in the digital age.",
     "faqs": [
       {
@@ -286,8 +286,8 @@
     "category": "Solution",
     "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
     "content": "In the digital era, mobile devices are not just communication tools but 'mobile offices' containing vast amounts of sensitive corporate data. Mobile Security Management needs a more holistic view instead of just installing regular antivirus software.\n\nFCT Vinh Thinh proposes a 3-layer approach:\n\n1. **Mobile Application Management (MAM):** Focuses on protecting the company's business apps, ensuring app data does not leak into personal apps.\n2. **Strong Authentication:** Using 2FA (Two-Factor Authentication) or PKI (Public Key Infrastructure) through Longmai tokens or Thales solutions to ensure only legitimate users can access the system.\n3. **Continuous Monitoring:** Utilizing behavioral analysis solutions to early detect signs of device attacks or users accessing from insecure networks.\n\nOur team of experts is always ready to support businesses in building flexible but absolute secure mobile security policies (BYOD Policy).",
-    "image": "/images/posts/mobile-security-management.jpg",
-    "ogImage": "/images/posts/mobile-security-management.jpg"
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop",
+    "ogImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop"
   },
   {
     "id": "security-awareness",

@@ -156,8 +156,8 @@
     "date": "23/04/2026",
     "summary": "Tại sao bảo mật ứng dụng di động là ưu tiên hàng đầu của doanh nghiệp? Tìm hiểu giải pháp Guardsquare chống dịch ngược và bảo vệ dữ liệu App chuyên sâu.",
     "category": "Mobile App Security",
-    "image": "/images/posts/guardsquare-thumbnail.jpg",
-    "ogImage": "/images/posts/guardsquare-thumbnail.jpg",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
+    "ogImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
     "content": "Trong kỷ nguyên App-First, ứng dụng di động chính là bộ mặt của doanh nghiệp. Tuy nhiên, đây cũng là nơi dễ bị tổn thương nhất trước các cuộc tấn công dịch ngược và đánh cắp dữ liệu. Guardsquare xuất hiện như một lời giải hoàn hảo cho lớp giáp bảo mật này.\n\n**1. Tại sao App doanh nghiệp là 'mồi ngon' cho Hacker?**\nHacker dễ dàng đọc hiểu logic kinh doanh và tìm ra lỗ hổng nếu code không được bảo vệ. Ứng dụng chạy trên thiết bị người dùng (đã root/jailbreak) là môi trường đầy rẫy rủi ro.\n\n> Một vụ rò rỉ dữ liệu từ App có thể phá hủy uy tín tích lũy hàng chục năm của doanh nghiệp.\n\n**2. Guardsquare – Sự kết hợp giữa Đa hình hóa và Tự bảo vệ**\nGuardsquare không chỉ là một công cụ, đó là một chiến lược phòng thủ toàn diện:\n\n- **Làm rối mã nguồn (Obfuscation):** Biến cấu trúc mã nguồn thành một 'mê cung' không thể đọc hiểu, khiến việc dịch ngược trở nên bất khả thi.\n- **Tự bảo vệ ứng dụng (RASP):** Tích hợp khả năng tự phát hiện các mối đe dọa ngay khi đang chạy (Runtime). Nếu App bị tấn công hoặc chạy trên môi trường nguy hiểm, nó sẽ tự động kích hoạt chế độ phòng vệ.\n- **Tuân thủ tiêu chuẩn:** Giúp doanh nghiệp dễ dàng đạt được các chứng chỉ bảo mật khắt khe như PCI DSS hay OWASP.\n\n![Giải pháp bảo mật Guardsquare](/images/posts/guardsquare-shield.jpg)\n\n**3. Lợi ích chiến lược cho nhà quản lý**\nĐầu tư vào Guardsquare mang lại giá trị bền vững cho lộ trình số hóa:\n\n- **Bảo vệ tài sản trí tuệ:** Giữ kín các thuật toán và logic kinh doanh độc quyền.\n- **Giảm thiểu thiệt hại tài chính:** Ngăn chặn các hành vi gian lận, hack tiền trong ứng dụng.\n- **Xây dựng niềm tin tuyệt đối:** Khẳng định với khách hàng rằng dữ liệu của họ đang được bảo vệ bởi công nghệ hàng đầu thế giới.\n\n**Lời kết**\nĐầu tư vào bảo mật ứng dụng với Guardsquare không phải là chi phí, mà là khoản bảo hiểm thông minh cho sự phát triển bền vững của doanh nghiệp trong kỷ nguyên số.",
     "faqs": [
       {
@@ -297,8 +297,8 @@
     "category": "Giải pháp",
     "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
     "content": "Trong kỷ nguyên số, thiết bị di động không chỉ là công cụ liên lạc mà còn là 'văn phòng di động' chứa đựng vô số dữ liệu nhạy cảm của doanh nghiệp. Việc quản trị bảo mật di động (Mobile Security Management) cần một cái nhìn tổng thể hơn thay vì chỉ cài đặt các phần mềm diệt virus thông thường.\n\nFCT Vĩnh Thịnh đề xuất hướng tiếp cận 3 lớp:\n\n1. **Quản lý Ứng dụng (MAM):** Tập trung vào việc bảo vệ chính ứng dụng nghiệp vụ của công ty, đảm bảo dữ liệu trong ứng dụng không bị rò rỉ ra các ứng dụng cá nhân.\n2. **Xác thực Mạnh:** Sử dụng các giải pháp 2FA (Xác thực 2 yếu tố) hoặc PKI (Public Key Infrastructure) thông qua các Token của Longmai hoặc giải pháp từ Thales để đảm bảo chỉ người dùng hợp pháp mới được truy cập hệ thống.\n3. **Giám sát Liên tục:** Sử dụng các giải pháp phân tích hành vi để phát hiện sớm các dấu hiệu thiết bị bị tấn công hoặc người dùng truy cập từ các mạng không an toàn.\n\nĐội ngũ chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ doanh nghiệp xây dựng chính sách bảo mật di động (BYOD Policy) linh hoạt nhưng vẫn an toàn tuyệt đối.",
-    "image": "/images/posts/mobile-security-management.jpg",
-    "ogImage": "/images/posts/mobile-security-management.jpg"
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop",
+    "ogImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop"
   },
   {
     "id": "security-awareness",
