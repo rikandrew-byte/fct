@@ -6,7 +6,7 @@ const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://cdn.jsdelivr.net;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
-    img-src 'self' blob: data: https://www.google.com https://*.googleapis.com https://*.gstatic.com https://cdn.jsdelivr.net;
+    img-src 'self' blob: data: https://www.google.com https://*.googleapis.com https://*.gstatic.com https://cdn.jsdelivr.net https://images.unsplash.com;
     font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
     object-src 'none';
     base-uri 'self';
@@ -29,6 +29,12 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
   async headers() {
     return [

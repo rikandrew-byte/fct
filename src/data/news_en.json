@@ -123,7 +123,7 @@
   {
     "id": "longmai-xac-thuc-pki-va-bao-mat-danh-tinh-so",
     "title": "Digital Identity Security: Why Businesses Need Longmai Hardware Authentication?",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "In the digital age, passwords are no longer enough. Stolen admin accounts or forged digital signatures can lead to financial and legal disasters. Longmai provides hardware authentication devices (mPKI) to establish an impenetrable firewall for your digital identity.",
     "category": "Security",
     "image": "/images/posts/longmai-auth-security.jpg",
@@ -133,7 +133,7 @@
   {
     "id": "thales-bao-mat-du-lieu-dam-may-va-hsm",
     "title": "Core Data Security: Why Thales is the Gold Standard for Enterprise?",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "Thales CipherTrust and HSM solutions - The world's leading Cloud Security standards. Protecting encryption keys against all advanced attacks.",
     "category": "Data Security & HSM",
     "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
@@ -153,7 +153,7 @@
   {
     "id": "guardsquare-bao-ve-ung-dung-di-dong-doanh-nghiep",
     "title": "Mobile App Security: The Final Shield Protecting Corporate Assets",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "Why is mobile app security a top corporate priority? Explore Guardsquare's deep protection and anti-reverse engineering solutions for critical apps.",
     "category": "Mobile App Security",
     "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
@@ -173,7 +173,7 @@
   {
     "id": "canary-historian-loi-the-canh-tranh",
     "title": "Canary Historian: Turning Operational Data Into Competitive Advantage for Manufacturers",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "Why is Canary Historian the leading OT data storage solution for managers? Optimize OEE, reduce maintenance costs, and master real-time data.",
     "category": "Industrial Data & IIoT",
     "image": "/images/posts/canary-historian-pillar.jpg",

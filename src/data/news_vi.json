@@ -123,7 +123,7 @@
   {
     "id": "longmai-xac-thuc-pki-va-bao-mat-danh-tinh-so",
     "title": "Bảo Mật Danh Tính Số: Tại Sao Doanh Nghiệp Cần Xác Thực Phần Cứng Longmai?",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "Trong kỷ nguyên số, mật khẩu không còn là lớp bảo vệ đủ an toàn. Việc bị đánh cắp tài khoản quản trị hay giả mạo chữ ký số có thể dẫn đến những thảm họa về tài chính và pháp lý. Longmai cung cấp các thiết bị xác thực phần cứng (mPKI) giúp thiết lập một 'chốt chặn' không thể xuyên phá cho danh tính số của bạn.",
     "category": "Bảo mật",
     "image": "/images/posts/longmai-auth-security.jpg",
@@ -133,7 +133,7 @@
   {
     "id": "thales-bao-mat-du-lieu-dam-may-va-hsm",
     "title": "Bảo Mật Dữ Liệu Lõi: Tại Sao Thales Là Tiêu Chuẩn Vàng Cho Doanh Nghiệp?",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "Thales CipherTrust và giải pháp HSM - Tiêu chuẩn bảo mật dữ liệu Cloud Security hàng đầu thế giới. Bảo vệ khóa mã hóa tuyệt đối trước mọi cuộc tấn công.",
     "category": "Data Security & HSM",
     "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
@@ -153,7 +153,7 @@
   {
     "id": "guardsquare-bao-ve-ung-dung-di-dong-doanh-nghiep",
     "title": "Bảo mật Ứng dụng Di động: Lớp Giáp Cuối Cùng Bảo Vệ Tài Sản Doanh Nghiệp",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "Tại sao bảo mật ứng dụng di động là ưu tiên hàng đầu của doanh nghiệp? Tìm hiểu giải pháp Guardsquare chống dịch ngược và bảo vệ dữ liệu App chuyên sâu.",
     "category": "Mobile App Security",
     "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
@@ -173,7 +173,7 @@
   {
     "id": "canary-historian-loi-the-canh-tranh",
     "title": "Canary Historian: Biến Dữ Liệu Vận Hành Thành Lợi Thế Cạnh Tranh Cho Doanh Nghiệp Sản Xuất",
-    "date": "23/04/2026",
+    "date": "2026-04-23",
     "summary": "Tại sao Canary Historian là giải pháp lưu trữ dữ liệu OT hàng đầu cho nhà quản lý? Tối ưu hóa OEE, giảm chi phí bảo trì và làm chủ dữ liệu thời gian thực.",
     "category": "Industrial Data & IIoT",
     "image": "/images/posts/canary-historian-pillar.jpg",
@@ -193,7 +193,7 @@
   {
     "id": "fido2-passwordless-trend",
     "title": "Kỷ nguyên Passwordless: Tại sao FIDO2 là tương lai của bảo mật ngân hàng?",
-    "date": "20/04/2026",
+    "date": "2026-04-20",
     "summary": "Tiêu chuẩn FIDO2 đang dần thay thế SMS OTP truyền thống để trở thành 'chốt chặn' an toàn nhất chống lại các cuộc tấn công Phishing tinh vi...",
     "category": "Bảo mật",
     "image": "/images/posts/fido2-passwordless.jpg",
@@ -204,7 +204,7 @@
   {
     "id": "biometric-usb-security",
     "title": "Khóa bảo mật sinh trắc học: Khi vân tay trở thành lá chắn cuối cùng",
-    "date": "19/04/2026",
+    "date": "2026-04-19",
     "summary": "Xu hướng tích hợp cảm biến vân tay trực tiếp lên khóa cứng USB giúp ngăn chặn việc sử dụng trái phép ngay cả khi thiết bị vật lý bị thất lạc...",
     "category": "Bảo mật",
     "image": "/images/posts/biometric-usb-security.jpg",
@@ -215,7 +215,7 @@
   {
     "id": "hybrid-software-protection",
     "title": "Bảo vệ bản quyền Hybrid: Tại sao phần mềm cao cấp vẫn cần USB Dongle?",
-    "date": "18/04/2026",
+    "date": "2026-04-18",
     "summary": "Trong thời đại SaaS, việc sử dụng USB Dongle (khóa cứng) kết hợp với quản lý Cloud đang tạo ra một tiêu chuẩn mới cho các phần mềm công nghiệp giá trị cao...",
     "category": "Giải pháp",
     "image": "/images/posts/hybrid-software-protection.jpg",
@@ -226,7 +226,7 @@
   {
     "id": "canary-labs",
     "title": "CANARY LABS là ai, họ cung cấp những giải pháp gì?",
-    "date": "13/12/2024",
+    "date": "2024-12-13",
     "summary": "Canary Labs là một công ty công nghệ có bề dày lịch sử, được thành lập vào năm 1985. Mặc dù tên tuổi có thể không quá phổ biến với công chúng, nhưng công...",
     "category": "Giải pháp",
     "image": "/images/posts/canary-labs-company.jpg",
@@ -237,7 +237,7 @@
   {
     "id": "android-15-security",
     "title": "Android 15 bảo vệ chống nhìn trộm màn hình như thế nào?",
-    "date": "03/12/2024",
+    "date": "2024-12-03",
     "summary": "Google đã giới thiệu tính năng bảo vệ chống nhìn trộm màn hình mới trên Android 15, giúp ngăn chặn k? tấn công thu thập thông tin nhạy cảm...",
     "category": "Bảo mật",
     "image": "/images/posts/android-15-security.jpg",
@@ -248,7 +248,7 @@
   {
     "id": "software-protection-2025",
     "title": "Xu hướng bảo vệ bản quyền phần mềm năm 2025",
-    "date": "28/11/2024",
+    "date": "2024-11-28",
     "summary": "Khám phá những xu hướng mới nhất trong việc bảo vệ tài sản trí tuệ và quản lý bản quyền phần mềm dành cho các nhà phát triển (ISV)...",
     "category": "Giải pháp",
     "image": "/images/posts/software-protection-2025.jpg",
@@ -259,7 +259,7 @@
   {
     "id": "fct-vinh-thinh-history",
     "title": "FCT VĨNH THỊNH - 15 NĂM MỘT CHẶNG ĐƯỜNG",
-    "date": "20/11/2024",
+    "date": "2024-11-20",
     "summary": "Nhìn lại hành trình 15 năm hình thành và phát triển của Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh trong lĩnh vực bảo mật và phần mềm...",
     "category": "Tin tức",
     "image": "/images/posts/fct-history.jpg",
@@ -270,7 +270,7 @@
   {
     "id": "world-security-day",
     "title": "HƯỞNG ỨNG NGÀY AN NINH MẠNG THẾ GIỚI CÙNG FCT",
-    "date": "30/11/2023",
+    "date": "2023-11-30",
     "summary": "FCT Vĩnh Thịnh tổ chức chuỗi sự kiện nâng cao nhận thức bảo mật và ưu đãi đặc biệt cho các giải pháp khóa cứng nhân Ngày An ninh mạng...",
     "category": "Sự kiện",
     "image": "/images/posts/world-security-day.jpg",
@@ -281,7 +281,7 @@
   {
     "id": "otp-token-protection",
     "title": "TĂNG CƯỜNG BẢO MẬT CHO CÁC GIAO DỊCH TRỰC TUYẾN BẰNG OTP TOKEN",
-    "date": "20/07/2022",
+    "date": "2022-07-20",
     "summary": "Sử dụng thiết b? OTP Token cầm tay là phương pháp hiệu quả nhất ?ể bảo v? tài khoản ngân hàng và các giao dịch giá tr? lớn...",
     "category": "Bảo mật",
     "image": "/images/posts/otp-token-banking.jpg",
@@ -292,7 +292,7 @@
   {
     "id": "mobile-security-management",
     "title": "QUẢN TRỊ BẢO MẬT THIẾT BỊ DI ĐỘNG TRONG THỜI ĐẠI KỶ NGUYÊN SỐ",
-    "date": "15/07/2022",
+    "date": "2022-07-15",
     "summary": "Công ty FCT Vĩnh Thịnh sẽ cung cấp một vài phân tích hữu ích cũng như giới thiệu đến bạn 2 giải pháp quản lý bảo mật thiết bị di động đang được thử nghiệm...",
     "category": "Giải pháp",
     "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
@@ -303,7 +303,7 @@
   {
     "id": "security-awareness",
     "title": "TẦM QUAN TRỌNG CỦA VIỆC NÂNG CAO NHẬN THỨC VỀ BẢO MẬT DI ĐỘNG",
-    "date": "05/07/2022",
+    "date": "2022-07-05",
     "summary": "Trong bài viết này, Công ty FCT Vĩnh Thịnh phân tích chi tiết nguyên nhân doanh nghiệp cần chú trọng nâng cao nhận thức của nhân viên về các vấn đề bảo mật...",
     "category": "Bảo mật",
     "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html",
@@ -314,7 +314,7 @@
   {
     "id": "mobile-security-challenges",
     "title": "4 THÁCH THỨC TRONG BẢO MẬT THIẾT BỊ DI ĐỘNG",
-    "date": "28/06/2022",
+    "date": "2022-06-28",
     "summary": "Xây dựng hệ thống bảo mật thiết bị di động là điều quan trọng bất cứ đơn vị nào cũng phải thực hiện. Nhưng hiện nay, các tin tặc hoàn toàn có thể...",
     "category": "Bảo mật",
     "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html",
@@ -325,7 +325,7 @@
   {
     "id": "malware-threats",
     "title": "TIỀM ẨN NGUY CƠ PHÁ HỦY BẢO MẬT DI ĐỘNG TỪ PHẦN MỀM ĐỘC HẠI",
-    "date": "22/06/2022",
+    "date": "2022-06-22",
     "summary": "Bảo mật di động bị đe dọa, nguy cơ thông tin và dữ liệu của người dùng có khả năng bị đánh cắp. Vậy làm cách nào để tránh phần mềm độc hại xâm...",
     "category": "Bảo mật",
     "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html",
@@ -336,7 +336,7 @@
   {
     "id": "attack-vectors",
     "title": "3 HÌNH THỨC TẤN CÔNG LỚP BẢO MẬT THIẾT BỊ DI ĐỘNG ĐIỂN HÌNH",
-    "date": "16/06/2022",
+    "date": "2022-06-16",
     "summary": "Vấn đề bảo mật thiết bị di động chính là mối quan tâm hàng đầu của doanh nghiệp hiện nay. Hãy cùng Công ty FCT Vĩnh Thịnh tìm hiểu về ba phương thức...",
     "category": "Bảo mật",
     "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html",
