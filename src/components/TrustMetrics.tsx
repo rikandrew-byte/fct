@@ -37,14 +37,8 @@ export default function TrustMetrics({ dict }: TrustMetricsProps) {
   const { title, subtitle, metrics } = dict.trustMetrics;
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-12 sm:py-16 px-4 sm:px-6 relative overflow-hidden border-y border-gray-200">
-      {/* Subtle background glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 right-0 w-96 h-96 bg-indigo-200/20 rounded-full blur-[120px]" />
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
+    <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 border-y border-gray-200">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

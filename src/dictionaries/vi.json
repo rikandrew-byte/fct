@@ -62,33 +62,33 @@
       "An ninh mạng",
       "Hạ tầng số"
     ],
-    "commitment": "\"Cam kết bảo vệ danh tính và dự án của khách hàng theo chính sách bảo mật (NDA Strict Policy) với tiêu chuẩn FIPS 140-2 Level 3\""
+    "commitment": "NDA Strict Policy — Bảo mật danh tính dự án theo chuẩn FIPS 140-2 Level 3"
   },
   "about": {
-    "badge": "Về Chúng Tôi",
-    "title": "Đồng Hành Cùng Doanh Nghiệp",
-    "subtitle": "Trong Kỷ Nguyên Số",
-    "description": "Chúng tôi không chỉ cung cấp dịch vụ, mà mang đến hệ sinh thái công nghệ trọn vẹn. Bằng sự am hiểu chuyên sâu và năng lực đối tác toàn cầu, chúng tôi giúp các tổ chức vượt qua giới hạn.",
-    "more": "Tìm hiểu hơn về FCT",
+    "badge": "FCT Vĩnh Thịnh JSC",
+    "title": "Đại lý Chính thức tại Việt Nam",
+    "subtitle": "Từ 2010",
+    "description": "Phân phối và tích hợp các giải pháp bảo mật lõi từ Thales, Guardsquare và Canary Labs. Đội ngũ kỹ sư được chứng nhận trực tiếp bởi nhà sản xuất, hỗ trợ triển khai và vận hành tại chỗ cho khách hàng Ngân hàng, ISV và Nhà máy công nghiệp.",
+    "more": "Tìm hiểu thêm về FCT",
     "features": [
       {
-        "title": "An Toàn & Bảo Mật",
-        "description": "Giải pháp an ninh mạng toàn diện bảo vệ tối đa dữ liệu doanh nghiệp."
+        "title": "Chứng nhận Chính hãng",
+        "description": "Đại lý ủy quyền của Thales (Pháp), Guardsquare (Bỉ), Canary Labs (Mỹ) — có đầy đủ chứng từ xuất xứ và giấy phép phân phối chính thức."
       },
       {
-        "title": "Hiệu Suất Vượt Trội",
-        "description": "Tối ưu hóa sức mạnh hạ tầng IT để nền tảng luôn hoạt động ở tốc độ cao nhất."
+        "title": "Kỹ sư Tại chỗ",
+        "description": "Hỗ trợ kỹ thuật trực tiếp: triển khai Sentinel LDK, tích hợp DexGuard SDK, cài đặt Canary Collector — không phụ thuộc vendor nước ngoài."
       },
       {
-        "title": "Kết Nối Toàn Cầu",
-        "description": "Đảm bảo sự liên thông không giới hạn và liền mạch qua các nền tảng mạng lõi."
+        "title": "Tuân thủ Tiêu chuẩn",
+        "description": "100% giải pháp đáp ứng FIPS 140-2 Level 3, CC EAL4+, ISO 27001 — phù hợp yêu cầu kiểm toán của NHNN và các tổ chức tài chính."
       }
     ]
   },
   "solutions": {
-    "badge": "Hệ sinh thái giải pháp",
-    "title": "Bảo vệ Toàn diện với",
-    "subtitle": "Công nghệ lõi",
+    "badge": "Danh mục Giải pháp",
+    "title": "Ba Trụ Cột Bảo Mật",
+    "subtitle": "Do FCT Phân phối",
     "newsLink": "Khám phá Tin tức",
     "mobileSecurity": {
       "title": "Chống Dịch Ngược Ứng Dụng",
@@ -396,7 +396,7 @@
     "badge": "Kết nối với chúng tôi",
     "titlePart1": "Liên hệ với ",
     "titlePart2": "chúng tôi",
-    "description": "FCT Vĩnh Thịnh luôn sẵn sàng lắng nghe và đồng hành cùng doanh nghiệp bạn trong mọi giải pháp công nghệ.",
+    "description": "Gặp vấn đề kỹ thuật về Sentinel LDK, DexGuard, iXGuard hay Canary Historian? Đội ngũ kỹ sư FCT phản hồi trong 24 giờ làm việc.",
     "info": {
       "address": "Địa chỉ",
       "hotline": "Hotline",

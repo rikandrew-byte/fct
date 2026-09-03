@@ -27,28 +27,16 @@ const CARD_ICONS = [
 ];
 
 const CARD_ACCENT_COLORS = [
-  "text-blue-600 border-blue-300 bg-blue-100",
-  "text-emerald-600 border-emerald-300 bg-emerald-100",
-  "text-violet-600 border-violet-300 bg-violet-100",
-];
-
-const CARD_GLOW_COLORS = [
-  "group-hover:shadow-blue-500/20",
-  "group-hover:shadow-emerald-500/20",
-  "group-hover:shadow-violet-500/20",
+  "text-blue-700 border-blue-200 bg-blue-50",
+  "text-slate-700 border-slate-200 bg-slate-100",
+  "text-slate-700 border-slate-200 bg-slate-100",
 ];
 
 export default function PainPointsSection({ dict }: PainPointsSectionProps) {
   const { title, subtitle, cards } = dict.painPoints;
 
   return (
-    <section className="bg-white py-14 sm:py-20 px-4 sm:px-6 relative overflow-hidden">
-      {/* Subtle background glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/30 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-200/20 rounded-full blur-[120px]" />
-      </div>
-
+    <section className="bg-white py-14 sm:py-20 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <motion.div
@@ -75,7 +63,7 @@ export default function PainPointsSection({ dict }: PainPointsSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
-              className={`group relative rounded-2xl border border-gray-200 bg-gradient-to-br from-blue-50 to-indigo-50 backdrop-blur-sm p-7 flex flex-col gap-5 transition-all duration-300 hover:border-gray-300 hover:shadow-2xl ${CARD_GLOW_COLORS[index]}`}
+              className={`group relative border border-slate-200 bg-white rounded-lg p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-slate-400`}
             >
               {/* Tag + Icon row */}
               <div className="flex items-center justify-between">

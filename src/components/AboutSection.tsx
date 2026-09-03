@@ -31,34 +31,27 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
   const content = dict.about;
 
   return (
-    <section className="py-16 md:py-32 bg-slate-50/50 relative overflow-hidden">
-      {/* Decorative background glows */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px] -z-10"></div>
-
+    <section className="py-16 md:py-28 bg-white relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center text-center lg:text-left">
           {/* Trái: Nội dung */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+            transition={{ duration: 0.7 }}
+            className="space-y-6"
           >
-            <div className="space-y-4">
-              <span className="text-[11px] font-black text-blue-600 tracking-[0.3em] uppercase block mb-2">{content.badge}</span>
-              <h2 className="text-4xl md:text-6xl font-black text-gray-950 leading-tight tracking-tighter">
+            <div className="space-y-3">
+              <span className="text-[11px] font-bold text-blue-700 tracking-[0.3em] uppercase block">{content.badge}</span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
                 {content.title} <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                  {content.subtitle}
-                </span>
+                <span className="text-blue-700">{content.subtitle}</span>
               </h2>
             </div>
-            <p className="text-gray-800 text-lg md:text-xl font-light leading-relaxed tracking-tight max-w-xl mx-auto lg:mx-0">
+            <p className="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
               {content.description}
             </p>
-
           </motion.div>
 
           {/* Phải: Grid tính năng */}
@@ -66,17 +59,15 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
             {features.map((feature, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="space-y-4 text-left group"
+                className="space-y-3 text-left"
               >
-                <div className="group-hover:scale-110 transition-transform duration-500">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">{feature.title}</h3>
-                <p className="text-gray-600 text-sm font-light leading-relaxed">
+                <div>{feature.icon}</div>
+                <h3 className="text-base font-bold text-slate-900 tracking-tight">{feature.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -86,4 +77,5 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
       </div>
     </section>
   );
+
 }

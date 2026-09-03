@@ -17,7 +17,7 @@ import {
   Users,
 } from "lucide-react";
 import { partners } from "@/data/partners";
-import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import TechGridBackground from "@/components/TechGridBackground";
 import { motion } from "framer-motion";
 
 interface Milestone {
@@ -56,32 +56,38 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
   return (
     <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden bg-white">
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
-        <NeuralNetworkBackground />
-        
-        {/* Glows */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-blue-600/10 rounded-full blur-[180px] -z-10 animate-pulse"></div>
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-slate-50">
+        <TechGridBackground />
 
         <div className="max-w-6xl mx-auto relative z-10 w-full">
           <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 items-center justify-between">
             {/* Text */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
+            <motion.div
+              initial={{ opacity: 0, x: -24 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex-1 space-y-10"
+              transition={{ duration: 0.6 }}
+              className="flex-1 space-y-6"
             >
-              <div className="inline-block bg-blue-100 border border-blue-300 backdrop-blur-md rounded-full px-5 py-2 text-[11px] font-black text-blue-700 tracking-[0.4em] uppercase shadow-2xl">
+              <span className="inline-flex items-center gap-2 border border-blue-700 bg-blue-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-300 inline-block" />
                 {d.hero.badge}
-              </div>
-              <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tight leading-[1.1]">
+              </span>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tighter leading-[1.08]">
                 {d.hero.title} <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                  {d.hero.subtitle}
-                </span>
+                <span className="text-blue-700">{d.hero.subtitle}</span>
               </h1>
-              <p className="text-gray-700 text-xl font-light leading-relaxed max-w-xl tracking-tight">
+              <p className="text-slate-600 text-lg font-normal leading-relaxed max-w-xl">
                 {d.hero.description}
               </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a href={`/${lang}/products`} className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm tracking-wide px-7 py-3 rounded-sm transition-colors duration-200">
+                  {d.hero.ctaProducts}
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href={`/${lang}/contact`} className="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-700 hover:text-blue-700 text-slate-700 font-semibold text-sm tracking-wide px-7 py-3 rounded-sm bg-white transition-colors duration-200">
+                  {d.hero.ctaExperts}
+                </a>
+              </div>
             </motion.div>
 
             {/* Stats grid */}
@@ -89,10 +95,10 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               {d.stats.map((s: Stat) => (
                 <div
                   key={s.label}
-                  className="bg-white border border-gray-200 backdrop-blur-xl rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-10 text-center group hover:border-blue-400 transition-colors duration-500 shadow-2xl"
+                  className="bg-white border border-slate-200 rounded-lg p-6 sm:p-8 text-center"
                 >
-                  <p className="text-3xl sm:text-5xl font-black text-gray-900 mb-2 tracking-tighter group-hover:text-blue-600 transition-colors">{s.value}</p>
-                  <p className="text-[10px] text-gray-600 font-bold uppercase tracking-widest">{s.label}</p>
+                  <p className="text-3xl sm:text-4xl font-black text-slate-900 mb-1 tracking-tighter">{s.value}</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -146,7 +152,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               return (
                 <div
                   key={v.title}
-                  className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-gray-200/40 transition-all duration-300 flex gap-6"
+                  className="bg-white rounded-lg p-8 border border-slate-200 flex gap-6 hover:border-slate-400 transition-colors duration-200"
                 >
                   <div
                     className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${valueColors[idx]}`}
@@ -268,7 +274,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               return (
                 <div
                   key={p.id}
-                  className="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-gray-200/40 transition-all duration-300 group flex flex-col"
+                  className="bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-slate-400 transition-colors duration-200 group flex flex-col"
                 >
                   <div className={`h-1.5 w-full ${p.accentBar}`} />
                   <div className="p-8 flex flex-col flex-1 gap-5">
@@ -321,51 +327,34 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
       </section>
 
       {/* ── CTA Liên hệ ─────────────────────────────────────────────── */}
-      <section className="bg-white py-24 px-6 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto w-full bg-gradient-to-br from-blue-600 to-indigo-600 rounded-[2.5rem] sm:rounded-[3.5rem] p-8 sm:p-12 md:p-16 text-center space-y-8 sm:space-y-10 relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
-          
-          <div className="space-y-6 relative z-10">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+      <section className="bg-white py-20 px-6 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto w-full bg-slate-900 rounded-lg p-10 sm:p-14 flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div className="space-y-3">
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
               {d.cta.title}
             </h2>
-            <p className="text-blue-100 font-light text-lg max-w-xl mx-auto">
+            <p className="text-slate-400 font-normal text-base max-w-md">
               {d.cta.description}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center relative z-10">
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
               href="tel:0983027776"
               id="about-contact-call"
-              className="flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-5 rounded-2xl font-bold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
+              className="inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-7 py-3 rounded-sm font-semibold text-sm tracking-wide transition-colors duration-200"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-4 h-4" />
               0983 027 776
             </a>
             <a
               href="mailto:andrew@fct.vn"
               id="about-contact-email"
-              className="flex items-center justify-center gap-2 bg-gray-800 text-gray-200 border border-gray-700 px-8 py-5 rounded-2xl font-bold hover:bg-gray-700 hover:text-white transition-all transition-all"
+              className="inline-flex items-center justify-center gap-2 border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white px-7 py-3 rounded-sm font-semibold text-sm tracking-wide transition-colors duration-200"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-4 h-4" />
               andrew@fct.vn
             </a>
-            <Link
-              href={`/${lang}/contact`}
-              id="about-view-products"
-              className="flex items-center justify-center gap-2 bg-gray-800 text-gray-200 border border-gray-700 px-8 py-5 rounded-2xl font-bold hover:bg-gray-700 hover:text-white transition-all"
-            >
-              <ArrowRight className="w-5 h-5" />
-              {isEn ? "Contact Us" : "Liên hệ ngay"}
-            </Link>
-          </div>
-
-          <div className="pt-8 border-t border-blue-500/20 flex flex-col sm:flex-row gap-6 justify-center text-sm text-blue-100 relative z-10">
-            <span className="flex items-center gap-2 justify-center">
-              <MapPin className="w-4 h-4" />
-              {dict.footer.hqAddress}
-            </span>
           </div>
         </div>
       </section>

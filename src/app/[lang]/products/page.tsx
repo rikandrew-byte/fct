@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ProductList from "./ProductList";
 import productsVi from "@/data/products_vi.json";
 import productsEn from "@/data/products_en.json";
-import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import TechGridBackground from "@/components/TechGridBackground";
 import { Locale } from "@/config/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 
@@ -64,19 +64,17 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
   return (
     <main className="min-h-screen bg-white selection:bg-blue-600 selection:text-white">
       {/* ── Header Section ───────────────────── */}
-      <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 pt-24 pb-12 px-6 overflow-hidden">
-        <NeuralNetworkBackground />
-        {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[160px] -z-10 animate-pulse"></div>
-
-        <div className="max-w-6xl mx-auto relative z-10 text-center space-y-6">
-          <div className="inline-block bg-blue-100 border border-blue-300 backdrop-blur-md rounded-full px-5 py-2 text-[10px] font-black text-blue-700 tracking-[0.4em] uppercase">
+      <div className="relative bg-slate-50 pt-24 pb-12 px-6 overflow-hidden border-b border-slate-200">
+        <TechGridBackground />
+        <div className="max-w-6xl mx-auto relative z-10 space-y-5">
+          <span className="inline-flex items-center gap-2 border border-blue-700 bg-blue-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-300 inline-block" />
             {dict.products.badge}
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none">
-            {dict.products.titlePart1} <span className="text-blue-600">{dict.products.titlePart2}</span>
+          </span>
+          <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-tight">
+            {dict.products.titlePart1} <span className="text-blue-700">{dict.products.titlePart2}</span>
           </h1>
-          <p className="text-gray-700 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed tracking-tight">
+          <p className="text-slate-500 max-w-2xl text-base leading-relaxed">
             {dict.products.description}
           </p>
         </div>

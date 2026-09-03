@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ShieldAlert, Cpu, ArrowRight, ShieldCheck } from "lucide-react";
 import AboutSection from "@/components/AboutSection";
 import Testimonials from "@/components/Testimonials";
-import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import TechGridBackground from "@/components/TechGridBackground";
 import IntegritySeal from "@/components/IntegritySeal";
 import { motion } from "framer-motion";
 import NewsSection from "@/components/NewsSection";
@@ -23,6 +23,7 @@ interface HomePageClientProps {
     homeNews?: any;
     painPoints: any;
     trustMetrics: any;
+    securityComparison: any;
   };
   latestNews: {
     id: string;
@@ -39,80 +40,73 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
     <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
 
       {/* Hero Section */}
-      <section className="relative pt-16 md:pt-24 pb-10 px-4 sm:px-6 min-h-[85vh] landscape:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
-        <NeuralNetworkBackground />
+      <section className="relative pt-20 md:pt-28 pb-16 px-4 sm:px-6 min-h-[82vh] flex flex-col items-center justify-center overflow-hidden bg-slate-50">
+        <TechGridBackground />
 
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
-
-        <div className="text-center max-w-5xl mx-auto space-y-6 sm:space-y-10 z-10">
+        <div className="text-center max-w-5xl mx-auto space-y-8 z-10 relative">
+          {/* Badge — B2B Enterprise style: solid, no shimmer */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="group relative inline-block"
+            transition={{ duration: 0.4 }}
           >
-            <div className="absolute inset-0 bg-blue-400 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity animate-pulse"></div>
-            <div className="relative overflow-hidden bg-blue-100 backdrop-blur-xl border border-blue-300 rounded-full px-8 py-2.5 text-[11px] font-black text-blue-700 tracking-[0.3em] shadow-2xl uppercase">
-              <span className="relative z-10 font-black">{dict.hero.badge}</span>
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-blue-400/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
-            </div>
+            <span className="inline-flex items-center gap-2 border border-blue-700 bg-blue-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-300 inline-block" />
+              {dict.hero.badge}
+            </span>
           </motion.div>
 
+          {/* Headline — solid, high-contrast, no gradient glow */}
           <motion.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.15] sm:leading-[1.2] md:leading-[1] text-gray-900"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.08] text-slate-900"
           >
-            {dict.hero.title} <br />
-            <span className="relative inline-block pb-4">
-              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
-                {dict.hero.subtitle}
-              </span>
-              <motion.span
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 0.8 }}
-                className="absolute bottom-0 left-0 h-2 bg-gradient-to-r from-blue-500 to-transparent rounded-full shadow-[0_0_15px_rgba(59,130,246,0.8)]"
-              />
-            </span>
+            {dict.hero.title}
+            <br />
+            <span className="text-blue-700">{dict.hero.subtitle}</span>
           </motion.h1>
 
+          {/* Description */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="text-base sm:text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed tracking-tight mb-8"
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed"
           >
             {dict.hero.description}
           </motion.p>
 
+          {/* CTA Buttons — solid, professional */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-3 justify-center items-center"
           >
-            <Link
+            <a
               href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm tracking-widest uppercase px-8 py-4 rounded-full shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm tracking-wide px-8 py-3.5 rounded-sm transition-colors duration-200"
             >
               {dict.hero.cta1}
               <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
+            </a>
+            <a
               href={`/${lang}/whitepaper`}
-              className="inline-flex items-center gap-2 border border-blue-400/40 hover:border-blue-400/80 text-blue-600 hover:text-blue-700 font-semibold text-sm tracking-widest uppercase px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-700 hover:text-blue-700 text-slate-700 font-semibold text-sm tracking-wide px-8 py-3.5 rounded-sm bg-white transition-colors duration-200"
             >
               {dict.hero.cta2}
-            </Link>
+            </a>
           </motion.div>
-          
-          <div className="pt-8">
+
+          {/* Integrity Seal */}
+          <div className="pt-4">
             <IntegritySeal />
           </div>
         </div>
       </section>
+
 
       {/* Trust & Confidentiality Section */}
       <section className="border-b border-gray-200 bg-white py-8 relative overflow-hidden">
@@ -152,101 +146,129 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
         <AboutSection lang={lang} dict={dict} />
       </section>
 
-      {/* Bento Box Grid */}
+      {/* Solutions Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-16 section-padding">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-16 gap-4">
-          <div className="space-y-4 text-center md:text-left">
-            <span className="text-sm font-black text-blue-600 tracking-[0.4em] uppercase block mb-2">{dict.solutions.badge}</span>
-            <h2 className="text-3xl sm:text-4xl md:text-7xl font-black text-gray-950 tracking-tighter leading-tight">
-              {dict.solutions.title} <br />
-              <span className="text-blue-600">{dict.solutions.subtitle}</span>
-            </h2>
-          </div>
-
+        {/* Header */}
+        <div className="mb-10 sm:mb-14 border-b border-slate-200 pb-8">
+          <span className="text-[11px] font-bold text-blue-700 tracking-[0.3em] uppercase block mb-3">{dict.solutions.badge}</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-tight">
+            {dict.solutions.title}{" "}
+            <span className="text-blue-700">{dict.solutions.subtitle}</span>
+          </h2>
         </div>
 
-        {/* Bento Grid: Thales (col-span-2) + Guardsquare (col-span-2) lớn, Longmai nhỏ */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Item 1: Guardsquare — Enterprise Priority, chiếm 2 cột */}
+        {/* Solution Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          {/* Card 1: Guardsquare */}
           <Link href={`/${lang}/products/guardsquare`} className="group md:col-span-2">
             <motion.article
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-10 h-full space-y-4 sm:space-y-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="bg-white border border-slate-200 hover:border-blue-700 rounded-lg p-7 sm:p-9 h-full flex flex-col gap-5 transition-colors duration-200"
             >
-              <div className="text-blue-600 group-hover:scale-110 transition-transform duration-500">
-                <ShieldAlert className="w-12 h-12 stroke-[1.5px]" />
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-sm uppercase tracking-widest">
+                  <ShieldAlert className="w-3.5 h-3.5" />
+                  Enterprise Mobile Security
+                </span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Guardsquare</span>
               </div>
-              <div className="space-y-1">
-                <span className="text-xs font-medium text-blue-500 uppercase tracking-widest">Enterprise Mobile Security</span>
-                <h3 className="text-3xl font-black text-gray-950 tracking-tighter group-hover:text-blue-600 transition-colors">{dict.solutions.mobileSecurity.title}</h3>
-              </div>
-              <p className="text-gray-600 text-base font-light leading-relaxed max-w-lg">
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight">
+                {dict.solutions.mobileSecurity.title}
+              </h3>
+              <p className="text-slate-500 text-sm leading-relaxed flex-1">
                 {dict.solutions.mobileSecurity.description}
               </p>
-              <div className="flex items-center gap-2 text-blue-600 font-medium text-sm group-hover:gap-3 transition-all">
+              <div className="flex flex-wrap gap-2">
+                {["DexGuard", "iXGuard", "Android & iOS", "RASP", "ProGuard"].map(tag => (
+                  <span key={tag} className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-sm">{tag}</span>
+                ))}
+              </div>
+              <div className="flex items-center gap-1.5 text-blue-700 font-semibold text-sm group-hover:gap-3 transition-all">
                 <span>{lang === "en" ? "Explore solution" : "Khám phá giải pháp"}</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
             </motion.article>
           </Link>
 
-          {/* Item 3: Longmai — Compact, chiếm 1 cột */}
+          {/* Card 2: Longmai */}
           <Link href={`/${lang}/products/longmai`} className="group md:col-span-1">
             <motion.article
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-rose-50 border border-rose-100 rounded-3xl p-6 sm:p-8 h-full space-y-4 sm:space-y-5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              transition={{ delay: 0.1 }}
+              className="bg-white border border-slate-200 hover:border-slate-700 rounded-lg p-7 h-full flex flex-col gap-5 transition-colors duration-200"
             >
-              <div className="text-rose-600 group-hover:scale-110 transition-transform duration-500">
-                <Cpu className="w-10 h-10 stroke-[1.5px]" />
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-slate-700 bg-slate-100 border border-slate-300 px-2.5 py-1 rounded-sm uppercase tracking-widest">
+                  <Cpu className="w-3.5 h-3.5" />
+                  {lang === "en" ? "Hardware Security" : "Bảo mật Cứng"}
+                </span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Longmai</span>
               </div>
-              <div className="space-y-1">
-                <span className="text-xs font-medium text-rose-500 uppercase tracking-widest">{lang === "en" ? "Flexible Alternative" : "Giải pháp Linh hoạt"}</span>
-                <h3 className="text-xl font-black text-gray-950 tracking-tighter group-hover:text-rose-600 transition-colors">{dict.solutions.hardwareSecurity.title}</h3>
-              </div>
-              <p className="text-gray-600 text-sm font-light leading-relaxed">
+              <h3 className="text-xl font-black text-slate-900 tracking-tight leading-tight">
+                {dict.solutions.hardwareSecurity.title}
+              </h3>
+              <p className="text-slate-500 text-sm leading-relaxed flex-1">
                 {dict.solutions.hardwareSecurity.description}
               </p>
-              <div className="flex items-center gap-2 text-rose-600 font-medium text-sm group-hover:gap-3 transition-all">
+              <div className="flex flex-wrap gap-2">
+                {["Smart X1", "Smart X3", "3DES", "FIPS 140-2"].map(tag => (
+                  <span key={tag} className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-sm">{tag}</span>
+                ))}
+              </div>
+              <div className="flex items-center gap-1.5 text-slate-700 font-semibold text-sm group-hover:gap-3 transition-all">
                 <span>{lang === "en" ? "Learn more" : "Tìm hiểu thêm"}</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
             </motion.article>
           </Link>
 
-          {/* Item 2: Thales — Enterprise Priority, chiếm full width */}
+          {/* Card 3: Thales Sentinel — full width, dark */}
           <Link href={`/${lang}/products/thales-sentinel`} className="group md:col-span-3">
             <motion.article
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-indigo-50 border border-indigo-100 rounded-3xl p-6 sm:p-10 space-y-4 sm:space-y-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              transition={{ delay: 0.15 }}
+              className="bg-slate-900 border border-slate-800 hover:border-blue-500 rounded-lg p-7 sm:p-9 transition-colors duration-200"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 sm:gap-6">
-                <div className="flex items-start gap-4 sm:gap-6">
-                  <div className="text-indigo-600 group-hover:scale-110 transition-transform duration-500 mt-1">
-                    <ShieldCheck className="w-12 h-12 stroke-[1.5px]" />
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div className="flex flex-col md:flex-row items-start gap-6 flex-1">
+                  <div className="shrink-0">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-blue-300 bg-blue-950 border border-blue-800 px-2.5 py-1 rounded-sm uppercase tracking-widest">
+                      <ShieldCheck className="w-3.5 h-3.5" />
+                      Enterprise License Management
+                    </span>
                   </div>
-                  <div className="space-y-2">
-                    <span className="text-xs font-medium text-indigo-500 uppercase tracking-widest">Enterprise License Management</span>
-                    <h3 className="text-3xl font-black text-gray-950 tracking-tighter group-hover:text-indigo-600 transition-colors">{dict.solutions.licenseManagement.title}</h3>
-                    <p className="text-gray-600 text-base font-light leading-relaxed max-w-2xl">
+                  <div className="space-y-3 flex-1">
+                    <div className="flex items-baseline gap-3">
+                      <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                        {dict.solutions.licenseManagement.title}
+                      </h3>
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest hidden md:block">Thales Sentinel</span>
+                    </div>
+                    <p className="text-slate-400 text-sm leading-relaxed max-w-2xl">
                       {dict.solutions.licenseManagement.description}
                     </p>
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      {["Sentinel LDK", "Sentinel RMS", "HSM", "FIPS 140-2 L3", "CC EAL4+", "AES-256"].map(tag => (
+                        <span key={tag} className="text-[10px] font-semibold text-slate-400 bg-slate-800 border border-slate-700 px-2 py-0.5 rounded-sm">{tag}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-indigo-600 font-medium text-sm group-hover:gap-3 transition-all shrink-0">
+                <div className="flex items-center gap-1.5 text-blue-400 font-semibold text-sm group-hover:gap-3 transition-all shrink-0">
                   <span>{lang === "en" ? "Explore solution" : "Khám phá giải pháp"}</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
             </motion.article>
           </Link>
+
         </div>
       </section>
 

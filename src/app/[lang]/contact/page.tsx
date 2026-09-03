@@ -11,7 +11,7 @@ import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/config/i18n-config";
 import Link from "next/link";
 import RFPForm from "./RFPForm";
-import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import TechGridBackground from "@/components/TechGridBackground";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = (await params) as { lang: Locale };
@@ -30,26 +30,22 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
   return (
     <main className="min-h-screen bg-slate-50 text-gray-950 selection:bg-blue-600">
-      {/* ── 1. Hero Section (Centered) ─────────────────────────────────── */}
-      <section className="relative bg-[#020617] pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
-        <NeuralNetworkBackground />
+      {/* ── 1. Hero Section ─────────────────────────────────────────────── */}
+      <section className="relative bg-slate-900 pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
+        <TechGridBackground />
 
-        {/* Glow Effects */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-500/10 rounded-full blur-[200px] -z-10"></div>
+        <div className="max-w-4xl mx-auto relative z-10 space-y-6">
+          <span className="inline-flex items-center gap-2 border border-blue-500 bg-blue-900/50 text-blue-300 text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+            <ShieldAlert className="w-3.5 h-3.5" />
+            {isEn ? "Enterprise RFP Gateway" : "Cổng tiếp nhận hồ sơ giải pháp"}
+          </span>
 
-        <div className="max-w-4xl mx-auto relative z-10 text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full">
-            <ShieldAlert className="w-4 h-4 text-blue-400" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-400">
-              {isEn ? "Enterprise RFP Gateway" : "Cổng tiếp nhận hồ sơ giải pháp"}
-            </span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-tight sm:leading-none uppercase text-white">
-            {isEn ? "Request for" : "Yêu cầu"} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300">{isEn ? "Proposal" : "Giải pháp"}</span>
+          <h1 className="text-3xl sm:text-5xl font-black tracking-tighter leading-tight text-white">
+            {isEn ? "Request for " : "Yêu cầu "}
+            <span className="text-blue-400">{isEn ? "Proposal" : "Giải pháp"}</span>
           </h1>
 
-          <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-400 text-base leading-relaxed max-w-xl">
             {isEn
               ? "Transform your infrastructure with world-class security. Submit your technical requirements below for a customized architectural blueprint and quote."
               : "Chuyển đổi hạ tầng bảo mật của bạn với tiêu chuẩn quốc tế. Gửi yêu cầu kỹ thuật để nhận thiết kế kiến trúc và báo giá tối ưu."
@@ -62,20 +58,20 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       <section className="relative z-20 -mt-8 sm:-mt-16 px-4 sm:px-6 pb-16 sm:pb-24">
         <div className="max-w-4xl mx-auto">
           {/* Form Card */}
-          <div className="bg-white border border-gray-100 rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-8 md:p-16 shadow-2xl shadow-gray-200/50 mb-8 sm:mb-16">
-            <div className="mb-12 text-center space-y-2">
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">{isEn ? "Expert Consultation Request" : "Gửi yêu cầu tư vấn"}</h2>
-              <p className="text-gray-500 text-sm">{isEn ? "Share your needs and our security architects will design a customized plan for you." : "Chia sẻ nhu cầu của bạn để các chuyên gia bảo mật của chúng tôi tư vấn phương án tối ưu."}</p>
+          <div className="bg-white border border-slate-200 rounded-lg p-6 sm:p-8 md:p-14 shadow-sm mb-8 sm:mb-12">
+            <div className="mb-10 space-y-2">
+              <h2 className="text-xl font-black text-slate-900 tracking-tight">{isEn ? "Expert Consultation Request" : "Gửi yêu cầu tư vấn"}</h2>
+              <p className="text-slate-500 text-sm">{isEn ? "Share your needs and our security architects will design a customized plan for you." : "Chia sẻ nhu cầu của bạn để các chuyên gia bảo mật của chúng tôi tư vấn phương án tối ưu."}</p>
             </div>
-            <Suspense fallback={<div className="h-[600px] flex items-center justify-center text-gray-400 uppercase text-[10px] font-black tracking-widest animate-pulse">Initializing Secure Portal...</div>}>
+            <Suspense fallback={<div className="h-[600px] flex items-center justify-center text-slate-400 uppercase text-[10px] font-bold tracking-widest">Initializing Secure Portal...</div>}>
               <RFPForm lang={lang} />
             </Suspense>
           </div>
 
 
           {/* HQ Location */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center bg-white border border-gray-100 rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-8 md:p-16 shadow-2xl shadow-gray-200/50">
-            <div className="w-full aspect-video rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-xl bg-slate-50">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center bg-white border border-slate-200 rounded-lg p-6 sm:p-8 md:p-12 shadow-sm">
+            <div className="w-full aspect-video rounded-lg overflow-hidden border border-slate-200">
               <iframe
                 title="Google Maps FCT Vinh Thinh Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.322596489379!2d105.83467477503!3d20.979697980655823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135add13ae6fb33%3A0x6739932145b736b4!2zTmfDtGkgU2FvIEJ1aWxkaW5n!5e0!3m2!1svi!2svn!4v1713500000000!5m2!1svi!2svn"
@@ -88,26 +84,26 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
               ></iframe>
             </div>
 
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex gap-5">
-                  <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 border border-blue-100 text-blue-600 shadow-sm">
-                    <MapPin className="w-6 h-6" />
+            <div className="space-y-6">
+              <div className="space-y-5">
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-slate-100 rounded-sm flex items-center justify-center shrink-0 border border-slate-200 text-slate-600">
+                    <MapPin className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-[10px] uppercase font-black text-gray-400 tracking-widest">{isEn ? "Address" : "Địa chỉ văn phòng"}</p>
-                    <p className="text-lg font-bold text-gray-900 leading-tight">
+                    <p className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{isEn ? "Address" : "Địa chỉ văn phòng"}</p>
+                    <p className="text-base font-semibold text-slate-900 leading-snug">
                       Tầng 3, Tòa nhà Ngôi Sao, <br />15 Nguyễn Cảnh Dị, Hoàng Mai, Hà Nội.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-5">
-                  <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 border border-blue-100 text-blue-600 shadow-sm">
-                    <Phone className="w-6 h-6" />
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 bg-slate-100 rounded-sm flex items-center justify-center shrink-0 border border-slate-200 text-slate-600">
+                    <Phone className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-[10px] uppercase font-black text-gray-400 tracking-widest">{isEn ? "Business Hours" : "Thời gian làm việc"}</p>
-                    <p className="text-lg font-bold text-gray-900">
+                    <p className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{isEn ? "Business Hours" : "Thời gian làm việc"}</p>
+                    <p className="text-base font-semibold text-slate-900">
                       Thứ 2 - Thứ 6 | 08:30 - 17:30
                     </p>
                   </div>
@@ -117,7 +113,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
               <Link
                 href="https://maps.google.com/?q=Nguyễn+Cảnh+Dị,+Đại+Kim,+Hoàng+Mai,+Hà+Nội"
                 target="_blank"
-                className="inline-flex items-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-black transition-all uppercase text-xs tracking-widest group shadow-xl"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-2.5 rounded-sm font-semibold hover:bg-black transition-colors text-sm tracking-wide group"
               >
                 {isEn ? "View on Google Maps" : "Xem trên Bản đồ"} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>

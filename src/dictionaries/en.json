@@ -33,7 +33,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "🛡️ STRATEGIC SECURITY PARTNER",
+    "badge": "STRATEGIC SECURITY PARTNER",
     "title": "Core Security Shield",
     "subtitle": "For Critical Digital Infrastructure",
     "description": "Providing HSM solutions, OT data encryption, and application anti-reverse engineering. We protect digital assets for Banks, Factories, and Enterprises with technology from Thales, Guardsquare, and Canary Labs.",
@@ -42,33 +42,33 @@
   },
   "trust": {
     "sectors": ["Banking", "Government", "Finance", "Cybersecurity", "Digital Infrastructure"],
-    "commitment": "\"Absolute commitment to protecting customer identity and projects under a strict NDA Policy\""
+    "commitment": "NDA Strict Policy — Project identity protection under FIPS 140-2 Level 3 standards"
   },
   "about": {
-    "badge": "About Us",
-    "title": "Empowering Businesses",
-    "subtitle": "In The Digital Era",
-    "description": "We don’t just provide services; we bring a complete technology ecosystem. With deep expertise and global partnership capabilities, we help organizations push beyond their limits.",
+    "badge": "FCT Vinh Thinh JSC",
+    "title": "Authorized Distributor in Vietnam",
+    "subtitle": "Since 2010",
+    "description": "Distribution and integration of core security solutions from Thales, Guardsquare, and Canary Labs. Our engineers are certified directly by vendors and provide on-site deployment and support for Banking, ISV, and Industrial customers.",
     "more": "Learn more about FCT",
     "features": [
       {
-        "title": "Safety & Security",
-        "description": "Comprehensive cybersecurity solutions providing maximum data protection."
+        "title": "Vendor-Certified",
+        "description": "Authorized reseller of Thales (France), Guardsquare (Belgium), Canary Labs (USA) — with full product certificates and official distribution licenses."
       },
       {
-        "title": "Peak Performance",
-        "description": "Optimizing IT infrastructure to keep your platform running at top speed."
+        "title": "On-Site Engineers",
+        "description": "Direct technical support: Sentinel LDK deployment, DexGuard SDK integration, Canary Collector setup — no dependency on foreign vendor timelines."
       },
       {
-        "title": "Global Connectivity",
-        "description": "Ensuring unlimited and seamless interoperability across core network platforms."
+        "title": "Standards Compliance",
+        "description": "All solutions meet FIPS 140-2 Level 3, CC EAL4+, ISO 27001 — aligned with audit requirements of banking regulators and financial institutions."
       }
     ]
   },
   "solutions": {
-    "badge": "Solution Ecosystem",
-    "title": "Absolute Peace of Mind with",
-    "subtitle": "Core Technology",
+    "badge": "Solution Portfolio",
+    "title": "Three Security Pillars",
+    "subtitle": "Distributed by FCT",
     "newsLink": "Explore News",
     "mobileSecurity": {
       "title": "Anti-Reverse Engineering",
