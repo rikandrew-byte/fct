@@ -13,7 +13,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import Link from "next/link";
-import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import TechGridBackground from "@/components/TechGridBackground";
 import { useState, useRef } from "react";
 import IntegritySeal from "@/components/IntegritySeal";
 import ContactModal from "@/components/ContactModal";
@@ -39,32 +39,31 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
   const scale = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-slate-50 text-gray-950 overflow-hidden font-sans selection:bg-rose-600">
+    <main ref={containerRef} className="min-h-screen bg-slate-50 text-slate-900 overflow-hidden font-sans selection:bg-rose-600">
       
-      {/* ── 1. HERO SECTION (Dark) ───────────────────── */}
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center pt-32 pb-24 px-6 bg-[#020617]">
-        <NeuralNetworkBackground />
-        
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-rose-600/10 rounded-full blur-[200px] -z-10 animate-pulse"></div>
+      {/* ── 1. HERO SECTION (Slate-900 Blueprint) ───────────────────── */}
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-28 pb-20 px-6 bg-slate-900 border-b border-slate-800">
+        <TechGridBackground />
 
         <motion.div 
           style={{ opacity, scale }}
-          className="relative z-10 text-center space-y-10 max-w-5xl mx-auto"
+          className="relative z-10 text-center space-y-6 max-w-5xl mx-auto"
         >
           <IntegritySeal />
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-4"
           >
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95] mb-8 text-white drop-shadow-2xl">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight text-white">
               LONGMAI <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-red-400 to-orange-300 drop-shadow-[0_0_30px_rgba(244,63,94,0.5)]">
+              <span className="text-rose-400">
                 HARDWARE FORTRESS
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed tracking-tight">
+            <p className="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed">
                {isEn 
                  ? "Beyond simple USB tokens. We deliver absolute physical security via Secure Element chips for 2FA, PKI, and digital signatures."
                  : "Hơn cả một chiếc Token. Chúng tôi cung cấp pháo đài vật lý bằng chip bảo mật (Secure Element) phục vụ Xác thực 2 lớp (2FA) và Chữ ký số."
@@ -72,10 +71,10 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
             </p>
           </motion.div>
 
-          <div className="flex justify-center gap-6 pt-10">
+          <div className="flex justify-center gap-4 pt-2">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="px-12 py-5 bg-rose-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-rose-600/30"
+              className="px-8 py-3.5 bg-rose-700 hover:bg-rose-800 text-white rounded-sm font-semibold text-sm tracking-wide transition-colors shadow-sm"
             >
               {isEn ? "Get Technical Advice" : "Nhận Tư vấn Kỹ thuật"}
             </button>
@@ -84,19 +83,19 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
       </section>
 
       {/* ── 2. BLUEPRINT (White) ────────────────── */}
-      <section className="py-24 px-6 max-w-7xl mx-auto relative Bg-white rounded-t-[4rem] -mt-12 z-20 bg-white">
-         <div className="text-center mb-20 space-y-4">
-            <span className="text-rose-600 font-black text-xs uppercase tracking-[0.4em]">Zero-Trust Engine</span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
+      <section className="py-20 px-6 max-w-7xl mx-auto relative bg-white border-b border-slate-200">
+         <div className="text-center mb-14 space-y-3">
+            <span className="text-rose-700 font-bold text-xs uppercase tracking-[0.3em]">Zero-Trust Engine</span>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight text-slate-900">
                {isEn ? "Hardware-Isolated Execution" : "Xử lý Cách ly Phần cứng"}
             </h2>
          </div>
 
          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="bg-[#0f172a] rounded-[3.5rem] p-12 md:p-20 relative overflow-hidden group shadow-3xl"
+            className="bg-slate-900 rounded-lg p-8 md:p-14 relative overflow-hidden border border-slate-800 shadow-sm"
          >
             {/* SVG Interactive Diagram */}
             <svg 
@@ -255,23 +254,23 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
                </motion.div>
             </div>
 
-            <div className="mt-10 flex justify-center">
+            <div className="mt-8 flex justify-center">
               <Link 
                 href={`/${lang}/contact?solution=longmai`}
-                className="bg-rose-600 text-white px-10 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-rose-700 transition-all flex items-center gap-3 shadow-xl shadow-rose-600/20 group"
+                className="bg-rose-700 hover:bg-rose-800 text-white px-8 py-3.5 rounded-sm font-semibold text-sm tracking-wide transition-colors flex items-center gap-2"
               >
                 {isEn ? "Request Longmai Token Demo" : "Tư vấn Token Longmai"}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
          </motion.div>
       </section>
 
       {/* ── 2.5. ENDPOINT AUTHENTICATION FLOW ────────────────── */}
-      <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
-         <div className="text-center mb-20 space-y-4">
-            <span className="text-rose-600 font-black text-xs uppercase tracking-[0.4em]">Zero-Trust Authentication</span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
+      <section className="py-20 px-6 max-w-7xl mx-auto bg-white border-b border-slate-200">
+         <div className="text-center mb-14 space-y-3">
+            <span className="text-rose-700 font-bold text-xs uppercase tracking-[0.3em]">Zero-Trust Authentication</span>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight text-slate-900">
               {isEn ? "Endpoint Authentication Architecture" : "Kiến trúc Xác thực Endpoint"}
             </h2>
          </div>
@@ -279,16 +278,16 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
       </section>
 
       {/* ── 3. ZONE 1: PAIN (Slate-50) ───────────────────────── */}
-      <section className="py-24 px-6 bg-slate-50">
-         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-6">
-               <div className="w-12 h-12 bg-rose-50 rounded-2xl flex items-center justify-center text-rose-600 border border-rose-100 shadow-sm">
-                  <ShieldAlert className="w-6 h-6" />
+      <section className="py-20 px-6 bg-slate-50 border-b border-slate-200">
+         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <div className="space-y-4">
+               <div className="w-10 h-10 bg-rose-50 rounded-sm flex items-center justify-center text-rose-700 border border-rose-200">
+                  <ShieldAlert className="w-5 h-5" />
                </div>
-               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-gray-900">
+               <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight text-slate-900">
                   {isEn ? "Software OTPs are No Longer Safe" : "Mã OTP Phần Mềm Không Còn An Toàn"}
                </h2>
-               <p className="text-gray-500 text-lg font-light leading-relaxed">
+               <p className="text-slate-600 text-base leading-relaxed">
                   {isEn 
                     ? "SMS and Authenticator apps are vulnerable to SIM swapping, phishing, and malware. True security requires hardware isolation."
                     : "Mã OTP qua SMS (Tin nhắn) hay ứng dụng trên điện thoại rất dễ bị đánh cắp qua SIM-swap, Phishing hoặc mã độc. An ninh thật sự đòi hỏi sự cách ly vật lý."
@@ -297,33 +296,39 @@ export default function LongmaiClient({ lang, dict }: LongmaiClientProps) {
             </div>
             
              <div className="grid grid-cols-2 gap-6">
-               <div className="bg-white rounded-3xl p-10 space-y-2 border border-gray-100 shadow-xl shadow-gray-200/40">
-                  <KeyRound className="w-8 h-8 text-rose-600 mb-4" />
-                  <span className="text-2xl font-black text-gray-900">PKCS#11</span>
-                  <p className="text-[10px] text-gray-600 uppercase font-black">{isEn ? "Enterprise Standard" : "Tiêu chuẩn Doanh nghiệp"}</p>
+               <div className="bg-white rounded-lg p-7 space-y-2 border border-slate-200">
+                  <KeyRound className="w-6 h-6 text-rose-700 mb-2" />
+                  <span className="text-2xl font-black text-slate-900">PKCS#11</span>
+                  <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">{isEn ? "Enterprise Standard" : "Tiêu chuẩn Doanh nghiệp"}</p>
                </div>
-               <div className="bg-white rounded-3xl p-10 space-y-2 lg:translate-y-12 border border-gray-100 shadow-xl shadow-gray-200/40">
-                  <CheckCircle2 className="w-8 h-8 text-emerald-600 mb-4" />
-                  <span className="text-2xl font-black text-gray-900">FIPS 140-2</span>
-                  <p className="text-[10px] text-gray-600 uppercase font-black tracking-widest">{isEn ? "Gov Certification" : "Chứng nhận Chính phủ"}</p>
+               <div className="bg-white rounded-lg p-7 space-y-2 lg:translate-y-6 border border-slate-200">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 mb-2" />
+                  <span className="text-2xl font-black text-slate-900">FIPS 140-2</span>
+                  <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">{isEn ? "Gov Certification" : "Chứng nhận Chính phủ"}</p>
                </div>
             </div>
          </div>
       </section>
 
       {/* ── 4. CTA FOOTER (White) ───────────────────────── */}
-      <section className="py-24 px-6 flex flex-col items-center justify-center text-center bg-white border-t border-gray-100">
-         <div className="max-w-4xl w-full bg-gray-950 rounded-[3.5rem] p-16 space-y-10 relative overflow-hidden shadow-2xl">
-            <h2 className="text-5xl font-black tracking-tighter leading-none text-white uppercase italic">
+      <section className="py-20 px-6 flex flex-col items-center justify-center text-center bg-white">
+         <div className="max-w-4xl w-full bg-slate-900 rounded-lg p-10 md:p-14 space-y-6 relative overflow-hidden border border-slate-800 shadow-sm">
+            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase">
                {isEn ? "Lock Down Your Workforce Access" : "Khóa chặt Quyền Truy cập Hệ Thống"}
             </h2>
-            <div className="flex flex-wrap justify-center gap-6 pt-4">
+            <p className="text-slate-400 text-base max-w-2xl mx-auto">
+               {isEn
+                 ? "Connect with FCT's PKI specialists for hardware token samples and integration assistance."
+                 : "Liên hệ với chuyên gia PKI của FCT để nhận mẫu phần cứng và hỗ trợ tích hợp hệ thống xác thực."
+               }
+            </p>
+            <div className="flex justify-center gap-4 pt-2">
                <Link 
                  href={`/${lang}/contact?solution=longmai`}
-                 className="px-12 py-5 bg-rose-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 shadow-xl shadow-rose-600/30 transition-all flex items-center gap-3"
+                 className="px-8 py-3.5 bg-rose-700 hover:bg-rose-800 text-white rounded-sm font-semibold text-sm tracking-wide transition-colors inline-flex items-center gap-2"
                >
                  {isEn ? "Request Token Quote" : "Nhận báo giá Token"}
-                 <ArrowRight className="w-5 h-5" />
+                 <ArrowRight className="w-4 h-4" />
                </Link>
             </div>
          </div>

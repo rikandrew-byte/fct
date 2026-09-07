@@ -85,13 +85,13 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
       <motion.div 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-emerald-50 border border-emerald-100 rounded-3xl p-8 text-center space-y-4"
+        className="bg-emerald-50 border border-emerald-200 rounded-lg p-8 text-center space-y-4"
       >
-        <div className="w-16 h-16 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20">
-          <FileText className="w-8 h-8" />
+        <div className="w-12 h-12 bg-emerald-600 text-white rounded-md flex items-center justify-center mx-auto">
+          <FileText className="w-6 h-6" />
         </div>
         <div className="space-y-2">
-          <h3 className="text-xl font-bold text-slate-900">
+          <h3 className="text-lg font-bold text-slate-900">
             {isEn ? "Check Your Email!" : "Kiểm tra Email của bạn!"}
           </h3>
           <p className="text-slate-600 text-sm leading-relaxed">
@@ -105,89 +105,89 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-[2.5rem] p-8 md:p-10 shadow-2xl shadow-slate-200/50 space-y-6 relative overflow-hidden">
-      <div className="space-y-6">
+    <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-lg p-6 md:p-8 shadow-sm space-y-5 relative">
+      <div className="space-y-4">
         {/* Full Name */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2 px-1">
-            <Users className="w-3 h-3" /> {isEn ? "Full Name" : "Họ và tên"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <Users className="w-3.5 h-3.5" /> {isEn ? "Full Name" : "Họ và tên"}
           </label>
           <input
             required
             type="text"
             placeholder="John Doe"
-            className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.fullName}
             onChange={e => setFormData({...formData, fullName: e.target.value})}
           />
         </div>
 
         {/* Email */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2 px-1">
-            <Lock className="w-3 h-3" /> {isEn ? "Email" : "Địa chỉ Email"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <Lock className="w-3.5 h-3.5" /> {isEn ? "Email" : "Địa chỉ Email"}
           </label>
           <input
             required
             type="email"
             placeholder="contact@company.com"
-            className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.email}
             onChange={e => setFormData({...formData, email: e.target.value})}
           />
         </div>
 
         {/* Phone */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2 px-1">
-            <ArrowRight className="w-3 h-3" /> {isEn ? "Phone" : "Số điện thoại"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <ArrowRight className="w-3.5 h-3.5" /> {isEn ? "Phone" : "Số điện thoại"}
           </label>
           <input
             required
             type="tel"
             placeholder="090..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.phone}
             onChange={e => setFormData({...formData, phone: e.target.value})}
           />
         </div>
 
         {/* Company */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2 px-1">
-            <ArrowRight className="w-3 h-3" /> {isEn ? "Company" : "Công ty"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <ArrowRight className="w-3.5 h-3.5" /> {isEn ? "Company" : "Công ty"}
           </label>
           <input
             required
             type="text"
             placeholder="FCT..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.company}
             onChange={e => setFormData({...formData, company: e.target.value})}
           />
         </div>
 
         {/* Industry */}
-        <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 flex items-center gap-2 px-1">
-            <ArrowRight className="w-3 h-3" /> {isEn ? "Industry" : "Lĩnh vực / Ngành"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <ArrowRight className="w-3.5 h-3.5" /> {isEn ? "Industry" : "Lĩnh vực / Ngành"}
           </label>
           <input
             required
             type="text"
             placeholder={isEn ? "e.g. Banking, Software" : "VD: Ngân hàng, Phần mềm"}
-            className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.industry}
             onChange={e => setFormData({...formData, industry: e.target.value})}
           />
         </div>
       </div>
 
-      <div className="pt-4">
+      <div className="pt-2">
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-xl shadow-blue-500/20 group ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className={`w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
           {isLoading ? (isEn ? "Processing..." : "Đang xử lý...") : (isEn ? "DOWNLOAD WHITEPAPER" : "ĐĂNG KÝ TẢI SÁCH TRẮNG")}
           {!isLoading && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
@@ -196,8 +196,8 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
         
         <TurnstileWidget onVerify={setTurnstileToken} />
         
-        <p className="mt-6 text-center text-[9px] text-slate-400 uppercase tracking-wider font-bold">
-          {isEn ? "Secure encrypted data transmission" : "Truyền dữ liệu mã hóa an toàn — NDA Policy"}
+        <p className="mt-4 text-center text-[10px] text-slate-400 font-mono uppercase tracking-wider">
+          {isEn ? "Secure encrypted data transmission" : "Bảo mật thông tin — Cam kết NDA doanh nghiệp"}
         </p>
       </div>
     </form>

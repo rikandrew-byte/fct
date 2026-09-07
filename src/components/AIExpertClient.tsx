@@ -2,8 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, Bot, User, ShieldCheck, Sparkles, Terminal, RefreshCcw } from "lucide-react";
-import NeuralNetworkBackground from "./NeuralNetworkBackground";
+import { Send, Bot, User, ShieldCheck, Terminal, RefreshCcw } from "lucide-react";
+import TechGridBackground from "./TechGridBackground";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -18,15 +18,15 @@ interface AIExpertClientProps {
 }
 
 const MarkdownStyles = {
-  p: ({ children }: any) => <p className="mb-4 last:mb-0">{children}</p>,
-  h1: ({ children }: any) => <h1 className="text-xl font-black mt-6 mb-3 text-blue-600">{children}</h1>,
-  h2: ({ children }: any) => <h2 className="text-lg font-black mt-5 mb-2 text-blue-500">{children}</h2>,
-  h3: ({ children }: any) => <h3 className="text-md font-bold mt-4 mb-2 text-blue-600">{children}</h3>,
-  ul: ({ children }: any) => <ul className="list-disc pl-5 mb-4 space-y-2">{children}</ul>,
-  ol: ({ children }: any) => <ol className="list-decimal pl-5 mb-4 space-y-2">{children}</ol>,
-  li: ({ children }: any) => <li className="leading-relaxed text-gray-800">{children}</li>,
-  code: ({ children }: any) => <code className="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-md text-xs font-mono">{children}</code>,
-  strong: ({ children }: any) => <strong className="font-black text-gray-900">{children}</strong>,
+  p: ({ children }: any) => <p className="mb-3 last:mb-0 leading-relaxed text-sm text-slate-700">{children}</p>,
+  h1: ({ children }: any) => <h1 className="text-base font-bold mt-4 mb-2 text-slate-900">{children}</h1>,
+  h2: ({ children }: any) => <h2 className="text-sm font-bold mt-3 mb-1.5 text-slate-900">{children}</h2>,
+  h3: ({ children }: any) => <h3 className="text-xs font-bold mt-2 mb-1 text-slate-900">{children}</h3>,
+  ul: ({ children }: any) => <ul className="list-disc pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ul>,
+  ol: ({ children }: any) => <ol className="list-decimal pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ol>,
+  li: ({ children }: any) => <li className="leading-relaxed text-slate-700 text-sm">{children}</li>,
+  code: ({ children }: any) => <code className="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded-sm text-xs font-mono border border-slate-200">{children}</code>,
+  strong: ({ children }: any) => <strong className="font-bold text-slate-900">{children}</strong>,
 };
 
 export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
@@ -69,7 +69,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
     } catch (error: any) {
       setMessages((prev) => [
         ...prev, 
-        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "Lỗi hệ thống: Không thể kết nối tới Chuyên gia AI.") }
+        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "Lỗi hệ thống: Không thể kết nối tới Chuyên gia Tư vấn Kỹ thuật.") }
       ]);
     } finally {
       setIsLoading(false);
@@ -77,57 +77,60 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
   };
 
   return (
-    <main className="relative min-h-screen bg-white text-gray-900 overflow-hidden flex flex-col">
-      <NeuralNetworkBackground />
-      
-      {/* Background Decor */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-200/10 rounded-full blur-[160px] pointer-events-none"></div>
-
+    <main className="relative min-h-screen bg-slate-50 text-slate-900 overflow-hidden flex flex-col">
       {/* Header */}
-      <header className="relative z-20 pt-32 pb-10 px-6 border-b border-gray-200 bg-white/50 backdrop-blur-md">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-5">
-            <div className="w-14 h-14 rounded-2xl bg-blue-100 border border-blue-300 flex items-center justify-center shadow-lg shadow-blue-200/50">
-              <ShieldCheck className="w-8 h-8 text-blue-600" />
+      <header className="relative z-20 pt-36 pb-8 px-6 bg-slate-900 border-b border-slate-800 text-white overflow-hidden">
+        <TechGridBackground />
+        <div className="max-w-4xl mx-auto flex items-center justify-between relative z-10">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-sm bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+              <Terminal className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-2xl font-black tracking-tight flex items-center gap-2 text-gray-900">
-                FCT Expert AI <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-widest">Demo</span>
-              </h1>
-              <p className="text-gray-600 text-xs font-light uppercase tracking-widest flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                {lang === "en" ? "Grounded in FCT Knowledge Base" : "Dữ liệu dựa trên hệ sinh thái FCT"}
+              <div className="flex items-center gap-2">
+                <h1 className="text-xl font-bold tracking-tight text-slate-50">
+                  {lang === "en" ? "FCT Technical Advisor" : "Trợ lý Kỹ thuật FCT"}
+                </h1>
+                <span className="text-[10px] font-mono bg-blue-900/60 text-blue-300 border border-blue-700/50 px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold">
+                  Enterprise
+                </span>
+              </div>
+              <p className="text-slate-400 text-xs font-mono flex items-center gap-1.5 mt-1">
+                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                {lang === "en" ? "Grounded in FCT Knowledge Base" : "Dữ liệu đối soát hệ sinh thái FCT"}
               </p>
             </div>
           </div>
           
           <button 
             onClick={() => setMessages([])}
-            className="p-3 rounded-xl bg-gray-100 border border-gray-300 hover:bg-gray-200 transition-colors group"
+            className="p-2.5 rounded-sm bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors border border-slate-700"
             title="Clear Chat"
           >
-            <RefreshCcw className="w-5 h-5 text-gray-600 group-hover:rotate-180 transition-transform duration-500" />
+            <RefreshCcw className="w-4 h-4" />
           </button>
         </div>
       </header>
 
       {/* Chat Area */}
-      <div className="flex-1 relative z-10 overflow-hidden flex flex-col max-w-4xl mx-auto w-full px-6">
+      <div className="flex-1 relative z-10 overflow-hidden flex flex-col max-w-4xl mx-auto w-full px-6 py-6">
         <div 
           ref={scrollRef}
-          className="flex-1 overflow-y-auto py-10 space-y-8 scrollbar-hide"
+          className="flex-1 overflow-y-auto space-y-4"
         >
           {messages.length === 0 && (
-            <div className="h-full flex flex-col items-center justify-center text-center space-y-6 opacity-60">
-              <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center border border-gray-300">
-                <Terminal className="w-10 h-10 text-blue-600" />
+            <div className="h-full flex flex-col items-center justify-center text-center space-y-4 py-16">
+              <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center border border-slate-200 shadow-xs text-blue-600">
+                <ShieldCheck className="w-7 h-7" />
               </div>
-              <div className="space-y-2">
-                <h2 className="text-xl font-bold tracking-tight text-gray-900">
-                  {lang === "en" ? "Secure Terminal Initialized" : "Khởi tạo Phiên làm việc Bảo mật"}
+              <div className="space-y-1.5">
+                <h2 className="text-lg font-bold tracking-tight text-slate-900">
+                  {lang === "en" ? "Technical Consultation Session Initialized" : "Phiên tư vấn kỹ thuật trực tuyến"}
                 </h2>
-                <p className="text-sm font-light text-gray-600 max-w-xs">
-                  {lang === "en" ? "Ask me anything about Software Protection, Mobile Security, or Industrial Data." : "Tra cứu thông tin về Bảo vệ Bản quyền, Bảo mật Di động hoặc Dữ liệu Công nghiệp."}
+                <p className="text-xs text-slate-600 max-w-md leading-relaxed">
+                  {lang === "en" 
+                    ? "Ask technical questions about Software Protection, Mobile Security, or Industrial OT Historian." 
+                    : "Tra cứu thông số kỹ thuật, mô hình cấp phép Sentinel/Guardant, bảo mật Guardsquare, hoặc dữ liệu công nghiệp Canary."}
                 </p>
               </div>
             </div>
@@ -137,21 +140,21 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
             {messages.map((m, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`flex gap-4 ${m.role === "user" ? "flex-row-reverse" : ""}`}
+                className={`flex gap-3 ${m.role === "user" ? "flex-row-reverse" : ""}`}
               >
-                <div className={`w-10 h-10 shrink-0 rounded-xl flex items-center justify-center border ${
+                <div className={`w-8 h-8 shrink-0 rounded-sm flex items-center justify-center border text-xs ${
                   m.role === "user" 
-                    ? "bg-gray-100 border-gray-300" 
-                    : "bg-blue-100 border-blue-300"
+                    ? "bg-slate-200 border-slate-300 text-slate-700" 
+                    : "bg-blue-600 border-blue-700 text-white"
                 }`}>
-                  {m.role === "user" ? <User className="w-5 h-5 text-gray-700" /> : <Bot className="w-5 h-5 text-blue-600" />}
+                  {m.role === "user" ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                 </div>
-                <div className={`max-w-[80%] rounded-2xl p-5 text-sm leading-relaxed ${
+                <div className={`max-w-[85%] rounded-lg p-4 text-sm leading-relaxed border ${
                   m.role === "user"
-                    ? "bg-gray-100 border border-gray-300 text-gray-900"
-                    : "bg-blue-50 border border-blue-200 text-gray-900"
+                    ? "bg-blue-600 text-white border-blue-700"
+                    : "bg-white border-slate-200 text-slate-800 shadow-xs"
                 }`}>
                   {m.role === "ai" ? (
                     <ReactMarkdown 
@@ -170,44 +173,44 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
 
           {isLoading && (
             <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex gap-4"
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex gap-3"
             >
-              <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-100 border border-blue-300 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-blue-600 animate-pulse" />
+              <div className="w-8 h-8 shrink-0 rounded-sm bg-blue-600 border border-blue-700 flex items-center justify-center text-white">
+                <Bot className="w-4 h-4 animate-pulse" />
               </div>
-              <div className="bg-blue-50 border border-blue-200 rounded-2xl px-6 py-4 flex gap-1 items-center">
-                <span className="w-1 h-1 bg-blue-600 rounded-full animate-bounce"></span>
-                <span className="w-1 h-1 bg-blue-600 rounded-full animate-bounce delay-75"></span>
-                <span className="w-1 h-1 bg-blue-600 rounded-full animate-bounce delay-150"></span>
+              <div className="bg-white border border-slate-200 rounded-lg px-4 py-3 flex gap-1.5 items-center shadow-xs">
+                <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></span>
+                <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.15s" }}></span>
+                <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.3s" }}></span>
               </div>
             </motion.div>
           )}
         </div>
 
         {/* Input Bar */}
-        <div className="py-10">
+        <div className="pt-4 pb-6">
           <form 
             onSubmit={handleSubmit}
-            className="flex gap-4 p-2 bg-gray-100 border border-gray-300 rounded-2xl focus-within:border-blue-400 transition-all backdrop-blur-xl"
+            className="flex gap-2"
           >
             <input 
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={lang === "en" ? "Type your technical query..." : "Nhập câu hỏi chuyên môn..."}
-              className="flex-1 bg-transparent border-none outline-none px-4 py-2 font-light placeholder:text-gray-500 text-gray-900"
+              placeholder={lang === "en" ? "Type your technical query..." : "Nhập câu hỏi chuyên môn kỹ thuật..."}
+              className="flex-1 bg-white border border-slate-200 rounded-sm px-4 py-2.5 text-sm font-sans text-slate-900 outline-none focus:border-blue-500 shadow-xs"
             />
             <button 
-              disabled={isLoading}
-              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-600/20"
+              disabled={isLoading || !input.trim()}
+              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-5 py-2.5 rounded-sm transition-all text-xs font-semibold flex items-center justify-center shadow-xs"
             >
               <Send className="w-4 h-4" />
             </button>
           </form>
-          <p className="text-[10px] text-center mt-4 text-gray-600 font-bold uppercase tracking-widest">
-            {lang === "en" ? "Secure AI Session — No data is saved" : "Phiên làm việc bảo mật — Dữ liệu không được lưu lại"}
+          <p className="text-[10px] text-center mt-2.5 text-slate-400 font-mono uppercase tracking-wider">
+            {lang === "en" ? "Enterprise Technical Session — Confidential & Grounded" : "Phiên tư vấn kỹ thuật doanh nghiệp — Bảo mật & Đã đối soát tài liệu"}
           </p>
         </div>
       </div>

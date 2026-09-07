@@ -85,46 +85,46 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
           />
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.95, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden"
+            exit={{ opacity: 0, scale: 0.95, y: 15 }}
+            className="relative bg-white w-full max-w-lg rounded-lg shadow-xl border border-slate-200 overflow-hidden"
           >
             {/* Header Modal */}
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-500 p-6 flex justify-between items-center text-white">
+            <div className="bg-slate-900 border-b border-slate-800 p-6 flex justify-between items-center text-white">
               <div>
-                <h3 className="text-xl font-bold">{d.title}</h3>
-                <p className="text-sm font-light text-blue-100 mt-1">{d.subtitle}</p>
+                <h3 className="text-lg font-bold text-slate-50">{d.title}</h3>
+                <p className="text-xs text-slate-400 mt-0.5">{d.subtitle}</p>
               </div>
               <button 
                 onClick={onClose}
-                className="w-8 h-8 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full transition-colors"
+                className="w-8 h-8 flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white rounded-sm transition-colors border border-slate-700"
                 disabled={isLoading}
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
 
             {/* Body Modal */}
-            <div className="p-8">
+            <div className="p-6 md:p-8">
               <AnimatePresence mode="wait">
                 {isSubmitted ? (
                   <motion.div 
                     key="success"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="py-12 flex flex-col items-center justify-center text-center space-y-4"
+                    className="py-10 flex flex-col items-center justify-center text-center space-y-3"
                   >
-                    <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-2">
-                      <CheckCircle2 className="w-10 h-10" />
+                    <div className="w-14 h-14 bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-sm flex items-center justify-center mb-1">
+                      <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <div className="space-y-2">
-                      <h4 className="text-2xl font-bold text-gray-900">{d.success.title}</h4>
-                      <p className="text-gray-600 font-light" dangerouslySetInnerHTML={{ __html: d.success.message }} />
+                    <div className="space-y-1">
+                      <h4 className="text-xl font-bold text-slate-900">{d.success.title}</h4>
+                      <p className="text-slate-600 text-sm" dangerouslySetInnerHTML={{ __html: d.success.message }} />
                     </div>
                     <button 
                       onClick={onClose}
-                      className="text-blue-600 font-semibold text-sm hover:underline pt-4"
+                      className="text-blue-600 font-semibold text-xs uppercase tracking-wider hover:underline pt-3"
                     >
                       {d.success.close}
                     </button>
@@ -139,70 +139,70 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                     className="space-y-4"
                   >
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">{d.form.name}</label>
+                      <label className="text-xs font-semibold text-slate-700">{d.form.name}</label>
                       <input
                         required
                         type="text"
                         placeholder={d.form.namePlaceholder}
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
                       />
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-sm font-semibold text-gray-700">{d.form.phone}</label>
+                        <label className="text-xs font-semibold text-slate-700">{d.form.phone}</label>
                         <input
                           required
                           type="tel"
                           placeholder={d.form.phonePlaceholder}
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
                         />
                       </div>
                       <div className="space-y-1.5">
-                        <label className="text-sm font-semibold text-gray-700">{d.form.email}</label>
+                        <label className="text-xs font-semibold text-slate-700">{d.form.email}</label>
                         <input
                           required
                           type="email"
                           placeholder={d.form.emailPlaceholder}
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-sm font-semibold text-gray-700">{d.form.message}</label>
+                      <label className="text-xs font-semibold text-slate-700">{d.form.message}</label>
                       <textarea
                         rows={3} placeholder={d.form.messagePlaceholder}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-light resize-none"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans resize-none"
                       />
                     </div>
 
                     <button 
                       type="submit" 
                       disabled={isLoading}
-                      className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg mt-4 ${
+                      className={`w-full py-3 rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all mt-2 ${
                         isLoading 
-                          ? "bg-gray-100 text-gray-400 cursor-not-allowed" 
-                          : "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/20 active:scale-[0.98]"
+                          ? "bg-slate-100 text-slate-400 cursor-not-allowed" 
+                          : "bg-blue-600 hover:bg-blue-700 text-white shadow-xs"
                       }`}
                     >
                       {isLoading ? (
                         <>
-                          <Loader2 className="w-5 h-5 animate-spin" />
+                          <Loader2 className="w-4 h-4 animate-spin" />
                           <span>{d.form.submitting}</span>
                         </>
                       ) : (
                         <>
                           <span>{d.form.submit}</span>
-                          <Send className="w-4 h-4" />
+                          <Send className="w-3.5 h-3.5" />
                         </>
                       )}
                     </button>
@@ -210,7 +210,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                     {/* Tàng hình — Chặn Bot */}
                     <TurnstileWidget onVerify={setTurnstileToken} />
 
-                    <p className="text-[10px] text-gray-600 text-center font-light uppercase tracking-widest mt-4">{d.form.commitment}</p>
+                    <p className="text-[10px] text-slate-400 text-center font-mono uppercase tracking-wider mt-3">{d.form.commitment}</p>
                   </motion.form>
                 )}
               </AnimatePresence>

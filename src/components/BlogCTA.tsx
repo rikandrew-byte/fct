@@ -44,63 +44,59 @@ export default function BlogCTA({ lang, targetFunnel }: BlogCTAProps) {
   });
 
   return (
-    <div className="mt-16 p-8 md:p-12 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-[3rem] border border-blue-200 relative overflow-hidden">
-      {/* Background Glows */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200/30 rounded-full blur-[100px] -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-200/20 rounded-full blur-[100px] -z-10"></div>
-
+    <div className="mt-14 p-8 md:p-12 bg-slate-900 rounded-lg border border-slate-800 relative overflow-hidden shadow-sm">
       <div className="relative z-10 space-y-8">
-        <div className="text-center space-y-4">
-          <span className="text-xs font-black text-blue-600 tracking-[0.4em] uppercase block">
-            {isEn ? "Strategic Resources" : "Tài liệu Chiến lược"}
+        <div className="text-center space-y-3">
+          <span className="text-[10px] font-bold text-blue-400 tracking-[0.25em] uppercase block">
+            {isEn ? "Strategic Resources" : "Tài liệu Kỹ thuật"}
           </span>
-          <h3 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter">
-            {isEn ? "Deepen Your" : "Nâng tầm"}{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+          <h3 className="text-2xl md:text-4xl font-black text-white tracking-tight">
+            {isEn ? "Deepen Your " : "Nâng tầm "}
+            <span className="text-blue-400">
               {isEn ? "Technical Knowledge" : "Kiến thức Chuyên môn"}
             </span>
           </h3>
-          <p className="text-gray-700 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
             {isEn 
               ? "Download our expert whitepapers to master the latest security and industrial data technologies."
               : "Tải xuống các bộ tài liệu chuyên sâu từ chuyên gia để làm chủ công nghệ bảo mật và dữ liệu công nghiệp mới nhất."}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {sortedPapers.map((paper, idx) => {
             const isTargeted = paper.id === targetFunnel;
             return (
               <Link 
                 key={idx}
                 href={paper.link}
-                className={`group relative bg-white border p-6 rounded-3xl transition-all duration-500 flex flex-col justify-between gap-6 ${
+                className={`group relative bg-slate-800/80 border p-5 rounded-lg transition-colors flex flex-col justify-between gap-5 ${
                   isTargeted 
-                    ? "border-blue-400 bg-blue-50 shadow-[0_0_30px_rgba(59,130,246,0.2)]" 
-                    : "border-gray-200 hover:bg-gray-50 hover:border-blue-300"
+                    ? "border-blue-500 bg-slate-800" 
+                    : "border-slate-700 hover:border-slate-500"
                 }`}
               >
                 {isTargeted && (
-                  <div className="absolute -top-3 -right-3 bg-blue-600 text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full shadow-lg z-20">
+                  <div className="absolute -top-2.5 right-3 bg-blue-700 text-white text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm z-20">
                     Recommended
                   </div>
                 )}
                 <div className="space-y-3">
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center bg-${paper.color}-100 text-${paper.color}-600 group-hover:scale-110 transition-transform`}>
-                    <FileText className="w-6 h-6" />
+                  <div className="w-10 h-10 rounded-sm flex items-center justify-center bg-slate-700 text-blue-400">
+                    <FileText className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-gray-900 font-black text-lg tracking-tight mb-1">{paper.title}</h4>
-                    <p className="text-xs text-gray-600 font-medium leading-snug">{paper.desc}</p>
+                    <h4 className="text-white font-bold text-base tracking-tight mb-1">{paper.title}</h4>
+                    <p className="text-xs text-slate-400 leading-snug">{paper.desc}</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 group-hover:text-blue-700 flex items-center gap-2">
-                    {isEn ? "Download Now" : "Tải ngay"}
-                    <Download className="w-3 h-3" />
+                <div className="flex items-center justify-between pt-3 border-t border-slate-700">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400 group-hover:text-blue-300 flex items-center gap-1.5">
+                    {isEn ? "Download PDF" : "Tải tài liệu"}
+                    <Download className="w-3.5 h-3.5" />
                   </span>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-all" />
                 </div>
               </Link>
             );

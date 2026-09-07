@@ -180,16 +180,16 @@ export default function ProductList({ lang }: ProductListProps) {
   return (
     <div className="space-y-10">
       {/* ── Search + Filter Bar ───────────────────────────────────────── */}
-      <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-white p-4 rounded-3xl border border-gray-100 shadow-sm sticky top-24 z-20">
+      <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-white p-4 rounded-lg border border-slate-200 shadow-xs sticky top-24 z-20">
         <div className="relative w-full md:max-w-md">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           <input
             id="product-search"
             type="text"
             placeholder={isEn ? "Search products..." : "Tìm kiếm sản phẩm..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-gray-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 transition-all font-light"
+            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-sm text-sm text-slate-900 outline-none focus:border-blue-500 focus:bg-white transition-all font-sans"
           />
         </div>
 
@@ -200,20 +200,20 @@ export default function ProductList({ lang }: ProductListProps) {
             const label = categoryLabels[catKey];
             const activeClass = cfg
               ? cfg.activeBtn
-              : "bg-blue-600 text-white shadow-lg shadow-blue-500/20";
+              : "bg-blue-600 text-white";
 
             return (
               <button
                 key={catKey}
                 id={`filter-${catKey.toLowerCase().replace(/\s+/g, "-")}`}
                 onClick={() => setSelectedCategory(catKey)}
-                className={`flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all ${
-                  isActive ? activeClass : "bg-gray-50 text-gray-500 hover:bg-gray-100"
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-sm text-xs font-semibold whitespace-nowrap transition-all ${
+                  isActive ? activeClass : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
                 {cfg && (
                   <span
-                    className={`inline-block w-2 h-2 rounded-full ${cfg.dot} ${isActive ? "opacity-0 w-0 overflow-hidden" : ""}`}
+                    className={`inline-block w-1.5 h-1.5 rounded-full ${cfg.dot} ${isActive ? "opacity-0 w-0 overflow-hidden" : ""}`}
                   />
                 )}
                 {label}
@@ -224,9 +224,9 @@ export default function ProductList({ lang }: ProductListProps) {
       </div>
 
       {/* Product count */}
-      <p className="text-sm text-gray-600 font-light -mt-4">
+      <p className="text-xs text-slate-500 font-mono -mt-4">
         {isEn ? "Showing " : "Hiển thị "}
-        <span className="font-semibold text-gray-700">{filteredProducts.length}</span>{" "}
+        <span className="font-bold text-slate-800">{filteredProducts.length}</span>{" "}
         {isEn ? "products" : "sản phẩm"}
       </p>
 
@@ -242,15 +242,13 @@ export default function ProductList({ lang }: ProductListProps) {
             return (
               <article
                 key={prod.id}
-                className={`bg-white rounded-[2rem] border flex flex-col transition-all duration-200 overflow-hidden group ${
-                  cfg ? `${cfg.hoverBorder} ${cfg.hoverShadow}` : "hover:border-blue-200 hover:shadow-blue-500/5"
-                } hover:shadow-xl ${isExpanded ? "border-gray-200 shadow-lg" : "border-gray-100 shadow-sm"}`}
+                className={`bg-white rounded-lg border flex flex-col transition-all duration-200 overflow-hidden group ${
+                  cfg ? `${cfg.hoverBorder} ${cfg.hoverShadow}` : "hover:border-slate-300 hover:shadow-md"
+                } hover:shadow-md ${isExpanded ? "border-slate-300 shadow-sm" : "border-slate-200 shadow-xs"}`}
               >
                 {/* ── Product Image area ──────────────────────────────── */}
                 <div
-                  className={`relative w-full bg-gray-50 overflow-hidden ${
-                    cfg ? cfg.imgRingColor : "ring-blue-100"
-                  }`}
+                  className="relative w-full bg-slate-50 border-b border-slate-100 overflow-hidden"
                   style={{ aspectRatio: "16/9" }}
                 >
                   {prod.image && !hasImgError ? (
@@ -263,24 +261,20 @@ export default function ProductList({ lang }: ProductListProps) {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : prod.category === "Guardant" ? (
-                    /* High-end custom Placeholder Card for Guardant with gradients and icons */
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-teal-500/10 to-emerald-500/20 flex items-center justify-center overflow-hidden">
-                      <div className="absolute -top-10 -left-10 w-24 h-24 bg-emerald-400/10 rounded-full blur-xl" />
-                      <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-teal-400/10 rounded-full blur-xl" />
-                      <div className="relative w-20 h-20 bg-white rounded-3xl flex items-center justify-center shadow-lg shadow-emerald-500/10 border border-emerald-100 group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-10 h-10 text-emerald-600" />
+                    <div className="absolute inset-0 bg-slate-50 flex items-center justify-center">
+                      <div className="w-14 h-14 bg-emerald-50 rounded-sm flex items-center justify-center border border-emerald-200">
+                        <Icon className="w-7 h-7 text-emerald-600" />
                       </div>
                     </div>
                   ) : (
-                    /* Fallback icon when no image or error */
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div
-                        className={`w-20 h-20 rounded-3xl flex items-center justify-center ${
+                        className={`w-14 h-14 rounded-sm flex items-center justify-center ${
                           cfg ? cfg.iconBg : "bg-blue-50"
                         }`}
                       >
                         <Icon
-                          className={`w-10 h-10 ${cfg ? cfg.iconColor : "text-blue-800"}`}
+                          className={`w-7 h-7 ${cfg ? cfg.iconColor : "text-blue-800"}`}
                         />
                       </div>
                     </div>
@@ -288,18 +282,18 @@ export default function ProductList({ lang }: ProductListProps) {
 
                   {/* NEW badge overlay */}
                   {prod.isNew && (
-                    <span className="absolute top-3 right-3 text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-lg animate-pulse">
+                    <span className="absolute top-3 right-3 text-[9px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-sm">
                       {isEn ? "NEW" : "MỚI"}
                     </span>
                   )}
                 </div>
 
                 {/* ── Card body ──────────────────────────────────────── */}
-                <div className="p-7 flex flex-col flex-1 gap-4">
+                <div className="p-5 flex flex-col flex-1 gap-3">
                   {/* Category badge */}
                   <span
-                    className={`inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg w-fit ${
-                      cfg ? cfg.badgeBg : "bg-blue-50 text-blue-600"
+                    className={`inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-sm w-fit ${
+                      cfg ? cfg.badgeBg : "bg-blue-50 text-blue-700"
                     }`}
                   >
                     <Icon className="w-3 h-3" />
@@ -307,44 +301,44 @@ export default function ProductList({ lang }: ProductListProps) {
                   </span>
 
                   {/* Name + summary */}
-                  <div className="space-y-2 flex-1">
-                    <h3 className="text-lg font-black text-gray-900 leading-tight uppercase tracking-tight">
+                  <div className="space-y-1.5 flex-1">
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">
                       {prod.name}
                     </h3>
-                    <p className="text-gray-500 font-light text-sm leading-relaxed italic line-clamp-3">
+                    <p className="text-slate-600 text-xs leading-relaxed line-clamp-3">
                       {prod.summary}
                     </p>
                   </div>
 
                   {/* Expanded description */}
                   {isExpanded && (
-                    <div className="pt-4 border-t border-dashed border-gray-100">
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                    <div className="pt-3 border-t border-dashed border-slate-200">
+                      <p className="text-slate-600 text-xs leading-relaxed">
                         {prod.description}
                       </p>
                     </div>
                   )}
 
-                  {/* Toggle button (Nút xổ tóm tắt cũ - GIỮ NGUYÊN) */}
-                  <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
+                  {/* Toggle button */}
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                     <button
                       id={`expand-${prod.id}`}
                       onClick={() => toggleExpand(prod.id)}
-                      className={`flex items-center gap-1.5 text-sm font-bold transition-colors ${
+                      className={`flex items-center gap-1 text-xs font-semibold transition-colors ${
                         isExpanded
                           ? cfg?.iconColor ?? "text-blue-800"
-                          : `text-gray-600 hover:${cfg?.iconColor ?? "text-blue-800"}`
+                          : `text-slate-600 hover:${cfg?.iconColor ?? "text-blue-800"}`
                       }`}
                     >
                       {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "View summary" : "Xem tóm tắt")}
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                       />
                     </button>
                   </div>
 
-                  {/* 🚀 NÚT LINK ĐIỀU HƯỚNG AN TOÀN */}
-                  <div className="mt-4">
+                  {/* Link button */}
+                  <div className="mt-2">
                     <Link 
                       href={prod.category === "Thales" ? `/${lang}/products/thales-sentinel` : 
                             prod.category === "Guardsquare" ? `/${lang}/products/guardsquare` : 
@@ -352,11 +346,11 @@ export default function ProductList({ lang }: ProductListProps) {
                             prod.category === "Industrial Data & IIoT" ? `/${lang}/products/canary-labs` :
                             `/${lang}/products/${prod.id}`} 
                           className="w-full block">
-                      <button className={`w-full py-3.5 rounded-xl font-bold uppercase tracking-widest text-[11px] transition-all flex items-center justify-center gap-2 group shadow-md ${
+                      <button className={`w-full py-2.5 rounded-sm font-semibold uppercase tracking-wider text-[11px] transition-all flex items-center justify-center gap-1.5 group shadow-xs ${
                         cfg ? `${cfg.badgeBg} hover:opacity-90` : "bg-blue-600 text-white hover:bg-blue-700"
                       }`}>
                         {isEn ? "View Architecture" : "Xem kiến trúc chi tiết"}
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </Link>
                   </div>

@@ -2,8 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, Bot, User, Sparkles, RefreshCcw, X, Zap } from "lucide-react";
-import NeuralNetworkBackground from "./NeuralNetworkBackground";
+import { Send, Bot, User, RefreshCcw, X, MessageSquare, Terminal } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -20,15 +19,15 @@ interface VirtualAssistantProps {
 }
 
 const MarkdownStyles = {
-  p: ({ children }: any) => <p className="mb-4 last:mb-0 leading-relaxed">{children}</p>,
-  h1: ({ children }: any) => <h1 className="text-xl font-black mt-6 mb-3 text-blue-600">{children}</h1>,
-  h2: ({ children }: any) => <h2 className="text-lg font-black mt-5 mb-2 text-blue-500">{children}</h2>,
-  h3: ({ children }: any) => <h3 className="text-md font-bold mt-4 mb-2 text-blue-600">{children}</h3>,
-  ul: ({ children }: any) => <ul className="list-disc pl-5 mb-4 space-y-2">{children}</ul>,
-  ol: ({ children }: any) => <ol className="list-decimal pl-5 mb-4 space-y-2">{children}</ol>,
-  li: ({ children }: any) => <li className="leading-relaxed text-gray-800">{children}</li>,
-  code: ({ children }: any) => <code className="bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-xs font-mono border border-blue-300">{children}</code>,
-  strong: ({ children }: any) => <strong className="font-black text-gray-900">{children}</strong>,
+  p: ({ children }: any) => <p className="mb-3 last:mb-0 leading-relaxed text-sm text-slate-700">{children}</p>,
+  h1: ({ children }: any) => <h1 className="text-base font-bold mt-4 mb-2 text-slate-900">{children}</h1>,
+  h2: ({ children }: any) => <h2 className="text-sm font-bold mt-3 mb-1.5 text-slate-900">{children}</h2>,
+  h3: ({ children }: any) => <h3 className="text-xs font-bold mt-2 mb-1 text-slate-900">{children}</h3>,
+  ul: ({ children }: any) => <ul className="list-disc pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ul>,
+  ol: ({ children }: any) => <ol className="list-decimal pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ol>,
+  li: ({ children }: any) => <li className="leading-relaxed text-slate-700 text-sm">{children}</li>,
+  code: ({ children }: any) => <code className="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded-sm text-xs font-mono border border-slate-200">{children}</code>,
+  strong: ({ children }: any) => <strong className="font-bold text-slate-900">{children}</strong>,
 };
 
 export default function VirtualAssistant({ lang, dict, isOpen, onClose }: VirtualAssistantProps) {
@@ -96,7 +95,7 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/40 backdrop-blur-md z-[100]"
+            className="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-[100]"
           />
 
           {/* Drawer */}
@@ -104,78 +103,67 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-full sm:w-[500px] md:w-[600px] bg-gradient-to-br from-white to-blue-50 border-l border-blue-200 z-[101] shadow-2xl flex flex-col overflow-hidden"
+            transition={{ type: "spring", damping: 28, stiffness: 240 }}
+            className="fixed top-0 right-0 h-full w-full sm:w-[480px] md:w-[540px] bg-white border-l border-slate-200 z-[101] shadow-2xl flex flex-col overflow-hidden"
           >
-            {/* Background Decor */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-[120px] pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-200/10 rounded-full blur-[120px] pointer-events-none"></div>
-
             {/* Header */}
-            <div className="relative z-20 p-6 flex items-center justify-between border-b border-blue-200 bg-gradient-to-r from-white/80 to-blue-50/50 backdrop-blur-xl">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30 border border-blue-400/30">
-                  <Sparkles className="w-6 h-6 text-white" />
+            <div className="relative z-20 px-6 py-4 flex items-center justify-between border-b border-slate-200 bg-slate-900 text-white">
+              <div className="flex items-center gap-3.5">
+                <div className="w-10 h-10 rounded-sm bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                  <Terminal className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-black tracking-tight text-gray-900 flex items-center gap-2">
-                    {v.title} 
-                    <span className="text-[9px] bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-2.5 py-1 rounded-full font-bold uppercase tracking-widest shadow-lg shadow-blue-500/20">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-sm font-bold tracking-tight text-slate-100">
+                      {v.title}
+                    </h3>
+                    <span className="text-[10px] font-mono bg-blue-900/60 text-blue-300 border border-blue-700/50 px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold">
                       {v.badge}
                     </span>
-                  </h3>
-                  <p className="text-blue-600/70 text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 mt-1">
-                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></span>
+                  </div>
+                  <p className="text-slate-400 text-[11px] font-mono flex items-center gap-1.5 mt-0.5">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
                     {v.groundedNote}
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <button 
                   onClick={() => setMessages([])}
-                  className="p-2.5 rounded-xl bg-blue-100 border border-blue-300 hover:bg-blue-200 hover:border-blue-400 transition-all group"
+                  className="p-2 rounded-sm bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-all border border-slate-700"
                   title={v.clearChat}
                 >
-                  <RefreshCcw className="w-5 h-5 text-blue-600 group-hover:rotate-180 transition-transform duration-500" />
+                  <RefreshCcw className="w-4 h-4" />
                 </button>
                 <button 
                   onClick={onClose}
-                  className="p-2.5 rounded-xl bg-red-100 border border-red-300 hover:bg-red-200 hover:border-red-400 transition-all text-red-600 hover:text-red-700"
+                  className="p-2 rounded-sm bg-slate-800 text-slate-400 hover:text-rose-400 hover:bg-slate-700 transition-all border border-slate-700"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
             {/* Chat Area */}
-            <div className="flex-1 relative z-10 overflow-hidden flex flex-col w-full">
+            <div className="flex-1 relative z-10 overflow-hidden flex flex-col w-full bg-slate-50">
               <div 
                 ref={scrollRef}
-                className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-hide"
+                className="flex-1 overflow-y-auto p-5 space-y-4"
               >
                 {messages.length === 0 && (
-                  <div className="h-full flex flex-col items-center justify-center text-center space-y-6 px-6">
-                    <motion.div 
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      className="w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl flex items-center justify-center border border-blue-300 shadow-lg shadow-blue-200/50"
-                    >
-                      <Zap className="w-10 h-10 text-blue-600" />
-                    </motion.div>
-                    <motion.div 
-                      initial={{ y: 10, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.1 }}
-                      className="space-y-2"
-                    >
-                      <h4 className="text-xl font-black tracking-tight text-gray-900">
+                  <div className="h-full flex flex-col items-center justify-center text-center space-y-4 px-6 py-12">
+                    <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center border border-slate-200 shadow-xs text-blue-600">
+                      <MessageSquare className="w-7 h-7" />
+                    </div>
+                    <div className="space-y-1.5">
+                      <h4 className="text-base font-bold text-slate-900">
                         {v.initializingTitle}
                       </h4>
-                      <p className="text-sm font-light text-blue-700/60 max-w-xs">
+                      <p className="text-xs text-slate-500 max-w-xs leading-relaxed">
                         {v.initializingSub}
                       </p>
-                    </motion.div>
+                    </div>
                   </div>
                 )}
 
@@ -183,25 +171,25 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
                   {messages.map((m, idx) => (
                     <motion.div
                       key={idx}
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 6 }}
                       animate={{ opacity: 1, y: 0 }}
                       className={`flex gap-3 ${m.role === "user" ? "flex-row-reverse" : ""}`}
                     >
-                      <div className={`w-9 h-9 shrink-0 rounded-xl flex items-center justify-center border shadow-lg ${
+                      <div className={`w-8 h-8 shrink-0 rounded-sm flex items-center justify-center border text-xs ${
                         m.role === "user" 
-                          ? "bg-blue-100 border-blue-300 shadow-blue-200/50" 
-                          : "bg-gradient-to-br from-blue-500 to-indigo-600 border-blue-400/50 shadow-blue-500/30"
+                          ? "bg-slate-200 border-slate-300 text-slate-700" 
+                          : "bg-blue-600 border-blue-700 text-white"
                       }`}>
                         {m.role === "user" ? (
-                          <User className="w-4 h-4 text-blue-600" />
+                          <User className="w-4 h-4" />
                         ) : (
-                          <Bot className="w-4 h-4 text-white" />
+                          <Bot className="w-4 h-4" />
                         )}
                       </div>
-                      <div className={`max-w-[85%] rounded-2xl p-4 text-sm leading-relaxed border ${
+                      <div className={`max-w-[85%] rounded-lg p-4 text-sm leading-relaxed border ${
                         m.role === "user"
-                          ? "bg-blue-100 border-blue-300 text-gray-900"
-                          : "bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 text-gray-900"
+                          ? "bg-blue-600 text-white border-blue-700"
+                          : "bg-white border-slate-200 text-slate-800 shadow-xs"
                       }`}>
                         {m.role === "ai" ? (
                           <ReactMarkdown 
@@ -220,49 +208,45 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
 
                 {isLoading && (
                   <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="flex gap-3"
                   >
-                    <div className="w-9 h-9 shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center border border-blue-400/50 shadow-lg shadow-blue-500/30">
-                      <Sparkles className="w-4 h-4 text-white animate-spin" />
+                    <div className="w-8 h-8 shrink-0 rounded-sm bg-blue-600 border border-blue-700 flex items-center justify-center text-white">
+                      <Bot className="w-4 h-4 animate-pulse" />
                     </div>
-                    <div className="bg-blue-100 border border-blue-300 rounded-2xl px-4 py-3 flex gap-1.5 items-center">
+                    <div className="bg-white border border-slate-200 rounded-lg px-4 py-3 flex gap-1.5 items-center shadow-xs">
                       <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></span>
-                      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></span>
-                      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></span>
+                      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.15s" }}></span>
+                      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.3s" }}></span>
                     </div>
                   </motion.div>
                 )}
               </div>
 
               {/* Input Area */}
-              <div className="p-6 border-t border-blue-200 bg-gradient-to-t from-white/80 to-white/40 backdrop-blur-xl">
+              <div className="p-4 border-t border-slate-200 bg-white">
                 <form 
                   onSubmit={handleSubmit}
-                  className="flex gap-2 p-1.5 bg-blue-100 border border-blue-300 rounded-2xl focus-within:border-blue-400 focus-within:bg-blue-100/80 transition-all shadow-lg shadow-blue-200/30"
+                  className="flex gap-2"
                 >
                   <input 
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={v.placeholder}
-                    className="flex-1 bg-transparent border-none outline-none px-4 py-2 text-sm font-light placeholder:text-blue-400/50 text-gray-900"
+                    className="flex-1 bg-slate-50 border border-slate-200 rounded-sm px-3.5 py-2 text-sm text-slate-900 outline-none focus:border-blue-500 focus:bg-white transition-all font-sans"
                   />
                   <button 
-                    disabled={isLoading}
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 text-white px-4 py-2 rounded-xl transition-all shadow-lg shadow-blue-500/30 font-semibold"
+                    disabled={isLoading || !input.trim()}
+                    className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-4 py-2 rounded-sm transition-all text-xs font-semibold flex items-center justify-center"
                   >
                     <Send className="w-4 h-4" />
                   </button>
                 </form>
-                <div className="flex items-center justify-center gap-2 mt-4">
-                  <span className="h-px w-8 bg-blue-300/50"></span>
-                  <p className="text-[9px] text-blue-600/60 font-bold uppercase tracking-[0.2em]">
-                    {v.disclaimer}
-                  </p>
-                  <span className="h-px w-8 bg-blue-300/50"></span>
-                </div>
+                <p className="text-[10px] text-slate-400 font-mono text-center mt-2.5 uppercase tracking-wider">
+                  {v.disclaimer}
+                </p>
               </div>
             </div>
           </motion.div>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import newsVi from "@/data/news_vi.json";
 import newsEn from "@/data/news_en.json";
 import BlogList from "./BlogList";
-import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
+import TechGridBackground from "@/components/TechGridBackground";
 import { Locale } from "@/config/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 
@@ -59,19 +59,17 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
   return (
     <main className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white">
       {/* ── Hero Section ───────────────────── */}
-      <div className="relative bg-[#020617] pt-48 pb-24 px-6 overflow-hidden">
-        <NeuralNetworkBackground />
-        {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[160px] -z-10 animate-pulse"></div>
+      <div className="relative bg-slate-900 border-b border-slate-800 pt-36 pb-20 px-6 overflow-hidden">
+        <TechGridBackground />
 
-        <div className="max-w-6xl mx-auto relative z-10 text-center space-y-6">
-          <div className="inline-block bg-blue-500/10 border border-blue-400/30 backdrop-blur-md rounded-full px-5 py-2 text-[10px] font-black text-blue-300 tracking-[0.4em] uppercase">
-             {lang === 'en' ? 'INSIGHTS HUB' : 'BLOG CHIẾN LƯỢC'}
+        <div className="max-w-6xl mx-auto relative z-10 text-center space-y-4">
+          <div className="inline-block bg-blue-500/10 border border-blue-500/30 rounded-sm px-3.5 py-1 text-[11px] font-mono font-semibold text-blue-400 tracking-wider uppercase">
+             {lang === 'en' ? 'INSIGHTS & ARTICLES' : 'GÓC NHÌN & BÀI VIẾT'}
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
-            {lang === 'en' ? 'Blog &' : 'Blog &'} <span className="text-blue-500">{lang === 'en' ? 'Insights' : 'Tin tức'}</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-50 tracking-tight">
+            {lang === 'en' ? 'Blog &' : 'Blog &'} <span className="text-blue-400">{lang === 'en' ? 'Insights' : 'Tin tức'}</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed tracking-tight">
+          <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
             {dict.news.description}
           </p>
         </div>

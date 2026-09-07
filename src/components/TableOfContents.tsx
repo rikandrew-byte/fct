@@ -60,10 +60,10 @@ export default function TableOfContents({ content }: { content: string }) {
   if (headings.length === 0) return null;
 
   return (
-    <nav className="bg-slate-50/80 backdrop-blur-md rounded-3xl p-6 border border-gray-100 sticky top-32">
-      <div className="flex items-center gap-2 mb-6 text-blue-600">
+    <nav className="bg-slate-50 rounded-lg p-5 border border-slate-200 sticky top-32">
+      <div className="flex items-center gap-2 mb-5 text-blue-700">
         <List className="w-4 h-4" />
-        <h3 className="text-[10px] font-black uppercase tracking-[0.2em]">Mục lục</h3>
+        <h3 className="text-[11px] font-bold uppercase tracking-wider">Mục lục bài viết</h3>
       </div>
       
       <div className="relative">

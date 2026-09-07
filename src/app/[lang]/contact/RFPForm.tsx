@@ -144,76 +144,76 @@ export default function RFPForm({ lang }: RFPFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* Full Name */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
-            <Users className="w-3 h-3" /> {isEn ? "Full Name" : "Họ và tên"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <Users className="w-3.5 h-3.5" /> {isEn ? "Full Name" : "Họ và tên"}
           </label>
           <input
             required
             type="text"
             placeholder="John Doe"
-            className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/10 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.fullName}
             onChange={e => setFormData({...formData, fullName: e.target.value})}
           />
         </div>
 
         {/* Email */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
-            <Lock className="w-3 h-3" /> {isEn ? "Email Address" : "Địa chỉ Email"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <Lock className="w-3.5 h-3.5" /> {isEn ? "Email Address" : "Địa chỉ Email"}
           </label>
           <input
             required
             type="email"
             placeholder="contact@company.com"
-            className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/10 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.email}
             onChange={e => setFormData({...formData, email: e.target.value})}
           />
         </div>
 
         {/* Phone */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
-            <ArrowRight className="w-3 h-3" /> {isEn ? "Phone Number" : "Số điện thoại"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <ArrowRight className="w-3.5 h-3.5" /> {isEn ? "Phone Number" : "Số điện thoại"}
           </label>
           <input
             required
             type="tel"
             placeholder="090 123 4567"
-            className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/10 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.phone}
             onChange={e => setFormData({...formData, phone: e.target.value})}
           />
         </div>
 
         {/* Company */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
-            <Building2 className="w-3 h-3" /> {isEn ? "Organization" : "Tên tổ chức / Doanh nghiệp"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <Building2 className="w-3.5 h-3.5" /> {isEn ? "Organization" : "Tên tổ chức / Doanh nghiệp"}
           </label>
           <input
             required
             type="text"
             placeholder="FCT Vinh Thinh"
-            className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/10 outline-none transition-all font-medium"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.company}
             onChange={e => setFormData({...formData, company: e.target.value})}
           />
         </div>
 
         {/* Industry Dropdown */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
-            <ShieldCheck className="w-3 h-3" /> {isEn ? "Industry" : "Ngành kinh doanh"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <ShieldCheck className="w-3.5 h-3.5" /> {isEn ? "Industry" : "Ngành kinh doanh"}
           </label>
           <div className="relative">
             <select
               required
-              className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 appearance-none focus:border-blue-500 outline-none transition-all font-medium cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-blue-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
               value={formData.industry}
               onChange={e => setFormData({...formData, industry: e.target.value})}
             >
@@ -222,19 +222,19 @@ export default function RFPForm({ lang }: RFPFormProps) {
                 <option key={ind} value={ind} className="bg-white">{ind}</option>
               ))}
             </select>
-            <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <ChevronDown className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
           </div>
         </div>
 
         {/* Solution Focus */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
-            <MessageSquare className="w-3 h-3" /> {isEn ? "Solution Focus" : "Giải pháp quan tâm"}
+        <div className="space-y-1.5">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <MessageSquare className="w-3.5 h-3.5" /> {isEn ? "Solution Focus" : "Giải pháp quan tâm"}
           </label>
           <div className="relative">
             <select
               required
-              className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 appearance-none focus:border-blue-500 outline-none transition-all font-medium cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-blue-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
               value={formData.solution}
               onChange={e => setFormData({...formData, solution: e.target.value})}
             >
@@ -243,19 +243,19 @@ export default function RFPForm({ lang }: RFPFormProps) {
                 <option key={sol.value} value={sol.value} className="bg-white">{sol.label}</option>
               ))}
             </select>
-            <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <ChevronDown className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
           </div>
         </div>
 
         {/* Project Scale */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
-            <ArrowRight className="w-3 h-3" /> {isEn ? "Project Scale" : "Quy mô dự án"}
+        <div className="space-y-1.5 md:col-span-2">
+          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <ArrowRight className="w-3.5 h-3.5" /> {isEn ? "Project Scale" : "Quy mô dự án"}
           </label>
           <div className="relative">
             <select
               required
-              className="w-full bg-slate-50 border border-gray-200 rounded-2xl px-6 py-4 text-gray-900 appearance-none focus:border-blue-500 outline-none transition-all font-medium cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-blue-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
               value={formData.projectScale}
               onChange={e => setFormData({...formData, projectScale: e.target.value})}
             >
@@ -264,18 +264,18 @@ export default function RFPForm({ lang }: RFPFormProps) {
                 <option key={scale} value={scale} className="bg-white">{scale}</option>
               ))}
             </select>
-            <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <ChevronDown className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
           </div>
         </div>
       </div>
 
       {/* Message */}
-      <div className="space-y-3">
-        <label className="text-[10px] font-black uppercase tracking-widest text-gray-500">{isEn ? "Technical Requirements / Notes" : "Yêu cầu kỹ thuật chi tiết"}</label>
+      <div className="space-y-1.5">
+        <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500">{isEn ? "Technical Requirements / Notes" : "Yêu cầu kỹ thuật chi tiết"}</label>
         <textarea
           rows={4}
           placeholder={isEn ? "Describe your security goals..." : "Mô tả mục tiêu bảo mật của dự án..."}
-          className="w-full bg-slate-50 border border-gray-200 rounded-3xl px-6 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 outline-none transition-all font-medium resize-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans resize-none"
           value={formData.message}
           onChange={e => setFormData({...formData, message: e.target.value})}
         />
@@ -286,18 +286,18 @@ export default function RFPForm({ lang }: RFPFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full md:w-auto px-6 sm:px-12 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-xl shadow-blue-500/20 group hover:scale-[1.02] active:scale-[0.98] ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className={`w-full md:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
           {isLoading ? (isEn ? "Sending..." : "Đang gửi...") : (isEn ? "Submit Solution RFP" : "Gửi yêu cầu RFP")}
-          {!isLoading && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+          {!isLoading && <Send className="w-4 h-4" />}
           {isLoading && <Loader2 className="w-4 h-4 animate-spin" />}
         </button>
 
         {/* Chặn Bot tàng hình */}
         <TurnstileWidget onVerify={setTurnstileToken} />
 
-        <p className="mt-6 text-gray-400 text-[10px] uppercase tracking-widest font-bold flex items-center gap-2">
-          <ShieldCheck className="w-3 h-3 text-emerald-500" /> {isEn ? "Secure encrypted data transmission" : "Truyền dữ liệu mã hóa an toàn"}
+        <p className="mt-4 text-slate-400 text-[10px] uppercase tracking-wider font-mono flex items-center gap-1.5">
+          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> {isEn ? "Secure encrypted data transmission — Enterprise SLA" : "Truyền dữ liệu mã hóa an toàn — Cam kết bảo mật doanh nghiệp"}
         </p>
       </div>
     </form>

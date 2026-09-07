@@ -22,15 +22,15 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
       </div>
 
       <div className="w-full max-w-3xl mx-auto px-4 sm:px-6">
-      <div className="relative w-full aspect-square md:aspect-video flex items-center justify-center bg-white rounded-3xl border border-slate-100 shadow-2xl shadow-rose-900/5 overflow-hidden">
+      <div className="relative w-full aspect-square md:aspect-video flex items-center justify-center bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
         {/* Background Grid */}
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#e2e8f0 1px, transparent 1px)', backgroundSize: '24px 24px', opacity: 0.5 }}></div>
 
         {/* Center: Smartphone */}
         <div className="relative z-30 flex flex-col items-center justify-center">
-          <div className="w-24 h-40 bg-slate-900 rounded-[2rem] border-4 border-slate-800 flex items-center justify-center relative shadow-2xl shadow-rose-900/20">
+          <div className="w-24 h-40 bg-slate-900 rounded-xl border-4 border-slate-800 flex items-center justify-center relative shadow-lg">
             {/* Screen */}
-            <div className="w-[85%] h-[90%] bg-slate-800 rounded-xl flex flex-col items-center justify-center space-y-2 border border-slate-700">
+            <div className="w-[85%] h-[90%] bg-slate-800 rounded-lg flex flex-col items-center justify-center space-y-2 border border-slate-700">
               <Smartphone className="w-8 h-8 text-rose-500" />
               <div className="w-8 h-1 bg-slate-700 rounded-full"></div>
               <div className="w-12 h-1 bg-slate-700 rounded-full"></div>
@@ -38,7 +38,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
             {/* Notch */}
             <div className="absolute top-1.5 w-8 h-1.5 bg-slate-800 rounded-full"></div>
           </div>
-          <div className="absolute -bottom-10 bg-slate-800 text-white text-[10px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-slate-700 shadow-xl whitespace-nowrap">
+          <div className="absolute -bottom-10 bg-slate-900 text-white text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-sm border border-slate-800 shadow-sm whitespace-nowrap">
             {isEn ? "Banking App" : "App Ngân Hàng"}
           </div>
         </div>
