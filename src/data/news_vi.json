@@ -6,8 +6,8 @@
     "summary": "Phân tích kết quả khảo sát từ IDC về kỳ vọng của người mua phần mềm B2B, giải pháp bóc tách Entitlements khỏi ERP và chiến lược bảo vệ Core IP trước các công cụ dò quét lỗ hổng bằng AI.",
     "category": "Bảo mật",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/thales-idc-report.jpg",
+    "ogImage": "/images/posts/thales-idc-report.jpg",
     "content": "Trong báo cáo mới nhất phối hợp cùng IDC khảo sát trên 300 khách hàng doanh nghiệp B2B toàn cầu, Thales chỉ ra rằng mô hình cấp phép bản quyền (Licensing Model) đang trở thành yếu tố then chốt quyết định sự gắn bó của khách hàng. Doanh nghiệp ngày nay yêu cầu sự linh hoạt tối đa trong cách thức tiêu dùng phần mềm, và việc chậm trễ đổi mới mô hình cấp phép có thể khiến các nhà cung cấp phần mềm (ISVs) đánh mất khách hàng vào tay đối thủ.\n\nBên cạnh đó, thị trường phát triển phần mềm năm 2026 đang chứng kiến hai bước chuyển dịch mang tính chiến lược:\n\n1. **Bảo Vệ Tài Sản Trí Tuệ (Core IP) Trước Kỷ Nguyên Trí Tuệ Nhân Tạo**:\nSự phổ biến của các mô hình AI tiên tiến đã biến việc phân tích ngược và dò tìm lỗ hổng mã nguồn thành câu chuyện diễn ra trong vài phút. Nếu không có lớp bảo vệ chủ động, các phần mềm triển khai tại chỗ (On-premise) hoặc ứng dụng chuyên dụng sẽ đối mặt với rủi ro bị bẻ khóa và sao chép thuật toán cốt lõi. Giải pháp mã hóa và đóng gói bản quyền chuyên dụng giúp thiết lập hàng rào ngăn chặn các công cụ AI tự động can thiệp vào mã nhị phân.\n\n2. **Bóc Tách Quản Lý Quyền Sở Hữu Khỏi Lõi ERP (Decoupling Entitlements from ERP)**:\nNhiều doanh nghiệp phần mềm vẫn duy trì việc quản lý license trực tiếp bên trong hệ thống ERP. Cấu trúc này tạo ra lực cản lớn mỗi khi doanh nghiệp nâng cấp hoặc chuyển đổi ERP, buộc đội ngũ IT phải xác thực lại toàn bộ danh mục quyền của khách hàng, gây chậm trễ thời gian đưa tính năng mới ra thị trường (Time-to-Market). Bằng cách chuyển giao việc quản lý quyền sở hữu sang một nền tảng chuyên trách như Thales Sentinel, doanh nghiệp có thể rút ngắn thời gian triển khai, giảm tải cho hạ tầng IT và hỗ trợ linh hoạt các mô hình cấp phép hiện đại (Subscription, Usage-based, Feature-based).\n\n3. **Sẵn Sàng Cho Các Tiêu Chuẩn Bảo Mật Quốc Tế**:\nBên cạnh việc bảo vệ doanh thu, các nhà phát triển phần mềm thương mại cần chuẩn bị lộ trình đáp ứng Đạo luật Chịu tải An ninh mạng Châu Âu (EU Cyber Resilience Act) và các tiêu chuẩn bảo mật thuật toán khắt khe trên toàn cầu.\n\nFCT Vĩnh Thịnh cung cấp giải pháp tư vấn toàn diện và triển khai nền tảng Thales Sentinel tại Việt Nam, giúp các doanh nghiệp phần mềm bảo vệ vững chắc tài sản trí tuệ cốt lõi và tối ưu hóa mô hình thương mại hóa phần mềm theo chuẩn quốc tế."
   },
   {
@@ -17,8 +17,8 @@
     "summary": "Phương án thu thập dữ liệu Historian, giám sát Power BI real-time và bảo mật hạ tầng điều khiển công nghiệp dành cho các doanh nghiệp xây lắp điện & tự động hóa.",
     "category": "Dữ liệu công nghiệp",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/canary-automation-si.jpg",
+    "ogImage": "/images/posts/canary-automation-si.jpg",
     "content": "Trong kỷ nguyên Chuyển đổi số công nghiệp (Smart Factory & Industry 4.0), các đơn vị Tích hợp Hệ thống (SI) và Xây lắp Điện - Tự động hóa đang đối mặt với bài toán lớn: Làm thế nào để thu thập dữ liệu vận hành SCADA/OT đa dạng thiết bị với độ tin cậy tuyệt đối, đồng thời đáp ứng tiêu chuẩn an ninh mạng công nghiệp khắt khe?\n\nSự kết hợp giữa hệ thống lưu trữ dữ liệu thời gian thực Canary Historian v26.2 và nền tảng Trí tuệ nhân tạo SORBA.ai mang đến lời giải toàn diện cho các nhà tích hợp hệ thống tại Việt Nam:\n\n1. **Thu thập và lưu trữ dữ liệu Historian tốc độ cao**: Khả năng ghi nhận hàng triệu biến số (tags) mỗi giây từ các PLC, RTU, DCS mà không làm gián đoạn hạ tầng mạng OT.\n2. **Trực quan hóa dữ liệu với Power BI Connector**: Cho phép kéo trực tiếp dữ liệu công nghiệp lên hệ thống Dashboard giám sát của ban giám đốc mà vẫn đảm bảo phân quyền an toàn qua tính năng Tile Level Security.\n3. **Bảo mật phần cứng & Mã hóa kênh truyền**: Kết hợp với các thiết bị phần cứng an ninh (Longmai/Thales HSM) giúp chống can thiệp, chống giả mạo lệnh điều khiển trong các trạm điện và nhà máy thông minh.\n\nFCT Vĩnh Thịnh tự hào là đối tác đồng hành cùng các doanh nghiệp tự động hóa hàng đầu Việt Nam, cung cấp hạ tầng phần mềm và thiết bị bảo mật chính hãng, hỗ trợ kỹ thuật 24/7 cho mọi dự án triển khai."
   },
   {
@@ -28,8 +28,8 @@
     "summary": "Chiến lược chống bẻ khóa (Anti-Piracy), bảo vệ tài sản trí tuệ (Core IP) và quản lý bản quyền phần mềm mượt mà dành cho các Vendor phần mềm B2B.",
     "category": "Bản quyền phần mềm",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1581472723648-909f4851d4ae?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581472723648-909f4851d4ae?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/isv-software-protection.jpg",
+    "ogImage": "/images/posts/isv-software-protection.jpg",
     "content": "Đối với các công ty sản xuất và dịch vụ phần mềm (ISV / Software House), việc lộ lọt mã nguồn cốt lõi (Core IP) hoặc bị bẻ khóa (crack) phần mềm thương mại gây ra thiệt hại doanh thu trực tiếp và làm suy giảm uy tín doanh nghiệp. Trong kỷ nguyên AI, các công cụ phân tích mã ngược tự động có thể tìm ra lỗ hổng của phần mềm chỉ trong vài phút.\n\nĐể bảo vệ thành quả sáng tạo và thương mại hóa phần mềm hiệu quả, các công ty phần mềm Việt Nam cần một chiến lược bảo vệ đa lớp:\n\n1. **Mã hóa & Chống dịch ngược ứng dụng**: Ứng dụng giải pháp Guardsquare (DexGuard/iXGuard) giúp làm rối luồng mã nguồn (Control Flow Obfuscation), mã hóa chuỗi API Key và tự vệ trước các công cụ can thiệp động (RASP - Frida, Debugger).\n2. **Quản lý bản quyền thông minh với Thales Sentinel**: Bóc tách logic cấp phép (Entitlement Management) ra khỏi hệ thống ERP hoặc mã nguồn phần mềm. Cho phép doanh nghiệp linh hoạt chuyển đổi giữa các mô hình kinh doanh: Bán bản quyền trả trước, Đăng ký định kỳ (Subscription) hoặc Cấp phép theo tính năng (Feature-based).\n3. **Chống giả mạo chữ ký số binary**: Đảm bảo bộ cài đặt phần mềm khi giao cho khách hàng Enterprise không bị chèn mã độc hay chỉnh sửa trái phép.\n\nFCT Vĩnh Thịnh cung cấp giải pháp tư vấn và tích hợp hạ tầng bản quyền phần mềm toàn diện, giúp các Software House tối ưu hóa doanh thu, rút ngắn thời gian đưa sản phẩm ra thị trường (Time-to-Market) và bảo vệ an toàn tuyệt đối cho tài sản số."
   },
   {
@@ -39,8 +39,8 @@
     "summary": "Phân tích tác động của công nghệ eSIM trong việc tối ưu hóa quản lý kết nối và an ninh thiết bị đầu cuối cho mạng Private 4G/5G Enterprise.",
     "category": "Bảo mật di động",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/esim-private-networks.jpg",
+    "ogImage": "/images/posts/esim-private-networks.jpg",
     "content": "Theo báo cáo mới nhất từ Gartner® Hype Cycle™ 2026 về Dịch vụ Mạng Di động Nội bộ (Private Mobile Network Services), công nghệ eSIM đang trở thành động lực cốt lõi thúc đẩy sự chuyển mình mạnh mẽ trong hạ tầng kết nối nội bộ của các tổ chức và tập đoàn lớn.\n\nViệc triển khai mạng di động nội bộ (Private 4G/5G) trước đây thường gặp rào cản lớn trong khâu quản lý và phân phối SIM vật lý cho hàng ngàn thiết bị IoT, smartphone và thiết bị đeo (wearables) của nhân viên. Sự trỗi dậy của eSIM giải quyết triệt để bài toán này nhờ khả năng cấp phát cấu hình cấu trúc mạng từ xa một cách tự động (Over-The-Air deployment).\n\nLà đơn vị tiên phong phối hợp cùng đối tác chiến lược Thales, FCT Vĩnh Thịnh mang đến giải pháp mạng di động nội bộ tối ưu, giúp đơn giản hóa quy trình đăng ký thiết bị (device onboarding), tối ưu hóa quản lý kết nối, đồng thời thắt chặt kiểm soát truy cập và bảo vệ dữ liệu toàn vẹn trên lộ trình chuyển đổi số của doanh nghiệp."
   },
   {
@@ -50,8 +50,8 @@
     "summary": "Đi sâu vào kiến trúc thông minh AI-native của mạng 6G và các phương án xử lý rủi ro an ninh mạng, chống gian lận ở tốc độ cao.",
     "category": "An ninh mạng",
     "target_funnel": "guardsquare",
-    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/6g-network-security.jpg",
+    "ogImage": "/images/posts/6g-network-security.jpg",
     "content": "Mạng di động thế hệ thứ sáu (6G) đang tái định nghĩa lại hạ tầng kết nối toàn cầu. Không chỉ dừng lại ở tốc độ vượt trội, kiến trúc 6G nguyên bản tích hợp AI (AI-native 6G) sẽ tạo ra các mạng lưới có khả năng tự tư duy, tự thích ứng và cảm nhận môi trường xung quanh một cách real-time.\n\nTuy nhiên, \"trí tuệ\" càng cao thì \"vùng phơi nhiễm rủi ro\" (exposure to risk) càng lớn. Khi AI được cấy sâu vào lõi hệ thống để quản lý kết nối thông minh và vận hành tự động, hacker cũng có thể lợi dụng chính AI để tấn công hệ thống với tốc độ tính bằng mili-giây. Do đó, việc xây dựng một nền móng bảo mật an ninh vững chắc cho hạ tầng viễn thông ngay từ giai đoạn phác thảo là yêu cầu sống còn.\n\nĐể đối phó, các nhà vận hành đang dịch chuyển mạnh mẽ sang cơ chế giám sát an ninh tự động, ứng dụng AI trong phát hiện gian lận tốc độ cao (fraud detection) và bảo vệ hạ tầng thiết bị đầu cuối, đảm bảo tính chống chịu mãnh liệt trước các cuộc tấn công thế hệ mới."
   },
   {
@@ -61,8 +61,8 @@
     "summary": "Giải pháp bóc tách quản lý quyền sở hữu ra khỏi ERP bằng Thales Sentinel nhằm bảo vệ mã nguồn cốt lõi trước các công cụ bẻ khóa tự động bằng AI.",
     "category": "Bản quyền phần mềm",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/smart-licensing-ai.jpg",
+    "ogImage": "/images/posts/smart-licensing-ai.jpg",
     "content": "Trong bối cảnh các công cụ AI tiên tiến (như Claude hoặc các mô hình mã nguồn mở) có khả năng phân tích ngược cấu trúc mã và phát hiện các lỗ hổng bảo mật của phần mềm chỉ trong vài phút, việc bảo vệ tài sản trí tuệ cốt lõi (Core IP) trở nên cấp bách hơn bao giờ hết.\n\nBản tin Thales Software Monetization 2026 nhấn mạnh, nếu các nhà phát triển phần mềm B2B chỉ dựa vào các biện pháp bảo vệ thụ động hoặc quản lý bản quyền lỏng lẻo dính liền vào hệ thống ERP, nguy cơ bị bẻ khóa và thất thoát doanh thu là cực kỳ nghiêm trọng.\n\nGiải pháp tiên tiến từ nền tảng Thales Sentinel hỗ trợ doanh nghiệp bóc tách quản lý quyền sở hữu (Entitlement Management) ra khỏi hệ thống ERP cốt lõi. Thao tác dịch chuyển này không chỉ giúp đẩy nhanh tốc độ ra mắt sản phẩm (Time-to-Market), giảm tải cho đội ngũ IT khi nâng cấp hệ thống mà còn thiết lập một tấm khiên vững chắc bảo vệ mã nguồn, chống chịu lại các kỹ thuật dò tìm lỗ hổng tự động bằng AI của hacker."
   },
   {
@@ -72,8 +72,8 @@
     "summary": "Giới thiệu bước tiến đột phá từ Canary Labs v26.2 giúp tối ưu hóa dữ liệu vận hành OT, tích hợp Power BI và thắt chặt kiểm soát Tile Level Security.",
     "category": "Dữ liệu công nghiệp",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/canary-industrial-ai.jpg",
+    "ogImage": "/images/posts/canary-industrial-ai.jpg",
     "content": "Sự hợp tác chiến lược giữa Canary Labs và SORBA.ai đã mở ra một chương mới cho ngành tự động hóa và tối ưu hóa vận hành nhà máy. Giờ đây, các đội ngũ kỹ thuật công nghiệp hoàn toàn có thể chuyển hóa kho dữ liệu vận hành quá khứ (historian data) khổng lồ thành các mô hình trí tuệ nhân tạo có khả năng kiểm soát vòng lặp khép kín (closed-loop intelligence) và tối ưu hóa vận hành theo thời gian thực — hoàn toàn không cần đến sự can thiệp của các chuyên gia dữ liệu (Data Scientists).\n\nBên cạnh đó, trong bản cập nhật công nghệ phiên bản 26.2, Canary Labs chính thức ra mắt bộ kết nối Power BI Connector mới, cho phép kéo trực tiếp dữ liệu vận hành trực quan lên các dashboard giám sát với tốc độ cao và độ chính xác tuyệt đối.\n\nĐặc biệt, để đáp ứng tiêu chuẩn an ninh nghiêm ngặt của hạ tầng vận hành (OT Security), tính năng Tile Level Security được bổ sung, cấp quyền thiết lập danh sách kiểm soát truy cập (Access Control List - ACL) đến từng ô hiển thị cấu trúc trong Admin, thắt chặt an ninh tại những điểm chạm dữ liệu trọng yếu nhất."
   },
   {
@@ -83,8 +83,8 @@
     "summary": "Tầm quan trọng của Threat Intelligence và cơ chế định vị sớm mã độc ransomware, tài khoản lộ lọt từ các không gian ngầm của internet.",
     "category": "An ninh mạng",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/deep-web-monitoring.jpg",
+    "ogImage": "/images/posts/deep-web-monitoring.jpg",
     "content": "Phần lớn các mối đe dọa an ninh mạng nguy hiểm nhất không xuất hiện trên bề mặt internet công cộng. Các dấu hiệu ban đầu của một cuộc tấn công ransomware mã hóa dữ liệu, danh tính tài khoản bị rò rỉ (leaked credentials), hay dữ liệu nội bộ bị rao bán thường xuất hiện rất sớm tại các vùng tối ẩn khuất của internet (Deep Web/Dark Web) – nơi các công cụ giám sát truyền thống hoàn toàn không thể chạm tới.\n\nHiểu rõ bản chất của những gì đang diễn ra phía sau bức màn internet là một phần không thể tách rời của chiến lược xây dựng tính chịu chấn an ninh mạng (Cyber Resilience) và tình báo mối đe dọa (Threat Intelligence) hiện đại.\n\nThông qua việc chủ động giám sát sâu, định vị sớm các cảnh báo nguy cơ từ không gian ngầm, doanh nghiệp có thể thực thi các biện pháp phòng vệ, đổi khóa, vá lỗ hổng hệ thống trước khi cuộc tấn công thực sự kích hoạt trên thực tế."
   },
   {
@@ -94,8 +94,8 @@
     "summary": "Làm rối mã (Obfuscation) là chưa đủ để chống Crack. Khám phá giải pháp bảo vệ bản quyền và cấp phép linh hoạt với Thales Sentinel.",
     "category": "Software Licensing",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/anti-crack-sentinel.jpg",
+    "ogImage": "/images/posts/anti-crack-sentinel.jpg",
     "content": "Bạn dành hàng ngàn giờ thức trắng đêm để viết ra một phần mềm C#/.NET đột phá. Bạn tung nó ra thị trường với niềm tự hào lớn lao. Nhưng chỉ vài ngày sau, một bản \"Full Crack\" hoặc \"Keygen\" đã chễm chệ nằm trên các diễn đàn chia sẻ lậu. Mọi công sức đổ sông đổ bể, và doanh thu bốc hơi không dấu vết.\n\nNếu bạn là một nhà phát triển phần mềm (ISV), đây chắc chắn là cơn ác mộng tồi tệ nhất.\n\n### 1. Ảo tưởng về công cụ \"Làm rối mã\" (Obfuscator)\nRất nhiều lập trình viên cho rằng chỉ cần chạy mã nguồn qua một công cụ Obfuscator (làm rối mã) đổi tên biến, mã hóa chuỗi là đã an toàn. Sự thật là: Obfuscation chỉ làm chậm tiến độ của Hacker, chứ không thể ngăn chặn chúng.\n\nVới các công cụ dịch ngược (Decompiler) mạnh mẽ hiện nay như dnSpy hay ILSpy, các cracker chuyên nghiệp có thể dễ dàng dò ngược lại luồng logic, tìm ra hàm kiểm tra bản quyền (License Check) và vô hiệu hóa nó bằng cách sửa đổi trực tiếp các file .dll hoặc .exe.\n\n### 2. Nỗi đau kép: Mất doanh thu và Chết chìm trong quản lý Key\nKhông chỉ mất tiền vì vi phạm bản quyền, các công ty phần mềm còn đang tự trói tay mình bằng những hệ thống cấp phép (Licensing) tự chế lỏng lẻo.\n\n- Việc tạo và gửi Key thủ công qua email vô cùng thiếu chuyên nghiệp.\n- Khách hàng chia sẻ Key cho nhau dùng chung, bạn không có cách nào kiểm soát.\n- Bạn muốn bán phần mềm theo dạng Thuê bao (Subscription) hoặc Trả theo mức sử dụng (Pay-per-use) nhưng hệ thống tự làm không hỗ trợ nổi.\n\n### 3. Thales Sentinel: Khiên bảo vệ và Động cơ tạo doanh thu\nĐể chấm dứt hoàn toàn vấn nạn này, các tập đoàn phần mềm hàng đầu thế giới đã trang bị công nghệ Thales Sentinel (trước đây là SafeNet). Đây không chỉ là một chiếc ổ khóa, mà là một cỗ máy tạo doanh thu hoàn chỉnh:\n\n- **Bảo vệ Vỏ bọc (Envelope Encryption):** Sentinel tự động bọc mã nguồn phần mềm của bạn bằng các thuật toán mã hóa cấp độ quân sự. Hacker không thể giải mã, không thể dịch ngược và không thể sửa đổi file thực thi.\n- **Khóa cứng (Hardware Dongle) & Khóa mềm (Cloud License):** Cho phép bạn gắn chặt phần mềm vào một chiếc USB Token vật lý (như Sentinel HL) hoặc quản lý hoàn toàn qua Đám mây. Bất khả thi để sao chép.\n- **Cấp phép linh hoạt:** Biến một phần mềm bán đứt thành dạng cho thuê (SaaS), dùng thử 30 ngày, hoặc giới hạn số lần mở ứng dụng chỉ với vài cú click chuột mà không cần sửa lại code.\n\n### Đừng để chất xám bị đánh cắp thêm một giây nào nữa\nViệc bảo vệ phần mềm phải được thực hiện ngay từ trước khi sản phẩm ra mắt. Một khi mã nguồn đã bị bung, bạn sẽ vĩnh viễn mất đi khách hàng đó."
   },
   {
@@ -105,8 +105,8 @@
     "summary": "SQL không được thiết kế cho dữ liệu chuỗi thời gian tốc độ cao. Khám phá cách Canary Historian xử lý hàng triệu thẻ tag mỗi giây cho mạng OT.",
     "category": "Industrial Data",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/sql-vs-historian-scada.jpg",
+    "ogImage": "/images/posts/sql-vs-historian-scada.jpg",
     "content": "Trong kỷ nguyên Công nghiệp 4.0, một nhà máy cỡ trung bình có thể sinh ra hàng chục nghìn điểm dữ liệu (tags) mỗi giây từ các cảm biến nhiệt độ, áp suất, PLC và hệ thống SCADA.\n\nPhản xạ đầu tiên của nhiều doanh nghiệp là đổ toàn bộ núi dữ liệu này vào một Cơ sở dữ liệu quan hệ (Relational Database) quen thuộc như SQL Server hoặc MySQL. Tuy nhiên, đây chính là khởi đầu của một cơn ác mộng vận hành.\n\n### 1. Nút thắt cổ chai hiệu suất (Performance Bottleneck)\nSQL được thiết kế cho các giao dịch tài chính hoặc hệ thống quản lý nhân sự — nơi dữ liệu thay đổi chậm và cần tính toàn vẹn cao. Khi bị ép phải ghi nhận hàng chục nghìn điểm dữ liệu mỗi giây (sub-second writes) từ hệ thống OT, SQL lập tức bị quá tải.\n\nHậu quả là băng thông mạng nghẽn tắc, máy chủ treo cứng, và nghiêm trọng nhất là hiện tượng mất mát dữ liệu (Data Loss). Các xung nhịp quan trọng báo hiệu sự cố máy móc có thể bị rớt nhịp, dẫn đến những phán đoán sai lầm trong sản xuất.\n\n### 2. Chi phí phình to và Sự đánh đổi độ phân giải\nĐể giữ cho SQL không bị sập, các Quản trị viên cơ sở dữ liệu (DBA) thường phải dùng biện pháp \"cắt tỉa\" (Purging) hoặc \"làm tròn\" (Aggregating) dữ liệu cũ. Ví dụ: Dữ liệu ghi nhận mỗi giây trong ngày hôm nay sẽ bị gộp lại thành trung bình mỗi phút cho tuần sau, và trung bình mỗi giờ cho tháng sau.\n\nĐiều này phá hủy hoàn toàn giá trị cốt lõi của dữ liệu chuỗi thời gian. Khi cần điều tra lại một sự cố máy móc xảy ra từ 6 tháng trước, bạn sẽ không còn dữ liệu thô chi tiết để phân tích nguyên nhân gốc rễ (Root Cause Analysis).\n\n### 3. Giải pháp thay thế: Time-Series Historian Database\nĐể giải phóng hệ thống SCADA, các kỹ sư OT hàng đầu trên thế giới đã chuyển sang sử dụng Historian Database (CSDL Chuỗi thời gian) chuyên dụng, điển hình như Canary Historian.\n\n- **Tốc độ ghi siêu tốc:** Canary có thể xử lý hơn 1,5 triệu thẻ tag mỗi giây mà không làm suy giảm hiệu năng hệ thống.\n- **Nén dữ liệu không mất mát (Loss-less Compression):** Canary không bao giờ làm tròn hay xóa dữ liệu cũ. Dữ liệu của 10 năm trước vẫn giữ nguyên độ sắc nét như dữ liệu vừa được ghi nhận cách đây 1 giây, nhưng với dung lượng lưu trữ chỉ bằng một phần nhỏ so với SQL.\n- **Tách biệt thiết kế IT và OT:** Không đòi hỏi kỹ năng viết lệnh truy vấn SQL phức tạp. Kỹ sư nhà máy có thể tự kéo thả để trực quan hóa dữ liệu chỉ trong vài phút.\n\n### Đã đến lúc gỡ bỏ gánh nặng cho hệ thống của bạn\nViệc cố gắng dùng SQL để lưu trữ dữ liệu SCADA giống như việc dùng một chiếc xe buýt để đua Công thức 1: Vừa đắt đỏ, vừa không hiệu quả."
   },
   {
@@ -116,8 +116,8 @@
     "summary": "Mã độc Overlay và kỹ thuật dịch ngược đang đe dọa trực tiếp ứng dụng Mobile Banking. Khám phá cách RASP của Guardsquare bảo vệ giao dịch.",
     "category": "Mobile Security",
     "target_funnel": "guardsquare",
-    "image": "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/mobile-banking-rasp.jpg",
+    "ogImage": "/images/posts/mobile-banking-rasp.jpg",
     "content": "Trong những năm gần đây, cuộc chạy đua vũ trang giữa các ngân hàng (Fintech) và tội phạm mạng đã bước sang một ngã rẽ mới khốc liệt hơn. Nếu như trước đây, tin tặc chủ yếu tấn công vào hệ thống máy chủ (Backend), thì nay, chiến trường chính đã dịch chuyển sang chính thiết bị cầm tay của người dùng: Mobile Banking App.\n\nNổi cộm nhất trong số các mối đe dọa hiện nay là Mã độc Overlay (Màn hình phủ) và Kỹ thuật Dịch ngược (Reverse Engineering).\n\n### 1. Mã độc Overlay: Kẻ đánh cắp vô hình\nOverlay là loại mã độc ẩn nấp dưới vỏ bọc các ứng dụng tiện ích thông thường. Khi người dùng mở App Ngân hàng, mã độc này lập tức tạo ra một lớp màn hình giả mạo (overlay) đè lên giao diện thật.\n\nHậu quả? Mọi thao tác nhập tên đăng nhập, mật khẩu, và thậm chí cả mã OTP đều bị ghi lại và gửi thẳng về máy chủ của Hacker. Khách hàng mất tiền oan uổng, còn ngân hàng đối mặt với khủng hoảng truyền thông và suy giảm uy tín nghiêm trọng.\n\n### 2. Kỹ thuật Dịch ngược: Mở toang \"Cửa hậu\"\nNếu mã độc Overlay nhắm vào người dùng cuối, thì kỹ thuật Dịch ngược lại nhắm thẳng vào lỗ hổng của nhà phát triển. Hacker sử dụng các công cụ giải mã để \"mổ xẻ\" file cài đặt (APK/IPA), tìm kiếm các API keys nhúng cứng, thuật toán mã hóa, hoặc chèn thêm các đoạn mã độc hại vào ứng dụng (Repackaging) rồi phát tán lại lên các kho ứng dụng không chính thống.\n\n### 3. RASP: Lớp giáp chủ động thời gian thực\nViệc che giấu mã nguồn (Obfuscation) là cần thiết nhưng không còn đủ. Để đối phó với các cuộc tấn công nhắm vào bộ nhớ và các chiêu trò can thiệp thời gian thực (như Hooking, Root/Jailbreak), ứng dụng ngân hàng cần một hệ thống bảo vệ từ bên trong: RASP (Runtime Application Self-Protection).\n\nRASP hoạt động như một hệ thống miễn dịch độc lập. Ngay khi phát hiện môi trường thiết bị bị can thiệp (có mã độc ghi màn hình, có phần mềm debug đang chạy, thiết bị đã bị Root), RASP sẽ lập tức phản ứng: chặn giao dịch, đóng ứng dụng và gửi cảnh báo về trung tâm điều hành.\n\n### Đâu là lời giải cho các Giám đốc Công nghệ (CIO)?\nĐứng trước sự tiến hóa của mã độc di động, việc nâng cấp kiến trúc phòng thủ là yêu cầu sống còn. Nếu ứng dụng của bạn chỉ đang dựa vào lớp tường lửa mạng, bạn đang để ngỏ hoàn toàn cánh cửa trên thiết bị của khách hàng."
   },
   {
@@ -136,8 +136,8 @@
     "date": "2026-04-23",
     "summary": "Thales CipherTrust và giải pháp HSM - Tiêu chuẩn bảo mật dữ liệu Cloud Security hàng đầu thế giới. Bảo vệ khóa mã hóa tuyệt đối trước mọi cuộc tấn công.",
     "category": "Data Security & HSM",
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/thales-cloud-hsm.jpg",
+    "ogImage": "/images/posts/thales-cloud-hsm.jpg",
     "content": "Trong một thế giới nơi dữ liệu được ví như 'dầu mỏ mới', việc bảo vệ tài sản này không còn là lựa chọn mà là sự sống còn. Thales cung cấp những giải pháp bảo mật dữ liệu toàn diện, từ mã hóa đám mây đến các thiết bị phần cứng chuyên dụng, giúp doanh nghiệp an tâm tuyệt đối trước mọi cuộc tấn công.\n\n**1. Khi mã hóa phần mềm là chưa đủ**\nCác cuộc tấn công hiện đại thường nhắm vào quyền quản trị. Nếu khóa mã hóa chỉ được lưu bằng phần mềm, Hacker có thể dễ dàng đánh cắp. Ngành tài chính, ngân hàng và chính phủ đòi hỏi những tiêu chuẩn bảo mật khắt khe mà các giải pháp thông thường không thể đáp ứng.\n\n> Với Thales, dữ liệu của bạn được bảo vệ bởi 'Pháo đài phần cứng' không thể xuyên phá.\n\n**2. Thales – Hệ sinh thái bảo mật không thể phá vỡ**\nThales mang đến giải pháp bảo mật 3 lớp toàn diện:\n\n- **CipherTrust Data Security Platform:** Nền tảng duy nhất giúp quản lý tập trung toàn bộ vòng đời của khóa mã hóa, dù dữ liệu nằm ở máy chủ vật lý hay trên các nền tảng đám mây (AWS, Azure, Google Cloud).\n- **Hardware Security Module (HSM):** 'Pháo đài phần cứng' dùng để tạo, lưu trữ và quản lý các khóa mật mã. Đây là thiết bị vật lý biệt lập, đảm bảo rằng ngay cả khi hệ thống chính bị xâm nhập, khóa bảo mật vẫn an toàn tuyệt đối.\n- **Xác thực và Truy cập:** Kiểm soát danh tính người dùng bằng các phương thức xác thực mạnh, ngăn chặn triệt để các hành vi giả mạo và truy cập trái phép.\n\n![Giải pháp bảo mật Thales HSM](/images/posts/thales-hsm-security.jpg)\n\n**3. Tầm nhìn chiến lược cho nhà lãnh đạo**\nĐầu tư vào Thales là đầu tư vào uy tín và sự phát triển bền vững:\n\n- **Xây dựng pháo đài niềm tin:** Khẳng định uy tín thương hiệu với khách hàng bằng công nghệ bảo mật hàng đầu thế giới.\n- **Tối ưu chi phí rủi ro:** Ngăn chặn triệt để các vụ rò rỉ dữ liệu và khoản phạt vi phạm pháp lý.\n- **Sẵn sàng cho tương lai:** Chống lại cả những mối đe dọa từ máy tính lượng tử (Quantum-safe).\n\n**Lời kết**\nTại FCT Vĩnh Thịnh, chúng tôi mang đến cho bạn công nghệ của Thales không chỉ như một sản phẩm, mà như một cam kết về sự an toàn vĩnh cửu cho mọi bit dữ liệu quý giá của doanh nghiệp.",
     "faqs": [
       {
@@ -156,8 +156,8 @@
     "date": "2026-04-23",
     "summary": "Tại sao bảo mật ứng dụng di động là ưu tiên hàng đầu của doanh nghiệp? Tìm hiểu giải pháp Guardsquare chống dịch ngược và bảo vệ dữ liệu App chuyên sâu.",
     "category": "Mobile App Security",
-    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/guardsquare-mobile-app-sec.jpg",
+    "ogImage": "/images/posts/guardsquare-mobile-app-sec.jpg",
     "content": "Trong kỷ nguyên App-First, ứng dụng di động chính là bộ mặt của doanh nghiệp. Tuy nhiên, đây cũng là nơi dễ bị tổn thương nhất trước các cuộc tấn công dịch ngược và đánh cắp dữ liệu. Guardsquare xuất hiện như một lời giải hoàn hảo cho lớp giáp bảo mật này.\n\n**1. Tại sao App doanh nghiệp là 'mồi ngon' cho Hacker?**\nHacker dễ dàng đọc hiểu logic kinh doanh và tìm ra lỗ hổng nếu code không được bảo vệ. Ứng dụng chạy trên thiết bị người dùng (đã root/jailbreak) là môi trường đầy rẫy rủi ro.\n\n> Một vụ rò rỉ dữ liệu từ App có thể phá hủy uy tín tích lũy hàng chục năm của doanh nghiệp.\n\n**2. Guardsquare – Sự kết hợp giữa Đa hình hóa và Tự bảo vệ**\nGuardsquare không chỉ là một công cụ, đó là một chiến lược phòng thủ toàn diện:\n\n- **Làm rối mã nguồn (Obfuscation):** Biến cấu trúc mã nguồn thành một 'mê cung' không thể đọc hiểu, khiến việc dịch ngược trở nên bất khả thi.\n- **Tự bảo vệ ứng dụng (RASP):** Tích hợp khả năng tự phát hiện các mối đe dọa ngay khi đang chạy (Runtime). Nếu App bị tấn công hoặc chạy trên môi trường nguy hiểm, nó sẽ tự động kích hoạt chế độ phòng vệ.\n- **Tuân thủ tiêu chuẩn:** Giúp doanh nghiệp dễ dàng đạt được các chứng chỉ bảo mật khắt khe như PCI DSS hay OWASP.\n\n![Giải pháp bảo mật Guardsquare](/images/posts/guardsquare-shield.jpg)\n\n**3. Lợi ích chiến lược cho nhà quản lý**\nĐầu tư vào Guardsquare mang lại giá trị bền vững cho lộ trình số hóa:\n\n- **Bảo vệ tài sản trí tuệ:** Giữ kín các thuật toán và logic kinh doanh độc quyền.\n- **Giảm thiểu thiệt hại tài chính:** Ngăn chặn các hành vi gian lận, hack tiền trong ứng dụng.\n- **Xây dựng niềm tin tuyệt đối:** Khẳng định với khách hàng rằng dữ liệu của họ đang được bảo vệ bởi công nghệ hàng đầu thế giới.\n\n**Lời kết**\nĐầu tư vào bảo mật ứng dụng với Guardsquare không phải là chi phí, mà là khoản bảo hiểm thông minh cho sự phát triển bền vững của doanh nghiệp trong kỷ nguyên số.",
     "faqs": [
       {
@@ -196,8 +196,8 @@
     "date": "2026-04-20",
     "summary": "Tiêu chuẩn FIDO2 đang dần thay thế SMS OTP truyền thống để trở thành 'chốt chặn' an toàn nhất chống lại các cuộc tấn công Phishing tinh vi...",
     "category": "Bảo mật",
-    "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/fido2-hardware-key.jpg",
+    "ogImage": "/images/posts/fido2-hardware-key.jpg",
     "link": "https://fct.vn/posts/fido2-passwordless-trend",
     "content": "Năm 2024 đánh dấu bước ngoặt lớn trong ngành bảo mật khi các tổ chức tài chính hàng đầu bắt đầu loại bỏ sự phụ thuộc vào mật khẩu và mã OTP qua tin nhắn (SMS OTP) – vốn dễ bị tấn công bằng kỹ thuật SIM swapping hoặc Phishing. Thay vào đó, tiêu chuẩn **FIDO2 (Fast Identity Online)** đang trở thành 'tiêu chuẩn vàng' mới.\n\nTại sao FIDO2 lại vượt trội?\n- **Chống Phishing tuyệt đối:** Khác với OTP, khóa FIDO2 thiết lập một mối liên kết mã hóa duy nhất giữa thiết bị phần cứng và website chính thức. Kẻ tấn công không thể lừa người dùng cung cấp 'mã' vì mọi giao tiếp đều được xử lý bằng cặp khóa công khai/bí mật trong chip bảo mật.\n- **Trải nghiệm Passkey:** Người dùng có thể đăng nhập chỉ bằng một cú chạm vào USB Dongle mà không cần nhớ những dãy mật khẩu phức tạp.\n\n**FCT Vĩnh Thịnh** hiện đang cung cấp các dòng **FCT Token** hỗ trợ đầy đủ chuẩn FIDO2/L2, giúp các ngân hàng và doanh nghiệp tại Việt Nam triển khai hạ tầng xác thực không mật khẩu (Passwordless) một cách nhanh chóng và tuân thủ các quy định bảo mật quốc tế."
   },
@@ -230,10 +230,10 @@
     "summary": "Canary Labs là đơn vị tiên phong toàn cầu từ 1985 về cơ sở dữ liệu chuỗi thời gian (Time-Series Historian), cung cấp giải pháp lưu trữ, phân tích và trực quan hóa dữ liệu SCADA/OT tốc độ cao.",
     "category": "Dữ liệu công nghiệp",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/canary-labs-facility.jpg",
+    "ogImage": "/images/posts/canary-labs-facility.jpg",
     "link": "https://fct.vn/canary-labs.html",
-    "content": "Canary Labs, được thành lập từ năm 1985 tại Pennsylvania (Mỹ), là một trong những đơn vị tiên phong toàn cầu trong việc cung cấp các giải pháp quản trị dữ liệu vận hành công nghiệp (Operational Data). Với hơn 35 năm kinh nghiệm và hơn 20.000 lượt triển khai tại trên 60 quốc gia, Canary đã khẳng định vị thế là 'xương sống' dữ liệu cho các nhà máy hiện đại, giải quyết triệt để bài toán thu thập và lưu trữ hàng triệu biến số (tags) từ hạ tầng SCADA, PLC, DCS và cảm biến IIoT.\n\n![Kiến trúc giải pháp thu thập và quản trị dữ liệu công nghiệp Canary System](/images/products/canary-historian.jpg)\n\n### Ba Thành Phần Cốt Lõi Của Nền Tảng Canary System\n\n1. **Canary Historian (Cơ sở dữ liệu chuỗi thời gian tốc độ cao)**:\n- **Tốc độ ghi vượt trội**: Khả năng ghi nhận hơn 1.500.000 thay đổi giá trị/giây (sub-second writes) mà không làm suy giảm hiệu năng hay nghẽn mạng OT.\n- **Nén dữ liệu không tổn hao (Lossless Compression)**: Công nghệ nén chuyên dụng giúp giảm 70–80% dung lượng lưu trữ đĩa cứng so với SQL truyền thống mà vẫn giữ nguyên độ phân giải gốc của từng mẫu dữ liệu qua hàng chục năm.\n- **Cơ chế Store & Forward**: Đảm bảo không mất mát dữ liệu khi đường truyền mạng giữa nhà máy và máy chủ trung tâm bị gián đoạn.\n\n2. **Canary Axiom (Trực quan hóa & Phân tích Dashboard thông minh)**:\n- Giao diện kéo-thả trực quan trên nền Web (HTML5), cho phép kỹ sư vận hành tự xây dựng biểu đồ xu hướng (Trends), bảng phân tích hiệu suất OEE và báo cáo ca kíp mà không cần viết câu lệnh SQL phức tạp.\n- Tích hợp kết nối trực tiếp với Microsoft Power BI Connector và hỗ trợ phân quyền an toàn theo từng ô hiển thị (Tile Level Security).\n\n![Giao diện trực quan hóa và giám sát dữ liệu vận hành Canary Axiom](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop)\n\n3. **Canary Collectors & Calculation Engine (Thu thập & Tính toán dữ liệu)**:\n- Kết nối chuẩn công nghiệp: Hỗ trợ toàn diện OPC UA, OPC DA, MQTT (Sparkplug B), REST API, SQL và CSV Collector.\n- Động cơ tính toán thời gian thực (Calculation Engine) cho phép tạo các biến ảo (Virtual Tags), tính toán tổng tích lũy, hiệu suất tiêu hao năng lượng và cảnh báo tự động khi thông số vận hành vượt ngưỡng cho phép.\n\n### FCT Vĩnh Thịnh — Đối Tác Triển Khai Chiến Lược Tại Việt Nam\n\nTại Việt Nam, **Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh** là đối tác đại diện triển khai chính thức của Canary Labs, mang đến giải pháp trọn gói từ khảo sát hạ tầng, tư vấn kiến trúc thu thập dữ liệu SCADA/OT, cấp phép bản quyền chính hãng đến dịch vụ hỗ trợ kỹ thuật và đào tạo chuyển giao công nghệ cho các nhà máy và đơn vị tích hợp hệ thống (SI)."
+    "content": "Canary Labs, được thành lập từ năm 1985 tại Pennsylvania (Mỹ), là một trong những đơn vị tiên phong toàn cầu trong việc cung cấp các giải pháp quản trị dữ liệu vận hành công nghiệp (Operational Data). Với hơn 35 năm kinh nghiệm và hơn 20.000 lượt triển khai tại trên 60 quốc gia, Canary đã khẳng định vị thế là 'xương sống' dữ liệu cho các nhà máy hiện đại, giải quyết triệt để bài toán thu thập và lưu trữ hàng triệu biến số (tags) từ hạ tầng SCADA, PLC, DCS và cảm biến IIoT.\n\n![Kiến trúc giải pháp thu thập và quản trị dữ liệu công nghiệp Canary System](/images/products/canary-historian.jpg)\n\n### Ba Thành Phần Cốt Lõi Của Nền Tảng Canary System\n\n1. **Canary Historian (Cơ sở dữ liệu chuỗi thời gian tốc độ cao)**:\n- **Tốc độ ghi vượt trội**: Khả năng ghi nhận hơn 1.500.000 thay đổi giá trị/giây (sub-second writes) mà không làm suy giảm hiệu năng hay nghẽn mạng OT.\n- **Nén dữ liệu không tổn hao (Lossless Compression)**: Công nghệ nén chuyên dụng giúp giảm 70–80% dung lượng lưu trữ đĩa cứng so với SQL truyền thống mà vẫn giữ nguyên độ phân giải gốc của từng mẫu dữ liệu qua hàng chục năm.\n- **Cơ chế Store & Forward**: Đảm bảo không mất mát dữ liệu khi đường truyền mạng giữa nhà máy và máy chủ trung tâm bị gián đoạn.\n\n2. **Canary Axiom (Trực quan hóa & Phân tích Dashboard thông minh)**:\n- Giao diện kéo-thả trực quan trên nền Web (HTML5), cho phép kỹ sư vận hành tự xây dựng biểu đồ xu hướng (Trends), bảng phân tích hiệu suất OEE và báo cáo ca kíp mà không cần viết câu lệnh SQL phức tạp.\n- Tích hợp kết nối trực tiếp với Microsoft Power BI Connector và hỗ trợ phân quyền an toàn theo từng ô hiển thị (Tile Level Security).\n\n![Giao diện trực quan hóa và giám sát dữ liệu vận hành Canary Axiom](/images/posts/sql-vs-historian-scada.jpg)\n\n3. **Canary Collectors & Calculation Engine (Thu thập & Tính toán dữ liệu)**:\n- Kết nối chuẩn công nghiệp: Hỗ trợ toàn diện OPC UA, OPC DA, MQTT (Sparkplug B), REST API, SQL và CSV Collector.\n- Động cơ tính toán thời gian thực (Calculation Engine) cho phép tạo các biến ảo (Virtual Tags), tính toán tổng tích lũy, hiệu suất tiêu hao năng lượng và cảnh báo tự động khi thông số vận hành vượt ngưỡng cho phép.\n\n### FCT Vĩnh Thịnh — Đối Tác Triển Khai Chiến Lược Tại Việt Nam\n\nTại Việt Nam, **Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh** là đối tác đại diện triển khai chính thức của Canary Labs, mang đến giải pháp trọn gói từ khảo sát hạ tầng, tư vấn kiến trúc thu thập dữ liệu SCADA/OT, cấp phép bản quyền chính hãng đến dịch vụ hỗ trợ kỹ thuật và đào tạo chuyển giao công nghệ cho các nhà máy và đơn vị tích hợp hệ thống (SI)."
   },
   {
     "id": "android-15-security",
@@ -241,8 +241,8 @@
     "date": "2024-12-03",
     "summary": "Google đã giới thiệu tính năng bảo vệ chống nhìn trộm màn hình mới trên Android 15, giúp ngăn chặn k? tấn công thu thập thông tin nhạy cảm...",
     "category": "Bảo mật",
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/android-15-security-feature.jpg",
+    "ogImage": "/images/posts/android-15-security-feature.jpg",
     "link": "https://fct.vn/posts/android-15-security",
     "content": "Với sự ra mắt của Android 15, Google đã nâng cấp đáng kể khả năng bảo mật quyền riêng tư của người dùng thông qua tính năng **'Screen Leak Protection'**. Đây là giải pháp trực tiếp đối phó với các ứng dụng độc hại sử dụng kỹ thuật ghi màn hình hoặc chụp ảnh màn hình để đánh cắp mã OTP, mật khẩu ngân hàng hoặc thông tin cá nhân.\n\nCơ chế hoạt động:\n- Khi một ứng dụng được xác định là đang xử lý dữ liệu nhạy cảm (như ứng dụng ngân hàng hoặc ví điện tử), Android 15 sẽ tự động làm trống nội dung đối với bất kỳ trình ghi màn hình bên thứ ba nào đang chạy ngầm.\n- Hệ thống cũng cảnh báo người dùng nếu có ứng dụng nào đang cố gắng cast màn hình ra thiết bị bên ngoài mà chưa được phép.\n\nĐây là một bước tiến quan trọng, tuy nhiên các chuyên gia từ FCT Vĩnh Thịnh vẫn khuyến nghị người dùng nên kết hợp với các giải pháp bảo mật phần cứng như Token để đảm bảo an toàn tuyệt đối, vì bảo mật phần mềm luôn có những kẽ hở tiềm ẩn."
   },
@@ -252,8 +252,8 @@
     "date": "2024-11-28",
     "summary": "Khám phá những xu hướng mới nhất trong việc bảo vệ tài sản trí tuệ và quản lý bản quyền phần mềm dành cho các nhà phát triển (ISV)...",
     "category": "Giải pháp",
-    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/software-protection-enterprise.jpg",
+    "ogImage": "/images/posts/software-protection-enterprise.jpg",
     "link": "https://fct.vn/posts/software-protection-2025",
     "content": "Bước sang năm 2025, ngành công nghiệp phần mềm đang chứng kiến những thay đổi mạnh mẽ trong cách thức bảo vệ và kinh doanh bản quyền. Không còn chỉ là việc ngăn chặn crack, bảo vệ bản quyền giờ đây là về **Kiếm tiền từ phần mềm (Software Monetization)**.\n\nCác xu hướng chủ đạo:\n1. **Licensing-as-a-Service (LaaS):** Quản lý toàn bộ vòng đời bản quyền thông qua đám mây, cho phép kích hoạt, nâng cấp và gia hạn chỉ trong vài giây.\n2. **Consumption-based Pricing:** Đo lường mức độ sử dụng thực tế của người dùng để tính phí chính xác (Pay-per-use), giúp các ISV dễ dàng tiếp cận khách hàng có ngân sách hạn chế.\n3. **AI-driven Protection:** Sử dụng trí tuệ nhân tạo để phân tích các hành vi sử dụng đáng ngờ, từ đó phát hiện sớm các nỗ lực bẻ khóa hoặc sử dụng chung tài khoản trái phép.\n\nFCT Vĩnh Thịnh luôn đồng hành cùng các nhà phát triển phần mềm Việt Nam để triển khai những công nghệ mới nhất từ Thales Sentinel, giúp biến bảo mật thành lợi thế cạnh tranh và công cụ tăng trưởng doanh thu."
   },
@@ -263,8 +263,8 @@
     "date": "2024-11-20",
     "summary": "Nhìn lại hành trình 15 năm hình thành và phát triển của Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh trong lĩnh vực bảo mật và phần mềm...",
     "category": "Tin tức",
-    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/fct-enterprise-office.jpg",
+    "ogImage": "/images/posts/fct-enterprise-office.jpg",
     "link": "https://fct.vn/ve-fct-vinh-thinh.html",
     "content": "Được thành lập từ những năm đầu của thập kỷ trước, **FCT Vĩnh Thịnh** đã trải qua hành trình 15 năm đầy thử thách và tự hào. Từ một đơn vị cung cấp linh kiện phần cứng, chúng tôi đã vươn mình trở thành đối tác chiến lược hàng đầu của các tập đoàn công nghệ lớn trên thế giới như Thales, Guardsquare và Canary Labs.\n\nCác dấu mốc quan trọng:\n- **Giai đoạn khởi đầu:** Tập trung vào các giải pháp khóa cứng bảo vệ bản quyền, đặt nền móng cho khái niệm Software Protection tại thị trường Việt Nam.\n- **Giai đoạn bứt phá:** Mở rộng sang lĩnh vực bảo mật di động và dữ liệu công nghiệp, đồng hành cùng các ngân hàng và nhà máy lớn trong quá trình số hóa.\n- **Giai đoạn vươn tầm:** Tích hợp AI và các giải pháp bảo mật đám mây vào hệ sinh thái sản phẩm, hướng tới mục tiêu trở thành nhà tư vấn bảo mật toàn diện cho doanh nghiệp.\n\nVới tôn chỉ 'Tận tâm - Chuyên nghiệp - Sáng tạo', FCT Vĩnh Thịnh cam kết tiếp tục mang đến những giá trị thực chất nhất cho khách hàng, đóng góp vào sự an toàn và phồn vinh của nền kinh tế số Việt Nam."
   },
@@ -274,8 +274,8 @@
     "date": "2023-11-30",
     "summary": "FCT Vĩnh Thịnh tổ chức chuỗi sự kiện nâng cao nhận thức bảo mật và ưu đãi đặc biệt cho các giải pháp khóa cứng nhân Ngày An ninh mạng...",
     "category": "Sự kiện",
-    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/world-cyber-day.jpg",
+    "ogImage": "/images/posts/world-cyber-day.jpg",
     "link": "https://fct.vn/posts/world-security-day",
     "content": "Hàng năm, ngày 30/11 được chọn là **Ngày An ninh mạng Thế giới (Computer Security Day)**. Đây là dịp để các tổ chức và cá nhân nhìn lại và nâng cao ý thức bảo vệ thông tin trong môi trường số ngày càng phức tạp.\n\nNhân dịp này, FCT Vĩnh Thịnh phát động chiến dịch 'Làm sạch không gian số doanh nghiệp' với các hoạt động:\n- Hội thảo trực tuyến về xu hướng bảo mật Zero Trust và Passwordless.\n- Chương trình kiểm tra sức khỏe hệ thống miễn phí cho các đối tác hiện tại.\n- Ưu đãi lên tới 20% cho các đơn hàng khóa bảo mật FIDO2 và Sentinel HL.\n\nChúng tôi tin rằng, một nền kinh tế mạnh phải được xây dựng trên một nền tảng an toàn. Hãy cùng FCT Vĩnh Thịnh xây dựng những viên gạch bảo mật đầu tiên cho doanh nghiệp của bạn ngay hôm nay."
   },
@@ -298,8 +298,8 @@
     "category": "Giải pháp",
     "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
     "content": "Trong kỷ nguyên số, thiết bị di động không chỉ là công cụ liên lạc mà còn là 'văn phòng di động' chứa đựng vô số dữ liệu nhạy cảm của doanh nghiệp. Việc quản trị bảo mật di động (Mobile Security Management) cần một cái nhìn tổng thể hơn thay vì chỉ cài đặt các phần mềm diệt virus thông thường.\n\nFCT Vĩnh Thịnh đề xuất hướng tiếp cận 3 lớp:\n\n1. **Quản lý Ứng dụng (MAM):** Tập trung vào việc bảo vệ chính ứng dụng nghiệp vụ của công ty, đảm bảo dữ liệu trong ứng dụng không bị rò rỉ ra các ứng dụng cá nhân.\n2. **Xác thực Mạnh:** Sử dụng các giải pháp 2FA (Xác thực 2 yếu tố) hoặc PKI (Public Key Infrastructure) thông qua các Token của Longmai hoặc giải pháp từ Thales để đảm bảo chỉ người dùng hợp pháp mới được truy cập hệ thống.\n3. **Giám sát Liên tục:** Sử dụng các giải pháp phân tích hành vi để phát hiện sớm các dấu hiệu thiết bị bị tấn công hoặc người dùng truy cập từ các mạng không an toàn.\n\nĐội ngũ chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ doanh nghiệp xây dựng chính sách bảo mật di động (BYOD Policy) linh hoạt nhưng vẫn an toàn tuyệt đối.",
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/mobile-security-desk.jpg",
+    "ogImage": "/images/posts/mobile-security-desk.jpg"
   },
   {
     "id": "security-awareness",
@@ -309,8 +309,8 @@
     "category": "Bảo mật",
     "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html",
     "content": "Dù hệ thống bảo mật có tinh vi đến đâu, con người vẫn luôn là 'mắt xích yếu nhất'. Thống kê cho thấy hơn 80% các vụ rò rỉ dữ liệu bắt nguồn từ lỗi của người dùng hoặc sự thiếu nhận thức về các mối đe dọa.\n\nNâng cao nhận thức bảo mật di động cho nhân viên bao gồm các bài học quan trọng:\n- Nhận diện các cuộc tấn công Phishing qua tin nhắn (Smishing) và email.\n- Hiểu rõ rủi ro khi kết nối vào các mạng Wi-Fi công cộng không có mật khẩu.\n- Thói quen cập nhật hệ điều hành và ứng dụng thường xuyên để nhận các bản vá bảo mật.\n- Không cài đặt các ứng dụng từ nguồn không xác định (Sideloading).\n\nFCT Vĩnh Thịnh không chỉ cung cấp các công cụ kỹ thuật mà còn hỗ trợ doanh nghiệp trong việc tư vấn và đào tạo nhận thức bảo mật, giúp xây dựng văn hóa làm việc an toàn trên môi trường số.",
-    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/security-awareness-training.jpg",
+    "ogImage": "/images/posts/security-awareness-training.jpg"
   },
   {
     "id": "mobile-security-challenges",
@@ -320,8 +320,8 @@
     "category": "Bảo mật",
     "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html",
     "content": "Bảo mật di động đang đối mặt với những thách thức chưa từng có do sự đa dạng của thiết bị và các phương thức tấn công mới nổi.\n\n4 thách thức lớn nhất hiện nay bao gồm:\n\n1. **Dữ liệu bị rò rỉ (Data Leakage):** Việc người dùng vô tình cấp quyền truy cập danh bạ, vị trí cho các ứng dụng không uy tín khiến thông tin doanh nghiệp bị thất thoát.\n2. **Mạng Wi-Fi không an toàn:** Kẻ tấn công có thể thiết lập các điểm truy cập Wi-Fi giả mạo (Man-in-the-middle attack) để chặn bắt dữ liệu truyền đi từ thiết bị.\n3. **Tấn công Phishing tinh vi:** Các tin nhắn giả mạo ngân hàng hoặc cơ quan chức năng khiến người dùng tự cung cấp thông tin đăng nhập.\n4. **Phần mềm gián điệp (Spyware):** Các mã độc được thiết kế để hoạt động âm thầm, ghi âm cuộc gọi và theo dõi camera mà người dùng không hề hay biết.\n\nHiểu rõ những thách thức này là bước đầu tiên để xây dựng một chiến lược phòng thủ chủ động hiệu quả cùng đối tác FCT Vĩnh Thịnh.",
-    "image": "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/mobile-security-analysis.jpg",
+    "ogImage": "/images/posts/mobile-security-analysis.jpg"
   },
   {
     "id": "malware-threats",
@@ -331,8 +331,8 @@
     "category": "Bảo mật",
     "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html",
     "content": "Phần mềm độc hại (Malware) trên di động không còn đơn giản là những loại virus phá hoại thông thường. Ngày nay, chúng được phát triển như những 'phần mềm thương mại' với cấu trúc cực kỳ phức tạp.\n\nCác loại mã độc thường gặp:\n- **Bankers:** Chuyên đánh cắp thông tin đăng nhập ngân hàng và thẻ tín dụng.\n- **Ransomware:** Khóa thiết bị và đòi tiền chuộc bằng tiền điện tử.\n- **Adware:** Gây khó chịu và đánh cắp thông tin thói quen người dùng để trục lợi quảng cáo.\n\nLàm thế nào để tránh? Ngoài việc nâng cao cảnh giác, các doanh nghiệp phát triển ứng dụng cần trang bị khả năng 'tự bảo vệ' cho sản phẩm của mình ngay từ bên trong. Các giải pháp như Guardsquare giúp ứng dụng có thể phát hiện và tự hủy session nếu phát hiện có mã độc đang can thiệp, đảm bảo an toàn tuyệt đối cho người dùng cuối.",
-    "image": "https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/malware-cyber-threats.jpg",
+    "ogImage": "/images/posts/malware-cyber-threats.jpg"
   },
   {
     "id": "attack-vectors",
@@ -342,7 +342,7 @@
     "category": "Bảo mật",
     "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html",
     "content": "Để bảo vệ hệ thống hiệu quả, chúng ta cần hiểu rõ các con đường mà hacker có thể xâm nhập (Attack Vectors). Có 3 hình thức điển hình:\n\n1. **Tấn công lớp ứng dụng (App-based):** Kẻ tấn công tạo ra các ứng dụng giả mạo (Fake apps) chứa mã độc hoặc sửa đổi mã nguồn của các ứng dụng phổ biến để chèn thêm tính năng theo dõi.\n2. **Tấn công lớp thiết bị (Device-based):** Khai thác các lỗ hổng của hệ điều hành Android hoặc iOS chưa được vá lỗi (Zero-day exploits).\n3. **Tấn công lớp mạng (Network-based):** Can thiệp vào quá trình truyền dữ liệu khi thiết bị kết nối với các hạ tầng mạng công cộng, thực hiện các kỹ thuật giả mạo DNS hoặc SSL Stripping.\n\nBằng việc nhận diện đúng các vectơ tấn công này, FCT Vĩnh Thịnh sẽ tư vấn cho bạn các lớp phòng thủ tương ứng, từ việc bảo vệ code ứng dụng đến các giải pháp phần cứng bảo mật cho hạ tầng mạng.",
-    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/attack-vectors-analysis.jpg",
+    "ogImage": "/images/posts/attack-vectors-analysis.jpg"
   }
 ]

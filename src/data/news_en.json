@@ -6,8 +6,8 @@
     "summary": "Analysis of the IDC survey on B2B software buyer expectations, decoupling entitlements from ERP, and securing Core IP against AI-powered vulnerability scanning.",
     "category": "Cybersecurity",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/thales-idc-report.jpg",
+    "ogImage": "/images/posts/thales-idc-report.jpg",
     "content": "In the latest report co-published with IDC surveying 300 global B2B enterprise customers, Thales highlights that the Licensing Model is becoming a key factor determining customer retention. Businesses today demand maximum flexibility in software consumption, and failure to innovate licensing models could cause Independent Software Vendors (ISVs) to lose customers to competitors.\n\nAdditionally, the software development market in 2026 is experiencing two strategic shifts:\n\n1. **Protecting Core IP in the AI Era**:\nThe rise of advanced AI models has made reverse engineering and scanning for source code vulnerabilities a matter of minutes. Without active protection, on-premise software or proprietary applications face high risks of cracking and intellectual property theft. Specialized encryption and license packaging establish a robust barrier to prevent automated AI tools from tampering with binary code.\n\n2. **Decoupling Entitlements from ERP**:\nMany software companies still manage licensing directly within their ERP systems. This structure creates significant friction during ERP upgrades or migrations, forcing IT teams to re-authenticate the customer's entire entitlements portfolio and delaying Time-to-Market for new features. By shifting entitlement management to a dedicated platform like Thales Sentinel, businesses can accelerate deployments, reduce IT workloads, and flexibly support modern licensing models (Subscription, Usage-based, Feature-based).\n\n3. **Preparing for International Security Standards**:\nBeyond safeguarding revenue, commercial software developers must prepare to meet the EU Cyber Resilience Act and stringent algorithmic security standards globally.\n\nFCT Vinh Thinh provides comprehensive consulting and deployment of the Thales Sentinel platform in Vietnam, helping software vendors protect core intellectual property and optimize software monetization models according to international standards."
   },
   {
@@ -17,8 +17,8 @@
     "summary": "Historian data collection, real-time Power BI monitoring, and industrial control infrastructure security for electrical construction & automation companies.",
     "category": "Industrial Data",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/canary-automation-si.jpg",
+    "ogImage": "/images/posts/canary-automation-si.jpg",
     "content": "In the era of Industrial Digital Transformation (Smart Factory & Industry 4.0), Systems Integrators (SIs) and Electrical & Automation contractors face a major challenge: How to collect SCADA/OT operational data from diverse devices with absolute reliability, while meeting strict cybersecurity standards?\n\nThe combination of Canary Historian v26.2 real-time data storage and the SORBA.ai Industrial AI platform provides a comprehensive answer for system integrators in Vietnam:\n\n1. **High-Speed Historian Data Collection**: The ability to record millions of variables (tags) per second from PLCs, RTUs, and DCSs without disrupting OT network infrastructure.\n2. **Data Visualization with Power BI Connector**: Allows direct ingestion of industrial data onto management dashboards while ensuring secure permissioning via the Tile Level Security feature.\n3. **Hardware Security & Transmission Encryption**: Combined with hardware security devices (Longmai/Thales HSM) to prevent tampering and block unauthorized command spoofing in smart substations and factories.\n\nFCT Vinh Thinh is proud to be a companion to leading automation enterprises in Vietnam, providing genuine software infrastructure and security hardware along with 24/7 technical support for all deployments."
   },
   {
@@ -28,8 +28,8 @@
     "summary": "Anti-Piracy strategies, core IP protection, and seamless software licensing management for B2B software vendors.",
     "category": "Software Licensing",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1581472723648-909f4851d4ae?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581472723648-909f4851d4ae?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/isv-software-protection.jpg",
+    "ogImage": "/images/posts/isv-software-protection.jpg",
     "content": "For software developers and service providers (ISVs / Software Houses), leaks of core source code (Core IP) or cracked commercial software result in direct revenue losses and damage business reputation. In the AI era, automated reverse-engineering tools can detect software exploits in just a few minutes.\n\nTo protect creative work and commercialize software effectively, Vietnamese software companies need a multi-layered protection strategy:\n\n1. **Application Encryption & Anti-Decompilation**: Utilizing Guardsquare solutions (DexGuard/iXGuard) to obfuscate control flow, encrypt API keys, and defend against dynamic instrumentation tools (RASP - Frida, Debuggers).\n2. **Smart Licensing Management with Thales Sentinel**: Decoupling licensing logic (Entitlement Management) from ERP systems or application code. This allows software companies to flexibly switch between business models: upfront licensing, recurring subscription, or feature-based licensing.\n3. **Anti-Tampering of Binary Digital Signatures**: Ensuring that installer packages delivered to enterprise clients are not injected with malware or modified without authorization.\n\nFCT Vinh Thinh provides comprehensive software licensing consultation and infrastructure integration, helping Software Houses optimize revenue, reduce Time-to-Market, and absolutely protect their digital assets."
   },
   {
@@ -39,8 +39,8 @@
     "summary": "An in-depth analysis of eSIM's impact on optimizing connectivity management and endpoint security for Private 4G/5G Enterprise networks.",
     "category": "Mobile Security",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/esim-private-networks.jpg",
+    "ogImage": "/images/posts/esim-private-networks.jpg",
     "content": "According to the latest Gartner® Hype Cycle™ 2026 report on Private Mobile Network Services, eSIM technology is becoming a core driver pushing a powerful transformation in the internal connectivity infrastructure of organizations and major corporations.\n\nIn the past, deploying private mobile networks (Private 4G/5G) often faced a major hurdle in managing and distributing physical SIM cards to thousands of IoT devices, smartphones, and employee wearables. The rise of eSIM completely solves this problem by enabling remote, automated over-the-air (OTA) deployment of network profiles.\n\nAs a pioneer collaborating with strategic partner Thales, FCT Vinh Thinh offers optimized private mobile network solutions. This helps simplify device onboarding, optimize connectivity management, while tightening access control and protecting data integrity on the enterprise digital transformation journey."
   },
   {
@@ -50,8 +50,8 @@
     "summary": "A deep dive into the AI-native architecture of 6G networks and the approaches to managing cybersecurity risks and high-speed fraud detection.",
     "category": "Cybersecurity",
     "target_funnel": "guardsquare",
-    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/6g-network-security.jpg",
+    "ogImage": "/images/posts/6g-network-security.jpg",
     "content": "The sixth-generation (6G) mobile network is redefining the global connectivity infrastructure. Moving far beyond mere speed, the AI-native 6G architecture will create networks capable of thinking, adapting, and sensing their surroundings in real-time.\n\nHowever, higher intelligence brings exposure to greater risks. As AI is embedded deep into the system core for smart connection management and automated operation, hackers can also exploit AI itself to attack systems at millisecond speeds. Therefore, building a solid security foundation for telecom infrastructure right from the design phase is crucial.\n\nTo counter these threats, operators are shifting heavily toward automated security monitoring, leveraging AI in high-speed fraud detection and endpoint infrastructure protection, ensuring resilient defense against next-generation attacks."
   },
   {
@@ -61,8 +61,8 @@
     "summary": "The solution for decoupling entitlement management from ERP using Thales Sentinel to protect core source code from AI-powered automated cracking tools.",
     "category": "Software Licensing",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/smart-licensing-ai.jpg",
+    "ogImage": "/images/posts/smart-licensing-ai.jpg",
     "content": "In an era where advanced AI tools (such as Claude or open-source models) can reverse-engineer code structures and detect software vulnerabilities within minutes, protecting Core IP (Intellectual Property) has become more urgent than ever.\n\nThe Thales Software Monetization 2026 bulletin highlights that if B2B software developers only rely on passive protection measures or loose licensing tied directly to ERP systems, the risk of cracking and revenue leakage is extremely high.\n\nThe advanced solution from the Thales Sentinel platform helps businesses decouple Entitlement Management from the core ERP system. This decoupling not only accelerates time-to-market and reduces the IT workload during system upgrades but also establishes a solid shield protecting source code against automated AI vulnerability scanning techniques used by hackers."
   },
   {
@@ -72,8 +72,8 @@
     "summary": "A breakthrough from Canary Labs v26.2 optimizing OT operational data, integrating Power BI and tightening Tile Level Security access control.",
     "category": "Industrial Data",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/canary-industrial-ai.jpg",
+    "ogImage": "/images/posts/canary-industrial-ai.jpg",
     "content": "The strategic partnership between Canary Labs and SORBA.ai has opened a new chapter for industrial automation and factory operations. Now, industrial engineering teams can fully transform massive historical operational data (historian data) into artificial intelligence models capable of closed-loop intelligence and real-time operational optimization—completely without the intervention of Data Scientists.\n\nFurthermore, in the technology update version 26.2, Canary Labs officially launched the new Power BI Connector, allowing direct ingestion of visual operational data onto monitoring dashboards with high speed and absolute accuracy.\n\nSpecifically, to meet the strict security standards of operational technology (OT Security), a Tile Level Security feature has been added, granting the ability to set Access Control Lists (ACLs) down to each individual display cell in the Admin dashboard, tightening security at the most critical data touchpoints."
   },
   {
@@ -83,8 +83,8 @@
     "summary": "The critical importance of Threat Intelligence and early detection mechanisms for ransomware and leaked credentials from the internet's underground spaces.",
     "category": "Cybersecurity",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/deep-web-monitoring.jpg",
+    "ogImage": "/images/posts/deep-web-monitoring.jpg",
     "content": "The vast majority of the most dangerous cyber threats do not appear on the surface of the public internet. Early signs of data-encrypting ransomware attacks, leaked credentials, or internal data being put up for sale often appear very early in the hidden corners of the internet (Deep Web/Dark Web)—places where traditional monitoring tools are completely blind.\n\nUnderstanding the nature of what is happening behind the curtain of the internet is an inseparable part of modern Cyber Resilience and Threat Intelligence strategies.\n\nThrough active deep monitoring and early positioning of threat warnings from underground spaces, businesses can execute defense measures, change credentials, and patch system vulnerabilities before an actual attack is launched in reality."
   },
   {
@@ -94,8 +94,8 @@
     "summary": "Obfuscation isn't enough to stop cracking. Discover copyright protection and flexible licensing solutions with Thales Sentinel.",
     "category": "Software Licensing",
     "target_funnel": "thales",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/anti-crack-sentinel.jpg",
+    "ogImage": "/images/posts/anti-crack-sentinel.jpg",
     "content": "You spend thousands of hours through sleepless nights to write a breakthrough C#/.NET software. You launch it into the market with great pride. But just days later, a \"Full Crack\" or \"Keygen\" version is already sitting on piracy forums. All your hard work goes down the drain, and revenue evaporates without a trace.\n\nIf you are an Independent Software Vendor (ISV), this is undoubtedly your worst nightmare.\n\n### 1. The Illusion of \"Obfuscators\"\nMany developers believe that simply running source code through an Obfuscator—renaming variables, encrypting strings—is enough for safety. The truth is: Obfuscation only slows down hackers; it doesn't stop them.\n\nWith today's powerful decompilers like dnSpy or ILSpy, professional crackers can easily trace back the logic, find the License Check function, and disable it by directly modifying .dll or .exe files.\n\n### 2. Double Pain: Lost Revenue and Sinking in Key Management\nNot only do software companies lose money due to piracy, but they are also tying their own hands with loose, DIY licensing systems.\n\n- Manually creating and sending keys via email is unprofessional.\n- Customers share keys with each other, and you have no way to control it.\n- You want to sell software as a Subscription or Pay-per-use, but your DIY system can't support it.\n\n### 3. Thales Sentinel: Protection Shield and Revenue Engine\nTo completely end this problem, the world's leading software corporations have equipped themselves with Thales Sentinel (formerly SafeNet) technology. This isn't just a lock; it's a complete revenue engine:\n\n- **Envelope Encryption:** Sentinel automatically wraps your software's source code with military-grade encryption algorithms. Hackers cannot decrypt, decompile, or modify the executable file.\n- **Hardware Dongle & Cloud License:** Allows you to tightly bind software to a physical USB Token (like Sentinel HL) or manage it entirely via the Cloud. It is impossible to copy.\n- **Flexible Licensing:** Turn a one-time purchase software into SaaS, a 30-day trial, or limit the number of application opens with just a few clicks without rewriting code.\n\n### Don't Let Your Intellectual Property Be Stolen for Another Second\nSoftware protection must be implemented before the product is launched. Once the source code is exposed, you will lose that customer forever."
   },
   {
@@ -105,8 +105,8 @@
     "summary": "SQL wasn't designed for high-speed time-series data. Discover how Canary Historian processes millions of tags per second for OT networks without data loss.",
     "category": "Industrial Data",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/sql-vs-historian-scada.jpg",
+    "ogImage": "/images/posts/sql-vs-historian-scada.jpg",
     "content": "In the Industry 4.0 era, a medium-sized factory can generate tens of thousands of data points (tags) every second from temperature sensors, pressure sensors, PLCs, and SCADA systems.\n\nThe first reflex of many businesses is to pour this mountain of data into a familiar Relational Database like SQL Server or MySQL. However, this is the beginning of an operational nightmare.\n\n### 1. Performance Bottleneck\nSQL was designed for financial transactions or HR management systems—where data changes slowly and requires high integrity. When forced to record tens of thousands of data points per second (sub-second writes) from an OT system, SQL immediately becomes overloaded.\n\nThe result is network bandwidth congestion, server lockups, and most critically, Data Loss. Important clock cycles signaling machinery failure can be dropped, leading to incorrect judgments in production.\n\n### 2. Ballooning Costs and Resolution Trade-offs\nTo keep SQL from crashing, Database Administrators (DBAs) often resort to \"Purging\" or \"Aggregating\" old data. For example: Data recorded every second today is merged into a minute average for next week, and an hourly average for next month.\n\nThis completely destroys the core value of time-series data. When you need to investigate a machine failure from 6 months ago, you will no longer have the detailed raw data for Root Cause Analysis.\n\n### 3. The Solution: Time-Series Historian Database\nTo liberate SCADA systems, leading OT engineers worldwide have switched to specialized Historian Databases, such as Canary Historian.\n\n- **Ultra-fast Write Speed:** Canary can process over 1.5 million tags per second without degrading system performance.\n- **Loss-less Compression:** Canary never aggregates or deletes old data. Data from 10 years ago remains as sharp as data recorded 1 second ago, but with a storage footprint that is a fraction of SQL's.\n- **Bridging IT and OT:** Requires no complex SQL query skills. Factory engineers can drag and drop to visualize data in minutes.\n\n### It's Time to Lift the Burden Off Your System\nTrying to use SQL for SCADA data storage is like using a bus to race Formula 1: both expensive and ineffective."
   },
   {
@@ -116,8 +116,8 @@
     "summary": "Overlay malware and reverse engineering are directly threatening Mobile Banking apps. Discover how Guardsquare's RASP protects transactions.",
     "category": "Mobile Security",
     "target_funnel": "guardsquare",
-    "image": "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/mobile-banking-rasp.jpg",
+    "ogImage": "/images/posts/mobile-banking-rasp.jpg",
     "content": "In recent years, the arms race between banks (Fintech) and cybercriminals has taken a new, more brutal turn. If previously hackers primarily targeted server systems (Backend), the main battlefield has now shifted to the user's handheld device: the Mobile Banking App.\n\nThe most prominent threats today are Overlay Malware and Reverse Engineering.\n\n### 1. Overlay Malware: The Invisible Thief\nOverlay is a type of malware that hides under the guise of common utility apps. When a user opens a Banking App, this malware immediately creates a fake screen layer (overlay) on top of the real interface.\n\nThe consequence? Every input for login, password, and even OTP codes is recorded and sent directly to the Hacker's server. Customers lose money unexpectedly, while banks face a communications crisis and a serious decline in reputation.\n\n### 2. Reverse Engineering: Opening the Backdoor\nWhile overlay malware targets the end-user, Reverse Engineering targets the developer's vulnerabilities. Hackers use decryption tools to dissect installation files (APK/IPA), search for hardcoded API keys, encryption algorithms, or inject malicious code into the app (Repackaging) and redistribute it through unofficial app stores.\n\n### 3. RASP: Active Real-time Shield\nObfuscation is necessary but no longer sufficient. To counter attacks targeting memory and real-time tampering (such as Hooking, Root/Jailbreak), banking apps need an internal protection system: RASP (Runtime Application Self-Protection).\n\nRASP acts like an independent immune system. As soon as it detects a tampered device environment (screen recording malware, running debug software, rooted device), RASP immediately reacts: blocking transactions, closing the app, and sending an alert to the operations center.\n\n### What is the Solution for Chief Technology Officers (CIOs)?\nFaced with the evolution of mobile malware, upgrading defense architecture is a survival requirement. If your app only relies on a network firewall layer, you are leaving the door completely open on the customer's device."
   },
   {
@@ -136,8 +136,8 @@
     "date": "2026-04-23",
     "summary": "Thales CipherTrust and HSM solutions - The world's leading Cloud Security standards. Protecting encryption keys against all advanced attacks.",
     "category": "Data Security & HSM",
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/thales-cloud-hsm.jpg",
+    "ogImage": "/images/posts/thales-cloud-hsm.jpg",
     "content": "In a world where data is compared to 'the new oil,' protecting this asset is no longer an option but a matter of survival. Thales provides comprehensive data security solutions, from cloud encryption to specialized hardware devices, ensuring absolute peace of mind for enterprises against any attack.\n\n**1. When Software Encryption is Not Enough**\nModern attacks often target administrative privileges. If encryption keys are only stored in software, hackers can easily steal them. Finance, banking, and government sectors demand strict security standards that conventional solutions cannot meet.\n\n> With Thales, your data is protected by an unbreakable 'Hardware Fortress.'\n\n**2. Thales – An Unbreakable Security Ecosystem**\nThales brings a comprehensive 3-layer security solution:\n\n- **CipherTrust Data Security Platform:** The only platform that helps centrally manage the entire lifecycle of encryption keys, whether data resides on physical servers or across cloud platforms (AWS, Azure, Google Cloud).\n- **Hardware Security Module (HSM):** A 'Hardware Fortress' used to generate, store, and manage cryptographic keys. This is an isolated physical device, ensuring that even if the main system is compromised, the security keys remain absolutely safe.\n- **Authentication and Access:** Controls user identity with strong authentication methods, strictly preventing spoofing and unauthorized access.\n\n![Thales HSM Security Solution](/images/posts/thales-hsm-security.jpg)\n\n**3. Strategic Vision for Leaders**\nInvesting in Thales is an investment in reputation and sustainable growth:\n\n- **Building a Fortress of Trust:** Enhancing brand reputation with world-leading security technology.\n- **Optimizing Risk Costs:** Preventing data breaches and legal non-compliance penalties.\n- **Future-Ready:** Protected against future threats even from quantum computing (Quantum-safe).\n\n**Conclusion**\nAt FCT Vinh Thinh, we bring you Thales technology not just as a product, but as a commitment to eternal security for every precious bit of your enterprise data.",
     "faqs": [
       {
@@ -156,8 +156,8 @@
     "date": "2026-04-23",
     "summary": "Why is mobile app security a top corporate priority? Explore Guardsquare's deep protection and anti-reverse engineering solutions for critical apps.",
     "category": "Mobile App Security",
-    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/guardsquare-mobile-app-sec.jpg",
+    "ogImage": "/images/posts/guardsquare-mobile-app-sec.jpg",
     "content": "In the App-First era, mobile applications are the face of the business. However, they are also the most vulnerable point for reverse engineering and data theft. Guardsquare emerges as the perfect solution for this security shield.\n\n**1. Why are Enterprise Apps 'Easy Targets' for Hackers?**\nHackers can easily understand business logic and find vulnerabilities if the code is not protected. Apps running on user devices (rooted/jailbroken) represent a high-risk environment.\n\n> A single data leak from an App can destroy a reputation built over decades.\n\n**2. Guardsquare – A Combination of Polymorphism and Self-Protection**\nGuardsquare is not just a tool; it is a comprehensive defense strategy:\n\n- **Code Obfuscation:** Transforms the source code structure into an undecipherable 'maze,' making reverse engineering impossible.\n- **Runtime Application Self-Protection (RASP):** Integrates the ability to detect threats during execution. if an App is attacked or runs in a dangerous environment, it automatically triggers defense modes.\n- **Compliance:** Helps businesses easily achieve strict security certifications such as PCI DSS or OWASP.\n\n![Guardsquare Security Solution](/images/posts/guardsquare-shield.jpg)\n\n**3. Strategic Benefits for Managers**\nInvesting in Guardsquare delivers sustainable value for the digital roadmap:\n\n- **Protect Intellectual Property:** Keeps proprietary algorithms and business logic secret.\n- **Minimize Financial Loss:** Prevents fraud and in-app currency hacking.\n- **Build Absolute Trust:** Assures customers that their data is protected by world-leading technology.\n\n**Conclusion**\nInvesting in mobile app security with Guardsquare is not a cost, but a smart insurance policy for the sustainable growth of the enterprise in the digital age.",
     "faqs": [
       {
@@ -198,8 +198,8 @@
     "category": "Security",
     "link": "https://fct.vn/posts/fido2-passwordless-trend",
     "content": "2024 marked a major turning point in the security industry as leading financial institutions began to eliminate dependence on passwords and SMS OTPs – which are vulnerable to SIM swapping or phishing attacks. Instead, the **FIDO2 (Fast Identity Online)** standard is becoming the new 'gold standard'.\n\nWhy is FIDO2 superior?\n- **Total Phishing Protection:** Unlike OTP, FIDO2 establishes a unique cryptographic link between the hardware device and the official website. Attackers cannot trick users into providing a 'code' because all communication is handled by public/private key pairs within the security chip.\n- **Passkey Experience:** Users can log in with a single touch to a USB Dongle without needing to remember complex passwords.\n\n**FCT Vinh Thinh** currently provides **FCT Tokens** that fully support FIDO2/L2 standards, helping banks and businesses in Vietnam rapidly deploy passwordless authentication infrastructure in compliance with international security regulations.",
-    "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/fido2-hardware-key.jpg",
+    "ogImage": "/images/posts/fido2-hardware-key.jpg"
   },
   {
     "id": "biometric-usb-security",
@@ -230,10 +230,10 @@
     "summary": "Canary Labs is a global pioneer since 1985 in Time-Series Historian databases, providing high-speed SCADA/OT data logging, analysis, and visualization solutions.",
     "category": "Industrial Data",
     "target_funnel": "canary",
-    "image": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1600&auto=format&fit=crop",
+    "image": "/images/posts/canary-labs-facility.jpg",
+    "ogImage": "/images/posts/canary-labs-facility.jpg",
     "link": "https://fct.vn/canary-labs.html",
-    "content": "Canary Labs, founded in 1985 in Pennsylvania (USA), is one of the global pioneers in providing industrial operational data management solutions. With over 35 years of experience and more than 20,000 deployments across 60+ countries, Canary has established itself as the data 'backbone' for modern industrial plants, solving the challenge of collecting and storing millions of variables (tags) from SCADA, PLC, DCS, and IIoT sensor infrastructures.\n\n![Canary System Operational Data Management Solution Architecture](/images/products/canary-historian.jpg)\n\n### Three Core Pillars of the Canary System Platform\n\n1. **Canary Historian (High-Speed Time-Series Database)**:\n- **Ultra-Fast Logging**: Records over 1,500,000 value changes per second (sub-second writes) without degrading performance or congesting OT networks.\n- **Lossless Compression**: Proprietary compression reduces storage footprints by 70–80% compared to traditional SQL while preserving raw sample granularity over decades.\n- **Store & Forward Architecture**: Guarantees zero data loss during plant-to-cloud network interruptions.\n\n2. **Canary Axiom (Self-Service Dashboards & Trending Analysis)**:\n- Intuitive drag-and-drop web UI (HTML5) enabling operators to build trends, OEE performance charts, and shift reports without complex SQL queries.\n- Native Microsoft Power BI Connector and granular Tile Level Security access control.\n\n![Canary Axiom Operational Monitoring and Trending Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop)\n\n3. **Canary Collectors & Calculation Engine (Data Ingestion & Virtual Tags)**:\n- Industry-standard connectivity: Comprehensive support for OPC UA, OPC DA, MQTT (Sparkplug B), REST API, SQL, and CSV Collectors.\n- Real-time calculation engine creating virtual tags, running totalizers, tracking energy efficiency metrics, and triggering automatic threshold alerts.\n\n### FCT Vinh Thinh — Strategic Implementation Partner in Vietnam\n\nIn Vietnam, **FCT Vinh Thinh .,JSC** is the official implementation partner for Canary Labs, delivering end-to-end solutions from SCADA/OT architecture consulting and genuine licensing to 24/7 technical support and engineering training."
+    "content": "Canary Labs, founded in 1985 in Pennsylvania (USA), is one of the global pioneers in providing industrial operational data management solutions. With over 35 years of experience and more than 20,000 deployments across 60+ countries, Canary has established itself as the data 'backbone' for modern industrial plants, solving the challenge of collecting and storing millions of variables (tags) from SCADA, PLC, DCS, and IIoT sensor infrastructures.\n\n![Canary System Operational Data Management Solution Architecture](/images/products/canary-historian.jpg)\n\n### Three Core Pillars of the Canary System Platform\n\n1. **Canary Historian (High-Speed Time-Series Database)**:\n- **Ultra-Fast Logging**: Records over 1,500,000 value changes per second (sub-second writes) without degrading performance or congesting OT networks.\n- **Lossless Compression**: Proprietary compression reduces storage footprints by 70–80% compared to traditional SQL while preserving raw sample granularity over decades.\n- **Store & Forward Architecture**: Guarantees zero data loss during plant-to-cloud network interruptions.\n\n2. **Canary Axiom (Self-Service Dashboards & Trending Analysis)**:\n- Intuitive drag-and-drop web UI (HTML5) enabling operators to build trends, OEE performance charts, and shift reports without complex SQL queries.\n- Native Microsoft Power BI Connector and granular Tile Level Security access control.\n\n![Canary Axiom Operational Monitoring and Trending Dashboard](/images/posts/sql-vs-historian-scada.jpg)\n\n3. **Canary Collectors & Calculation Engine (Data Ingestion & Virtual Tags)**:\n- Industry-standard connectivity: Comprehensive support for OPC UA, OPC DA, MQTT (Sparkplug B), REST API, SQL, and CSV Collectors.\n- Real-time calculation engine creating virtual tags, running totalizers, tracking energy efficiency metrics, and triggering automatic threshold alerts.\n\n### FCT Vinh Thinh — Strategic Implementation Partner in Vietnam\n\nIn Vietnam, **FCT Vinh Thinh .,JSC** is the official implementation partner for Canary Labs, delivering end-to-end solutions from SCADA/OT architecture consulting and genuine licensing to 24/7 technical support and engineering training."
   },
   {
     "id": "android-15-security",
@@ -243,8 +243,8 @@
     "category": "Security",
     "link": "https://fct.vn/android-15-bao-ve-chong-nhin-trom-man-hinh-nhu-the-nao.html",
     "content": "Google has raised security standards to a new level in Android 15, focusing heavily on protecting privacy and preventing information theft through screen peeking. This is a critical improvement for users of financial, banking, and e-wallet applications.\n\nTwo prominent security features include:\n\n- **Screen Share Protection:** The system will automatically recognize and hide notifications containing sensitive content (such as OTP codes, passwords, private messages) when the user is sharing their screen during online meetings or technical support calls.\n- **Recording Detection:** Android 15 provides new APIs that allow apps to detect if the screen is being recorded by an anonymous app or malware, proactively blocking the display of important information.\n\nHowever, the article emphasizes that while Android 15 has major improvements, for high-security applications like Mobile Banking, businesses still need to combine specialized solutions like **DexGuard**, distributed by FCT Vinh Thinh. This ensures the application can protect itself even on devices that have been rooted or compromised by sophisticated malware.",
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/android-15-security-feature.jpg",
+    "ogImage": "/images/posts/android-15-security-feature.jpg"
   },
   {
     "id": "mobile-app-security",
@@ -287,8 +287,8 @@
     "category": "Solution",
     "link": "https://fct.vn/quan-tri-bao-mat-thiet-bi-di-dong-trong-thoi-dai-ky-nguyen-so.html",
     "content": "In the digital era, mobile devices are not just communication tools but 'mobile offices' containing vast amounts of sensitive corporate data. Mobile Security Management needs a more holistic view instead of just installing regular antivirus software.\n\nFCT Vinh Thinh proposes a 3-layer approach:\n\n1. **Mobile Application Management (MAM):** Focuses on protecting the company's business apps, ensuring app data does not leak into personal apps.\n2. **Strong Authentication:** Using 2FA (Two-Factor Authentication) or PKI (Public Key Infrastructure) through Longmai tokens or Thales solutions to ensure only legitimate users can access the system.\n3. **Continuous Monitoring:** Utilizing behavioral analysis solutions to early detect signs of device attacks or users accessing from insecure networks.\n\nOur team of experts is always ready to support businesses in building flexible but absolute secure mobile security policies (BYOD Policy).",
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/mobile-security-desk.jpg",
+    "ogImage": "/images/posts/mobile-security-desk.jpg"
   },
   {
     "id": "security-awareness",
@@ -298,8 +298,8 @@
     "category": "Security",
     "link": "https://fct.vn/tam-quan-trong-cua-viec-nang-cao-nhan-thuc-ve-bao-mat-di-dong.html",
     "content": "No matter how sophisticated the security system is, humans remain the 'weakest link'. Statistics show that over 80% of data breaches originate from user error or lack of awareness of threats.\n\nRaising mobile security awareness for employees includes key lessons:\n- Identifying phishing attacks via SMS (Smishing) and email.\n- Understanding the risks when connecting to open public Wi-Fi networks.\n- Developing a habit of regularly updating operating systems and apps for security patches.\n- Not installing applications from unknown sources (Sideloading).\n\nFCT Vinh Thinh provides not only technical tools but also supports businesses with security awareness consultation and training, helping build a safe digital working culture.",
-    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/security-awareness-training.jpg",
+    "ogImage": "/images/posts/security-awareness-training.jpg"
   },
   {
     "id": "mobile-security-challenges",
@@ -309,8 +309,8 @@
     "category": "Security",
     "link": "https://fct.vn/4-thach-thuc-trong-bao-mat-thiet-bi-di-dong.html",
     "content": "Mobile security faces unprecedented challenges due to device diversity and emerging attack methods.\n\n4 biggest challenges today include:\n\n1. **Data Leakage:** Users inadvertently granting access to contacts and location to unreliable apps, causing corporate information loss.\n2. **Insecure Wi-Fi Networks:** Attackers can set up fake access points (Man-in-the-middle attack) to intercept data transmitted from devices.\n3. **Sophisticated Phishing Attacks:** Fake bank or authority messages tricking users into providing credentials.\n4. **Spyware:** Malicious code designed to work silently, recording calls and spying on cameras without the user's knowledge.\n\nUnderstanding these challenges is the first step in building an effective proactive defense strategy with partner FCT Vinh Thinh.",
-    "image": "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/mobile-security-analysis.jpg",
+    "ogImage": "/images/posts/mobile-security-analysis.jpg"
   },
   {
     "id": "malware-threats",
@@ -320,8 +320,8 @@
     "category": "Security",
     "link": "https://fct.vn/tiem-an-nguy-co-pha-huy-bao-mat-di-dong-tu-phan-mem-doc-hai.html",
     "content": "Mobile malware is no longer just simple destructive viruses. Today, they are developed as 'commercial software' with extremely complex structures.\n\nCommon types of malware:\n- **Bankers:** Specialize in stealing bank credentials and credit card information.\n- **Ransomware:** Locks the device and demands ransom in cryptocurrency.\n- **Adware:** Causes annoyance and steals user habit information for advertising profit.\n\nHow to avoid it? Besides increased vigilance, businesses developing apps need to equip their products with 'self-protection' from the inside. Solutions like Guardsquare allow apps to detect and terminate sessions if interference is detected, ensuring absolute safety for end-users.",
-    "image": "https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/malware-cyber-threats.jpg",
+    "ogImage": "/images/posts/malware-cyber-threats.jpg"
   },
   {
     "id": "attack-vectors",
@@ -331,7 +331,7 @@
     "category": "Security",
     "link": "https://fct.vn/3-hinh-thuc-tan-cong-he-thong-bao-mat-thiet-bi-di-dong-dien-hinh.html",
     "content": "To effectively protect a system, we need to understand the paths an attacker can take (Attack Vectors). There are 3 typical forms:\n\n1. **App-based Attacks:** Attackers create fake apps containing malware or modify popular apps' source code to insert tracking features.\n2. **Device-based Attacks:** Exploiting unpatched vulnerabilities in Android or iOS (Zero-day exploits).\n3. **Network-based Attacks:** Interfering with data transmission process when connecting to public networks, using DNS spoofing or SSL Stripping techniques.\n\nBy correctly identifying these attack vectors, FCT Vinh Thinh will advise you on the corresponding defense layers, from app code protection to hardware security solutions for network infrastructure.",
-    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop",
-    "ogImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop"
+    "image": "/images/posts/attack-vectors-analysis.jpg",
+    "ogImage": "/images/posts/attack-vectors-analysis.jpg"
   }
 ]
