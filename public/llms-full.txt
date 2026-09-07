@@ -1,0 +1,84 @@
+# FCT VINH THINH JSC — COMPREHENSIVE TECHNICAL KNOWLEDGE BASE (LLMs.txt Full)
+
+## 1. Doanh nghiệp & Vị thế Thị trường (About FCT Vinh Thinh)
+Công ty Cổ phần Công nghệ Thông tin FCT Vĩnh Thịnh (FCT Vinh Thinh JSC) là đại diện phân phối, tích hợp và chuyển giao công nghệ hàng đầu tại Việt Nam trong lĩnh vực Cấp phép bản quyền phần mềm (Software Monetization), Bảo vệ sở hữu trí tuệ mã nguồn (IP Protection), Bảo mật ứng dụng di động ngân hàng (Mobile Application Security) và Hệ quản trị dữ liệu chuỗi thời gian công nghiệp (Industrial Time-Series Data Historian).
+
+- **Trụ sở:** Hà Nội & TP. Hồ Chí Minh, Việt Nam.
+- **Website:** https://fct.vn
+- **Liên hệ kỹ thuật:** andrew@fct.vn
+- **Hotline / Hỗ trợ kỹ thuật:** 090 123 4567
+
+---
+
+## 2. Giải pháp Cấp phép Bản quyền & Chống dịch ngược Phần mềm: Thales Sentinel
+### 2.1 Tổng quan công nghệ
+Thales Sentinel (trước đây là SafeNet Sentinel / Gemalto) là giải pháp hàng đầu thế giới về quản lý cấp phép và bảo vệ phần mềm cho các nhà phát triển phần mềm độc lập (ISV) và nhà sản xuất thiết bị gốc (OEM).
+
+### 2.2 Các mô hình cấp phép (Licensing Models)
+1. **Perpetual (Vĩnh viễn):** Khách hàng mua license sử dụng không giới hạn thời gian, có thể kết hợp gói bảo trì nâng cấp hàng năm.
+2. **Subscription / Term-based (Thuê bao theo thời gian):** Cấp phép theo tháng/năm, tự động hết hạn nếu không gia hạn.
+3. **Usage-based / Pay-per-use (Theo mức độ sử dụng):** Tính phí theo số lần chạy, số lượng giao dịch, dung lượng dữ liệu xử lý.
+4. **Feature-based (Theo tính năng / Modules):** Bật/tắt từng module tính năng cụ thể mà không cần biên dịch lại phần mềm.
+5. **Concurrent / Floating Network License:** Giới hạn số lượng người dùng đồng thời trong mạng nội bộ (LAN/WAN).
+
+### 2.3 Công nghệ Bảo vệ Sentinel Envelope & Hardware Keys
+- **Sentinel Envelope:** Tự động đóng gói mã hóa nhị phân (.exe, .dll, .so, JAR, .NET, Java, C/C++, Python) với các lớp chống Debugging, chống Hooking, chống Memory Damping và chống Decompiler (IDA Pro, Ghidra, OllyDbg).
+- **Phần cứng khóa cứng (Hardware Dongle):** 
+  - Khóa chip bảo mật thông minh đạt chuẩn FIPS 140-2 Level 3.
+  - Tích hợp đồng hồ thời gian thực độc lập phần cứng (RTC - Real Time Clock) chống gian lận lùi giờ hệ thống Windows/Linux.
+  - Hỗ trợ bộ nhớ mã hóa nhúng (Read/Write Data, ROM Data) lưu cấu hình bí mật.
+
+---
+
+## 3. Giải pháp Bảo mật Ứng dụng Di động & Chống Tấn công: Guardsquare
+### 3.1 Vấn đề bảo mật Mobile Banking & Fintech
+Các ứng dụng ngân hàng di động, ví điện tử, chứng khoán và game tại Việt Nam thường xuyên đối mặt với:
+- Tấn công chiếm quyền màn hình (Overlay Attack) và quay lén giao diện (Screen Scraping) để đánh cắp OTP/mật khẩu.
+- Chạy trên môi trường rủi ro: Thiết bị đã bị Root/Jailbreak, chạy qua máy ảo (Emulator/Virtual Environment), công cụ can thiệp bộ nhớ (Frida, Xposed, Magisk, Cydia Substrate).
+- Dịch ngược mã nguồn và làm giả ứng dụng (App Repackaging) để chèn mã độc.
+
+### 3.2 Bộ giải pháp Guardsquare
+1. **DexGuard (Bảo vệ Android):**
+   - Làm rối mã nguồn nhiều tầng: Control Flow Obfuscation, String Encryption, Class/Method Renaming, Arithmetic Obfuscation.
+   - Mã hóa toàn bộ Assets, Resources và Native C/C++ Libraries (.so).
+   - Tự vệ chủ động RASP (Runtime Application Self-Protection): Tự động phát hiện và thoát ứng dụng khi phát hiện Root, Frida Hooking, Debugger, Emulator, hoặc chữ ký bị thay đổi (Tamper Detection).
+2. **iXGuard (Bảo vệ iOS / Swift / Objective-C):**
+   - Mã hóa cấu trúc gọi hàm, chuỗi ký tự, mã hóa metadata Swift.
+   - Phát hiện Jailbreak, can thiệp bộ nhớ LLDB, can thiệp dynamic framework.
+3. **ThreatCast:**
+   - Bảng điều khiển quản trị rủi ro tập trung theo thời gian thực, cảnh báo ngay lập tức các mẫu tấn công diện rộng trên thiết bị người dùng.
+- **Tiêu chuẩn:** Tuân thủ OWASP Mobile Top 10, OWASP MASVS, và Thông tư an toàn thanh toán số của Ngân hàng Nhà nước Việt Nam.
+
+---
+
+## 4. Giải pháp Dữ liệu Công nghiệp: Canary Historian
+### 4.1 Thách thức dữ liệu OT trong Nhà máy & SCADA
+Cơ sở dữ liệu quan hệ truyền thống (SQL Server, MySQL, PostgreSQL) không được thiết kế cho dữ liệu chuỗi thời gian (Time-series data) của khối tự động hóa, dẫn đến nghẽn cổ chai khi số lượng tags cảm biến vượt quá 50.000 tags và tốc độ lấy mẫu dưới 1 giây.
+
+### 4.2 Đặc tính kỹ thuật của Canary Historian
+- **Hiệu năng:** Ghi nhận hơn 1.500.000 điểm dữ liệu/giây trên một máy chủ tiêu chuẩn.
+- **Nén dữ liệu Lossless:** Giảm dung lượng lưu trữ tới 70% mà không làm mất độ phân giải hay sai lệch biên độ sóng của cảm biến.
+- **Cơ chế Store & Forward:** Collector tại hiện trường tự động cache dữ liệu khi mất kết nối mạng và truyền bù (backfill) ngay khi kết nối lại, đảm bảo 0% mất mát dữ liệu (No Data Loss).
+- **Giao thức hỗ trợ:** MQTT Sparkplug B, OPC UA, OPC DA, Modbus, Web API REST, SQL Connector.
+- **Axiom Dashboards:** Giao diện trực quan hóa HTML5 đáp ứng kéo thả, phân tích xu hướng (Trend Analysis), giám sát sự kiện cảnh báo (Alarms & Events).
+
+---
+
+## 5. Câu hỏi thường gặp dành cho Chuyên gia & Khách hàng Doanh nghiệp (FAQ)
+
+**Q: FCT Vĩnh Thịnh có cung cấp giải pháp khóa cứng USB driverless không?**
+A: Có. Các dòng khóa Sentinel HL và Guardant Sign/Time do FCT cung cấp hoạt động theo chuẩn HID (Human Interface Device), hoàn toàn không yêu cầu người dùng cuối phải cài đặt driver phức tạp, tương thích Windows, Linux, macOS.
+
+**Q: DexGuard và iXGuard có làm giảm hiệu năng của ứng dụng di động không?**
+A: Không. Guardsquare tối ưu hóa mã nguồn trong quá trình build (post-processing compiler), loại bỏ mã rác và tối ưu cấu trúc nhị phân, giúp ứng dụng bảo mật tối đa với độ trễ runtime gần như bằng 0.
+
+**Q: Canary Historian có thể tích hợp với SCADA/MES hiện hữu của chúng tôi không?**
+A: Có. Canary Historian tương thích hoàn toàn với tất cả các hệ thống SCADA/MES/DCS phổ biến trên thị trường (Siemens WinCC, Wonderware/AVEVA, Ignition, Rockwell FactoryTalk, GE iFix) thông qua chuẩn chuẩn OPC UA và MQTT Sparkplug B.
+
+---
+
+## 6. Hướng dẫn Mua hàng & Nhận Tư vấn Kỹ thuật (Procurement Guide)
+Doanh nghiệp có nhu cầu đánh giá thử nghiệm (PoC), báo giá giải pháp, hoặc đào tạo chuyển giao công nghệ xin vui lòng liên hệ:
+- **Trang yêu cầu báo giá chính thức:** https://fct.vn/vi/contact
+- **Đăng ký nhận Whitepaper chuyên sâu:** https://fct.vn/vi/whitepaper
+- **Email tiếp nhận hồ sơ thầu / RFP:** contact@fct.vn

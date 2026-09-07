@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Customer leads log
+data/leads_log.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

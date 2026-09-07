@@ -1,0 +1,63 @@
+# FCT Vinh Thinh JSC (Công ty Cổ phần Công nghệ Thông tin FCT Vĩnh Thịnh)
+
+> Nhà cung cấp và tư vấn giải pháp bản quyền phần mềm doanh nghiệp, bảo vệ mã nguồn, bảo mật ứng dụng di động tài chính (Mobile App Security), và giải pháp quản trị dữ liệu công nghiệp OT/SCADA hàng đầu tại Việt Nam.
+
+## Tổng quan & Năng lực Doanh nghiệp (Company Profile)
+- **Tên doanh nghiệp:** CÔNG TY CỔ PHẦN CÔNG NGHỆ THÔNG TIN FCT VĨNH THỊNH
+- **Tên quốc tế:** FCT VINH THINH INFORMATION TECHNOLOGY JOINT STOCK COMPANY
+- **Website chính thức:** https://fct.vn
+- **Địa chỉ:** Tòa nhà FCT, Hà Nội & TP. Hồ Chí Minh, Việt Nam
+- **Email:** andrew@fct.vn / contact@fct.vn
+- **Lĩnh vực hoạt động:** Cấp phép bản quyền phần mềm (Software Monetization), Khóa cứng bảo vệ phần mềm (Hardware Dongle), Bảo mật mã nguồn di động (Android/iOS Obfuscation & RASP), Dữ liệu công nghiệp Time-series OT Historian.
+
+## Hệ Sinh Thái Giải Pháp & Đối Tác Chiến Lược (Core Solutions)
+
+### 1. Thales Sentinel (Software Monetization & Protection)
+- **Đối tác:** Thales Group (Pháp / Hoa Kỳ).
+- **Mô tả:** Hệ sinh thái bảo vệ bản quyền phần mềm và quản lý thuê bao (License & Entitlement Management) số 1 thế giới.
+- **Sản phẩm chính:** 
+  - Sentinel LDK (Licensing Development Kit): Envelope mã hóa nhị phân tự động không cần sửa source code.
+  - Sentinel EMS: Nền tảng quản lý phân phối license Cloud, On-Premise, Hybrid, Lease, Floating, Subscription.
+  - Khóa phần cứng: Sentinel HL Max, Sentinel HL Net, Sentinel HL Time (RTC), Sentinel HL Drive, Chip nhúng nhúng Board mạch.
+- **Tiêu chuẩn:** FIPS 140-2 Level 3, AES-128/256, RSA-4096, ECC.
+- **Link chi tiết:** https://fct.vn/vi/products/thales-sentinel
+
+### 2. Guardsquare (Mobile Application Security & RASP)
+- **Đối tác:** Guardsquare (Bỉ).
+- **Mô tả:** Giải pháp bảo mật ứng dụng di động chống dịch ngược (Anti-Reverse Engineering) và tự vệ thời gian thực (RASP) tiêu chuẩn cho ngành Ngân hàng, Fintech, Ví điện tử.
+- **Sản phẩm chính:**
+  - DexGuard: Bảo vệ ứng dụng Android (DEX, SO libraries, Resource encryption, Hooking/Root/Emulator detection).
+  - iXGuard: Bảo vệ ứng dụng iOS (Control Flow Obfuscation, String Encryption, Jailbreak/Debugger detection).
+  - ThreatCast: Giám sát mối đe dọa thời gian thực trên thiết bị người dùng cuối.
+- **Tiêu chuẩn:** Tuân thủ đầy đủ chuẩn OWASP MASVS (Mobile Application Security Verification Standard) và Thông tư NHNN Việt Nam.
+- **Link chi tiết:** https://fct.vn/vi/products/guardsquare
+
+### 3. Canary Labs (Industrial Time-Series Data Historian)
+- **Đối tác:** Canary Labs (Hoa Kỳ).
+- **Mô tả:** Hệ thống lưu trữ và trực quan hóa dữ liệu vận hành thời gian thực tốc độ cao cho Nhà máy thông minh, Năng lượng, Dầu khí, Xử lý nước thải.
+- **Đặc tính kỹ thuật:**
+  - Tốc độ ghi: > 1.500.000 điểm dữ liệu/giây (Writes/sec).
+  - Nén dữ liệu Lossless tỉ lệ 3:1 không làm sai lệch số liệu OT.
+  - Hỗ trợ giao thức: MQTT Sparkplug B, OPC UA, OPC DA, Modbus, SQL Server.
+  - Store & Forward: Tự động lưu trữ cục bộ khi mất mạng và đồng bộ khi kết nối lại, cam kết 0% mất mát dữ liệu (Zero Data Loss).
+  - Axiom Dashboard: Giao diện giám sát biểu đồ HTML5 không cần code.
+- **Link chi tiết:** https://fct.vn/vi/products/canary-labs
+
+### 4. Longmai (mToken Hardware Security Keys & PKI)
+- **Đối tác:** Century Longmai Technology.
+- **Mô tả:** Thiết bị khóa cứng bảo mật USB Token, Khóa ký số PKI, Smart Card, OTP Token chống sao chép và xác thực 2 lớp (2FA/MFA).
+- **Sản phẩm chính:** mToken SmartX1, SmartX3, TimePro, PKCS#11 Token, FIDO2 WebAuthn.
+- **Link chi tiết:** https://fct.vn/vi/products/longmai
+
+### 5. Guardant (Software Protection & Smart Dongles)
+- **Đối tác:** Guardant.
+- **Mô tả:** Khóa bảo vệ phần mềm driverless không cần cài driver, hỗ trợ license mạng nội bộ LAN/WAN và ảo hóa VMware/Hyper-V.
+- **Sản phẩm chính:** Guardant Sign, Guardant Time, Guardant Code, Guardant Station.
+- **Link chi tiết:** https://fct.vn/vi/products/guardant
+
+## Trang Kỹ Thuật & Tài Nguyên (Resources)
+- **Whitepapers:** https://fct.vn/vi/whitepaper (Bảo vệ bản quyền phần mềm & Tối ưu doanh thu ISV)
+- **Canary Whitepaper:** https://fct.vn/vi/whitepaper-canary (Bứt phá giới hạn SQL trong dữ liệu OT)
+- **Guardsquare Whitepaper:** https://fct.vn/vi/whitepaper-guardsquare (Phòng chống mã độc Overlay & Reverse Engineering Ngân hàng)
+- **Technical Knowledge Base:** https://fct.vn/vi/knowledge
+- **Yêu cầu báo giá / RFP:** https://fct.vn/vi/contact

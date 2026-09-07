@@ -89,9 +89,13 @@ export default async function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "FCT Vinh Thinh .,JSC",
+    "alternateName": "Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh",
     "url": "https://fct.vn",
     "logo": "https://fct.vn/logo.png",
-    "description": "Chuyên gia cung cấp giải pháp Canary Historian, Thales, Guardsquare và Longmai.",
+    "description": lang === 'vi' 
+      ? "Nhà phân phối & đối tác giải pháp bảo mật phần mềm, bản quyền, xác thực số và hệ thống dữ liệu công nghiệp tại Việt Nam: Thales Sentinel, Guardsquare, Canary Labs, Longmai, Guardant."
+      : "Authorized distributor and solution partner for software protection, licensing, digital authentication and industrial data historian in Vietnam.",
+    "email": "fct.vinhthinh@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Tầng 3, Tòa nhà Ngôi Sao, 15 Nguyễn Cảnh Dị, Đại Kim",
@@ -103,8 +107,24 @@ export default async function RootLayout({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+84-983-027-776",
-      "contactType": "customer service"
-    }
+      "contactType": "sales",
+      "areaServed": "VN",
+      "availableLanguage": ["Vietnamese", "English"]
+    },
+    "sameAs": [
+      "https://cpl.thalesgroup.com",
+      "https://www.guardsquare.com",
+      "https://www.canarylabs.com",
+      "https://www.longmai.net",
+      "https://www.guardant.com"
+    ],
+    "knowsAbout": [
+      "Software Monetization & Licensing (Thales Sentinel LDK, RMS, EMS)",
+      "Mobile & Web App Security (Guardsquare DexGuard, iXGuard, AppSweep)",
+      "Industrial Time-Series Data Historian (Canary Labs SCADA / IIoT)",
+      "Digital Signature & PKI Token (mToken CryptoID, FIPS 140-2 Level 3)",
+      "Dongle Software Protection (Guardant Code, Sign, Time)"
+    ]
   };
 
   return (

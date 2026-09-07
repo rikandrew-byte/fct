@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { sendTelegramNotification, sendEmailNotification, sendWhitepaperAutoReply } from '@/lib/mail';
+import { saveLeadLog } from '@/lib/leads-logger';
 
 const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY;
 
@@ -71,7 +72,7 @@ export async function POST(request: Request) {
       console.warn('[TURNSTILE] Secret key not configured — skipping verification');
     }
 
-    // ── Business Logic: Gửi Telegram + Email ──────────────────────
+    // ── Business Logic: Gửi Telegram + Email & Lưu Log ──────────
     const payload = {
       fullName,
       email,
@@ -85,7 +86,10 @@ export async function POST(request: Request) {
       ip
     };
 
-    // Chạy song song cả 2 tác vụ thông báo
+    // 1. Lưu Lead vào file log có cấu trúc (bảo toàn dữ liệu cục bộ)
+    const savedLead = await saveLeadLog(payload);
+
+    // 2. Chạy song song các tác vụ thông báo Telegram & Email
     const results = await Promise.allSettled([
       sendTelegramNotification(payload),
       sendEmailNotification(payload),

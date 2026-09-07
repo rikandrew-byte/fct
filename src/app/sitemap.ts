@@ -9,11 +9,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '', 
     '/about', 
-    '/posts', 
+    '/blog', 
     '/products', 
     '/projects', 
     '/contact', 
-    '/knowledge', 
+    '/resources',
+    '/whitepaper',
+    '/whitepaper-canary',
+    '/whitepaper-guardsquare',
     '/expert-ai',
     '/privacy',
     '/terms'
@@ -23,7 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/products/thales-sentinel',
     '/products/guardsquare',
     '/products/canary-labs',
-    '/products/longmai'
+    '/products/longmai',
+    '/products/guardant'
   ]
 
   const sitemapEntries: MetadataRoute.Sitemap = []
@@ -35,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/${lang}${route}`,
         lastModified: new Date(),
         changeFrequency: route === '' ? 'daily' : 'weekly',
-        priority: route === '' ? 1.0 : 0.8,
+        priority: route === '' ? 1.0 : (route.startsWith('/products/') ? 0.9 : 0.8),
         alternates: {
           languages: {
             vi: `${baseUrl}/vi${route}`,
@@ -65,14 +69,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         }
 
         sitemapEntries.push({
-          url: `${baseUrl}/${lang}/posts/${article.id}`,
+          url: `${baseUrl}/${lang}/blog/${article.id}`,
           lastModified: lastMod,
           changeFrequency: 'monthly',
           priority: 0.6,
           alternates: {
             languages: {
-              vi: `${baseUrl}/vi/posts/${article.id}`,
-              en: `${baseUrl}/en/posts/${article.id}`,
+              vi: `${baseUrl}/vi/blog/${article.id}`,
+              en: `${baseUrl}/en/blog/${article.id}`,
             },
           },
         })
