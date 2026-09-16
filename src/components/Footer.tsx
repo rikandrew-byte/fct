@@ -20,15 +20,22 @@ export default function Footer({ lang, dict }: FooterProps) {
   useEffect(() => {
     setMounted(true);
     
+    // Khôi phục con số gần nhất từ lần tải trước (giúp UI không bị giật từ 2103)
+    const cachedTotal = localStorage.getItem('fct_last_total');
+    if (cachedTotal) {
+      setVisitorCount(parseInt(cachedTotal, 10));
+    }
+
     // Gọi API để ghi nhận 1 lượt xem trang thật vào Database
     const recordVisit = async () => {
       try {
         const res = await fetch('/api/visits', { method: 'POST' });
         const data = await res.json();
         if (data.total) {
-          // Bạn có thể cộng thêm một số Base (ví dụ 2000) vào data.total 
-          // nếu muốn giữ lại con số hiển thị cũ của website, hoặc để nguyên data.total.
-          setVisitorCount(2100 + data.total); 
+          const realTotal = 2100 + data.total;
+          setVisitorCount(realTotal); 
+          // Lưu lại để lần sau load trang không bị giật số
+          localStorage.setItem('fct_last_total', realTotal.toString());
         }
       } catch (error) {
         console.error("Lỗi đếm lượt truy cập", error);
