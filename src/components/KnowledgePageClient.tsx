@@ -173,6 +173,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
             </Link>
           </div>
         </div>
+      </section>
     </main>
   );
 }

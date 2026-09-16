@@ -4,17 +4,17 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://cdn.jsdelivr.net;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
-    img-src 'self' blob: data: https://www.google.com https://*.googleapis.com https://*.gstatic.com https://cdn.jsdelivr.net https://images.unsplash.com;
-    font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' blob: data: https://www.google.com https://*.googleapis.com https://*.gstatic.com https://images.unsplash.com;
+    font-src 'self' https://fonts.gstatic.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
     frame-src 'self' https://www.google.com https://challenges.cloudflare.com;
     child-src 'self' https://www.google.com https://challenges.cloudflare.com;
-    connect-src 'self' https://challenges.cloudflare.com https://*.cloudflare.com https://www.google.com https://*.googleapis.com https://cdn.jsdelivr.net;
+    connect-src 'self' https://challenges.cloudflare.com https://*.cloudflare.com https://www.google.com https://*.googleapis.com;
     media-src 'self';
     manifest-src 'self';
     worker-src 'self';

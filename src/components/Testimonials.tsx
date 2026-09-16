@@ -66,7 +66,7 @@ export default function Testimonials() {
                   <Star className="w-4 h-4 fill-current" />
                 </div>
                 <p className="text-gray-700 font-light italic leading-relaxed text-lg">
-                  "{testi.content}"
+                  &quot;{testi.content}&quot;
                 </p>
               </div>
               <div className="flex items-center gap-5 pt-8 border-t border-gray-100">

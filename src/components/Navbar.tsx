@@ -4,10 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Globe, Sparkles } from "lucide-react";
+import { Globe } from "lucide-react";
 import ContactModal from "./ContactModal";
 import MobileNav from "./MobileNav";
-import { useAssistant } from "@/context/AssistantContext";
 
 interface NavbarProps {
   lang: string;
@@ -16,11 +15,9 @@ interface NavbarProps {
 
 export default function Navbar({ lang, dict }: NavbarProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
-  const { open: openAssistant } = useAssistant();
 
   const isEn = lang === "en";
 

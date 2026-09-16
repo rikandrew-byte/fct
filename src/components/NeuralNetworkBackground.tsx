@@ -3,14 +3,31 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+interface DotData {
+  id: number;
+  x: number;
+  y: number;
+  tx: number; // target x
+  ty: number; // target y
+  dur: number; // duration
+  lines: { tx: number; ty: number }[];
+}
+
 export default function NeuralNetworkBackground() {
-  const [dots, setDots] = useState<{ x: number; y: number; id: number }[]>([]);
+  const [dots, setDots] = useState<DotData[]>([]);
 
   useEffect(() => {
     const newDots = Array.from({ length: 25 }).map((_, i) => ({
+      id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      id: i,
+      tx: (Math.random() * 8 - 4),
+      ty: (Math.random() * 8 - 4),
+      dur: 12 + Math.random() * 10,
+      lines: Array.from({ length: 2 }).map(() => ({
+        tx: (Math.random() * 4 - 2),
+        ty: (Math.random() * 4 - 2),
+      })),
     }));
     setDots(newDots);
   }, []);
@@ -28,11 +45,11 @@ export default function NeuralNetworkBackground() {
               fill="rgba(59, 130, 246, 0.8)"
               className="drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"
               animate={{
-                cx: [`${dot.x}%`, `${(dot.x + (Math.random() * 8 - 4)) % 100}%`, `${dot.x}%`],
-                cy: [`${dot.y}%`, `${(dot.y + (Math.random() * 8 - 4)) % 100}%`, `${dot.y}%`],
+                cx: [`${dot.x}%`, `${(dot.x + dot.tx) % 100}%`, `${dot.x}%`],
+                cy: [`${dot.y}%`, `${(dot.y + dot.ty) % 100}%`, `${dot.y}%`],
               }}
               transition={{
-                duration: 12 + Math.random() * 10,
+                duration: dot.dur,
                 repeat: Infinity,
                 ease: "linear",
               }}
@@ -48,8 +65,8 @@ export default function NeuralNetworkBackground() {
                 stroke="rgba(59, 130, 246, 0.3)"
                 strokeWidth="0.8"
                 animate={{
-                  x1: [`${dot.x}%`, `${(dot.x + (Math.random() * 4 - 2)) % 100}%`, `${dot.x}%`],
-                  y1: [`${dot.y}%`, `${(dot.y + (Math.random() * 4 - 2)) % 100}%`, `${dot.y}%`],
+                  x1: [`${dot.x}%`, `${(dot.x + dot.lines[ni].tx) % 100}%`, `${dot.x}%`],
+                  y1: [`${dot.y}%`, `${(dot.y + dot.lines[ni].ty) % 100}%`, `${dot.y}%`],
                 }}
                 transition={{
                   duration: 18,

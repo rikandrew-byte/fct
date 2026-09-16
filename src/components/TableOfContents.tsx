@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { List } from "lucide-react";
 
 interface TOCItem {
@@ -10,11 +10,10 @@ interface TOCItem {
 }
 
 export default function TableOfContents({ content }: { content: string }) {
-  const [headings, setHeadings] = useState<TOCItem[]>([]);
   const [activeId, setActiveId] = useState<string>("");
   const observer = useRef<IntersectionObserver | null>(null);
 
-  useEffect(() => {
+  const headings = React.useMemo(() => {
     const lines = content.split('\n');
     const extractedHeadings: TOCItem[] = [];
     
@@ -34,9 +33,10 @@ export default function TableOfContents({ content }: { content: string }) {
         extractedHeadings.push({ id, text, level: trimmed.startsWith('**') ? 2 : 3 });
       }
     });
+    return extractedHeadings;
+  }, [content]);
 
-    setHeadings(extractedHeadings);
-
+  useEffect(() => {
     // Setup IntersectionObserver for active state
     observer.current = new IntersectionObserver(
       (entries) => {
@@ -49,13 +49,13 @@ export default function TableOfContents({ content }: { content: string }) {
       { rootMargin: "-100px 0% -80% 0%" }
     );
 
-    extractedHeadings.forEach((heading) => {
+    headings.forEach((heading) => {
       const el = document.getElementById(heading.id);
       if (el) observer.current?.observe(el);
     });
 
     return () => observer.current?.disconnect();
-  }, [content]);
+  }, [headings]);
 
   if (headings.length === 0) return null;
 

@@ -8,13 +8,6 @@ const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'andrew@fct.vn';
 // Khởi tạo Resend instance
 const resend = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null;
 
-/**
- * Escapes characters for Telegram MarkdownV2
- */
-function escapeMarkdownV2(text: string): string {
-  return text.replace(/[_*[\]()~`>#+\-=|{}.!]/g, '\\$&');
-}
-
 export interface NotificationPayload {
   fullName: string;
   email: string;
@@ -87,7 +80,6 @@ ${title}
       throw new Error(`Telegram API Error: [${data.error_code}] ${data.description}`);
     }
 
-    // console.log('[TELEGRAM] Notification sent successfully');
     return data;
   } catch (err: any) {
     console.error('[TELEGRAM_FETCH_ERROR]', err);

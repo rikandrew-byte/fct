@@ -19,19 +19,23 @@ export default function Footer({ lang, dict }: FooterProps) {
 
   useEffect(() => {
     setMounted(true);
-    // Logic bộ đếm lượt truy cập (Visitor Counter)
-    const storedCount = localStorage.getItem("fct_visitor_count");
-    const initialBase = 2103;
     
-    if (!storedCount) {
-      const newCount = initialBase + 1;
-      localStorage.setItem("fct_visitor_count", newCount.toString());
-      setVisitorCount(newCount);
-    } else {
-      const newCount = parseInt(storedCount) + 1;
-      localStorage.setItem("fct_visitor_count", newCount.toString());
-      setVisitorCount(newCount);
-    }
+    // Gọi API để ghi nhận 1 lượt xem trang thật vào Database
+    const recordVisit = async () => {
+      try {
+        const res = await fetch('/api/visits', { method: 'POST' });
+        const data = await res.json();
+        if (data.total) {
+          // Bạn có thể cộng thêm một số Base (ví dụ 2000) vào data.total 
+          // nếu muốn giữ lại con số hiển thị cũ của website, hoặc để nguyên data.total.
+          setVisitorCount(2100 + data.total); 
+        }
+      } catch (error) {
+        console.error("Lỗi đếm lượt truy cập", error);
+      }
+    };
+
+    recordVisit();
 
     // Giả lập số người đang trực tuyến (Online)
     setOnlineCount(Math.floor(Math.random() * (15 - 5 + 1)) + 5);
