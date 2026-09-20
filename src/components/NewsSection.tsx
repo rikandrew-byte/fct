@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -23,10 +23,10 @@ interface NewsSectionProps {
 export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps) {
   const isEn = lang === "en";
   const d = dict.homeNews || {
-    badge: isEn ? "Knowledge Hub" : "Kh獺m ph獺 tin t廙妾",
-    title: isEn ? "Latest Technical" : "Tin t廙妾",
-    subtitle: isEn ? "Insights" : "C繫ng ngh廙?,
-    viewAll: isEn ? "View All Articles" : "Xem t廕另 c廕?b?i vi廕篙"
+    badge: isEn ? "Knowledge Hub" : "Khám phá tin tức",
+    title: isEn ? "Latest Technical" : "Tin tức",
+    subtitle: isEn ? "Insights" : "Công nghệ",
+    viewAll: isEn ? "View All Articles" : "Xem tất cả bài viết"
   };
 
   const safeNews = Array.isArray(latestNews) ? latestNews : [];
@@ -100,7 +100,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
                     href={`/${lang}/blog/${article.id}`}
                     className="text-xs font-semibold uppercase tracking-wider text-slate-900 group-hover:text-cyan-700 flex items-center gap-1.5 transition-colors"
                   >
-                    {isEn ? "Read Article" : "?廙 b?i vi廕篙"}
+                    {isEn ? "Read Article" : "Đọc bài viết"}
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>

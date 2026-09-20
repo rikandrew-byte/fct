@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Code, Zap, Shield, ArrowRight } from "lucide-react";
@@ -17,17 +17,17 @@ export default function AppShieldingFlow({ isEn = false }: AppShieldingFlowProps
         engineDesc: "Obfuscation, Encryption, RASP",
         appDesc: "Hardened against reverse engineering",
         flow: "Application Shielding Flow",
-        flowDetail: "Code ??Protection ??Deployment",
+        flowDetail: "Code → Protection → Deployment",
       }
     : {
-        source: "M瓊 Ngu廙",
-        engine: "?廙g c B廕υ v廙?,
-        app: "廙盯g d廙叩g An to?n",
-        sourceDesc: "M瓊 廙姊g d廙叩g g廙",
-        engineDesc: "L?m r廙, M瓊 h籀a, RASP",
-        appDesc: "B廕υ v廙?ch廙g ?廕υ ng廙θ",
-        flow: "Lu廙g B廕υ v廙?廙盯g d廙叩g",
-        flowDetail: "M瓊 ??B廕υ v廙???Tri廙 khai",
+        source: "Mã Nguồn",
+        engine: "Động cơ Bảo vệ",
+        app: "Ứng dụng An toàn",
+        sourceDesc: "Mã ứng dụng gốc",
+        engineDesc: "Làm rối, Mã hóa, RASP",
+        appDesc: "Bảo vệ chống đảo ngược",
+        flow: "Luồng Bảo vệ Ứng dụng",
+        flowDetail: "Mã → Bảo vệ → Triển khai",
       };
 
   return (

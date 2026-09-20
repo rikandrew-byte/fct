@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Smartphone, Lock, Server, ArrowRight } from "lucide-react";
@@ -17,17 +17,17 @@ export default function LongmaiAuthenticationFlow({ isEn = false }: LongmaiAuthe
         server: "Target Server",
         serverDesc: "Receives secure authentication result, key never exposed",
         flow: "Endpoint Authentication Flow",
-        flowDetail: "Request ??Sign on Chip ??Verified Response",
+        flowDetail: "Request → Sign on Chip → Verified Response",
       }
     : {
-        device: "Thi廕篙 b廙?Ng廙 d羅ng",
-        deviceDesc: "Laptop/Mobile c廕吵 ??ng nh廕計 ho廕搾 k羸 t?i li廙",
+        device: "Thiết bị Người dùng",
+        deviceDesc: "Laptop/Mobile cần đăng nhập hoặc ký tài liệu",
         token: "Longmai Hardware Token",
-        tokenDesc: "USB/Smartcard ch廙奄 Private Key m瓊 h籀a c廙姊g, k羸 tr礙n chip",
-        server: "H廙?th廙g Server",
-        serverDesc: "Nh廕要 k廕篙 qu廕?x獺c th廙帷 an to?n, kh籀a kh繫ng bao gi廙?l廙?,
-        flow: "Lu廙g X獺c th廙帷 Endpoint",
-        flowDetail: "Y礙u c廕吟 ??K羸 tr礙n Chip ??Ph廕τ h廙 X獺c minh",
+        tokenDesc: "USB/Smartcard chứa Private Key mã hóa cứng, ký trên chip",
+        server: "Hệ thống Server",
+        serverDesc: "Nhận kết quả xác thực an toàn, khóa không bao giờ lộ",
+        flow: "Luồng Xác thực Endpoint",
+        flowDetail: "Yêu cầu → Ký trên Chip → Phản hồi Xác minh",
       };
 
   return (
