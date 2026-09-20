@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import {
@@ -55,7 +55,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
 
   return (
     <main className="min-h-screen selection:bg-cyan-600 selection:text-white overflow-x-hidden bg-white">
-      {/* ?? Hero ??????????????????????????????????????????????????????? */}
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-slate-50">
         <TechGridBackground />
 
@@ -106,7 +106,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ?? Gi廙 thi廙 ???????????????????????????????????????????????? */}
+      {/* ── Giới thiệu ──────────────────────────────────────────────── */}
       <section className="bg-white section-padding px-6">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="flex items-center gap-3 mb-2">
@@ -131,7 +131,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ?? Gi獺 tr廙?c廙 l繭i ??????????????????????????????????????????? */}
+      {/* ── Giá trị cốt lõi ─────────────────────────────────────────── */}
       <section className="bg-slate-50 section-padding px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-4 mb-16">
@@ -170,7 +170,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ?? L藺nh v廙帷 chuy礙n m繫n ???????????????????????????????????????? */}
+      {/* ── Lĩnh vực chuyên môn ──────────────────────────────────────── */}
       <section className="bg-white section-padding px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -197,7 +197,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ?? Timeline ?????????????????????????????????????????????????? */}
+      {/* ── Timeline ────────────────────────────────────────────────── */}
       <section className="bg-slate-50 section-padding px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-4 mb-16">
@@ -251,7 +251,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ?? ?廙 t獺c chi廕積 l廙θ ????????????????????????????????????????? */}
+      {/* ── Đối tác chiến lược ───────────────────────────────────────── */}
       <section className="bg-white section-padding px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
@@ -326,7 +326,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ?? CTA Li礙n h廙???????????????????????????????????????????????? */}
+      {/* ── CTA Liên hệ ─────────────────────────────────────────────── */}
       <section className="bg-white py-20 px-6 border-t border-slate-200">
         <div className="max-w-4xl mx-auto w-full bg-slate-900 rounded-lg p-10 sm:p-14 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div className="space-y-3">

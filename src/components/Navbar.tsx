@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +25,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     { href: `/${lang}/about`, label: dict.navbar.about },
     { href: `/${lang}/projects`, label: dict.navbar.projects },
     { href: `/${lang}/products`, label: dict.navbar.products },
-    { href: `/${lang}/blog`, label: dict.navbar.news || (isEn ? "Articles" : "B?i vi廕篙") },
+    { href: `/${lang}/blog`, label: dict.navbar.news || (isEn ? "Articles" : "Bài viết") },
     { href: `/${lang}/contact`, label: dict.navbar.contact },
   ];
 
@@ -55,7 +55,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           <div className="absolute inset-0 bg-cyan-100/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
           <Globe className="w-5 h-5 text-cyan-600 group-hover:rotate-180 transition-transform duration-700" aria-hidden="true" />
           <span className="text-sm font-black text-gray-900 tracking-widest uppercase">
-            {isEn ? "Ti廕積g Vi廙" : "English"}
+            {isEn ? "Tiếng Việt" : "English"}
           </span>
           <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-pulse ml-1"></div>
         </button>
@@ -136,8 +136,8 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                  </button>
                  <input 
                    type="text" 
-                   aria-label={isEn ? "Search" : "T穫m ki廕禦"}
-                   placeholder={isEn ? "Search..." : "T穫m ki廕禦..."}
+                   aria-label={isEn ? "Search" : "Tìm kiếm"}
+                   placeholder={isEn ? "Search..." : "Tìm kiếm..."}
                    className="absolute right-0 top-1/2 -translate-y-1/2 w-0 group-hover/search:w-28 lg:group-focus-within/search:w-28 transition-all duration-500 bg-white border border-gray-300 rounded-full px-0 group-hover/search:px-4 py-1.5 text-xs text-gray-700 outline-none opacity-0 group-hover/search:opacity-100"
                  />
               </div>

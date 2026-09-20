@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -32,12 +32,12 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
   }, []);
 
   const navLinks = [
-    { href: `/${lang}/about`, label: dict.navbar.about || (isEn ? "About Us" : "V廙?ch繳ng t繫i") },
-    { href: `/${lang}/projects`, label: dict.navbar.projects || (isEn ? "Projects" : "D廙?獺n ti礙u bi廙") },
-    { href: `/${lang}/products`, label: dict.navbar.products || (isEn ? "Products" : "S廕τ ph廕姓") },
-    { href: `/${lang}/resources`, label: isEn ? "Resources" : "T?i li廙" },
-    { href: `/${lang}/blog`, label: dict.navbar.news || (isEn ? "Articles" : "B?i vi廕篙") },
-    { href: `/${lang}/contact`, label: dict.navbar.contact || (isEn ? "Contact" : "Li礙n h廙?) },
+    { href: `/${lang}/about`, label: dict.navbar.about || (isEn ? "About Us" : "Về chúng tôi") },
+    { href: `/${lang}/projects`, label: dict.navbar.projects || (isEn ? "Projects" : "Dự án tiêu biểu") },
+    { href: `/${lang}/products`, label: dict.navbar.products || (isEn ? "Products" : "Sản phẩm") },
+    { href: `/${lang}/resources`, label: isEn ? "Resources" : "Tài liệu" },
+    { href: `/${lang}/blog`, label: dict.navbar.news || (isEn ? "Articles" : "Bài viết") },
+    { href: `/${lang}/contact`, label: dict.navbar.contact || (isEn ? "Contact" : "Liên hệ") },
   ];
 
   return (

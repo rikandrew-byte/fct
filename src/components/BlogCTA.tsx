@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Download, ArrowRight, FileText } from "lucide-react";
@@ -16,21 +16,21 @@ export default function BlogCTA({ lang, targetFunnel }: BlogCTAProps) {
     {
       id: "thales",
       title: "Thales Sentinel",
-      desc: isEn ? "Software Monetization Guide" : "S獺ch tr廕疸g: T廙 u h籀a doanh thu ph廕吵 m廙",
+      desc: isEn ? "Software Monetization Guide" : "Sách trắng: Tối ưu hóa doanh thu phần mềm",
       link: `/${lang}/whitepaper`,
       color: "blue"
     },
     {
       id: "guardsquare",
       title: "Guardsquare",
-      desc: isEn ? "Mobile Malware Protection" : "S獺ch tr廕疸g: B廕υ m廕負 廙姊g d廙叩g di ?廙g",
+      desc: isEn ? "Mobile Malware Protection" : "Sách trắng: Bảo mật ứng dụng di động",
       link: `/${lang}/whitepaper-guardsquare`,
       color: "rose"
     },
     {
       id: "canary",
       title: "Canary Labs",
-      desc: isEn ? "OT Data Historian Guide" : "S獺ch tr廕疸g: Gi廕ξ ph獺p d廙?li廙 IIoT",
+      desc: isEn ? "OT Data Historian Guide" : "Sách trắng: Giải pháp dữ liệu IIoT",
       link: `/${lang}/whitepaper-canary`,
       color: "amber"
     }
@@ -48,18 +48,18 @@ export default function BlogCTA({ lang, targetFunnel }: BlogCTAProps) {
       <div className="relative z-10 space-y-8">
         <div className="text-center space-y-3">
           <span className="text-[10px] font-bold text-cyan-400 tracking-[0.25em] uppercase block">
-            {isEn ? "Strategic Resources" : "T?i li廙 K廙?thu廕負"}
+            {isEn ? "Strategic Resources" : "Tài liệu Kỹ thuật"}
           </span>
           <h3 className="text-2xl md:text-4xl font-black text-white tracking-tight">
-            {isEn ? "Deepen Your " : "N璽ng t廕吮 "}
+            {isEn ? "Deepen Your " : "Nâng tầm "}
             <span className="text-cyan-400">
-              {isEn ? "Technical Knowledge" : "Ki廕積 th廙妾 Chuy礙n m繫n"}
+              {isEn ? "Technical Knowledge" : "Kiến thức Chuyên môn"}
             </span>
           </h3>
           <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
             {isEn 
               ? "Download our expert whitepapers to master the latest security and industrial data technologies."
-              : "T廕ξ xu廙g c獺c b廙?t?i li廙 chuy礙n s璽u t廙?chuy礙n gia ?廙?l?m ch廙?c繫ng ngh廙?b廕υ m廕負 v? d廙?li廙 c繫ng nghi廙 m廙 nh廕另."}
+              : "Tải xuống các bộ tài liệu chuyên sâu từ chuyên gia để làm chủ công nghệ bảo mật và dữ liệu công nghiệp mới nhất."}
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function BlogCTA({ lang, targetFunnel }: BlogCTAProps) {
                 
                 <div className="flex items-center justify-between pt-3 border-t border-slate-700">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 group-hover:text-cyan-300 flex items-center gap-1.5">
-                    {isEn ? "Download PDF" : "T廕ξ t?i li廙"}
+                    {isEn ? "Download PDF" : "Tải tài liệu"}
                     <Download className="w-3.5 h-3.5" />
                   </span>
                   <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-all" />

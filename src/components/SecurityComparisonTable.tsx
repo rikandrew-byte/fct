@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { X, CheckCircle2, ArrowRight } from "lucide-react";
@@ -54,12 +54,12 @@ export default function SecurityComparisonTable({
             <thead>
               <tr className="bg-slate-900 text-white">
                 <th className="px-4 sm:px-6 py-4 text-left text-xs font-bold uppercase tracking-widest whitespace-nowrap text-slate-300 w-[28%]">
-                  Ch廙?s廙?an to?n
+                  Chỉ số an toàn
                 </th>
                 <th className="px-4 sm:px-6 py-4 text-left text-xs font-bold uppercase tracking-widest whitespace-nowrap w-[36%]">
                   <div className="flex items-center gap-2">
                     <X className="w-3.5 h-3.5 text-red-400 shrink-0" />
-                    Tr廙 (R廙告 ro)
+                    Trước (Rủi ro)
                   </div>
                 </th>
                 <th className="px-4 sm:px-6 py-4 text-left text-xs font-bold uppercase tracking-widest whitespace-nowrap w-[36%]">
@@ -113,13 +113,13 @@ export default function SecurityComparisonTable({
           className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4"
         >
           <p className="text-slate-500 text-sm">
-            B廕》 ?ang 廙?tr廕》g th獺i n?o? H瓊y n璽ng c廕叼 ngay.
+            Bạn đang ở trạng thái nào? Hãy nâng cấp ngay.
           </p>
           <a
             href={`/${lang}/contact`}
             className="inline-flex items-center gap-2 bg-cyan-700 hover:bg-cyan-800 text-white px-6 py-2.5 rounded-sm font-semibold text-sm tracking-wide transition-colors duration-200 shrink-0"
           >
-            Y礙u c廕吟 T v廕叩 Gi廕ξ ph獺p
+            Yêu cầu Tư vấn Giải pháp
             <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>

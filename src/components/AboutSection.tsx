@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -34,7 +34,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
     <section className="py-16 md:py-28 bg-white relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center text-center lg:text-left">
-          {/* Tr獺i: N廙 dung */}
+          {/* Trái: Nội dung */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,7 +54,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
             </p>
           </motion.div>
 
-          {/* Ph廕ξ: Grid t穩nh n?ng */}
+          {/* Phải: Grid tính năng */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative items-start">
             {features.map((feature, idx) => (
               <motion.div

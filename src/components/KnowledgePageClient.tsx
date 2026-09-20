@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -42,7 +42,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
 
   return (
     <main className="min-h-screen selection:bg-cyan-600 selection:text-white overflow-x-hidden bg-white">
-      {/* ?? Hero ??????????????????????????????????????????????????????? */}
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-slate-50 border-b border-slate-200">
         <TechGridBackground />
 
@@ -67,7 +67,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
             </div>
             <input
               type="text"
-              placeholder={lang === 'vi' ? 'T穫m ki廕禦 c璽u h廙 chuy礙n m繫n...' : 'Search technical questions...'}
+              placeholder={lang === 'vi' ? 'Tìm kiếm câu hỏi chuyên môn...' : 'Search technical questions...'}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-white border border-slate-300 rounded-sm py-3.5 pl-12 pr-4 text-slate-900 focus:outline-none focus:border-cyan-700 transition-colors text-sm shadow-sm"
@@ -76,7 +76,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
         </div>
       </section>
 
-      {/* ?? FAQ Section ?????????????????????????????????????????????? */}
+      {/* ── FAQ Section ────────────────────────────────────────────── */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-3">
@@ -139,7 +139,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
                   <HelpCircle className="w-6 h-6" />
                 </div>
                 <p className="text-slate-500 text-sm">
-                  {lang === 'vi' ? 'Kh繫ng t穫m th廕句 c璽u h廙 ph羅 h廙φ...' : 'No matching results found...'}
+                  {lang === 'vi' ? 'Không tìm thấy câu hỏi phù hợp...' : 'No matching results found...'}
                 </p>
               </div>
             )}
@@ -147,7 +147,7 @@ export default function KnowledgePageClient({ lang, dict }: KnowledgePageClientP
         </div>
       </section>
 
-      {/* ?? CTA ?????????????????????????????????????????????????????? */}
+      {/* ── CTA ────────────────────────────────────────────────────── */}
       <section className="py-16 px-6 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto p-10 md:p-14 bg-slate-900 rounded-lg text-center space-y-6 border border-slate-800 shadow-sm">
           <span className="inline-flex items-center gap-1.5 text-cyan-300 bg-cyan-950 border border-cyan-800 px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest">

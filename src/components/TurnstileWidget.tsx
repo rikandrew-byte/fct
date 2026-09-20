@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useCallback } from "react";
 
 /**
- * Cloudflare Turnstile ??Robust Invisible Widget
+ * Cloudflare Turnstile — Robust Invisible Widget
  * Optimized for multiple widgets on the same page.
  */
 
@@ -27,8 +27,8 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
   const widgetIdRef = useRef<string | null>(null);
   const isRenderingRef = useRef(false);
 
-  // ?p ki廙 String tuy廙 ?廙 ?廙?tr獺nh l廙 "got object"
-  // ?p ki廙 String tuy廙 ?廙 v? log ?廙?MASTER ki廙 tra
+  // Ép kiểu String tuyệt đối để tránh lỗi "got object"
+  // Ép kiểu String tuyệt đối và log để MASTER kiểm tra
   const rawKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
   const siteKey = typeof rawKey === 'string' ? rawKey : "";
 
@@ -36,7 +36,7 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
     if (!containerRef.current || !window.turnstile || widgetIdRef.current || isRenderingRef.current) return;
 
     if (!siteKey) {
-      console.error("?儭?[Turnstile] CRITICAL: Site Key is empty or invalid type:", typeof rawKey);
+      console.error("🛡️ [Turnstile] CRITICAL: Site Key is empty or invalid type:", typeof rawKey);
       return;
     }
 
@@ -49,8 +49,8 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
           onVerify(token);
         },
         "error-callback": () => {
-          console.error("?儭?[Turnstile] Verification Error. Please check Site Key and Domain settings.");
-          // Ng廕眩 reset t廙??廙g ?廙?tr獺nh v簷ng l廕搆 v繫 t廕要 khi Site Key sai
+          console.error("🛡️ [Turnstile] Verification Error. Please check Site Key and Domain settings.");
+          // Ngắt reset tự động để tránh vòng lặp vô tận khi Site Key sai
           onError?.();
         },
         theme: "light",
@@ -59,7 +59,7 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
       });
       widgetIdRef.current = id;
     } catch (err) {
-      console.error("?儭?[Turnstile Render Error]", err);
+      console.error("🛡️ [Turnstile Render Error]", err);
     } finally {
       isRenderingRef.current = false;
     }
@@ -67,7 +67,7 @@ export default function TurnstileWidget({ onVerify, onError }: TurnstileWidgetPr
 
   useEffect(() => {
     if (!siteKey) {
-      console.warn("?儭?[Turnstile] Missing NEXT_PUBLIC_TURNSTILE_SITE_KEY.");
+      console.warn("🛡️ [Turnstile] Missing NEXT_PUBLIC_TURNSTILE_SITE_KEY.");
       return;
     }
 

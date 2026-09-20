@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { MessageSquare, Sparkles, BookOpen, Phone, X, MessageCircle } from "lucide-react";
 import { useAssistant } from "@/context/AssistantContext";
@@ -58,7 +58,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
     {
       id: "phone",
       icon: <Phone className="w-5 h-5 text-white" />,
-      label: lang === "vi" ? "G廙 ngay" : "Call Now",
+      label: lang === "vi" ? "Gọi ngay" : "Call Now",
       color: "bg-emerald-500",
       href: phoneLink
     }

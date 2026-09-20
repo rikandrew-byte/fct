@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -69,7 +69,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
     } catch (error: any) {
       setMessages((prev) => [
         ...prev, 
-        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "L廙 h廙?th廙g: Kh繫ng th廙?k廕篙 n廙 t廙 Chuy礙n gia T v廕叩 K廙?thu廕負.") }
+        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "Lỗi hệ thống: Không thể kết nối tới Chuyên gia Tư vấn Kỹ thuật.") }
       ]);
     } finally {
       setIsLoading(false);
@@ -89,7 +89,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold tracking-tight text-slate-50">
-                  {lang === "en" ? "FCT Technical Advisor" : "Tr廙?l羸 K廙?thu廕負 FCT"}
+                  {lang === "en" ? "FCT Technical Advisor" : "Trợ lý Kỹ thuật FCT"}
                 </h1>
                 <span className="text-[10px] font-mono bg-cyan-900/60 text-cyan-300 border border-cyan-700/50 px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold">
                   Enterprise
@@ -97,7 +97,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               </div>
               <p className="text-slate-400 text-xs font-mono flex items-center gap-1.5 mt-1">
                 <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                {lang === "en" ? "Grounded in FCT Knowledge Base" : "D廙?li廙 ?廙 so獺t h廙?sinh th獺i FCT"}
+                {lang === "en" ? "Grounded in FCT Knowledge Base" : "Dữ liệu đối soát hệ sinh thái FCT"}
               </p>
             </div>
           </div>
@@ -125,12 +125,12 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               </div>
               <div className="space-y-1.5">
                 <h2 className="text-lg font-bold tracking-tight text-slate-900">
-                  {lang === "en" ? "Technical Consultation Session Initialized" : "Phi礙n t v廕叩 k廙?thu廕負 tr廙帷 tuy廕積"}
+                  {lang === "en" ? "Technical Consultation Session Initialized" : "Phiên tư vấn kỹ thuật trực tuyến"}
                 </h2>
                 <p className="text-xs text-slate-600 max-w-md leading-relaxed">
                   {lang === "en" 
                     ? "Ask technical questions about Software Protection, Mobile Security, or Industrial OT Historian." 
-                    : "Tra c廙季 th繫ng s廙?k廙?thu廕負, m繫 h穫nh c廕叼 ph矇p Sentinel/Guardant, b廕υ m廕負 Guardsquare, ho廕搾 d廙?li廙 c繫ng nghi廙 Canary."}
+                    : "Tra cứu thông số kỹ thuật, mô hình cấp phép Sentinel/Guardant, bảo mật Guardsquare, hoặc dữ liệu công nghiệp Canary."}
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={lang === "en" ? "Type your technical query..." : "Nh廕計 c璽u h廙 chuy礙n m繫n k廙?thu廕負..."}
+              placeholder={lang === "en" ? "Type your technical query..." : "Nhập câu hỏi chuyên môn kỹ thuật..."}
               className="flex-1 bg-white border border-slate-200 rounded-sm px-4 py-2.5 text-sm font-sans text-slate-900 outline-none focus:border-cyan-500 shadow-xs"
             />
             <button 
@@ -210,7 +210,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
             </button>
           </form>
           <p className="text-[10px] text-center mt-2.5 text-slate-400 font-mono uppercase tracking-wider">
-            {lang === "en" ? "Enterprise Technical Session ??Confidential & Grounded" : "Phi礙n t v廕叩 k廙?thu廕負 doanh nghi廙 ??B廕υ m廕負 & ?瓊 ?廙 so獺t t?i li廙"}
+            {lang === "en" ? "Enterprise Technical Session — Confidential & Grounded" : "Phiên tư vấn kỹ thuật doanh nghiệp — Bảo mật & Đã đối soát tài liệu"}
           </p>
         </div>
       </div>

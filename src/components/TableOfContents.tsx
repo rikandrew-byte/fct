@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { List } from "lucide-react";
@@ -63,7 +63,7 @@ export default function TableOfContents({ content }: { content: string }) {
     <nav className="bg-slate-50 rounded-lg p-5 border border-slate-200 sticky top-32">
       <div className="flex items-center gap-2 mb-5 text-cyan-700">
         <List className="w-4 h-4" />
-        <h3 className="text-[11px] font-bold uppercase tracking-wider">M廙卉 l廙卉 b?i vi廕篙</h3>
+        <h3 className="text-[11px] font-bold uppercase tracking-wider">Mục lục bài viết</h3>
       </div>
       
       <div className="relative">

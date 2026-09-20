@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { MessageCircle, X, BriefcaseBusiness, Mail, Phone, MapPin, Video, Users } from "lucide-react";
 import Link from "next/link";
@@ -20,13 +20,13 @@ export default function Footer({ lang, dict }: FooterProps) {
   useEffect(() => {
     setMounted(true);
     
-    // Kh繫i ph廙卉 con s廙?g廕吵 nh廕另 t廙?l廕吵 t廕ξ tr廙 (gi繳p UI kh繫ng b廙?gi廕負 t廙?2103)
+    // Khôi phục con số gần nhất từ lần tải trước (giúp UI không bị giật từ 2103)
     const cachedTotal = localStorage.getItem('fct_last_total');
     if (cachedTotal) {
       setVisitorCount(parseInt(cachedTotal, 10));
     }
 
-    // G廙 API ?廙?ghi nh廕要 1 l廙ㄅ xem trang th廕負 v?o Database
+    // Gọi API để ghi nhận 1 lượt xem trang thật vào Database
     const recordVisit = async () => {
       try {
         const res = await fetch('/api/visits', { method: 'POST' });
@@ -34,17 +34,17 @@ export default function Footer({ lang, dict }: FooterProps) {
         if (data.total) {
           const realTotal = 2100 + data.total;
           setVisitorCount(realTotal); 
-          // Lu l廕【 ?廙?l廕吵 sau load trang kh繫ng b廙?gi廕負 s廙?
+          // Lưu lại để lần sau load trang không bị giật số
           localStorage.setItem('fct_last_total', realTotal.toString());
         }
       } catch (error) {
-        console.error("L廙 ?廕禦 l廙ㄅ truy c廕計", error);
+        console.error("Lỗi đếm lượt truy cập", error);
       }
     };
 
     recordVisit();
 
-    // Gi廕?l廕計 s廙?ng廙 ?ang tr廙帷 tuy廕積 (Online)
+    // Giả lập số người đang trực tuyến (Online)
     setOnlineCount(Math.floor(Math.random() * (15 - 5 + 1)) + 5);
   }, []);
 
@@ -52,7 +52,7 @@ export default function Footer({ lang, dict }: FooterProps) {
     <footer className="bg-gray-900 pt-4 md:pt-6 pb-4 border-t border-gray-800 text-gray-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-10">
-          {/* C廙 1: Brand */}
+          {/* Cột 1: Brand */}
           <div className="space-y-8 md:col-span-4">
             <Link href={`/${lang}`} className="flex items-center gap-3">
               <Image 
@@ -70,7 +70,7 @@ export default function Footer({ lang, dict }: FooterProps) {
 
           </div>
 
-          {/* C廙 2: Tin t廙妾 v? b?i vi廕篙 */}
+          {/* Cột 2: Tin tức và bài viết */}
           <div className="md:col-span-3">
             <h4 className="text-gray-100 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.news}</h4>
             <ul className="space-y-4 text-sm font-light">
@@ -81,7 +81,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             </ul>
           </div>
 
-          {/* C廙 3: Li礙n k廕篙 nhanh */}
+          {/* Cột 3: Liên kết nhanh */}
           <div className="md:col-span-2">
             <h4 className="text-gray-100 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
             <ul className="space-y-6 font-light">
@@ -90,7 +90,7 @@ export default function Footer({ lang, dict }: FooterProps) {
             </ul>
           </div>
 
-          {/* C廙 4: Li礙n h廙?*/}
+          {/* Cột 4: Liên hệ */}
           <div className="md:col-span-3">
             <h4 className="text-gray-100 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.contact}</h4>
             <ul className="space-y-5 text-sm font-light">

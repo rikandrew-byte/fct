@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -44,14 +44,14 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
 
   return (
     <main className="min-h-screen selection:bg-cyan-600 selection:text-white overflow-x-hidden bg-white">
-      {/* ?? Hero ??????????????????????????????????????????????????????? */}
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-slate-50 border-b border-slate-200">
         <TechGridBackground />
 
         <div className="max-w-4xl mx-auto relative z-10 text-center space-y-6">
           <span className="inline-flex items-center gap-2 border border-cyan-700 bg-cyan-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 inline-block" />
-            {dict.navbar.resources || (isEn ? "Resources & FAQ" : "T?i li廙 & H廙 ?獺p")}
+            {dict.navbar.resources || (isEn ? "Resources & FAQ" : "Tài liệu & Hỏi đáp")}
           </span>
 
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
@@ -69,7 +69,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
             </div>
             <input
               type="text"
-              placeholder={isEn ? 'Search technical questions...' : 'T穫m ki廕禦 c璽u h廙 chuy礙n m繫n...'}
+              placeholder={isEn ? 'Search technical questions...' : 'Tìm kiếm câu hỏi chuyên môn...'}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-white border border-slate-300 rounded-sm py-3.5 pl-12 pr-4 text-slate-900 focus:outline-none focus:border-cyan-700 transition-colors text-sm shadow-sm"
@@ -78,7 +78,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
         </div>
       </section>
 
-      {/* ?? Main Content Area ?????????????????????????????????????????????? */}
+      {/* ── Main Content Area ────────────────────────────────────────────── */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-10 relative items-start">
           
@@ -144,7 +144,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                     <HelpCircle className="w-6 h-6" />
                   </div>
                   <p className="text-slate-500 text-sm">
-                    {isEn ? 'No matching results found...' : 'Kh繫ng t穫m th廕句 k廕篙 qu廕?ph羅 h廙φ...'}
+                    {isEn ? 'No matching results found...' : 'Không tìm thấy kết quả phù hợp...'}
                   </p>
                 </div>
               )}
@@ -160,14 +160,14 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                       <BookOpen className="w-4 h-4" />
                     </div>
                     <h4 className="text-base font-bold text-slate-900 uppercase tracking-tight">
-                      {isEn ? "Whitepapers" : "Th vi廙 S獺ch tr廕疸g"}
+                      {isEn ? "Whitepapers" : "Thư viện Sách trắng"}
                     </h4>
                   </div>
 
                   <p className="text-xs text-slate-500 mb-5 leading-relaxed">
                      {isEn 
                        ? "Unlock deep technical insights with our exclusive whitepaper collection."
-                       : "Kh獺m ph獺 c獺c t?i li廙 k廙?thu廕負 chuy礙n s璽u ?廙 quy廙 d?nh cho doanh nghi廙."}
+                       : "Khám phá các tài liệu kỹ thuật chuyên sâu độc quyền dành cho doanh nghiệp."}
                   </p>
 
                   <div className="flex flex-col gap-2.5">
@@ -177,7 +177,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                           <FileText className="w-3.5 h-3.5" /> Thales Sentinel
                         </span>
                         <span className="text-xs text-slate-700 font-medium">
-                          {isEn ? "Software Monetization Guide" : "T廙 ?a h籀a doanh thu ph廕吵 m廙"}
+                          {isEn ? "Software Monetization Guide" : "Tối đa hóa doanh thu phần mềm"}
                         </span>
                      </Link>
 
@@ -187,7 +187,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                           <FileText className="w-3.5 h-3.5" /> Guardsquare
                         </span>
                         <span className="text-xs text-slate-700 font-medium">
-                          {isEn ? "Defeat Mobile Malware" : "?獺nh b廕【 M瓊 ?廙 & Overlay"}
+                          {isEn ? "Defeat Mobile Malware" : "Đánh bại Mã độc & Overlay"}
                         </span>
                      </Link>
 
@@ -197,7 +197,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                           <FileText className="w-3.5 h-3.5" /> Canary Historian
                         </span>
                         <span className="text-xs text-slate-700 font-medium">
-                          {isEn ? "Visualize Millions of OT Data" : "T廙 u h籀a D廙?li廙 V廕要 h?nh"}
+                          {isEn ? "Visualize Millions of OT Data" : "Tối ưu hóa Dữ liệu Vận hành"}
                         </span>
                      </Link>
                   </div>
@@ -207,7 +207,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
         </div>
       </section>
 
-      {/* ?? CTA ?????????????????????????????????????????????????????? */}
+      {/* ── CTA ────────────────────────────────────────────────────── */}
       <section className="py-16 px-6 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto p-10 md:p-14 bg-slate-900 rounded-lg text-center space-y-6 border border-slate-800 shadow-sm">
           <span className="inline-flex items-center gap-1.5 text-cyan-300 bg-cyan-950 border border-cyan-800 px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest">

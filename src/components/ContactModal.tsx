@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2, Loader2 } from "lucide-react";
@@ -28,7 +28,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
     // Phone validation
     const phoneRegex = /^[0-9+]{10,15}$/;
     if (!phoneRegex.test(phone)) {
-      alert("S廙??i廙 tho廕【 kh繫ng h廙φ l廙? Vui l簷ng ki廙 tra l廕【.");
+      alert("Số điện thoại không hợp lệ. Vui lòng kiểm tra lại.");
       return;
     }
 
@@ -62,11 +62,11 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
         }, 4000);
       } else {
         const errorData = await response.json();
-        alert(errorData.error || "?瓊 c籀 l廙 x廕ㄊ ra. Vui l簷ng th廙?l廕【.");
+        alert(errorData.error || "Đã có lỗi xảy ra. Vui lòng thử lại.");
       }
     } catch (error) {
       console.error(error);
-      alert("L廙 k廕篙 n廙.");
+      alert("Lỗi kết nối.");
     } finally {
       setIsLoading(false);
     }
@@ -207,7 +207,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                       )}
                     </button>
 
-                    {/* T?ng h穫nh ??Ch廕搖 Bot */}
+                    {/* Tàng hình — Chặn Bot */}
                     <TurnstileWidget onVerify={setTurnstileToken} />
 
                     <p className="text-[10px] text-slate-400 text-center font-mono uppercase tracking-wider mt-3">{d.form.commitment}</p>

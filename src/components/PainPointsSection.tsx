@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Smartphone, Database, Code } from "lucide-react";
 import { motion } from "framer-motion";
@@ -84,7 +84,7 @@ export default function PainPointsSection({ dict }: PainPointsSectionProps) {
               {/* Pain */}
               <div className="space-y-1.5">
                 <p className="text-[11px] font-black uppercase tracking-[0.2em] text-gray-600">
-                  N廙 ?au
+                  Nỗi đau
                 </p>
                 <p className="text-gray-700 text-sm font-light leading-relaxed">
                   {card.pain}
@@ -94,7 +94,7 @@ export default function PainPointsSection({ dict }: PainPointsSectionProps) {
               {/* Consequence */}
               <div className="mt-auto space-y-1.5 rounded-xl bg-red-100 border border-red-300 p-4">
                 <p className="text-[11px] font-black uppercase tracking-[0.2em] text-red-600">
-                  H廕赴 qu廕?
+                  Hậu quả
                 </p>
                 <p className="text-red-700 text-sm font-light leading-relaxed">
                   {card.consequence}

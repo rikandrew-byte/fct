@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { 
@@ -36,20 +36,20 @@ interface ProjectsPageClientProps {
 }
 
 const iconMap: Record<string, any> = {
-  "T?i ch穩nh - Ng璽n h?ng": CreditCard,
+  "Tài chính - Ngân hàng": CreditCard,
   "Finance & Banking": CreditCard,
-  "Vi廙 th繫ng": Globe,
+  "Viễn thông": Globe,
   "Telecommunications": Globe,
-  "C繫ng nghi廙 - S廕τ xu廕另": Factory,
+  "Công nghiệp - Sản xuất": Factory,
   "Manufacturing & Industry": Factory,
-  "Ch穩nh ph廙?: Building2,
+  "Chính phủ": Building2,
   "Government": Building2,
-  "D廙?li廙": Database,
+  "Dữ liệu": Database,
   "Data Centers": Database,
-  "C繫ng ngh廙?: Cpu,
+  "Công nghệ": Cpu,
   "Technology": Cpu,
   "Cloud": Cloud,
-  "B廕υ m廕負": Lock,
+  "Bảo mật": Lock,
   "Security": Lock
 };
 
@@ -58,9 +58,9 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
   const d = dict.projects;
 
   const stats = [
-    { label: d.stats.projects || "D廙?獺n tri廙 khai", value: "150+", sub: "Total Deployed" },
-    { label: d.stats.partners || "?廙 t獺c Tier-1", value: "40+", sub: "Tier-1 Partners" },
-    { label: d.stats.roi || "T廙?l廙?t廙 u", value: "30%", sub: "Efficiency Increase" },
+    { label: d.stats.projects || "Dự án triển khai", value: "150+", sub: "Total Deployed" },
+    { label: d.stats.partners || "Đối tác Tier-1", value: "40+", sub: "Tier-1 Partners" },
+    { label: d.stats.roi || "Tỷ lệ tối ưu", value: "30%", sub: "Efficiency Increase" },
   ];
 
   return (
