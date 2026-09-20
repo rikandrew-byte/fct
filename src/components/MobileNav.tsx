@@ -49,7 +49,7 @@ export default function MobileNav({ lang, dict, onOpenConsult }: MobileNavProps)
         }`}
       >
         <Link href={`/${lang}`} className="flex items-center gap-2.5 z-50">
-          <Image src="/logo.png" alt="FCT Vinh Thinh Logo" width={36} height={36} className="object-contain drop-shadow-[0_0_8px_rgba(59,130,246,0.2)]" />
+          <Image src="/logo.jpg" alt="FCT Vinh Thinh Logo" width={36} height={36} className="object-contain drop-shadow-[0_0_8px_rgba(59,130,246,0.2)]" />
           <span className="font-black text-gray-900 text-[13px] tracking-tighter drop-shadow-md">FCT Vinh Thinh</span>
         </Link>
         

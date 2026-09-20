@@ -91,7 +91,7 @@ export default async function RootLayout({
     "name": "FCT Vinh Thinh .,JSC",
     "alternateName": "Công ty Cổ phần Công nghệ FCT Vĩnh Thịnh",
     "url": "https://fct.vn",
-    "logo": "https://fct.vn/logo.png",
+    "logo": "https://fct.vn/logo.jpg",
     "description": lang === 'vi' 
       ? "Nhà phân phối & đối tác giải pháp bảo mật phần mềm, bản quyền, xác thực số và hệ thống dữ liệu công nghiệp tại Việt Nam: Thales Sentinel, Guardsquare, Canary Labs, Longmai, Guardant."
       : "Authorized distributor and solution partner for software protection, licensing, digital authentication and industrial data historian in Vietnam.",
