@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Server, ShieldCheck, Cloud, Usb, Monitor, CheckCircle2, ArrowRight, ArrowDown } from "lucide-react";
@@ -11,13 +11,13 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
   return (
     <div className="w-full max-w-6xl mx-auto py-16 px-4">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-black text-blue-900 tracking-tight">
-          {isEn ? "Licensing Architecture" : "Sơ đồ Kiến trúc Cấp phép"}
+        <h2 className="text-3xl md:text-4xl font-black text-cyan-900 tracking-tight">
+          {isEn ? "Licensing Architecture" : "S ?廙?Ki廕積 tr繳c C廕叼 ph矇p"}
         </h2>
         <p className="text-slate-500 mt-4 max-w-2xl mx-auto">
           {isEn 
             ? "Secure, scalable, and flexible licensing deployment models from vendor to end-user." 
-            : "Mô hình triển khai bản quyền an toàn, mở rộng và linh hoạt từ nhà cung cấp đến người dùng cuối."}
+            : "M繫 h穫nh tri廙 khai b廕τ quy廙 an to?n, m廙?r廙g v? linh ho廕﹀ t廙?nh? cung c廕叼 ?廕積 ng廙 d羅ng cu廙."}
         </p>
       </div>
 
@@ -26,14 +26,14 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
         {/* Zone 1: Vendor */}
         <div className="w-full lg:w-1/3 flex flex-col gap-4 bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-xs relative z-10">
           <div className="text-center pb-2 border-b border-slate-200">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-900">
-              {isEn ? "Vendor Zone" : "Vùng Nhà Phát Triển"}
+            <span className="text-xs font-bold uppercase tracking-wider text-cyan-900">
+              {isEn ? "Vendor Zone" : "V羅ng Nh? Ph獺t Tri廙"}
             </span>
           </div>
           
           <div className="flex flex-col gap-3">
-            <div className="bg-white p-4 rounded-md shadow-xs border border-slate-200 flex items-center gap-3.5 hover:border-blue-300 transition-colors">
-              <div className="bg-blue-600 text-white p-2.5 rounded-sm">
+            <div className="bg-white p-4 rounded-md shadow-xs border border-slate-200 flex items-center gap-3.5 hover:border-cyan-300 transition-colors">
+              <div className="bg-cyan-600 text-white p-2.5 rounded-sm">
                 <Server className="w-5 h-5" />
               </div>
               <div>
@@ -42,8 +42,8 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
               </div>
             </div>
 
-            <div className="bg-white p-4 rounded-md shadow-xs border border-slate-200 flex items-center gap-3.5 hover:border-blue-300 transition-colors">
-              <div className="bg-blue-600 text-white p-2.5 rounded-sm">
+            <div className="bg-white p-4 rounded-md shadow-xs border border-slate-200 flex items-center gap-3.5 hover:border-cyan-300 transition-colors">
+              <div className="bg-cyan-600 text-white p-2.5 rounded-sm">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
@@ -59,13 +59,13 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
           {/* Mobile Arrows */}
           <div className="flex lg:hidden flex-row gap-8 justify-center w-full">
              <div className="flex flex-col items-center gap-2">
-                <ArrowDown className="w-5 h-5 text-blue-500" />
+                <ArrowDown className="w-5 h-5 text-cyan-500" />
                 <div className="bg-sky-50 border border-sky-200 text-sky-700 px-3 py-1.5 rounded-sm flex items-center gap-1.5 text-xs font-semibold">
                   <Cloud className="w-4 h-4" /> Cloud
                 </div>
              </div>
              <div className="flex flex-col items-center gap-2">
-                <ArrowDown className="w-5 h-5 text-blue-500" />
+                <ArrowDown className="w-5 h-5 text-cyan-500" />
                 <div className="bg-indigo-50 border border-indigo-200 text-indigo-700 px-3 py-1.5 rounded-sm flex items-center gap-1.5 text-xs font-semibold">
                   <Usb className="w-4 h-4" /> Hardware
                 </div>
@@ -96,7 +96,7 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
         <div className="w-full lg:w-1/3 flex flex-col gap-4 bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-xs relative z-10">
           <div className="text-center pb-2 border-b border-slate-200">
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
-              {isEn ? "Customer Zone" : "Vùng Khách Hàng"}
+              {isEn ? "Customer Zone" : "V羅ng Kh獺ch H?ng"}
             </span>
           </div>
           
@@ -111,7 +111,7 @@ export default function ProductArchitecture({ isEn = false }: ProductArchitectur
               <div>
                 <h4 className="font-bold text-base text-slate-900">End-user App</h4>
                 <p className="text-xs text-slate-500 mt-1">
-                  {isEn ? "License Validated Successfully" : "Kiểm tra Bản quyền Thành công"}
+                  {isEn ? "License Validated Successfully" : "Ki廙 tra B廕τ quy廙 Th?nh c繫ng"}
                 </p>
               </div>
             </div>

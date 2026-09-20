@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { MessageSquare, Sparkles, BookOpen, Phone, X, MessageCircle } from "lucide-react";
 import { useAssistant } from "@/context/AssistantContext";
@@ -45,7 +45,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
       id: "ai",
       icon: <Sparkles className="w-5 h-5 text-amber-400" />,
       label: dict.virtualAssistant?.navbarTitle || "AI Expert",
-      color: "bg-blue-600",
+      color: "bg-cyan-600",
       onClick: toggle
     },
     {
@@ -58,7 +58,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
     {
       id: "phone",
       icon: <Phone className="w-5 h-5 text-white" />,
-      label: lang === "vi" ? "Gọi ngay" : "Call Now",
+      label: lang === "vi" ? "G廙 ngay" : "Call Now",
       color: "bg-emerald-500",
       href: phoneLink
     }
@@ -118,11 +118,11 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="hidden md:flex absolute right-20 top-1/2 -translate-y-1/2 items-center gap-3 px-4 py-2.5 rounded-xl bg-white/80 backdrop-blur-xl border border-blue-300 text-gray-900 shadow-2xl hover:border-blue-400 group transition-all duration-300 whitespace-nowrap"
+              className="hidden md:flex absolute right-20 top-1/2 -translate-y-1/2 items-center gap-3 px-4 py-2.5 rounded-xl bg-white/80 backdrop-blur-xl border border-cyan-300 text-gray-900 shadow-2xl hover:border-cyan-400 group transition-all duration-300 whitespace-nowrap"
             >
               <Link href={`/${lang}/resources`} className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-blue-600" />
-                <span className="text-[10px] font-black uppercase tracking-widest text-blue-700">
+                <BookOpen className="w-4 h-4 text-cyan-600" />
+                <span className="text-[10px] font-black uppercase tracking-widest text-cyan-700">
                   {dict.navbar.resources}
                 </span>
               </Link>
@@ -135,9 +135,9 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-purple-700 text-white shadow-[0_0_40px_rgba(59,130,246,0.5)] flex items-center justify-center border border-blue-400/50 backdrop-blur-xl relative overflow-hidden group"
+              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-cyan-600 to-purple-700 text-white shadow-[0_0_40px_rgba(59,130,246,0.5)] flex items-center justify-center border border-cyan-400/50 backdrop-blur-xl relative overflow-hidden group"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity"></div>
               <AnimatePresence mode="wait">
                 {isMenuOpen ? (
                   <motion.div
@@ -166,8 +166,8 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
               {!isMenuOpen && (
                 <div className="absolute top-0 right-0 p-2">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-300 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-100 shadow-lg shadow-blue-400/50"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-100 shadow-lg shadow-cyan-400/50"></span>
                   </span>
                 </div>
               )}

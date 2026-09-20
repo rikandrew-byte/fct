@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import {
@@ -43,7 +43,7 @@ interface AboutPageClientProps {
 
 const valueIcons = [Shield, HeartHandshake, PackageCheck, Globe];
 const valueColors = [
-  "bg-blue-50 text-blue-800",
+  "bg-cyan-50 text-cyan-800",
   "bg-sky-50 text-sky-600",
   "bg-amber-50 text-amber-600",
   "bg-emerald-50 text-emerald-600",
@@ -54,8 +54,8 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
   const isEn = lang === "en";
 
   return (
-    <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden bg-white">
-      {/* ── Hero ─────────────────────────────────────────────────────── */}
+    <main className="min-h-screen selection:bg-cyan-600 selection:text-white overflow-x-hidden bg-white">
+      {/* ?? Hero ??????????????????????????????????????????????????????? */}
       <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 min-h-[50vh] flex flex-col items-center justify-center overflow-hidden bg-slate-50">
         <TechGridBackground />
 
@@ -68,23 +68,23 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
               transition={{ duration: 0.6 }}
               className="flex-1 space-y-6"
             >
-              <span className="inline-flex items-center gap-2 border border-blue-700 bg-blue-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-300 inline-block" />
+              <span className="inline-flex items-center gap-2 border border-cyan-700 bg-cyan-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 inline-block" />
                 {d.hero.badge}
               </span>
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tighter leading-[1.08]">
                 {d.hero.title} <br />
-                <span className="text-blue-700">{d.hero.subtitle}</span>
+                <span className="text-cyan-700">{d.hero.subtitle}</span>
               </h1>
               <p className="text-slate-600 text-lg font-normal leading-relaxed max-w-xl">
                 {d.hero.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href={`/${lang}/products`} className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm tracking-wide px-7 py-3 rounded-sm transition-colors duration-200">
+                <a href={`/${lang}/products`} className="inline-flex items-center gap-2 bg-cyan-700 hover:bg-cyan-800 text-white font-semibold text-sm tracking-wide px-7 py-3 rounded-sm transition-colors duration-200">
                   {d.hero.ctaProducts}
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <a href={`/${lang}/contact`} className="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-700 hover:text-blue-700 text-slate-700 font-semibold text-sm tracking-wide px-7 py-3 rounded-sm bg-white transition-colors duration-200">
+                <a href={`/${lang}/contact`} className="inline-flex items-center gap-2 border border-slate-300 hover:border-cyan-700 hover:text-cyan-700 text-slate-700 font-semibold text-sm tracking-wide px-7 py-3 rounded-sm bg-white transition-colors duration-200">
                   {d.hero.ctaExperts}
                 </a>
               </div>
@@ -106,12 +106,12 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ── Giới thiệu ──────────────────────────────────────────────── */}
+      {/* ?? Gi廙 thi廙 ???????????????????????????????????????????????? */}
       <section className="bg-white section-padding px-6">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="flex items-center gap-3 mb-2">
-            <Building2 className="w-6 h-6 text-blue-600" />
-            <span className="text-sm font-bold uppercase tracking-widest text-blue-600">
+            <Building2 className="w-6 h-6 text-cyan-600" />
+            <span className="text-sm font-bold uppercase tracking-widest text-cyan-600">
               {d.intro.badge}
             </span>
           </div>
@@ -131,11 +131,11 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ── Giá trị cốt lõi ─────────────────────────────────────────── */}
+      {/* ?? Gi獺 tr廙?c廙 l繭i ??????????????????????????????????????????? */}
       <section className="bg-slate-50 section-padding px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+            <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-cyan-600 bg-cyan-50 px-4 py-2 rounded-full">
               {d.values.badge}
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
@@ -170,12 +170,12 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ── Lĩnh vực chuyên môn ──────────────────────────────────────── */}
+      {/* ?? L藺nh v廙帷 chuy礙n m繫n ???????????????????????????????????????? */}
       <section className="bg-white section-padding px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+              <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-cyan-600 bg-cyan-50 px-4 py-2 rounded-full">
                 {d.expertise.badge}
               </span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight leading-tight">
@@ -188,7 +188,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
             <ul className="space-y-4">
               {d.expertise.list.map((item: string, idx: number) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-cyan-600 shrink-0 mt-0.5" />
                   <span className="text-gray-700 font-light leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -197,11 +197,11 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ── Timeline ────────────────────────────────────────────────── */}
+      {/* ?? Timeline ?????????????????????????????????????????????????? */}
       <section className="bg-slate-50 section-padding px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+            <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-cyan-600 bg-cyan-50 px-4 py-2 rounded-full">
               {d.journey.badge}
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
@@ -211,7 +211,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
 
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-blue-100 md:left-1/2" />
+            <div className="absolute left-6 top-0 bottom-0 w-px bg-cyan-100 md:left-1/2" />
 
             <div className="space-y-10">
               {d.journey.milestones.map((m: Milestone, idx: number) => (
@@ -224,7 +224,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
                   }`}
                 >
                   {/* Year bubble */}
-                  <div className="relative z-10 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-800 text-white font-black text-sm shadow-lg shadow-blue-800/20 ml-0.5 md:ml-0 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-0">
+                  <div className="relative z-10 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-800 text-white font-black text-sm shadow-lg shadow-cyan-800/20 ml-0.5 md:ml-0 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-0">
                     {m.year.slice(2)}
                   </div>
 
@@ -236,7 +236,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
                   >
                     <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm inline-block w-full md:max-w-sm">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg">
+                        <span className="text-xs font-bold text-cyan-600 bg-cyan-50 px-2.5 py-1 rounded-lg">
                           {m.year}
                         </span>
                         <h3 className="font-black text-gray-900">{m.title}</h3>
@@ -251,12 +251,12 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ── Đối tác chiến lược ───────────────────────────────────────── */}
+      {/* ?? ?廙 t獺c chi廕積 l廙θ ????????????????????????????????????????? */}
       <section className="bg-white section-padding px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div className="space-y-4">
-              <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
+              <span className="inline-block text-[11px] font-bold uppercase tracking-[0.3em] text-cyan-600 bg-cyan-50 px-4 py-2 rounded-full">
                 {d.partners.badge}
               </span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
@@ -326,7 +326,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
         </div>
       </section>
 
-      {/* ── CTA Liên hệ ─────────────────────────────────────────────── */}
+      {/* ?? CTA Li礙n h廙???????????????????????????????????????????????? */}
       <section className="bg-white py-20 px-6 border-t border-slate-200">
         <div className="max-w-4xl mx-auto w-full bg-slate-900 rounded-lg p-10 sm:p-14 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div className="space-y-3">
@@ -342,7 +342,7 @@ export default function AboutPageClient({ lang, dict }: AboutPageClientProps) {
             <a
               href="tel:0983027776"
               id="about-contact-call"
-              className="inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-7 py-3 rounded-sm font-semibold text-sm tracking-wide transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-cyan-700 hover:bg-cyan-800 text-white px-7 py-3 rounded-sm font-semibold text-sm tracking-wide transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />
               0983 027 776

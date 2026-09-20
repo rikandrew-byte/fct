@@ -70,7 +70,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
   ];
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-slate-50 text-slate-900 overflow-hidden font-sans selection:bg-blue-600">
+    <main ref={containerRef} className="min-h-screen bg-slate-50 text-slate-900 overflow-hidden font-sans selection:bg-cyan-600">
       
       {/* ── 1. HERO SECTION (Slate-900 Dark Blueprint) ───────────────────── */}
       <section className="relative min-h-[60vh] flex flex-col items-center justify-center pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 bg-slate-900 border-b border-slate-800">
@@ -90,7 +90,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
           >
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight text-white">
               THALES SENTINEL <br />
-              <span className="text-blue-400">
+              <span className="text-cyan-400">
                 INTELLECTUAL ARMORY
               </span>
             </h1>
@@ -105,7 +105,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
           <div className="flex justify-center gap-4 pt-2">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="px-8 py-3.5 bg-blue-700 hover:bg-blue-800 text-white rounded-sm font-semibold text-sm tracking-wide transition-colors shadow-sm"
+              className="px-8 py-3.5 bg-cyan-700 hover:bg-cyan-800 text-white rounded-sm font-semibold text-sm tracking-wide transition-colors shadow-sm"
             >
               {isEn ? "Get Technical Advice" : "Nhận Tư vấn Kỹ thuật"}
             </button>
@@ -121,7 +121,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       {/* ── 2. BLUEPRINT (White) ────────────────── */}
       <section className="py-20 px-6 max-w-7xl mx-auto relative text-[15px] bg-white">
          <div className="text-center mb-16 space-y-3">
-            <span className="text-blue-700 font-bold text-xs uppercase tracking-[0.3em]">Military Grade Logic</span>
+            <span className="text-cyan-700 font-bold text-xs uppercase tracking-[0.3em]">Military Grade Logic</span>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight text-slate-900">
               Sentinel Security Pipeline
             </h2>
@@ -189,7 +189,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                   stroke={activeStep === 2 ? "#3b82f6" : "#1e293b"} 
                   strokeWidth="2" 
                 />
-                <ShieldCheck className="text-blue-400" x="480" y="160" width="40" height="40" />
+                <ShieldCheck className="text-cyan-400" x="480" y="160" width="40" height="40" />
                 <text x="500" y="245" fill="white" fontSize="14" fontWeight="900" textAnchor="middle" className="uppercase tracking-widest">
                   {isEn ? "SENTINEL ENVELOPE" : "GIÁP PHẦN MỀM"}
                 </text>
@@ -227,14 +227,14 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                        <MousePointer2 className="w-4 h-4" /> {isEn ? "Hover stage to inspect technical logic" : "Di chuột vào quy trình để xem chi tiết kỹ thuật"}
                     </p>
                   ) : activeStep === 1 ? (
-                    <p className="text-blue-600 font-light leading-relaxed">
+                    <p className="text-cyan-600 font-light leading-relaxed">
                        {isEn 
                          ? "Plain executable files (Win/Linux/Android) contain raw logic. Vulnerable to reverse engineering and illicit modification."
                          : "Tệp tin thực thi (Win/Linux/Android) chưa được bảo vệ, dễ bị dịch ngược mã nguồn và thay đổi logic trái phép."
                        }
                     </p>
                   ) : activeStep === 2 ? (
-                    <p className="text-blue-600 font-light leading-relaxed">
+                    <p className="text-cyan-600 font-light leading-relaxed">
                        {isEn 
                          ? "Multi-layered encryption wrapper. Prevents debugging, patching, and data dumping using proprietary Thales obfuscation algorithms."
                          : "Lớp bao bọc đa tầng mã hóa. Tự động ngăn chặn Debugger, Patching và trích xuất dữ liệu bằng thuật toán của Thales."
@@ -254,7 +254,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             <div className="mt-10 flex justify-center">
               <Link 
                 href={`/${lang}/contact?solution=thales`}
-                className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-blue-700 transition-all flex items-center gap-3 shadow-xl shadow-blue-600/20 group"
+                className="bg-cyan-600 text-white px-10 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-cyan-700 transition-all flex items-center gap-3 shadow-xl shadow-cyan-600/20 group"
               >
                 {isEn ? "Request HSM/Sentinel Quote" : "Nhận báo giá tích hợp HSM"}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -266,7 +266,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
       {/* ── 2.5. HSM ARCHITECTURE SECTION ────────────────── */}
       <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
          <div className="text-center mb-20 space-y-4">
-            <span className="text-blue-600 font-black text-xs uppercase tracking-[0.4em]">Cryptographic Infrastructure</span>
+            <span className="text-cyan-600 font-black text-xs uppercase tracking-[0.4em]">Cryptographic Infrastructure</span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-gray-900">
               {isEn ? "HSM Security Architecture" : "Kiến trúc Bảo mật HSM"}
             </h2>
@@ -328,10 +328,10 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             {/* HL - Hardware */}
             <div className="bg-white border border-slate-200 rounded-lg p-8 space-y-6 hover:border-slate-400 transition-colors">
                <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 bg-blue-50 rounded-sm flex items-center justify-center text-blue-700">
+                  <div className="w-12 h-12 bg-cyan-50 rounded-sm flex items-center justify-center text-cyan-700">
                      <Cpu className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-sm text-blue-700">Sentinel HL</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest bg-cyan-50 border border-cyan-200 px-2.5 py-1 rounded-sm text-cyan-700">Sentinel HL</span>
                </div>
                <div className="space-y-4">
                   <h3 className="text-xl font-bold uppercase text-slate-900">{isEn ? "Hardware-Based" : "Khóa Cứng Vật lý"}</h3>
@@ -399,7 +399,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                {steps.map((step, idx) => (
                  <div key={idx} className="relative">
                     <div className="bg-white border border-slate-200 rounded-lg p-6 h-full space-y-4 hover:border-slate-400 transition-colors">
-                       <span className="text-[10px] font-bold text-blue-700 uppercase tracking-[0.25em]">Phase 0{step.id}</span>
+                       <span className="text-[10px] font-bold text-cyan-700 uppercase tracking-[0.25em]">Phase 0{step.id}</span>
                        <div className="w-10 h-10 bg-slate-100 rounded-sm flex items-center justify-center text-slate-700">
                           {step.icon}
                        </div>
@@ -432,7 +432,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             <div className="flex justify-center gap-4 pt-2">
                <Link 
                  href={`/${lang}/contact?solution=thales`}
-                 className="px-8 py-3.5 bg-blue-700 hover:bg-blue-800 text-white rounded-sm font-semibold text-sm tracking-wide transition-colors inline-flex items-center gap-2"
+                 className="px-8 py-3.5 bg-cyan-700 hover:bg-cyan-800 text-white rounded-sm font-semibold text-sm tracking-wide transition-colors inline-flex items-center gap-2"
                >
                  {isEn ? "Request Integration Quote" : "Nhận báo giá tích hợp"}
                  <ArrowRight className="w-4 h-4" />

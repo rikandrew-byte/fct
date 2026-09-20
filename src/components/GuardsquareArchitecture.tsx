@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Smartphone, ShieldAlert, Lock, Zap, Ban } from "lucide-react";
@@ -12,12 +12,12 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
     <div className="w-full max-w-5xl mx-auto py-16 px-6">
       <div className="text-center mb-16 space-y-4">
         <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
-          {isEn ? "Protection Nexus" : "Pháo đài Phòng thủ Guardsquare"}
+          {isEn ? "Protection Nexus" : "Ph獺o ??i Ph簷ng th廙?Guardsquare"}
         </h2>
         <p className="text-slate-500 font-medium max-w-2xl mx-auto">
           {isEn 
             ? "Concentric layers of defense blocking reverse engineering and runtime attacks." 
-            : "Các lớp khiên đồng tâm ngăn chặn kỹ thuật dịch ngược và tấn công trực tiếp khi ứng dụng đang chạy."}
+            : "C獺c l廙 khi礙n ?廙g t璽m ng?n ch廕搖 k廙?thu廕負 d廙h ng廙θ v? t廕叩 c繫ng tr廙帷 ti廕穆 khi 廙姊g d廙叩g ?ang ch廕『."}
         </p>
       </div>
 
@@ -39,7 +39,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
             <div className="absolute top-1.5 w-8 h-1.5 bg-slate-800 rounded-full"></div>
           </div>
           <div className="absolute -bottom-10 bg-slate-900 text-white text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-sm border border-slate-800 shadow-sm whitespace-nowrap">
-            {isEn ? "Banking App" : "App Ngân Hàng"}
+            {isEn ? "Banking App" : "App Ng璽n H?ng"}
           </div>
         </div>
 
@@ -60,7 +60,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         
         {/* Label for Inner Circle */}
         <div className="absolute z-30 bottom-[20%] md:bottom-[25%] bg-rose-50 border border-rose-300 text-rose-700 text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
-          {isEn ? "Static Shield (Obfuscation)" : "Lớp giáp Tĩnh (Làm rối mã)"}
+          {isEn ? "Static Shield (Obfuscation)" : "L廙 gi獺p T藺nh (L?m r廙 m瓊)"}
         </div>
 
         {/* Outer Circle: Dynamic RASP */}
@@ -80,7 +80,7 @@ export default function GuardsquareArchitecture({ isEn = false }: GuardsquareArc
         
         {/* Label for Outer Circle */}
         <div className="absolute z-30 top-[15%] md:top-[15%] bg-rose-500 border border-rose-600 text-white text-[10px] font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md shadow-rose-500/20 whitespace-nowrap">
-          {isEn ? "Dynamic RASP (Runtime)" : "Lớp giáp Động RASP"}
+          {isEn ? "Dynamic RASP (Runtime)" : "L廙 gi獺p ?廙g RASP"}
         </div>
 
         {/* Incoming Attacks - Top Left */}

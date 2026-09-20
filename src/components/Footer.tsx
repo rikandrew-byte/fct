@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { MessageCircle, X, BriefcaseBusiness, Mail, Phone, MapPin, Video, Users } from "lucide-react";
 import Link from "next/link";
@@ -20,13 +20,13 @@ export default function Footer({ lang, dict }: FooterProps) {
   useEffect(() => {
     setMounted(true);
     
-    // Khôi phục con số gần nhất từ lần tải trước (giúp UI không bị giật từ 2103)
+    // Kh繫i ph廙卉 con s廙?g廕吵 nh廕另 t廙?l廕吵 t廕ξ tr廙 (gi繳p UI kh繫ng b廙?gi廕負 t廙?2103)
     const cachedTotal = localStorage.getItem('fct_last_total');
     if (cachedTotal) {
       setVisitorCount(parseInt(cachedTotal, 10));
     }
 
-    // Gọi API để ghi nhận 1 lượt xem trang thật vào Database
+    // G廙 API ?廙?ghi nh廕要 1 l廙ㄅ xem trang th廕負 v?o Database
     const recordVisit = async () => {
       try {
         const res = await fetch('/api/visits', { method: 'POST' });
@@ -34,17 +34,17 @@ export default function Footer({ lang, dict }: FooterProps) {
         if (data.total) {
           const realTotal = 2100 + data.total;
           setVisitorCount(realTotal); 
-          // Lưu lại để lần sau load trang không bị giật số
+          // Lu l廕【 ?廙?l廕吵 sau load trang kh繫ng b廙?gi廕負 s廙?
           localStorage.setItem('fct_last_total', realTotal.toString());
         }
       } catch (error) {
-        console.error("Lỗi đếm lượt truy cập", error);
+        console.error("L廙 ?廕禦 l廙ㄅ truy c廕計", error);
       }
     };
 
     recordVisit();
 
-    // Giả lập số người đang trực tuyến (Online)
+    // Gi廕?l廕計 s廙?ng廙 ?ang tr廙帷 tuy廕積 (Online)
     setOnlineCount(Math.floor(Math.random() * (15 - 5 + 1)) + 5);
   }, []);
 
@@ -52,7 +52,7 @@ export default function Footer({ lang, dict }: FooterProps) {
     <footer className="bg-gray-900 pt-4 md:pt-6 pb-4 border-t border-gray-800 text-gray-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-10">
-          {/* Cột 1: Brand */}
+          {/* C廙 1: Brand */}
           <div className="space-y-8 md:col-span-4">
             <Link href={`/${lang}`} className="flex items-center gap-3">
               <Image 
@@ -70,33 +70,33 @@ export default function Footer({ lang, dict }: FooterProps) {
 
           </div>
 
-          {/* Cột 2: Tin tức và bài viết */}
+          {/* C廙 2: Tin t廙妾 v? b?i vi廕篙 */}
           <div className="md:col-span-3">
             <h4 className="text-gray-100 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.news}</h4>
             <ul className="space-y-4 text-sm font-light">
-              <li><Link href={`/${lang}/blog`} className="hover:text-blue-400 transition-colors">{d.newsArticles.softProtection}</Link></li>
-              <li><Link href={`/${lang}/blog`} className="hover:text-blue-400 transition-colors">{d.newsArticles.mobileSecurity}</Link></li>
-              <li><Link href={`/${lang}/blog`} className="hover:text-blue-400 transition-colors">{d.newsArticles.authSecurity}</Link></li>
-              <li><Link href={`/${lang}/blog`} className="hover:text-blue-400 transition-colors">{d.newsArticles.iiotSolutions}</Link></li>
+              <li><Link href={`/${lang}/blog`} className="hover:text-cyan-400 transition-colors">{d.newsArticles.softProtection}</Link></li>
+              <li><Link href={`/${lang}/blog`} className="hover:text-cyan-400 transition-colors">{d.newsArticles.mobileSecurity}</Link></li>
+              <li><Link href={`/${lang}/blog`} className="hover:text-cyan-400 transition-colors">{d.newsArticles.authSecurity}</Link></li>
+              <li><Link href={`/${lang}/blog`} className="hover:text-cyan-400 transition-colors">{d.newsArticles.iiotSolutions}</Link></li>
             </ul>
           </div>
 
-          {/* Cột 3: Liên kết nhanh */}
+          {/* C廙 3: Li礙n k廕篙 nhanh */}
           <div className="md:col-span-2">
             <h4 className="text-gray-100 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.company}</h4>
             <ul className="space-y-6 font-light">
-              <li><Link href={`/${lang}/projects`} className="hover:text-blue-400 transition-colors uppercase text-[12px] tracking-normal">{dict.navbar.projects}</Link></li>
-              <li><Link href={`/${lang}/blog`} className="hover:text-blue-400 transition-colors uppercase text-[12px] tracking-normal">{dict.navbar.news}</Link></li>
+              <li><Link href={`/${lang}/projects`} className="hover:text-cyan-400 transition-colors uppercase text-[12px] tracking-normal">{dict.navbar.projects}</Link></li>
+              <li><Link href={`/${lang}/blog`} className="hover:text-cyan-400 transition-colors uppercase text-[12px] tracking-normal">{dict.navbar.news}</Link></li>
             </ul>
           </div>
 
-          {/* Cột 4: Liên hệ */}
+          {/* C廙 4: Li礙n h廙?*/}
           <div className="md:col-span-3">
             <h4 className="text-gray-100 font-bold mb-6 uppercase text-xs tracking-[0.2em]">{d.columns.contact}</h4>
             <ul className="space-y-5 text-sm font-light">
               <li className="flex gap-4">
-                <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600/20 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-cyan-600/20 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
                   <p className="text-gray-100 font-medium">{d.contactLines.headquarters}</p>
@@ -104,8 +104,8 @@ export default function Footer({ lang, dict }: FooterProps) {
                 </div>
               </li>
               <li className="flex gap-4 items-center">
-                <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600/20 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-cyan-600/20 flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
                   <p className="text-gray-100 font-medium">{d.contactLines.hotline}</p>
@@ -113,8 +113,8 @@ export default function Footer({ lang, dict }: FooterProps) {
                 </div>
               </li>
               <li className="flex gap-4 items-center">
-                <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600/20 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-cyan-600/20 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
                   <p className="text-gray-100 font-medium">{d.contactLines.supportEmail}</p>
@@ -132,16 +132,16 @@ export default function Footer({ lang, dict }: FooterProps) {
             </p>
             
             {/* Visitor Counter Badge */}
-            <div className="inline-flex items-center gap-3 bg-gray-800/50 border border-gray-700 rounded-full px-4 py-2 backdrop-blur-sm shadow-inner group hover:border-blue-400/50 transition-all duration-500">
+            <div className="inline-flex items-center gap-3 bg-gray-800/50 border border-gray-700 rounded-full px-4 py-2 backdrop-blur-sm shadow-inner group hover:border-cyan-400/50 transition-all duration-500">
               <div className="relative flex items-center shrink-0">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
                 <div className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full animate-ping opacity-40"></div>
               </div>
               <div className="flex items-center gap-3 divide-x divide-gray-700 uppercase tracking-[0.1em] font-bold text-[10px] text-gray-300">
-                <span className="flex items-center gap-1.5 group-hover:text-blue-400 transition-colors whitespace-nowrap">
+                <span className="flex items-center gap-1.5 group-hover:text-cyan-400 transition-colors whitespace-nowrap">
                   <span className="text-gray-100">{mounted ? onlineCount : '--'}</span> {d.visitorCounter.online}
                 </span>
-                <span className="pl-3 flex items-center gap-1.5 group-hover:text-blue-400 transition-colors whitespace-nowrap">
+                <span className="pl-3 flex items-center gap-1.5 group-hover:text-cyan-400 transition-colors whitespace-nowrap">
                    {d.visitorCounter.total}: <span className="text-gray-100">{mounted ? visitorCount.toLocaleString(lang === 'vi' ? 'vi-VN' : 'en-US') : '--'}</span>
                 </span>
               </div>

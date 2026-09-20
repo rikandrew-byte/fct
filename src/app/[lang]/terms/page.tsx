@@ -22,11 +22,11 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
       <section className="relative bg-slate-900 border-b border-slate-800 pt-36 pb-20 px-6 overflow-hidden">
         <TechGridBackground />
         <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4">
-          <div className="inline-block bg-blue-500/10 border border-blue-500/30 rounded-sm px-3.5 py-1 text-[11px] font-mono font-semibold text-blue-400 tracking-wider uppercase">
+          <div className="inline-block bg-cyan-500/10 border border-cyan-500/30 rounded-sm px-3.5 py-1 text-[11px] font-mono font-semibold text-cyan-400 tracking-wider uppercase">
              {isEn ? "LEGAL & COMPLIANCE" : "QUY ĐỊNH PHÁP LÝ"}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-50 tracking-tight">
-            {isEn ? "Terms of" : "Điều khoản"} <span className="text-blue-400">{isEn ? "Use" : "Sử dụng"}</span>
+            {isEn ? "Terms of" : "Điều khoản"} <span className="text-cyan-400">{isEn ? "Use" : "Sử dụng"}</span>
           </h1>
           <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             {isEn 
@@ -41,7 +41,7 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
         <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg border border-slate-200 shadow-sm">
           <div className="space-y-10">
             <div className="space-y-3 pb-8 border-b border-slate-100">
-              <div className="flex items-center gap-3 text-blue-700">
+              <div className="flex items-center gap-3 text-cyan-700">
                 <Copyright className="w-5 h-5" />
                 <h2 className="text-xl font-bold uppercase tracking-tight text-slate-900">{isEn ? "1. Intellectual Property" : "1. Sở hữu trí tuệ"}</h2>
               </div>
@@ -53,7 +53,7 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
             </div>
 
             <div className="space-y-3 pb-8 border-b border-slate-100">
-              <div className="flex items-center gap-3 text-blue-700">
+              <div className="flex items-center gap-3 text-cyan-700">
                 <Gavel className="w-5 h-5" />
                 <h2 className="text-xl font-bold uppercase tracking-tight text-slate-900">{isEn ? "2. Acceptable Use" : "2. Quy định sử dụng"}</h2>
               </div>
@@ -65,7 +65,7 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
             </div>
 
             <div className="space-y-3 pb-8 border-b border-slate-100">
-              <div className="flex items-center gap-3 text-blue-700">
+              <div className="flex items-center gap-3 text-cyan-700">
                 <AlertTriangle className="w-5 h-5" />
                 <h2 className="text-xl font-bold uppercase tracking-tight text-slate-900">{isEn ? "3. Limitation of Liability" : "3. Giới hạn trách nhiệm"}</h2>
               </div>
@@ -77,7 +77,7 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
             </div>
 
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-blue-700">
+              <div className="flex items-center gap-3 text-cyan-700">
                 <RefreshCcw className="w-5 h-5" />
                 <h2 className="text-xl font-bold uppercase tracking-tight text-slate-900">{isEn ? "4. Changes to Terms" : "4. Thay đổi điều khoản"}</h2>
               </div>

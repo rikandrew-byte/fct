@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -37,35 +37,35 @@ interface HomePageClientProps {
 
 export default function HomePageClient({ lang, dict, latestNews }: HomePageClientProps) {
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-500 selection:text-white pb-20 overflow-x-hidden">
+    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-cyan-500 selection:text-white pb-20 overflow-x-hidden">
 
       {/* Hero Section */}
       <section className="relative pt-20 md:pt-28 pb-16 px-4 sm:px-6 min-h-[82vh] flex flex-col items-center justify-center overflow-hidden bg-slate-50">
         <TechGridBackground />
 
         <div className="text-center max-w-5xl mx-auto space-y-8 z-10 relative">
-          {/* Badge — B2B Enterprise style: solid, no shimmer */}
+          {/* Badge ??B2B Enterprise style: solid, no shimmer */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <span className="inline-flex items-center gap-2 border border-blue-700 bg-blue-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-300 inline-block" />
+            <span className="inline-flex items-center gap-2 border border-cyan-700 bg-cyan-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 inline-block" />
               {dict.hero.badge}
             </span>
           </motion.div>
 
-          {/* Headline — solid, high-contrast, no gradient glow */}
+          {/* Headline ??solid, high-contrast, no gradient glow */}
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.08] text-slate-900"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.08] text-slate-900"
           >
             {dict.hero.title}
             <br />
-            <span className="text-blue-700">{dict.hero.subtitle}</span>
+            <span className="text-cyan-700">{dict.hero.subtitle}</span>
           </motion.h1>
 
           {/* Description */}
@@ -78,7 +78,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
             {dict.hero.description}
           </motion.p>
 
-          {/* CTA Buttons — solid, professional */}
+          {/* CTA Buttons ??solid, professional */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,14 +87,14 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
           >
             <a
               href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm tracking-wide px-8 py-3.5 rounded-sm transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-cyan-700 hover:bg-cyan-800 text-white font-semibold text-sm tracking-wide px-8 py-3.5 rounded-sm transition-colors duration-200"
             >
               {dict.hero.cta1}
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href={`/${lang}/whitepaper`}
-              className="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-700 hover:text-blue-700 text-slate-700 font-semibold text-sm tracking-wide px-8 py-3.5 rounded-sm bg-white transition-colors duration-200"
+              className="inline-flex items-center gap-2 border border-slate-300 hover:border-cyan-700 hover:text-cyan-700 text-slate-700 font-semibold text-sm tracking-wide px-8 py-3.5 rounded-sm bg-white transition-colors duration-200"
             >
               {dict.hero.cta2}
             </a>
@@ -113,13 +113,13 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
         <div className="max-w-5xl mx-auto px-6 text-center space-y-8">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-gray-600 font-medium text-xs md:text-sm tracking-[0.3em] uppercase">
             {dict.trust.sectors.map((sector: string) => (
-              <div key={sector} className="hover:text-blue-400 transition-colors cursor-default">{sector}</div>
+              <div key={sector} className="hover:text-cyan-400 transition-colors cursor-default">{sector}</div>
             ))}
           </div>
 
           <div className="flex items-center justify-center gap-4 text-gray-600">
             <div className="h-px w-12 bg-gray-300"></div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] italic text-blue-600">
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] italic text-cyan-600">
               {dict.trust.commitment}
             </p>
             <div className="h-px w-12 bg-gray-300"></div>
@@ -150,10 +150,10 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       <section className="max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-16 section-padding">
         {/* Header */}
         <div className="mb-10 sm:mb-14 border-b border-slate-200 pb-8">
-          <span className="text-[11px] font-bold text-blue-700 tracking-[0.3em] uppercase block mb-3">{dict.solutions.badge}</span>
+          <span className="text-[11px] font-bold text-cyan-700 tracking-[0.3em] uppercase block mb-3">{dict.solutions.badge}</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-tight">
             {dict.solutions.title}{" "}
-            <span className="text-blue-700">{dict.solutions.subtitle}</span>
+            <span className="text-cyan-700">{dict.solutions.subtitle}</span>
           </h2>
         </div>
 
@@ -166,10 +166,10 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white border border-slate-200 hover:border-blue-700 rounded-lg p-7 sm:p-9 h-full flex flex-col gap-5 transition-colors duration-200"
+              className="bg-white border border-slate-200 hover:border-cyan-700 rounded-lg p-7 sm:p-9 h-full flex flex-col gap-5 transition-colors duration-200"
             >
               <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-sm uppercase tracking-widest">
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-cyan-700 bg-cyan-50 border border-cyan-200 px-2.5 py-1 rounded-sm uppercase tracking-widest">
                   <ShieldAlert className="w-3.5 h-3.5" />
                   Enterprise Mobile Security
                 </span>
@@ -186,8 +186,8 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
                   <span key={tag} className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-sm">{tag}</span>
                 ))}
               </div>
-              <div className="flex items-center gap-1.5 text-blue-700 font-semibold text-sm group-hover:gap-3 transition-all">
-                <span>{lang === "en" ? "Explore solution" : "Khám phá giải pháp"}</span>
+              <div className="flex items-center gap-1.5 text-cyan-700 font-semibold text-sm group-hover:gap-3 transition-all">
+                <span>{lang === "en" ? "Explore solution" : "Kh獺m ph獺 gi廕ξ ph獺p"}</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
             </motion.article>
@@ -205,7 +205,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-slate-700 bg-slate-100 border border-slate-300 px-2.5 py-1 rounded-sm uppercase tracking-widest">
                   <Cpu className="w-3.5 h-3.5" />
-                  {lang === "en" ? "Hardware Security" : "Bảo mật Cứng"}
+                  {lang === "en" ? "Hardware Security" : "B廕υ m廕負 C廙姊g"}
                 </span>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Longmai</span>
               </div>
@@ -221,25 +221,25 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
                 ))}
               </div>
               <div className="flex items-center gap-1.5 text-slate-700 font-semibold text-sm group-hover:gap-3 transition-all">
-                <span>{lang === "en" ? "Learn more" : "Tìm hiểu thêm"}</span>
+                <span>{lang === "en" ? "Learn more" : "T穫m hi廙 th礙m"}</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
             </motion.article>
           </Link>
 
-          {/* Card 3: Thales Sentinel — full width, dark */}
+          {/* Card 3: Thales Sentinel ??full width, dark */}
           <Link href={`/${lang}/products/thales-sentinel`} className="group md:col-span-3">
             <motion.article
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="bg-slate-900 border border-slate-800 hover:border-blue-500 rounded-lg p-7 sm:p-9 transition-colors duration-200"
+              className="bg-slate-900 border border-slate-800 hover:border-cyan-500 rounded-lg p-7 sm:p-9 transition-colors duration-200"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div className="flex flex-col md:flex-row items-start gap-6 flex-1">
                   <div className="shrink-0">
-                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-blue-300 bg-blue-950 border border-blue-800 px-2.5 py-1 rounded-sm uppercase tracking-widest">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-cyan-300 bg-cyan-950 border border-cyan-800 px-2.5 py-1 rounded-sm uppercase tracking-widest">
                       <ShieldCheck className="w-3.5 h-3.5" />
                       Enterprise License Management
                     </span>
@@ -261,8 +261,8 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-1.5 text-blue-400 font-semibold text-sm group-hover:gap-3 transition-all shrink-0">
-                  <span>{lang === "en" ? "Explore solution" : "Khám phá giải pháp"}</span>
+                <div className="flex items-center gap-1.5 text-cyan-400 font-semibold text-sm group-hover:gap-3 transition-all shrink-0">
+                  <span>{lang === "en" ? "Explore solution" : "Kh獺m ph獺 gi廕ξ ph獺p"}</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function HomePageClient({ lang, dict, latestNews }: HomePageClien
       {/* Longmai Solution Block - Alternative Solution */}
       <LongmaiSolutionBlock isEn={lang === "en"} lang={lang} />
       
-      {/* ── 3. News Section (Khám phá tin tức) ───────────────────────── */}
+      {/* ?? 3. News Section (Kh獺m ph獺 tin t廙妾) ????????????????????????? */}
       <NewsSection lang={lang} dict={dict} latestNews={latestNews} />
 
       <Testimonials />

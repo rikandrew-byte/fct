@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,7 +25,7 @@ const MarkdownStyles = {
   ul: ({ children }: any) => <ul className="list-disc pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ul>,
   ol: ({ children }: any) => <ol className="list-decimal pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ol>,
   li: ({ children }: any) => <li className="leading-relaxed text-slate-700 text-sm">{children}</li>,
-  code: ({ children }: any) => <code className="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded-sm text-xs font-mono border border-slate-200">{children}</code>,
+  code: ({ children }: any) => <code className="bg-slate-100 text-cyan-700 px-1.5 py-0.5 rounded-sm text-xs font-mono border border-slate-200">{children}</code>,
   strong: ({ children }: any) => <strong className="font-bold text-slate-900">{children}</strong>,
 };
 
@@ -69,7 +69,7 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
     } catch (error: any) {
       setMessages((prev) => [
         ...prev, 
-        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "Lỗi hệ thống: Không thể kết nối tới Chuyên gia Tư vấn Kỹ thuật.") }
+        { role: "ai", content: error.message || (lang === "en" ? "System Error: Unable to reach AI Expert." : "L廙 h廙?th廙g: Kh繫ng th廙?k廕篙 n廙 t廙 Chuy礙n gia T v廕叩 K廙?thu廕負.") }
       ]);
     } finally {
       setIsLoading(false);
@@ -83,21 +83,21 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
         <TechGridBackground />
         <div className="max-w-4xl mx-auto flex items-center justify-between relative z-10">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-sm bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <div className="w-12 h-12 rounded-sm bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
               <Terminal className="w-6 h-6" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold tracking-tight text-slate-50">
-                  {lang === "en" ? "FCT Technical Advisor" : "Trợ lý Kỹ thuật FCT"}
+                  {lang === "en" ? "FCT Technical Advisor" : "Tr廙?l羸 K廙?thu廕負 FCT"}
                 </h1>
-                <span className="text-[10px] font-mono bg-blue-900/60 text-blue-300 border border-blue-700/50 px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold">
+                <span className="text-[10px] font-mono bg-cyan-900/60 text-cyan-300 border border-cyan-700/50 px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold">
                   Enterprise
                 </span>
               </div>
               <p className="text-slate-400 text-xs font-mono flex items-center gap-1.5 mt-1">
                 <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                {lang === "en" ? "Grounded in FCT Knowledge Base" : "Dữ liệu đối soát hệ sinh thái FCT"}
+                {lang === "en" ? "Grounded in FCT Knowledge Base" : "D廙?li廙 ?廙 so獺t h廙?sinh th獺i FCT"}
               </p>
             </div>
           </div>
@@ -120,17 +120,17 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
         >
           {messages.length === 0 && (
             <div className="h-full flex flex-col items-center justify-center text-center space-y-4 py-16">
-              <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center border border-slate-200 shadow-xs text-blue-600">
+              <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center border border-slate-200 shadow-xs text-cyan-600">
                 <ShieldCheck className="w-7 h-7" />
               </div>
               <div className="space-y-1.5">
                 <h2 className="text-lg font-bold tracking-tight text-slate-900">
-                  {lang === "en" ? "Technical Consultation Session Initialized" : "Phiên tư vấn kỹ thuật trực tuyến"}
+                  {lang === "en" ? "Technical Consultation Session Initialized" : "Phi礙n t v廕叩 k廙?thu廕負 tr廙帷 tuy廕積"}
                 </h2>
                 <p className="text-xs text-slate-600 max-w-md leading-relaxed">
                   {lang === "en" 
                     ? "Ask technical questions about Software Protection, Mobile Security, or Industrial OT Historian." 
-                    : "Tra cứu thông số kỹ thuật, mô hình cấp phép Sentinel/Guardant, bảo mật Guardsquare, hoặc dữ liệu công nghiệp Canary."}
+                    : "Tra c廙季 th繫ng s廙?k廙?thu廕負, m繫 h穫nh c廕叼 ph矇p Sentinel/Guardant, b廕υ m廕負 Guardsquare, ho廕搾 d廙?li廙 c繫ng nghi廙 Canary."}
                 </p>
               </div>
             </div>
@@ -147,13 +147,13 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
                 <div className={`w-8 h-8 shrink-0 rounded-sm flex items-center justify-center border text-xs ${
                   m.role === "user" 
                     ? "bg-slate-200 border-slate-300 text-slate-700" 
-                    : "bg-blue-600 border-blue-700 text-white"
+                    : "bg-cyan-600 border-cyan-700 text-white"
                 }`}>
                   {m.role === "user" ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                 </div>
                 <div className={`max-w-[85%] rounded-lg p-4 text-sm leading-relaxed border ${
                   m.role === "user"
-                    ? "bg-blue-600 text-white border-blue-700"
+                    ? "bg-cyan-600 text-white border-cyan-700"
                     : "bg-white border-slate-200 text-slate-800 shadow-xs"
                 }`}>
                   {m.role === "ai" ? (
@@ -177,13 +177,13 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               animate={{ opacity: 1, y: 0 }}
               className="flex gap-3"
             >
-              <div className="w-8 h-8 shrink-0 rounded-sm bg-blue-600 border border-blue-700 flex items-center justify-center text-white">
+              <div className="w-8 h-8 shrink-0 rounded-sm bg-cyan-600 border border-cyan-700 flex items-center justify-center text-white">
                 <Bot className="w-4 h-4 animate-pulse" />
               </div>
               <div className="bg-white border border-slate-200 rounded-lg px-4 py-3 flex gap-1.5 items-center shadow-xs">
-                <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></span>
-                <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.15s" }}></span>
-                <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.3s" }}></span>
+                <span className="w-2 h-2 bg-cyan-600 rounded-full animate-bounce"></span>
+                <span className="w-2 h-2 bg-cyan-600 rounded-full animate-bounce" style={{ animationDelay: "0.15s" }}></span>
+                <span className="w-2 h-2 bg-cyan-600 rounded-full animate-bounce" style={{ animationDelay: "0.3s" }}></span>
               </div>
             </motion.div>
           )}
@@ -199,18 +199,18 @@ export default function AIExpertClient({ lang, dict }: AIExpertClientProps) {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={lang === "en" ? "Type your technical query..." : "Nhập câu hỏi chuyên môn kỹ thuật..."}
-              className="flex-1 bg-white border border-slate-200 rounded-sm px-4 py-2.5 text-sm font-sans text-slate-900 outline-none focus:border-blue-500 shadow-xs"
+              placeholder={lang === "en" ? "Type your technical query..." : "Nh廕計 c璽u h廙 chuy礙n m繫n k廙?thu廕負..."}
+              className="flex-1 bg-white border border-slate-200 rounded-sm px-4 py-2.5 text-sm font-sans text-slate-900 outline-none focus:border-cyan-500 shadow-xs"
             />
             <button 
               disabled={isLoading || !input.trim()}
-              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-5 py-2.5 rounded-sm transition-all text-xs font-semibold flex items-center justify-center shadow-xs"
+              className="bg-cyan-600 hover:bg-cyan-700 disabled:opacity-50 text-white px-5 py-2.5 rounded-sm transition-all text-xs font-semibold flex items-center justify-center shadow-xs"
             >
               <Send className="w-4 h-4" />
             </button>
           </form>
           <p className="text-[10px] text-center mt-2.5 text-slate-400 font-mono uppercase tracking-wider">
-            {lang === "en" ? "Enterprise Technical Session — Confidential & Grounded" : "Phiên tư vấn kỹ thuật doanh nghiệp — Bảo mật & Đã đối soát tài liệu"}
+            {lang === "en" ? "Enterprise Technical Session ??Confidential & Grounded" : "Phi礙n t v廕叩 k廙?thu廕負 doanh nghi廙 ??B廕υ m廕負 & ?瓊 ?廙 so獺t t?i li廙"}
           </p>
         </div>
       </div>

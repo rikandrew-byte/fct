@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2, Loader2 } from "lucide-react";
@@ -28,7 +28,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
     // Phone validation
     const phoneRegex = /^[0-9+]{10,15}$/;
     if (!phoneRegex.test(phone)) {
-      alert("Số điện thoại không hợp lệ. Vui lòng kiểm tra lại.");
+      alert("S廙??i廙 tho廕【 kh繫ng h廙φ l廙? Vui l簷ng ki廙 tra l廕【.");
       return;
     }
 
@@ -62,11 +62,11 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
         }, 4000);
       } else {
         const errorData = await response.json();
-        alert(errorData.error || "Đã có lỗi xảy ra. Vui lòng thử lại.");
+        alert(errorData.error || "?瓊 c籀 l廙 x廕ㄊ ra. Vui l簷ng th廙?l廕【.");
       }
     } catch (error) {
       console.error(error);
-      alert("Lỗi kết nối.");
+      alert("L廙 k廕篙 n廙.");
     } finally {
       setIsLoading(false);
     }
@@ -124,7 +124,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                     </div>
                     <button 
                       onClick={onClose}
-                      className="text-blue-600 font-semibold text-xs uppercase tracking-wider hover:underline pt-3"
+                      className="text-cyan-600 font-semibold text-xs uppercase tracking-wider hover:underline pt-3"
                     >
                       {d.success.close}
                     </button>
@@ -146,7 +146,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                         placeholder={d.form.namePlaceholder}
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-cyan-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
                       />
                     </div>
                     
@@ -159,7 +159,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                           placeholder={d.form.phonePlaceholder}
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-cyan-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
                         />
                       </div>
                       <div className="space-y-1.5">
@@ -170,7 +170,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                           placeholder={d.form.emailPlaceholder}
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-cyan-500 focus:bg-white text-sm text-slate-900 transition-all font-sans"
                         />
                       </div>
                     </div>
@@ -181,7 +181,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                         rows={3} placeholder={d.form.messagePlaceholder}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-blue-500 focus:bg-white text-sm text-slate-900 transition-all font-sans resize-none"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-sm outline-none focus:border-cyan-500 focus:bg-white text-sm text-slate-900 transition-all font-sans resize-none"
                       />
                     </div>
 
@@ -191,7 +191,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                       className={`w-full py-3 rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all mt-2 ${
                         isLoading 
                           ? "bg-slate-100 text-slate-400 cursor-not-allowed" 
-                          : "bg-blue-600 hover:bg-blue-700 text-white shadow-xs"
+                          : "bg-cyan-600 hover:bg-cyan-700 text-white shadow-xs"
                       }`}
                     >
                       {isLoading ? (
@@ -207,7 +207,7 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                       )}
                     </button>
 
-                    {/* Tàng hình — Chặn Bot */}
+                    {/* T?ng h穫nh ??Ch廕搖 Bot */}
                     <TurnstileWidget onVerify={setTurnstileToken} />
 
                     <p className="text-[10px] text-slate-400 text-center font-mono uppercase tracking-wider mt-3">{d.form.commitment}</p>

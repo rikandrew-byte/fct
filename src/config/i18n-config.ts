@@ -1,4 +1,4 @@
-export const i18n = {
+﻿export const i18n = {
   defaultLocale: 'vi',
   locales: ['vi', 'en'],
 } as const

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { 
@@ -36,20 +36,20 @@ interface ProjectsPageClientProps {
 }
 
 const iconMap: Record<string, any> = {
-  "Tài chính - Ngân hàng": CreditCard,
+  "T?i ch穩nh - Ng璽n h?ng": CreditCard,
   "Finance & Banking": CreditCard,
-  "Viễn thông": Globe,
+  "Vi廙 th繫ng": Globe,
   "Telecommunications": Globe,
-  "Công nghiệp - Sản xuất": Factory,
+  "C繫ng nghi廙 - S廕τ xu廕另": Factory,
   "Manufacturing & Industry": Factory,
-  "Chính phủ": Building2,
+  "Ch穩nh ph廙?: Building2,
   "Government": Building2,
-  "Dữ liệu": Database,
+  "D廙?li廙": Database,
   "Data Centers": Database,
-  "Công nghệ": Cpu,
+  "C繫ng ngh廙?: Cpu,
   "Technology": Cpu,
   "Cloud": Cloud,
-  "Bảo mật": Lock,
+  "B廕υ m廕負": Lock,
   "Security": Lock
 };
 
@@ -58,9 +58,9 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
   const d = dict.projects;
 
   const stats = [
-    { label: d.stats.projects || "Dự án triển khai", value: "150+", sub: "Total Deployed" },
-    { label: d.stats.partners || "Đối tác Tier-1", value: "40+", sub: "Tier-1 Partners" },
-    { label: d.stats.roi || "Tỷ lệ tối ưu", value: "30%", sub: "Efficiency Increase" },
+    { label: d.stats.projects || "D廙?獺n tri廙 khai", value: "150+", sub: "Total Deployed" },
+    { label: d.stats.partners || "?廙 t獺c Tier-1", value: "40+", sub: "Tier-1 Partners" },
+    { label: d.stats.roi || "T廙?l廙?t廙 u", value: "30%", sub: "Efficiency Increase" },
   ];
 
   return (
@@ -72,13 +72,13 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="space-y-5 max-w-3xl">
-              <span className="inline-flex items-center gap-2 border border-blue-700 bg-blue-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-300 inline-block" />
+              <span className="inline-flex items-center gap-2 border border-cyan-700 bg-cyan-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 inline-block" />
                 {d.badge}
               </span>
               <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
                 {d.titlePart1} <br />
-                <span className="text-blue-700">{d.titlePart2}</span>
+                <span className="text-cyan-700">{d.titlePart2}</span>
               </h1>
               <p className="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-xl">
                 {d.description}
@@ -100,7 +100,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                 <p className="text-3xl md:text-4xl font-black text-slate-900 mb-1">
                   {stat.value}
                 </p>
-                <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-blue-700 mb-0.5">
+                <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-cyan-700 mb-0.5">
                   {stat.label}
                 </p>
                 <p className="text-[9px] font-semibold text-slate-400 uppercase tracking-widest">
@@ -124,11 +124,11 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                 {/* Left Column: Industry & Title */}
                 <div className="lg:col-span-12 space-y-4 border-b border-slate-100 pb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-sm bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700">
+                    <div className="w-10 h-10 rounded-sm bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-700">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-700">{d.list.field}</p>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-700">{d.list.field}</p>
                       <p className="text-sm font-semibold text-slate-700">{project.industry}</p>
                     </div>
                   </div>
@@ -156,8 +156,8 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
                         <p className="text-slate-600 text-sm leading-relaxed">{project.challenge}</p>
                       </div>
                       
-                      <div className="bg-white border border-blue-200 p-6 rounded-lg space-y-2">
-                        <div className="flex items-center gap-2 text-blue-700 font-bold text-xs uppercase tracking-wider">
+                      <div className="bg-white border border-cyan-200 p-6 rounded-lg space-y-2">
+                        <div className="flex items-center gap-2 text-cyan-700 font-bold text-xs uppercase tracking-wider">
                            <Shield className="w-4 h-4" /> {d.list.solution}
                         </div>
                         <p className="text-slate-700 text-sm leading-relaxed">{project.solution}</p>
@@ -188,7 +188,7 @@ export default function ProjectsPageClient({ lang, dict, projectsData }: Project
           <div className="flex flex-wrap justify-center gap-3 pt-2">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3.5 rounded-sm font-semibold text-sm tracking-wide transition-colors"
+              className="bg-cyan-700 hover:bg-cyan-800 text-white px-8 py-3.5 rounded-sm font-semibold text-sm tracking-wide transition-colors"
             >
               {d.cta.requestConsult}
             </button>

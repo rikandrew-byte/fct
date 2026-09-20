@@ -29,20 +29,20 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   const isEn = lang === "en";
 
   return (
-    <main className="min-h-screen bg-slate-50 text-gray-950 selection:bg-blue-600">
+    <main className="min-h-screen bg-slate-50 text-gray-950 selection:bg-cyan-600">
       {/* ── 1. Hero Section ─────────────────────────────────────────────── */}
       <section className="relative bg-slate-900 pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
         <TechGridBackground />
 
         <div className="max-w-4xl mx-auto relative z-10 space-y-6">
-          <span className="inline-flex items-center gap-2 border border-blue-500 bg-blue-900/50 text-blue-300 text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+          <span className="inline-flex items-center gap-2 border border-cyan-500 bg-cyan-900/50 text-cyan-300 text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
             <ShieldAlert className="w-3.5 h-3.5" />
             {isEn ? "Enterprise RFP Gateway" : "Cổng tiếp nhận hồ sơ giải pháp"}
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tighter leading-tight text-white">
             {isEn ? "Request for " : "Yêu cầu "}
-            <span className="text-blue-400">{isEn ? "Proposal" : "Giải pháp"}</span>
+            <span className="text-cyan-400">{isEn ? "Proposal" : "Giải pháp"}</span>
           </h1>
 
           <p className="text-slate-400 text-base leading-relaxed max-w-xl">

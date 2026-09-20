@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Factory, Activity, Network, Database, LineChart, Smartphone } from "lucide-react";
@@ -40,7 +40,7 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
             </div>
             <div className="text-center">
               <h3 className="text-slate-900 font-semibold uppercase tracking-wider text-xs mb-1">
-                {isEn ? "OT Source" : "Nguồn OT"}
+                {isEn ? "OT Source" : "Ngu廙 OT"}
               </h3>
               <p className="text-amber-700 text-xs font-mono">MQTT, OPC UA, SQL</p>
             </div>
@@ -75,7 +75,7 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
         <div className="relative z-10 w-full lg:w-[40%]">
           <div className="w-full bg-slate-50 border border-amber-300 rounded-lg p-5 lg:p-6 flex flex-col gap-3 shadow-xs">
             <div className="inline-block self-center bg-amber-600 text-white text-[10px] font-semibold uppercase tracking-wider px-3 py-0.5 rounded-sm">
-              {isEn ? "Canary Core" : "Lõi Canary"}
+              {isEn ? "Canary Core" : "L繭i Canary"}
             </div>
             
             {/* Block 1: Collector */}
@@ -144,7 +144,7 @@ export default function CanaryArchitecture({ isEn = false }: CanaryArchitectureP
             </div>
             <div className="text-center">
               <h3 className="text-slate-900 font-semibold uppercase tracking-wider text-xs mb-1">
-                {isEn ? "Visualization" : "Trực quan hóa"}
+                {isEn ? "Visualization" : "Tr廙帷 quan h籀a"}
               </h3>
               <p className="text-amber-700 text-xs font-mono">Axiom Dashboards, Web/Mobile</p>
             </div>

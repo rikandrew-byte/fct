@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { 
@@ -36,7 +36,7 @@ export default function GuardantArchitecture({ isEn = false }: GuardantArchitect
         <div className="relative z-10 flex flex-col items-center w-full lg:w-[28%]">
           <div className="w-full bg-slate-50 border border-slate-200 rounded-lg p-5 flex flex-col items-center space-y-3 shadow-xs relative group hover:border-emerald-300 transition-colors">
             <div className="absolute -top-3 left-4 bg-emerald-600 text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-sm">
-              {isEn ? "Step 1" : "Bước 1"}
+              {isEn ? "Step 1" : "B廙 1"}
             </div>
             
             <div className="w-12 h-12 rounded-md bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
@@ -45,12 +45,12 @@ export default function GuardantArchitecture({ isEn = false }: GuardantArchitect
             
             <div className="text-center">
               <h3 className="text-slate-900 font-bold uppercase tracking-wider text-xs mb-1">
-                {isEn ? "Protection Studio" : "Mã hóa ứng dụng"}
+                {isEn ? "Protection Studio" : "M瓊 h籀a 廙姊g d廙叩g"}
               </h3>
               <p className="text-slate-600 text-[11px] leading-relaxed">
                 {isEn 
                   ? "Encrypt binary & set licensing restrictions." 
-                  : "Mã hóa file thực thi, đóng gói phần mềm và định nghĩa license."}
+                  : "M瓊 h籀a file th廙帷 thi, ?籀ng g籀i ph廕吵 m廙 v? ?廙h ngh藺a license."}
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function GuardantArchitecture({ isEn = false }: GuardantArchitect
         <div className="relative z-10 w-full lg:w-[36%]">
           <div className="w-full bg-slate-50 border border-emerald-300 rounded-lg p-5 flex flex-col gap-3 shadow-xs relative">
             <div className="inline-block self-center bg-emerald-600 text-white text-[9px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-sm whitespace-nowrap">
-              {isEn ? "Step 2: Dual Verification" : "Bước 2: Xác thực đa hình"}
+              {isEn ? "Step 2: Dual Verification" : "B廙 2: X獺c th廙帷 ?a h穫nh"}
             </div>
 
             {/* Hardware Key Check */}
@@ -78,7 +78,7 @@ export default function GuardantArchitecture({ isEn = false }: GuardantArchitect
               </div>
               <div className="flex-1">
                 <h4 className="text-slate-900 font-bold text-xs uppercase tracking-wide">
-                  {isEn ? "Hardware Key (Offline)" : "Khóa cứng (Offline)"}
+                  {isEn ? "Hardware Key (Offline)" : "Kh籀a c廙姊g (Offline)"}
                 </h4>
                 <p className="text-slate-500 text-[10px]">Guardant Sign & Chip (Driverless)</p>
               </div>
@@ -91,7 +91,7 @@ export default function GuardantArchitecture({ isEn = false }: GuardantArchitect
               </div>
               <div className="flex-1">
                 <h4 className="text-slate-900 font-bold text-xs uppercase tracking-wide">
-                  {isEn ? "Cloud/DL Key (Online)" : "Khóa mềm / Cloud (Online)"}
+                  {isEn ? "Cloud/DL Key (Online)" : "Kh籀a m廙 / Cloud (Online)"}
                 </h4>
                 <p className="text-slate-500 text-[10px]">Guardant Station & Virtualization</p>
               </div>
@@ -113,7 +113,7 @@ export default function GuardantArchitecture({ isEn = false }: GuardantArchitect
           <div className="w-full bg-slate-900 border border-slate-800 rounded-lg p-5 flex flex-col items-center space-y-3 shadow-md relative overflow-hidden">
             
             <div className="absolute -top-3 left-4 bg-emerald-600 text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-sm">
-              {isEn ? "Step 3" : "Bước 3"}
+              {isEn ? "Step 3" : "B廙 3"}
             </div>
 
             <div className="w-12 h-12 rounded-md bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 relative z-10">
@@ -122,12 +122,12 @@ export default function GuardantArchitecture({ isEn = false }: GuardantArchitect
 
             <div className="text-center relative z-10">
               <h3 className="text-slate-50 font-bold uppercase tracking-wider text-xs mb-1">
-                {isEn ? "Active Defense" : "Vận hành an toàn"}
+                {isEn ? "Active Defense" : "V廕要 h?nh an to?n"}
               </h3>
               <p className="text-slate-400 text-[11px] leading-relaxed">
                 {isEn 
                   ? "Blocks decompilers, debugging & cracking." 
-                  : "Ngăn chặn các công cụ bẻ khóa, phân tích ngược và chạy debug."}
+                  : "Ng?n ch廕搖 c獺c c繫ng c廙?b廕?kh籀a, ph璽n t穩ch ng廙θ v? ch廕『 debug."}
               </p>
             </div>
 

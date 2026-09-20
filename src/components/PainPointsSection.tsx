@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Smartphone, Database, Code } from "lucide-react";
 import { motion } from "framer-motion";
@@ -27,7 +27,7 @@ const CARD_ICONS = [
 ];
 
 const CARD_ACCENT_COLORS = [
-  "text-blue-700 border-blue-200 bg-blue-50",
+  "text-cyan-700 border-cyan-200 bg-cyan-50",
   "text-slate-700 border-slate-200 bg-slate-100",
   "text-slate-700 border-slate-200 bg-slate-100",
 ];
@@ -84,7 +84,7 @@ export default function PainPointsSection({ dict }: PainPointsSectionProps) {
               {/* Pain */}
               <div className="space-y-1.5">
                 <p className="text-[11px] font-black uppercase tracking-[0.2em] text-gray-600">
-                  Nỗi đau
+                  N廙 ?au
                 </p>
                 <p className="text-gray-700 text-sm font-light leading-relaxed">
                   {card.pain}
@@ -94,7 +94,7 @@ export default function PainPointsSection({ dict }: PainPointsSectionProps) {
               {/* Consequence */}
               <div className="mt-auto space-y-1.5 rounded-xl bg-red-100 border border-red-300 p-4">
                 <p className="text-[11px] font-black uppercase tracking-[0.2em] text-red-600">
-                  Hậu quả
+                  H廕赴 qu廕?
                 </p>
                 <p className="text-red-700 text-sm font-light leading-relaxed">
                   {card.consequence}

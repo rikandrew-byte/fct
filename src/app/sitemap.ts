@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+﻿import { MetadataRoute } from 'next'
 import newsVi from '@/data/news_vi.json'
 import newsEn from '@/data/news_en.json'
 

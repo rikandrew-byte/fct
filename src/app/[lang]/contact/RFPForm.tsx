@@ -134,7 +134,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
         </div>
         <button 
           onClick={() => setIsSubmitted(false)}
-          className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold transition-all shadow-lg"
+          className="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-xl text-sm font-bold transition-all shadow-lg"
         >
           {isEn ? "Send another request" : "Gửi yêu cầu khác"}
         </button>
@@ -154,7 +154,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
             required
             type="text"
             placeholder="John Doe"
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.fullName}
             onChange={e => setFormData({...formData, fullName: e.target.value})}
           />
@@ -169,7 +169,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
             required
             type="email"
             placeholder="contact@company.com"
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.email}
             onChange={e => setFormData({...formData, email: e.target.value})}
           />
@@ -184,7 +184,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
             required
             type="tel"
             placeholder="090 123 4567"
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.phone}
             onChange={e => setFormData({...formData, phone: e.target.value})}
           />
@@ -199,7 +199,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
             required
             type="text"
             placeholder="FCT Vinh Thinh"
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.company}
             onChange={e => setFormData({...formData, company: e.target.value})}
           />
@@ -213,7 +213,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
           <div className="relative">
             <select
               required
-              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-blue-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
               value={formData.industry}
               onChange={e => setFormData({...formData, industry: e.target.value})}
             >
@@ -234,7 +234,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
           <div className="relative">
             <select
               required
-              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-blue-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
               value={formData.solution}
               onChange={e => setFormData({...formData, solution: e.target.value})}
             >
@@ -255,7 +255,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
           <div className="relative">
             <select
               required
-              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-blue-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 appearance-none focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans cursor-pointer"
               value={formData.projectScale}
               onChange={e => setFormData({...formData, projectScale: e.target.value})}
             >
@@ -275,7 +275,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
         <textarea
           rows={4}
           placeholder={isEn ? "Describe your security goals..." : "Mô tả mục tiêu bảo mật của dự án..."}
-          className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans resize-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans resize-none"
           value={formData.message}
           onChange={e => setFormData({...formData, message: e.target.value})}
         />
@@ -286,7 +286,7 @@ export default function RFPForm({ lang }: RFPFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full md:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className={`w-full md:w-auto px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
           {isLoading ? (isEn ? "Sending..." : "Đang gửi...") : (isEn ? "Submit Solution RFP" : "Gửi yêu cầu RFP")}
           {!isLoading && <Send className="w-4 h-4" />}

@@ -116,7 +116,7 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
             required
             type="text"
             placeholder="John Doe"
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.fullName}
             onChange={e => setFormData({...formData, fullName: e.target.value})}
           />
@@ -131,7 +131,7 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
             required
             type="email"
             placeholder="contact@company.com"
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.email}
             onChange={e => setFormData({...formData, email: e.target.value})}
           />
@@ -146,7 +146,7 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
             required
             type="tel"
             placeholder="090..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.phone}
             onChange={e => setFormData({...formData, phone: e.target.value})}
           />
@@ -161,7 +161,7 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
             required
             type="text"
             placeholder="FCT..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.company}
             onChange={e => setFormData({...formData, company: e.target.value})}
           />
@@ -176,7 +176,7 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
             required
             type="text"
             placeholder={isEn ? "e.g. Banking, Software" : "VD: Ngân hàng, Phần mềm"}
-            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white outline-none transition-all font-sans"
+            className="w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:bg-white outline-none transition-all font-sans"
             value={formData.industry}
             onChange={e => setFormData({...formData, industry: e.target.value})}
           />
@@ -187,7 +187,7 @@ export default function WhitepaperForm({ lang, sourceIdentifier = 'whitepaper' }
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className={`w-full py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-sm font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
           {isLoading ? (isEn ? "Processing..." : "Đang xử lý...") : (isEn ? "DOWNLOAD WHITEPAPER" : "ĐĂNG KÝ TẢI SÁCH TRẮNG")}
           {!isLoading && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}

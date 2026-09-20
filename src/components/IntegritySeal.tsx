@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { ShieldCheck, Lock } from "lucide-react";
@@ -6,7 +6,7 @@ import { ShieldCheck, Lock } from "lucide-react";
 /**
  * IntegritySeal
  * A compact certification badge for the Hero section.
- * Styled as a clean, flat B2B credential badge — no glow, no blur, just authority.
+ * Styled as a clean, flat B2B credential badge ??no glow, no blur, just authority.
  */
 export default function IntegritySeal() {
   return (
@@ -16,7 +16,7 @@ export default function IntegritySeal() {
       transition={{ duration: 0.5, delay: 0.5 }}
       className="inline-flex items-center gap-3 bg-white border border-slate-200 px-5 py-2.5 rounded-sm shadow-sm cursor-default"
     >
-      <ShieldCheck className="w-5 h-5 text-blue-700 shrink-0" />
+      <ShieldCheck className="w-5 h-5 text-cyan-700 shrink-0" />
 
       <div className="flex flex-col text-left leading-tight">
         <span className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em]">

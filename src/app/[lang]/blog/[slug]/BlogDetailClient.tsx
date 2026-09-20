@@ -30,10 +30,10 @@ export default function BlogDetailClient({ lang, dict, article, relatedNews }: B
   const isEn = lang === "en";
 
   return (
-    <main className="min-h-screen bg-white selection:bg-blue-600 selection:text-white">
+    <main className="min-h-screen bg-white selection:bg-cyan-600 selection:text-white">
       {/* ── Progress Bar ────────────────────── */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-[100] origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-cyan-600 z-[100] origin-left"
         initial={{ scaleX: 0 }}
         style={{ scaleX: 1 }} // Simplified for now
       />
@@ -45,7 +45,7 @@ export default function BlogDetailClient({ lang, dict, article, relatedNews }: B
         <div className="max-w-4xl mx-auto relative z-10 space-y-6">
           <Link 
             href={`/${lang}/blog`}
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-xs font-semibold uppercase tracking-wider"
+            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-semibold uppercase tracking-wider"
           >
             <ArrowLeft className="w-4 h-4" />
             {isEn ? "Back to Blog" : "Quay lại Blog"}
@@ -53,7 +53,7 @@ export default function BlogDetailClient({ lang, dict, article, relatedNews }: B
 
           <div className="space-y-4">
             <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
-              <span className="bg-blue-600 text-white px-3 py-1 rounded-sm text-[11px]">
+              <span className="bg-cyan-600 text-white px-3 py-1 rounded-sm text-[11px]">
                 {article.category}
               </span>
               <span className="flex items-center gap-1.5 font-mono text-slate-300">
@@ -81,7 +81,7 @@ export default function BlogDetailClient({ lang, dict, article, relatedNews }: B
             {/* Sidebar / Tools */}
             <aside className="lg:col-span-1 hidden lg:block sticky top-32 h-fit space-y-8">
               <div className="flex flex-col gap-4">
-                <button className="w-10 h-10 rounded-sm bg-slate-50 flex items-center justify-center text-slate-500 hover:text-blue-600 hover:bg-blue-50 transition-all border border-slate-200" title={isEn ? "Share" : "Chia sẻ"}>
+                <button className="w-10 h-10 rounded-sm bg-slate-50 flex items-center justify-center text-slate-500 hover:text-cyan-600 hover:bg-cyan-50 transition-all border border-slate-200" title={isEn ? "Share" : "Chia sẻ"}>
                   <Share2 className="w-4 h-4" />
                 </button>
               </div>
@@ -105,7 +105,7 @@ export default function BlogDetailClient({ lang, dict, article, relatedNews }: B
                 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900
                 prose-p:text-slate-700 prose-p:leading-relaxed
                 prose-strong:text-slate-900 prose-strong:font-bold
-                prose-blockquote:border-l-4 prose-blockquote:border-blue-600 prose-blockquote:bg-slate-50 prose-blockquote:p-4 prose-blockquote:rounded-r-sm prose-blockquote:not-italic
+                prose-blockquote:border-l-4 prose-blockquote:border-cyan-600 prose-blockquote:bg-slate-50 prose-blockquote:p-4 prose-blockquote:rounded-r-sm prose-blockquote:not-italic
                 prose-img:rounded-lg prose-img:shadow-sm prose-img:border prose-img:border-slate-200
                 ">
                 <ReactMarkdown>{article.content}</ReactMarkdown>
@@ -125,7 +125,7 @@ export default function BlogDetailClient({ lang, dict, article, relatedNews }: B
                       <div className="relative aspect-[16/10] rounded-lg overflow-hidden bg-slate-100 border border-slate-200">
                         <Image src={item.image || "/logo.jpg"} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
                       </div>
-                      <h4 className="font-semibold text-slate-900 text-sm leading-snug group-hover:text-blue-600 transition-colors line-clamp-2">
+                      <h4 className="font-semibold text-slate-900 text-sm leading-snug group-hover:text-cyan-600 transition-colors line-clamp-2">
                         {item.title}
                       </h4>
                     </Link>

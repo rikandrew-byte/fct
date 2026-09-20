@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -12,7 +12,7 @@ export default function SkeletonLoader({ className = "", type = "text" }: Skelet
     return (
       <div className={`military-panel rounded-2xl p-6 overflow-hidden relative ${className}`}>
         {/* Shimmer Effect overlay */}
-        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-blue-500/10 to-transparent animate-shimmer z-10" />
+        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-shimmer z-10" />
         
         <div className="flex items-center gap-4 mb-6">
           <div className="w-12 h-12 rounded-xl bg-slate-800 animate-pulse-slow" />
@@ -34,7 +34,7 @@ export default function SkeletonLoader({ className = "", type = "text" }: Skelet
   if (type === "avatar") {
     return (
       <div className={`w-12 h-12 rounded-full bg-slate-800 animate-pulse-slow relative overflow-hidden ${className}`}>
-         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-blue-500/10 to-transparent animate-shimmer" />
+         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-shimmer" />
       </div>
     );
   }
@@ -42,7 +42,7 @@ export default function SkeletonLoader({ className = "", type = "text" }: Skelet
   // Default: text
   return (
     <div className={`h-4 bg-slate-800 rounded w-full animate-pulse-slow relative overflow-hidden ${className}`}>
-       <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-blue-500/10 to-transparent animate-shimmer" />
+       <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-shimmer" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import FloatingAssistant from "./FloatingAssistant";
 import VirtualAssistant from "./VirtualAssistant";

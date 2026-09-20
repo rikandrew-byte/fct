@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Shield, TrendingUp, Zap, Lock } from "lucide-react";
 import { motion } from "framer-motion";
@@ -27,7 +27,7 @@ const METRIC_ICONS = [
 ];
 
 const METRIC_COLORS = [
-  "from-blue-100 to-blue-50 border-blue-300 text-blue-700",
+  "from-cyan-100 to-cyan-50 border-cyan-300 text-cyan-700",
   "from-emerald-100 to-emerald-50 border-emerald-300 text-emerald-700",
   "from-amber-100 to-amber-50 border-amber-300 text-amber-700",
   "from-violet-100 to-violet-50 border-violet-300 text-violet-700",

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ interface AboutSectionProps {
 export default function AboutSection({ lang, dict }: AboutSectionProps) {
   const features = [
     {
-      icon: <ShieldCheck className="w-6 h-6 text-blue-600" />,
+      icon: <ShieldCheck className="w-6 h-6 text-cyan-600" />,
       title: dict.about.features[0].title,
       description: dict.about.features[0].description,
     },
@@ -34,7 +34,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
     <section className="py-16 md:py-28 bg-white relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center text-center lg:text-left">
-          {/* Trái: Nội dung */}
+          {/* Tr獺i: N廙 dung */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -43,10 +43,10 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
             className="space-y-6"
           >
             <div className="space-y-3">
-              <span className="text-[11px] font-bold text-blue-700 tracking-[0.3em] uppercase block">{content.badge}</span>
+              <span className="text-[11px] font-bold text-cyan-700 tracking-[0.3em] uppercase block">{content.badge}</span>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
                 {content.title} <br />
-                <span className="text-blue-700">{content.subtitle}</span>
+                <span className="text-cyan-700">{content.subtitle}</span>
               </h2>
             </div>
             <p className="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -54,7 +54,7 @@ export default function AboutSection({ lang, dict }: AboutSectionProps) {
             </p>
           </motion.div>
 
-          {/* Phải: Grid tính năng */}
+          {/* Ph廕ξ: Grid t穩nh n?ng */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative items-start">
             {features.map((feature, idx) => (
               <motion.div

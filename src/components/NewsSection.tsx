@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -23,10 +23,10 @@ interface NewsSectionProps {
 export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps) {
   const isEn = lang === "en";
   const d = dict.homeNews || {
-    badge: isEn ? "Knowledge Hub" : "Khám phá tin tức",
-    title: isEn ? "Latest Technical" : "Tin tức",
-    subtitle: isEn ? "Insights" : "Công nghệ",
-    viewAll: isEn ? "View All Articles" : "Xem tất cả bài viết"
+    badge: isEn ? "Knowledge Hub" : "Kh獺m ph獺 tin t廙妾",
+    title: isEn ? "Latest Technical" : "Tin t廙妾",
+    subtitle: isEn ? "Insights" : "C繫ng ngh廙?,
+    viewAll: isEn ? "View All Articles" : "Xem t廕另 c廕?b?i vi廕篙"
   };
 
   const safeNews = Array.isArray(latestNews) ? latestNews : [];
@@ -36,18 +36,18 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-3">
-            <span className="text-[10px] font-bold text-blue-700 tracking-[0.25em] uppercase block">
+            <span className="text-[10px] font-bold text-cyan-700 tracking-[0.25em] uppercase block">
               {d.badge}
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
-              {d.title} <span className="text-blue-700">{d.subtitle}</span>
+              {d.title} <span className="text-cyan-700">{d.subtitle}</span>
             </h2>
           </div>
           
           <div>
             <Link 
               href={`/${lang}/blog`}
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-slate-100 hover:bg-blue-700 hover:text-white text-slate-800 rounded-sm font-semibold text-sm border border-slate-200 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-slate-100 hover:bg-cyan-700 hover:text-white text-slate-800 rounded-sm font-semibold text-sm border border-slate-200 transition-colors"
             >
               {d.viewAll}
               <ArrowRight className="w-4 h-4" />
@@ -70,7 +70,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
                   className={`object-cover transition-transform duration-500 group-hover:scale-105 ${!article.image ? 'p-12 opacity-20' : ''}`}
                 />
                 <div className="absolute top-3 left-3">
-                  <span className="px-2.5 py-1 bg-white/95 rounded-sm text-[10px] font-bold uppercase tracking-wider text-blue-700 border border-slate-200 shadow-sm">
+                  <span className="px-2.5 py-1 bg-white/95 rounded-sm text-[10px] font-bold uppercase tracking-wider text-cyan-700 border border-slate-200 shadow-sm">
                     {article.category}
                   </span>
                 </div>
@@ -85,7 +85,7 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
                   </span>
                 </div>
                 
-                <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-700 transition-colors line-clamp-2">
+                <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-cyan-700 transition-colors line-clamp-2">
                   <Link href={`/${lang}/blog/${article.id}`}>
                     {article.title}
                   </Link>
@@ -98,9 +98,9 @@ export default function NewsSection({ lang, dict, latestNews }: NewsSectionProps
                 <div className="pt-2 flex items-center">
                   <Link 
                     href={`/${lang}/blog/${article.id}`}
-                    className="text-xs font-semibold uppercase tracking-wider text-slate-900 group-hover:text-blue-700 flex items-center gap-1.5 transition-colors"
+                    className="text-xs font-semibold uppercase tracking-wider text-slate-900 group-hover:text-cyan-700 flex items-center gap-1.5 transition-colors"
                   >
-                    {isEn ? "Read Article" : "Đọc bài viết"}
+                    {isEn ? "Read Article" : "?廙 b?i vi廕篙"}
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>

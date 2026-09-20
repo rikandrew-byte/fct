@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Database, Lock, Shield, Code, ArrowRight } from "lucide-react";
@@ -17,11 +17,11 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
         flow: "Cryptographic Flow",
       }
     : {
-        app: "Ứng dụng Nghiệp vụ",
-        tls: "Lớp Kết nối TLS",
-        hsm: "Vách ngăn HSM",
-        core: "Vùng lõi (Private Key)",
-        flow: "Luồng Ký số",
+        app: "廙盯g d廙叩g Nghi廙 v廙?,
+        tls: "L廙 K廕篙 n廙 TLS",
+        hsm: "V獺ch ng?n HSM",
+        core: "V羅ng l繭i (Private Key)",
+        flow: "Lu廙g K羸 s廙?,
       };
 
   return (
@@ -39,7 +39,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           >
             <div className="bg-white border border-slate-200 rounded-2xl p-8 space-y-4 shadow-sm">
               <div className="flex items-center gap-3">
-                <Code className="w-6 h-6 text-blue-500" />
+                <Code className="w-6 h-6 text-cyan-500" />
                 <h3 className="font-semibold text-slate-900 text-sm uppercase tracking-widest">
                   {labels.app}
                 </h3>
@@ -47,7 +47,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
               <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "Transaction request from business logic"
-                  : "Yêu cầu giao dịch từ logic nghiệp vụ"}
+                  : "Y礙u c廕吟 giao d廙h t廙?logic nghi廙 v廙?}
               </p>
             </div>
           </motion.div>
@@ -79,7 +79,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
               <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "Encrypted tunnel (TLS 1.3)"
-                  : "Đường hầm mã hóa (TLS 1.3)"}
+                  : "?廙g h廕吮 m瓊 h籀a (TLS 1.3)"}
               </p>
             </div>
           </motion.div>
@@ -112,7 +112,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
               <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "FIPS 140-2 Level 3 Barrier"
-                  : "Rào cản FIPS 140-2 Level 3"}
+                  : "R?o c廕τ FIPS 140-2 Level 3"}
               </p>
             </div>
           </motion.div>
@@ -145,14 +145,14 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
               <p className="text-slate-500 text-xs font-light">
                 {isEn
                   ? "Never leaves the chip"
-                  : "Không bao giờ rời khỏi chip"}
+                  : "Kh繫ng bao gi廙?r廙 kh廙 chip"}
               </p>
             </div>
           </motion.div>
         </div>
 
         {/* Animated Flow Line */}
-        <motion.div className="mt-8 h-0.5 bg-gradient-to-r from-blue-400 via-rose-400 to-green-400 rounded-full overflow-hidden">
+        <motion.div className="mt-8 h-0.5 bg-gradient-to-r from-cyan-400 via-rose-400 to-green-400 rounded-full overflow-hidden">
           <motion.div
             className="h-full w-1/4 bg-white blur-sm"
             animate={{ x: ["0%", "400%"] }}
@@ -167,8 +167,8 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           </p>
           <p className="text-slate-400 text-xs">
             {isEn
-              ? "Request → Encryption → Signing → Response"
-              : "Yêu cầu → Mã hóa → Ký số → Phản hồi"}
+              ? "Request ??Encryption ??Signing ??Response"
+              : "Y礙u c廕吟 ??M瓊 h籀a ??K羸 s廙???Ph廕τ h廙"}
           </p>
         </div>
       </div>
@@ -183,7 +183,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           className="bg-white border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm"
         >
           <div className="flex items-center gap-2">
-            <Code className="w-5 h-5 text-blue-500" />
+            <Code className="w-5 h-5 text-cyan-500" />
             <h3 className="font-semibold text-slate-900 text-xs uppercase tracking-widest">
               {labels.app}
             </h3>
@@ -191,7 +191,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           <p className="text-slate-500 text-xs font-light">
             {isEn
               ? "Transaction request from business logic"
-              : "Yêu cầu giao dịch từ logic nghiệp vụ"}
+              : "Y礙u c廕吟 giao d廙h t廙?logic nghi廙 v廙?}
           </p>
         </motion.div>
 
@@ -219,7 +219,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             </h3>
           </div>
           <p className="text-slate-500 text-xs font-light">
-            {isEn ? "Encrypted tunnel (TLS 1.3)" : "Đường hầm mã hóa (TLS 1.3)"}
+            {isEn ? "Encrypted tunnel (TLS 1.3)" : "?廙g h廕吮 m瓊 h籀a (TLS 1.3)"}
           </p>
         </motion.div>
 
@@ -250,7 +250,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
           <p className="text-slate-500 text-xs font-light">
             {isEn
               ? "FIPS 140-2 Level 3 Barrier"
-              : "Rào cản FIPS 140-2 Level 3"}
+              : "R?o c廕τ FIPS 140-2 Level 3"}
           </p>
         </motion.div>
 
@@ -279,7 +279,7 @@ export default function HsmArchitecture({ isEn = false }: HsmArchitectureProps) 
             </h3>
           </div>
           <p className="text-slate-500 text-xs font-light">
-            {isEn ? "Never leaves the chip" : "Không bao giờ rời khỏi chip"}
+            {isEn ? "Never leaves the chip" : "Kh繫ng bao gi廙?r廙 kh廙 chip"}
           </p>
         </motion.div>
       </div>

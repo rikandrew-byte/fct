@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Code, Zap, Shield, ArrowRight } from "lucide-react";
@@ -17,17 +17,17 @@ export default function AppShieldingFlow({ isEn = false }: AppShieldingFlowProps
         engineDesc: "Obfuscation, Encryption, RASP",
         appDesc: "Hardened against reverse engineering",
         flow: "Application Shielding Flow",
-        flowDetail: "Code → Protection → Deployment",
+        flowDetail: "Code ??Protection ??Deployment",
       }
     : {
-        source: "Mã Nguồn",
-        engine: "Động cơ Bảo vệ",
-        app: "Ứng dụng An toàn",
-        sourceDesc: "Mã ứng dụng gốc",
-        engineDesc: "Làm rối, Mã hóa, RASP",
-        appDesc: "Bảo vệ chống đảo ngược",
-        flow: "Luồng Bảo vệ Ứng dụng",
-        flowDetail: "Mã → Bảo vệ → Triển khai",
+        source: "M瓊 Ngu廙",
+        engine: "?廙g c B廕υ v廙?,
+        app: "廙盯g d廙叩g An to?n",
+        sourceDesc: "M瓊 廙姊g d廙叩g g廙",
+        engineDesc: "L?m r廙, M瓊 h籀a, RASP",
+        appDesc: "B廕υ v廙?ch廙g ?廕υ ng廙θ",
+        flow: "Lu廙g B廕υ v廙?廙盯g d廙叩g",
+        flowDetail: "M瓊 ??B廕υ v廙???Tri廙 khai",
       };
 
   return (
@@ -45,7 +45,7 @@ export default function AppShieldingFlow({ isEn = false }: AppShieldingFlowProps
           >
             <div className="bg-white border border-slate-200 rounded-2xl p-8 space-y-4 shadow-sm">
               <div className="flex items-center gap-3">
-                <Code className="w-6 h-6 text-blue-500" />
+                <Code className="w-6 h-6 text-cyan-500" />
                 <h3 className="font-semibold text-slate-900 text-sm uppercase tracking-widest">
                   {labels.source}
                 </h3>
@@ -120,7 +120,7 @@ export default function AppShieldingFlow({ isEn = false }: AppShieldingFlowProps
         </div>
 
         {/* Animated Flow Line */}
-        <motion.div className="mt-8 h-0.5 bg-gradient-to-r from-blue-400 via-amber-400 to-green-400 rounded-full overflow-hidden">
+        <motion.div className="mt-8 h-0.5 bg-gradient-to-r from-cyan-400 via-amber-400 to-green-400 rounded-full overflow-hidden">
           <motion.div
             className="h-full w-1/3 bg-white blur-sm"
             animate={{ x: ["0%", "300%"] }}
@@ -149,7 +149,7 @@ export default function AppShieldingFlow({ isEn = false }: AppShieldingFlowProps
           className="bg-white border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm"
         >
           <div className="flex items-center gap-2">
-            <Code className="w-5 h-5 text-blue-500" />
+            <Code className="w-5 h-5 text-cyan-500" />
             <h3 className="font-semibold text-slate-900 text-xs uppercase tracking-widest">
               {labels.source}
             </h3>

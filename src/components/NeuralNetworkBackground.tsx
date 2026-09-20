@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -79,7 +79,7 @@ export default function NeuralNetworkBackground() {
         ))}
       </svg>
       {/* Blurred background glows - STRONGER */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[140px] animate-pulse"></div>
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[140px] animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[140px] animate-pulse delay-1000"></div>
     </div>
   );

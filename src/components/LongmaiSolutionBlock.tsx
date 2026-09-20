@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Zap, Users, DollarSign, ArrowRight } from "lucide-react";
@@ -21,7 +21,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
             icon: <Zap className="w-8 h-8" />,
             title: "Fast Deployment",
             desc: "Deploy in days, not months. Minimal infrastructure changes, maximum security impact.",
-            color: "from-blue-500 to-cyan-500"
+            color: "from-cyan-500 to-cyan-500"
           },
           {
             icon: <Users className="w-8 h-8" />,
@@ -40,32 +40,32 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
         positioning: "Flexible Alternative to Enterprise HSM"
       }
     : {
-        badge: "Giải pháp Thay thế",
+        badge: "Gi廕ξ ph獺p Thay th廕?,
         title: "Longmai PKI/HSM",
-        subtitle: "Hạ tầng Bảo mật Tối ưu Ngân sách",
-        description: "Doanh nghiệp tầm trung cần bảo mật cấp doanh nghiệp mà không cần độ phức tạp cấp doanh nghiệp. Longmai cung cấp điều đó.",
+        subtitle: "H廕?t廕吵g B廕υ m廕負 T廙 u Ng璽n s獺ch",
+        description: "Doanh nghi廙 t廕吮 trung c廕吵 b廕υ m廕負 c廕叼 doanh nghi廙 m? kh繫ng c廕吵 ?廙?ph廙妾 t廕︾ c廕叼 doanh nghi廙. Longmai cung c廕叼 ?i廙 ?籀.",
         features: [
           {
             icon: <Zap className="w-8 h-8" />,
-            title: "Triển khai Nhanh chóng",
-            desc: "Triển khai trong vài ngày, không phải vài tháng. Thay đổi hạ tầng tối thiểu, tác động bảo mật tối đa.",
-            color: "from-blue-500 to-cyan-500"
+            title: "Tri廙 khai Nhanh ch籀ng",
+            desc: "Tri廙 khai trong v?i ng?y, kh繫ng ph廕ξ v?i th獺ng. Thay ?廙 h廕?t廕吵g t廙 thi廙, t獺c ?廙g b廕υ m廕負 t廙 ?a.",
+            color: "from-cyan-500 to-cyan-500"
           },
           {
             icon: <Users className="w-8 h-8" />,
-            title: "Vận hành Đơn giản",
-            desc: "Không cần chuyên gia mã hóa. Giao diện quản lý trực quan, vòng đời khóa tự động.",
+            title: "V廕要 h?nh ?n gi廕τ",
+            desc: "Kh繫ng c廕吵 chuy礙n gia m瓊 h籀a. Giao di廙 qu廕τ l羸 tr廙帷 quan, v簷ng ?廙 kh籀a t廙??廙g.",
             color: "from-purple-500 to-pink-500"
           },
           {
             icon: <DollarSign className="w-8 h-8" />,
-            title: "Chi phí Hợp lý",
-            desc: "Mô hình cấp phép dự đoán được. Không phí ẩn. Mở rộng theo sự phát triển của doanh nghiệp.",
+            title: "Chi ph穩 H廙φ l羸",
+            desc: "M繫 h穫nh c廕叼 ph矇p d廙??o獺n ?廙θ. Kh繫ng ph穩 廕姊. M廙?r廙g theo s廙?ph獺t tri廙 c廙吧 doanh nghi廙.",
             color: "from-emerald-500 to-teal-500"
           }
         ],
-        cta: "Khám phá Giải pháp Longmai",
-        positioning: "Lựa chọn Thay thế Linh hoạt cho HSM Cấp doanh nghiệp"
+        cta: "Kh獺m ph獺 Gi廕ξ ph獺p Longmai",
+        positioning: "L廙帶 ch廙 Thay th廕?Linh ho廕﹀ cho HSM C廕叼 doanh nghi廙"
       };
 
   return (
@@ -159,7 +159,7 @@ export default function LongmaiSolutionBlock({ isEn = false, lang = "vi" }: Long
           <p className="text-gray-500 text-xs font-light">
             {isEn
               ? "Longmai is a flexible alternative to enterprise HSM solutions, designed for mid-market organizations seeking cost-effective security without complexity."
-              : "Longmai là lựa chọn thay thế linh hoạt cho các giải pháp HSM cấp doanh nghiệp, được thiết kế cho các tổ chức tầm trung tìm kiếm bảo mật tiết kiệm chi phí mà không có độ phức tạp."}
+              : "Longmai l? l廙帶 ch廙 thay th廕?linh ho廕﹀ cho c獺c gi廕ξ ph獺p HSM c廕叼 doanh nghi廙, ?廙θ thi廕篙 k廕?cho c獺c t廙?ch廙妾 t廕吮 trung t穫m ki廕禦 b廕υ m廕負 ti廕篙 ki廙 chi ph穩 m? kh繫ng c籀 ?廙?ph廙妾 t廕︾."}
           </p>
         </div>
       </div>

@@ -20,15 +20,15 @@ export default async function WhitepaperPage({ params }: { params: Promise<{ lan
           {/* Left Column: Content */}
           <div className="space-y-10">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-sm">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-blue-700">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-50 border border-cyan-200 rounded-sm">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-700">
                   {isEn ? "Technical Whitepaper 2026" : "Tài liệu kỹ thuật 2026"}
                 </span>
               </div>
               
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight tracking-tight">
                 {isEn ? "Protect Intellectual Property" : "Bảo vệ chất xám &"} <br/>
-                <span className="text-blue-600">{isEn ? "& Maximize Revenue" : "Tối đa hóa doanh thu"}</span>
+                <span className="text-cyan-600">{isEn ? "& Maximize Revenue" : "Tối đa hóa doanh thu"}</span>
               </h1>
               
               <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
@@ -68,7 +68,7 @@ export default async function WhitepaperPage({ params }: { params: Promise<{ lan
             {/* Locked Preview */}
             <div className="relative group max-w-sm">
               <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm z-10 rounded-lg flex flex-col items-center justify-center text-white p-6 text-center space-y-3 transition-all opacity-100">
-                <Lock className="w-8 h-8 text-blue-300" />
+                <Lock className="w-8 h-8 text-cyan-300" />
                 <p className="font-bold text-base uppercase tracking-wide">
                   {isEn ? "Content Locked" : "Tài liệu được mã hóa"}
                 </p>
@@ -78,7 +78,7 @@ export default async function WhitepaperPage({ params }: { params: Promise<{ lan
                     : "Đăng ký thông tin bên cạnh để nhận toàn bộ tài liệu 45 trang bản PDF"}
                 </p>
                 <div className="pt-2">
-                  <ArrowDown className="w-4 h-4 animate-bounce text-blue-300" />
+                  <ArrowDown className="w-4 h-4 animate-bounce text-cyan-300" />
                 </div>
               </div>
               <div className="rounded-lg overflow-hidden shadow-sm border border-slate-200">

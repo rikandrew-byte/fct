@@ -1,7 +1,7 @@
-/**
+﻿/**
  * In-memory Rate Limiter for API Routes
  * Limits each IP to a configurable number of requests within a time window.
- * Deployed on Vercel serverless — the Map resets on cold starts,
+ * Deployed on Vercel serverless ??the Map resets on cold starts,
  * which is acceptable for burst-protection against simple bots.
  */
 
@@ -59,13 +59,13 @@ export function checkRateLimit(
     return { allowed: true, remaining: maxRequests - 1, resetIn: Math.ceil(windowMs / 1000) };
   }
 
-  // Window has expired — reset
+  // Window has expired ??reset
   if (now - entry.firstRequestTime > windowMs) {
     rateLimitMap.set(ip, { count: 1, firstRequestTime: now });
     return { allowed: true, remaining: maxRequests - 1, resetIn: Math.ceil(windowMs / 1000) };
   }
 
-  // Within window — check count
+  // Within window ??check count
   const resetIn = Math.ceil((windowMs - (now - entry.firstRequestTime)) / 1000);
 
   if (entry.count >= maxRequests) {

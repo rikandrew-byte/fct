@@ -57,17 +57,17 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white">
+    <main className="min-h-screen bg-slate-50 selection:bg-cyan-600 selection:text-white">
       {/* ── Hero Section ───────────────────── */}
       <div className="relative bg-slate-900 border-b border-slate-800 pt-36 pb-20 px-6 overflow-hidden">
         <TechGridBackground />
 
         <div className="max-w-6xl mx-auto relative z-10 text-center space-y-4">
-          <div className="inline-block bg-blue-500/10 border border-blue-500/30 rounded-sm px-3.5 py-1 text-[11px] font-mono font-semibold text-blue-400 tracking-wider uppercase">
+          <div className="inline-block bg-cyan-500/10 border border-cyan-500/30 rounded-sm px-3.5 py-1 text-[11px] font-mono font-semibold text-cyan-400 tracking-wider uppercase">
              {lang === 'en' ? 'INSIGHTS & ARTICLES' : 'GÓC NHÌN & BÀI VIẾT'}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-50 tracking-tight">
-            {lang === 'en' ? 'Blog &' : 'Blog &'} <span className="text-blue-400">{lang === 'en' ? 'Insights' : 'Tin tức'}</span>
+            {lang === 'en' ? 'Blog &' : 'Blog &'} <span className="text-cyan-400">{lang === 'en' ? 'Insights' : 'Tin tức'}</span>
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
             {dict.news.description}

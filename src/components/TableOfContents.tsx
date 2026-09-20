@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { List } from "lucide-react";
@@ -61,9 +61,9 @@ export default function TableOfContents({ content }: { content: string }) {
 
   return (
     <nav className="bg-slate-50 rounded-lg p-5 border border-slate-200 sticky top-32">
-      <div className="flex items-center gap-2 mb-5 text-blue-700">
+      <div className="flex items-center gap-2 mb-5 text-cyan-700">
         <List className="w-4 h-4" />
-        <h3 className="text-[11px] font-bold uppercase tracking-wider">Mục lục bài viết</h3>
+        <h3 className="text-[11px] font-bold uppercase tracking-wider">M廙卉 l廙卉 b?i vi廕篙</h3>
       </div>
       
       <div className="relative">
@@ -79,14 +79,14 @@ export default function TableOfContents({ content }: { content: string }) {
                 className="group flex items-center"
               >
                 <div className={`absolute left-0 w-0.5 h-4 -translate-x-[0.25px] transition-all duration-300 ${
-                  isActive ? "bg-blue-600 opacity-100" : "bg-transparent opacity-0"
+                  isActive ? "bg-cyan-600 opacity-100" : "bg-transparent opacity-0"
                 }`}></div>
                 
                 <a 
                   href={`#${heading.id}`}
                   className={`text-[11px] transition-all duration-300 block pl-4 tracking-tight leading-snug ${
                     isActive 
-                      ? "text-blue-600 font-bold translate-x-1" 
+                      ? "text-cyan-600 font-bold translate-x-1" 
                       : "text-gray-600 hover:text-gray-700 font-medium"
                   }`}
                   onClick={(e) => {

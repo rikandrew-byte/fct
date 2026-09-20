@@ -60,14 +60,14 @@ const categoryConfig: Record<
   }
 > = {
   Thales: {
-    badgeBg:      "bg-blue-800 text-white",
-    iconBg:       "bg-blue-50",
-    iconColor:    "text-blue-800",
-    hoverBorder:  "hover:border-blue-200",
-    hoverShadow:  "hover:shadow-blue-500/10",
-    activeBtn:    "bg-blue-800 text-white shadow-lg shadow-blue-900/20",
-    dot:          "bg-blue-800",
-    imgRingColor: "ring-blue-100",
+    badgeBg:      "bg-cyan-800 text-white",
+    iconBg:       "bg-cyan-50",
+    iconColor:    "text-cyan-800",
+    hoverBorder:  "hover:border-cyan-200",
+    hoverShadow:  "hover:shadow-cyan-500/10",
+    activeBtn:    "bg-cyan-800 text-white shadow-lg shadow-cyan-900/20",
+    dot:          "bg-cyan-800",
+    imgRingColor: "ring-cyan-100",
   },
   Guardsquare: {
     badgeBg:      "bg-sky-500 text-white",
@@ -189,7 +189,7 @@ export default function ProductList({ lang }: ProductListProps) {
             placeholder={isEn ? "Search products..." : "Tìm kiếm sản phẩm..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-sm text-sm text-slate-900 outline-none focus:border-blue-500 focus:bg-white transition-all font-sans"
+            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-sm text-sm text-slate-900 outline-none focus:border-cyan-500 focus:bg-white transition-all font-sans"
           />
         </div>
 
@@ -200,7 +200,7 @@ export default function ProductList({ lang }: ProductListProps) {
             const label = categoryLabels[catKey];
             const activeClass = cfg
               ? cfg.activeBtn
-              : "bg-blue-600 text-white";
+              : "bg-cyan-600 text-white";
 
             return (
               <button
@@ -270,11 +270,11 @@ export default function ProductList({ lang }: ProductListProps) {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div
                         className={`w-14 h-14 rounded-sm flex items-center justify-center ${
-                          cfg ? cfg.iconBg : "bg-blue-50"
+                          cfg ? cfg.iconBg : "bg-cyan-50"
                         }`}
                       >
                         <Icon
-                          className={`w-7 h-7 ${cfg ? cfg.iconColor : "text-blue-800"}`}
+                          className={`w-7 h-7 ${cfg ? cfg.iconColor : "text-cyan-800"}`}
                         />
                       </div>
                     </div>
@@ -293,7 +293,7 @@ export default function ProductList({ lang }: ProductListProps) {
                   {/* Category badge */}
                   <span
                     className={`inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-sm w-fit ${
-                      cfg ? cfg.badgeBg : "bg-blue-50 text-blue-700"
+                      cfg ? cfg.badgeBg : "bg-cyan-50 text-cyan-700"
                     }`}
                   >
                     <Icon className="w-3 h-3" />
@@ -326,8 +326,8 @@ export default function ProductList({ lang }: ProductListProps) {
                       onClick={() => toggleExpand(prod.id)}
                       className={`flex items-center gap-1 text-xs font-semibold transition-colors ${
                         isExpanded
-                          ? cfg?.iconColor ?? "text-blue-800"
-                          : `text-slate-600 hover:${cfg?.iconColor ?? "text-blue-800"}`
+                          ? cfg?.iconColor ?? "text-cyan-800"
+                          : `text-slate-600 hover:${cfg?.iconColor ?? "text-cyan-800"}`
                       }`}
                     >
                       {isExpanded ? (isEn ? "Show less" : "Thu gọn") : (isEn ? "View summary" : "Xem tóm tắt")}
@@ -347,7 +347,7 @@ export default function ProductList({ lang }: ProductListProps) {
                             `/${lang}/products/${prod.id}`} 
                           className="w-full block">
                       <button className={`w-full py-2.5 rounded-sm font-semibold uppercase tracking-wider text-[11px] transition-all flex items-center justify-center gap-1.5 group shadow-xs ${
-                        cfg ? `${cfg.badgeBg} hover:opacity-90` : "bg-blue-600 text-white hover:bg-blue-700"
+                        cfg ? `${cfg.badgeBg} hover:opacity-90` : "bg-cyan-600 text-white hover:bg-cyan-700"
                       }`}>
                         {isEn ? "View Architecture" : "Xem kiến trúc chi tiết"}
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -369,7 +369,7 @@ export default function ProductList({ lang }: ProductListProps) {
           </p>
           <button
             onClick={() => { setSearchQuery(""); setSelectedCategory(categoryKeys[0]); }}
-            className="text-blue-600 font-semibold hover:underline"
+            className="text-cyan-600 font-semibold hover:underline"
           >
             {isEn ? "Clear filters" : "Xoá bộ lọc"}
           </button>

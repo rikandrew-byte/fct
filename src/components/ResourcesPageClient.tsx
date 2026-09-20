@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,19 +43,19 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
   );
 
   return (
-    <main className="min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden bg-white">
-      {/* ── Hero ─────────────────────────────────────────────────────── */}
+    <main className="min-h-screen selection:bg-cyan-600 selection:text-white overflow-x-hidden bg-white">
+      {/* ?? Hero ??????????????????????????????????????????????????????? */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-slate-50 border-b border-slate-200">
         <TechGridBackground />
 
         <div className="max-w-4xl mx-auto relative z-10 text-center space-y-6">
-          <span className="inline-flex items-center gap-2 border border-blue-700 bg-blue-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-300 inline-block" />
-            {dict.navbar.resources || (isEn ? "Resources & FAQ" : "Tài liệu & Hỏi đáp")}
+          <span className="inline-flex items-center gap-2 border border-cyan-700 bg-cyan-700 text-white text-[10px] font-bold tracking-[0.25em] uppercase px-5 py-1.5 rounded-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 inline-block" />
+            {dict.navbar.resources || (isEn ? "Resources & FAQ" : "T?i li廙 & H廙 ?獺p")}
           </span>
 
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            {d.hero.title} <span className="text-blue-700">{d.hero.subtitle}</span>
+            {d.hero.title} <span className="text-cyan-700">{d.hero.subtitle}</span>
           </h1>
 
           <p className="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
@@ -69,16 +69,16 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
             </div>
             <input
               type="text"
-              placeholder={isEn ? 'Search technical questions...' : 'Tìm kiếm câu hỏi chuyên môn...'}
+              placeholder={isEn ? 'Search technical questions...' : 'T穫m ki廕禦 c璽u h廙 chuy礙n m繫n...'}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white border border-slate-300 rounded-sm py-3.5 pl-12 pr-4 text-slate-900 focus:outline-none focus:border-blue-700 transition-colors text-sm shadow-sm"
+              className="w-full bg-white border border-slate-300 rounded-sm py-3.5 pl-12 pr-4 text-slate-900 focus:outline-none focus:border-cyan-700 transition-colors text-sm shadow-sm"
             />
           </div>
         </div>
       </section>
 
-      {/* ── Main Content Area ────────────────────────────────────────────── */}
+      {/* ?? Main Content Area ?????????????????????????????????????????????? */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-10 relative items-start">
           
@@ -94,7 +94,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                     key={idx}
                     className={`border rounded-lg overflow-hidden transition-colors bg-white ${
                       isOpen 
-                        ? "border-blue-300 bg-blue-50/20" 
+                        ? "border-cyan-300 bg-cyan-50/20" 
                         : "border-slate-200 hover:border-slate-300"
                     }`}
                   >
@@ -104,7 +104,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                     >
                       <div className="flex items-center gap-4">
                         <div className={`w-10 h-10 rounded-sm flex items-center justify-center shrink-0 transition-colors ${
-                          isOpen ? "bg-blue-700 text-white" : "bg-slate-100 text-slate-600"
+                          isOpen ? "bg-cyan-700 text-white" : "bg-slate-100 text-slate-600"
                         }`}>
                           <Icon className="w-5 h-5" />
                         </div>
@@ -114,7 +114,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                           {faq.question}
                         </h3>
                       </div>
-                      <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-blue-700" : ""}`} />
+                      <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-cyan-700" : ""}`} />
                     </button>
 
                     <AnimatePresence>
@@ -144,7 +144,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                     <HelpCircle className="w-6 h-6" />
                   </div>
                   <p className="text-slate-500 text-sm">
-                    {isEn ? 'No matching results found...' : 'Không tìm thấy kết quả phù hợp...'}
+                    {isEn ? 'No matching results found...' : 'Kh繫ng t穫m th廕句 k廕篙 qu廕?ph羅 h廙φ...'}
                   </p>
                 </div>
               )}
@@ -156,28 +156,28 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
             <div className="lg:sticky lg:top-28">
                <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-blue-100 text-blue-700 rounded-sm flex items-center justify-center">
+                    <div className="w-8 h-8 bg-cyan-100 text-cyan-700 rounded-sm flex items-center justify-center">
                       <BookOpen className="w-4 h-4" />
                     </div>
                     <h4 className="text-base font-bold text-slate-900 uppercase tracking-tight">
-                      {isEn ? "Whitepapers" : "Thư viện Sách trắng"}
+                      {isEn ? "Whitepapers" : "Th vi廙 S獺ch tr廕疸g"}
                     </h4>
                   </div>
 
                   <p className="text-xs text-slate-500 mb-5 leading-relaxed">
                      {isEn 
                        ? "Unlock deep technical insights with our exclusive whitepaper collection."
-                       : "Khám phá các tài liệu kỹ thuật chuyên sâu độc quyền dành cho doanh nghiệp."}
+                       : "Kh獺m ph獺 c獺c t?i li廙 k廙?thu廕負 chuy礙n s璽u ?廙 quy廙 d?nh cho doanh nghi廙."}
                   </p>
 
                   <div className="flex flex-col gap-2.5">
                      {/* Link 1: Thales */}
-                     <Link href={`/${lang}/whitepaper`} className="flex flex-col p-3 rounded-sm border border-slate-200 bg-white hover:border-blue-400 transition-colors">
-                        <span className="text-xs font-bold uppercase text-blue-700 mb-0.5 flex items-center gap-1.5">
+                     <Link href={`/${lang}/whitepaper`} className="flex flex-col p-3 rounded-sm border border-slate-200 bg-white hover:border-cyan-400 transition-colors">
+                        <span className="text-xs font-bold uppercase text-cyan-700 mb-0.5 flex items-center gap-1.5">
                           <FileText className="w-3.5 h-3.5" /> Thales Sentinel
                         </span>
                         <span className="text-xs text-slate-700 font-medium">
-                          {isEn ? "Software Monetization Guide" : "Tối đa hóa doanh thu phần mềm"}
+                          {isEn ? "Software Monetization Guide" : "T廙 ?a h籀a doanh thu ph廕吵 m廙"}
                         </span>
                      </Link>
 
@@ -187,7 +187,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                           <FileText className="w-3.5 h-3.5" /> Guardsquare
                         </span>
                         <span className="text-xs text-slate-700 font-medium">
-                          {isEn ? "Defeat Mobile Malware" : "Đánh bại Mã độc & Overlay"}
+                          {isEn ? "Defeat Mobile Malware" : "?獺nh b廕【 M瓊 ?廙 & Overlay"}
                         </span>
                      </Link>
 
@@ -197,7 +197,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
                           <FileText className="w-3.5 h-3.5" /> Canary Historian
                         </span>
                         <span className="text-xs text-slate-700 font-medium">
-                          {isEn ? "Visualize Millions of OT Data" : "Tối ưu hóa Dữ liệu Vận hành"}
+                          {isEn ? "Visualize Millions of OT Data" : "T廙 u h籀a D廙?li廙 V廕要 h?nh"}
                         </span>
                      </Link>
                   </div>
@@ -207,10 +207,10 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
         </div>
       </section>
 
-      {/* ── CTA ────────────────────────────────────────────────────── */}
+      {/* ?? CTA ?????????????????????????????????????????????????????? */}
       <section className="py-16 px-6 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto p-10 md:p-14 bg-slate-900 rounded-lg text-center space-y-6 border border-slate-800 shadow-sm">
-          <span className="inline-flex items-center gap-1.5 text-blue-300 bg-blue-950 border border-blue-800 px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest">
+          <span className="inline-flex items-center gap-1.5 text-cyan-300 bg-cyan-950 border border-cyan-800 px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest">
             <MessageSquare className="w-3.5 h-3.5" />
             {d.cta.title}
           </span>
@@ -226,7 +226,7 @@ export default function ResourcesPageClient({ lang, dict }: ResourcesPageClientP
           <div className="pt-2">
             <Link
               href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-8 py-3.5 rounded-sm font-semibold text-sm tracking-wide transition-colors"
+              className="inline-flex items-center gap-2 bg-cyan-700 hover:bg-cyan-800 text-white px-8 py-3.5 rounded-sm font-semibold text-sm tracking-wide transition-colors"
             >
               <span>{d.cta.button}</span>
               <ArrowRight className="w-4 h-4" />

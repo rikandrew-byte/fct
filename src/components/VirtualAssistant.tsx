@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -26,7 +26,7 @@ const MarkdownStyles = {
   ul: ({ children }: any) => <ul className="list-disc pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ul>,
   ol: ({ children }: any) => <ol className="list-decimal pl-4 mb-3 space-y-1 text-sm text-slate-700">{children}</ol>,
   li: ({ children }: any) => <li className="leading-relaxed text-slate-700 text-sm">{children}</li>,
-  code: ({ children }: any) => <code className="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded-sm text-xs font-mono border border-slate-200">{children}</code>,
+  code: ({ children }: any) => <code className="bg-slate-100 text-cyan-700 px-1.5 py-0.5 rounded-sm text-xs font-mono border border-slate-200">{children}</code>,
   strong: ({ children }: any) => <strong className="font-bold text-slate-900">{children}</strong>,
 };
 
@@ -109,7 +109,7 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
             {/* Header */}
             <div className="relative z-20 px-6 py-4 flex items-center justify-between border-b border-slate-200 bg-slate-900 text-white">
               <div className="flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-sm bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                <div className="w-10 h-10 rounded-sm bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
                   <Terminal className="w-5 h-5" />
                 </div>
                 <div>
@@ -117,7 +117,7 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
                     <h3 className="text-sm font-bold tracking-tight text-slate-100">
                       {v.title}
                     </h3>
-                    <span className="text-[10px] font-mono bg-blue-900/60 text-blue-300 border border-blue-700/50 px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold">
+                    <span className="text-[10px] font-mono bg-cyan-900/60 text-cyan-300 border border-cyan-700/50 px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold">
                       {v.badge}
                     </span>
                   </div>
@@ -153,7 +153,7 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
               >
                 {messages.length === 0 && (
                   <div className="h-full flex flex-col items-center justify-center text-center space-y-4 px-6 py-12">
-                    <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center border border-slate-200 shadow-xs text-blue-600">
+                    <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center border border-slate-200 shadow-xs text-cyan-600">
                       <MessageSquare className="w-7 h-7" />
                     </div>
                     <div className="space-y-1.5">
@@ -178,7 +178,7 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
                       <div className={`w-8 h-8 shrink-0 rounded-sm flex items-center justify-center border text-xs ${
                         m.role === "user" 
                           ? "bg-slate-200 border-slate-300 text-slate-700" 
-                          : "bg-blue-600 border-blue-700 text-white"
+                          : "bg-cyan-600 border-cyan-700 text-white"
                       }`}>
                         {m.role === "user" ? (
                           <User className="w-4 h-4" />
@@ -188,7 +188,7 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
                       </div>
                       <div className={`max-w-[85%] rounded-lg p-4 text-sm leading-relaxed border ${
                         m.role === "user"
-                          ? "bg-blue-600 text-white border-blue-700"
+                          ? "bg-cyan-600 text-white border-cyan-700"
                           : "bg-white border-slate-200 text-slate-800 shadow-xs"
                       }`}>
                         {m.role === "ai" ? (
@@ -212,13 +212,13 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
                     animate={{ opacity: 1, y: 0 }}
                     className="flex gap-3"
                   >
-                    <div className="w-8 h-8 shrink-0 rounded-sm bg-blue-600 border border-blue-700 flex items-center justify-center text-white">
+                    <div className="w-8 h-8 shrink-0 rounded-sm bg-cyan-600 border border-cyan-700 flex items-center justify-center text-white">
                       <Bot className="w-4 h-4 animate-pulse" />
                     </div>
                     <div className="bg-white border border-slate-200 rounded-lg px-4 py-3 flex gap-1.5 items-center shadow-xs">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></span>
-                      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.15s" }}></span>
-                      <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0.3s" }}></span>
+                      <span className="w-2 h-2 bg-cyan-600 rounded-full animate-bounce"></span>
+                      <span className="w-2 h-2 bg-cyan-600 rounded-full animate-bounce" style={{ animationDelay: "0.15s" }}></span>
+                      <span className="w-2 h-2 bg-cyan-600 rounded-full animate-bounce" style={{ animationDelay: "0.3s" }}></span>
                     </div>
                   </motion.div>
                 )}
@@ -235,11 +235,11 @@ export default function VirtualAssistant({ lang, dict, isOpen, onClose }: Virtua
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={v.placeholder}
-                    className="flex-1 bg-slate-50 border border-slate-200 rounded-sm px-3.5 py-2 text-sm text-slate-900 outline-none focus:border-blue-500 focus:bg-white transition-all font-sans"
+                    className="flex-1 bg-slate-50 border border-slate-200 rounded-sm px-3.5 py-2 text-sm text-slate-900 outline-none focus:border-cyan-500 focus:bg-white transition-all font-sans"
                   />
                   <button 
                     disabled={isLoading || !input.trim()}
-                    className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-4 py-2 rounded-sm transition-all text-xs font-semibold flex items-center justify-center"
+                    className="bg-cyan-600 hover:bg-cyan-700 disabled:opacity-50 text-white px-4 py-2 rounded-sm transition-all text-xs font-semibold flex items-center justify-center"
                   >
                     <Send className="w-4 h-4" />
                   </button>
