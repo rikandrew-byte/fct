@@ -135,7 +135,7 @@ export default function FloatingAssistant({ dict }: FloatingAssistantProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-cyan-600 to-purple-700 text-white shadow-[0_0_40px_rgba(59,130,246,0.5)] flex items-center justify-center border border-cyan-400/50 backdrop-blur-xl relative overflow-hidden group"
+              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-cyan-600 to-purple-700 text-white shadow-[0_0_40px_rgba(6,182,212,0.5)] flex items-center justify-center border border-cyan-400/50 backdrop-blur-xl relative overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity"></div>
               <AnimatePresence mode="wait">

@@ -136,14 +136,14 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
             {/* SVG Interactive Diagram */}
             <svg 
               viewBox="0 0 1000 400" 
-              className="w-full h-auto drop-shadow-[0_0_50px_rgba(59,130,246,0.1)]"
+              className="w-full h-auto drop-shadow-[0_0_50px_rgba(6,182,212,0.1)]"
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
                  <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#1e293b" />
-                    <stop offset="50%" stopColor="#3b82f6" />
+                    <stop offset="50%" stopColor="#06b6d4" />
                     <stop offset="100%" stopColor="#1e293b" />
                  </linearGradient>
               </defs>
@@ -170,7 +170,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                   {isEn ? "SOURCE CODE" : "MÃ NGUỒN"}
                 </text>
                 {activeStep === 1 && (
-                  <rect x="50" y="150" width="200" height="100" rx="20" fill="none" stroke="#3b82f6" strokeWidth="3" className="filter blur-sm" />
+                  <rect x="50" y="150" width="200" height="100" rx="20" fill="none" stroke="#06b6d4" strokeWidth="3" className="filter blur-sm" />
                 )}
               </motion.g>
 
@@ -186,7 +186,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                   transition={{ duration: 3, repeat: Infinity }}
                   cx="500" cy="180" r="40" 
                   fill="#1e293b" 
-                  stroke={activeStep === 2 ? "#3b82f6" : "#1e293b"} 
+                  stroke={activeStep === 2 ? "#06b6d4" : "#1e293b"} 
                   strokeWidth="2" 
                 />
                 <ShieldCheck className="text-cyan-400" x="480" y="160" width="40" height="40" />
@@ -194,7 +194,7 @@ export default function ThalesSentinelClient({ lang, dict }: ThalesSentinelClien
                   {isEn ? "SENTINEL ENVELOPE" : "GIÁP PHẦN MỀM"}
                 </text>
                 {activeStep === 2 && (
-                  <rect x="400" y="125" width="200" height="150" rx="30" fill="none" stroke="#3b82f6" strokeWidth="4" className="filter blur-md" />
+                  <rect x="400" y="125" width="200" height="150" rx="30" fill="none" stroke="#06b6d4" strokeWidth="4" className="filter blur-md" />
                 )}
               </motion.g>
 

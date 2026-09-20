@@ -22,7 +22,7 @@ export default function BlueprintNode({ icon, title, description, info, delay = 
       className="relative group w-full"
     >
       {/* Node Content */}
-      <div className="military-panel rounded-2xl p-6 relative z-10 transition-all duration-300 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+      <div className="military-panel rounded-2xl p-6 relative z-10 transition-all duration-300 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]">
         <div className="flex items-start gap-4">
           <div className="w-12 h-12 bg-white rounded-xl border border-gray-300 flex items-center justify-center shrink-0 text-cyan-600 group-hover:text-cyan-700 transition-colors">
             {icon}

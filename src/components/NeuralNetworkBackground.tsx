@@ -42,8 +42,8 @@ export default function NeuralNetworkBackground() {
               cx={`${dot.x}%`}
               cy={`${dot.y}%`}
               r="2"
-              fill="rgba(59, 130, 246, 0.8)"
-              className="drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+              fill="rgba(6,182,212, 0.8)"
+              className="drop-shadow-[0_0_8px_rgba(6,182,212,0.5)]"
               animate={{
                 cx: [`${dot.x}%`, `${(dot.x + dot.tx) % 100}%`, `${dot.x}%`],
                 cy: [`${dot.y}%`, `${(dot.y + dot.ty) % 100}%`, `${dot.y}%`],
@@ -62,7 +62,7 @@ export default function NeuralNetworkBackground() {
                 y1={`${dot.y}%`}
                 x2={`${neighbor.x}%`}
                 y2={`${neighbor.y}%`}
-                stroke="rgba(59, 130, 246, 0.3)"
+                stroke="rgba(6,182,212, 0.3)"
                 strokeWidth="0.8"
                 animate={{
                   x1: [`${dot.x}%`, `${(dot.x + dot.lines[ni].tx) % 100}%`, `${dot.x}%`],

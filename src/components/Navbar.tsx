@@ -81,7 +81,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               height={isScrolled ? 50 : 64} 
               priority={true}
               style={{ height: 'auto' }}
-              className="object-contain relative z-10 transition-all group-hover:scale-110 duration-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+              className="object-contain relative z-10 transition-all group-hover:scale-110 duration-500 drop-shadow-[0_0_20px_rgba(6,182,212,0.3)]"
             />
             <span className="font-black text-lg tracking-tighter hidden sm:block text-gray-900 font-sans relative z-10 transition-colors whitespace-nowrap">
               FCT Vinh Thinh <span className={`${isScrolled ? "text-cyan-600" : "text-cyan-600"} transition-colors`}>.,JSC</span>
@@ -144,7 +144,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </div>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="relative overflow-hidden group bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-4.5 py-2.5 rounded-full text-[11px] font-black tracking-widest uppercase hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-all duration-500 hidden xs:block"
+              className="relative overflow-hidden group bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-4.5 py-2.5 rounded-full text-[11px] font-black tracking-widest uppercase hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] transition-all duration-500 hidden xs:block"
             >
               <span className="relative z-10">{dict.common.getAdvice}</span>
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.2s_infinite]"></div>

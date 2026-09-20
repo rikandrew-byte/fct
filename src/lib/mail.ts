@@ -103,7 +103,7 @@ export async function sendEmailNotification(payload: NotificationPayload) {
     subject: `[FCT Website] Y礙u c廕吟 t廙?${payload.fullName || 'Kh獺ch h?ng'}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px;">
-        <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">Y礙u c廕吟 li礙n h廙?m廙</h2>
+        <h2 style="color: #0891b2; border-bottom: 2px solid #0891b2; padding-bottom: 10px;">Y礙u c廕吟 li礙n h廙?m廙</h2>
         <p><strong>Kh獺ch h?ng:</strong> ${payload.fullName || 'N/A'}</p>
         <p><strong>Email:</strong> ${payload.email || 'N/A'}</p>
         <p><strong>S廙??i廙 tho廕【:</strong> ${payload.phone || 'N/A'}</p>
@@ -160,7 +160,7 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string, s
     subject: 'C廕σ n b廕》 ?瓊 ??ng k羸 nh廕要 S獺ch tr廕疸g t廙?FCT V藺nh Th廙h',
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px;">
-        <h2 style="color: #2563eb;">Ch?o ${fullName},</h2>
+        <h2 style="color: #0891b2;">Ch?o ${fullName},</h2>
         <p>C廕σ n b廕》 ?瓊 quan t璽m ?廕積 t?i li廙 <strong>${docTitle}</strong> c廙吧 FCT V藺nh Th廙h.</p>
         <p>${docDescription}</p>
         <div style="margin: 30px 0;">
@@ -169,10 +169,10 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string, s
               <td align="center">
                 <table border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td align="center" style="border-radius: 8px;" bgcolor="#2563eb">
+                    <td align="center" style="border-radius: 8px;" bgcolor="#0891b2">
                       <a href="${docLink}" 
                          target="_blank" 
-                         style="font-size: 16px; font-family: sans-serif; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 8px; border: 1px solid #2563eb; display: inline-block; font-weight: bold;">
+                         style="font-size: 16px; font-family: sans-serif; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 8px; border: 1px solid #0891b2; display: inline-block; font-weight: bold;">
                         T廕＠ S?CH TR廕奘G (PDF)
                       </a>
                     </td>
@@ -184,7 +184,7 @@ export async function sendWhitepaperAutoReply(email: string, fullName: string, s
         </div>
         <p style="font-size: 14px; color: #64748b; margin-top: 20px;">
           Ho廕搾 truy c廕計 tr廙帷 ti廕穆 t廕【 ?廙g d廕南 sau ?廙?t廕ξ t?i li廙: <br/>
-          <a href="${docLink}" style="color: #2563eb; word-break: break-all;">
+          <a href="${docLink}" style="color: #0891b2; word-break: break-all;">
             ${docLink}
           </a>
         </p>

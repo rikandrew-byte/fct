@@ -60,7 +60,7 @@ export default function Footer({ lang, dict }: FooterProps) {
                 alt="FCT Vinh Thinh Logo - Enterprise Security Solutions" 
                 width={56} 
                 height={56} 
-                className="brightness-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)] shrink-0"
+                className="brightness-110 drop-shadow-[0_0_15px_rgba(6,182,212,0.3)] shrink-0"
               />
               <span className="font-bold text-xl sm:text-2xl text-gray-100 tracking-tight leading-tight">FCT Vinh Thinh .,JSC</span>
             </Link>

@@ -16,7 +16,7 @@ export default function TechGridBackground() {
       >
         <defs>
           <pattern id="dot-grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
-            <circle cx="1" cy="1" r="1" fill="#3b82f6" />
+            <circle cx="1" cy="1" r="1" fill="#06b6d4" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#dot-grid)" />
