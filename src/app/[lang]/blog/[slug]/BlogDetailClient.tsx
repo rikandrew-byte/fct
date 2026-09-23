@@ -101,14 +101,73 @@ export default function BlogDetailClient({ lang, dict, article, relatedNews }: B
               </div>
 
               {/* Markdown Content */}
-              <div className="prose prose-slate max-w-none 
-                prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900
-                prose-p:text-slate-700 prose-p:leading-relaxed
-                prose-strong:text-slate-900 prose-strong:font-bold
-                prose-blockquote:border-l-4 prose-blockquote:border-cyan-600 prose-blockquote:bg-slate-50 prose-blockquote:p-4 prose-blockquote:rounded-r-sm prose-blockquote:not-italic
-                prose-img:rounded-lg prose-img:shadow-sm prose-img:border prose-img:border-slate-200
-                ">
-                <ReactMarkdown>{article.content}</ReactMarkdown>
+              <div className="article-prose text-slate-700">
+                <ReactMarkdown
+                  components={{
+                    h1: ({ children }) => (
+                      <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mt-14 mb-6 tracking-tight leading-tight">
+                        {children}
+                      </h1>
+                    ),
+                    h2: ({ children }) => (
+                      <div className="mt-14 mb-6 pt-6 border-t border-slate-200">
+                        <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
+                          {children}
+                        </h2>
+                      </div>
+                    ),
+                    h3: ({ children }) => (
+                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mt-10 mb-4 tracking-tight leading-snug">
+                        {children}
+                      </h3>
+                    ),
+                    h4: ({ children }) => (
+                      <h4 className="text-lg md:text-xl font-bold text-slate-900 mt-8 mb-3 tracking-tight">
+                        {children}
+                      </h4>
+                    ),
+                    p: ({ children }) => (
+                      <p className="text-slate-700 text-base md:text-lg leading-[1.9] mb-6 font-normal">
+                        {children}
+                      </p>
+                    ),
+                    ul: ({ children }) => (
+                      <ul className="space-y-4 my-6 pl-6 list-disc marker:text-cyan-600 text-slate-700 text-base md:text-lg leading-[1.85]">
+                        {children}
+                      </ul>
+                    ),
+                    ol: ({ children }) => (
+                      <ol className="space-y-4 my-6 pl-6 list-decimal marker:text-cyan-600 marker:font-bold text-slate-700 text-base md:text-lg leading-[1.85]">
+                        {children}
+                      </ol>
+                    ),
+                    li: ({ children }) => (
+                      <li className="pl-1 leading-[1.85]">
+                        {children}
+                      </li>
+                    ),
+                    hr: () => (
+                      <hr className="my-12 border-0 h-px bg-slate-200" />
+                    ),
+                    blockquote: ({ children }) => (
+                      <blockquote className="my-8 pl-6 py-4 border-l-4 border-cyan-500 bg-slate-50/80 rounded-r-lg text-slate-800 text-base md:text-lg italic leading-[1.85]">
+                        {children}
+                      </blockquote>
+                    ),
+                    strong: ({ children }) => (
+                      <strong className="font-bold text-slate-900">
+                        {children}
+                      </strong>
+                    ),
+                    a: ({ children, href }) => (
+                      <a href={href} className="text-cyan-600 hover:text-cyan-700 underline underline-offset-4 font-medium transition-colors" target="_blank" rel="noopener noreferrer">
+                        {children}
+                      </a>
+                    ),
+                  }}
+                >
+                  {article.content}
+                </ReactMarkdown>
               </div>
 
               {/* Automatic CTA Section */}

@@ -109,3 +109,33 @@ body {
 .section-padding {
   @apply py-20 md:py-32;
 }
+
+/* Article / Blog Content Spacious Typography */
+.article-prose {
+  font-size: 1.0625rem;
+  line-height: 1.9;
+  color: #334155;
+}
+
+.article-prose p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-prose h2 {
+  scroll-margin-top: 5rem;
+}
+
+.article-prose h3 {
+  scroll-margin-top: 5rem;
+}
+
+.article-prose ul, .article-prose ol {
+  margin-top: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.article-prose li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
