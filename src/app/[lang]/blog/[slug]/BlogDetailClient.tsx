@@ -16,7 +16,7 @@ interface Article {
   category: string;
   image?: string;
   content: string;
-  target_funnel?: "guardsquare" | "thales" | "canary";
+  target_funnel?: "guardsquare" | "thales" | "canary" | "guardant" | "longmai";
 }
 
 interface BlogDetailClientProps {

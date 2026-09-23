@@ -6,7 +6,7 @@ import Link from "next/link";
 
 interface BlogCTAProps {
   lang: string;
-  targetFunnel?: "guardsquare" | "thales" | "canary";
+  targetFunnel?: "guardsquare" | "thales" | "canary" | "guardant" | "longmai";
 }
 
 export default function BlogCTA({ lang, targetFunnel }: BlogCTAProps) {
@@ -19,6 +19,20 @@ export default function BlogCTA({ lang, targetFunnel }: BlogCTAProps) {
       desc: isEn ? "Software Monetization Guide" : "Sách trắng: Tối ưu hóa doanh thu phần mềm",
       link: `/${lang}/whitepaper`,
       color: "blue"
+    },
+    {
+      id: "guardant",
+      title: "Guardant Security",
+      desc: isEn ? "Software Protection & Station Architecture" : "Giải pháp bảo vệ bản quyền & chống dịch ngược",
+      link: `/${lang}/products/guardant`,
+      color: "emerald"
+    },
+    {
+      id: "longmai",
+      title: "Longmai Hardware",
+      desc: isEn ? "Hardware-Based Dongle & PKI Guide" : "Khóa bảo mật phần cứng & xác thực mToken",
+      link: `/${lang}/products/longmai`,
+      color: "indigo"
     },
     {
       id: "guardsquare",
@@ -41,7 +55,7 @@ export default function BlogCTA({ lang, targetFunnel }: BlogCTAProps) {
     if (a.id === targetFunnel) return -1;
     if (b.id === targetFunnel) return 1;
     return 0;
-  });
+  }).slice(0, 3);
 
   return (
     <div className="mt-14 p-8 md:p-12 bg-slate-900 rounded-lg border border-slate-800 relative overflow-hidden shadow-sm">
